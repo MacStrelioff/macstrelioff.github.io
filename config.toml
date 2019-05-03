@@ -56,7 +56,7 @@ publishDir = "./public"
     
 [[menu.main]]
     name = "About"
-    url = "/about"  # directs to a folder in ??
+    url = "/blog"  # directs to a folder in ??
     weight = 2
 
 [[menu.main]]
