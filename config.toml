@@ -1,8 +1,8 @@
-baseURL = "https://example.com"
+baseURL = "https://macstrelioff.github.io/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "Hugo Techdoc Theme"
+title = "Mac Strelioff"
 theme = "hugo-theme-techdoc"
 
 hasCJKLanguage = true
