@@ -43,7 +43,17 @@ defaultContentLanguageInSubdir = false
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
-ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$","hero","demo"]
+ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$",
+               "hero",
+               "demo",
+               "skills",
+               "posts",
+               "gallery",
+               "talks",
+               "featured",
+               "publications",
+               "contact",
+               "tags"]
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
