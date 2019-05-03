@@ -5,7 +5,7 @@ bio: My research interests include distributed robotics, mobile computing and pr
   matter.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
+  - course: PhD in Cognitive Science
     institution: Stanford University
     year: 2012
   - course: MEng in Artificial Intelligence

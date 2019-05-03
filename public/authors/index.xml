@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Mac Strelioff (UNDER CONSTRUCTION)</title>
-    <link>/macstrelioff.github.io/authors/</link>
+    <link>/authors/</link>
     <description>Recent content in Authors on Mac Strelioff (UNDER CONSTRUCTION)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Apr 2019 00:00:00 -0700</lastBuildDate>
     
-	<atom:link href="/macstrelioff.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>admin</title>
-      <link>/macstrelioff.github.io/authors/admin/</link>
+      <link>/authors/admin/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 -0700</pubDate>
       
-      <guid>/macstrelioff.github.io/authors/admin/</guid>
+      <guid>/authors/admin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Robert Ford</title>
-      <link>/macstrelioff.github.io/authors/robert-ford/</link>
+      <link>/authors/robert-ford/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 -0700</pubDate>
       
-      <guid>/macstrelioff.github.io/authors/robert-ford/</guid>
+      <guid>/authors/robert-ford/</guid>
       <description></description>
     </item>
     
