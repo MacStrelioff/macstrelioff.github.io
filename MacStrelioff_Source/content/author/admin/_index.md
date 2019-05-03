@@ -30,6 +30,12 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/mac-strelioff-64318793/
+- icon: flask
+  icon_pack: fa
+  link: https://osf.io/4a75z
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/macstrelioff
