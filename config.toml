@@ -1,9 +1,16 @@
-baseURL = "https://example.com"
+# notes: 
+# To implement updates, call;
+#  blogdown::serve_site()
 
+# resources at: 
+# https://gohugo.io/templates
+
+baseURL = "https://macstrelioff.github.io"
+
+title = "Mac Strelioff"
+theme = "hugo-theme-techdoc"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "Hugo Techdoc Theme"
-theme = "hugo-theme-techdoc"
 
 hasCJKLanguage = true
 metaDataFormat = "yaml"
@@ -18,18 +25,18 @@ enableMissingTranslationPlaceholders = false
 publishDir = "../macstrelioff.github.io"
 
 [Params]
-
     # Souce Code repository section
-    description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.2.2"
+    # description = "" # like a subtitle
+    #github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_repository = "https://github.com/macstrelioff"
+    # version = "0.2.2" # small text left of title prepended by 'version'
 
-    # Documentation repository section
+    # Documentation repository section 
     # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    # github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
 
     # Analytic section
-    google_analytics_id = "" # Your Google Analytics tracking id
+    google_analytics_id      = "" # Your Google Analytics tracking id
     tag_manager_container_id = "" # Your Google Tag Manager container id
     google_site_verification = "" # Your Google Site Verification for Search Console
 
@@ -38,16 +45,21 @@ publishDir = "../macstrelioff.github.io"
     # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 
     # path name excluded from documentation menu
-    menu_exclusion = ["archives", "blog", "entry", "post", "posts"]
+    menu_exclusion = ["archives", "entry", "post", "posts"]
 
 
 # Global menu section
 [[menu.main]]
     name = "Home"
-    url = "/"
+    url = "/"  # directs to a folder in .
     weight = 1
 
 [[menu.main]]
     name = "Twitter"
     url = "https://twitter.com/thingsym"
     weight = 2
+    
+[[menu.main]]
+    name = "blog"
+    url = "/blog"
+    weight = 3
