@@ -21,9 +21,9 @@ interests:
 - Information Retrieval
 name: Mac Strelioff
 organizations:
-- name: Stanford University
+- name: University of California, Irvine
   url: ""
-role: Professor of Artificial Intelligence
+role: Ph.D. Candidate
 social:
 - icon: envelope
   icon_pack: fas
