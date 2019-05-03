@@ -53,13 +53,18 @@ publishDir = "../public"
     name = "Home"
     url = "/"  # directs to a folder in .
     weight = 1
+    
+[[menu.main]]
+    name = "About"
+    url = "/about"  # directs to a folder in ??
+    weight = 2
 
 [[menu.main]]
     name = "Twitter"
     url = "https://twitter.com/thingsym"
-    weight = 2
+    weight = 3
     
 [[menu.main]]
-    name = "blog"
-    url = "/blog"
-    weight = 3
+    name = "Blog"
+    url = "/blog" 
+    weight = 4
