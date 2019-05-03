@@ -1,0 +1,9 @@
+---
+title: "Teaching"
+author: "Chelsea Parlett"
+output: html_document
+---
+
+[Introduction to R](https://github.com/cmparlettpelleriti/CPSC298ParlettPelleriti)
+<br/>
+[Introduction to Computer Science](https://github.com/cmparlettpelleriti/CPSC230ParlettPelleriti)

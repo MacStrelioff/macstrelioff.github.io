@@ -1,0 +1,10 @@
+---
+title: "Coding"
+author: "Chelsea Parlett"
+output: html_document
+---
+
+```{r}
+plot(mtcars$mpg,mtcars$wt)
+```
+I code stuff.
