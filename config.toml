@@ -5,7 +5,9 @@
 # resources at: 
 # https://gohugo.io/templates
 
-baseURL = "https://macstrelioff.github.io/public"
+# URL to find page in browser, other files at 
+# baseURL / ...
+baseURL = "https://macstrelioff.github.io"
 
 title = "Mac Strelioff"
 theme = "hugo-theme-techdoc"
@@ -22,7 +24,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
-publishDir = "./public"
+publishDir = "./"
 
 [Params]
     # Souce Code repository section
@@ -56,7 +58,7 @@ publishDir = "./public"
     
 [[menu.main]]
     name = "About"
-    url = "../blog/b"  # directs to a folder in ??
+    url = "/about"  # directs to a folder in ??
     weight = 2
 
 [[menu.main]]
