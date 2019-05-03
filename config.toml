@@ -5,7 +5,7 @@
 # resources at: 
 # https://gohugo.io/templates
 
-baseURL = "https://macstrelioff.github.io"
+baseURL = "https://macstrelioff.github.io/public"
 
 title = "Mac Strelioff"
 theme = "hugo-theme-techdoc"
@@ -56,7 +56,7 @@ publishDir = "./public"
     
 [[menu.main]]
     name = "About"
-    url = "/blog"  # directs to a folder in ??
+    url = "../blog/b"  # directs to a folder in ??
     weight = 2
 
 [[menu.main]]
