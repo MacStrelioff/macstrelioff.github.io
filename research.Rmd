@@ -1,7 +1,0 @@
----
-title: "Research"
-author: "Chelsea Parlett"
-output: html_document
----
-
-[Google Scholar](https://scholar.google.com/citations?hl=en&user=VvMqEQMAAAAJ)

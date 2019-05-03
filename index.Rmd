@@ -1,15 +1,3 @@
 ---
-title: "Home"
-author: "Chelsea Parlett Pelleriti"
-output:  html_document
+site: blogdown:::blogdown_site
 ---
-
-
-
-<img src="images/me.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
-
-I am an avid lover of anything silly or statistical (especially if it's both at once). I am currently a PhD student at Chapman University here in Southern California where I not only do research, but also teach some Introductory courses in R and Python.
-
-My research is done with the Machine Learning and Assistive Technology Lab [(MLAT)](http://mlat.chapman.edu/), and focuses on applying statistical and Machine Learning techniques to Behavioral Data. See [here](https://www.linkedin.com/in/chelseaparlettpelleriti/) for some selected works.
-
-I also do a lot of statistical writing, both professionally and for fun. Check out the Writing page to see some of my work. If you're in the mood for something silly, check out [Everyone P-hacks](https://medium.com/@chelseaparlett/everyone-p-hacks-a-lighthearted-guide-for-new-academics-55f68c9f78cb) or [An Ode to Neural Networks and Their Layers](https://medium.com/@chelseaparlett/one-layer-two-layer-1a2c70e594).For somehting more serious, I recommend checking out the [Crash Course Statistics](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNM_Y-bUAhblSAdWRnmBUcr) videos I wrote, or this article on [Hierarchical clustering](https://community.jmp.com/t5/JMP-Blog/Hierarchical-clustering/ba-p/192425) I wrote for JMP Software. If you're interested in hiring me, I'd love to write for you! You can contact me [here](contact.html).
