@@ -51,11 +51,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
                "gallery",
                "talks",
                "featured",
-               "publications",
-               "contact",
                "tags"]
-
-
+               
+# NOTE: main menu controlled by `_default > manus.toml`
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]

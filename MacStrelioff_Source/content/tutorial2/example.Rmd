@@ -3,7 +3,7 @@ date: "2018-09-09T00:00:00-07:00"
 draft: false
 linktitle: Example Page
 menu:
-  tutorial:
+  tutorial2:
     parent: Example Topic
     weight: 1
 title: Example Page
@@ -16,6 +16,10 @@ type: docs
 In this tutorial, I'll share my top 10 tips for getting started with Academic:
 
 ## Tip 1
+
+```{r}
+plot(rnorm(20),runif(20))
+```
 
 ...
 

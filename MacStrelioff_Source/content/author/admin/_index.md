@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: Where is this on the page?
+bio: 
 education:
   courses:
   - course: Ph.D. in Cognitive Science
