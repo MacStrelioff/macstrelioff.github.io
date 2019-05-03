@@ -8,7 +8,7 @@
 # blogdown::serve_site()
 
 # Title of your site
-title = "Mac Strelioff"
+title = "Mac Strelioff (UNDER CONSTRUCTION)"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
@@ -42,7 +42,7 @@ defaultContentLanguageInSubdir = false
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
-ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$","hero","demo"]
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]

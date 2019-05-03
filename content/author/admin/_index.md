@@ -19,7 +19,7 @@ interests:
 - Artificial Intelligence
 - Computational Linguistics
 - Information Retrieval
-name: Nelson Bighetti
+name: Mac Strelioff
 organizations:
 - name: Stanford University
   url: ""
