@@ -19,7 +19,7 @@ enableMissingTranslationPlaceholders = false
 
     # Souce Code repository section
     description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_repository = "https://github.com/MacStrelioff/macstrelioff.github.io"
     version = "0.2.2"
 
     # Documentation repository section
@@ -39,7 +39,7 @@ enableMissingTranslationPlaceholders = false
     menu_exclusion = ["archives", "blog", "entry", "post", "posts"]
 
 
-# Global menu section
+# Global menu section 
 [[menu.main]]
     name = "Home"
     url = "/"
