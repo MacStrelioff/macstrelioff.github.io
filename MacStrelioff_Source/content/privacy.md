@@ -5,4 +5,6 @@ share: false
 title: Privacy Policy
 ---
 
-...
+
+Anything you post here is not private.
+
