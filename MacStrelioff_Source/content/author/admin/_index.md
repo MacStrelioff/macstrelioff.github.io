@@ -9,7 +9,7 @@ education:
     year: 2019
   - course: M.S. in Statistics
     institution: University of California, Irvine
-    year: 2016
+    year: 2018
   - course: B.S. in Psychology
     institution: University of California, Davis
     year: 2014
