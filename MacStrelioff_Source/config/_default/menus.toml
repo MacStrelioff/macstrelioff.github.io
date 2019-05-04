@@ -23,7 +23,7 @@
   
 [[main]]
   name = "CV"
-  url = "CV"
+  url = "/CV-folder/"
   weight = 60
 
 [[main]]
@@ -35,6 +35,6 @@
 
 
 
-
+ 
 
 
