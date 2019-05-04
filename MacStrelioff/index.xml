@@ -36,6 +36,302 @@
     </item>
     
     <item>
+      <title></title>
+      <link>/MacStrelioff/data-science/data-science-handbook/</link>
+      <pubDate>Fri, 03 May 2019 22:53:03 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/data-science-handbook/</guid>
+      <description>
+
+
+&lt;!---
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LgYl1ffS_6Y&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+---&gt;
+&lt;div id=&#34;working-environment&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Working Environment&lt;/h1&gt;
+&lt;p&gt;My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.&lt;/p&gt;
+&lt;div id=&#34;working-with-bash-and-git&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Working With Bash and Git&lt;/h2&gt;
+&lt;div id=&#34;useful-bash-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Useful Bash Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;login     # prompts for username and then password to log in
+man       # man (command) returns documentation a command&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;directory-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Directory Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;pwd       # print working directory
+cd        # changes directory to home
+cd \      # changes directory to (/path)
+cd ..     # moves up one folder in the directory
+ls -al    # lists contencts of directory, -a includes hidden items, -l includes details&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;file-operations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;File Operations&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;mkdir    # make a new directory
+touch    # create a file
+open     # open a file
+mv       # move (file) (to), can also be used to rename a file
+cp       # copy (file) (to) 
+rm       # delete a file&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-utilities&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Other Utilities&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;echo    # print commands screen
+date    # print date
+cal     # print calendar (year)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-custom-commands&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Creating Custom Commands&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e&#34;&gt;this Medium blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use the alias command to map an execution of bash commands to a single command. For example, this will create a command ‘hi’ where the Luca voice slowly says ‘hello world’;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias hi=&amp;quot;say -v Luca  -r 100 &amp;#39;hello world&amp;#39;&amp;quot;
+hi # test this alias&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Functions can be created with the following syntax;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function function_name() {
+ &amp;lt;args&amp;gt; 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Inputs are denoted with $1, $2, … . For example, when called from the terminal, this function will print ‘Your Input Was:’ followed by the first argument it receives;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function print_my_input() {
+ echo &amp;#39;Your Input Was:&amp;#39; $1 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To create a file where custom commands are defined, navigate to the home directory, create, and open the file that will hold function definitions;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd 
+touch .custom_commands
+open .custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define commands you wish to use in future Terminal sessions in the .custom_commands file. The next section describes how to source this file automatically when a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sourcing-files-during-terminal-initialization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sourcing Files During Terminal Initialization&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://stackoverflow.com/questions/19662713/where-do-i-find-the-bashrc-file-on-mac&#34;&gt;this StackOverflow post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bash sources a run control file (~/.bashrc) at initialization. Check if this file exists in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+ls -a&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there is no .bashrc file listed, then first open the .bash_profile file in a text editor and add the following;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then create and open a .bashrc file in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+touch .bashrc
+open .bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In a text editor add the following lines to the .bashrc file;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This last line will source the .custom_commands file described at the end of the previous section, thereby defining any aliases or functions in the .custom_commands file whenever a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scheduling-bash-functions-with-crontab&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Scheduling Bash Functions With Crontab&lt;/h2&gt;
+&lt;p&gt;Some basic crontab commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l # lists crontab jobs
+crontab -r # removes all crontab jobs
+crontab -e # edits list of crontab jobs&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The crontab -e command is somewhat hard to navigate, the following code is an easier way to create crontab jobs from ther terminal;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l | { cat; echo &amp;quot;* * * * * some entry&amp;quot;; } | crontab -
+
+# format for string argument for crontab;
+* * * * * &amp;quot;some entry&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I simplify this farther in a custom function called ‘schedule’ that I define in .&lt;/p&gt;
+&lt;p&gt;To execute functions from a user, the user must be specified in /etc/cron.allow – however, this file can only be edited by a superuser. To create and edit this file, use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd /etc
+sudo touch cron.allow
+sudo nano cron.allow&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;nano opens a text editor in ther terminal, and that can be used to edit and save changes to cron.allow.&lt;/p&gt;
+&lt;p&gt;More information on crontab &lt;a href=&#34;https://www.computerhope.com/unix/ucrontab.htm&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Git and GitHub&lt;/h2&gt;
+&lt;div id=&#34;setup&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# create user name and email for tagging contributions later
+git config --global user.name &amp;quot;USERNAME&amp;quot;   
+git config --global user.email &amp;quot;EMAIL&amp;quot; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Connecting to Git can be done through a username/password or through SSH verification.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;usernamepassword&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Username/Password&lt;/h3&gt;
+&lt;p&gt;This didn’t work for ubdates scheduled through crontab.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ssh&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;SSH&lt;/h3&gt;
+&lt;p&gt;First, &lt;a href=&#34;https://help.github.com/articles/checking-for-existing-ssh-keys/&#34;&gt;check for SSH keys with&lt;/a&gt;;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd ~/.ssh  # navigate to user/.ssh folder
+ls -a      # list all files&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A public SSH key is in id_rsa.pub, which can be opened in a text editor.&lt;/p&gt;
+&lt;p&gt;If no id_rsa file exists, or if you wish to create a new SSH key, you can use the following command to generate a new SSH key;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@example.com&amp;quot; # run this if id_rsa file does not exist&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will prompt you for the file location where the SSH key should be saved – id_rsa is the default file.&lt;/p&gt;
+&lt;p&gt;From here, follow the steps &lt;a href=&#34;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&#34;&gt;to add an SSH key&lt;/a&gt;, summarized below.&lt;/p&gt;
+&lt;p&gt;First, create a config file for the SSH agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;touch ~/.ssh/config&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open the config file in a text editor and add the the following commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, from Terminal, add the key from the file (e.g. id_rsa) to the ssh agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-add -K ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, &lt;a href=&#34;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&#34;&gt;add the ssh key to the GitHub account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;test the connection&lt;/a&gt; with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh -T git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;working-from-a-repository&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Working From a Repository&lt;/h3&gt;
+&lt;p&gt;Create a repository through GitHub’s user interface (log in and select ‘new repository’).&lt;/p&gt;
+&lt;p&gt;Then create a directory on a local computer, possibly using bash commands; mkdir and cd.&lt;/p&gt;
+&lt;p&gt;The simplest way is to clone the repo from GitHub with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git clone (url)     # this will clone from the url to the current directory&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another way, from inside the directory that is to be the local repo, issue these commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git init   # initialize a repo
+git remote add origin (url or SSH address) # point local repo to remote repo&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;switching-between-ssh-and-https-access&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Switching between SSH and HTTPS Access&lt;/h3&gt;
+&lt;p&gt;In both examples below, replace ‘USERNAME/REPOSITORY’ with the appropriate values. From within the local repo folder,&lt;/p&gt;
+&lt;p&gt;Change from HTTPS to SSH with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Change from SSH to HTTPS with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with https://github.com/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/changing-a-remote-s-url/&#34;&gt;More detailed guide here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Other methods for addressing ‘Device not configured’ errors &lt;a href=&#34;https://stackoverflow.com/questions/40274484/fatal-could-not-read-username-for-https-github-com-device-not-configured&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;repository-maintanence-and-collaboration&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Repository Maintanence And Collaboration&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# download.file(&amp;quot;https://i.stack.imgur.com/nWYnQ.png&amp;quot;,&amp;#39;y.jpg&amp;#39;, mode = &amp;#39;wb&amp;#39;)
+jj &amp;lt;- readPNG(&amp;quot;y.jpg&amp;quot;,native=TRUE)
+plot(0:1,0:1,type=&amp;quot;n&amp;quot;,ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,1,1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Data-Science-Handbook_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Useful commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git pull    # adds files from the configured remote repo to your local repo and workspace
+git add .   # adds all new files to be tracked
+git add -u  # updates all files
+git add -A  # does both &amp;#39;.&amp;#39; and &amp;#39;-u&amp;#39;
+git commit -m &amp;quot;message&amp;quot; # saves changes local repo
+git push    # updates repo on GitHub&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Collaborators can all access the GitHub repo through push/pull commands. In collaborative settings you might need to pull, so that your repository is current, before pushing changes from the local repository to the remote repository on GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;useful-custom-aliases-and-functions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Useful Custom Aliases and Functions&lt;/h2&gt;
+&lt;div id=&#34;gitup-combines-add-commit-and-push-into-one-command&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitup: combines add, commit, and push into one command&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gitupall-updates-all-git-repos-in-my-git-folder&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitupall: updates all git repos in my git folder&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function gitupall{
+for filename in /Users/mac/git/*; do
+echo &amp;quot;**************************updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;; 
+gitup
+cd ..
+done
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;schedule-schedules-a-command-to-be-executed-periodically&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;schedule: schedules a command to be executed periodically&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+
+# format for string argument for crontab;
+* * * * * &amp;quot;command to be executed&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# e.g. use: schedule updating of all repos each hour
+schedule &amp;quot;0 0-23 * * * gitupall&amp;quot;
+crontab -l # lists crontab jobs after schedule call&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;my-setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;My Setup&lt;/h2&gt;
+&lt;div id=&#34;bash-aliases-functions-scheduled-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bash Aliases, Functions, Scheduled Commands&lt;/h3&gt;
+&lt;p&gt;In my root directory, I have a file called .custom_commands with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# aliases
+
+# goes to my folder of git projects
+alias gitgo=&amp;quot;cd /Users/mac/git; ls&amp;quot;
+echo &amp;#39;sourced alias gitgo&amp;#39;
+
+# pushes updates on a git project
+alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;
+echo &amp;#39;sourced alias gitup&amp;#39;
+
+# functions
+
+# schedule &amp;quot;(m h DoM M DoW command)&amp;quot;
+# schedules command to be executed at 
+# minute m of hour h on DoM days of the month in months M or DoW days of the week.
+function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+echo &amp;#39;sourced function schedule&amp;#39;
+
+# for updating all git projects, schedule this to be done periodically
+function gitupall(){
+for filename in /Users/mac/git/*; do
+echo &amp;quot;************************** updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;;
+git remote -v    # prints the fetch and push destinations
+gitup
+done
+cd # return to home directory
+}
+echo &amp;#39;sourced function gitupall&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a .bashrc file in my root directory, which sources the custom commands. Particularly the contents of the .bashrc file are;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source system-wide definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a file in my root directory for scheduling, called .scheduled with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# put all scheduled functions here
+
+# source custom commands
+source ~/.custom_commands
+
+# activate key agent
+eval &amp;quot;$(ssh-agent -s)&amp;quot;
+
+# test SSH key / print username
+ssh -T git@github.com
+
+# update all git repos
+gitupall&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I then scheduled this file to be read hourly by opening a terminal session, which sources .bashrc at initialization thereby sourcing my custom commands, and running;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;schedule &amp;quot;0 0-23 * * * source ~/.scheduled&amp;quot;
+crontab -l # the scheduled job should be listed as a crontab job&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>An example preprint / working paper</title>
       <link>/MacStrelioff/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 -0700</pubDate>
