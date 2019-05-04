@@ -30,8 +30,8 @@
   weight = 40
 
 [[main]]
-  name = "Youtube Videos"
-  url = "/tutorial2/"
+  name = "Video Lectures"
+  url = "/youtube/"
   weight = 50
 
 [[main]]

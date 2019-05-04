@@ -1,0 +1,18 @@
+---
+date: "`r Sys.time()`"
+draft: false
+linktitle: Example Page
+menu:
+  Youtube:
+    name: Youtube
+    weight: 1
+title: Example Page
+toc: true
+type: docs
+---
+
+# DSI Project Proposal
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LgYl1ffS_6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
