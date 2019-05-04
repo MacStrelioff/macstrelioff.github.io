@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview on Mac Strelioff (UNDER CONSTRUCTION)</title>
+    <link>/MacStrelioff/tutorial2/</link>
+    <description>Recent content in Overview on Mac Strelioff (UNDER CONSTRUCTION)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="/MacStrelioff/tutorial2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example Page</title>
+      <link>/MacStrelioff/tutorial2/example/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 -0700</pubDate>
+      
+      <guid>/MacStrelioff/tutorial2/example/</guid>
+      <description> true  H1 In this tutorial, I’ll share my top 10 tips for getting started with Academic:
+Tip 1 plot(rnorm(20),runif(20)) …
+H3 123
+  Tip 2 …
+  </description>
+    </item>
+    
+  </channel>
+</rss>

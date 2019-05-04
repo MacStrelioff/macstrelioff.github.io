@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/MacStrelioff/talk/example/</loc>
+    <lastmod>2030-06-01T13:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/</loc>
+    <lastmod>2030-06-01T13:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/talk/</loc>
+    <lastmod>2030-06-01T13:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/data-science/</loc>
+    <lastmod>2019-05-03T22:53:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/data-science/data-science-handbook/</loc>
+    <lastmod>2019-05-03T22:53:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication_types/3/</loc>
+    <lastmod>2019-04-07T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication/preprint/</loc>
+    <lastmod>2019-04-07T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/authors/</loc>
+    <lastmod>2019-04-17T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication_types/</loc>
+    <lastmod>2019-04-07T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication/</loc>
+    <lastmod>2019-04-07T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/source-themes/</loc>
+    <lastmod>2019-04-07T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/</loc>
+    <lastmod>2019-04-17T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/authors/admin/</loc>
+    <lastmod>2019-04-17T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/post/jupyter/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/post/</loc>
+    <lastmod>2019-04-17T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/cv/</loc>
+    <lastmod>2018-09-09T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/video-lectures/</loc>
+    <lastmod>2018-09-09T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tutorial/example/</loc>
+    <lastmod>2018-09-09T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tutorial2/example/</loc>
+    <lastmod>2018-09-09T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tutorial2/</loc>
+    <lastmod>2018-09-09T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tutorial/</loc>
+    <lastmod>2018-09-09T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/deep-learning/</loc>
+    <lastmod>2016-04-27T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/demo/</loc>
+    <lastmod>2016-04-27T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/project/external-project/</loc>
+    <lastmod>2016-04-27T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/project/internal-project/</loc>
+    <lastmod>2016-04-27T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/project/</loc>
+    <lastmod>2016-04-27T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/academic/</loc>
+    <lastmod>2019-04-17T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/post/getting-started/</loc>
+    <lastmod>2019-04-17T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication_types/2/</loc>
+    <lastmod>2015-09-01T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication/journal-article/</loc>
+    <lastmod>2015-09-01T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/categories/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/post/2015-07-23-r-rmarkdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/categories/r/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/r-markdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/plot/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/tags/regression/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication_types/1/</loc>
+    <lastmod>2013-07-01T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/publication/conference-paper/</loc>
+    <lastmod>2013-07-01T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/authors/robert-ford/</loc>
+    <lastmod>2013-07-01T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/author/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/author/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
