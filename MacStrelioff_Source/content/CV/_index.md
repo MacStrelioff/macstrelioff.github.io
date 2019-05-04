@@ -2,7 +2,7 @@
 date: "2018-09-09T00:00:00-07:00"
 draft: false
 menu:
-  CV-folder:
+  CV:
     name: name test
     weight: 1 
 title: 
@@ -16,4 +16,3 @@ type: article
     </embed>
 </object>
 
-Last Updated:  `r Sys.time()`
