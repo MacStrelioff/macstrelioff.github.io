@@ -16,30 +16,14 @@
   url = "/data-science/"
   weight = 20
   
-[[main.data-science]]
-  name="data-science"
-
-[[main]]
-  name = "Python"
-  url = "/tutorial/"
-  weight = 30
-
-[[main]]
-  name = "R"
-  url = "/tutorial2/"
-  weight = 40
-
 [[main]]
   name = "Video Lectures"
   url = "/video-lectures/"
   weight = 50
   
-[[main.video-lectures]]
-  name="video-lectures"
-
 [[main]]
   name = "CV"
-  url = "/MacStrelioff_Source/content/files/CV.pdf"
+  url = "CV"
   weight = 60
 
 [[main]]

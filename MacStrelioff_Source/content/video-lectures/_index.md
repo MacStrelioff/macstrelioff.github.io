@@ -16,8 +16,6 @@ type: docs
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LgYl1ffS_6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 --->
 
-
-
-
-
-
+<!---
+https://macstrelioff.github.io/MacStrelioff/files/CV.pdf
+--->
