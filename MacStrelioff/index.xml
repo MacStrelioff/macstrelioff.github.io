@@ -36,26 +36,6 @@
     </item>
     
     <item>
-      <title>Example Page</title>
-      <link>/MacStrelioff/youtube/example/</link>
-      <pubDate>Fri, 03 May 2019 22:59:46 +0000</pubDate>
-      
-      <guid>/MacStrelioff/youtube/example/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-true
-&lt;/div&gt;
-
-&lt;div id=&#34;dsi-project-proposal&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;DSI Project Proposal&lt;/h1&gt;
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LgYl1ffS_6Y&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>/MacStrelioff/data-science/data-science-handbook/</link>
       <pubDate>Fri, 03 May 2019 22:53:03 +0000</pubDate>

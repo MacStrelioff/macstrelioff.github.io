@@ -31,8 +31,11 @@
 
 [[main]]
   name = "Video Lectures"
-  url = "/youtube/"
+  url = "/video-lectures/"
   weight = 50
+  
+[[main.video-lectures]]
+  name="video-lectures"
 
 [[main]]
   name = "CV"

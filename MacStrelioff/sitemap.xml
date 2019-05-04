@@ -19,17 +19,6 @@
   </url>
   
   <url>
-    <loc>/MacStrelioff/youtube/example/</loc>
-    <lastmod>2019-05-03T22:59:46+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/MacStrelioff/youtube/</loc>
-    <lastmod>2019-05-03T22:59:46+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/MacStrelioff/data-science/</loc>
     <lastmod>2019-05-03T22:53:03+00:00</lastmod>
   </url>
@@ -104,6 +93,11 @@
   <url>
     <loc>/MacStrelioff/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/video-lectures/</loc>
+    <lastmod>2018-09-09T00:00:00-07:00</lastmod>
   </url>
   
   <url>
