@@ -25,7 +25,7 @@
   name = "R"
   url = "/tutorial2/"
   weight = 40
-  
+
 [[main]]
   name = "Youtube Videos"
   url = "/tutorial2/"
