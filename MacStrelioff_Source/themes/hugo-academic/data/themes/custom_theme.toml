@@ -5,16 +5,16 @@ name = "Custom"
 light = false
 
 # Primary
-primary       = "rgba(255,0,0,0.6)"#"hsl(339, 90%, 68%)" # for links
-primary_light = "rgba(255,0,0,0.8)"#"hsl(339, 90%, 78%)"
-primary_dark  = "rgba(255,0,0,0.8)" #"hsl(339, 90%, 58%)" # for current selection in 'Project' menu
+primary       = "rgba(200,0,0,1)"#"hsl(339, 90%, 68%)" # for links
+primary_light = "rgba(150,0,0,1)"#"hsl(339, 90%, 78%)" 
+primary_dark  = "rgba(150,0,0,1)"#"hsl(339, 90%, 58%)" # for current selection in 'Project' menu
 
 # Menu
-menu_primary     = "rgb(20, 22, 34)"
+menu_primary     = "rgba(20, 22, 0,1)"
 menu_text        = "rgba(255,255,255,0.6)"
 menu_text_active = "rgba(255,255,255,1)"
-menu_title       = "#fff"
+menu_title       = "rgb(255, 255, 255)"#"#fff"
 
 # Home sections
-home_section_odd =  "rgb(20, 22, 0)" #"hsla(231, 15%, 18%, 1)"
+home_section_odd  = "hsla(231, 15%, 18%, 1)"
 home_section_even = "hsla(231, 15%, 16%, 1)"
