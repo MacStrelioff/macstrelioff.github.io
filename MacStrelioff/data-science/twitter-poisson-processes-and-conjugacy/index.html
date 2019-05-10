@@ -27,9 +27,7 @@
   
     
   
-  <meta name="description" content="Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
-To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
-python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook.">
+  <meta name="description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
@@ -124,14 +122,12 @@ python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional inf
   <meta property="og:site_name" content="">
   <meta property="og:url" content="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
   <meta property="og:title" content="Twitter, Poisson Processes, and Conjugacy | ">
-  <meta property="og:description" content="Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
-To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
-python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-05-09T23:39:16&#43;00:00">
+  <meta property="article:published_time" content="2019-05-10T07:47:33&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-09T23:39:16&#43;00:00">
+  <meta property="article:modified_time" content="2019-05-10T07:47:33&#43;00:00">
   
 
   
@@ -379,6 +375,29 @@ python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional inf
           <div class="article-style" itemprop="articleBody">
             
 
+<div id="TOC">
+<ul>
+<li><a href="#background-and-setup">Background and Setup</a></li>
+<li><a href="#twitter-data">Twitter Data</a><ul>
+<li><a href="#pulling-data-from-twitters-api">Pulling Data from Twitter’s API</a></li>
+<li><a href="#working-with-twitter-status-objects">Working with Twitter Status objects</a></li>
+<li><a href="#embed-a-status">Embed a Status</a></li>
+<li><a href="#convert-a-status-to-a-dict">Convert a Status to a dict</a></li>
+<li><a href="#access-status-attributes-how-i-accessed-the-data-used-below">Access Status Attributes (How I accessed the data used below)</a></li>
+</ul></li>
+<li><a href="#poisson-process">Poisson Process</a><ul>
+<li><a href="#assumptions">Assumptions</a></li>
+<li><a href="#specification-and-properties">Specification and Properties</a></li>
+<li><a href="#checking-the-homogeneity-assumption">Checking the Homogeneity Assumption</a></li>
+<li><a href="#checking-the-exponential-distribution-of-intervals">Checking the exponential distribution of intervals</a></li>
+</ul></li>
+<li><a href="#model-of-tweet-fequency-using-conjugacy">Model of Tweet Fequency Using Conjugacy</a><ul>
+<li><a href="#inference-on-tweet-rate-lambda-over-time">Inference On Tweet Rate <span class="math inline">\(\lambda\)</span> Over Time</a></li>
+</ul></li>
+<li><a href="#predicting-number-of-tweets-in-interval-s">Predicting Number Of Tweets In Interval <span class="math inline">\(s\)</span></a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</div>
 
 <div id="background-and-setup" class="section level2">
 <h2>Background and Setup</h2>
@@ -430,8 +449,8 @@ def load_obj(name):
     with open(name + &#39;.pkl&#39;, &#39;rb&#39;) as f:
         return pickle.load(f)</code></pre>
 </div>
-<div id="twitter-data" class="section level1">
-<h1>Twitter Data</h1>
+<div id="twitter-data" class="section level2">
+<h2>Twitter Data</h2>
 <div id="pulling-data-from-twitters-api" class="section level3">
 <h3>Pulling Data from Twitter’s API</h3>
 <p>First I pulled data using the code below. For this code to work, your API keys will need to be specified in the setup above. To conceil my keys, I ran the commented code below earlier and saved the timeline object. The uncommented code loads my timeline and looks at the first element. The timeline is represented as a list of Status objects like the one output by the code below.</p>
@@ -455,10 +474,7 @@ timeline[0] # most recent tweet status object</code></pre>
 </div>
 <div id="working-with-twitter-status-objects" class="section level3">
 <h3>Working with Twitter Status objects</h3>
-<p>I cover three ways to work with Status objects.
-1. display the Status as a tweet!
-2. Convert the Status to a dictionary and access values from keys
-3. Access values directly as attributes of the Status</p>
+<p>I cover three ways to work with Status objects. 1. display the Status as a tweet! 2. Convert the Status to a dictionary and access values from keys 3. Access values directly as attributes of the Status</p>
 </div>
 <div id="embed-a-status" class="section level3">
 <h3>Embed a Status</h3>
@@ -475,7 +491,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2b929978&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2355f978&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
@@ -542,8 +558,8 @@ times[0]</code></pre>
 <p>Woah, almost 155 days of my twitter activity!</p>
 </div>
 </div>
-<div id="poisson-process" class="section level1">
-<h1>Poisson Process</h1>
+<div id="poisson-process" class="section level2">
+<h2>Poisson Process</h2>
 <p>A Poisson process is a common framework for modeling events that occurr in time or space. In this context, tweets are being created over time and we are interested in modeling the rate at which tweets are created in order to predict how many tweets will be created in a week.</p>
 <div id="assumptions" class="section level3">
 <h3>Assumptions</h3>
@@ -582,8 +598,8 @@ times[0]</code></pre>
 </ol>
 <p>More information on these three kinds of distributions, and ways to implement them in Python, can be found in the <a href="https://docs.scipy.org/doc/scipy/reference/stats.html">scipy documentation on statistical functions</a>. General information on each of these distributions can be found on the Wikipedia page for the <a href="https://en.wikipedia.org/wiki/Exponential_distribution">exponential</a>, <a href="https://en.wikipedia.org/wiki/Poisson_distribution">Poisson</a>, or <a href="https://en.wikipedia.org/wiki/Gamma_distribution">gamma</a> distribution. A key difference between the standard uses of these distributions and their roles in a Poisson process is that the rate parameter <span class="math inline">\(\lambda\)</span> is also scaled by the duration of an interval <span class="math inline">\(s\)</span> when constructing a distribution for the count of events in interval <span class="math inline">\(s\)</span> (2, above) or the duration of the interval required for <span class="math inline">\(c\)</span> events (3, above).</p>
 </div>
-<div id="checking-the-homogeneity-assumption" class="section level2">
-<h2>Checking the Homogeneity Assumption</h2>
+<div id="checking-the-homogeneity-assumption" class="section level3">
+<h3>Checking the Homogeneity Assumption</h3>
 <p>The homogeneity assumption strictly requires that tweet rates are constant across time. This would generate data that are uniform across meaningful intervals such as time in a week or time in a day. To check homogeneity, below I convert the timestamps into the hour within a week, minute within a day, and minute within an hour, and plot tweet counts across these representations of time.</p>
 <pre class="python"><code># convert to hours in a week
 hour_of_week     = [t.weekday()*24+t.hour+t.minute/60 for t in times]
@@ -625,8 +641,8 @@ for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
 <p>The bottom plot displays tweet frequencies by minutes within an hour. This seems more flat overall longer periods of time, but I may strangely tend to tweet more during the first half of hours.</p>
 <p>Overall, there are many reasons that the homogeneity assumption may be violated. For cases like this, the tweet rate <span class="math inline">\(\lambda\)</span> can be modeled as a function of time. However, to keep this example simple, I’ll ignore possible violations and proceede as if <span class="math inline">\(\lambda\)</span> were a constant with respect to time.</p>
 </div>
-<div id="checking-the-exponential-distribution-of-intervals" class="section level2">
-<h2>Checking the exponential distribution of intervals</h2>
+<div id="checking-the-exponential-distribution-of-intervals" class="section level3">
+<h3>Checking the exponential distribution of intervals</h3>
 <p>Let’s the distribution of the time between tweets, <span class="math inline">\(s_i\)</span>. If the assumptions of the Poisson process were satisfied, then the intervals between tweets would follow an exponential distribution. Below I compute the number of seconds between tweets and display each value as a black dash on the x-axis. I overlay a histogram, a kernel density, and a exponential density based on the observed mean interval.</p>
 <pre class="python"><code># compute intervals between tweets
 ss = [times[i]-times[i-1] for i in range(1,len(times))];
@@ -660,8 +676,8 @@ np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)</code></pre>
 <p>The observed standard deviation is about 1.34 times larger (variance is about 1.80 times larger) than it would be if the data were exponentially distributed with the observed mean. While this could be accounted for with an overdispersion parameter, I will ignore this issue here for the sake of having a simple and fast online model.</p>
 </div>
 </div>
-<div id="model-of-tweet-fequency-using-conjugacy" class="section level1">
-<h1>Model of Tweet Fequency Using Conjugacy</h1>
+<div id="model-of-tweet-fequency-using-conjugacy" class="section level2">
+<h2>Model of Tweet Fequency Using Conjugacy</h2>
 <p>First, I’ll assume (despite the overdispersion) that the intervals between tweets follow an exponential distribution;</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -826,11 +842,10 @@ plt.legend();</code></pre>
 <p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-18-1.png" width="960" /></p>
 <p>The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> might be warrented.</p>
 </div>
+</div>
 <div id="predicting-number-of-tweets-in-interval-s" class="section level2">
 <h2>Predicting Number Of Tweets In Interval <span class="math inline">\(s\)</span></h2>
-<p>Now I’ll visually compare predictions for the count of tweets in a week based on estimates of <span class="math inline">\(\lambda\)</span> after the first 20 tweets and using all 200 tweets, using two models;
-1. A Poisson using <span class="math inline">\(\theta=s\lambda_{MAP}\)</span>
-2. The negative binomial derived in the model section above</p>
+<p>Now I’ll visually compare predictions for the count of tweets in a week based on estimates of <span class="math inline">\(\lambda\)</span> after the first 20 tweets and using all 200 tweets, using two models; 1. A Poisson using <span class="math inline">\(\theta=s\lambda_{MAP}\)</span> 2. The negative binomial derived in the model section above</p>
 <p>First, an issue with the parameterization of the negative binomial has to be addressed. In my derivation, I ended with a negative binomial parameterized as;</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -910,9 +925,8 @@ plt.legend();</code></pre>
 <p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png" width="960" /></p>
 <p>When considering a longer period of time, The uncertainty in <span class="math inline">\(\lambda\)</span> again carries through the negative binomial model, but is discarded in the Poisson model that uses <span class="math inline">\(\lambda_{MAP}\)</span>.</p>
 </div>
-</div>
-<div id="summary" class="section level1">
-<h1>Summary</h1>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
 <p>This was a beefy notebook!</p>
 <p>First I showed how to pull tweets as Status objects from Twitter’s API. Given Status objects, I then showed how to embed them in a notebook, view them as a dictionary, and otherwise access their attributes to construct a list of tweet timestamps. I then described Poisson Processes as they may apply to modeling user tweet rates and tweet counts over periods of time. I used kernel densities to check assumptions of a Poisson Process and found possible violations of homogeneity, and of the result that intervals between tweets should follow an exponential distribution.</p>
 <p>Punting these violations, I developed a model of tweet frequency using conjugacy between Gamma priors and Exponential likelihoods. To predict tweet counts over a period of time, I derived a negative binomial predictive distribution that accounted for uncertainty in a user’s tweet rate. I compared this distribution to a Poisson distribution that ignored uncertainty by taking only the maximum a posteriori estimate of a user’s tweet rate.</p>
@@ -929,7 +943,7 @@ plt.legend();</code></pre>
         </div>
 
         <div class="body-footer">
-          Last updated on May 9, 2019
+          Last updated on May 10, 2019
         </div>
 
       </article>

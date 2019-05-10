@@ -1,20 +1,19 @@
 ---
-title: "Twitter, Poisson Processes, and Conjugacy"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 output:
-  html_document:
+  blogdown::html_page:
     toc: true
 menu:
   data-science:
     parent: Fun 
     weight: 1
 linktitle: Twitter, Poisson Processes, and Conjugacy
+title: "Twitter, Poisson Processes, and Conjugacy"
 type: docs
 ---
 
 ## Background and Setup 
-
 In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
 
 To get started, I followed directions from three main sources that walked through the `twitter` and `python-twitter` libraries, and described how to apply for Twitter API access and use the keys;
@@ -87,10 +86,9 @@ def load_obj(name):
 ```
 
 
-# Twitter Data
+## Twitter Data
 
 ### Pulling Data from Twitter's API
-
 First I pulled data using the code below. For this code to work, your API keys will need to be specified in the setup above. To conceil my keys, I ran the commented code below earlier and saved the timeline object. The uncommented code loads my timeline and looks at the first element. The timeline is represented as a list of Status objects like the one output by the code below.
 
 
@@ -115,7 +113,6 @@ timeline[0] # most recent tweet status object
 
 
 ### Working with Twitter Status objects
-
 I cover three ways to work with Status objects. 
 1. display the Status as a tweet!
 2. Convert the Status to a dictionary and access values from keys
@@ -220,7 +217,7 @@ times[-1]-times[0]
 
 Woah, almost 155 days of my twitter activity!
 
-# Poisson Process
+## Poisson Process
 
 A Poisson process is a common framework for modeling events that occurr in time or space. In this context, tweets are being created over time and we are interested in modeling the rate at which tweets are created in order to predict how many tweets will be created in a week.
 
@@ -250,7 +247,7 @@ In this context tweet events are occurring across time. I index tweets with $i\i
 
 More information on these three kinds of distributions, and ways to implement them in Python, can be found in the [scipy documentation on statistical functions](https://docs.scipy.org/doc/scipy/reference/stats.html). General information on each of these distributions can be found on the Wikipedia page for the [exponential](https://en.wikipedia.org/wiki/Exponential_distribution), [Poisson](https://en.wikipedia.org/wiki/Poisson_distribution), or [gamma](https://en.wikipedia.org/wiki/Gamma_distribution) distribution. A key difference between the standard uses of these distributions and their roles in a Poisson process is that the rate parameter $\lambda$ is also scaled by the duration of an interval $s$ when constructing a distribution for the count of events in interval $s$ (2, above) or the duration of the interval required for $c$ events (3, above). 
 
-## Checking the Homogeneity Assumption
+### Checking the Homogeneity Assumption
 
 The homogeneity assumption strictly requires that tweet rates are constant across time. This would generate data that are uniform across meaningful intervals such as time in a week or time in a day. To check homogeneity, below I convert the timestamps into the hour within a week, minute within a day, and minute within an hour, and plot tweet counts across these representations of time. 
 
@@ -309,7 +306,7 @@ The bottom plot displays tweet frequencies by minutes within an hour. This seems
 
 Overall, there are many reasons that the homogeneity assumption may be violated. For cases like this, the tweet rate $\lambda$ can be modeled as a function of time. However, to keep this example simple, I'll ignore possible violations and proceede as if $\lambda$ were a constant with respect to time.
 
-## Checking the exponential distribution of intervals
+### Checking the exponential distribution of intervals
 
 Let's the distribution of the time between tweets, $s_i$. If the assumptions of the Poisson process were satisfied, then the intervals between tweets would follow an exponential distribution. Below I compute the number of seconds between tweets and display each value as a black dash on the x-axis. I overlay a histogram, a kernel density, and a exponential density based on the observed mean interval. 
 
@@ -349,7 +346,7 @@ np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)
 
 The observed standard deviation is about 1.34 times larger (variance is about 1.80 times larger) than it would be if the data were exponentially distributed with the observed mean. While this could be accounted for with an overdispersion parameter, I will ignore this issue here for the sake of having a simple and fast online model.
 
-# Model of Tweet Fequency Using Conjugacy
+## Model of Tweet Fequency Using Conjugacy
 
 First, I'll assume (despite the overdispersion) that the intervals between tweets follow an exponential distribution; 
 
@@ -647,7 +644,7 @@ plt.legend();
 
 When considering a longer period of time, The uncertainty in $\lambda$ again carries through the negative binomial model, but is discarded in the Poisson model that uses $\lambda_{MAP}$. 
 
-# Summary
+## Summary
 
 This was a beefy notebook!
 
