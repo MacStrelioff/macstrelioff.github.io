@@ -8,7 +8,7 @@
 # blogdown::serve_site()
 
 # Title of your site
-title = "Mac Strelioff (UNDER CONSTRUCTION)"
+title = ""
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
@@ -23,7 +23,7 @@ copyright = ""
 googleAnalytics = ""
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "@macstrelioff"
 
 ############################
 ## Advanced options below ##

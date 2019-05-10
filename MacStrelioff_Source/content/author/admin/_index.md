@@ -31,25 +31,24 @@ user_groups:
 bio: 
 education:
   courses:
+  - course: Insight Data Science Fellow
+    institution: Insight Data Science, San Francisco
+    year: Summer 2019
   - course: Ph.D. in Cognitive Science
     institution: University of California, Irvine
     year: 2019
   - course: M.S. in Statistics
     institution: University of California, Irvine
     year: 2018
-  - course: B.S. in Psychology
-    institution: University of California, Davis
-    year: 2014
+
 email: "mstrelio@uci.edu"
 
 interests:
 - Applied Decision Theory
 - Dynamic Modeling
 - Automating Web Interactions
-
 ---
 
-Mac is finally making a website.
-
+I am looking for career opportunities where I can apply my years of experience in computational modeling, experimentation, and statistics to real-world problems. 
 
 
