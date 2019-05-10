@@ -8,7 +8,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 15  # Order that this section will appear.
 
-title = "Overview of Current Projects"
+title = "Representative Academic Projects"
 subtitle = ""
 
 [design]
@@ -37,7 +37,7 @@ subtitle = ""
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.
-  padding = ["10px", "0", "20px", "0"]
+  padding = ["15px", "0", "20px", "0"]
 
 [advanced]
  # Custom CSS. 
@@ -47,30 +47,22 @@ subtitle = ""
  css_class = ""
 +++
 
-## Developing Reinforcement Learning Models 
+## Developing Reinforcement Learning Models of Free Operant Behavior
 
-<img src="gallery/gallery/reinforcement-learning.png">
+Free operant environments are commonly used to study the effects of rewards on human and animal behavior. In a free operant environment an agent can take any action at any time -- this is in contrast to trial-based environments where an agent can only take one action per trial. I model people in these environments as a semi-Markov Decision Processes and develop algorithms to maximize reward rates on free operant tasks.
 
-Most reinforcement learning research deals with problems that can be formulated as a [Markov Decision Process (MDP)](https://en.wikipedia.org/wiki/Markov_decision_process). An MDP is defined by a state space $\mathcal{S}$, an action space $\mathcal{A}$, a transition function that describes the dynamics between states conditional on actions $p(s\_{t+1}|a\_{t},s\_{t})$, and a (potentially probabilistic) reward function that assigns real values to combinations of actions and state transitions $p(r\_t|a\_t,s\_t,s\_{t+1})$. 
-
-My research involves developing reinforcement learning algorithms in MDP settings that are complicated by continuous state and action spaces, and more than one possible reward function. 
-
-I have taken two approaches: 
+I have taken two main approaches: 
 
 1. A model-free actor critic algorithm partially described [in this talk](https://osf.io/w2j7n/). 
 2. A model-based learner that uses Bayesian function approximation and structure inference methods similar to those described [in this short presentation](https://osf.io/3vwh4/).
 
-## Inferring Cognitive Strategies On Behavioral Bandit Tasks
+## Inferring Children's Strategies On Bandit Tasks
 
-<img src="StrategyInference.png">
+Bandit tasks are commonly used in behavioral research to understand decision making strategies. In the task used here, children repeatedly chose one of two bandits (gambling machines). The bandits stochastically paid out some number of stickers. In this analysis, we specified four different decision-making strategies that the kids might have been following on each trial. We estimated model parameters with a Gibbs Sampler implemented through JAGS and then computed posterior model probabilities for each strategy across trials. A strategy's posterior model probability represents the probability that a child is following that strategy on each trial.
 
-Bandit tasks are commonly used in behavioral research to understand decision making strategies. In the task used here, children repeatedly chose one of two bandits (gambling machines) on each of 50 trials. The machines stochastically paid out a number of stickers. Colored circles indicate the number of stickers, and the location of the circle (top or bottom of plot) indicates which machine was chosen. In this analysis, I specified four different decision algorithms that the kids might have been using to make a decision on each trial. I estimated model parameters with a Gibbs Sampler implemented through JAGS and then computed posterior model probabilities across trials (colored lines). Posterior model probabilities for each decision algorithm represent the probability that a child is following that algorithm across time.
-
-Details on the specific task, models, and analysis can be found in [this poster](https://osf.io/c4bku/). 
+Details on the task, decision-making strategies, and analysis can be found in [this poster](https://osf.io/c4bku/). 
 
 ## Discovering Bias In Prediction Markets
-
-<img src="prediction-market.png">
 
 Prediction markets are a mechanism for aggregating and incentivising individual estimates of the probability of some event. Here we were interested in whether fallacies in probabilistic reasoning that are observed in many individual-level lab studies could be observed in prediction market prices. We found evidence of conjunction and disjunction fallacies, as well as the commonly observed S-shaped subjective probability function.
 

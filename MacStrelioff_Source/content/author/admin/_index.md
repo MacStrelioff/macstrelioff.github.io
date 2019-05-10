@@ -43,10 +43,10 @@ education:
 email: "mstrelio@uci.edu"
 
 interests:
-- Automating Web Interactions
-- Dynamic Modeling
 - Applied Decision Theory
-- Making a Website
+- Dynamic Modeling
+- Automating Web Interactions
+
 ---
 
 Mac is finally making a website.
