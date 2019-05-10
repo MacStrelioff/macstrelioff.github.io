@@ -14,6 +14,10 @@ library(entropy)
 set.seed(10201991)
 ```
 
+# TODO:
+1. redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script. 
+
+
 # Bandit Algorithms
 
 Much of this is from [this blog](https://sudeepraja.github.io/Bandits/).
@@ -85,7 +89,7 @@ E(Regret) &= \sum_t E(r^*_{t}-r_t)
 $$
 
 
-## Uniform Policy
+## Uniform Policy 
 
 This corresponds to a simple random sample type of assignment mechanism -- the gold standard for causal inference from experimental data. 
 
@@ -100,9 +104,7 @@ $$
 The expected regret on each trial is the difference between the maximal reward and mean reward across actions. 
 
 
-## Greedy Policy
-
-
+## Greedy Policies
 
 ### $\epsilon$-Greedy Policy
 
@@ -185,7 +187,6 @@ c(entropy.empirical(table(ats),unit="log2"),freqs.empirical(table(ats)))
 
 
 ## Upper Confidence Bound (UCB) Policy
-
 
 
 
