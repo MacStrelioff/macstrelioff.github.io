@@ -6,17 +6,17 @@
     <description>Recent content in Overview on Mac Strelioff (UNDER CONSTRUCTION)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 May 2019 22:53:03 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 May 2019 20:54:32 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/data-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/MacStrelioff/data-science/data-science-handbook/</link>
-      <pubDate>Fri, 03 May 2019 22:53:03 +0000</pubDate>
+      <link>/MacStrelioff/data-science/working-environment/</link>
+      <pubDate>Thu, 09 May 2019 20:54:32 +0000</pubDate>
       
-      <guid>/MacStrelioff/data-science/data-science-handbook/</guid>
+      <guid>/MacStrelioff/data-science/working-environment/</guid>
       <description>--- Working Environment My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.
 Working With Bash and Git Useful Bash Commands login # prompts for username and then password to log in man # man (command) returns documentation a command  Directory Commands pwd # print working directory cd # changes directory to home cd \ # changes directory to (/path) cd .</description>
     </item>

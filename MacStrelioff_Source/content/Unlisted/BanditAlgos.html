@@ -1,0 +1,235 @@
+---
+title: "Bandit Algos for Estimation, Hypothesis Testing, and Decision Making"
+author: "Mac Strelioff"
+date: "3/20/2019"
+---
+
+
+
+<div id="bandit-algorithms" class="section level1">
+<h1>Bandit Algorithms</h1>
+<p>Much of this is from <a href="https://sudeepraja.github.io/Bandits/">this blog</a>.</p>
+<p>Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;</p>
+<div id="problem-formalization" class="section level2">
+<h2>Problem Formalization</h2>
+<p>Bandit tasks can be cast as a Markov Decision Process.</p>
+<p><span class="math display">\[
+\begin{aligned}
+t &amp;\in \{1,...,T\} \\
+a_t &amp;\in \mathcal{A} \\
+s_t &amp;\in \mathcal{S} \\
+r_t &amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\
+T(s_{t+1}|a_t,s_t) &amp;= p(s_{t+1}|a_t,s_t) \\
+\pi(s_t)&amp;=p(a_t|s_t)
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\pi\)</span> is referred to as a policy or decision rule. Mathematically, it is a probability distribution over actions – a funciton that maps from states to actions.</p>
+<p>The decision maker’s goal here is to learn a policy (<span class="math inline">\(\pi\)</span>) that is optimal for some criteria. A variety of possible criteria are discussed and evaluated below. This objective is considered when chooseing the value function <span class="math inline">\(v(s_{t+1}|a_t,s_t)\)</span>.</p>
+<p>Objective is to maximize <span class="math display">\[
+E\left(\sum_t r_t\right)=\sum_tE(r_t)
+\]</span></p>
+<p>In a typical testing scenario, the policy replaces the assignment mechanism. Hence, I treat assignment mechanisms as policies here.</p>
+</div>
+<div id="use-cases-and-evaluation-criteria" class="section level2">
+<h2>Use Cases and Evaluation Criteria</h2>
+<p>Bandit problems arise across many theoretical and applied fields. Everything from industry A/B testing, medical clinical trials, experimental lab studies, and toy problems for reinforcement learning algorithms can be cast as a bandit task. These different domains generally have different goals. A/B tests are conducted to find evidence for an advantage of one version of a product over another while emphasizing classical statistical objectives like minimizing type I error rates or false discovery rates. The goal of clinical experiments is to quickly discover the best treatment so that patient lives can be improved or saved. In simulation settings, bandit problems have been used to benchmark a variety of algorithms in terms of regret. Here I conduct similar benchmarks, while also evaluating standard ‘best proctices’ in terms of type I error rates and false discovery rates.</p>
+
+<div id="type-i-error" class="section level3">
+<h3>Type I Error</h3>
+<p>Among situations where there is no difference, how often is a difference detected?</p>
+<p>Type I error occurs when a null hypothesis is reongly rejected – so when a difference in outcomes of arms is detected when none actually exists.</p>
+</div>
+<div id="false-discovery-rate" class="section level3">
+<h3>False Discovery Rate</h3>
+<p>Among detected differences, how many are real?</p>
+<p>A false discovery occurs when an arm is selected but is not the actual optimal arm.</p>
+<p>I’ll consider this on a trial-by-trial level as well as the result of the overall experiment.</p>
+</div>
+<div id="regret" class="section level3">
+<h3>Regret</h3>
+<p>Regret is the difference between the reward that would have been obtained had the optimal action been chosen, and the reward that was actually obtained from the chosen action.</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(Regret) &amp;= \sum_t E(r^*_{t}-r_t)
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div id="uniform-policy" class="section level2">
+<h2>Uniform Policy</h2>
+<p>This corresponds to a simple random sample type of assignment mechanism – the gold standard for causal inference from experimental data.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\pi(s_t) &amp;= \frac{1}{|\mathcal{A}|} \\
+E(Regret) &amp;= TE(r^*_t) - \sum_t E(r_t|\pi) \\
+&amp;= T(E(r^*_t) - E(r_t)) \\
+\end{aligned}
+\]</span></p>
+<p>The expected regret on each trial is the difference between the maximal reward and mean reward across actions.</p>
+</div>
+<div id="greedy-policy" class="section level2">
+<h2>Greedy Policy</h2>
+<div id="epsilon-greedy-policy" class="section level3">
+<h3><span class="math inline">\(\epsilon\)</span>-Greedy Policy</h3>
+</div>
+<div id="softmax-policy" class="section level3">
+<h3>Softmax Policy</h3>
+<p>Might be good for parameter estimation while also reducing regret.</p>
+<pre class="r"><code>na=5      # Number of arms
+as=1:na   # action IDs
+beta = 5
+R = runif(na) # arm probabilities
+#R[1]=1; R[2]=.5; R[3]=0
+T = 1500   # Number of trials
+q=rep(0,na) 
+
+pis = c()
+qs = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+pi = exp(beta*q)/sum(exp(beta*q))
+at = rmultinom(n=1,size=as,prob=pi)
+at = which(at==1)
+# observe outcome  
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+pis = rbind(pis,pi)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update action values
+q[at] = q[at] + .2 * (rt - q[at])
+qs = rbind(qs,q)
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}</code></pre>
+<pre class="r"><code>plot(regret,type=&quot;l&quot;)</code></pre>
+<p><img src="/MacStrelioffUnlisted/BanditAlgos_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&gt;1){par(new=TRUE)}
+plot(qs[,ai],type=&quot;l&quot;,ylim=c(0,1),col=cols[ai],
+     main=&quot;Estimation&quot;,
+     ylab=&quot;Q-value&quot;,
+     xlab=&quot;Trial&quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}</code></pre>
+<p><img src="/MacStrelioffUnlisted/BanditAlgos_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code>for(ai in as){
+if( ai&gt;1){par(new=TRUE)}
+plot(pis[,ai],type=&quot;l&quot;,ylim=c(0,1),col=cols[ai],
+     main=&quot;Action Probabilities&quot;,
+     ylab=&quot;Policy&quot;,
+     xlab=&quot;Trial&quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}</code></pre>
+<p><img src="/MacStrelioffUnlisted/BanditAlgos_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
+<pre class="r"><code>ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)</code></pre>
+<pre><code>## [1] 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333</code></pre>
+<pre class="r"><code>c(entropy.empirical(table(ats),unit=&quot;log2&quot;),freqs.empirical(table(ats)))</code></pre>
+<pre><code>##                     1          2          3          4          5 
+## 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333</code></pre>
+</div>
+</div>
+<div id="upper-confidence-bound-ucb-policy" class="section level2">
+<h2>Upper Confidence Bound (UCB) Policy</h2>
+</div>
+<div id="thompson-sampling-policy" class="section level2">
+<h2>Thompson Sampling Policy</h2>
+<pre class="r"><code>#na=5      # Number of arms
+#as=1:na   # action IDs
+#beta = 5
+# keeps same as those above
+# R = runif(na) # arm probabilities
+#T = 5000   # Number of trials
+#priors: rows: actions, col1:alpha, col2:beta
+prior = matrix(1,nrow=na,ncol=2)
+
+aposts=c()
+bposts=c()
+thompsonSamples = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+thompsonSample=c()
+for(ai in as){
+thompsonSample = c(thompsonSample,rbeta(1,prior[ai,1],prior[ai,2]))
+}
+at = which.max(thompsonSample)
+# observe outcome
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+thompsonSamples = rbind(thompsonSamples,thompsonSample)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update beta distributions
+prior[at,1]=prior[at,1]+rt
+prior[at,2]=prior[at,2]+(1-rt)
+# save posterior parameters
+aposts=rbind(aposts,prior[,1])
+bposts=rbind(bposts,prior[,2])
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}</code></pre>
+<pre class="r"><code>plot(regret,type=&quot;l&quot;,
+     main=&quot;Regret = max E(reward) -  E(reward|choice)&quot;,
+     ylab=&quot;Cumulative Regret&quot;,
+     xlab=&quot;Trial&quot;)</code></pre>
+<p><img src="/MacStrelioffUnlisted/BanditAlgos_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code># something might be wrong with rbeta(x,vec1,vec2)
+
+cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&gt;1){par(new=TRUE)}
+plot(aposts[,ai]/(aposts[,ai]+bposts[,ai]),type=&quot;l&quot;,ylim=c(0,1),col=cols[ai],
+     main=&quot;Reward Probability Estimation&quot;,
+     ylab=&quot;Posterior Means&quot;,
+     xlab=&quot;Trial&quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}
+legend(1100,.8,c(&quot;Estimate&quot;,&quot;True&quot;),lty=c(1,2))</code></pre>
+<p><img src="/MacStrelioffUnlisted/BanditAlgos_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<pre class="r"><code>for(ai in as){
+if( ai&gt;1){par(new=TRUE)}
+plot(thompsonSamples[,ai],type=&quot;l&quot;,ylim=c(0,1),col=cols[ai],
+     main=&quot;Posterior Samples&quot;,
+     #ylab=expression(&#39;Sampled Value -- Policy=argmax&#39;[&#39;a&#39;]*&#39;(sample&#39;[&#39;a&#39;]*&#39;)&#39;),
+     ylab=expression(&#39;Sampled Value&#39;),
+     xlab=&quot;Trial&quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}</code></pre>
+<p><img src="/MacStrelioffUnlisted/BanditAlgos_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
+<pre class="r"><code>ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)</code></pre>
+<pre><code>## [1] 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333</code></pre>
+<pre class="r"><code>c(entropy.empirical(table(ats),unit=&quot;log2&quot;),freqs.empirical(table(ats)))</code></pre>
+<pre><code>##                       1           2           3           4           5 
+## 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333</code></pre>
+</div>
+</div>
+<div id="policy-comparisons" class="section level1">
+<h1>Policy Comparisons</h1>
+</div>

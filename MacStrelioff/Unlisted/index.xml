@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unlisteds on Mac Strelioff (UNDER CONSTRUCTION)</title>
+    <link>/MacStrelioff/unlisted/</link>
+    <description>Recent content in Unlisteds on Mac Strelioff (UNDER CONSTRUCTION)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/MacStrelioff/unlisted/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bandit Algos for Estimation, Hypothesis Testing, and Decision Making</title>
+      <link>/MacStrelioff/unlisted/banditalgos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/banditalgos/</guid>
+      <description>Bandit Algorithms Much of this is from this blog.
+Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;
+Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
+\[ \begin{aligned} t &amp;amp;\in \{1,...,T\} \\ a_t &amp;amp;\in \mathcal{A} \\ s_t &amp;amp;\in \mathcal{S} \\ r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\ T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\ \pi(s_t)&amp;amp;=p(a_t|s_t) \end{aligned} \]</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -20,12 +20,12 @@
   
   <url>
     <loc>/MacStrelioff/data-science/</loc>
-    <lastmod>2019-05-03T22:53:03+00:00</lastmod>
+    <lastmod>2019-05-09T20:54:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/MacStrelioff/data-science/data-science-handbook/</loc>
-    <lastmod>2019-05-03T22:53:03+00:00</lastmod>
+    <loc>/MacStrelioff/data-science/working-environment/</loc>
+    <lastmod>2019-05-09T20:54:32+00:00</lastmod>
   </url>
   
   <url>
@@ -243,6 +243,15 @@
   
   <url>
     <loc>/MacStrelioff/author/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/unlisted/banditalgos/</loc>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/unlisted/</loc>
     <priority>0</priority>
   </url>
   
