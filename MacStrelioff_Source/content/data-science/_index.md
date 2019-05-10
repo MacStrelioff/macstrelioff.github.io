@@ -3,14 +3,12 @@ date: "`r Sys.time()`"
 draft: false
 menu:
   data-science:
-    name: DS References
+    name: Learn Data Science
     weight: 1
 title: Overview
 toc: true
 type: docs
 ---
 
-This page contains documents that I put together to use as informational references for many data science tools and concepts.
-
-
+The sections below are documents I made based on things that were important, but not used often enough to commit to memory.
 

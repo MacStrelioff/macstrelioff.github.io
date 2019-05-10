@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff (UNDER CONSTRUCTION)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 May 2019 20:54:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 May 2019 23:01:03 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/data-science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title></title>
       <link>/MacStrelioff/data-science/working-environment/</link>
-      <pubDate>Thu, 09 May 2019 20:54:32 +0000</pubDate>
+      <pubDate>Thu, 09 May 2019 23:01:03 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/working-environment/</guid>
       <description>--- Working Environment My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.

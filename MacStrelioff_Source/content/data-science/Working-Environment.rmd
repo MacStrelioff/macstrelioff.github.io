@@ -7,7 +7,7 @@ output:
     toc: true
 menu:
   data-science:
-    parent: DS References
+    parent: Learn Data Science
     weight: 1
 linktitle: Working Environment
 #toc: yes

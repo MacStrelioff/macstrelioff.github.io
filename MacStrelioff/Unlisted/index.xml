@@ -29,7 +29,8 @@ Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
       
       <guid>/MacStrelioff/unlisted/twitter-poisson-processes-and-conjugacy/</guid>
       <description>Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
-To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys; 1. python-twitter: Blogpost here 2. tweepy: Blogpost here and docs here 3. Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here</description>
+To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
+python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook.</description>
     </item>
     
   </channel>

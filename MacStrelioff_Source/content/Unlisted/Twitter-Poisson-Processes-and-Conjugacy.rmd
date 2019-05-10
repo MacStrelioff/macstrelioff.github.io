@@ -9,17 +9,19 @@ date: "3/20/2019"
 In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
 
 To get started, I followed directions from three main sources that walked through the `twitter` and `python-twitter` libraries, and described how to apply for Twitter API access and use the keys;
+
 1. `python-twitter`: Blogpost [here](https://medium.com/@YashSharma8388/collecting-data-from-twitter-using-python-twitter-library-and-twitter-api-42376c68d910)
 2. `tweepy`: Blogpost [here](https://medium.com/@ssola/playing-with-twitter-streaming-api-b1f8912e50b0) and docs [here](http://docs.tweepy.org/en/v3.4.0/api.html)
 3. Additional information on obtaining API keys and authenticating Twitter connections in a blogpost [here](https://medium.com/@fbilesanmi/how-to-login-with-twitter-api-using-python-6c9a0f7165c5)
 
-I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus overall is on understanding Poisson processes and adaptive modeling of such processes using conjucacy. 
+I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy. 
 
 ```{r}
 library(reticulate)
 ```
 
 ```{r,include=FALSE}
+knitr::opts_chunk$set(comment = ">>>")
 #py_discover_config() # to see versions of Python
 use_python("/anaconda3/bin/python")
 # py_config() # check paths
@@ -30,6 +32,9 @@ use_python("/anaconda3/bin/python")
 # path to interpreter from python (I ran in a juperter nb to find the path used here)
 # import sys
 # print(sys.executable)
+
+# another good python twitter blog;
+# https://stackabuse.com/accessing-the-twitter-api-with-python/
 ```
 
 ```{python}
@@ -72,6 +77,7 @@ def load_obj(name):
         return pickle.load(f)
 ```
 
+
 # Twitter Data
 
 ### Pulling Data from Twitter's API
@@ -99,12 +105,6 @@ timeline[0] # most recent tweet status object
 ```
 
 
-
-
-    Status(ID=1113860296458756097, ScreenName=None, Created=Thu Apr 04 17:46:03 +0000 2019, Text="@vboykis df.dropna(how='brute force') https://t.co/QOULUc5a0u")
-
-
-
 ### Working with Twitter Status objects
 
 I cover three ways to work with Status objects. 
@@ -116,7 +116,7 @@ I cover three ways to work with Status objects.
 First, many the Status attributes (`created_at`, `favorite_count`, `text`, ...) can be cleanly displayed as a tweet embedded in a notebook. Below I create function that takes a username and tweet ID then, using Twitter's embedding API, displayes the tweet as it would be seen on Twitter. (Note: this will only work properly if the Python kernel is trusted)
 
 
-```python
+```{python}
 # for displaying tweets based on username and tweet_id
 class disp_tweet(object):
     def __init__(self, user_name, tweet_id):
@@ -131,29 +131,24 @@ class disp_tweet(object):
 ```
 
 
-```python
+```{python}
 disp_tweet(user_name='macstrelioff',tweet_id='981338927419109376')
 ```
 
 
-
+If run from a Jupyter notebook, this should embed a tweet as below;
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">My desk is covered in random papers. It is the support of a stationery distribution.</p>&mdash; mac strelioff (@macstrelioff) <a href="https://twitter.com/macstrelioff/status/981338927419109376?ref_src=twsrc%5Etfw">April 4, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
 
 
 ### Convert a Status to a dict
 Status objects have a bound method, `.AsDict()`, that will convert them to a Python dictionary. This way the structure of the information is easily seen. In the code below, I convert the first status to a dictionary and output it contents.
 
 
-```python
-timeline[0].AsDict()
+```{python}
+print(timeline[0].AsDict())
 ```
-
-
-
 
     {'created_at': 'Thu Apr 04 17:46:03 +0000 2019',
      'favorite_count': 20,
@@ -194,49 +189,25 @@ timeline[0].AsDict()
 ### Access Status Attributes (How I accessed the data used below)
 Since I'm interested in modeling expected number of tweets in a week, the most relevant attribute is the timestamps in the `created_at` attribute. These attributes can be accessed directly from the Status object. Below I make a list of the times at which each tweet was created and check the first element of that list;
 
-
-```python
+```{python}
 # get list of time stamps
 times = [pd.Timestamp(tweet.created_at) for tweet in timeline]
 times.reverse() # sort s.t. times[0] is lowest, times[-1] is highest
 times[0]
 ```
 
-
-
-
-    Timestamp('2018-11-01 05:56:58+0000', tz='tzutc()')
-
-
-
 This creates a list of timestamps. By default, times from the twitter API are localized to the UTC timezone. Below I convert these to my local time in California;
 
-
-```python
+```{python}
 times = [time.tz_convert("America/Los_Angeles") for time in times]
 times[0]
 ```
 
-
-
-
-    Timestamp('2018-10-31 22:56:58-0700', tz='America/Los_Angeles')
-
-
-
 Now we have a list of timestamps in local time! To get a sense of the duration over which this data spans, below I compute the time difference between the frist and last timestamp;
 
-
-```python
+```{python}
 times[-1]-times[0]
 ```
-
-
-
-
-    Timedelta('154 days 11:49:05')
-
-
 
 Woah, almost 155 days of my twitter activity!
 
@@ -275,30 +246,22 @@ More information on these three kinds of distributions, and ways to implement th
 The homogeneity assumption strictly requires that tweet rates are constant across time. This would generate data that are uniform across meaningful intervals such as time in a week or time in a day. To check homogeneity, below I convert the timestamps into the hour within a week, minute within a day, and minute within an hour, and plot tweet counts across these representations of time. 
 
 
-```python
+```{python,results="hide"}
 # convert to hours in a week
 hour_of_week     = [t.weekday()*24+t.hour+t.minute/60 for t in times]
 minute_of_day    = [t.hour*60+t.minute+t.second/60 for t in times]
 minute_of_hour   = [t.minute+t.second/60 for t in times]
-```
-
-
-```python
-plt.figure(figsize=(10,4))
+plt.figure(figsize=(10,4));
 plt.hist(hour_of_week,bins=80);
 plt.title("My Tweet Counts By Hour Of Week");
 plt.ylabel("Count");
 plt.xlabel("Hour In Week");
 ```
 
-
-![png](output_19_0.png)
-
-
 The histogram above indicates that there might be some hours of the week that have a higher rate than others. For example, I don't seem to tweet much early on Sunday (hours 0-5), but I do seem to tweet a lot during the day on Sunday (around hours 6-20). Below I use rug plots, which represent a tweet event with a vertical line near the x-axis, and an imposed kernel density estimate, which is a continuous version of a histogram. I remake this plot in terms of hours within a week, minutes within a day, and minutes within an hour. If the tweet rate ($\lambda$) were homogeneous, then the kernel density estimate would be approximately flat. 
 
 
-```python
+```{python}
 def rug_plot_and_density(dat,bw,xlab,xlim):
     # rug plot + density
     plt.figure(figsize=(10,4))
@@ -311,10 +274,11 @@ def rug_plot_and_density(dat,bw,xlab,xlim):
     plt.xlabel(xlab)
     plt.ylabel('Kernel Density')
     plt.xlim(xlim);
+    plt.show()
 ```
 
 
-```python
+```{python}
 # data and plot formatting arguments
 dats = (hour_of_week,minute_of_day,minute_of_hour)
 xlabs=('Hour of Week','Minute of Day','Minute of Hour')
@@ -324,20 +288,7 @@ bws  = (4,40,4)
 # make plots
 for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
     rug_plot_and_density(dat=dat,bw=bw,xlab=xlab,xlim=xlim)
-
 ```
-
-
-![png](output_22_0.png)
-
-
-
-![png](output_22_1.png)
-
-
-
-![png](output_22_2.png)
-
 
 Are very sensitive to the choice of the bandwidth parameter that determines the window over which to aggregate events (similar to bin size when using a histogram). I'm using these plots to demonstrate possible violations of homogeneity that I would follow up on in a real analysis, but will not follow up on here. 
 
@@ -351,15 +302,9 @@ Overall, there are many reasons that the homogeneity assumption may be violated.
 
 ## Checking the exponential distribution of intervals
 
-
-
-
-
-
 Let's the distribution of the time between tweets, $s_i$. If the assumptions of the Poisson process were satisfied, then the intervals between tweets would follow an exponential distribution. Below I compute the number of seconds between tweets and display each value as a black dash on the x-axis. I overlay a histogram, a kernel density, and a exponential density based on the observed mean interval. 
 
-
-```python
+```{python,results="hide"}
 # compute intervals between tweets
 ss = [times[i]-times[i-1] for i in range(1,len(times))];
 # convert from Timedelta to total time in seconds
@@ -386,24 +331,12 @@ plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label='Exponential Density');
 plt.legend();
 ```
 
-
-![png](output_26_0.png)
-
-
 Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.
 
-
-```python
+```{python}
 # check standard deviation
 np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)
 ```
-
-
-
-
-    (90150.9122414953, 67076.1055276382, 1.3440093388300445)
-
-
 
 The observed standard deviation is about 1.34 times larger (variance is about 1.80 times larger) than it would be if the data were exponentially distributed with the observed mean. While this could be accounted for with an overdispersion parameter, I will ignore this issue here for the sake of having a simple and fast online model.
 
@@ -520,9 +453,6 @@ c|s,\alpha,\beta &\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\
 \end{aligned} 
 $$
 
-
-
-
 Here I investigate posterior predictive intervals for tweets over a period of time $s$ while using different components of this model. In the code below, I compute all values of $\alpha$ and $\beta$ based on the update rules derived above from conjugacy.
 
 <!---
@@ -553,10 +483,7 @@ Given an estimate of $\lambda$, a poisson can be used to estimate the number of 
 A Poisson and a gamma make a negative binomial, which is used for predictive densities that account for uncertainty in the rate.
 --->
 
-
-
-
-```python
+```{python}
 # initialize alpha,beta as 0
 alpha,beta = 0,0
 alphas,betas = list(),list()
@@ -572,8 +499,7 @@ for si in ss:
 
 The code above converts intervals from seconds to days and comptutes $\alpha$ and $\beta$ for all intervals in my dataset. This gives the parameters for posterior beliefs over $\lambda$ as each tweet is observed. Below I check the final parameters and some statistics from the last posterior. 
 
-
-```python
+```{python}
 a,b,mode,median,mean=(alpha,beta,(alpha-1)/beta,gamma.ppf(.5,a=alpha,scale=1/beta),alpha/beta)
 print(  'alpha : '+str(a)+
       '\nbeta  : '+str(b)+
@@ -582,21 +508,13 @@ print(  'alpha : '+str(a)+
       '\nmean  : '+str(mean))
 ```
 
-    alpha : 199
-    beta  : 154.49241898148153
-    mode  : 1.2816162845099446
-    median: 1.2859321345366828
-    mean  : 1.2880890940276715
-
-
 The value of $\alpha$ correctly indicates 199 observed intervals, and the $\beta$ of 154.59 also correctly reflects the time difference in days that was computed in the first section. Lastly the ordinal relationship of the mode, median, and mean is consistent with that of a gamma distribution. 
 
 ### Inference On Tweet Rate $\lambda$ Over Time
 
 In the code below, I compute the maximum a posteriori (MAP) estimate, or posterior mode, across time. I plot this across time with the 97.5$^{th}$ and 2.5$^{th}$ percentiles as a shaded region representing the 95% credible interval.
 
-
-```python
+```{python}
 # get MAP lambda
 lambda_map   = [(alpha-1)/beta for alpha,beta in zip(alphas,betas)]
 # get CI upper and lower bounds
@@ -614,9 +532,6 @@ plt.xlabel('Time')
 plt.title('Summary of the posterior over $\lambda$ across time')
 plt.legend();
 ```
-
-
-![png](output_36_0.png)
 
 
 The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that $\alpha$ and $\beta$ are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in $\alpha$ and $\beta$ might be warrented.
@@ -654,7 +569,7 @@ Recall in my derivation that the parameter corresponding to probability of failu
 The code below plots predictive densities based on the two approaches above from estimates of $\lambda$ based only on the first 20 observations. 
 
 
-```python
+```{python}
 # for the first 20 tweets
 # parameters
 cs = range(20)
@@ -676,13 +591,10 @@ plt.legend();
 ```
 
 
-![png](output_39_0.png)
-
-
 With a small amount of data, the uncertainty in the estimate of tweet rates carries through the negative binomial model, which gives more mass to a wider range of counts relative to the Poisson model that discards uncertainty when by $\lambda_{MAP}$.
 
 
-```python
+```{python}
 # Using all data
 # parameters
 index = 198
@@ -701,14 +613,9 @@ plt.title('Predictions for Tweet Counts in a Week, Using All Data')
 plt.legend();
 ```
 
-
-![png](output_41_0.png)
-
-
 With a larger amount of data and predicting the tweet count over a short interval (7 days), the predictive distribution from the negative binomial and Poisson models are nearly indistinguishable. Below I compare the predictions of these model for an interval of 1 year (365 days), again using all data.
 
-
-```python
+```{python}
 # Using all data
 # parameters
 cs=range(350,600)
@@ -729,15 +636,11 @@ plt.title('Predictions for Tweet Counts in a Year, Using All Data')
 plt.legend();
 ```
 
-
-![png](output_43_0.png)
-
-
 When considering a longer period of time, The uncertainty in $\lambda$ again carries through the negative binomial model, but is discarded in the Poisson model that uses $\lambda_{MAP}$. 
 
 # Summary
 
-This was a beefy notebook! 
+This was a beefy notebook!
 
 First I showed how to pull tweets as Status objects from Twitter's API. Given Status objects, I then showed how to embed them in a notebook, view them as a dictionary, and otherwise access their attributes to construct a list of tweet timestamps. I then described Poisson Processes as they may apply to modeling user tweet rates and tweet counts over periods of time. I used kernel densities to check assumptions of a Poisson Process and found possible violations of homogeneity, and of the result that intervals between tweets should follow an exponential distribution.
 

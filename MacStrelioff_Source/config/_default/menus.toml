@@ -12,7 +12,12 @@
   weight = 10
 
 [[main]]
-  name = "Data Science"
+  name = "pub"
+  url = "publication"
+  weight = 10
+
+[[main]]
+  name = "Learn Data Science"
   url = "/data-science/"
   weight = 20
   
@@ -20,7 +25,7 @@
   name = "Videos"
   url = "/video-lectures/"
   weight = 50
-  
+
 [[main]]
   name = "CV"
   url = "/CV/"
