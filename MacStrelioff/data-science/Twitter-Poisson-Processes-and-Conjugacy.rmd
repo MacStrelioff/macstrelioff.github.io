@@ -1,10 +1,19 @@
 ---
 title: "Twitter, Poisson Processes, and Conjugacy"
 author: "Mac Strelioff"
-date: "3/20/2019"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    toc: true
+menu:
+  data-science:
+    parent: Fun 
+    weight: 1
+linktitle: Twitter, Poisson Processes, and Conjugacy
+type: docs
 ---
 
-# Background and Setup
+## Background and Setup 
 
 In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
 

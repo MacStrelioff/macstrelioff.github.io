@@ -38,7 +38,7 @@
     <item>
       <title></title>
       <link>/MacStrelioff/data-science/working-environment/</link>
-      <pubDate>Thu, 09 May 2019 23:01:03 +0000</pubDate>
+      <pubDate>Thu, 09 May 2019 23:39:20 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/working-environment/</guid>
       <description>
@@ -332,6 +332,556 @@ crontab -l # the scheduled job should be listed as a crontab job&lt;/code&gt;&lt
     </item>
     
     <item>
+      <title>Twitter, Poisson Processes, and Conjugacy</title>
+      <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
+      <pubDate>Thu, 09 May 2019 23:39:16 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
+      <description>
+
+
+&lt;div id=&#34;background-and-setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background and Setup&lt;/h2&gt;
+&lt;p&gt;In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.&lt;/p&gt;
+&lt;p&gt;To get started, I followed directions from three main sources that walked through the &lt;code&gt;twitter&lt;/code&gt; and &lt;code&gt;python-twitter&lt;/code&gt; libraries, and described how to apply for Twitter API access and use the keys;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;code&gt;python-twitter&lt;/code&gt;: Blogpost &lt;a href=&#34;https://medium.com/@YashSharma8388/collecting-data-from-twitter-using-python-twitter-library-and-twitter-api-42376c68d910&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tweepy&lt;/code&gt;: Blogpost &lt;a href=&#34;https://medium.com/@ssola/playing-with-twitter-streaming-api-b1f8912e50b0&#34;&gt;here&lt;/a&gt; and docs &lt;a href=&#34;http://docs.tweepy.org/en/v3.4.0/api.html&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Additional information on obtaining API keys and authenticating Twitter connections in a blogpost &lt;a href=&#34;https://medium.com/@fbilesanmi/how-to-login-with-twitter-api-using-python-6c9a0f7165c5&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(reticulate)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;reticulate&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Setup
+# for working with timestamps
+import pandas as pd
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
+# for basic math
+import numpy as np
+# for plotting
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# for working with distributions
+from scipy.stats import expon,gamma,poisson,nbinom
+
+# for general web data pulling
+import requests
+
+# for pulling tweets from Twitter API
+import twitter
+
+# keys for twitter API
+# (removed for this public document)
+api = twitter.Api(consumer_key=&amp;#39;&amp;#39;,
+              consumer_secret=&amp;#39;&amp;#39;,
+              access_token_key=&amp;#39;&amp;#39;,
+              access_token_secret=&amp;#39;&amp;#39;)
+
+# for saving and loading Python objects like dicts
+import pickle
+
+def save_obj(obj, name):
+    with open(name + &amp;#39;.pkl&amp;#39;, &amp;#39;wb&amp;#39;) as f:
+        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+def load_obj(name):
+    with open(name + &amp;#39;.pkl&amp;#39;, &amp;#39;rb&amp;#39;) as f:
+        return pickle.load(f)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;twitter-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Twitter Data&lt;/h1&gt;
+&lt;div id=&#34;pulling-data-from-twitters-api&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Pulling Data from Twitter’s API&lt;/h3&gt;
+&lt;p&gt;First I pulled data using the code below. For this code to work, your API keys will need to be specified in the setup above. To conceil my keys, I ran the commented code below earlier and saved the timeline object. The uncommented code loads my timeline and looks at the first element. The timeline is represented as a list of Status objects like the one output by the code below.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# # Twitter handel to pull data from
+# handle = &amp;#39;@macstrelioff&amp;#39;
+# 
+# # get timeline
+# timeline=api.GetUserTimeline(screen_name = handle, 
+#                     count=200, # 200 is maximum 
+#                     include_rts=True, 
+#                     trim_user=True, 
+#                     exclude_replies=False)
+# 
+# # save timeline object
+# save_obj(timeline,&amp;#39;timeline_macstrelioff_20190406&amp;#39;)
+
+# load timeline object
+timeline=load_obj(&amp;#39;timeline_macstrelioff_20190406&amp;#39;)
+timeline[0] # most recent tweet status object&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Status(ID=1113860296458756097, ScreenName=None, Created=Thu Apr 04 17:46:03 +0000 2019, Text=&amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;working-with-twitter-status-objects&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Working with Twitter Status objects&lt;/h3&gt;
+&lt;p&gt;I cover three ways to work with Status objects.
+1. display the Status as a tweet!
+2. Convert the Status to a dictionary and access values from keys
+3. Access values directly as attributes of the Status&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;embed-a-status&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Embed a Status&lt;/h3&gt;
+&lt;p&gt;First, many the Status attributes (&lt;code&gt;created_at&lt;/code&gt;, &lt;code&gt;favorite_count&lt;/code&gt;, &lt;code&gt;text&lt;/code&gt;, …) can be cleanly displayed as a tweet embedded in a notebook. Below I create function that takes a username and tweet ID then, using Twitter’s embedding API, displayes the tweet as it would be seen on Twitter. (Note: this will only work properly if the Python kernel is trusted)&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# for displaying tweets based on username and tweet_id
+class disp_tweet(object):
+    def __init__(self, user_name, tweet_id):
+        # see: https://dev.twitter.com/web/embedded-tweets
+        api = &amp;#39;https://publish.twitter.com/oembed?url=https://twitter.com/&amp;#39;+ \
+               user_name + &amp;#39;/status/&amp;#39; + tweet_id
+        response  = requests.get(api)
+        self.text = response.json()[&amp;quot;html&amp;quot;]
+
+    def _repr_html_(self):
+        return self.text&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a2b929978&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+My desk is covered in random papers. It is the support of a stationery distribution.
+&lt;/p&gt;
+— mac strelioff (&lt;span class=&#34;citation&#34;&gt;@macstrelioff&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/macstrelioff/status/981338927419109376?ref_src=twsrc%5Etfw&#34;&gt;April 4, 2018&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;convert-a-status-to-a-dict&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Convert a Status to a dict&lt;/h3&gt;
+&lt;p&gt;Status objects have a bound method, &lt;code&gt;.AsDict()&lt;/code&gt;, that will convert them to a Python dictionary. This way the structure of the information is easily seen. In the code below, I convert the first status to a dictionary and output it contents.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(timeline[0].AsDict())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; {&amp;#39;created_at&amp;#39;: &amp;#39;Thu Apr 04 17:46:03 +0000 2019&amp;#39;, &amp;#39;favorite_count&amp;#39;: 20, &amp;#39;hashtags&amp;#39;: [], &amp;#39;id&amp;#39;: 1113860296458756097, &amp;#39;id_str&amp;#39;: &amp;#39;1113860296458756097&amp;#39;, &amp;#39;in_reply_to_screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;, &amp;#39;in_reply_to_status_id&amp;#39;: 1113822568211996672, &amp;#39;in_reply_to_user_id&amp;#39;: 19304217, &amp;#39;lang&amp;#39;: &amp;#39;da&amp;#39;, &amp;#39;media&amp;#39;: [{&amp;#39;display_url&amp;#39;: &amp;#39;pic.twitter.com/QOULUc5a0u&amp;#39;, &amp;#39;expanded_url&amp;#39;: &amp;#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&amp;#39;, &amp;#39;id&amp;#39;: 1113860285566046210, &amp;#39;media_url&amp;#39;: &amp;#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;, &amp;#39;media_url_https&amp;#39;: &amp;#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;, &amp;#39;sizes&amp;#39;: {&amp;#39;thumb&amp;#39;: {&amp;#39;w&amp;#39;: 150, &amp;#39;h&amp;#39;: 150, &amp;#39;resize&amp;#39;: &amp;#39;crop&amp;#39;}, &amp;#39;large&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}, &amp;#39;medium&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}, &amp;#39;small&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}}, &amp;#39;type&amp;#39;: &amp;#39;animated_gif&amp;#39;, &amp;#39;url&amp;#39;: &amp;#39;https://t.co/QOULUc5a0u&amp;#39;, &amp;#39;video_info&amp;#39;: {&amp;#39;aspect_ratio&amp;#39;: [125, 99], &amp;#39;variants&amp;#39;: [{&amp;#39;bitrate&amp;#39;: 0, &amp;#39;content_type&amp;#39;: &amp;#39;video/mp4&amp;#39;, &amp;#39;url&amp;#39;: &amp;#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&amp;#39;}]}}], &amp;#39;retweet_count&amp;#39;: 2, &amp;#39;source&amp;#39;: &amp;#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/android&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for Android&amp;lt;/a&amp;gt;&amp;#39;, &amp;#39;text&amp;#39;: &amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;, &amp;#39;urls&amp;#39;: [], &amp;#39;user&amp;#39;: {&amp;#39;id&amp;#39;: 70255183, &amp;#39;id_str&amp;#39;: &amp;#39;70255183&amp;#39;}, &amp;#39;user_mentions&amp;#39;: [{&amp;#39;id&amp;#39;: 19304217, &amp;#39;id_str&amp;#39;: &amp;#39;19304217&amp;#39;, &amp;#39;name&amp;#39;: &amp;#39;Vicki Boykis&amp;#39;, &amp;#39;screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;}]}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{&amp;#39;created_at&amp;#39;: &amp;#39;Thu Apr 04 17:46:03 +0000 2019&amp;#39;,
+ &amp;#39;favorite_count&amp;#39;: 20,
+ &amp;#39;hashtags&amp;#39;: [],
+ &amp;#39;id&amp;#39;: 1113860296458756097,
+ &amp;#39;id_str&amp;#39;: &amp;#39;1113860296458756097&amp;#39;,
+ &amp;#39;in_reply_to_screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;,
+ &amp;#39;in_reply_to_status_id&amp;#39;: 1113822568211996672,
+ &amp;#39;in_reply_to_user_id&amp;#39;: 19304217,
+ &amp;#39;lang&amp;#39;: &amp;#39;da&amp;#39;,
+ &amp;#39;media&amp;#39;: [{&amp;#39;display_url&amp;#39;: &amp;#39;pic.twitter.com/QOULUc5a0u&amp;#39;,
+   &amp;#39;expanded_url&amp;#39;: &amp;#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&amp;#39;,
+   &amp;#39;id&amp;#39;: 1113860285566046210,
+   &amp;#39;media_url&amp;#39;: &amp;#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;,
+   &amp;#39;media_url_https&amp;#39;: &amp;#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;,
+   &amp;#39;sizes&amp;#39;: {&amp;#39;thumb&amp;#39;: {&amp;#39;w&amp;#39;: 150, &amp;#39;h&amp;#39;: 150, &amp;#39;resize&amp;#39;: &amp;#39;crop&amp;#39;},
+    &amp;#39;large&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;},
+    &amp;#39;medium&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;},
+    &amp;#39;small&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}},
+   &amp;#39;type&amp;#39;: &amp;#39;animated_gif&amp;#39;,
+   &amp;#39;url&amp;#39;: &amp;#39;https://t.co/QOULUc5a0u&amp;#39;,
+   &amp;#39;video_info&amp;#39;: {&amp;#39;aspect_ratio&amp;#39;: [125, 99],
+    &amp;#39;variants&amp;#39;: [{&amp;#39;bitrate&amp;#39;: 0,
+      &amp;#39;content_type&amp;#39;: &amp;#39;video/mp4&amp;#39;,
+      &amp;#39;url&amp;#39;: &amp;#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&amp;#39;}]}}],
+ &amp;#39;retweet_count&amp;#39;: 2,
+ &amp;#39;source&amp;#39;: &amp;#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/android&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for Android&amp;lt;/a&amp;gt;&amp;#39;,
+ &amp;#39;text&amp;#39;: &amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;,
+ &amp;#39;urls&amp;#39;: [],
+ &amp;#39;user&amp;#39;: {&amp;#39;id&amp;#39;: 70255183, &amp;#39;id_str&amp;#39;: &amp;#39;70255183&amp;#39;},
+ &amp;#39;user_mentions&amp;#39;: [{&amp;#39;id&amp;#39;: 19304217,
+   &amp;#39;id_str&amp;#39;: &amp;#39;19304217&amp;#39;,
+   &amp;#39;name&amp;#39;: &amp;#39;Vicki Boykis&amp;#39;,
+   &amp;#39;screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;}]}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;access-status-attributes-how-i-accessed-the-data-used-below&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Access Status Attributes (How I accessed the data used below)&lt;/h3&gt;
+&lt;p&gt;Since I’m interested in modeling expected number of tweets in a week, the most relevant attribute is the timestamps in the &lt;code&gt;created_at&lt;/code&gt; attribute. These attributes can be accessed directly from the Status object. Below I make a list of the times at which each tweet was created and check the first element of that list;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# get list of time stamps
+times = [pd.Timestamp(tweet.created_at) for tweet in timeline]
+times.reverse() # sort s.t. times[0] is lowest, times[-1] is highest
+times[0]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timestamp(&amp;#39;2018-11-01 05:56:58+0000&amp;#39;, tz=&amp;#39;tzutc()&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This creates a list of timestamps. By default, times from the twitter API are localized to the UTC timezone. Below I convert these to my local time in California;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;times = [time.tz_convert(&amp;quot;America/Los_Angeles&amp;quot;) for time in times]
+times[0]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timestamp(&amp;#39;2018-10-31 22:56:58-0700&amp;#39;, tz=&amp;#39;America/Los_Angeles&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we have a list of timestamps in local time! To get a sense of the duration over which this data spans, below I compute the time difference between the frist and last timestamp;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;times[-1]-times[0]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timedelta(&amp;#39;154 days 11:49:05&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Woah, almost 155 days of my twitter activity!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;poisson-process&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Poisson Process&lt;/h1&gt;
+&lt;p&gt;A Poisson process is a common framework for modeling events that occurr in time or space. In this context, tweets are being created over time and we are interested in modeling the rate at which tweets are created in order to predict how many tweets will be created in a week.&lt;/p&gt;
+&lt;div id=&#34;assumptions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Assumptions&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;No more than one event can occur at a single point in time.
+&lt;ul&gt;
+&lt;li&gt;This can be violated when a user publishes a thread of multiple tweets at once. This can be fixed by recoding threads as a single status.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Independence: The interval lengths for each event are not influenced by any other event.
+&lt;ul&gt;
+&lt;li&gt;This can be violated if, instead of using Twitter’s thread option, a user ends a tweet with “…” to indicate that they will soon create another tweet. In this case, there are some tweets that imply a shorter interval before the next tweet.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Homogeneity: The distribution of intervals is the same throughout the entire process.
+&lt;ul&gt;
+&lt;li&gt;I probe this assumption in depth below, and it almost certainly violated.&lt;/li&gt;
+&lt;li&gt;There are methods for modeling inhomogeneous Poisson processes, but I ignore those here.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;specification-and-properties&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Specification and Properties&lt;/h3&gt;
+&lt;p&gt;In this context tweet events are occurring across time. I index tweets with &lt;span class=&#34;math inline&#34;&gt;\(i\in\{1,...,N\}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; is the total number of tweets observed. Each tweet is created at a time, &lt;span class=&#34;math inline&#34;&gt;\(t_i\)&lt;/span&gt;, and the next tweet is observed after an interval &lt;span class=&#34;math inline&#34;&gt;\(s_{i}\)&lt;/span&gt;. That is, if tweet &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; is created at time &lt;span class=&#34;math inline&#34;&gt;\(t_{i-1}\)&lt;/span&gt; then tweet &lt;span class=&#34;math inline&#34;&gt;\(i+1\)&lt;/span&gt; is created at time &lt;span class=&#34;math inline&#34;&gt;\(t_{i}=t_{i-1}+s_{i}\)&lt;/span&gt;. The interval between each tweet is &lt;span class=&#34;math inline&#34;&gt;\(s_i = t_{i}-t_{i-1} = (t_{i-1}+s_i)-t_{i-1}\)&lt;/span&gt;. The assumptions of a Poisson process permit the following distributions for three interesting features of this scenario.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The distribution of time between events, &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt;, is exponential; &lt;span class=&#34;math inline&#34;&gt;\(s_i\sim Expo(\lambda) \Rightarrow p(s_i|\lambda) = \lambda e^{-\lambda s_i}\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;Here &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; is a parameter that describes the tweet rate.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Given an interval of length &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;, the distribution of the count of events in that interval, &lt;span class=&#34;math inline&#34;&gt;\(c|s\)&lt;/span&gt;, is Poisson; &lt;span class=&#34;math inline&#34;&gt;\(c|s\sim Poisson(\lambda s) \Rightarrow p(c|s,\lambda) = \frac{(\lambda s)^{c}e^{-\lambda s}}{c!}\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;The count of events, &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;, in a fixed interval depends both on the rate of the events, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the duration of the interval, &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The distribution of the total interval required for &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; events, &lt;span class=&#34;math inline&#34;&gt;\(s|c\)&lt;/span&gt;, is gamma; &lt;span class=&#34;math inline&#34;&gt;\(s|c \sim Gamma(c,\lambda) \Rightarrow p(s|c,\lambda) = \frac{\lambda^c}{\Gamma(c)}(s)^{c-1}e^{-\lambda s}\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;The interval, &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;, required for a fixed number of events depends on both the rate of the events, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the number of events, &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;More information on these three kinds of distributions, and ways to implement them in Python, can be found in the &lt;a href=&#34;https://docs.scipy.org/doc/scipy/reference/stats.html&#34;&gt;scipy documentation on statistical functions&lt;/a&gt;. General information on each of these distributions can be found on the Wikipedia page for the &lt;a href=&#34;https://en.wikipedia.org/wiki/Exponential_distribution&#34;&gt;exponential&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Poisson_distribution&#34;&gt;Poisson&lt;/a&gt;, or &lt;a href=&#34;https://en.wikipedia.org/wiki/Gamma_distribution&#34;&gt;gamma&lt;/a&gt; distribution. A key difference between the standard uses of these distributions and their roles in a Poisson process is that the rate parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; is also scaled by the duration of an interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; when constructing a distribution for the count of events in interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; (2, above) or the duration of the interval required for &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; events (3, above).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;checking-the-homogeneity-assumption&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Checking the Homogeneity Assumption&lt;/h2&gt;
+&lt;p&gt;The homogeneity assumption strictly requires that tweet rates are constant across time. This would generate data that are uniform across meaningful intervals such as time in a week or time in a day. To check homogeneity, below I convert the timestamps into the hour within a week, minute within a day, and minute within an hour, and plot tweet counts across these representations of time.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# convert to hours in a week
+hour_of_week     = [t.weekday()*24+t.hour+t.minute/60 for t in times]
+minute_of_day    = [t.hour*60+t.minute+t.second/60 for t in times]
+minute_of_hour   = [t.minute+t.second/60 for t in times]
+plt.figure(figsize=(10,4));
+plt.hist(hour_of_week,bins=80);&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.title(&amp;quot;My Tweet Counts By Hour Of Week&amp;quot;);
+plt.ylabel(&amp;quot;Count&amp;quot;);
+plt.xlabel(&amp;quot;Hour In Week&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The histogram above indicates that there might be some hours of the week that have a higher rate than others. For example, I don’t seem to tweet much early on Sunday (hours 0-5), but I do seem to tweet a lot during the day on Sunday (around hours 6-20). Below I use rug plots, which represent a tweet event with a vertical line near the x-axis, and an imposed kernel density estimate, which is a continuous version of a histogram. I remake this plot in terms of hours within a week, minutes within a day, and minutes within an hour. If the tweet rate (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) were homogeneous, then the kernel density estimate would be approximately flat.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def rug_plot_and_density(dat,bw,xlab,xlim):
+    # rug plot + density
+    plt.figure(figsize=(10,4))
+    sns.distplot(dat, hist = False, kde = True, rug = True,
+                 color = &amp;#39;darkblue&amp;#39;, 
+                 kde_kws={&amp;#39;linewidth&amp;#39;: 3,&amp;quot;bw&amp;quot;:bw},
+                 rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;})
+    # formatting
+    plt.title(&amp;#39;Tweet Density By &amp;#39;+xlab)
+    plt.xlabel(xlab)
+    plt.ylabel(&amp;#39;Kernel Density&amp;#39;)
+    plt.xlim(xlim);
+    plt.show()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# data and plot formatting arguments
+dats = (hour_of_week,minute_of_day,minute_of_hour)
+xlabs=(&amp;#39;Hour of Week&amp;#39;,&amp;#39;Minute of Day&amp;#39;,&amp;#39;Minute of Hour&amp;#39;)
+xlims=([0,24*7],[0,24*60],[0,60]);
+bws  = (4,40,4)
+
+# make plots
+for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
+    rug_plot_and_density(dat=dat,bw=bw,xlab=xlab,xlim=xlim)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-2.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Are very sensitive to the choice of the bandwidth parameter that determines the window over which to aggregate events (similar to bin size when using a histogram). I’m using these plots to demonstrate possible violations of homogeneity that I would follow up on in a real analysis, but will not follow up on here.&lt;/p&gt;
+&lt;p&gt;From the top plot, there seems to be two patterns. First, a series of peaks and troughs that roughly correspond to daytime and night-time hours. I probably tweet with a higher frequency when I am awake, rather than asleep – meaning that &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; may depend on time within a day. Second, a generally lower kernel density estimate during the middle than the edges. I may tweet more during the weekends (edge hours) than week days (middle hours).&lt;/p&gt;
+&lt;p&gt;From the middle plot that displays tweet frequencies by minutes within a day, there again seem to be two trends. First, I rarely tweet before minute 400 (around 6:40AM). Second, I have peaks around minute 600 (10:00AM), 1000 (4:40PM), and 1350 (10:00PM). This might be related to the times that I take a break from working. I generally take a break around 5:00PM, and usually take another break before bed around 9:00-10:00PM.&lt;/p&gt;
+&lt;p&gt;The bottom plot displays tweet frequencies by minutes within an hour. This seems more flat overall longer periods of time, but I may strangely tend to tweet more during the first half of hours.&lt;/p&gt;
+&lt;p&gt;Overall, there are many reasons that the homogeneity assumption may be violated. For cases like this, the tweet rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; can be modeled as a function of time. However, to keep this example simple, I’ll ignore possible violations and proceede as if &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; were a constant with respect to time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;checking-the-exponential-distribution-of-intervals&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Checking the exponential distribution of intervals&lt;/h2&gt;
+&lt;p&gt;Let’s the distribution of the time between tweets, &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt;. If the assumptions of the Poisson process were satisfied, then the intervals between tweets would follow an exponential distribution. Below I compute the number of seconds between tweets and display each value as a black dash on the x-axis. I overlay a histogram, a kernel density, and a exponential density based on the observed mean interval.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# compute intervals between tweets
+ss = [times[i]-times[i-1] for i in range(1,len(times))];
+# convert from Timedelta to total time in seconds
+ss = [si.total_seconds() for si in ss]
+
+# histogram and density plot
+plt.figure(figsize=(10,4))
+sns.distplot(ss, hist = True, kde = True, rug = True,
+             color = &amp;#39;darkblue&amp;#39;, bins=100,
+             hist_kws={&amp;#39;color&amp;#39;:[0,.7,.5,.5],&amp;#39;label&amp;#39;:&amp;#39;Histogram&amp;#39;},
+             kde_kws={&amp;#39;linewidth&amp;#39;: 3,&amp;quot;bw&amp;quot;:60*60,&amp;#39;label&amp;#39;:&amp;#39;Kernel Density&amp;#39;},
+             rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;})
+plt.xlim([0,680000]);&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.title(&amp;#39;Distribution of intervals between tweets&amp;#39;)
+plt.xlabel(&amp;#39;Seconds&amp;#39;)
+plt.ylabel(&amp;#39;Frequency&amp;#39;)
+
+# overlay an exponential density
+tmp_rate=np.mean(ss)
+tmpx = np.linspace(0,680000,680000*5)
+tmpy = expon.pdf(tmpx,scale=tmp_rate)
+plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label=&amp;#39;Exponential Density&amp;#39;);
+# add legend
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# check standard deviation
+np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; (90150.9122414953, 67076.1055276382, 1.3440093388300445)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The observed standard deviation is about 1.34 times larger (variance is about 1.80 times larger) than it would be if the data were exponentially distributed with the observed mean. While this could be accounted for with an overdispersion parameter, I will ignore this issue here for the sake of having a simple and fast online model.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-of-tweet-fequency-using-conjugacy&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Model of Tweet Fequency Using Conjugacy&lt;/h1&gt;
+&lt;p&gt;First, I’ll assume (despite the overdispersion) that the intervals between tweets follow an exponential distribution;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+s_i|\lambda &amp;amp;\sim Expo(\lambda) \\
+\Rightarrow p(s_i|\lambda) &amp;amp;= \lambda e^{-s_i \lambda}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To account for uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, I’ll use a Gamma distribution with shape &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and rate &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda &amp;amp;\sim Gamma(\alpha,\beta) \\ 
+\Rightarrow p(\lambda|\alpha,\beta) &amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha-1}e^{-\lambda \beta}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The choice of a Gamma distribution allows for fast updates using conjugacy between the prior beliefs about &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; based on data observed up to time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; and the exponential likelihood for the interval observed at time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda | s_t &amp;amp;\sim Gamma(\alpha_t,\beta_t) \\ 
+p(s_{t+1}|\lambda) &amp;amp;= \lambda e^{-s_{t+1} \lambda} \\
+p(\lambda|\alpha_t,\beta_t,s_{t+1}) &amp;amp;\propto p(s_{t+1}|\lambda) p(\lambda|\alpha_t,\beta_t) \\
+&amp;amp;= \lambda e^{-s_{t+1} \lambda} \frac{\beta_t^{\alpha_t}}{\Gamma(\alpha_t)} \lambda^{\alpha_t-1}e^{-\lambda \beta_t} \\
+&amp;amp;= \lambda^{\alpha_t} e^{-\lambda(s_{t+1}+\beta_t)} \\ 
+\Rightarrow \lambda | s_{t+1} &amp;amp;\sim Gamma(\alpha_t+1,\beta_t+s_{t+1})
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This implies the following update rules for computing the parameters of the posterior over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\alpha_{t+1} &amp;amp;\leftarrow \alpha_t +1 \\
+\beta_{t+1}  &amp;amp;\leftarrow \beta_t + s_{t+1} \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To answer the question of how many tweets might be observed in a period of time, I’ll assume that the count of tweets &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; is Poisson distributed with rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;. Then the number of tweets expected in an interval of length &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; would be;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\theta &amp;amp;= s\lambda \\ 
+c|\theta &amp;amp;\sim Poisson(\theta) \\
+\Rightarrow p(c|\theta) &amp;amp;= \frac{\theta^c e^{-\theta}}{c!}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This means that, rather than &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, we are actually interested in the distribution of &lt;span class=&#34;math inline&#34;&gt;\(\theta=s\lambda\)&lt;/span&gt;. I derive this below using a change of vairables;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\theta = s\lambda &amp;amp;\Rightarrow \lambda = \frac{\theta}{s} = \theta s^{-1} \\
+p_\theta(\theta | \lambda,s) &amp;amp;= p_\lambda\left(\theta s^{-1} | s,\alpha,\beta\right) \left| \frac{d \lambda}{d \theta}\right|\\
+&amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \left(\frac{\theta}{s}\right)^{\alpha-1}e^{-\frac{\theta}{s}\beta} \left|s^{-1}\right| \\
+&amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}s^{-({\alpha-1})-1}e^{-\frac{\theta}{s}\beta} \\
+\Rightarrow p(\theta|s,\alpha,\beta)&amp;amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}}\\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now we can find the distribution of &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; that accounts for uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; through the prior on &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p(c|s,\alpha,\beta) &amp;amp;= \int_\theta p(c|\theta)p(\theta|s,\alpha,\beta)d\theta \\
+&amp;amp;=\int_\theta \frac{\theta^c e^{-\theta}}{c!} \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
+&amp;amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\int_\theta \theta^c e^{-\theta} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
+&amp;amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\int_\theta \theta^{c+\alpha-1} e^{-\theta\left(\frac{\beta+s}{s}\right)} d\theta \\
+&amp;amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\frac{\Gamma(c+\alpha)}{\left(\frac{\beta+s}{s}\right)^{c+\alpha}} \\
+&amp;amp;=\frac{\Gamma(c+\alpha)}{c!\Gamma(\alpha)} \beta^\alpha s^{-\alpha} s^{c+\alpha}
+(\beta+s)^{-(c+\alpha)} \\
+&amp;amp;=\frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)}  \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\ 
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Since a Poisson Process assumes that no more than one event can occur in an interval, intervals can be treated as discrete Bernoulli trials in which an event either occurs or does not occur. In this discrete settng, the distribution of the count of intervals with an event &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; for a given number of intervals without the event &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; and a probability of the event in each interval &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; will follow a negative binomial distribution;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+k &amp;amp;\sim NegBino(r,p) \\ 
+\Rightarrow p(k|r,p) &amp;amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
+&amp;amp;= \frac{\Gamma(k+r)}{\Gamma(r+1) \Gamma(k)}p^{k}(1-p)^{r} \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Combining the two results above, we see that the count &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; in an interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; will follow a negative binomial distribution such that &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; fixes the number of intervals in which no event occurs, and &lt;span class=&#34;math inline&#34;&gt;\(\frac{s}{\beta+s}\)&lt;/span&gt; captures the probability of an event in any unit length interval;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+c &amp;amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\ 
+\Rightarrow p(c|s,\alpha,\beta) &amp;amp;= \frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)} \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In summary, the key components of this model are the exponential likelihood and gamma priors which allow for the fast and simple updating rules to compute the posterior over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the negative binomial predictive distribution which accounts for the uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;. So the applicable information from above is;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda &amp;amp;\sim Gamma(\alpha_t,\beta_t) \\
+s_{t+1} &amp;amp;\sim Expo(\lambda) \\
+\alpha_{t+1} &amp;amp;\leftarrow \alpha_t + 1      \\ 
+\beta_{t+1}  &amp;amp;\leftarrow \beta_t + s_{t+1} \\ 
+c|s,\alpha,\beta &amp;amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here I investigate posterior predictive intervals for tweets over a period of time &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; while using different components of this model. In the code below, I compute all values of &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; based on the update rules derived above from conjugacy.&lt;/p&gt;
+&lt;!---
+This formulation can be thought of as discretizing the Poisson Process into $c+\alpha$ trials defined as intervals of length $\frac{1}{\beta+s}$, where $\beta$ is the sum of the interval lengths for which no event occured, and $s$ is the sum of interval lengths for those intervals that included an event. 
+---&gt;
+&lt;!---
+$\lambda$ has units! 
+
+Gamma prior on the rate;
+$$ \lambda \sim Gamma(\alpha,\beta)$$
+$$p(\lambda)=\frac{\beta^\alpha}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\beta \lambda}$$
+
+Observe an exponential interval;
+$$p(s|\lambda) = \lambda e^{-\lambda s}$$
+
+Then the posterior becomes; 
+
+$$p(\lambda|s)\propto p(s|\lambda)p(\lambda) 
+= \lambda^{\alpha-1}e^{-\beta \lambda} \lambda e^{-\lambda s} 
+= \lambda^{(\alpha+1)-1}e^{-\lambda (\beta+s)}$$
+$$\Rightarrow \lambda|s \sim Gamma(\alpha+1,\beta+s)$$
+
+To incorporate more prior information, the prior $\alpha$ would reflect the number of observations, and $\beta$ can reflect the sum of intervals associated with each observation.
+
+Given an estimate of $\lambda$, a poisson can be used to estimate the number of events in an interval (a week). 
+
+A Poisson and a gamma make a negative binomial, which is used for predictive densities that account for uncertainty in the rate.
+---&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# initialize alpha,beta as 0
+alpha,beta = 0,0
+alphas,betas = list(),list()
+# for each observed interval in ss,
+for si in ss:
+    si = si/(60*60*24) # si s/1 * 1/60 m/s * 1/60 h/m * 1/24 d/h convert to days
+    alpha+=1 # increment alpha by 1
+    beta+=si # increment beta by the interval length
+    # save parameters for analysis
+    alphas.append(alpha)
+    betas.append(beta)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The code above converts intervals from seconds to days and comptutes &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; for all intervals in my dataset. This gives the parameters for posterior beliefs over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; as each tweet is observed. Below I check the final parameters and some statistics from the last posterior.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;a,b,mode,median,mean=(alpha,beta,(alpha-1)/beta,gamma.ppf(.5,a=alpha,scale=1/beta),alpha/beta)
+print(  &amp;#39;alpha : &amp;#39;+str(a)+
+      &amp;#39;\nbeta  : &amp;#39;+str(b)+
+      &amp;#39;\nmode  : &amp;#39;+str(mode)+
+      &amp;#39;\nmedian: &amp;#39;+str(median)+
+      &amp;#39;\nmean  : &amp;#39;+str(mean))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; alpha : 199
+&amp;gt;&amp;gt;&amp;gt; beta  : 154.49241898148153
+&amp;gt;&amp;gt;&amp;gt; mode  : 1.2816162845099446
+&amp;gt;&amp;gt;&amp;gt; median: 1.2859321345366828
+&amp;gt;&amp;gt;&amp;gt; mean  : 1.2880890940276715&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The value of &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; correctly indicates 199 observed intervals, and the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; of 154.59 also correctly reflects the time difference in days that was computed in the first section. Lastly the ordinal relationship of the mode, median, and mean is consistent with that of a gamma distribution.&lt;/p&gt;
+&lt;div id=&#34;inference-on-tweet-rate-lambda-over-time&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Inference On Tweet Rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; Over Time&lt;/h3&gt;
+&lt;p&gt;In the code below, I compute the maximum a posteriori (MAP) estimate, or posterior mode, across time. I plot this across time with the 97.5&lt;span class=&#34;math inline&#34;&gt;\(^{th}\)&lt;/span&gt; and 2.5&lt;span class=&#34;math inline&#34;&gt;\(^{th}\)&lt;/span&gt; percentiles as a shaded region representing the 95% credible interval.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# get MAP lambda
+lambda_map   = [(alpha-1)/beta for alpha,beta in zip(alphas,betas)]
+# get CI upper and lower bounds
+lambda_upper = [gamma.ppf(.975,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
+lambda_lower = [gamma.ppf(.025,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
+# plot over time
+plt.figure(figsize=(10,4))
+sns.distplot(times[1:], hist = False, kde = False, rug = True,
+             color = &amp;#39;darkblue&amp;#39;, 
+             rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;});
+plt.plot(times[1:],lambda_map,color=[0,0,1],label=&amp;#39;MAP&amp;#39;);
+plt.fill_between(times[1:], lambda_lower, lambda_upper,color=[0,0,1,.1],label=&amp;#39;95% CI&amp;#39;)
+plt.ylabel(&amp;#39;Posterior on Lambda (tweets/day)&amp;#39;)
+plt.xlabel(&amp;#39;Time&amp;#39;)
+plt.title(&amp;#39;Summary of the posterior over $\lambda$ across time&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; might be warrented.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;predicting-number-of-tweets-in-interval-s&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Predicting Number Of Tweets In Interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Now I’ll visually compare predictions for the count of tweets in a week based on estimates of &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; after the first 20 tweets and using all 200 tweets, using two models;
+1. A Poisson using &lt;span class=&#34;math inline&#34;&gt;\(\theta=s\lambda_{MAP}\)&lt;/span&gt;
+2. The negative binomial derived in the model section above&lt;/p&gt;
+&lt;p&gt;First, an issue with the parameterization of the negative binomial has to be addressed. In my derivation, I ended with a negative binomial parameterized as;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+k&amp;amp;:\text{Number of successes} \\
+r&amp;amp;:\text{Number of failures} \\
+p&amp;amp;:\text{Probability of failure} \\
+p(k|r,p) &amp;amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;Scipy.stats.nbinom&lt;/code&gt; function defines a negative binomial with;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+k&amp;amp;:\text{Number of failures} \\
+n&amp;amp;:\text{Number of successes} \\
+p&amp;amp;:\text{Probability of success} \\
+p(k|n,p) &amp;amp;= \frac{(k+n-1)!}{(n-1)!k!} p^{n}(1-p)^{k}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Recall in my derivation that the parameter corresponding to probability of failure was &lt;span class=&#34;math inline&#34;&gt;\(p=\frac{s}{\beta+s}\)&lt;/span&gt;. The differences in parameterization can be accounted for by supplying the &lt;code&gt;nbinom&lt;/code&gt; function with &lt;span class=&#34;math inline&#34;&gt;\(p=1-\frac{s}{\beta+s}=\frac{\beta}{\beta+s}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The code below plots predictive densities based on the two approaches above from estimates of &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; based only on the first 20 observations.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# for the first 20 tweets
+# parameters
+cs = range(20)
+s = 7
+index = 19
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
+# labels
+plt.ylabel(&amp;#39;Mass&amp;#39;)
+plt.xlabel(&amp;#39;Count&amp;#39;)
+plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using 20 Observations&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;With a small amount of data, the uncertainty in the estimate of tweet rates carries through the negative binomial model, which gives more mass to a wider range of counts relative to the Poisson model that discards uncertainty when by &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
+# parameters
+index = 198
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
+# labels
+plt.ylabel(&amp;#39;Mass&amp;#39;)
+plt.xlabel(&amp;#39;Count&amp;#39;)
+plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using All Data&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;With a larger amount of data and predicting the tweet count over a short interval (7 days), the predictive distribution from the negative binomial and Poisson models are nearly indistinguishable. Below I compare the predictions of these model for an interval of 1 year (365 days), again using all data.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
+# parameters
+cs=range(350,600)
+s = 365
+index = 198
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
+# labels
+plt.ylabel(&amp;#39;Mass&amp;#39;)
+plt.xlabel(&amp;#39;Count&amp;#39;)
+plt.title(&amp;#39;Predictions for Tweet Counts in a Year, Using All Data&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;When considering a longer period of time, The uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; again carries through the negative binomial model, but is discarded in the Poisson model that uses &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;p&gt;This was a beefy notebook!&lt;/p&gt;
+&lt;p&gt;First I showed how to pull tweets as Status objects from Twitter’s API. Given Status objects, I then showed how to embed them in a notebook, view them as a dictionary, and otherwise access their attributes to construct a list of tweet timestamps. I then described Poisson Processes as they may apply to modeling user tweet rates and tweet counts over periods of time. I used kernel densities to check assumptions of a Poisson Process and found possible violations of homogeneity, and of the result that intervals between tweets should follow an exponential distribution.&lt;/p&gt;
+&lt;p&gt;Punting these violations, I developed a model of tweet frequency using conjugacy between Gamma priors and Exponential likelihoods. To predict tweet counts over a period of time, I derived a negative binomial predictive distribution that accounted for uncertainty in a user’s tweet rate. I compared this distribution to a Poisson distribution that ignored uncertainty by taking only the maximum a posteriori estimate of a user’s tweet rate.&lt;/p&gt;
+&lt;p&gt;Overall the model that discards posterior uncertainty attributes less mass to fringe counts, especially when there is little data or when the interval over which counts are being predicted is long. Incorporating posterior uncertainty broadens the predictive distribution to reflect uncertainty in the underlying tweet rate. That uncertainty exists regardless of the modeling approach – excluding it from predictive distributions only leads to narrow, overconfident predictions. This general principle of propagating uncertainty through a statistical process is one strong advantage of the Bayeian modeling approach that I developed and applied here.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>An example preprint / working paper</title>
       <link>/MacStrelioff/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 -0700</pubDate>
@@ -596,11 +1146,13 @@ $$&lt;/p&gt;
       <pubDate>Sun, 09 Sep 2018 00:00:00 -0700</pubDate>
       
       <guid>/MacStrelioff/video-lectures/fun/</guid>
-      <description>
+      <description>&lt;p&gt;Check back later&amp;hellip;&lt;/p&gt;
 
-&lt;h2 id=&#34;my-first-handstand&#34;&gt;My First Handstand&lt;/h2&gt;
+&lt;!---
+## My First Handstand
 
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/CgltP_bmfm8&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+---&gt;
 
 &lt;!---
 https://macstrelioff.github.io/MacStrelioff/files/CV.pdf
@@ -673,7 +1225,7 @@ true
       <pubDate>Thu, 28 Jun 2018 00:00:00 -0700</pubDate>
       
       <guid>/MacStrelioff/privacy/</guid>
-      <description>&lt;p&gt;Anything you post here is not private.&lt;/p&gt;
+      <description>&lt;p&gt;Anything you post here can be seen by others.&lt;/p&gt;
 </description>
     </item>
     
@@ -924,10 +1476,10 @@ true
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/MacStrelioff/post/2015-07-23-r-rmarkdown/</link>
+      <link>/MacStrelioff/post/2015-07-23/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/MacStrelioff/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/MacStrelioff/post/2015-07-23/2015-07-23-r-rmarkdown/</guid>
       <description>
 
 
@@ -1233,552 +1785,12 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Twitter, Poisson Processes, and Conjugacy</title>
-      <link>/MacStrelioff/unlisted/twitter-poisson-processes-and-conjugacy/</link>
+      <title>Overview</title>
+      <link>/MacStrelioff/data-science/learn-data-science/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/MacStrelioff/unlisted/twitter-poisson-processes-and-conjugacy/</guid>
-      <description>
-
-
-&lt;div id=&#34;background-and-setup&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Background and Setup&lt;/h1&gt;
-&lt;p&gt;In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.&lt;/p&gt;
-&lt;p&gt;To get started, I followed directions from three main sources that walked through the &lt;code&gt;twitter&lt;/code&gt; and &lt;code&gt;python-twitter&lt;/code&gt; libraries, and described how to apply for Twitter API access and use the keys;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;code&gt;python-twitter&lt;/code&gt;: Blogpost &lt;a href=&#34;https://medium.com/@YashSharma8388/collecting-data-from-twitter-using-python-twitter-library-and-twitter-api-42376c68d910&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tweepy&lt;/code&gt;: Blogpost &lt;a href=&#34;https://medium.com/@ssola/playing-with-twitter-streaming-api-b1f8912e50b0&#34;&gt;here&lt;/a&gt; and docs &lt;a href=&#34;http://docs.tweepy.org/en/v3.4.0/api.html&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Additional information on obtaining API keys and authenticating Twitter connections in a blogpost &lt;a href=&#34;https://medium.com/@fbilesanmi/how-to-login-with-twitter-api-using-python-6c9a0f7165c5&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(reticulate)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;reticulate&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Setup
-# for working with timestamps
-import pandas as pd
-from pandas.plotting import register_matplotlib_converters
-register_matplotlib_converters()
-# for basic math
-import numpy as np
-# for plotting
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# for working with distributions
-from scipy.stats import expon,gamma,poisson,nbinom
-
-# for general web data pulling
-import requests
-
-# for pulling tweets from Twitter API
-import twitter
-
-# keys for twitter API
-# (removed for this public document)
-api = twitter.Api(consumer_key=&amp;#39;&amp;#39;,
-              consumer_secret=&amp;#39;&amp;#39;,
-              access_token_key=&amp;#39;&amp;#39;,
-              access_token_secret=&amp;#39;&amp;#39;)
-
-# for saving and loading Python objects like dicts
-import pickle
-
-def save_obj(obj, name):
-    with open(name + &amp;#39;.pkl&amp;#39;, &amp;#39;wb&amp;#39;) as f:
-        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
-
-def load_obj(name):
-    with open(name + &amp;#39;.pkl&amp;#39;, &amp;#39;rb&amp;#39;) as f:
-        return pickle.load(f)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;twitter-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Twitter Data&lt;/h1&gt;
-&lt;div id=&#34;pulling-data-from-twitters-api&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Pulling Data from Twitter’s API&lt;/h3&gt;
-&lt;p&gt;First I pulled data using the code below. For this code to work, your API keys will need to be specified in the setup above. To conceil my keys, I ran the commented code below earlier and saved the timeline object. The uncommented code loads my timeline and looks at the first element. The timeline is represented as a list of Status objects like the one output by the code below.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# # Twitter handel to pull data from
-# handle = &amp;#39;@macstrelioff&amp;#39;
-# 
-# # get timeline
-# timeline=api.GetUserTimeline(screen_name = handle, 
-#                     count=200, # 200 is maximum 
-#                     include_rts=True, 
-#                     trim_user=True, 
-#                     exclude_replies=False)
-# 
-# # save timeline object
-# save_obj(timeline,&amp;#39;timeline_macstrelioff_20190406&amp;#39;)
-
-# load timeline object
-timeline=load_obj(&amp;#39;timeline_macstrelioff_20190406&amp;#39;)
-timeline[0] # most recent tweet status object&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Status(ID=1113860296458756097, ScreenName=None, Created=Thu Apr 04 17:46:03 +0000 2019, Text=&amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;working-with-twitter-status-objects&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Working with Twitter Status objects&lt;/h3&gt;
-&lt;p&gt;I cover three ways to work with Status objects.
-1. display the Status as a tweet!
-2. Convert the Status to a dictionary and access values from keys
-3. Access values directly as attributes of the Status&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;embed-a-status&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Embed a Status&lt;/h3&gt;
-&lt;p&gt;First, many the Status attributes (&lt;code&gt;created_at&lt;/code&gt;, &lt;code&gt;favorite_count&lt;/code&gt;, &lt;code&gt;text&lt;/code&gt;, …) can be cleanly displayed as a tweet embedded in a notebook. Below I create function that takes a username and tweet ID then, using Twitter’s embedding API, displayes the tweet as it would be seen on Twitter. (Note: this will only work properly if the Python kernel is trusted)&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# for displaying tweets based on username and tweet_id
-class disp_tweet(object):
-    def __init__(self, user_name, tweet_id):
-        # see: https://dev.twitter.com/web/embedded-tweets
-        api = &amp;#39;https://publish.twitter.com/oembed?url=https://twitter.com/&amp;#39;+ \
-               user_name + &amp;#39;/status/&amp;#39; + tweet_id
-        response  = requests.get(api)
-        self.text = response.json()[&amp;quot;html&amp;quot;]
-
-    def _repr_html_(self):
-        return self.text&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a26bc98d0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-My desk is covered in random papers. It is the support of a stationery distribution.
-&lt;/p&gt;
-— mac strelioff (&lt;span class=&#34;citation&#34;&gt;@macstrelioff&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/macstrelioff/status/981338927419109376?ref_src=twsrc%5Etfw&#34;&gt;April 4, 2018&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;convert-a-status-to-a-dict&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Convert a Status to a dict&lt;/h3&gt;
-&lt;p&gt;Status objects have a bound method, &lt;code&gt;.AsDict()&lt;/code&gt;, that will convert them to a Python dictionary. This way the structure of the information is easily seen. In the code below, I convert the first status to a dictionary and output it contents.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(timeline[0].AsDict())&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; {&amp;#39;created_at&amp;#39;: &amp;#39;Thu Apr 04 17:46:03 +0000 2019&amp;#39;, &amp;#39;favorite_count&amp;#39;: 20, &amp;#39;hashtags&amp;#39;: [], &amp;#39;id&amp;#39;: 1113860296458756097, &amp;#39;id_str&amp;#39;: &amp;#39;1113860296458756097&amp;#39;, &amp;#39;in_reply_to_screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;, &amp;#39;in_reply_to_status_id&amp;#39;: 1113822568211996672, &amp;#39;in_reply_to_user_id&amp;#39;: 19304217, &amp;#39;lang&amp;#39;: &amp;#39;da&amp;#39;, &amp;#39;media&amp;#39;: [{&amp;#39;display_url&amp;#39;: &amp;#39;pic.twitter.com/QOULUc5a0u&amp;#39;, &amp;#39;expanded_url&amp;#39;: &amp;#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&amp;#39;, &amp;#39;id&amp;#39;: 1113860285566046210, &amp;#39;media_url&amp;#39;: &amp;#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;, &amp;#39;media_url_https&amp;#39;: &amp;#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;, &amp;#39;sizes&amp;#39;: {&amp;#39;thumb&amp;#39;: {&amp;#39;w&amp;#39;: 150, &amp;#39;h&amp;#39;: 150, &amp;#39;resize&amp;#39;: &amp;#39;crop&amp;#39;}, &amp;#39;large&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}, &amp;#39;medium&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}, &amp;#39;small&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}}, &amp;#39;type&amp;#39;: &amp;#39;animated_gif&amp;#39;, &amp;#39;url&amp;#39;: &amp;#39;https://t.co/QOULUc5a0u&amp;#39;, &amp;#39;video_info&amp;#39;: {&amp;#39;aspect_ratio&amp;#39;: [125, 99], &amp;#39;variants&amp;#39;: [{&amp;#39;bitrate&amp;#39;: 0, &amp;#39;content_type&amp;#39;: &amp;#39;video/mp4&amp;#39;, &amp;#39;url&amp;#39;: &amp;#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&amp;#39;}]}}], &amp;#39;retweet_count&amp;#39;: 2, &amp;#39;source&amp;#39;: &amp;#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/android&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for Android&amp;lt;/a&amp;gt;&amp;#39;, &amp;#39;text&amp;#39;: &amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;, &amp;#39;urls&amp;#39;: [], &amp;#39;user&amp;#39;: {&amp;#39;id&amp;#39;: 70255183, &amp;#39;id_str&amp;#39;: &amp;#39;70255183&amp;#39;}, &amp;#39;user_mentions&amp;#39;: [{&amp;#39;id&amp;#39;: 19304217, &amp;#39;id_str&amp;#39;: &amp;#39;19304217&amp;#39;, &amp;#39;name&amp;#39;: &amp;#39;Vicki Boykis&amp;#39;, &amp;#39;screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;}]}&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;{&amp;#39;created_at&amp;#39;: &amp;#39;Thu Apr 04 17:46:03 +0000 2019&amp;#39;,
- &amp;#39;favorite_count&amp;#39;: 20,
- &amp;#39;hashtags&amp;#39;: [],
- &amp;#39;id&amp;#39;: 1113860296458756097,
- &amp;#39;id_str&amp;#39;: &amp;#39;1113860296458756097&amp;#39;,
- &amp;#39;in_reply_to_screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;,
- &amp;#39;in_reply_to_status_id&amp;#39;: 1113822568211996672,
- &amp;#39;in_reply_to_user_id&amp;#39;: 19304217,
- &amp;#39;lang&amp;#39;: &amp;#39;da&amp;#39;,
- &amp;#39;media&amp;#39;: [{&amp;#39;display_url&amp;#39;: &amp;#39;pic.twitter.com/QOULUc5a0u&amp;#39;,
-   &amp;#39;expanded_url&amp;#39;: &amp;#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&amp;#39;,
-   &amp;#39;id&amp;#39;: 1113860285566046210,
-   &amp;#39;media_url&amp;#39;: &amp;#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;,
-   &amp;#39;media_url_https&amp;#39;: &amp;#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;,
-   &amp;#39;sizes&amp;#39;: {&amp;#39;thumb&amp;#39;: {&amp;#39;w&amp;#39;: 150, &amp;#39;h&amp;#39;: 150, &amp;#39;resize&amp;#39;: &amp;#39;crop&amp;#39;},
-    &amp;#39;large&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;},
-    &amp;#39;medium&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;},
-    &amp;#39;small&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}},
-   &amp;#39;type&amp;#39;: &amp;#39;animated_gif&amp;#39;,
-   &amp;#39;url&amp;#39;: &amp;#39;https://t.co/QOULUc5a0u&amp;#39;,
-   &amp;#39;video_info&amp;#39;: {&amp;#39;aspect_ratio&amp;#39;: [125, 99],
-    &amp;#39;variants&amp;#39;: [{&amp;#39;bitrate&amp;#39;: 0,
-      &amp;#39;content_type&amp;#39;: &amp;#39;video/mp4&amp;#39;,
-      &amp;#39;url&amp;#39;: &amp;#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&amp;#39;}]}}],
- &amp;#39;retweet_count&amp;#39;: 2,
- &amp;#39;source&amp;#39;: &amp;#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/android&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for Android&amp;lt;/a&amp;gt;&amp;#39;,
- &amp;#39;text&amp;#39;: &amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;,
- &amp;#39;urls&amp;#39;: [],
- &amp;#39;user&amp;#39;: {&amp;#39;id&amp;#39;: 70255183, &amp;#39;id_str&amp;#39;: &amp;#39;70255183&amp;#39;},
- &amp;#39;user_mentions&amp;#39;: [{&amp;#39;id&amp;#39;: 19304217,
-   &amp;#39;id_str&amp;#39;: &amp;#39;19304217&amp;#39;,
-   &amp;#39;name&amp;#39;: &amp;#39;Vicki Boykis&amp;#39;,
-   &amp;#39;screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;}]}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;access-status-attributes-how-i-accessed-the-data-used-below&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Access Status Attributes (How I accessed the data used below)&lt;/h3&gt;
-&lt;p&gt;Since I’m interested in modeling expected number of tweets in a week, the most relevant attribute is the timestamps in the &lt;code&gt;created_at&lt;/code&gt; attribute. These attributes can be accessed directly from the Status object. Below I make a list of the times at which each tweet was created and check the first element of that list;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# get list of time stamps
-times = [pd.Timestamp(tweet.created_at) for tweet in timeline]
-times.reverse() # sort s.t. times[0] is lowest, times[-1] is highest
-times[0]&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timestamp(&amp;#39;2018-11-01 05:56:58+0000&amp;#39;, tz=&amp;#39;tzutc()&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This creates a list of timestamps. By default, times from the twitter API are localized to the UTC timezone. Below I convert these to my local time in California;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;times = [time.tz_convert(&amp;quot;America/Los_Angeles&amp;quot;) for time in times]
-times[0]&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timestamp(&amp;#39;2018-10-31 22:56:58-0700&amp;#39;, tz=&amp;#39;America/Los_Angeles&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we have a list of timestamps in local time! To get a sense of the duration over which this data spans, below I compute the time difference between the frist and last timestamp;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;times[-1]-times[0]&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timedelta(&amp;#39;154 days 11:49:05&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Woah, almost 155 days of my twitter activity!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;poisson-process&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Poisson Process&lt;/h1&gt;
-&lt;p&gt;A Poisson process is a common framework for modeling events that occurr in time or space. In this context, tweets are being created over time and we are interested in modeling the rate at which tweets are created in order to predict how many tweets will be created in a week.&lt;/p&gt;
-&lt;div id=&#34;assumptions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Assumptions&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;No more than one event can occur at a single point in time.
-&lt;ul&gt;
-&lt;li&gt;This can be violated when a user publishes a thread of multiple tweets at once. This can be fixed by recoding threads as a single status.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Independence: The interval lengths for each event are not influenced by any other event.
-&lt;ul&gt;
-&lt;li&gt;This can be violated if, instead of using Twitter’s thread option, a user ends a tweet with “…” to indicate that they will soon create another tweet. In this case, there are some tweets that imply a shorter interval before the next tweet.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Homogeneity: The distribution of intervals is the same throughout the entire process.
-&lt;ul&gt;
-&lt;li&gt;I probe this assumption in depth below, and it almost certainly violated.&lt;/li&gt;
-&lt;li&gt;There are methods for modeling inhomogeneous Poisson processes, but I ignore those here.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;specification-and-properties&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Specification and Properties&lt;/h3&gt;
-&lt;p&gt;In this context tweet events are occurring across time. I index tweets with &lt;span class=&#34;math inline&#34;&gt;\(i\in\{1,...,N\}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; is the total number of tweets observed. Each tweet is created at a time, &lt;span class=&#34;math inline&#34;&gt;\(t_i\)&lt;/span&gt;, and the next tweet is observed after an interval &lt;span class=&#34;math inline&#34;&gt;\(s_{i}\)&lt;/span&gt;. That is, if tweet &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; is created at time &lt;span class=&#34;math inline&#34;&gt;\(t_{i-1}\)&lt;/span&gt; then tweet &lt;span class=&#34;math inline&#34;&gt;\(i+1\)&lt;/span&gt; is created at time &lt;span class=&#34;math inline&#34;&gt;\(t_{i}=t_{i-1}+s_{i}\)&lt;/span&gt;. The interval between each tweet is &lt;span class=&#34;math inline&#34;&gt;\(s_i = t_{i}-t_{i-1} = (t_{i-1}+s_i)-t_{i-1}\)&lt;/span&gt;. The assumptions of a Poisson process permit the following distributions for three interesting features of this scenario.&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;The distribution of time between events, &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt;, is exponential; &lt;span class=&#34;math inline&#34;&gt;\(s_i\sim Expo(\lambda) \Rightarrow p(s_i|\lambda) = \lambda e^{-\lambda s_i}\)&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;Here &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; is a parameter that describes the tweet rate.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Given an interval of length &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;, the distribution of the count of events in that interval, &lt;span class=&#34;math inline&#34;&gt;\(c|s\)&lt;/span&gt;, is Poisson; &lt;span class=&#34;math inline&#34;&gt;\(c|s\sim Poisson(\lambda s) \Rightarrow p(c|s,\lambda) = \frac{(\lambda s)^{c}e^{-\lambda s}}{c!}\)&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;The count of events, &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;, in a fixed interval depends both on the rate of the events, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the duration of the interval, &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;The distribution of the total interval required for &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; events, &lt;span class=&#34;math inline&#34;&gt;\(s|c\)&lt;/span&gt;, is gamma; &lt;span class=&#34;math inline&#34;&gt;\(s|c \sim Gamma(c,\lambda) \Rightarrow p(s|c,\lambda) = \frac{\lambda^c}{\Gamma(c)}(s)^{c-1}e^{-\lambda s}\)&lt;/span&gt;
-&lt;ul&gt;
-&lt;li&gt;The interval, &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;, required for a fixed number of events depends on both the rate of the events, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the number of events, &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;More information on these three kinds of distributions, and ways to implement them in Python, can be found in the &lt;a href=&#34;https://docs.scipy.org/doc/scipy/reference/stats.html&#34;&gt;scipy documentation on statistical functions&lt;/a&gt;. General information on each of these distributions can be found on the Wikipedia page for the &lt;a href=&#34;https://en.wikipedia.org/wiki/Exponential_distribution&#34;&gt;exponential&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Poisson_distribution&#34;&gt;Poisson&lt;/a&gt;, or &lt;a href=&#34;https://en.wikipedia.org/wiki/Gamma_distribution&#34;&gt;gamma&lt;/a&gt; distribution. A key difference between the standard uses of these distributions and their roles in a Poisson process is that the rate parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; is also scaled by the duration of an interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; when constructing a distribution for the count of events in interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; (2, above) or the duration of the interval required for &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; events (3, above).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;checking-the-homogeneity-assumption&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Checking the Homogeneity Assumption&lt;/h2&gt;
-&lt;p&gt;The homogeneity assumption strictly requires that tweet rates are constant across time. This would generate data that are uniform across meaningful intervals such as time in a week or time in a day. To check homogeneity, below I convert the timestamps into the hour within a week, minute within a day, and minute within an hour, and plot tweet counts across these representations of time.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# convert to hours in a week
-hour_of_week     = [t.weekday()*24+t.hour+t.minute/60 for t in times]
-minute_of_day    = [t.hour*60+t.minute+t.second/60 for t in times]
-minute_of_hour   = [t.minute+t.second/60 for t in times]
-plt.figure(figsize=(10,4));
-plt.hist(hour_of_week,bins=80);&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.title(&amp;quot;My Tweet Counts By Hour Of Week&amp;quot;);
-plt.ylabel(&amp;quot;Count&amp;quot;);
-plt.xlabel(&amp;quot;Hour In Week&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The histogram above indicates that there might be some hours of the week that have a higher rate than others. For example, I don’t seem to tweet much early on Sunday (hours 0-5), but I do seem to tweet a lot during the day on Sunday (around hours 6-20). Below I use rug plots, which represent a tweet event with a vertical line near the x-axis, and an imposed kernel density estimate, which is a continuous version of a histogram. I remake this plot in terms of hours within a week, minutes within a day, and minutes within an hour. If the tweet rate (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) were homogeneous, then the kernel density estimate would be approximately flat.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def rug_plot_and_density(dat,bw,xlab,xlim):
-    # rug plot + density
-    plt.figure(figsize=(10,4))
-    sns.distplot(dat, hist = False, kde = True, rug = True,
-                 color = &amp;#39;darkblue&amp;#39;, 
-                 kde_kws={&amp;#39;linewidth&amp;#39;: 3,&amp;quot;bw&amp;quot;:bw},
-                 rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;})
-    # formatting
-    plt.title(&amp;#39;Tweet Density By &amp;#39;+xlab)
-    plt.xlabel(xlab)
-    plt.ylabel(&amp;#39;Kernel Density&amp;#39;)
-    plt.xlim(xlim);
-    plt.show()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# data and plot formatting arguments
-dats = (hour_of_week,minute_of_day,minute_of_hour)
-xlabs=(&amp;#39;Hour of Week&amp;#39;,&amp;#39;Minute of Day&amp;#39;,&amp;#39;Minute of Hour&amp;#39;)
-xlims=([0,24*7],[0,24*60],[0,60]);
-bws  = (4,40,4)
-
-# make plots
-for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
-    rug_plot_and_density(dat=dat,bw=bw,xlab=xlab,xlim=xlim)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-2.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Are very sensitive to the choice of the bandwidth parameter that determines the window over which to aggregate events (similar to bin size when using a histogram). I’m using these plots to demonstrate possible violations of homogeneity that I would follow up on in a real analysis, but will not follow up on here.&lt;/p&gt;
-&lt;p&gt;From the top plot, there seems to be two patterns. First, a series of peaks and troughs that roughly correspond to daytime and night-time hours. I probably tweet with a higher frequency when I am awake, rather than asleep – meaning that &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; may depend on time within a day. Second, a generally lower kernel density estimate during the middle than the edges. I may tweet more during the weekends (edge hours) than week days (middle hours).&lt;/p&gt;
-&lt;p&gt;From the middle plot that displays tweet frequencies by minutes within a day, there again seem to be two trends. First, I rarely tweet before minute 400 (around 6:40AM). Second, I have peaks around minute 600 (10:00AM), 1000 (4:40PM), and 1350 (10:00PM). This might be related to the times that I take a break from working. I generally take a break around 5:00PM, and usually take another break before bed around 9:00-10:00PM.&lt;/p&gt;
-&lt;p&gt;The bottom plot displays tweet frequencies by minutes within an hour. This seems more flat overall longer periods of time, but I may strangely tend to tweet more during the first half of hours.&lt;/p&gt;
-&lt;p&gt;Overall, there are many reasons that the homogeneity assumption may be violated. For cases like this, the tweet rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; can be modeled as a function of time. However, to keep this example simple, I’ll ignore possible violations and proceede as if &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; were a constant with respect to time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;checking-the-exponential-distribution-of-intervals&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Checking the exponential distribution of intervals&lt;/h2&gt;
-&lt;p&gt;Let’s the distribution of the time between tweets, &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt;. If the assumptions of the Poisson process were satisfied, then the intervals between tweets would follow an exponential distribution. Below I compute the number of seconds between tweets and display each value as a black dash on the x-axis. I overlay a histogram, a kernel density, and a exponential density based on the observed mean interval.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# compute intervals between tweets
-ss = [times[i]-times[i-1] for i in range(1,len(times))];
-# convert from Timedelta to total time in seconds
-ss = [si.total_seconds() for si in ss]
-
-# histogram and density plot
-plt.figure(figsize=(10,4))
-sns.distplot(ss, hist = True, kde = True, rug = True,
-             color = &amp;#39;darkblue&amp;#39;, bins=100,
-             hist_kws={&amp;#39;color&amp;#39;:[0,.7,.5,.5],&amp;#39;label&amp;#39;:&amp;#39;Histogram&amp;#39;},
-             kde_kws={&amp;#39;linewidth&amp;#39;: 3,&amp;quot;bw&amp;quot;:60*60,&amp;#39;label&amp;#39;:&amp;#39;Kernel Density&amp;#39;},
-             rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;})
-plt.xlim([0,680000]);&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.title(&amp;#39;Distribution of intervals between tweets&amp;#39;)
-plt.xlabel(&amp;#39;Seconds&amp;#39;)
-plt.ylabel(&amp;#39;Frequency&amp;#39;)
-
-# overlay an exponential density
-tmp_rate=np.mean(ss)
-tmpx = np.linspace(0,680000,680000*5)
-tmpy = expon.pdf(tmpx,scale=tmp_rate)
-plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label=&amp;#39;Exponential Density&amp;#39;);
-# add legend
-plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# check standard deviation
-np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; (90150.9122414953, 67076.1055276382, 1.3440093388300445)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The observed standard deviation is about 1.34 times larger (variance is about 1.80 times larger) than it would be if the data were exponentially distributed with the observed mean. While this could be accounted for with an overdispersion parameter, I will ignore this issue here for the sake of having a simple and fast online model.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;model-of-tweet-fequency-using-conjugacy&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Model of Tweet Fequency Using Conjugacy&lt;/h1&gt;
-&lt;p&gt;First, I’ll assume (despite the overdispersion) that the intervals between tweets follow an exponential distribution;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-s_i|\lambda &amp;amp;\sim Expo(\lambda) \\
-\Rightarrow p(s_i|\lambda) &amp;amp;= \lambda e^{-s_i \lambda}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;To account for uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, I’ll use a Gamma distribution with shape &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and rate &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\lambda &amp;amp;\sim Gamma(\alpha,\beta) \\ 
-\Rightarrow p(\lambda|\alpha,\beta) &amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha-1}e^{-\lambda \beta}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The choice of a Gamma distribution allows for fast updates using conjugacy between the prior beliefs about &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; based on data observed up to time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; and the exponential likelihood for the interval observed at time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\lambda | s_t &amp;amp;\sim Gamma(\alpha_t,\beta_t) \\ 
-p(s_{t+1}|\lambda) &amp;amp;= \lambda e^{-s_{t+1} \lambda} \\
-p(\lambda|\alpha_t,\beta_t,s_{t+1}) &amp;amp;\propto p(s_{t+1}|\lambda) p(\lambda|\alpha_t,\beta_t) \\
-&amp;amp;= \lambda e^{-s_{t+1} \lambda} \frac{\beta_t^{\alpha_t}}{\Gamma(\alpha_t)} \lambda^{\alpha_t-1}e^{-\lambda \beta_t} \\
-&amp;amp;= \lambda^{\alpha_t} e^{-\lambda(s_{t+1}+\beta_t)} \\ 
-\Rightarrow \lambda | s_{t+1} &amp;amp;\sim Gamma(\alpha_t+1,\beta_t+s_{t+1})
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This implies the following update rules for computing the parameters of the posterior over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\alpha_{t+1} &amp;amp;\leftarrow \alpha_t +1 \\
-\beta_{t+1}  &amp;amp;\leftarrow \beta_t + s_{t+1} \\
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;To answer the question of how many tweets might be observed in a period of time, I’ll assume that the count of tweets &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; is Poisson distributed with rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;. Then the number of tweets expected in an interval of length &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; would be;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\theta &amp;amp;= s\lambda \\ 
-c|\theta &amp;amp;\sim Poisson(\theta) \\
-\Rightarrow p(c|\theta) &amp;amp;= \frac{\theta^c e^{-\theta}}{c!}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This means that, rather than &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, we are actually interested in the distribution of &lt;span class=&#34;math inline&#34;&gt;\(\theta=s\lambda\)&lt;/span&gt;. I derive this below using a change of vairables;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\theta = s\lambda &amp;amp;\Rightarrow \lambda = \frac{\theta}{s} = \theta s^{-1} \\
-p_\theta(\theta | \lambda,s) &amp;amp;= p_\lambda\left(\theta s^{-1} | s,\alpha,\beta\right) \left| \frac{d \lambda}{d \theta}\right|\\
-&amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \left(\frac{\theta}{s}\right)^{\alpha-1}e^{-\frac{\theta}{s}\beta} \left|s^{-1}\right| \\
-&amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}s^{-({\alpha-1})-1}e^{-\frac{\theta}{s}\beta} \\
-\Rightarrow p(\theta|s,\alpha,\beta)&amp;amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}}\\
-\end{aligned} 
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Now we can find the distribution of &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; that accounts for uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; through the prior on &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-p(c|s,\alpha,\beta) &amp;amp;= \int_\theta p(c|\theta)p(\theta|s,\alpha,\beta)d\theta \\
-&amp;amp;=\int_\theta \frac{\theta^c e^{-\theta}}{c!} \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
-&amp;amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
-\int_\theta \theta^c e^{-\theta} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
-&amp;amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
-\int_\theta \theta^{c+\alpha-1} e^{-\theta\left(\frac{\beta+s}{s}\right)} d\theta \\
-&amp;amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
-\frac{\Gamma(c+\alpha)}{\left(\frac{\beta+s}{s}\right)^{c+\alpha}} \\
-&amp;amp;=\frac{\Gamma(c+\alpha)}{c!\Gamma(\alpha)} \beta^\alpha s^{-\alpha} s^{c+\alpha}
-(\beta+s)^{-(c+\alpha)} \\
-&amp;amp;=\frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)}  \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\ 
-\end{aligned} 
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Since a Poisson Process assumes that no more than one event can occur in an interval, intervals can be treated as discrete Bernoulli trials in which an event either occurs or does not occur. In this discrete settng, the distribution of the count of intervals with an event &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; for a given number of intervals without the event &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; and a probability of the event in each interval &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; will follow a negative binomial distribution;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-k &amp;amp;\sim NegBino(r,p) \\ 
-\Rightarrow p(k|r,p) &amp;amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
-&amp;amp;= \frac{\Gamma(k+r)}{\Gamma(r+1) \Gamma(k)}p^{k}(1-p)^{r} \\
-\end{aligned} 
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Combining the two results above, we see that the count &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; in an interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; will follow a negative binomial distribution such that &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; fixes the number of intervals in which no event occurs, and &lt;span class=&#34;math inline&#34;&gt;\(\frac{s}{\beta+s}\)&lt;/span&gt; captures the probability of an event in any unit length interval;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-c &amp;amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\ 
-\Rightarrow p(c|s,\alpha,\beta) &amp;amp;= \frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)} \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\
-\end{aligned} 
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;In summary, the key components of this model are the exponential likelihood and gamma priors which allow for the fast and simple updating rules to compute the posterior over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the negative binomial predictive distribution which accounts for the uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;. So the applicable information from above is;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\lambda &amp;amp;\sim Gamma(\alpha_t,\beta_t) \\
-s_{t+1} &amp;amp;\sim Expo(\lambda) \\
-\alpha_{t+1} &amp;amp;\leftarrow \alpha_t + 1      \\ 
-\beta_{t+1}  &amp;amp;\leftarrow \beta_t + s_{t+1} \\ 
-c|s,\alpha,\beta &amp;amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\
-\end{aligned} 
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Here I investigate posterior predictive intervals for tweets over a period of time &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; while using different components of this model. In the code below, I compute all values of &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; based on the update rules derived above from conjugacy.&lt;/p&gt;
-&lt;!---
-This formulation can be thought of as discretizing the Poisson Process into $c+\alpha$ trials defined as intervals of length $\frac{1}{\beta+s}$, where $\beta$ is the sum of the interval lengths for which no event occured, and $s$ is the sum of interval lengths for those intervals that included an event. 
----&gt;
-&lt;!---
-$\lambda$ has units! 
-
-Gamma prior on the rate;
-$$ \lambda \sim Gamma(\alpha,\beta)$$
-$$p(\lambda)=\frac{\beta^\alpha}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\beta \lambda}$$
-
-Observe an exponential interval;
-$$p(s|\lambda) = \lambda e^{-\lambda s}$$
-
-Then the posterior becomes; 
-
-$$p(\lambda|s)\propto p(s|\lambda)p(\lambda) 
-= \lambda^{\alpha-1}e^{-\beta \lambda} \lambda e^{-\lambda s} 
-= \lambda^{(\alpha+1)-1}e^{-\lambda (\beta+s)}$$
-$$\Rightarrow \lambda|s \sim Gamma(\alpha+1,\beta+s)$$
-
-To incorporate more prior information, the prior $\alpha$ would reflect the number of observations, and $\beta$ can reflect the sum of intervals associated with each observation.
-
-Given an estimate of $\lambda$, a poisson can be used to estimate the number of events in an interval (a week). 
-
-A Poisson and a gamma make a negative binomial, which is used for predictive densities that account for uncertainty in the rate.
----&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# initialize alpha,beta as 0
-alpha,beta = 0,0
-alphas,betas = list(),list()
-# for each observed interval in ss,
-for si in ss:
-    si = si/(60*60*24) # si s/1 * 1/60 m/s * 1/60 h/m * 1/24 d/h convert to days
-    alpha+=1 # increment alpha by 1
-    beta+=si # increment beta by the interval length
-    # save parameters for analysis
-    alphas.append(alpha)
-    betas.append(beta)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The code above converts intervals from seconds to days and comptutes &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; for all intervals in my dataset. This gives the parameters for posterior beliefs over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; as each tweet is observed. Below I check the final parameters and some statistics from the last posterior.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;a,b,mode,median,mean=(alpha,beta,(alpha-1)/beta,gamma.ppf(.5,a=alpha,scale=1/beta),alpha/beta)
-print(  &amp;#39;alpha : &amp;#39;+str(a)+
-      &amp;#39;\nbeta  : &amp;#39;+str(b)+
-      &amp;#39;\nmode  : &amp;#39;+str(mode)+
-      &amp;#39;\nmedian: &amp;#39;+str(median)+
-      &amp;#39;\nmean  : &amp;#39;+str(mean))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; alpha : 199
-&amp;gt;&amp;gt;&amp;gt; beta  : 154.49241898148153
-&amp;gt;&amp;gt;&amp;gt; mode  : 1.2816162845099446
-&amp;gt;&amp;gt;&amp;gt; median: 1.2859321345366828
-&amp;gt;&amp;gt;&amp;gt; mean  : 1.2880890940276715&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The value of &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; correctly indicates 199 observed intervals, and the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; of 154.59 also correctly reflects the time difference in days that was computed in the first section. Lastly the ordinal relationship of the mode, median, and mean is consistent with that of a gamma distribution.&lt;/p&gt;
-&lt;div id=&#34;inference-on-tweet-rate-lambda-over-time&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Inference On Tweet Rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; Over Time&lt;/h3&gt;
-&lt;p&gt;In the code below, I compute the maximum a posteriori (MAP) estimate, or posterior mode, across time. I plot this across time with the 97.5&lt;span class=&#34;math inline&#34;&gt;\(^{th}\)&lt;/span&gt; and 2.5&lt;span class=&#34;math inline&#34;&gt;\(^{th}\)&lt;/span&gt; percentiles as a shaded region representing the 95% credible interval.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# get MAP lambda
-lambda_map   = [(alpha-1)/beta for alpha,beta in zip(alphas,betas)]
-# get CI upper and lower bounds
-lambda_upper = [gamma.ppf(.975,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
-lambda_lower = [gamma.ppf(.025,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
-# plot over time
-plt.figure(figsize=(10,4))
-sns.distplot(times[1:], hist = False, kde = False, rug = True,
-             color = &amp;#39;darkblue&amp;#39;, 
-             rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;});
-plt.plot(times[1:],lambda_map,color=[0,0,1],label=&amp;#39;MAP&amp;#39;);
-plt.fill_between(times[1:], lambda_lower, lambda_upper,color=[0,0,1,.1],label=&amp;#39;95% CI&amp;#39;)
-plt.ylabel(&amp;#39;Posterior on Lambda (tweets/day)&amp;#39;)
-plt.xlabel(&amp;#39;Time&amp;#39;)
-plt.title(&amp;#39;Summary of the posterior over $\lambda$ across time&amp;#39;)
-plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; might be warrented.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;predicting-number-of-tweets-in-interval-s&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Predicting Number Of Tweets In Interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;Now I’ll visually compare predictions for the count of tweets in a week based on estimates of &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; after the first 20 tweets and using all 200 tweets, using two models;
-1. A Poisson using &lt;span class=&#34;math inline&#34;&gt;\(\theta=s\lambda_{MAP}\)&lt;/span&gt;
-2. The negative binomial derived in the model section above&lt;/p&gt;
-&lt;p&gt;First, an issue with the parameterization of the negative binomial has to be addressed. In my derivation, I ended with a negative binomial parameterized as;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-k&amp;amp;:\text{Number of successes} \\
-r&amp;amp;:\text{Number of failures} \\
-p&amp;amp;:\text{Probability of failure} \\
-p(k|r,p) &amp;amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
-\end{aligned} 
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;Scipy.stats.nbinom&lt;/code&gt; function defines a negative binomial with;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-k&amp;amp;:\text{Number of failures} \\
-n&amp;amp;:\text{Number of successes} \\
-p&amp;amp;:\text{Probability of success} \\
-p(k|n,p) &amp;amp;= \frac{(k+n-1)!}{(n-1)!k!} p^{n}(1-p)^{k}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Recall in my derivation that the parameter corresponding to probability of failure was &lt;span class=&#34;math inline&#34;&gt;\(p=\frac{s}{\beta+s}\)&lt;/span&gt;. The differences in parameterization can be accounted for by supplying the &lt;code&gt;nbinom&lt;/code&gt; function with &lt;span class=&#34;math inline&#34;&gt;\(p=1-\frac{s}{\beta+s}=\frac{\beta}{\beta+s}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;The code below plots predictive densities based on the two approaches above from estimates of &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; based only on the first 20 observations.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# for the first 20 tweets
-# parameters
-cs = range(20)
-s = 7
-index = 19
-theta = s*lambda_map[index]
-plt.figure(figsize=(10,4))
-# plot the Poisson density
-plt.scatter(cs,poisson.pmf(cs,theta))
-plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
-# plot the negative binomial density
-plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
-plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
-# labels
-plt.ylabel(&amp;#39;Mass&amp;#39;)
-plt.xlabel(&amp;#39;Count&amp;#39;)
-plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using 20 Observations&amp;#39;)
-plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;With a small amount of data, the uncertainty in the estimate of tweet rates carries through the negative binomial model, which gives more mass to a wider range of counts relative to the Poisson model that discards uncertainty when by &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
-# parameters
-index = 198
-theta = s*lambda_map[index]
-plt.figure(figsize=(10,4))
-# plot the Poisson density
-plt.scatter(cs,poisson.pmf(cs,theta))
-plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
-# plot the negative binomial density
-plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
-plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
-# labels
-plt.ylabel(&amp;#39;Mass&amp;#39;)
-plt.xlabel(&amp;#39;Count&amp;#39;)
-plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using All Data&amp;#39;)
-plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;With a larger amount of data and predicting the tweet count over a short interval (7 days), the predictive distribution from the negative binomial and Poisson models are nearly indistinguishable. Below I compare the predictions of these model for an interval of 1 year (365 days), again using all data.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
-# parameters
-cs=range(350,600)
-s = 365
-index = 198
-theta = s*lambda_map[index]
-plt.figure(figsize=(10,4))
-# plot the Poisson density
-plt.scatter(cs,poisson.pmf(cs,theta))
-plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
-# plot the negative binomial density
-plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
-plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
-# labels
-plt.ylabel(&amp;#39;Mass&amp;#39;)
-plt.xlabel(&amp;#39;Count&amp;#39;)
-plt.title(&amp;#39;Predictions for Tweet Counts in a Year, Using All Data&amp;#39;)
-plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffUnlisted/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;When considering a longer period of time, The uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; again carries through the negative binomial model, but is discarded in the Poisson model that uses &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;summary&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Summary&lt;/h1&gt;
-&lt;p&gt;This was a beefy notebook!&lt;/p&gt;
-&lt;p&gt;First I showed how to pull tweets as Status objects from Twitter’s API. Given Status objects, I then showed how to embed them in a notebook, view them as a dictionary, and otherwise access their attributes to construct a list of tweet timestamps. I then described Poisson Processes as they may apply to modeling user tweet rates and tweet counts over periods of time. I used kernel densities to check assumptions of a Poisson Process and found possible violations of homogeneity, and of the result that intervals between tweets should follow an exponential distribution.&lt;/p&gt;
-&lt;p&gt;Punting these violations, I developed a model of tweet frequency using conjugacy between Gamma priors and Exponential likelihoods. To predict tweet counts over a period of time, I derived a negative binomial predictive distribution that accounted for uncertainty in a user’s tweet rate. I compared this distribution to a Poisson distribution that ignored uncertainty by taking only the maximum a posteriori estimate of a user’s tweet rate.&lt;/p&gt;
-&lt;p&gt;Overall the model that discards posterior uncertainty attributes less mass to fringe counts, especially when there is little data or when the interval over which counts are being predicted is long. Incorporating posterior uncertainty broadens the predictive distribution to reflect uncertainty in the underlying tweet rate. That uncertainty exists regardless of the modeling approach – excluding it from predictive distributions only leads to narrow, overconfident predictions. This general principle of propagating uncertainty through a statistical process is one strong advantage of the Bayeian modeling approach that I developed and applied here.&lt;/p&gt;
-&lt;/div&gt;
+      <guid>/MacStrelioff/data-science/learn-data-science/</guid>
+      <description>&lt;p&gt;The sections below are documents I made based on things that were important, but not used often enough to commit to memory.&lt;/p&gt;
 </description>
     </item>
     

@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.2.5">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Mac Strelioff">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
+To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
+python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="rgba(200,0,0,1)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/MacStrelioff/css/academic.min.c5536a1fc25cb0026e39ff98c44b4022.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/MacStrelioff/site.webmanifest">
+  <link rel="icon" type="image/png" href="/MacStrelioff/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/MacStrelioff/img/icon-192.png">
+
+  <link rel="canonical" href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@macstrelioff">
+  <meta property="twitter:creator" content="@macstrelioff">
+  
+  <meta property="og:site_name" content="Mac Strelioff (UNDER CONSTRUCTION)">
+  <meta property="og:url" content="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
+  <meta property="og:title" content="Twitter, Poisson Processes, and Conjugacy | Mac Strelioff (UNDER CONSTRUCTION)">
+  <meta property="og:description" content="Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
+To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
+python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-05-09T23:39:16&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-05-09T23:39:16&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Twitter, Poisson Processes, and Conjugacy | Mac Strelioff (UNDER CONSTRUCTION)</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/MacStrelioff/">Mac Strelioff (UNDER CONSTRUCTION)</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/data-science/">
+            
+            <span>Data Science</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/video-lectures/">
+            
+            <span>Videos</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/cv/">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/MacStrelioff/data-science/">Fun</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">Twitter, Poisson Processes, and Conjugacy</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/MacStrelioff/data-science/learn-data-science/">Learn Data Science</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/MacStrelioff/data-science/working-environment/">Working Environment</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Twitter, Poisson Processes, and Conjugacy</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+
+<div id="background-and-setup" class="section level2">
+<h2>Background and Setup</h2>
+<p>In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.</p>
+<p>To get started, I followed directions from three main sources that walked through the <code>twitter</code> and <code>python-twitter</code> libraries, and described how to apply for Twitter API access and use the keys;</p>
+<ol style="list-style-type: decimal">
+<li><code>python-twitter</code>: Blogpost <a href="https://medium.com/@YashSharma8388/collecting-data-from-twitter-using-python-twitter-library-and-twitter-api-42376c68d910">here</a></li>
+<li><code>tweepy</code>: Blogpost <a href="https://medium.com/@ssola/playing-with-twitter-streaming-api-b1f8912e50b0">here</a> and docs <a href="http://docs.tweepy.org/en/v3.4.0/api.html">here</a></li>
+<li>Additional information on obtaining API keys and authenticating Twitter connections in a blogpost <a href="https://medium.com/@fbilesanmi/how-to-login-with-twitter-api-using-python-6c9a0f7165c5">here</a></li>
+</ol>
+<p>I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.</p>
+<pre class="r"><code>library(reticulate)</code></pre>
+<pre><code>## Warning: package &#39;reticulate&#39; was built under R version 3.5.2</code></pre>
+<pre class="python"><code># Setup
+# for working with timestamps
+import pandas as pd
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
+# for basic math
+import numpy as np
+# for plotting
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# for working with distributions
+from scipy.stats import expon,gamma,poisson,nbinom
+
+# for general web data pulling
+import requests
+
+# for pulling tweets from Twitter API
+import twitter
+
+# keys for twitter API
+# (removed for this public document)
+api = twitter.Api(consumer_key=&#39;&#39;,
+              consumer_secret=&#39;&#39;,
+              access_token_key=&#39;&#39;,
+              access_token_secret=&#39;&#39;)
+
+# for saving and loading Python objects like dicts
+import pickle
+
+def save_obj(obj, name):
+    with open(name + &#39;.pkl&#39;, &#39;wb&#39;) as f:
+        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+def load_obj(name):
+    with open(name + &#39;.pkl&#39;, &#39;rb&#39;) as f:
+        return pickle.load(f)</code></pre>
+</div>
+<div id="twitter-data" class="section level1">
+<h1>Twitter Data</h1>
+<div id="pulling-data-from-twitters-api" class="section level3">
+<h3>Pulling Data from Twitter’s API</h3>
+<p>First I pulled data using the code below. For this code to work, your API keys will need to be specified in the setup above. To conceil my keys, I ran the commented code below earlier and saved the timeline object. The uncommented code loads my timeline and looks at the first element. The timeline is represented as a list of Status objects like the one output by the code below.</p>
+<pre class="python"><code># # Twitter handel to pull data from
+# handle = &#39;@macstrelioff&#39;
+# 
+# # get timeline
+# timeline=api.GetUserTimeline(screen_name = handle, 
+#                     count=200, # 200 is maximum 
+#                     include_rts=True, 
+#                     trim_user=True, 
+#                     exclude_replies=False)
+# 
+# # save timeline object
+# save_obj(timeline,&#39;timeline_macstrelioff_20190406&#39;)
+
+# load timeline object
+timeline=load_obj(&#39;timeline_macstrelioff_20190406&#39;)
+timeline[0] # most recent tweet status object</code></pre>
+<pre><code>&gt;&gt;&gt; Status(ID=1113860296458756097, ScreenName=None, Created=Thu Apr 04 17:46:03 +0000 2019, Text=&quot;@vboykis df.dropna(how=&#39;brute force&#39;) https://t.co/QOULUc5a0u&quot;)</code></pre>
+</div>
+<div id="working-with-twitter-status-objects" class="section level3">
+<h3>Working with Twitter Status objects</h3>
+<p>I cover three ways to work with Status objects.
+1. display the Status as a tweet!
+2. Convert the Status to a dictionary and access values from keys
+3. Access values directly as attributes of the Status</p>
+</div>
+<div id="embed-a-status" class="section level3">
+<h3>Embed a Status</h3>
+<p>First, many the Status attributes (<code>created_at</code>, <code>favorite_count</code>, <code>text</code>, …) can be cleanly displayed as a tweet embedded in a notebook. Below I create function that takes a username and tweet ID then, using Twitter’s embedding API, displayes the tweet as it would be seen on Twitter. (Note: this will only work properly if the Python kernel is trusted)</p>
+<pre class="python"><code># for displaying tweets based on username and tweet_id
+class disp_tweet(object):
+    def __init__(self, user_name, tweet_id):
+        # see: https://dev.twitter.com/web/embedded-tweets
+        api = &#39;https://publish.twitter.com/oembed?url=https://twitter.com/&#39;+ \
+               user_name + &#39;/status/&#39; + tweet_id
+        response  = requests.get(api)
+        self.text = response.json()[&quot;html&quot;]
+
+    def _repr_html_(self):
+        return self.text</code></pre>
+<pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2b929978&gt;</code></pre>
+<p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+My desk is covered in random papers. It is the support of a stationery distribution.
+</p>
+— mac strelioff (<span class="citation">@macstrelioff</span>) <a href="https://twitter.com/macstrelioff/status/981338927419109376?ref_src=twsrc%5Etfw">April 4, 2018</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div id="convert-a-status-to-a-dict" class="section level3">
+<h3>Convert a Status to a dict</h3>
+<p>Status objects have a bound method, <code>.AsDict()</code>, that will convert them to a Python dictionary. This way the structure of the information is easily seen. In the code below, I convert the first status to a dictionary and output it contents.</p>
+<pre class="python"><code>print(timeline[0].AsDict())</code></pre>
+<pre><code>&gt;&gt;&gt; {&#39;created_at&#39;: &#39;Thu Apr 04 17:46:03 +0000 2019&#39;, &#39;favorite_count&#39;: 20, &#39;hashtags&#39;: [], &#39;id&#39;: 1113860296458756097, &#39;id_str&#39;: &#39;1113860296458756097&#39;, &#39;in_reply_to_screen_name&#39;: &#39;vboykis&#39;, &#39;in_reply_to_status_id&#39;: 1113822568211996672, &#39;in_reply_to_user_id&#39;: 19304217, &#39;lang&#39;: &#39;da&#39;, &#39;media&#39;: [{&#39;display_url&#39;: &#39;pic.twitter.com/QOULUc5a0u&#39;, &#39;expanded_url&#39;: &#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&#39;, &#39;id&#39;: 1113860285566046210, &#39;media_url&#39;: &#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&#39;, &#39;media_url_https&#39;: &#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&#39;, &#39;sizes&#39;: {&#39;thumb&#39;: {&#39;w&#39;: 150, &#39;h&#39;: 150, &#39;resize&#39;: &#39;crop&#39;}, &#39;large&#39;: {&#39;w&#39;: 250, &#39;h&#39;: 198, &#39;resize&#39;: &#39;fit&#39;}, &#39;medium&#39;: {&#39;w&#39;: 250, &#39;h&#39;: 198, &#39;resize&#39;: &#39;fit&#39;}, &#39;small&#39;: {&#39;w&#39;: 250, &#39;h&#39;: 198, &#39;resize&#39;: &#39;fit&#39;}}, &#39;type&#39;: &#39;animated_gif&#39;, &#39;url&#39;: &#39;https://t.co/QOULUc5a0u&#39;, &#39;video_info&#39;: {&#39;aspect_ratio&#39;: [125, 99], &#39;variants&#39;: [{&#39;bitrate&#39;: 0, &#39;content_type&#39;: &#39;video/mp4&#39;, &#39;url&#39;: &#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&#39;}]}}], &#39;retweet_count&#39;: 2, &#39;source&#39;: &#39;&lt;a href=&quot;http://twitter.com/download/android&quot; rel=&quot;nofollow&quot;&gt;Twitter for Android&lt;/a&gt;&#39;, &#39;text&#39;: &quot;@vboykis df.dropna(how=&#39;brute force&#39;) https://t.co/QOULUc5a0u&quot;, &#39;urls&#39;: [], &#39;user&#39;: {&#39;id&#39;: 70255183, &#39;id_str&#39;: &#39;70255183&#39;}, &#39;user_mentions&#39;: [{&#39;id&#39;: 19304217, &#39;id_str&#39;: &#39;19304217&#39;, &#39;name&#39;: &#39;Vicki Boykis&#39;, &#39;screen_name&#39;: &#39;vboykis&#39;}]}</code></pre>
+<pre><code>{&#39;created_at&#39;: &#39;Thu Apr 04 17:46:03 +0000 2019&#39;,
+ &#39;favorite_count&#39;: 20,
+ &#39;hashtags&#39;: [],
+ &#39;id&#39;: 1113860296458756097,
+ &#39;id_str&#39;: &#39;1113860296458756097&#39;,
+ &#39;in_reply_to_screen_name&#39;: &#39;vboykis&#39;,
+ &#39;in_reply_to_status_id&#39;: 1113822568211996672,
+ &#39;in_reply_to_user_id&#39;: 19304217,
+ &#39;lang&#39;: &#39;da&#39;,
+ &#39;media&#39;: [{&#39;display_url&#39;: &#39;pic.twitter.com/QOULUc5a0u&#39;,
+   &#39;expanded_url&#39;: &#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&#39;,
+   &#39;id&#39;: 1113860285566046210,
+   &#39;media_url&#39;: &#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&#39;,
+   &#39;media_url_https&#39;: &#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&#39;,
+   &#39;sizes&#39;: {&#39;thumb&#39;: {&#39;w&#39;: 150, &#39;h&#39;: 150, &#39;resize&#39;: &#39;crop&#39;},
+    &#39;large&#39;: {&#39;w&#39;: 250, &#39;h&#39;: 198, &#39;resize&#39;: &#39;fit&#39;},
+    &#39;medium&#39;: {&#39;w&#39;: 250, &#39;h&#39;: 198, &#39;resize&#39;: &#39;fit&#39;},
+    &#39;small&#39;: {&#39;w&#39;: 250, &#39;h&#39;: 198, &#39;resize&#39;: &#39;fit&#39;}},
+   &#39;type&#39;: &#39;animated_gif&#39;,
+   &#39;url&#39;: &#39;https://t.co/QOULUc5a0u&#39;,
+   &#39;video_info&#39;: {&#39;aspect_ratio&#39;: [125, 99],
+    &#39;variants&#39;: [{&#39;bitrate&#39;: 0,
+      &#39;content_type&#39;: &#39;video/mp4&#39;,
+      &#39;url&#39;: &#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&#39;}]}}],
+ &#39;retweet_count&#39;: 2,
+ &#39;source&#39;: &#39;&lt;a href=&quot;http://twitter.com/download/android&quot; rel=&quot;nofollow&quot;&gt;Twitter for Android&lt;/a&gt;&#39;,
+ &#39;text&#39;: &quot;@vboykis df.dropna(how=&#39;brute force&#39;) https://t.co/QOULUc5a0u&quot;,
+ &#39;urls&#39;: [],
+ &#39;user&#39;: {&#39;id&#39;: 70255183, &#39;id_str&#39;: &#39;70255183&#39;},
+ &#39;user_mentions&#39;: [{&#39;id&#39;: 19304217,
+   &#39;id_str&#39;: &#39;19304217&#39;,
+   &#39;name&#39;: &#39;Vicki Boykis&#39;,
+   &#39;screen_name&#39;: &#39;vboykis&#39;}]}</code></pre>
+</div>
+<div id="access-status-attributes-how-i-accessed-the-data-used-below" class="section level3">
+<h3>Access Status Attributes (How I accessed the data used below)</h3>
+<p>Since I’m interested in modeling expected number of tweets in a week, the most relevant attribute is the timestamps in the <code>created_at</code> attribute. These attributes can be accessed directly from the Status object. Below I make a list of the times at which each tweet was created and check the first element of that list;</p>
+<pre class="python"><code># get list of time stamps
+times = [pd.Timestamp(tweet.created_at) for tweet in timeline]
+times.reverse() # sort s.t. times[0] is lowest, times[-1] is highest
+times[0]</code></pre>
+<pre><code>&gt;&gt;&gt; Timestamp(&#39;2018-11-01 05:56:58+0000&#39;, tz=&#39;tzutc()&#39;)</code></pre>
+<p>This creates a list of timestamps. By default, times from the twitter API are localized to the UTC timezone. Below I convert these to my local time in California;</p>
+<pre class="python"><code>times = [time.tz_convert(&quot;America/Los_Angeles&quot;) for time in times]
+times[0]</code></pre>
+<pre><code>&gt;&gt;&gt; Timestamp(&#39;2018-10-31 22:56:58-0700&#39;, tz=&#39;America/Los_Angeles&#39;)</code></pre>
+<p>Now we have a list of timestamps in local time! To get a sense of the duration over which this data spans, below I compute the time difference between the frist and last timestamp;</p>
+<pre class="python"><code>times[-1]-times[0]</code></pre>
+<pre><code>&gt;&gt;&gt; Timedelta(&#39;154 days 11:49:05&#39;)</code></pre>
+<p>Woah, almost 155 days of my twitter activity!</p>
+</div>
+</div>
+<div id="poisson-process" class="section level1">
+<h1>Poisson Process</h1>
+<p>A Poisson process is a common framework for modeling events that occurr in time or space. In this context, tweets are being created over time and we are interested in modeling the rate at which tweets are created in order to predict how many tweets will be created in a week.</p>
+<div id="assumptions" class="section level3">
+<h3>Assumptions</h3>
+<ol style="list-style-type: decimal">
+<li>No more than one event can occur at a single point in time.
+<ul>
+<li>This can be violated when a user publishes a thread of multiple tweets at once. This can be fixed by recoding threads as a single status.</li>
+</ul></li>
+<li>Independence: The interval lengths for each event are not influenced by any other event.
+<ul>
+<li>This can be violated if, instead of using Twitter’s thread option, a user ends a tweet with “…” to indicate that they will soon create another tweet. In this case, there are some tweets that imply a shorter interval before the next tweet.</li>
+</ul></li>
+<li>Homogeneity: The distribution of intervals is the same throughout the entire process.
+<ul>
+<li>I probe this assumption in depth below, and it almost certainly violated.</li>
+<li>There are methods for modeling inhomogeneous Poisson processes, but I ignore those here.</li>
+</ul></li>
+</ol>
+</div>
+<div id="specification-and-properties" class="section level3">
+<h3>Specification and Properties</h3>
+<p>In this context tweet events are occurring across time. I index tweets with <span class="math inline">\(i\in\{1,...,N\}\)</span>, where <span class="math inline">\(N\)</span> is the total number of tweets observed. Each tweet is created at a time, <span class="math inline">\(t_i\)</span>, and the next tweet is observed after an interval <span class="math inline">\(s_{i}\)</span>. That is, if tweet <span class="math inline">\(i\)</span> is created at time <span class="math inline">\(t_{i-1}\)</span> then tweet <span class="math inline">\(i+1\)</span> is created at time <span class="math inline">\(t_{i}=t_{i-1}+s_{i}\)</span>. The interval between each tweet is <span class="math inline">\(s_i = t_{i}-t_{i-1} = (t_{i-1}+s_i)-t_{i-1}\)</span>. The assumptions of a Poisson process permit the following distributions for three interesting features of this scenario.</p>
+<ol style="list-style-type: decimal">
+<li>The distribution of time between events, <span class="math inline">\(s_i\)</span>, is exponential; <span class="math inline">\(s_i\sim Expo(\lambda) \Rightarrow p(s_i|\lambda) = \lambda e^{-\lambda s_i}\)</span>
+<ul>
+<li>Here <span class="math inline">\(\lambda\)</span> is a parameter that describes the tweet rate.</li>
+</ul></li>
+<li>Given an interval of length <span class="math inline">\(s\)</span>, the distribution of the count of events in that interval, <span class="math inline">\(c|s\)</span>, is Poisson; <span class="math inline">\(c|s\sim Poisson(\lambda s) \Rightarrow p(c|s,\lambda) = \frac{(\lambda s)^{c}e^{-\lambda s}}{c!}\)</span>
+<ul>
+<li>The count of events, <span class="math inline">\(c\)</span>, in a fixed interval depends both on the rate of the events, <span class="math inline">\(\lambda\)</span>, and the duration of the interval, <span class="math inline">\(s\)</span>.</li>
+</ul></li>
+<li>The distribution of the total interval required for <span class="math inline">\(c\)</span> events, <span class="math inline">\(s|c\)</span>, is gamma; <span class="math inline">\(s|c \sim Gamma(c,\lambda) \Rightarrow p(s|c,\lambda) = \frac{\lambda^c}{\Gamma(c)}(s)^{c-1}e^{-\lambda s}\)</span>
+<ul>
+<li>The interval, <span class="math inline">\(s\)</span>, required for a fixed number of events depends on both the rate of the events, <span class="math inline">\(\lambda\)</span>, and the number of events, <span class="math inline">\(c\)</span>.</li>
+</ul></li>
+</ol>
+<p>More information on these three kinds of distributions, and ways to implement them in Python, can be found in the <a href="https://docs.scipy.org/doc/scipy/reference/stats.html">scipy documentation on statistical functions</a>. General information on each of these distributions can be found on the Wikipedia page for the <a href="https://en.wikipedia.org/wiki/Exponential_distribution">exponential</a>, <a href="https://en.wikipedia.org/wiki/Poisson_distribution">Poisson</a>, or <a href="https://en.wikipedia.org/wiki/Gamma_distribution">gamma</a> distribution. A key difference between the standard uses of these distributions and their roles in a Poisson process is that the rate parameter <span class="math inline">\(\lambda\)</span> is also scaled by the duration of an interval <span class="math inline">\(s\)</span> when constructing a distribution for the count of events in interval <span class="math inline">\(s\)</span> (2, above) or the duration of the interval required for <span class="math inline">\(c\)</span> events (3, above).</p>
+</div>
+<div id="checking-the-homogeneity-assumption" class="section level2">
+<h2>Checking the Homogeneity Assumption</h2>
+<p>The homogeneity assumption strictly requires that tweet rates are constant across time. This would generate data that are uniform across meaningful intervals such as time in a week or time in a day. To check homogeneity, below I convert the timestamps into the hour within a week, minute within a day, and minute within an hour, and plot tweet counts across these representations of time.</p>
+<pre class="python"><code># convert to hours in a week
+hour_of_week     = [t.weekday()*24+t.hour+t.minute/60 for t in times]
+minute_of_day    = [t.hour*60+t.minute+t.second/60 for t in times]
+minute_of_hour   = [t.minute+t.second/60 for t in times]
+plt.figure(figsize=(10,4));
+plt.hist(hour_of_week,bins=80);</code></pre>
+<pre class="python"><code>plt.title(&quot;My Tweet Counts By Hour Of Week&quot;);
+plt.ylabel(&quot;Count&quot;);
+plt.xlabel(&quot;Hour In Week&quot;);</code></pre>
+<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-11-1.png" width="960" /></p>
+<p>The histogram above indicates that there might be some hours of the week that have a higher rate than others. For example, I don’t seem to tweet much early on Sunday (hours 0-5), but I do seem to tweet a lot during the day on Sunday (around hours 6-20). Below I use rug plots, which represent a tweet event with a vertical line near the x-axis, and an imposed kernel density estimate, which is a continuous version of a histogram. I remake this plot in terms of hours within a week, minutes within a day, and minutes within an hour. If the tweet rate (<span class="math inline">\(\lambda\)</span>) were homogeneous, then the kernel density estimate would be approximately flat.</p>
+<pre class="python"><code>def rug_plot_and_density(dat,bw,xlab,xlim):
+    # rug plot + density
+    plt.figure(figsize=(10,4))
+    sns.distplot(dat, hist = False, kde = True, rug = True,
+                 color = &#39;darkblue&#39;, 
+                 kde_kws={&#39;linewidth&#39;: 3,&quot;bw&quot;:bw},
+                 rug_kws={&#39;color&#39;: &#39;black&#39;})
+    # formatting
+    plt.title(&#39;Tweet Density By &#39;+xlab)
+    plt.xlabel(xlab)
+    plt.ylabel(&#39;Kernel Density&#39;)
+    plt.xlim(xlim);
+    plt.show()</code></pre>
+<pre class="python"><code># data and plot formatting arguments
+dats = (hour_of_week,minute_of_day,minute_of_hour)
+xlabs=(&#39;Hour of Week&#39;,&#39;Minute of Day&#39;,&#39;Minute of Hour&#39;)
+xlims=([0,24*7],[0,24*60],[0,60]);
+bws  = (4,40,4)
+
+# make plots
+for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
+    rug_plot_and_density(dat=dat,bw=bw,xlab=xlab,xlim=xlim)</code></pre>
+<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-1.png" width="960" /><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-2.png" width="960" /><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-3.png" width="960" /></p>
+<p>Are very sensitive to the choice of the bandwidth parameter that determines the window over which to aggregate events (similar to bin size when using a histogram). I’m using these plots to demonstrate possible violations of homogeneity that I would follow up on in a real analysis, but will not follow up on here.</p>
+<p>From the top plot, there seems to be two patterns. First, a series of peaks and troughs that roughly correspond to daytime and night-time hours. I probably tweet with a higher frequency when I am awake, rather than asleep – meaning that <span class="math inline">\(\lambda\)</span> may depend on time within a day. Second, a generally lower kernel density estimate during the middle than the edges. I may tweet more during the weekends (edge hours) than week days (middle hours).</p>
+<p>From the middle plot that displays tweet frequencies by minutes within a day, there again seem to be two trends. First, I rarely tweet before minute 400 (around 6:40AM). Second, I have peaks around minute 600 (10:00AM), 1000 (4:40PM), and 1350 (10:00PM). This might be related to the times that I take a break from working. I generally take a break around 5:00PM, and usually take another break before bed around 9:00-10:00PM.</p>
+<p>The bottom plot displays tweet frequencies by minutes within an hour. This seems more flat overall longer periods of time, but I may strangely tend to tweet more during the first half of hours.</p>
+<p>Overall, there are many reasons that the homogeneity assumption may be violated. For cases like this, the tweet rate <span class="math inline">\(\lambda\)</span> can be modeled as a function of time. However, to keep this example simple, I’ll ignore possible violations and proceede as if <span class="math inline">\(\lambda\)</span> were a constant with respect to time.</p>
+</div>
+<div id="checking-the-exponential-distribution-of-intervals" class="section level2">
+<h2>Checking the exponential distribution of intervals</h2>
+<p>Let’s the distribution of the time between tweets, <span class="math inline">\(s_i\)</span>. If the assumptions of the Poisson process were satisfied, then the intervals between tweets would follow an exponential distribution. Below I compute the number of seconds between tweets and display each value as a black dash on the x-axis. I overlay a histogram, a kernel density, and a exponential density based on the observed mean interval.</p>
+<pre class="python"><code># compute intervals between tweets
+ss = [times[i]-times[i-1] for i in range(1,len(times))];
+# convert from Timedelta to total time in seconds
+ss = [si.total_seconds() for si in ss]
+
+# histogram and density plot
+plt.figure(figsize=(10,4))
+sns.distplot(ss, hist = True, kde = True, rug = True,
+             color = &#39;darkblue&#39;, bins=100,
+             hist_kws={&#39;color&#39;:[0,.7,.5,.5],&#39;label&#39;:&#39;Histogram&#39;},
+             kde_kws={&#39;linewidth&#39;: 3,&quot;bw&quot;:60*60,&#39;label&#39;:&#39;Kernel Density&#39;},
+             rug_kws={&#39;color&#39;: &#39;black&#39;})
+plt.xlim([0,680000]);</code></pre>
+<pre class="python"><code>plt.title(&#39;Distribution of intervals between tweets&#39;)
+plt.xlabel(&#39;Seconds&#39;)
+plt.ylabel(&#39;Frequency&#39;)
+
+# overlay an exponential density
+tmp_rate=np.mean(ss)
+tmpx = np.linspace(0,680000,680000*5)
+tmpy = expon.pdf(tmpx,scale=tmp_rate)
+plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label=&#39;Exponential Density&#39;);
+# add legend
+plt.legend();</code></pre>
+<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-1.png" width="960" /></p>
+<p>Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.</p>
+<pre class="python"><code># check standard deviation
+np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)</code></pre>
+<pre><code>&gt;&gt;&gt; (90150.9122414953, 67076.1055276382, 1.3440093388300445)</code></pre>
+<p>The observed standard deviation is about 1.34 times larger (variance is about 1.80 times larger) than it would be if the data were exponentially distributed with the observed mean. While this could be accounted for with an overdispersion parameter, I will ignore this issue here for the sake of having a simple and fast online model.</p>
+</div>
+</div>
+<div id="model-of-tweet-fequency-using-conjugacy" class="section level1">
+<h1>Model of Tweet Fequency Using Conjugacy</h1>
+<p>First, I’ll assume (despite the overdispersion) that the intervals between tweets follow an exponential distribution;</p>
+<p><span class="math display">\[
+\begin{aligned}
+s_i|\lambda &amp;\sim Expo(\lambda) \\
+\Rightarrow p(s_i|\lambda) &amp;= \lambda e^{-s_i \lambda}
+\end{aligned}
+\]</span></p>
+<p>To account for uncertainty in <span class="math inline">\(\lambda\)</span>, I’ll use a Gamma distribution with shape <span class="math inline">\(\alpha\)</span> and rate <span class="math inline">\(\beta\)</span>;</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda &amp;\sim Gamma(\alpha,\beta) \\ 
+\Rightarrow p(\lambda|\alpha,\beta) &amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha-1}e^{-\lambda \beta}
+\end{aligned}
+\]</span></p>
+<p>The choice of a Gamma distribution allows for fast updates using conjugacy between the prior beliefs about <span class="math inline">\(\lambda\)</span> based on data observed up to time <span class="math inline">\(t\)</span> and the exponential likelihood for the interval observed at time <span class="math inline">\(t\)</span>;</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda | s_t &amp;\sim Gamma(\alpha_t,\beta_t) \\ 
+p(s_{t+1}|\lambda) &amp;= \lambda e^{-s_{t+1} \lambda} \\
+p(\lambda|\alpha_t,\beta_t,s_{t+1}) &amp;\propto p(s_{t+1}|\lambda) p(\lambda|\alpha_t,\beta_t) \\
+&amp;= \lambda e^{-s_{t+1} \lambda} \frac{\beta_t^{\alpha_t}}{\Gamma(\alpha_t)} \lambda^{\alpha_t-1}e^{-\lambda \beta_t} \\
+&amp;= \lambda^{\alpha_t} e^{-\lambda(s_{t+1}+\beta_t)} \\ 
+\Rightarrow \lambda | s_{t+1} &amp;\sim Gamma(\alpha_t+1,\beta_t+s_{t+1})
+\end{aligned}
+\]</span></p>
+<p>This implies the following update rules for computing the parameters of the posterior over <span class="math inline">\(\lambda\)</span>;</p>
+<p><span class="math display">\[
+\begin{aligned}
+\alpha_{t+1} &amp;\leftarrow \alpha_t +1 \\
+\beta_{t+1}  &amp;\leftarrow \beta_t + s_{t+1} \\
+\end{aligned}
+\]</span></p>
+<p>To answer the question of how many tweets might be observed in a period of time, I’ll assume that the count of tweets <span class="math inline">\(c\)</span> is Poisson distributed with rate <span class="math inline">\(\lambda\)</span>. Then the number of tweets expected in an interval of length <span class="math inline">\(s\)</span> would be;</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta &amp;= s\lambda \\ 
+c|\theta &amp;\sim Poisson(\theta) \\
+\Rightarrow p(c|\theta) &amp;= \frac{\theta^c e^{-\theta}}{c!}
+\end{aligned}
+\]</span></p>
+<p>This means that, rather than <span class="math inline">\(\lambda\)</span>, we are actually interested in the distribution of <span class="math inline">\(\theta=s\lambda\)</span>. I derive this below using a change of vairables;</p>
+<p><span class="math display">\[
+\begin{aligned}
+\theta = s\lambda &amp;\Rightarrow \lambda = \frac{\theta}{s} = \theta s^{-1} \\
+p_\theta(\theta | \lambda,s) &amp;= p_\lambda\left(\theta s^{-1} | s,\alpha,\beta\right) \left| \frac{d \lambda}{d \theta}\right|\\
+&amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \left(\frac{\theta}{s}\right)^{\alpha-1}e^{-\frac{\theta}{s}\beta} \left|s^{-1}\right| \\
+&amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}s^{-({\alpha-1})-1}e^{-\frac{\theta}{s}\beta} \\
+\Rightarrow p(\theta|s,\alpha,\beta)&amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}}\\
+\end{aligned} 
+\]</span></p>
+<p>Now we can find the distribution of <span class="math inline">\(c\)</span> that accounts for uncertainty in <span class="math inline">\(\theta\)</span> through the prior on <span class="math inline">\(\lambda\)</span>;</p>
+<p><span class="math display">\[
+\begin{aligned}
+p(c|s,\alpha,\beta) &amp;= \int_\theta p(c|\theta)p(\theta|s,\alpha,\beta)d\theta \\
+&amp;=\int_\theta \frac{\theta^c e^{-\theta}}{c!} \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
+&amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\int_\theta \theta^c e^{-\theta} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
+&amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\int_\theta \theta^{c+\alpha-1} e^{-\theta\left(\frac{\beta+s}{s}\right)} d\theta \\
+&amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\frac{\Gamma(c+\alpha)}{\left(\frac{\beta+s}{s}\right)^{c+\alpha}} \\
+&amp;=\frac{\Gamma(c+\alpha)}{c!\Gamma(\alpha)} \beta^\alpha s^{-\alpha} s^{c+\alpha}
+(\beta+s)^{-(c+\alpha)} \\
+&amp;=\frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)}  \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\ 
+\end{aligned} 
+\]</span></p>
+<p>Since a Poisson Process assumes that no more than one event can occur in an interval, intervals can be treated as discrete Bernoulli trials in which an event either occurs or does not occur. In this discrete settng, the distribution of the count of intervals with an event <span class="math inline">\(k\)</span> for a given number of intervals without the event <span class="math inline">\(r\)</span> and a probability of the event in each interval <span class="math inline">\(p\)</span> will follow a negative binomial distribution;</p>
+<p><span class="math display">\[
+\begin{aligned}
+k &amp;\sim NegBino(r,p) \\ 
+\Rightarrow p(k|r,p) &amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
+&amp;= \frac{\Gamma(k+r)}{\Gamma(r+1) \Gamma(k)}p^{k}(1-p)^{r} \\
+\end{aligned} 
+\]</span></p>
+<p>Combining the two results above, we see that the count <span class="math inline">\(c\)</span> in an interval <span class="math inline">\(s\)</span> will follow a negative binomial distribution such that <span class="math inline">\(\alpha\)</span> fixes the number of intervals in which no event occurs, and <span class="math inline">\(\frac{s}{\beta+s}\)</span> captures the probability of an event in any unit length interval;</p>
+<p><span class="math display">\[
+\begin{aligned}
+c &amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\ 
+\Rightarrow p(c|s,\alpha,\beta) &amp;= \frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)} \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\
+\end{aligned} 
+\]</span></p>
+<p>In summary, the key components of this model are the exponential likelihood and gamma priors which allow for the fast and simple updating rules to compute the posterior over <span class="math inline">\(\lambda\)</span>, and the negative binomial predictive distribution which accounts for the uncertainty in <span class="math inline">\(\lambda\)</span>. So the applicable information from above is;</p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda &amp;\sim Gamma(\alpha_t,\beta_t) \\
+s_{t+1} &amp;\sim Expo(\lambda) \\
+\alpha_{t+1} &amp;\leftarrow \alpha_t + 1      \\ 
+\beta_{t+1}  &amp;\leftarrow \beta_t + s_{t+1} \\ 
+c|s,\alpha,\beta &amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\
+\end{aligned} 
+\]</span></p>
+<p>Here I investigate posterior predictive intervals for tweets over a period of time <span class="math inline">\(s\)</span> while using different components of this model. In the code below, I compute all values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> based on the update rules derived above from conjugacy.</p>
+<!---
+This formulation can be thought of as discretizing the Poisson Process into $c+\alpha$ trials defined as intervals of length $\frac{1}{\beta+s}$, where $\beta$ is the sum of the interval lengths for which no event occured, and $s$ is the sum of interval lengths for those intervals that included an event. 
+--->
+<!---
+$\lambda$ has units! 
+
+Gamma prior on the rate;
+$$ \lambda \sim Gamma(\alpha,\beta)$$
+$$p(\lambda)=\frac{\beta^\alpha}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\beta \lambda}$$
+
+Observe an exponential interval;
+$$p(s|\lambda) = \lambda e^{-\lambda s}$$
+
+Then the posterior becomes; 
+
+$$p(\lambda|s)\propto p(s|\lambda)p(\lambda) 
+= \lambda^{\alpha-1}e^{-\beta \lambda} \lambda e^{-\lambda s} 
+= \lambda^{(\alpha+1)-1}e^{-\lambda (\beta+s)}$$
+$$\Rightarrow \lambda|s \sim Gamma(\alpha+1,\beta+s)$$
+
+To incorporate more prior information, the prior $\alpha$ would reflect the number of observations, and $\beta$ can reflect the sum of intervals associated with each observation.
+
+Given an estimate of $\lambda$, a poisson can be used to estimate the number of events in an interval (a week). 
+
+A Poisson and a gamma make a negative binomial, which is used for predictive densities that account for uncertainty in the rate.
+--->
+<pre class="python"><code># initialize alpha,beta as 0
+alpha,beta = 0,0
+alphas,betas = list(),list()
+# for each observed interval in ss,
+for si in ss:
+    si = si/(60*60*24) # si s/1 * 1/60 m/s * 1/60 h/m * 1/24 d/h convert to days
+    alpha+=1 # increment alpha by 1
+    beta+=si # increment beta by the interval length
+    # save parameters for analysis
+    alphas.append(alpha)
+    betas.append(beta)</code></pre>
+<p>The code above converts intervals from seconds to days and comptutes <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> for all intervals in my dataset. This gives the parameters for posterior beliefs over <span class="math inline">\(\lambda\)</span> as each tweet is observed. Below I check the final parameters and some statistics from the last posterior.</p>
+<pre class="python"><code>a,b,mode,median,mean=(alpha,beta,(alpha-1)/beta,gamma.ppf(.5,a=alpha,scale=1/beta),alpha/beta)
+print(  &#39;alpha : &#39;+str(a)+
+      &#39;\nbeta  : &#39;+str(b)+
+      &#39;\nmode  : &#39;+str(mode)+
+      &#39;\nmedian: &#39;+str(median)+
+      &#39;\nmean  : &#39;+str(mean))</code></pre>
+<pre><code>&gt;&gt;&gt; alpha : 199
+&gt;&gt;&gt; beta  : 154.49241898148153
+&gt;&gt;&gt; mode  : 1.2816162845099446
+&gt;&gt;&gt; median: 1.2859321345366828
+&gt;&gt;&gt; mean  : 1.2880890940276715</code></pre>
+<p>The value of <span class="math inline">\(\alpha\)</span> correctly indicates 199 observed intervals, and the <span class="math inline">\(\beta\)</span> of 154.59 also correctly reflects the time difference in days that was computed in the first section. Lastly the ordinal relationship of the mode, median, and mean is consistent with that of a gamma distribution.</p>
+<div id="inference-on-tweet-rate-lambda-over-time" class="section level3">
+<h3>Inference On Tweet Rate <span class="math inline">\(\lambda\)</span> Over Time</h3>
+<p>In the code below, I compute the maximum a posteriori (MAP) estimate, or posterior mode, across time. I plot this across time with the 97.5<span class="math inline">\(^{th}\)</span> and 2.5<span class="math inline">\(^{th}\)</span> percentiles as a shaded region representing the 95% credible interval.</p>
+<pre class="python"><code># get MAP lambda
+lambda_map   = [(alpha-1)/beta for alpha,beta in zip(alphas,betas)]
+# get CI upper and lower bounds
+lambda_upper = [gamma.ppf(.975,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
+lambda_lower = [gamma.ppf(.025,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
+# plot over time
+plt.figure(figsize=(10,4))
+sns.distplot(times[1:], hist = False, kde = False, rug = True,
+             color = &#39;darkblue&#39;, 
+             rug_kws={&#39;color&#39;: &#39;black&#39;});
+plt.plot(times[1:],lambda_map,color=[0,0,1],label=&#39;MAP&#39;);
+plt.fill_between(times[1:], lambda_lower, lambda_upper,color=[0,0,1,.1],label=&#39;95% CI&#39;)
+plt.ylabel(&#39;Posterior on Lambda (tweets/day)&#39;)
+plt.xlabel(&#39;Time&#39;)
+plt.title(&#39;Summary of the posterior over $\lambda$ across time&#39;)
+plt.legend();</code></pre>
+<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-18-1.png" width="960" /></p>
+<p>The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> might be warrented.</p>
+</div>
+<div id="predicting-number-of-tweets-in-interval-s" class="section level2">
+<h2>Predicting Number Of Tweets In Interval <span class="math inline">\(s\)</span></h2>
+<p>Now I’ll visually compare predictions for the count of tweets in a week based on estimates of <span class="math inline">\(\lambda\)</span> after the first 20 tweets and using all 200 tweets, using two models;
+1. A Poisson using <span class="math inline">\(\theta=s\lambda_{MAP}\)</span>
+2. The negative binomial derived in the model section above</p>
+<p>First, an issue with the parameterization of the negative binomial has to be addressed. In my derivation, I ended with a negative binomial parameterized as;</p>
+<p><span class="math display">\[
+\begin{aligned}
+k&amp;:\text{Number of successes} \\
+r&amp;:\text{Number of failures} \\
+p&amp;:\text{Probability of failure} \\
+p(k|r,p) &amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
+\end{aligned} 
+\]</span></p>
+<p>The <code>Scipy.stats.nbinom</code> function defines a negative binomial with;</p>
+<p><span class="math display">\[
+\begin{aligned}
+k&amp;:\text{Number of failures} \\
+n&amp;:\text{Number of successes} \\
+p&amp;:\text{Probability of success} \\
+p(k|n,p) &amp;= \frac{(k+n-1)!}{(n-1)!k!} p^{n}(1-p)^{k}
+\end{aligned}
+\]</span></p>
+<p>Recall in my derivation that the parameter corresponding to probability of failure was <span class="math inline">\(p=\frac{s}{\beta+s}\)</span>. The differences in parameterization can be accounted for by supplying the <code>nbinom</code> function with <span class="math inline">\(p=1-\frac{s}{\beta+s}=\frac{\beta}{\beta+s}\)</span>.</p>
+<p>The code below plots predictive densities based on the two approaches above from estimates of <span class="math inline">\(\lambda\)</span> based only on the first 20 observations.</p>
+<pre class="python"><code># for the first 20 tweets
+# parameters
+cs = range(20)
+s = 7
+index = 19
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&#39;Poisson&#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&#39;Negative Binomial&#39;);
+# labels
+plt.ylabel(&#39;Mass&#39;)
+plt.xlabel(&#39;Count&#39;)
+plt.title(&#39;Predictions for Tweet Counts in a Week, Using 20 Observations&#39;)
+plt.legend();</code></pre>
+<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
+<p>With a small amount of data, the uncertainty in the estimate of tweet rates carries through the negative binomial model, which gives more mass to a wider range of counts relative to the Poisson model that discards uncertainty when by <span class="math inline">\(\lambda_{MAP}\)</span>.</p>
+<pre class="python"><code># Using all data
+# parameters
+index = 198
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&#39;Poisson&#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&#39;Negative Binomial&#39;);
+# labels
+plt.ylabel(&#39;Mass&#39;)
+plt.xlabel(&#39;Count&#39;)
+plt.title(&#39;Predictions for Tweet Counts in a Week, Using All Data&#39;)
+plt.legend();</code></pre>
+<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-20-1.png" width="960" /></p>
+<p>With a larger amount of data and predicting the tweet count over a short interval (7 days), the predictive distribution from the negative binomial and Poisson models are nearly indistinguishable. Below I compare the predictions of these model for an interval of 1 year (365 days), again using all data.</p>
+<pre class="python"><code># Using all data
+# parameters
+cs=range(350,600)
+s = 365
+index = 198
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&#39;Poisson&#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&#39;Negative Binomial&#39;);
+# labels
+plt.ylabel(&#39;Mass&#39;)
+plt.xlabel(&#39;Count&#39;)
+plt.title(&#39;Predictions for Tweet Counts in a Year, Using All Data&#39;)
+plt.legend();</code></pre>
+<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png" width="960" /></p>
+<p>When considering a longer period of time, The uncertainty in <span class="math inline">\(\lambda\)</span> again carries through the negative binomial model, but is discarded in the Poisson model that uses <span class="math inline">\(\lambda_{MAP}\)</span>.</p>
+</div>
+</div>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>This was a beefy notebook!</p>
+<p>First I showed how to pull tweets as Status objects from Twitter’s API. Given Status objects, I then showed how to embed them in a notebook, view them as a dictionary, and otherwise access their attributes to construct a list of tweet timestamps. I then described Poisson Processes as they may apply to modeling user tweet rates and tweet counts over periods of time. I used kernel densities to check assumptions of a Poisson Process and found possible violations of homogeneity, and of the result that intervals between tweets should follow an exponential distribution.</p>
+<p>Punting these violations, I developed a model of tweet frequency using conjugacy between Gamma priors and Exponential likelihoods. To predict tweet counts over a period of time, I derived a negative binomial predictive distribution that accounted for uncertainty in a user’s tweet rate. I compared this distribution to a Poisson distribution that ignored uncertainty by taking only the maximum a posteriori estimate of a user’s tweet rate.</p>
+<p>Overall the model that discards posterior uncertainty attributes less mass to fringe counts, especially when there is little data or when the interval over which counts are being predicted is long. Incorporating posterior uncertainty broadens the predictive distribution to reflect uncertainty in the underlying tweet rate. That uncertainty exists regardless of the modeling approach – excluding it from predictive distributions only leads to narrow, overconfident predictions. This general principle of propagating uncertainty through a statistical process is one strong advantage of the Bayeian modeling approach that I developed and applied here.</p>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+        </div>
+
+        <div class="body-footer">
+          Last updated on May 9, 2019
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/MacStrelioff/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/MacStrelioff/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/MacStrelioff/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/MacStrelioff/js/academic.min.d813ae958640746e240f434cafc95afb.js"></script>
+
+  </body>
+</html>
+
+

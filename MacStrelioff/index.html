@@ -220,28 +220,9 @@
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/MacStrelioff/publication" data-target="publication">
-            
-            <span>pub</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
           <a class="nav-link" href="/MacStrelioff/data-science/" data-target="/MacStrelioff/data-science/">
             
-            <span>Learn Data Science</span>
+            <span>Data Science</span>
             
           </a>
         </li>
@@ -359,19 +340,22 @@
   
 
   
-
+    
+    
   
 
-  
-  
-
-  
-  
   
 
   
   
-  <section id="about" class="home-section wg-about   " >
+
+  
+  
+  
+
+  
+  
+  <section id="about" class="home-section wg-about   " style="padding: 20px 0 10px 0;">
     <div class="container">
       
 
@@ -580,150 +564,66 @@
   
 
   
-
+    
+    
   
 
-  
-  
-
-  
-  
   
 
   
   
-  <section id="projects" class="home-section wg-portfolio   " >
+
+  
+  
+  
+
+  
+  
+  <section id="ProjectOverviews" class="home-section wg-blank   " style="padding: 10px 0 20px 0;">
     <div class="container">
       
 
 
-
-
-
-
-
-
-
-
 <div class="row">
-  <div class="col-xs-12 col-md-4 section-heading">
-
-    <h1>Projects</h1>
-    
-
-  </div>
-  <div class="col-xs-12 col-md-8">
-
-
-
-    
-
-    
-
-      
-
+  
+    <div class="col-lg-12">
+      <h1>Overview of Current Projects</h1>
       
       
-      
-      
-        
-      
 
-      <span class="d-none default-project-filter">*</span>
+<h2 id="developing-reinforcement-learning-models">Developing Reinforcement Learning Models</h2>
 
-      
-      
-      <div class="project-toolbar">
-        <div class="project-filters">
-          <div class="btn-toolbar">
-            <div class="btn-group flex-wrap">
-              
-                
-                
-                
-                  
-                
-                <a href="#" data-filter="*" class="btn btn-primary btn-lg active">All</a>
-              
-                
-                
-                
-                <a href="#" data-filter=".js-id-Deep-Learning" class="btn btn-primary btn-lg">Deep Learning</a>
-              
-                
-                
-                
-                <a href="#" data-filter=".js-id-Demo" class="btn btn-primary btn-lg">Other</a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    
+<p><img src="gallery/gallery/reinforcement-learning.png"></p>
 
-    <div class="isotope projects-container js-layout-masonry ">
-      
-        
-        
-        
-          
-          
-        
-        
-          
+<p>Most reinforcement learning research deals with problems that can be formulated as a <a href="https://en.wikipedia.org/wiki/Markov_decision_process" target="_blank">Markov Decision Process (MDP)</a>. An MDP is defined by a state space $\mathcal{S}$, an action space $\mathcal{A}$, a transition function that describes the dynamics between states conditional on actions $p(s_{t+1}|a_{t},s_{t})$, and a (potentially probabilistic) reward function that assigns real values to combinations of actions and state transitions $p(r_t|a_t,s_t,s_{t+1})$.</p>
 
+<p>My research involves developing reinforcement learning algorithms in MDP settings that are complicated by continuous state and action spaces, and more than one possible reward function.</p>
 
+<p>I have taken two approaches:</p>
 
+<ol>
+<li>A model-free actor critic algorithm partially described <a href="https://osf.io/w2j7n/" target="_blank">in this talk</a>.</li>
+<li>A model-based learner that uses Bayesian function approximation and structure inference methods similar to those described <a href="https://osf.io/3vwh4/" target="_blank">in this short presentation</a>.</li>
+</ol>
 
+<h2 id="inferring-cognitive-strategies-on-behavioral-bandit-tasks">Inferring Cognitive Strategies On Behavioral Bandit Tasks</h2>
 
+<p><img src="StrategyInference.png"></p>
 
+<p>Bandit tasks are commonly used in behavioral research to understand decision making strategies. In the task used here, children repeatedly chose one of two bandits (gambling machines) on each of 50 trials. The machines stochastically paid out a number of stickers. Colored circles indicate the number of stickers, and the location of the circle (top or bottom of plot) indicates which machine was chosen. In this analysis, I specified four different decision algorithms that the kids might have been using to make a decision on each trial. I estimated model parameters with a Gibbs Sampler implemented through JAGS and then computed posterior model probabilities across trials (colored lines). Posterior model probabilities for each decision algorithm represent the probability that a child is following that algorithm across time.</p>
 
+<p>Details on the specific task, models, and analysis can be found in <a href="https://osf.io/c4bku/" target="_blank">this poster</a>.</p>
 
-<div class="project-card project-item isotope-item js-id-Demo">
-  <div class="card">
-    
-    <div class="card-text">
-      <h4><a href="http://example.org" target="_blank" rel="noopener">External Project</a></h4>
-      <div class="card-desription">
-        <p>An example of linking directly to an external project website using <code>external_link</code>.</p>
-      </div>
+<h2 id="discovering-bias-in-prediction-markets">Discovering Bias In Prediction Markets</h2>
+
+<p><img src="prediction-market.png"></p>
+
+<p>Prediction markets are a mechanism for aggregating and incentivising individual estimates of the probability of some event. Here we were interested in whether fallacies in probabilistic reasoning that are observed in many individual-level lab studies could be observed in prediction market prices. We found evidence of conjunction and disjunction fallacies, as well as the commonly observed S-shaped subjective probability function.</p>
+
+<p>This project is well summarized in <a href="https://osf.io/vzgsq/" target="_blank">this poster</a> which was an extention of previous work presented in <a href="https://osf.io/eu4fp/" target="_blank">this poster</a>.</p>
+
     </div>
-  </div>
-</div>
-
-        
-      
-        
-        
-        
-        
-          
-
-
-
-
-
-
-
-
-<div class="project-card project-item isotope-item js-id-Deep-Learning">
-  <div class="card">
-    
-    <div class="card-text">
-      <h4><a href="/MacStrelioff/project/internal-project/" >Internal Project</a></h4>
-      <div class="card-desription">
-        <p>An example of using the in-built project page.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-        
-      
-    </div>
-
-  </div>
+  
 </div>
 
     </div>
@@ -827,6 +727,113 @@
     
 
   </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  <section id="ProjectOverviews" class="home-section wg-blank   " >
+    <div class="container">
+      
+
+
+<div class="row">
+  
+    <div class="col-12 col-lg-4 section-heading">
+      
+      
+    </div>
+    <div class="col-12 col-lg-8">
+      
+
+
+<p>+++
+# A Demo section created with the Blank widget.
+# Any elements can be added in the body: <a href="https://sourcethemes.com/academic/docs/writing-markdown-latex/" class="uri">https://sourcethemes.com/academic/docs/writing-markdown-latex/</a>
+# Add more sections by duplicating this file and customizing to your requirements.</p>
+<p>widget = “blank” # See <a href="https://sourcethemes.com/academic/docs/page-builder/" class="uri">https://sourcethemes.com/academic/docs/page-builder/</a>
+headless = true # This file represents a page section.
+active = true # Activate this widget? true/false
+weight = 15 # Order that this section will appear.</p>
+<p>title = “Overview of Current Projects”
+subtitle = &quot;&quot;</p>
+<p>[design]
+# Choose how many columns the section has. Valid values: 1 or 2.
+columns = “1”</p>
+<p>[design.background]
+# Apply a background color, gradient, or image.
+# Uncomment (by removing <code>#</code>) an option to apply it.
+# Choose a light or dark text color by setting <code>text_color_light</code>.
+# Any HTML color name or Hex value is valid.</p>
+<p># Background color.
+# color = “navy”</p>
+<p># Background gradient.
+# gradient_start = “DeepSkyBlue”
+# gradient_end = “SkyBlue”</p>
+<p># Background image.
+#image = “headers/bubbles-wide.jpg” # Name of image in <code>static/img/</code>.
+#image_darken = 0.6 # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.</p>
+<p># Text color (true=light or false=dark).
+#text_color_light = true</p>
+<p>[design.spacing]
+# Customize the section spacing. Order is top, right, bottom, left.
+#padding = [“20px”, “0”, “20px”, “0”]</p>
+<p>[advanced]
+# Custom CSS.
+css_style = &quot;&quot;</p>
+<p># CSS class.
+css_class = &quot;&quot;
++++</p>
+<div id="developing-reinforcement-learning-models" class="section level2">
+<h2>Developing Reinforcement Learning Models</h2>
+<p><img src="reinforcement-learning.png"></p>
+<p>Most reinforcement learning research deals with problems that can be formulated as a <a href="https://en.wikipedia.org/wiki/Markov_decision_process">Markov Decision Process (MDP)</a>. An MDP is defined by a state space <span class="math inline">\(\mathcal{S}\)</span>, an action space <span class="math inline">\(\mathcal{A}\)</span>, a transition function that describes the dynamics between states conditional on actions <span class="math inline">\(p(s\_{t+1}|a\_{t},s\_{t})\)</span>, and a (potentially probabilistic) reward function that assigns real values to combinations of actions and state transitions <span class="math inline">\(p(r_t|a_t,s_t,s_{t+1})\)</span>.</p>
+<p>My research involves developing reinforcement learning algorithms in MDP settings that are complicated by continuous state and action spaces, and more than one possible reward function.</p>
+<p>I have taken two approaches:</p>
+<ol style="list-style-type: decimal">
+<li>A model-free actor critic algorithm partially described <a href="https://osf.io/w2j7n/">in this talk</a>.</li>
+<li>A model-based learner that uses Bayesian function approximation and structure inference methods similar to those described <a href="https://osf.io/3vwh4/">in this short presentation</a>.</li>
+</ol>
+</div>
+<div id="inferring-cognitive-strategies-on-behavioral-bandit-tasks" class="section level2">
+<h2>Inferring Cognitive Strategies On Behavioral Bandit Tasks</h2>
+<p><img src="StrategyInference.png"></p>
+<p>Bandit tasks are commonly used in behavioral research to understand decision making strategies. In the task used here, children repeatedly chose one of two bandits (gambling machines) on each of 50 trials. The machines stochastically paid out a number of stickers. Colored circles indicate the number of stickers, and the location of the circle (top or bottom of plot) indicates which machine was chosen. In this analysis, I specified four different decision algorithms that the kids might have been using to make a decision on each trial. I estimated model parameters with a Gibbs Sampler implemented through JAGS and then computed posterior model probabilities across trials (colored lines). Posterior model probabilities for each decision algorithm represent the probability that a child is following that algorithm across time.</p>
+<p>Details on the specific task, models, and analysis can be found in <a href="https://osf.io/c4bku/">this poster</a>.</p>
+</div>
+<div id="discovering-bias-in-prediction-markets" class="section level2">
+<h2>Discovering Bias In Prediction Markets</h2>
+<p><img src="prediction-market.png"></p>
+<p>Prediction markets are a mechanism for aggregating and incentivising individual estimates of the probability of some event. Here we were interested in whether fallacies in probabilistic reasoning that are observed in many individual-level lab studies could be observed in prediction market prices. We found evidence of conjunction and disjunction fallacies, as well as the commonly observed S-shaped subjective probability function.</p>
+<p>This project is well summarized in <a href="https://osf.io/vzgsq/">this poster</a> which was an extention of previous work presented in <a href="https://osf.io/eu4fp/">this poster</a>.</p>
+</div>
+
+    </div>
+  
 </div>
 
     </div>

@@ -1,25 +1,6 @@
 ---
 authors:
 - admin
-bio: 
-education:
-  courses:
-  - course: Ph.D. in Cognitive Science
-    institution: University of California, Irvine
-    year: 2019
-  - course: M.S. in Statistics
-    institution: University of California, Irvine
-    year: 2018
-  - course: B.S. in Psychology
-    institution: University of California, Davis
-    year: 2014
-email: "mstrelio@uci.edu"
-
-interests:
-- Automating Web Interactions
-- Dynamic Modeling
-- Applied Decision Theory
-- Making a Website
 
 name: Mac Strelioff
 organizations:
@@ -46,6 +27,26 @@ superuser: true
 user_groups:
 - Researchers
 - Visitors
+
+bio: 
+education:
+  courses:
+  - course: Ph.D. in Cognitive Science
+    institution: University of California, Irvine
+    year: 2019
+  - course: M.S. in Statistics
+    institution: University of California, Irvine
+    year: 2018
+  - course: B.S. in Psychology
+    institution: University of California, Davis
+    year: 2014
+email: "mstrelio@uci.edu"
+
+interests:
+- Automating Web Interactions
+- Dynamic Modeling
+- Applied Decision Theory
+- Making a Website
 ---
 
 Mac is finally making a website.

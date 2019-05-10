@@ -22,16 +22,5 @@ Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
 \[ \begin{aligned} t &amp;amp;\in \{1,...,T\} \\ a_t &amp;amp;\in \mathcal{A} \\ s_t &amp;amp;\in \mathcal{S} \\ r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\ T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\ \pi(s_t)&amp;amp;=p(a_t|s_t) \end{aligned} \]</description>
     </item>
     
-    <item>
-      <title>Twitter, Poisson Processes, and Conjugacy</title>
-      <link>/MacStrelioff/unlisted/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/unlisted/twitter-poisson-processes-and-conjugacy/</guid>
-      <description>Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
-To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
-python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook.</description>
-    </item>
-    
   </channel>
 </rss>

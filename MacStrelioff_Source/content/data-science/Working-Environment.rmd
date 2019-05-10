@@ -8,9 +8,8 @@ output:
 menu:
   data-science:
     parent: Learn Data Science
-    weight: 1
+    weight: 21
 linktitle: Working Environment
-#toc: yes
 type: docs
 ---
 
