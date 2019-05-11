@@ -27,9 +27,7 @@
   
     
   
-  <meta name="description" content="Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
-To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
-python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook.">
+  <meta name="description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
@@ -124,14 +122,12 @@ python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional inf
   <meta property="og:site_name" content="">
   <meta property="og:url" content="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
   <meta property="og:title" content="Twitter, Poisson Processes, and Conjugacy | ">
-  <meta property="og:description" content="Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
-To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
-python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-05-11T12:02:28&#43;00:00">
+  <meta property="article:published_time" content="2019-05-11T12:10:48&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-11T12:02:28&#43;00:00">
+  <meta property="article:modified_time" content="2019-05-11T12:10:48&#43;00:00">
   
 
   
@@ -379,6 +375,29 @@ python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional inf
           <div class="article-style" itemprop="articleBody">
             
 
+<div id="TOC">
+<ul>
+<li><a href="#background-and-setup">Background and Setup</a></li>
+<li><a href="#twitter-data">Twitter Data</a><ul>
+<li><a href="#pulling-data-from-twitters-api">Pulling Data from Twitter’s API</a></li>
+<li><a href="#working-with-twitter-status-objects">Working with Twitter Status objects</a></li>
+<li><a href="#embed-a-status">Embed a Status</a></li>
+<li><a href="#convert-a-status-to-a-dict">Convert a Status to a dict</a></li>
+<li><a href="#access-status-attributes-how-i-accessed-the-data-used-below">Access Status Attributes (How I accessed the data used below)</a></li>
+</ul></li>
+<li><a href="#poisson-process">Poisson Process</a><ul>
+<li><a href="#assumptions">Assumptions</a></li>
+<li><a href="#specification-and-properties">Specification and Properties</a></li>
+<li><a href="#checking-the-homogeneity-assumption">Checking the Homogeneity Assumption</a></li>
+<li><a href="#checking-the-exponential-distribution-of-intervals">Checking the exponential distribution of intervals</a></li>
+</ul></li>
+<li><a href="#model-of-tweet-fequency-using-conjugacy">Model of Tweet Fequency Using Conjugacy</a><ul>
+<li><a href="#inference-on-tweet-rate-lambda-over-time">Inference On Tweet Rate <span class="math inline">\(\lambda\)</span> Over Time</a></li>
+</ul></li>
+<li><a href="#predicting-number-of-tweets-in-interval-s">Predicting Number Of Tweets In Interval <span class="math inline">\(s\)</span></a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</div>
 
 <div id="background-and-setup" class="section level2">
 <h2>Background and Setup</h2>
@@ -397,6 +416,7 @@ python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional inf
 Figure 1: fig 1
 </p>
 </div>
+<p>Test</p>
 <pre class="r"><code>library(reticulate)</code></pre>
 <pre><code>## Warning: package &#39;reticulate&#39; was built under R version 3.5.2</code></pre>
 <pre class="python"><code># Setup
@@ -479,7 +499,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2f60f940&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2a1e9978&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">

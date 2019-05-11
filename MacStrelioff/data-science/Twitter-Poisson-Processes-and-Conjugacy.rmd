@@ -2,7 +2,7 @@
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 output:
-  html_page:
+  blogdown::html_page:
     toc: true
 menu:
   data-science:
@@ -28,6 +28,7 @@ I include my code to import the required libraries and set up API access keys, t
 plot(1:22,1:22,pch=1:22)
 ```
 
+Test
 
 ```{r}
 library(reticulate)

@@ -1,8 +1,8 @@
 ---
 author: "Mac Strelioff"
-date: "2019-05-11 12:02:28"
+date: "2019-05-11 12:10:48"
 output:
-  html_page:
+  blogdown::html_page:
     toc: true
 menu:
   data-science:
@@ -14,6 +14,29 @@ type: docs
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#background-and-setup">Background and Setup</a></li>
+<li><a href="#twitter-data">Twitter Data</a><ul>
+<li><a href="#pulling-data-from-twitters-api">Pulling Data from Twitter’s API</a></li>
+<li><a href="#working-with-twitter-status-objects">Working with Twitter Status objects</a></li>
+<li><a href="#embed-a-status">Embed a Status</a></li>
+<li><a href="#convert-a-status-to-a-dict">Convert a Status to a dict</a></li>
+<li><a href="#access-status-attributes-how-i-accessed-the-data-used-below">Access Status Attributes (How I accessed the data used below)</a></li>
+</ul></li>
+<li><a href="#poisson-process">Poisson Process</a><ul>
+<li><a href="#assumptions">Assumptions</a></li>
+<li><a href="#specification-and-properties">Specification and Properties</a></li>
+<li><a href="#checking-the-homogeneity-assumption">Checking the Homogeneity Assumption</a></li>
+<li><a href="#checking-the-exponential-distribution-of-intervals">Checking the exponential distribution of intervals</a></li>
+</ul></li>
+<li><a href="#model-of-tweet-fequency-using-conjugacy">Model of Tweet Fequency Using Conjugacy</a><ul>
+<li><a href="#inference-on-tweet-rate-lambda-over-time">Inference On Tweet Rate <span class="math inline">\(\lambda\)</span> Over Time</a></li>
+</ul></li>
+<li><a href="#predicting-number-of-tweets-in-interval-s">Predicting Number Of Tweets In Interval <span class="math inline">\(s\)</span></a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</div>
 
 <div id="background-and-setup" class="section level2">
 <h2>Background and Setup</h2>
@@ -32,6 +55,7 @@ type: docs
 Figure 1: fig 1
 </p>
 </div>
+<p>Test</p>
 <pre class="r"><code>library(reticulate)</code></pre>
 <pre><code>## Warning: package &#39;reticulate&#39; was built under R version 3.5.2</code></pre>
 <pre class="python"><code># Setup
@@ -114,7 +138,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2f60f940&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2a1e9978&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
