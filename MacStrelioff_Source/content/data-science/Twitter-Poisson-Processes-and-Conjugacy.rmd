@@ -10,7 +10,7 @@ menu:
     weight: 1
 linktitle: Twitter, Poisson Processes, and Conjugacy
 title: "Twitter, Poisson Processes, and Conjugacy"
-type: article
+type: docs
 ---
 
 ## Background and Setup 
@@ -24,7 +24,7 @@ To get started, I followed directions from three main sources that walked throug
 
 I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy. 
 
-```{r testChunk, fig.cap="test ab fig 1",fig.height=2,fig.width=2}
+```{r testChunk, fig.cap="test b fig 1"}
 plot(1:22,1:22,pch=1:22)
 ```
 
@@ -49,6 +49,9 @@ use_python("/anaconda3/bin/python")
 
 # another good python twitter blog;
 # https://stackabuse.com/accessing-the-twitter-api-with-python/
+
+# for figures, without issues..;
+# https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/
 ```
 
 ```{python}
