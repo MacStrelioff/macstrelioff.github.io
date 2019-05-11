@@ -125,9 +125,9 @@
   <meta property="og:description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-05-11T12:10:48&#43;00:00">
+  <meta property="article:published_time" content="2019-05-11T12:14:42&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-11T12:10:48&#43;00:00">
+  <meta property="article:modified_time" content="2019-05-11T12:14:42&#43;00:00">
   
 
   
@@ -411,7 +411,7 @@
 <p>I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.</p>
 <pre class="r"><code>plot(1:22,1:22,pch=1:22)</code></pre>
 <div class="figure"><span id="fig:unnamed-chunk-1"></span>
-<img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-1-1.png" alt="fig 1" width="672" />
+<img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-1-1.png" alt="fig 1" width="192" />
 <p class="caption">
 Figure 1: fig 1
 </p>
@@ -499,7 +499,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2a1e9978&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a27f979b0&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
