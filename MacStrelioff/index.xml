@@ -38,7 +38,7 @@
     <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Sat, 11 May 2019 13:03:01 +0000</pubDate>
+      <pubDate>Sat, 11 May 2019 13:17:35 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
       <description>
@@ -77,14 +77,6 @@
 &lt;li&gt;Additional information on obtaining API keys and authenticating Twitter connections in a blogpost &lt;a href=&#34;https://medium.com/@fbilesanmi/how-to-login-with-twitter-api-using-python-6c9a0f7165c5&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(1:22,1:22,pch=1:22)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:testChunk&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/testChunk-1.png&#34; alt=&#34;test b fig 1&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: test b fig 1
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Test&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(reticulate)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;reticulate&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Setup
@@ -167,7 +159,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a2971f978&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a264459b0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
 &lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
