@@ -38,7 +38,7 @@
     <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Sat, 11 May 2019 13:25:17 +0000</pubDate>
+      <pubDate>Sat, 11 May 2019 13:37:16 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
       <description>
@@ -159,7 +159,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a217fb9b0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a23c269b0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
 &lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;

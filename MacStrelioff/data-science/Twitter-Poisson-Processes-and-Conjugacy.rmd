@@ -11,6 +11,7 @@ menu:
 linktitle: Twitter, Poisson Processes, and Conjugacy
 title: "Twitter, Poisson Processes, and Conjugacy"
 type: docs
+math: true
 ---
 
 ## Background and Setup 
