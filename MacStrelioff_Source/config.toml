@@ -20,6 +20,7 @@ publishDir = "../MacStrelioff" # end of baseURL -- folder in parent dir for site
 copyright = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
+# for setup, maybe see; http://cloudywithachanceofdevops.com/posts/2018/05/17/setting-up-google-analytics-on-hugo/
 googleAnalytics = ""
 
 # Enable comments by entering your Disqus shortname
