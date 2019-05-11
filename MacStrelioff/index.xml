@@ -38,34 +38,11 @@
     <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Fri, 10 May 2019 07:47:33 +0000</pubDate>
+      <pubDate>Sat, 11 May 2019 11:43:40 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#background-and-setup&#34;&gt;Background and Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#twitter-data&#34;&gt;Twitter Data&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pulling-data-from-twitters-api&#34;&gt;Pulling Data from Twitter’s API&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#working-with-twitter-status-objects&#34;&gt;Working with Twitter Status objects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#embed-a-status&#34;&gt;Embed a Status&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#convert-a-status-to-a-dict&#34;&gt;Convert a Status to a dict&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#access-status-attributes-how-i-accessed-the-data-used-below&#34;&gt;Access Status Attributes (How I accessed the data used below)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#poisson-process&#34;&gt;Poisson Process&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#assumptions&#34;&gt;Assumptions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#specification-and-properties&#34;&gt;Specification and Properties&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#checking-the-homogeneity-assumption&#34;&gt;Checking the Homogeneity Assumption&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#checking-the-exponential-distribution-of-intervals&#34;&gt;Checking the exponential distribution of intervals&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#model-of-tweet-fequency-using-conjugacy&#34;&gt;Model of Tweet Fequency Using Conjugacy&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#inference-on-tweet-rate-lambda-over-time&#34;&gt;Inference On Tweet Rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; Over Time&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#predicting-number-of-tweets-in-interval-s&#34;&gt;Predicting Number Of Tweets In Interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 
 &lt;div id=&#34;background-and-setup&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background and Setup&lt;/h2&gt;
@@ -159,7 +136,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a2355f978&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a25b9a9b0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
 &lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;

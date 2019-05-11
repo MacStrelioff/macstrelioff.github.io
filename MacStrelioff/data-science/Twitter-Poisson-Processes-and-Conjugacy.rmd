@@ -2,7 +2,7 @@
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 output:
-  blogdown::html_page:
+  html_page:
     toc: true
 menu:
   data-science:

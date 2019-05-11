@@ -6,7 +6,7 @@
     <description>Recent content in Overview on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2019 07:47:33 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 11:43:40 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/data-science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,12 @@
     <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Fri, 10 May 2019 07:47:33 +0000</pubDate>
+      <pubDate>Sat, 11 May 2019 11:43:40 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
-      <description>Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.</description>
+      <description>Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.
+To get started, I followed directions from three main sources that walked through the twitter and python-twitter libraries, and described how to apply for Twitter API access and use the keys;
+python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook.</description>
     </item>
     
     <item>
