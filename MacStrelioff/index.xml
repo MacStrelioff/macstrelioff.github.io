@@ -38,7 +38,7 @@
     <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Sat, 11 May 2019 12:16:19 +0000</pubDate>
+      <pubDate>Sat, 11 May 2019 12:21:16 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
       <description>
@@ -78,8 +78,8 @@
 &lt;/ol&gt;
 &lt;p&gt;I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(1:22,1:22,pch=1:22)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:unnamed-chunk-1&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-1-1.png&#34; alt=&#34;test a fig 1&#34; width=&#34;192&#34; /&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:testChunk&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/testChunk-1.png&#34; alt=&#34;test a fig 1&#34; width=&#34;192&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: test a fig 1
 &lt;/p&gt;
@@ -167,7 +167,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a2f1e89b0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a2b2789b0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
 &lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
@@ -286,7 +286,7 @@ plt.hist(hour_of_week,bins=80);&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.title(&amp;quot;My Tweet Counts By Hour Of Week&amp;quot;);
 plt.ylabel(&amp;quot;Count&amp;quot;);
 plt.xlabel(&amp;quot;Hour In Week&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The histogram above indicates that there might be some hours of the week that have a higher rate than others. For example, I don’t seem to tweet much early on Sunday (hours 0-5), but I do seem to tweet a lot during the day on Sunday (around hours 6-20). Below I use rug plots, which represent a tweet event with a vertical line near the x-axis, and an imposed kernel density estimate, which is a continuous version of a histogram. I remake this plot in terms of hours within a week, minutes within a day, and minutes within an hour. If the tweet rate (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) were homogeneous, then the kernel density estimate would be approximately flat.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def rug_plot_and_density(dat,bw,xlab,xlim):
     # rug plot + density
@@ -310,7 +310,7 @@ bws  = (4,40,4)
 # make plots
 for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
     rug_plot_and_density(dat=dat,bw=bw,xlab=xlab,xlim=xlim)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-2.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-2.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Are very sensitive to the choice of the bandwidth parameter that determines the window over which to aggregate events (similar to bin size when using a histogram). I’m using these plots to demonstrate possible violations of homogeneity that I would follow up on in a real analysis, but will not follow up on here.&lt;/p&gt;
 &lt;p&gt;From the top plot, there seems to be two patterns. First, a series of peaks and troughs that roughly correspond to daytime and night-time hours. I probably tweet with a higher frequency when I am awake, rather than asleep – meaning that &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; may depend on time within a day. Second, a generally lower kernel density estimate during the middle than the edges. I may tweet more during the weekends (edge hours) than week days (middle hours).&lt;/p&gt;
 &lt;p&gt;From the middle plot that displays tweet frequencies by minutes within a day, there again seem to be two trends. First, I rarely tweet before minute 400 (around 6:40AM). Second, I have peaks around minute 600 (10:00AM), 1000 (4:40PM), and 1350 (10:00PM). This might be related to the times that I take a break from working. I generally take a break around 5:00PM, and usually take another break before bed around 9:00-10:00PM.&lt;/p&gt;
@@ -344,7 +344,7 @@ tmpy = expon.pdf(tmpx,scale=tmp_rate)
 plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label=&amp;#39;Exponential Density&amp;#39;);
 # add legend
 plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# check standard deviation
 np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)&lt;/code&gt;&lt;/pre&gt;
@@ -515,7 +515,7 @@ plt.ylabel(&amp;#39;Posterior on Lambda (tweets/day)&amp;#39;)
 plt.xlabel(&amp;#39;Time&amp;#39;)
 plt.title(&amp;#39;Summary of the posterior over $\lambda$ across time&amp;#39;)
 plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; might be warrented.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -560,7 +560,7 @@ plt.ylabel(&amp;#39;Mass&amp;#39;)
 plt.xlabel(&amp;#39;Count&amp;#39;)
 plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using 20 Observations&amp;#39;)
 plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;With a small amount of data, the uncertainty in the estimate of tweet rates carries through the negative binomial model, which gives more mass to a wider range of counts relative to the Poisson model that discards uncertainty when by &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
 # parameters
@@ -578,7 +578,7 @@ plt.ylabel(&amp;#39;Mass&amp;#39;)
 plt.xlabel(&amp;#39;Count&amp;#39;)
 plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using All Data&amp;#39;)
 plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;With a larger amount of data and predicting the tweet count over a short interval (7 days), the predictive distribution from the negative binomial and Poisson models are nearly indistinguishable. Below I compare the predictions of these model for an interval of 1 year (365 days), again using all data.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
 # parameters
@@ -598,7 +598,7 @@ plt.ylabel(&amp;#39;Mass&amp;#39;)
 plt.xlabel(&amp;#39;Count&amp;#39;)
 plt.title(&amp;#39;Predictions for Tweet Counts in a Year, Using All Data&amp;#39;)
 plt.legend();&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;When considering a longer period of time, The uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; again carries through the negative binomial model, but is discarded in the Poisson model that uses &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
