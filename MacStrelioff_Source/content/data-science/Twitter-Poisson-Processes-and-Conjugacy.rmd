@@ -10,7 +10,7 @@ menu:
     weight: 1
 linktitle: Twitter, Poisson Processes, and Conjugacy
 title: "Twitter, Poisson Processes, and Conjugacy"
-type: docs
+type: article
 ---
 
 ## Background and Setup 
