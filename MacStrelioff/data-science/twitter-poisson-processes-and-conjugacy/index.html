@@ -129,9 +129,9 @@ To get started, I followed directions from three main sources that walked throug
 python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional information on obtaining API keys and authenticating Twitter connections in a blogpost here  I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-05-11T11:53:51&#43;00:00">
+  <meta property="article:published_time" content="2019-05-11T12:02:28&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-11T11:53:51&#43;00:00">
+  <meta property="article:modified_time" content="2019-05-11T12:02:28&#43;00:00">
   
 
   
@@ -391,7 +391,12 @@ python-twitter: Blogpost here tweepy: Blogpost here and docs here Additional inf
 </ol>
 <p>I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.</p>
 <pre class="r"><code>plot(1:22,1:22,pch=1:22)</code></pre>
-<p><img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="/MacStrelioffdata-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-1-1.png" alt="fig 1" width="672" />
+<p class="caption">
+Figure 1: fig 1
+</p>
+</div>
 <pre class="r"><code>library(reticulate)</code></pre>
 <pre><code>## Warning: package &#39;reticulate&#39; was built under R version 3.5.2</code></pre>
 <pre class="python"><code># Setup
@@ -474,7 +479,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a27886940&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2f60f940&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
