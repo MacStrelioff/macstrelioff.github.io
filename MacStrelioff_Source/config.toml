@@ -21,7 +21,7 @@ copyright = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
 # for setup, maybe see; http://cloudywithachanceofdevops.com/posts/2018/05/17/setting-up-google-analytics-on-hugo/
-googleAnalytics = ""
+googleAnalytics = "UA-140153670-1"
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = "@macstrelioff"

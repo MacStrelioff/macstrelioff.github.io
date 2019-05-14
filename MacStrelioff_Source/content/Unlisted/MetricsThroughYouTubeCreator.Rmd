@@ -1,0 +1,35 @@
+---
+title: "Introduction to Metrics Through YouTube Creator"
+author: "Mac Strelioff"
+date: "5/13/2019"
+output: html_document
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## What are Metrics?
+
+
+
+## Examples
+
+
+### Success Metrics
+
+
+### Tracking Metrics
+
+
+Idea from: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MfP-P8EHGBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
