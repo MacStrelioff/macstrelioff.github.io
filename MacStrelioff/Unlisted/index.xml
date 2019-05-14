@@ -22,5 +22,15 @@ Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
 \[ \begin{aligned} t &amp;amp;\in \{1,...,T\} \\ a_t &amp;amp;\in \mathcal{A} \\ s_t &amp;amp;\in \mathcal{S} \\ r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\ T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\ \pi(s_t)&amp;amp;=p(a_t|s_t) \end{aligned} \]</description>
     </item>
     
+    <item>
+      <title>Probability and Information</title>
+      <link>/MacStrelioff/unlisted/probabilityandinformation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/probabilityandinformation/</guid>
+      <description>Probability Theory and Information Theory Types of Probabilities and Their Computations motivation? Many important variables (future income, GDP, who I’ll marry, whether I’ll get sick, what disease I have given some symptoms, …)
+ Randomness, Event Spaces, and Probability motivating example.. Imagine that a vaccine against a dangerous disease recently becomes available. However, there is a small risk that the vaccine will produce a condition just as bad as the disease itself.</description>
+    </item>
+    
   </channel>
 </rss>

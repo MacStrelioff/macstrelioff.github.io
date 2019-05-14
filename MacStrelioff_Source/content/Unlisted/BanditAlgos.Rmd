@@ -2,6 +2,7 @@
 title: "Bandit Algos for Estimation, Hypothesis Testing, and Decision Making"
 author: "Mac Strelioff"
 date: "3/20/2019"
+math: true
 ---
 
 ```{r setup, include=FALSE}
