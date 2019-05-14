@@ -28,6 +28,7 @@ Goals are defined in terms of metrics, and user experience is understood through
 
 ## Metrics for Insights
 
+## Communicating Metrics
 
 Idea from: 
 
