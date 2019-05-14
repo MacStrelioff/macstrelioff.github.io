@@ -14,20 +14,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## What are Metrics?
 
+Metrics are how the data scientist communicates with project managers. 
 
+Two categories; success and tracking.
 
-## Examples
-
+Goals are defined in terms of metrics, and user experience is understood through metrics. 
 
 ### Success Metrics
 
-
 ### Tracking Metrics
+
+## Metrics for Goals
+
+## Metrics for Insights
 
 
 Idea from: 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MfP-P8EHGBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Add metrics from google analytics, and youtube creator.
 
 
 
