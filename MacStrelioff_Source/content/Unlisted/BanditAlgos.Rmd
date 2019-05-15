@@ -18,6 +18,10 @@ set.seed(10201991)
 # TODO:
 1. redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script. 
 
+<!---
+See: 
+https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
+--->
 
 # Bandit Algorithms
 
