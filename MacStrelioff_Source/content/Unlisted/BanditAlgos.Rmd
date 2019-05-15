@@ -20,7 +20,11 @@ set.seed(10201991)
 
 <!---
 See: 
+For Insight Bandit blogpost:
 https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
+
+For Air BNB experimentation dashboard:
+https://medium.com/airbnb-engineering/experiment-reporting-framework-4e3fcd29e6c0
 --->
 
 # Bandit Algorithms

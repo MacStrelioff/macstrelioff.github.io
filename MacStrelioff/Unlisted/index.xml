@@ -30,9 +30,10 @@ Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
       <guid>/MacStrelioff/unlisted/metricsthroughyoutubecreator/</guid>
       <description> What are Metrics? Metrics are how the data scientist communicates with project managers.
 Two categories; success and tracking.
-Success Metrics  Tracking Metrics Idea from:
+Goals are defined in terms of metrics, and user experience is understood through metrics.
+Success Metrics  Tracking Metrics   Metrics for Goals  Metrics for Insights  Communicating Metrics Idea from:
  Add metrics from google analytics, and youtube creator.
-  </description>
+ </description>
     </item>
     
     <item>
