@@ -12,9 +12,12 @@
 # to host an app, run:
 # rsconnect::deployApp("<PATH TO APP>")
 # rsconnect::deployApp("/Users/mac/git/macstrelioff.github.io/MacStrelioff_Source/content/Unlisted/Example")
+# URL on shinyapps.io will be folder name of this project, the last part of the path
 
 # for a rock-paper-scissors bot, can enumerate 5-gram outcomes with; 
 # all_5_grams <- expand.grid(p1 = c(1,2,3), p2 = c(1,2,3), p3 = c(1,2,3),p4 = c(1,2,3),p5 = c(1,2,3), stringsAsFactors = FALSE) 
+# I think the original idea/app was by 
+# Jonathan Reardon, Twitter: @waterlego 
 
 library(shiny)
 
