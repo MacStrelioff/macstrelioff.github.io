@@ -19,6 +19,9 @@
 # I think the original idea/app was by 
 # Jonathan Reardon, Twitter: @waterlego 
 
+# for including .md files; 
+# https://github.com/rstudio/shiny-examples/tree/master/048-including-html-text-and-markdown-files
+
 library(shiny)
 
 # Define UI for application that draws a histogram
