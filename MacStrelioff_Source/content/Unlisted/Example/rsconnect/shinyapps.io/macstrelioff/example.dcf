@@ -5,6 +5,6 @@ account: macstrelioff
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 932217
-bundleId: 2087587
+bundleId: 2087737
 url: https://macstrelioff.shinyapps.io/example/
-when: 1557957790.4286
+when: 1557962512.08734
