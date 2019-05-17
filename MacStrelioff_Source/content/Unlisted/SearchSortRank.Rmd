@@ -1,0 +1,54 @@
+---
+title: "Recommending: Searching, Sorting, Ranking"
+author: "Mac Strelioff"
+date: "5/13/2019"
+#output: 
+#  html_document:
+#    toc: true
+output:
+  blogdown::html_page:
+    toc: true
+type: docs
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Recommendation
+
+Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
+
+Data science methods play a major role in discovering recommendations for users. 
+
+Econ, compliments and substitutes (competitors). 
+
+Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
+
+Temporal involves forecasting, which is a topic for another post. 
+
+
+
+## Sort Algorithms
+
+Lots of [sort algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)
+
+
+## Search Algorithms
+
+
+Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
+
+
+## Ranking Algorithms
+
+Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
+
+
+
+
+
+
+

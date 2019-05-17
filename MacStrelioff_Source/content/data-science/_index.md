@@ -10,5 +10,6 @@ toc:
 type: docs
 ---
 
-Sections below contain cool writeups! Enjoy!
+Use the links on the left to navigate to articles on particular topics. 
+
 

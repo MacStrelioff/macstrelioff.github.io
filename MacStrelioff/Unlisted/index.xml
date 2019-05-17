@@ -46,5 +46,19 @@ Success Metrics  Tracking Metrics   Metrics for Goals  Metrics for Insights  Com
  Randomness, Event Spaces, and Probability motivating example.. Imagine that a vaccine against a dangerous disease recently becomes available. However, there is a small risk that the vaccine will produce a condition just as bad as the disease itself.</description>
     </item>
     
+    <item>
+      <title>Recommending: Searching, Sorting, Ranking</title>
+      <link>/MacStrelioff/unlisted/searchsortrank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/searchsortrank/</guid>
+      <description>Recommendation Sort Algorithms Search Algorithms Ranking Algorithms   Recommendation Lots of recommendation algorithms
+Data science methods play a major role in discovering recommendations for users.
+Econ, compliments and substitutes (competitors).
+Types of recommendation; compliments (these go together), competitors (you might also like…), temporal (might buy this again in the future). Horizontal and vertical focus
+Temporal involves forecasting, which is a topic for another post.
+ Sort Algorithms Lots of sort algorithms</description>
+    </item>
+    
   </channel>
 </rss>

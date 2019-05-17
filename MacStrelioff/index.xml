@@ -2036,5 +2036,45 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
 </description>
     </item>
     
+    <item>
+      <title>Recommending: Searching, Sorting, Ranking</title>
+      <link>/MacStrelioff/unlisted/searchsortrank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/searchsortrank/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sort-algorithms&#34;&gt;Sort Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#search-algorithms&#34;&gt;Search Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;recommendation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommendation&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Recommender_system&#34;&gt;recommendation algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data science methods play a major role in discovering recommendations for users.&lt;/p&gt;
+&lt;p&gt;Econ, compliments and substitutes (competitors).&lt;/p&gt;
+&lt;p&gt;Types of recommendation; compliments (these go together), competitors (you might also like…), temporal (might buy this again in the future). Horizontal and vertical focus&lt;/p&gt;
+&lt;p&gt;Temporal involves forecasting, which is a topic for another post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sort-algorithms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sort Algorithms&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;search-algorithms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Search Algorithms&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ranking Algorithms&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Ranking_(information_retrieval)&#34;&gt;ranking algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
