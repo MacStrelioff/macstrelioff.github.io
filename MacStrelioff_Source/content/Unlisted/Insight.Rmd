@@ -1,5 +1,5 @@
 ---
-title: "Recommending: Searching, Sorting, Ranking"
+title: "Insight"
 author: "Mac Strelioff"
 date: "5/13/2019"
 #output: 
@@ -17,34 +17,30 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Recommendation
+# Overview: 
 
-Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
-
-Data science methods play a major role in discovering recommendations for users. 
-
-Econ, compliments and substitutes (competitors). 
-
-Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
-
-Temporal involves forecasting, which is a topic for another post. 
+Made this doc to document my journey through the Insight Data Science program. 
 
 
-
-## Sort Algorithms
-
-Lots of [sort algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)
+## (5/21) Project Planning
 
 
-## Search Algorithms
+### Prediction Market
 
 
-Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
+### Sentiment Analysis
+
+[tools](https://medium.com/@datamonsters/sentiment-analysis-tools-overview-part-1-positive-and-negative-words-databases-ae35431a470c)
+
+### Stats Website
 
 
-## Ranking Algorithms
 
-Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
+
+
+
+
+
 
 
 
