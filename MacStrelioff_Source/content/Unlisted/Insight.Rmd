@@ -32,11 +32,18 @@ Made this doc to document my journey through the Insight Data Science program.
 
 [tools](https://medium.com/@datamonsters/sentiment-analysis-tools-overview-part-1-positive-and-negative-words-databases-ae35431a470c)
 
+https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e
+
+http://sentdex.com/sentiment-analysis/
+
 ### Stats Website
 
 
+### Bandit Analysis
 
+https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
 
+[good dashboarding](https://blog.insightdatascience.com/visualizing-machine-learning-thresholds-to-make-better-business-decisions-4ab07f823415)
 
 
 
