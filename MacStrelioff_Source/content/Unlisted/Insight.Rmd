@@ -38,6 +38,7 @@ http://sentdex.com/sentiment-analysis/
 
 ### Stats Website
 
+Shiny app that generates practice problems and contains lessons
 
 ### Bandit Analysis
 
@@ -52,7 +53,7 @@ Sync data from Facebook, Amazon, and Kelly Blue Book to find distributions over 
 
 I wanted to sell a car and didn't know what it was worth. 
 
-One approach, develop a model for price based on car features ()
+Learn the KBB API, setup a shiny app that allows one to enter KBB info, and query KBB and FB and Amazon for KBB price, and amazon and fb postings. 
 
 
 
