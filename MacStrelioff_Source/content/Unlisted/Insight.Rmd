@@ -42,12 +42,16 @@ Shiny app that generates practice problems and contains lessons
 
 ### Bandit Analysis
 
+[good example](http://fastml.com/ab-testing-with-bayesian-bandits-in-google-analytics/)
+
 https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
 
 [good dashboarding](https://blog.insightdatascience.com/visualizing-machine-learning-thresholds-to-make-better-business-decisions-4ab07f823415)
 
 
 ### Car price recommender
+
+(this has already been done on fb...)
 
 Sync data from Facebook, Amazon, and Kelly Blue Book to find distributions over car prices, to empower buyers and sellers in social markets. 
 
