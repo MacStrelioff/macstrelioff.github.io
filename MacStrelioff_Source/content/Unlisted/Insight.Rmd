@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Made this doc to document my journey through the Insight Data Science program. 
 
 
-## (5/21) Project Planning
+## (5/21-5/31) Project Planning
 
 
 ### Prediction Market
@@ -46,7 +46,13 @@ https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recomm
 [good dashboarding](https://blog.insightdatascience.com/visualizing-machine-learning-thresholds-to-make-better-business-decisions-4ab07f823415)
 
 
+### Car price recommender
 
+Sync data from Facebook, Amazon, and Kelly Blue Book to find distributions over car prices, to empower buyers and sellers in social markets. 
+
+I wanted to sell a car and didn't know what it was worth. 
+
+One approach, develop a model for price based on car features ()
 
 
 
