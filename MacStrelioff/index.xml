@@ -1811,6 +1811,91 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
+      <title>Insight</title>
+      <link>/MacStrelioff/unlisted/insight/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/insight/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview:&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#setup&#34;&gt;Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#project-planning&#34;&gt;(5/21-5/31) Project Planning&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#prediction-market&#34;&gt;Prediction Market&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sentiment-analysis&#34;&gt;Sentiment Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#stats-website&#34;&gt;Stats Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bandit-analysis&#34;&gt;Bandit Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#car-price-recommender&#34;&gt;Car price recommender&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#resume-preparation&#34;&gt;Resume Preparation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview:&lt;/h1&gt;
+&lt;p&gt;Made this doc to document my journey through the Insight Data Science program.&lt;/p&gt;
+&lt;div id=&#34;setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;p&gt;I installed Python and worked through &lt;a href=&#34;https://sites.google.com/insightdatascience.com/insightfellowresources-sv-19b/pre-session/development-setup&#34;&gt;steps for creating a virtual environment with Anaconda&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;project-planning&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;(5/21-5/31) Project Planning&lt;/h2&gt;
+&lt;p&gt;Email;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The start of Insight is next week and we&amp;#39;re looking forward to meeting all of you in person! You&amp;#39;re likely aware by now that you&amp;#39;ll be spending a large portion of your time at Insight working on a data science project. These projects are designed to provide evidence of the value you would bring to a data science team and your ability to learn and iterate at a rapid pace.
+
+It&amp;#39;s not necessary for you to come to Insight with a project idea in mind (but it can&amp;#39;t hurt!), and we&amp;#39;ll spend the first few days generating and refining project ideas. However, we know that inspiration often strikes when you’re not seeking it, and previous Fellows have mentioned they wish they had come with some ideas in mind.
+
+Here are some tips:
+
+Don’t dismiss any ideas while brainstorming. You might find after talking through the idea with someone else that it’s more viable than you thought. We’re emphasizing quantity over quality at this point - add it to the list!
+
+Start with the question/product and think personal. What issues in your life can be solved using data? Think about your hobbies, your daily routine, your job, the tech you regularly interact with. How could it be improved or personalized? 
+
+Think about the user and use case. Who would benefit from this product? Why would they use it?
+
+Start thinking about data sources. There are many publicly available datasets, and Fellows in the past have gotten creative with techniques like web scraping and calls to website APIs to get the data they want. That being said, don’t find a dataset first and then try to turn it into a product. 
+
+Don’t become overly attached to just one project idea. We’ll work together during the first week to refine your project, and we know very well which types of projects work well and which don’t! 
+
+To reiterate - First think about the problem and your target audience rather than spending all of your time searching for datasets. And don’t fret if you haven’t been struck by inspiration before Day 1! We encourage you to discuss project ideas in the ~projects-DS channel on our 19BSV Mattermost Team!&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;prediction-market&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Prediction Market&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sentiment-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Sentiment Analysis&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@datamonsters/sentiment-analysis-tools-overview-part-1-positive-and-negative-words-databases-ae35431a470c&#34;&gt;tools&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e&#34; class=&#34;uri&#34;&gt;https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://sentdex.com/sentiment-analysis/&#34; class=&#34;uri&#34;&gt;http://sentdex.com/sentiment-analysis/&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stats-website&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Stats Website&lt;/h3&gt;
+&lt;p&gt;Shiny app that generates practice problems and contains lessons&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bandit-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bandit Analysis&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://fastml.com/ab-testing-with-bayesian-bandits-in-google-analytics/&#34;&gt;good example&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d&#34; class=&#34;uri&#34;&gt;https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.insightdatascience.com/visualizing-machine-learning-thresholds-to-make-better-business-decisions-4ab07f823415&#34;&gt;good dashboarding&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;car-price-recommender&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Car price recommender&lt;/h3&gt;
+&lt;p&gt;(this has already been done on fb…)&lt;/p&gt;
+&lt;p&gt;Sync data from Facebook, Amazon, and Kelly Blue Book to find distributions over car prices, to empower buyers and sellers in social markets.&lt;/p&gt;
+&lt;p&gt;I wanted to sell a car and didn’t know what it was worth.&lt;/p&gt;
+&lt;p&gt;Learn the KBB API, setup a shiny app that allows one to enter KBB info, and query KBB and FB and Amazon for KBB price, and amazon and fb postings.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;resume-preparation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Resume Preparation&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Introduction to Metrics Through YouTube Creator</title>
       <link>/MacStrelioff/unlisted/metricsthroughyoutubecreator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
