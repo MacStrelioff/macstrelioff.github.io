@@ -83,6 +83,28 @@ Learn the KBB API, setup a shiny app that allows one to enter KBB info, and quer
 
 ### Kaggle competition?
 
+[Air bnb new user bookings](https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings)
+
+- Model a user's behavior from landing on site to their first booking.
+- Look for ways to improve bookings? -- book in fewer searches, book in less time, ...
+- Do all NDF locations have a missing 'date first booked' variable? 
+- Does a missing 'date_first_booked' mean that the person did not book? 
+
+
+
+[Google store revenue](https://www.kaggle.com/c/ga-customer-revenue-prediction/data)
+- few items
+- makeup items? 
+- predict probability of purchasing an item
+
+[Facebook checkin prediction](https://www.kaggle.com/c/facebook-v-predicting-check-ins/data)
+- fake data... 
+
+# How to solve a problem
+
+1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
+2. 
+
 
 # Resume Preparation
 
