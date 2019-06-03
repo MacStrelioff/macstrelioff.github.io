@@ -81,10 +81,15 @@ I wanted to sell a car and didn't know what it was worth.
 Learn the KBB API, setup a shiny app that allows one to enter KBB info, and query KBB and FB and Amazon for KBB price, and amazon and fb postings. 
 
 
+### Kaggle competition?
 
-### Resume Preparation
+
+# Resume Preparation
 
 
+
+
+# Additional Resources
 
 
 
