@@ -91,7 +91,6 @@ Learn the KBB API, setup a shiny app that allows one to enter KBB info, and quer
 - Does a missing 'date_first_booked' mean that the person did not book? 
 
 
-
 [Google store revenue](https://www.kaggle.com/c/ga-customer-revenue-prediction/data)
 - few items
 - makeup items? 
@@ -100,18 +99,18 @@ Learn the KBB API, setup a shiny app that allows one to enter KBB info, and quer
 [Facebook checkin prediction](https://www.kaggle.com/c/facebook-v-predicting-check-ins/data)
 - fake data... 
 
-# How to solve a problem
+## How to solve a problem
 
 1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
 2. 
 
 
-# Resume Preparation
+## Resume Preparation
 
 
+## Additional Resources
 
-
-# Additional Resources
+# Day 1 (6/3/2019)
 
 
 
