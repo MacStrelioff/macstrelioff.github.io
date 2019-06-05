@@ -37,7 +37,9 @@ Open mindedness -- new problem space, ...
 
 Adaptability, identify weakenesses and adapt
 
-## Networking and Company Visits
+
+
+## Opportunities: Networking and Company Visits
 
 At Insight, data science hiring teams frequently visit. During the first week, we had visits from Square, Lab 41, and App Annie. 
 
@@ -47,6 +49,7 @@ Attempt:
 
 Avoid: 
 
+- "Questions" purely intended to demonstrate your own knowledge. Instead, introduce yourself after the talk. 
 - 
 
 
