@@ -6,7 +6,7 @@ name: Mac Strelioff
 organizations:
 - name: University of California, Irvine
   url: ""
-role: Ph.D. Candidate
+role: Cognitive Scientist (Ph.D.) Statistician (M.S.)
 social:
 - icon: envelope
   icon_pack: fas
