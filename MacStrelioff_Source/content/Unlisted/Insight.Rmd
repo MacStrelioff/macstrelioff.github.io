@@ -57,7 +57,47 @@ Avoid:
 
 Identify strengths, and demonstrantions of value to a company
 
+### LinkedIn
+
+[workshop](https://sites.google.com/insightdatascience.com/professional-skills-hub-sv-19b/resumes/linkedin?authuser=0)
+
 ### Resume
+
+[workshop lecture](https://www.youtube.com/watch?v=LEhTuQ4kvUU&feature=youtu.be)
+
+Resume is a marketing tool to get an interview. Resumes should be understood in 15-45 seconds. 
+
+Audience: 
+
+1. Hiring managers
+- Wants: quickly hire, culture fit, compliments skillsets on team
+- Dislike: lack of detail, 'fluff', verbose
+2. Recruiter 
+- Wants: Pass high quality 
+- Dislikes: Poor writing or grammer, "creative" resumes that take time to orient to, verbose
+
+Convey: 
+
+- Technical fit for role
+- Potential for learning and growth
+- Unique professional value (differentiation)
+
+Components:
+
+Order from most to least impactful. Focus on content relevant for next role.
+
+- Header, contact information. Location that is local to the company being applied to. LinkedIn should also include anything not on resume. 
+- Skills, core competencies for recruiter to check off required skills. Sort into meaningful clusters. 
+- Experience, for hiring manager. Include evidence of the skills. Talk about publications here, and emphasize their impact or value. Start with past-tense verb. Situation, Task, Action, Result. 
+- Education, also mainly for recruiters. Could include a section on specific courses, but would be more impactful as projects in the experience section.
+- NO SUMMARY, experience is more valuable. Can put one on LinkedIn. Avoid making too specific (pidgenhole) or general (cliche). 
+
+
+Tips: 
+
+- Include numbers to quantify impacts, numbers can be salient relative to text.
+- Include URLs, for those who read on paper. 
+- Consistent puncuation, ... .
 
 
 ### Pitch
