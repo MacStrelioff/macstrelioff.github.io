@@ -21,11 +21,46 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Made this doc to document my journey through the Insight Data Science program. 
 
-## Setup
+# Setup
 
 I installed Python and worked through [steps for creating a virtual environment with Anaconda](https://sites.google.com/insightdatascience.com/insightfellowresources-sv-19b/pre-session/development-setup). 
 
-## (5/21-5/31) Project Planning
+# Professional Skills
+
+## Mindset (Day 1: 6/3/2019)
+
+Imposter syndrome
+
+Fail quickly and iterate
+
+Open mindedness -- new problem space, ...
+
+Adaptability, identify weakenesses and adapt
+
+## Networking and Company Visits
+
+At Insight, data science hiring teams frequently visit. During the first week, we had visits from Square, Lab 41, and App Annie. 
+
+Attempt: 
+
+- Ask questions to assess fit: size, hierarchy, business model / monetization
+
+Avoid: 
+
+- 
+
+
+## Applying
+
+Identify strengths, and demonstrantions of value to a company
+
+### Resume
+
+
+### Pitch
+
+
+# Projects
 
 Email; 
 
@@ -47,6 +82,7 @@ Don’t become overly attached to just one project idea. We’ll work together d
 
 To reiterate - First think about the problem and your target audience rather than spending all of your time searching for datasets. And don’t fret if you haven’t been struck by inspiration before Day 1! We encourage you to discuss project ideas in the ~projects-DS channel on our 19BSV Mattermost Team!
 
+## Ideation (5/21-6/5)
 
 ### Prediction Market
 
@@ -80,7 +116,6 @@ I wanted to sell a car and didn't know what it was worth.
 
 Learn the KBB API, setup a shiny app that allows one to enter KBB info, and query KBB and FB and Amazon for KBB price, and amazon and fb postings. 
 
-
 ### Kaggle competition?
 
 [Air bnb new user bookings](https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings)
@@ -90,7 +125,6 @@ Learn the KBB API, setup a shiny app that allows one to enter KBB info, and quer
 - Do all NDF locations have a missing 'date first booked' variable? 
 - Does a missing 'date_first_booked' mean that the person did not book? 
 
-
 [Google store revenue](https://www.kaggle.com/c/ga-customer-revenue-prediction/data)
 - few items
 - makeup items? 
@@ -99,18 +133,47 @@ Learn the KBB API, setup a shiny app that allows one to enter KBB info, and quer
 [Facebook checkin prediction](https://www.kaggle.com/c/facebook-v-predicting-check-ins/data)
 - fake data... 
 
+## Selection
+
+Data scientists make data products. 
+
+Assess value 
+
+1. What is the product? 
+2. Why is this useful to a specific company? 
+3. Why is it useful to users?
+
+Assess feasibility 
+
+4. What data is needed for this product? 
+5. How much data is there, where does it come from?
+6. What technical methods are used? 
+7. How could AI/ML improve the product?
+8. Are there any limits on data access or ethical constraints? 
+9. How could it be monetized? 
+
+Assess potential
+
+10. How might a company expand the product?
+
+
+
+## Presentation
+
+### 5 min
+- context
+- need 
+- vision ('stretch goal')
+- outcome
+ 
+ 
+
+
 ## How to solve a problem
 
 1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
 2. 
 
-
-## Resume Preparation
-
-
-## Additional Resources
-
-# Day 1 (6/3/2019)
 
 
 
