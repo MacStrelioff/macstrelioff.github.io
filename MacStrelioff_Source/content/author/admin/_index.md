@@ -53,16 +53,7 @@ interests:
 test
 --->
 
-I'm interested in understanding the chocies that people make. This lead me to focus on decision making through my undergraduate course work, and statistics and machine learning as models of human learning during my dissertation work. 
-
-
-I've persued a number of opportunities and hobby projects out of a drive to get a deep understanding of people. Recently, I completed a dissertaion where I used reinforcement learning models to 
-
-I've always been interested in the factors that motivate the choices people make. This ultimately lead me to develop models of human learning and decision making in graduate school. 
-
-I've pursued a variety of projects and educational opportunities out of a deep interest in the chocies that people make, and ways that formal models can be used to understand these choices. 
-
-The theme of 
+I'm interested in understanding the chocies that people make. This lead me to focus on decision making through my undergraduate course work, and to develop models of human learning during my dissertation work. 
 
 
 
