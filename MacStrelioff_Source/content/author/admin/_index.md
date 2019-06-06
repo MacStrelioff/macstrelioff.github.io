@@ -53,7 +53,7 @@ interests:
 test
 --->
 
-I have a fundamental interest in understanding the chocies that people make. This lead me to focus on decision making through my undergraduate course work, and statistics and machine learning as models of human learning during my dissertation work. 
+I'm interested in understanding the chocies that people make. This lead me to focus on decision making through my undergraduate course work, and statistics and machine learning as models of human learning during my dissertation work. 
 
 
 I've persued a number of opportunities and hobby projects out of a drive to get a deep understanding of people. Recently, I completed a dissertaion where I used reinforcement learning models to 
