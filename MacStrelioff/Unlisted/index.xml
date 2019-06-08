@@ -87,7 +87,7 @@ Temporal involves forecasting, which is a topic for another post.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/shiny_apps_rps/</guid>
-      <description>Overview Shiny apps UI: User Interface Server Components Rock Paper Scissors Agent Logic  Hosting    Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments.</description>
+      <description>Overview Shiny apps UI: User Interface Server Components Rock Paper Scissors Agent Logic  Hosting Hosting locally Hosting with Shinyapps.io Other ways to host     Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments.</description>
     </item>
     
     <item>
