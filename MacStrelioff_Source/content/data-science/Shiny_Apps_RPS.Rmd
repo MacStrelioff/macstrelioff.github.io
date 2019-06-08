@@ -10,6 +10,11 @@ output:
     toc: true
 type: docs
 math: true
+menu:
+  data-science:
+    parent: Learn Data Science
+    weight: 31
+linktitle: Shiny Apps Intro
 ---
 
 ```{r setup, include=FALSE}
@@ -246,17 +251,18 @@ Here I return to the logic inside the `observeEvent()` call that implements the 
 values$round  = values$round+1;
 ```
 
-
-
+I then implemented the agent's policy. In a reinforcement learning context, a policy is an agent's probability distribution over actions. The actions here are stored in the reactive value `as` which consists of "r","p", and "s", respectively representing the actions Rock, Paper, or Scissors. The policy I implemented here depends on the last 5 actions that a user takes. The entire history of a user's actions, excluding the current action, is stored in the reactive value `opp_actions` which is a string consisting of the charasters "r", "p", or "s". For example, if `opp_actions` is "rrps", it would mean that the user chose rock twice, then paper, then scissors, before picking the current action which is not yet part of the action history. The agent's action is stored in the reactive value `a`. On the first 5 rounds, the agent picks uniformly from the actions Rock, Paper, Scissors;
 ```
-# policy -- code to greedily pick best action
-## if fewer than 5 actions taken, draw uniformly
 if(length(values$opp_actions)<5){
   values$a=sample(values$as,1)
-  } else{ # if at least 5 actions taken
+  } 
+```
+
+After 5 rounds, the agent uses 5-grams (sequences of the last 5 user actions), to pick an action that will beat the most likely player action based on the previous times the player has emitted this sequence of 5 actions. To implement this, I first get the number of observed actions, `nobs`, and then get a string that represents the last 5 actions the user has taken, `ngram`. If theis sequence has not been observed, the agent creates an instance of the sequence in its memory of the users's 5-grams (`grams`), initializes counts of the uses subsequent Rock, Paper, Scissors actions to 0, and finally uniformly samples an action. Otherwise, if this sequence has been observed before, the agent predicts what the user will choose on this round (`pred`) by finding the action that the player most frequently chose in the past after an identical sequence of 5 actions, and then picks the action `a` that would beat what it expects the player to chose. The code that implements this process is shown below;
+```
+  else{ # if at least 5 actions taken
   nobs = length(values$opp_actions)
   ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = "")
-  #cat("\n",ngram)
   # if this pattern not observed before, initialize it and choose randomly
   if(!any(names(values$grams)==ngram)){
     values$grams[ngram]=rep(0,3)
@@ -268,7 +274,11 @@ if(length(values$opp_actions)<5){
   #cat("\n",names(values$grams))
   #cat("\n",values$grams[ngram][[1]])
 }
+```
 
+The game environment then processes the user's action and the agent's action, and determines an outcome of +1 if the user won, 0 if the agent and user tied, and -1 if the agent won;
+
+```
 # get opponent action and outcome
 if(input$rock    -sum(values$opp_actions=="r")==1){
   opp_action="r"
@@ -282,11 +292,17 @@ if(input$scissors-sum(values$opp_actions=="s")==1){
   opp_action="s"
   dscore = switch(values$a,"r"=-1,"p"=1,"s"=0)
 }
+```
 
+The outcome value is added to the cumulative score, `score`, and the score is appended to the `scores` variables which stores the score on every round for plotting. 
+```
 # evaluate outcome
 values$score  = values$score+dscore
 values$scores = c(values$scores,values$score);
+```
 
+Finally, the agent updates its model of the user by appending the current action to the user's action history, `opp_actions`, and updating it's memory of user behavior stored in `grams` by incrementing the count of the user's action associated with the 5-gram for this round, `ngram`.
+```
 # update opponent model 
 values$opp_actions = c(values$opp_actions,opp_action);
 
@@ -296,17 +312,21 @@ if(length(values$opp_actions)>5){
   }
 ```
 
-
-
 ## Hosting
+
 
 ### Hosting locally 
 
+Running the function `shinyApp(ui = ui, server = server)` from RStudio will run the application on a local host. This is great for debugging, but not great for making the app avilable to users on other computers.
 
-### Hosting with Shinyapps.io
+### Hosting online
+
+RStudio supports many ways of [hosting a shiny app](https://shiny.rstudio.com/deploy/), but the one that worked best for me was to host through the free plan at [Shinnyapps.io](https://www.shinyapps.io/). A detailed walkthrough on deploying shiny apps can be found [here](https://docs.rstudio.com/shinyapps.io/getting-started.html#deploying-applications).
 
 
-### Other ways to host
+It is also possible to host a Shiny app through Amazon Web Services. More resources on that can be found [here](https://medium.com/@CharlesBordet/how-to-deploy-a-shiny-app-on-aws-part-1-4893d0a7432f), 
+[here](https://www.charlesbordet.com/en/shiny-aws-1/), or
+[here](https://stackoverflow.com/questions/47725234/understanding-the-scalability-of-rshiny-apps-hosted-on-shinyserver).
 
 
 

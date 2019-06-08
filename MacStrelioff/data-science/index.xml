@@ -39,5 +39,14 @@ Working With Bash and Git Useful Bash Commands login # prompts for username and 
       <description>The sections below are documents I made based on things that were important, but not used often enough to commit to memory.</description>
     </item>
     
+    <item>
+      <title>Shiny Apps</title>
+      <link>/MacStrelioff/data-science/shiny_apps_rps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/shiny_apps_rps/</guid>
+      <description>Overview Shiny apps UI: User Interface Server Components Rock Paper Scissors Agent Logic  Hosting Hosting locally Hosting online     Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments.</description>
+    </item>
+    
   </channel>
 </rss>

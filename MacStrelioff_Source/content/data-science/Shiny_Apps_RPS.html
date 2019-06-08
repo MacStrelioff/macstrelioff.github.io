@@ -10,6 +10,11 @@ output:
     toc: true
 type: docs
 math: true
+menu:
+  data-science:
+    parent: Learn Data Science
+    weight: 31
+linktitle: Shiny Apps Intro
 ---
 
 
@@ -24,8 +29,7 @@ math: true
 </ul></li>
 <li><a href="#hosting">Hosting</a><ul>
 <li><a href="#hosting-locally">Hosting locally</a></li>
-<li><a href="#hosting-with-shinyapps.io">Hosting with Shinyapps.io</a></li>
-<li><a href="#other-ways-to-host">Other ways to host</a></li>
+<li><a href="#hosting-online">Hosting online</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -227,14 +231,14 @@ output$result = renderText({
 <p>Here I return to the logic inside the <code>observeEvent()</code> call that implements the game. This code is run whenever a user chooses an action. First I increment the round, which is stored in the <code>reactiveValue</code> structure, <code>values</code>;</p>
 <pre><code># increment round
 values$round  = values$round+1;</code></pre>
-<pre><code># policy -- code to greedily pick best action
-## if fewer than 5 actions taken, draw uniformly
-if(length(values$opp_actions)&lt;5){
+<p>I then implemented the agent’s policy. In a reinforcement learning context, a policy is an agent’s probability distribution over actions. The actions here are stored in the reactive value <code>as</code> which consists of “r”,“p”, and “s”, respectively representing the actions Rock, Paper, or Scissors. The policy I implemented here depends on the last 5 actions that a user takes. The entire history of a user’s actions, excluding the current action, is stored in the reactive value <code>opp_actions</code> which is a string consisting of the charasters “r”, “p”, or “s”. For example, if <code>opp_actions</code> is “rrps”, it would mean that the user chose rock twice, then paper, then scissors, before picking the current action which is not yet part of the action history. The agent’s action is stored in the reactive value <code>a</code>. On the first 5 rounds, the agent picks uniformly from the actions Rock, Paper, Scissors;</p>
+<pre><code>if(length(values$opp_actions)&lt;5){
   values$a=sample(values$as,1)
-  } else{ # if at least 5 actions taken
+  } </code></pre>
+<p>After 5 rounds, the agent uses 5-grams (sequences of the last 5 user actions), to pick an action that will beat the most likely player action based on the previous times the player has emitted this sequence of 5 actions. To implement this, I first get the number of observed actions, <code>nobs</code>, and then get a string that represents the last 5 actions the user has taken, <code>ngram</code>. If theis sequence has not been observed, the agent creates an instance of the sequence in its memory of the users’s 5-grams (<code>grams</code>), initializes counts of the uses subsequent Rock, Paper, Scissors actions to 0, and finally uniformly samples an action. Otherwise, if this sequence has been observed before, the agent predicts what the user will choose on this round (<code>pred</code>) by finding the action that the player most frequently chose in the past after an identical sequence of 5 actions, and then picks the action <code>a</code> that would beat what it expects the player to chose. The code that implements this process is shown below;</p>
+<pre><code>  else{ # if at least 5 actions taken
   nobs = length(values$opp_actions)
   ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = &quot;&quot;)
-  #cat(&quot;\n&quot;,ngram)
   # if this pattern not observed before, initialize it and choose randomly
   if(!any(names(values$grams)==ngram)){
     values$grams[ngram]=rep(0,3)
@@ -245,9 +249,9 @@ if(length(values$opp_actions)&lt;5){
   }
   #cat(&quot;\n&quot;,names(values$grams))
   #cat(&quot;\n&quot;,values$grams[ngram][[1]])
-}
-
-# get opponent action and outcome
+}</code></pre>
+<p>The game environment then processes the user’s action and the agent’s action, and determines an outcome of +1 if the user won, 0 if the agent and user tied, and -1 if the agent won;</p>
+<pre><code># get opponent action and outcome
 if(input$rock    -sum(values$opp_actions==&quot;r&quot;)==1){
   opp_action=&quot;r&quot;
   dscore = switch(values$a,&quot;r&quot;=0,&quot;p&quot;=-1,&quot;s&quot;=1)
@@ -259,13 +263,13 @@ if(input$paper   -sum(values$opp_actions==&quot;p&quot;)==1){
 if(input$scissors-sum(values$opp_actions==&quot;s&quot;)==1){
   opp_action=&quot;s&quot;
   dscore = switch(values$a,&quot;r&quot;=-1,&quot;p&quot;=1,&quot;s&quot;=0)
-}
-
-# evaluate outcome
+}</code></pre>
+<p>The outcome value is added to the cumulative score, <code>score</code>, and the score is appended to the <code>scores</code> variables which stores the score on every round for plotting.</p>
+<pre><code># evaluate outcome
 values$score  = values$score+dscore
-values$scores = c(values$scores,values$score);
-
-# update opponent model 
+values$scores = c(values$scores,values$score);</code></pre>
+<p>Finally, the agent updates its model of the user by appending the current action to the user’s action history, <code>opp_actions</code>, and updating it’s memory of user behavior stored in <code>grams</code> by incrementing the count of the user’s action associated with the 5-gram for this round, <code>ngram</code>.</p>
+<pre><code># update opponent model 
 values$opp_actions = c(values$opp_actions,opp_action);
 
 if(length(values$opp_actions)&gt;5){
@@ -278,12 +282,12 @@ if(length(values$opp_actions)&gt;5){
 <h2>Hosting</h2>
 <div id="hosting-locally" class="section level3">
 <h3>Hosting locally</h3>
+<p>Running the function <code>shinyApp(ui = ui, server = server)</code> from RStudio will run the application on a local host. This is great for debugging, but not great for making the app avilable to users on other computers.</p>
 </div>
-<div id="hosting-with-shinyapps.io" class="section level3">
-<h3>Hosting with Shinyapps.io</h3>
-</div>
-<div id="other-ways-to-host" class="section level3">
-<h3>Other ways to host</h3>
+<div id="hosting-online" class="section level3">
+<h3>Hosting online</h3>
+<p>RStudio supports many ways of <a href="https://shiny.rstudio.com/deploy/">hosting a shiny app</a>, but the one that worked best for me was to host through the free plan at <a href="https://www.shinyapps.io/">Shinnyapps.io</a>. A detailed walkthrough on deploying shiny apps can be found <a href="https://docs.rstudio.com/shinyapps.io/getting-started.html#deploying-applications">here</a>.</p>
+<p>It is also possible to host a Shiny app through Amazon Web Services. More resources on that can be found <a href="https://medium.com/@CharlesBordet/how-to-deploy-a-shiny-app-on-aws-part-1-4893d0a7432f">here</a>, <a href="https://www.charlesbordet.com/en/shiny-aws-1/">here</a>, or <a href="https://stackoverflow.com/questions/47725234/understanding-the-scalability-of-rshiny-apps-hosted-on-shinyserver">here</a>.</p>
 </div>
 </div>
 </div>

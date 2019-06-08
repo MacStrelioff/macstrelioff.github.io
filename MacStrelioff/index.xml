@@ -2372,10 +2372,10 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
     
     <item>
       <title>Shiny Apps</title>
-      <link>/MacStrelioff/unlisted/shiny_apps_rps/</link>
+      <link>/MacStrelioff/data-science/shiny_apps_rps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/MacStrelioff/unlisted/shiny_apps_rps/</guid>
+      <guid>/MacStrelioff/data-science/shiny_apps_rps/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -2389,8 +2389,7 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#hosting&#34;&gt;Hosting&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#hosting-locally&#34;&gt;Hosting locally&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#hosting-with-shinyapps.io&#34;&gt;Hosting with Shinyapps.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#other-ways-to-host&#34;&gt;Other ways to host&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hosting-online&#34;&gt;Hosting online&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -2592,14 +2591,14 @@ output$result = renderText({
 &lt;p&gt;Here I return to the logic inside the &lt;code&gt;observeEvent()&lt;/code&gt; call that implements the game. This code is run whenever a user chooses an action. First I increment the round, which is stored in the &lt;code&gt;reactiveValue&lt;/code&gt; structure, &lt;code&gt;values&lt;/code&gt;;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# increment round
 values$round  = values$round+1;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;# policy -- code to greedily pick best action
-## if fewer than 5 actions taken, draw uniformly
-if(length(values$opp_actions)&amp;lt;5){
+&lt;p&gt;I then implemented the agent’s policy. In a reinforcement learning context, a policy is an agent’s probability distribution over actions. The actions here are stored in the reactive value &lt;code&gt;as&lt;/code&gt; which consists of “r”,“p”, and “s”, respectively representing the actions Rock, Paper, or Scissors. The policy I implemented here depends on the last 5 actions that a user takes. The entire history of a user’s actions, excluding the current action, is stored in the reactive value &lt;code&gt;opp_actions&lt;/code&gt; which is a string consisting of the charasters “r”, “p”, or “s”. For example, if &lt;code&gt;opp_actions&lt;/code&gt; is “rrps”, it would mean that the user chose rock twice, then paper, then scissors, before picking the current action which is not yet part of the action history. The agent’s action is stored in the reactive value &lt;code&gt;a&lt;/code&gt;. On the first 5 rounds, the agent picks uniformly from the actions Rock, Paper, Scissors;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if(length(values$opp_actions)&amp;lt;5){
   values$a=sample(values$as,1)
-  } else{ # if at least 5 actions taken
+  } &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After 5 rounds, the agent uses 5-grams (sequences of the last 5 user actions), to pick an action that will beat the most likely player action based on the previous times the player has emitted this sequence of 5 actions. To implement this, I first get the number of observed actions, &lt;code&gt;nobs&lt;/code&gt;, and then get a string that represents the last 5 actions the user has taken, &lt;code&gt;ngram&lt;/code&gt;. If theis sequence has not been observed, the agent creates an instance of the sequence in its memory of the users’s 5-grams (&lt;code&gt;grams&lt;/code&gt;), initializes counts of the uses subsequent Rock, Paper, Scissors actions to 0, and finally uniformly samples an action. Otherwise, if this sequence has been observed before, the agent predicts what the user will choose on this round (&lt;code&gt;pred&lt;/code&gt;) by finding the action that the player most frequently chose in the past after an identical sequence of 5 actions, and then picks the action &lt;code&gt;a&lt;/code&gt; that would beat what it expects the player to chose. The code that implements this process is shown below;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  else{ # if at least 5 actions taken
   nobs = length(values$opp_actions)
   ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = &amp;quot;&amp;quot;)
-  #cat(&amp;quot;\n&amp;quot;,ngram)
   # if this pattern not observed before, initialize it and choose randomly
   if(!any(names(values$grams)==ngram)){
     values$grams[ngram]=rep(0,3)
@@ -2610,9 +2609,9 @@ if(length(values$opp_actions)&amp;lt;5){
   }
   #cat(&amp;quot;\n&amp;quot;,names(values$grams))
   #cat(&amp;quot;\n&amp;quot;,values$grams[ngram][[1]])
-}
-
-# get opponent action and outcome
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The game environment then processes the user’s action and the agent’s action, and determines an outcome of +1 if the user won, 0 if the agent and user tied, and -1 if the agent won;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# get opponent action and outcome
 if(input$rock    -sum(values$opp_actions==&amp;quot;r&amp;quot;)==1){
   opp_action=&amp;quot;r&amp;quot;
   dscore = switch(values$a,&amp;quot;r&amp;quot;=0,&amp;quot;p&amp;quot;=-1,&amp;quot;s&amp;quot;=1)
@@ -2624,13 +2623,13 @@ if(input$paper   -sum(values$opp_actions==&amp;quot;p&amp;quot;)==1){
 if(input$scissors-sum(values$opp_actions==&amp;quot;s&amp;quot;)==1){
   opp_action=&amp;quot;s&amp;quot;
   dscore = switch(values$a,&amp;quot;r&amp;quot;=-1,&amp;quot;p&amp;quot;=1,&amp;quot;s&amp;quot;=0)
-}
-
-# evaluate outcome
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The outcome value is added to the cumulative score, &lt;code&gt;score&lt;/code&gt;, and the score is appended to the &lt;code&gt;scores&lt;/code&gt; variables which stores the score on every round for plotting.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# evaluate outcome
 values$score  = values$score+dscore
-values$scores = c(values$scores,values$score);
-
-# update opponent model 
+values$scores = c(values$scores,values$score);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, the agent updates its model of the user by appending the current action to the user’s action history, &lt;code&gt;opp_actions&lt;/code&gt;, and updating it’s memory of user behavior stored in &lt;code&gt;grams&lt;/code&gt; by incrementing the count of the user’s action associated with the 5-gram for this round, &lt;code&gt;ngram&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# update opponent model 
 values$opp_actions = c(values$opp_actions,opp_action);
 
 if(length(values$opp_actions)&amp;gt;5){
@@ -2643,12 +2642,12 @@ if(length(values$opp_actions)&amp;gt;5){
 &lt;h2&gt;Hosting&lt;/h2&gt;
 &lt;div id=&#34;hosting-locally&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Hosting locally&lt;/h3&gt;
+&lt;p&gt;Running the function &lt;code&gt;shinyApp(ui = ui, server = server)&lt;/code&gt; from RStudio will run the application on a local host. This is great for debugging, but not great for making the app avilable to users on other computers.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;hosting-with-shinyapps.io&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Hosting with Shinyapps.io&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-ways-to-host&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Other ways to host&lt;/h3&gt;
+&lt;div id=&#34;hosting-online&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hosting online&lt;/h3&gt;
+&lt;p&gt;RStudio supports many ways of &lt;a href=&#34;https://shiny.rstudio.com/deploy/&#34;&gt;hosting a shiny app&lt;/a&gt;, but the one that worked best for me was to host through the free plan at &lt;a href=&#34;https://www.shinyapps.io/&#34;&gt;Shinnyapps.io&lt;/a&gt;. A detailed walkthrough on deploying shiny apps can be found &lt;a href=&#34;https://docs.rstudio.com/shinyapps.io/getting-started.html#deploying-applications&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is also possible to host a Shiny app through Amazon Web Services. More resources on that can be found &lt;a href=&#34;https://medium.com/@CharlesBordet/how-to-deploy-a-shiny-app-on-aws-part-1-4893d0a7432f&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.charlesbordet.com/en/shiny-aws-1/&#34;&gt;here&lt;/a&gt;, or &lt;a href=&#34;https://stackoverflow.com/questions/47725234/understanding-the-scalability-of-rshiny-apps-hosted-on-shinyserver&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
