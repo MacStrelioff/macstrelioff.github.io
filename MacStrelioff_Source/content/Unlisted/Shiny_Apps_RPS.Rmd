@@ -18,18 +18,40 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Overview
 
-Shiny apps are ... 
+Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments. My experiments were essentially simple games -- there would be buttons that participants could press, and feedback that they would see based on their actions. I decided to make a rock-paper-scissors app to gain experience with Shiny apps and probe their utility as tools for hosting experiments. You can check out the app [here (https://macstrelioff.shinyapps.io/rockpaperscissorsagent/)](https://macstrelioff.shinyapps.io/rockpaperscissorsagent/) though I only have 25 hours a month of free hosting, so it may be down occasionally. 
 
-I wanted to learn more about this, so I made one for playing rock paper scissors. I also made a rock paper scissors agent that plays quite well! The model for the agent was inspired by ... on twitter here ... .
-
+The source code for this app can be found on my GitHub [here]()
 
 # Shiny apps
 
-## UI
+[Shiny apps](http://shiny.rstudio.com/) are primarily a tool for dashboarding. A dashboard is a tool that a data professional could create in order to communicate insights and actionable results to decision-makers. Ideally these apps enable decison-makers to easily interact with the data in a way that streamlines their decision making process. Many examples, with code, can be seen in the [shiny app gallary](http://shiny.rstudio.com/gallery/) -- this was the primary resource I turned to while putting together my app.
+
+Shiny apps are comprised of a user interface (UI) component and a server component; a bare-bones script might look like this; 
+
+```
+library(shiny)
+
+ui <- fluidPage()
+
+server <- function(input, output){}
+
+shinyApp(ui = ui, server = server)
+```
+
+The `ui` will contain functions that control the layout of the page and the names of interactive components like buttons and sliders. The server defines how the page changes in response to user actions, and the final line `shinyApp(ui=ui,server=server)` runs the app. For hosting on shinyapps.io (described below), the script that runs the app must be called `App.R`.
+
+## UI: User Interface
+
+
+
+
+Lesson 3, overview of interactive elements;
+
+http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/
+
 
 ## Server
 
-## Interactions ...
 
 ## Hosting
 

@@ -2382,9 +2382,8 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#shiny-apps&#34;&gt;Shiny apps&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#ui&#34;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ui-user-interface&#34;&gt;UI: User Interface&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#server&#34;&gt;Server&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#interactions&#34;&gt;Interactions …&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#hosting&#34;&gt;Hosting&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#rock-paper-scissors-app&#34;&gt;Rock Paper Scissors App&lt;/a&gt;&lt;/li&gt;
@@ -2393,19 +2392,28 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
 
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview&lt;/h1&gt;
-&lt;p&gt;Shiny apps are …&lt;/p&gt;
-&lt;p&gt;I wanted to learn more about this, so I made one for playing rock paper scissors. I also made a rock paper scissors agent that plays quite well! The model for the agent was inspired by … on twitter here … .&lt;/p&gt;
+&lt;p&gt;Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments. My experiments were essentially simple games – there would be buttons that participants could press, and feedback that they would see based on their actions. I decided to make a rock-paper-scissors app to gain experience with Shiny apps and probe their utility as tools for hosting experiments. You can check out the app &lt;a href=&#34;https://macstrelioff.shinyapps.io/rockpaperscissorsagent/&#34;&gt;here (https://macstrelioff.shinyapps.io/rockpaperscissorsagent/)&lt;/a&gt; though I only have 25 hours a month of free hosting, so it may be down occasionally.&lt;/p&gt;
+&lt;p&gt;The source code for this app can be found on my GitHub &lt;a href=&#34;&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;shiny-apps&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Shiny apps&lt;/h1&gt;
-&lt;div id=&#34;ui&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;UI&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34;&gt;Shiny apps&lt;/a&gt; are primarily a tool for dashboarding. A dashboard is a tool that a data professional could create in order to communicate insights and actionable results to decision-makers. Ideally these apps enable decison-makers to easily interact with the data in a way that streamlines their decision making process. Many examples, with code, can be seen in the &lt;a href=&#34;http://shiny.rstudio.com/gallery/&#34;&gt;shiny app gallary&lt;/a&gt; – this was the primary resource I turned to while putting together my app.&lt;/p&gt;
+&lt;p&gt;Shiny apps are comprised of a user interface (UI) component and a server component; a bare-bones script might look like this;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(shiny)
+
+ui &amp;lt;- fluidPage()
+
+server &amp;lt;- function(input, output){}
+
+shinyApp(ui = ui, server = server)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;ui&lt;/code&gt; will contain functions that control the layout of the page and the names of interactive components like buttons and sliders. The server defines how the page changes in response to user actions, and the final line &lt;code&gt;shinyApp(ui=ui,server=server)&lt;/code&gt; runs the app. For hosting on shinyapps.io (described below), the script that runs the app must be called &lt;code&gt;App.R&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;ui-user-interface&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;UI: User Interface&lt;/h2&gt;
+&lt;p&gt;Lesson 3, overview of interactive elements;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/&#34; class=&#34;uri&#34;&gt;http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;server&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Server&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;interactions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Interactions …&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div id=&#34;hosting&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Hosting&lt;/h2&gt;
