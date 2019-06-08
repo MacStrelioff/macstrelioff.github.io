@@ -1,0 +1,41 @@
+---
+title: "Online Autoclicker"
+author: "Mac Strelioff"
+date: "5/13/2019"
+#output: 
+#  html_document:
+#    toc: true
+output:
+  blogdown::html_page:
+    toc: true
+type: docs
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview
+
+Madean autoclicker to play cookie clicker... 
+
+
+
+## Cookie clicker game.. 
+
+
+
+
+talk through code..
+
+
+
+
+
+
+
+
+
+
+

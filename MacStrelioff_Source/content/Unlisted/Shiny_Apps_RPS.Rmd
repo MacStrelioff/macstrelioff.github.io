@@ -1,0 +1,56 @@
+---
+title: "Shiny Apps"
+author: "Mac Strelioff"
+date: "5/13/2019"
+#output: 
+#  html_document:
+#    toc: true
+output:
+  blogdown::html_page:
+    toc: true
+type: docs
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview
+
+Shiny apps are ... 
+
+I wanted to learn more about this, so I made one for playing rock paper scissors. I also made a rock paper scissors agent that plays quite well! The model for the agent was inspired by ... on twitter here ... .
+
+
+# Shiny apps
+
+## UI
+
+## Server
+
+## Interactions ...
+
+## Hosting
+
+
+# Rock Paper Scissors App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1821,7 +1821,6 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#setup&#34;&gt;Setup&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#professional-skills&#34;&gt;Professional Skills&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#mindset-day-1-632019&#34;&gt;Mindset (Day 1: 6/3/2019)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#opportunities-networking-and-company-visits&#34;&gt;Opportunities: Networking and Company Visits&lt;/a&gt;&lt;/li&gt;
@@ -1829,9 +1828,11 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;#linkedin&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#resume&#34;&gt;Resume&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pitch&#34;&gt;Pitch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#demos&#34;&gt;Demos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#projects&#34;&gt;Projects&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#project&#34;&gt;Project&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#setup&#34;&gt;Setup&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ideation-521-65&#34;&gt;Ideation (5/21-6/5)&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#prediction-market&#34;&gt;Prediction Market&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sentiment-analysis&#34;&gt;Sentiment Analysis&lt;/a&gt;&lt;/li&gt;
@@ -1841,10 +1842,14 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;#kaggle-competition&#34;&gt;Kaggle competition?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#selection&#34;&gt;Selection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#guiding-principles-for-analysis&#34;&gt;Guiding principles for analysis&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#variables&#34;&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#models&#34;&gt;Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#consulting&#34;&gt;Consulting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#presentation&#34;&gt;Presentation&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#min&#34;&gt;5 min&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#how-to-solve-a-problem&#34;&gt;How to solve a problem&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -1852,10 +1857,6 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview:&lt;/h1&gt;
 &lt;p&gt;Made this doc to document my journey through the Insight Data Science program.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;setup&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Setup&lt;/h1&gt;
-&lt;p&gt;I installed Python and worked through &lt;a href=&#34;https://sites.google.com/insightdatascience.com/insightfellowresources-sv-19b/pre-session/development-setup&#34;&gt;steps for creating a virtual environment with Anaconda&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;professional-skills&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Professional Skills&lt;/h1&gt;
@@ -1872,6 +1873,7 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Attempt:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ask questions to assess fit: size, hierarchy, business model / monetization&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Avoid:&lt;/p&gt;
 &lt;ul&gt;
@@ -1930,6 +1932,11 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;pitch&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Pitch&lt;/h3&gt;
 &lt;p&gt;A pitch is a quick and compelling story used to start conversations.&lt;/p&gt;
+&lt;p&gt;10 second:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Hi I’m (). I got my PhD in () where I used () to ()”&lt;/li&gt;
+&lt;li&gt;“Hi I’m Mac. I got my PhD in Cognitive Science at UC Irvine, where I used reinforcement learning algorithms as models of how people learn about and interact with a new technology.”&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;30 second:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Appeals to imagination and empathy to facilitate recall and decision-making&lt;/li&gt;
@@ -1937,10 +1944,21 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Creates a story from past experiences that clearly leads to the target job&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div id=&#34;demos&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Demos&lt;/h3&gt;
+&lt;p&gt;A demo is a presentation of work to a hiring committee.&lt;/p&gt;
+&lt;p&gt;Kinds of questions to anticipate:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Very techinical questions&lt;/li&gt;
+&lt;li&gt;Business sense&lt;/li&gt;
+&lt;li&gt;Thought process – diagnostics, model selection, validation or definition of success&lt;/li&gt;
+&lt;li&gt;Alternative approaches, and their strengths and weaknesses&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;projects&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Projects&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;project&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Project&lt;/h1&gt;
 &lt;p&gt;Email;&lt;/p&gt;
 &lt;p&gt;The start of Insight is next week and we’re looking forward to meeting all of you in person! You’re likely aware by now that you’ll be spending a large portion of your time at Insight working on a data science project. These projects are designed to provide evidence of the value you would bring to a data science team and your ability to learn and iterate at a rapid pace.&lt;/p&gt;
 &lt;p&gt;It’s not necessary for you to come to Insight with a project idea in mind (but it can’t hurt!), and we’ll spend the first few days generating and refining project ideas. However, we know that inspiration often strikes when you’re not seeking it, and previous Fellows have mentioned they wish they had come with some ideas in mind.&lt;/p&gt;
@@ -1951,6 +1969,10 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Start thinking about data sources. There are many publicly available datasets, and Fellows in the past have gotten creative with techniques like web scraping and calls to website APIs to get the data they want. That being said, don’t find a dataset first and then try to turn it into a product.&lt;/p&gt;
 &lt;p&gt;Don’t become overly attached to just one project idea. We’ll work together during the first week to refine your project, and we know very well which types of projects work well and which don’t!&lt;/p&gt;
 &lt;p&gt;To reiterate - First think about the problem and your target audience rather than spending all of your time searching for datasets. And don’t fret if you haven’t been struck by inspiration before Day 1! We encourage you to discuss project ideas in the ~projects-DS channel on our 19BSV Mattermost Team!&lt;/p&gt;
+&lt;div id=&#34;setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;p&gt;I installed Python and worked through &lt;a href=&#34;https://sites.google.com/insightdatascience.com/insightfellowresources-sv-19b/pre-session/development-setup&#34;&gt;steps for creating a virtual environment with Anaconda&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;ideation-521-65&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ideation (5/21-6/5)&lt;/h2&gt;
 &lt;div id=&#34;prediction-market&#34; class=&#34;section level3&#34;&gt;
@@ -2015,6 +2037,30 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;How might a company expand the product?&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
+&lt;div id=&#34;guiding-principles-for-analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Guiding principles for analysis&lt;/h2&gt;
+&lt;div id=&#34;variables&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Variables&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Think of the variables and their structure, before seeing data; confounds, precision, neusance, …&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;models&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Models&lt;/h3&gt;
+&lt;p&gt;interpretation&lt;/p&gt;
+&lt;p&gt;validation&lt;/p&gt;
+&lt;p&gt;efficiency – computational, memory load&lt;/p&gt;
+&lt;p&gt;deployment&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;consulting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Consulting&lt;/h2&gt;
+&lt;p&gt;I applied for, and was awarded, a consulting project. This section describes notes on professional consulting relationships.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;populate from consulting class…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&#34;presentation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Presentation&lt;/h2&gt;
 &lt;div id=&#34;min&#34; class=&#34;section level3&#34;&gt;
@@ -2026,13 +2072,6 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;outcome&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;how-to-solve-a-problem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;How to solve a problem&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Think of the variables and their structure, before seeing data; confounds, precision, neusance, …&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -2071,6 +2110,33 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MfP-P8EHGBo&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;p&gt;Add metrics from google analytics, and youtube creator.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Online Autoclicker</title>
+      <link>/MacStrelioff/unlisted/autoclicker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/autoclicker/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#cookie-clicker-game..&#34;&gt;Cookie clicker game..&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Madean autoclicker to play cookie clicker…&lt;/p&gt;
+&lt;div id=&#34;cookie-clicker-game..&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cookie clicker game..&lt;/h2&gt;
+&lt;p&gt;talk through code..&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -2300,6 +2366,93 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
 &lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ranking Algorithms&lt;/h2&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Ranking_(information_retrieval)&#34;&gt;ranking algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shiny Apps</title>
+      <link>/MacStrelioff/unlisted/shiny_apps_rps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/shiny_apps_rps/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#shiny-apps&#34;&gt;Shiny apps&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#ui&#34;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#server&#34;&gt;Server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#interactions&#34;&gt;Interactions …&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hosting&#34;&gt;Hosting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rock-paper-scissors-app&#34;&gt;Rock Paper Scissors App&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Shiny apps are …&lt;/p&gt;
+&lt;p&gt;I wanted to learn more about this, so I made one for playing rock paper scissors. I also made a rock paper scissors agent that plays quite well! The model for the agent was inspired by … on twitter here … .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shiny-apps&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Shiny apps&lt;/h1&gt;
+&lt;div id=&#34;ui&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;UI&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;server&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Server&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interactions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Interactions …&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hosting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Hosting&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rock-paper-scissors-app&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Rock Paper Scissors App&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why I Like Bayesian Statistics</title>
+      <link>/MacStrelioff/unlisted/why_bayes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/why_bayes/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#coherent&#34;&gt;Coherent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#flexible&#34;&gt;Flexible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#integration-with-decision-theory&#34;&gt;Integration with decision theory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Madean autoclicker to play cookie clicker…&lt;/p&gt;
+&lt;div id=&#34;coherent&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Coherent&lt;/h2&gt;
+&lt;p&gt;Examples where frequentist stats is incoherent?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;flexible&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Flexible&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;easy to model complex processes&lt;/li&gt;
+&lt;li&gt;easy to test non-standard hypotheses, e.g. “does every”, or “two groups higher, one group lower”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;integration-with-decision-theory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Integration with decision theory&lt;/h2&gt;
+&lt;p&gt;Thompson sampling example&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

@@ -264,6 +264,10 @@
   </url>
   
   <url>
+    <loc>/MacStrelioff/unlisted/autoclicker/</loc>
+  </url>
+  
+  <url>
     <loc>/MacStrelioff/data-science/learn-data-science/</loc>
   </url>
   
@@ -276,8 +280,16 @@
   </url>
   
   <url>
+    <loc>/MacStrelioff/unlisted/shiny_apps_rps/</loc>
+  </url>
+  
+  <url>
     <loc>/MacStrelioff/unlisted/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/unlisted/why_bayes/</loc>
   </url>
   
 </urlset>

@@ -28,8 +28,8 @@ Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/insight/</guid>
-      <description>Overview: Setup Professional Skills Mindset (Day 1: 6/3/2019) Opportunities: Networking and Company Visits Applying LinkedIn Resume Pitch   Projects Ideation (5/21-6/5) Prediction Market Sentiment Analysis Stats Website Bandit Analysis Car price recommender Kaggle competition?  Selection Presentation 5 min  How to solve a problem    Overview: Made this doc to document my journey through the Insight Data Science program.
- Setup I installed Python and worked through steps for creating a virtual environment with Anaconda.</description>
+      <description>Overview: Professional Skills Mindset (Day 1: 6/3/2019) Opportunities: Networking and Company Visits Applying LinkedIn Resume Pitch Demos   Project Setup Ideation (5/21-6/5) Prediction Market Sentiment Analysis Stats Website Bandit Analysis Car price recommender Kaggle competition?  Selection Guiding principles for analysis Variables Models  Consulting Presentation 5 min     Overview: Made this doc to document my journey through the Insight Data Science program.
+ Professional Skills Mindset (Day 1: 6/3/2019) Imposter syndrome</description>
     </item>
     
     <item>
@@ -44,6 +44,17 @@ Goals are defined in terms of metrics, and user experience is understood through
 Success Metrics  Tracking Metrics   Metrics for Goals  Metrics for Insights  Communicating Metrics Idea from:
  Add metrics from google analytics, and youtube creator.
  </description>
+    </item>
+    
+    <item>
+      <title>Online Autoclicker</title>
+      <link>/MacStrelioff/unlisted/autoclicker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/autoclicker/</guid>
+      <description>  Overview Cookie clicker game..    Overview Madean autoclicker to play cookie clicker…
+Cookie clicker game.. talk through code..
+  </description>
     </item>
     
     <item>
@@ -68,6 +79,29 @@ Econ, compliments and substitutes (competitors).
 Types of recommendation; compliments (these go together), competitors (you might also like…), temporal (might buy this again in the future). Horizontal and vertical focus
 Temporal involves forecasting, which is a topic for another post.
  Sort Algorithms Lots of sort algorithms</description>
+    </item>
+    
+    <item>
+      <title>Shiny Apps</title>
+      <link>/MacStrelioff/unlisted/shiny_apps_rps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/shiny_apps_rps/</guid>
+      <description>  Overview Shiny apps UI Server Interactions … Hosting  Rock Paper Scissors App   Overview Shiny apps are …
+I wanted to learn more about this, so I made one for playing rock paper scissors. I also made a rock paper scissors agent that plays quite well! The model for the agent was inspired by … on twitter here … .
+ Shiny apps UI  Server  Interactions …  Hosting   Rock Paper Scissors App  </description>
+    </item>
+    
+    <item>
+      <title>Why I Like Bayesian Statistics</title>
+      <link>/MacStrelioff/unlisted/why_bayes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/why_bayes/</guid>
+      <description>  Overview Coherent Flexible Integration with decision theory    Overview Madean autoclicker to play cookie clicker…
+Coherent Examples where frequentist stats is incoherent?
+ Flexible  easy to model complex processes easy to test non-standard hypotheses, e.g. “does every”, or “two groups higher, one group lower”   Integration with decision theory Thompson sampling example
+  </description>
     </item>
     
   </channel>

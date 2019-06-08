@@ -21,10 +21,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Made this doc to document my journey through the Insight Data Science program. 
 
-# Setup
-
-I installed Python and worked through [steps for creating a virtual environment with Anaconda](https://sites.google.com/insightdatascience.com/insightfellowresources-sv-19b/pre-session/development-setup). 
-
 # Professional Skills
 
 ## Mindset (Day 1: 6/3/2019)
@@ -45,6 +41,7 @@ At Insight, data science hiring teams frequently visit. During the first week, w
 Attempt: 
 
 - Ask questions to assess fit: size, hierarchy, business model / monetization
+- 
 
 Avoid: 
 
@@ -91,7 +88,6 @@ Order from most to least impactful. Focus on content relevant for next role.
 - Education, also mainly for recruiters. Could include a section on specific courses, but would be more impactful as projects in the experience section.
 - NO SUMMARY, experience is more valuable. Can put one on LinkedIn. Avoid making too specific (pidgenhole) or general (cliche). 
 
-
 Tips: 
 
 - Include numbers to quantify impacts, numbers can be salient relative to text.
@@ -104,6 +100,7 @@ Tips:
 A pitch is a quick and compelling story used to start conversations.
 
 10 second: 
+
 - "Hi I'm (). I got my PhD in () where I used () to ()"
 - "Hi I'm Mac. I got my PhD in Cognitive Science at UC Irvine, where I used reinforcement learning algorithms as models of how people learn about and interact with a new technology."
 
@@ -112,10 +109,19 @@ A pitch is a quick and compelling story used to start conversations.
 - Appeals to imagination and empathy to facilitate recall and decision-making
 - Differentaites you as a leader rather than hopeful employee
 - Creates a story from past experiences that clearly leads to the target job
-- 
 
+### Demos
 
-# Projects
+A demo is a presentation of work to a hiring committee. 
+
+Kinds of questions to anticipate: 
+
+- Very techinical questions
+- Business sense
+- Thought process -- diagnostics, model selection, validation or definition of success
+- Alternative approaches, and their strengths and weaknesses
+
+# Project
 
 Email; 
 
@@ -136,6 +142,10 @@ Start thinking about data sources. There are many publicly available datasets, a
 Don’t become overly attached to just one project idea. We’ll work together during the first week to refine your project, and we know very well which types of projects work well and which don’t! 
 
 To reiterate - First think about the problem and your target audience rather than spending all of your time searching for datasets. And don’t fret if you haven’t been struck by inspiration before Day 1! We encourage you to discuss project ideas in the ~projects-DS channel on our 19BSV Mattermost Team!
+
+## Setup
+
+I installed Python and worked through [steps for creating a virtual environment with Anaconda](https://sites.google.com/insightdatascience.com/insightfellowresources-sv-19b/pre-session/development-setup). 
 
 ## Ideation (5/21-6/5)
 
@@ -212,22 +222,38 @@ Assess potential
 10. How might a company expand the product?
 
 
+## Guiding principles for analysis
+
+### Variables
+
+1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
+2. 
+
+### Models
+
+interpretation
+
+validation
+
+efficiency -- computational, memory load
+
+deployment
+
+## Consulting
+
+I applied for, and was awarded, a consulting project. This section describes notes on professional consulting relationships. 
+
+- populate from consulting class...
+
 
 ## Presentation
 
 ### 5 min
+
 - context
 - need 
 - vision ('stretch goal')
 - outcome
- 
- 
-
-
-## How to solve a problem
-
-1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
-2. 
 
 
 
