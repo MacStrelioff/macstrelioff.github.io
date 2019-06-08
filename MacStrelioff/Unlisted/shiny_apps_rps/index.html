@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Overview Shiny apps UI: User Interface Server Hosting  Rock Paper Scissors App   Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments.">
+  <meta name="description" content="Overview Shiny apps UI: User Interface Server Components Rock Paper Scissors Agent Logic  Hosting    Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/unlisted/shiny_apps_rps/">
@@ -136,7 +136,7 @@
   <meta property="og:site_name" content="">
   <meta property="og:url" content="/MacStrelioff/unlisted/shiny_apps_rps/">
   <meta property="og:title" content="Shiny Apps | ">
-  <meta property="og:description" content="Overview Shiny apps UI: User Interface Server Hosting  Rock Paper Scissors App   Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Overview Shiny apps UI: User Interface Server Components Rock Paper Scissors Agent Logic  Hosting    Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   
@@ -366,22 +366,24 @@ Please define menu items named `[menu.Unlisted]` in your Unlisted/Shiny_Apps_RPS
 <li><a href="#overview">Overview</a></li>
 <li><a href="#shiny-apps">Shiny apps</a><ul>
 <li><a href="#ui-user-interface">UI: User Interface</a></li>
-<li><a href="#server">Server</a></li>
+<li><a href="#server">Server</a><ul>
+<li><a href="#components">Components</a></li>
+<li><a href="#rock-paper-scissors-agent-logic">Rock Paper Scissors Agent Logic</a></li>
+</ul></li>
 <li><a href="#hosting">Hosting</a></li>
 </ul></li>
-<li><a href="#rock-paper-scissors-app">Rock Paper Scissors App</a></li>
 </ul>
 </div>
 
 <div id="overview" class="section level1">
 <h1>Overview</h1>
 <p>Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments. My experiments were essentially simple games – there would be buttons that participants could press, and feedback that they would see based on their actions. I decided to make a rock-paper-scissors app to gain experience with Shiny apps and probe their utility as tools for hosting experiments. You can check out the app <a href="https://macstrelioff.shinyapps.io/rockpaperscissorsagent/">here (https://macstrelioff.shinyapps.io/rockpaperscissorsagent/)</a> though I only have 25 hours a month of free hosting, so it may be down occasionally.</p>
-<p>The source code for this app can be found on my GitHub <a href="">here</a></p>
+<p>The source code for this app can be found on my GitHub <a href="https://github.com/MacStrelioff/RockPaperScissors">here</a></p>
 </div>
 <div id="shiny-apps" class="section level1">
 <h1>Shiny apps</h1>
 <p><a href="http://shiny.rstudio.com/">Shiny apps</a> are primarily a tool for dashboarding. A dashboard is a tool that a data professional could create in order to communicate insights and actionable results to decision-makers. Ideally these apps enable decison-makers to easily interact with the data in a way that streamlines their decision making process. Many examples, with code, can be seen in the <a href="http://shiny.rstudio.com/gallery/">shiny app gallary</a> – this was the primary resource I turned to while putting together my app.</p>
-<p>Shiny apps are comprised of a user interface (UI) component and a server component; a bare-bones script might look like this;</p>
+<p>Shiny apps are comprised of a user interface (UI) component and a server component; a common layout might look like this;</p>
 <pre><code>library(shiny)
 
 ui &lt;- fluidPage()
@@ -389,21 +391,159 @@ ui &lt;- fluidPage()
 server &lt;- function(input, output){}
 
 shinyApp(ui = ui, server = server)</code></pre>
-<p>The <code>ui</code> will contain functions that control the layout of the page and the names of interactive components like buttons and sliders. The server defines how the page changes in response to user actions, and the final line <code>shinyApp(ui=ui,server=server)</code> runs the app. For hosting on shinyapps.io (described below), the script that runs the app must be called <code>App.R</code>.</p>
+<p>The <code>ui</code> will contain functions that control the layout of the page and the names of interactive components like buttons and sliders. The <code>server</code> defines how the page changes in response to events and user actions, and the final line <code>shinyApp(ui=ui,server=server)</code> runs the app. For hosting on shinyapps.io (described below), the script that runs the app must be called <code>App.R</code>.</p>
 <div id="ui-user-interface" class="section level2">
 <h2>UI: User Interface</h2>
-<p>Lesson 3, overview of interactive elements;</p>
-<p><a href="http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/" class="uri">http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/</a></p>
+<p>My code for the user interface is shown below and broken down in this section;</p>
+<pre><code>ui &lt;- fluidPage(
+  # Application title
+  titlePanel(&quot;Rock Paper Scissors!&quot;),
+  # figure
+  fluidRow(
+    column(width=5,
+           plotOutput(&quot;distPlot&quot;)
+    )
+  ),
+  # buttons
+  fluidRow(
+    column(width=5,offest=2,
+           actionButton(&quot;rock&quot;,&quot;Rock&quot;),
+           actionButton(&quot;paper&quot;,&quot;Paper&quot;),
+           actionButton(&quot;scissors&quot;,&quot;Scissors&quot;)
+    )
+  ),
+  fluidRow(width=5,offset=5,
+           textOutput(&quot;result&quot;),br(),
+           p(&quot;Source code available at: https://github.com/MacStrelioff/RockPaperScissors&quot;)
+           )
+  
+)</code></pre>
+<p>The <code>fluidPage()</code> function is named after a type of layout that adjusts to the dimensions of a browser. Functions within <code>fluidPage()</code> add elements to the webpage. <code>titlePanel(&quot;TITLE&quot;)</code> controls the large title at the top of a page. <code>fluidRow()</code> adds rows of elements to the page, the length of which are determined by the <code>column()</code> function. I add the figure with;</p>
+<pre><code>column(width=5,
+       plotOutput(&quot;distPlot&quot;)
+)</code></pre>
+<p>Here <code>plotOutput(&quot;OUTPUT_NAME&quot;)</code> takes an output from the <code>server</code> function, described in the next section, and plots it. More information on reactive output can be found <a href="http://shiny.rstudio.com/tutorial/written-tutorial/lesson4/">here</a>.</p>
+<p>Next I create the row of buttons with;</p>
+<pre><code># buttons
+fluidRow(
+  column(width=5,offest=2,
+         actionButton(&quot;rock&quot;,&quot;Rock&quot;),
+         actionButton(&quot;paper&quot;,&quot;Paper&quot;),
+         actionButton(&quot;scissors&quot;,&quot;Scissors&quot;)
+  )
+)</code></pre>
+<p>Here <code>offset</code> controls spacing from a previous <code>column</code> call (not used here since everything is in one <code>column()</code> call). Each <code>actionButton()</code> call draws one of the buttons – the first argument is the variable name of this button, which is used as input for the server, and the second argument is the text that appears on the button. An overview of the many kinds of interactive elements you can add is avilable <a href="http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/">here</a>.</p>
+<p>Finally I add some text to describe game events and point interested users to the source code, with;</p>
+<pre><code>fluidRow(width=5,offset=5,
+         textOutput(&quot;result&quot;),br(),
+         p(&quot;Source code available at: https://github.com/MacStrelioff/RockPaperScissors&quot;)
+         )</code></pre>
+<p>Here <code>textOutput(&quot;OUTPUT_NAME&quot;)</code> takes the text ouput variable <code>OUTPUT_NAME</code> from the server and displays it. <code>br()</code>, named after a line break in HTML (<code>&lt;br&gt;</code>) adds a line break. And <code>p()</code> adds static text, again named after a paragraph tag (<code>&lt;p&gt;</code>) in HTML.</p>
 </div>
 <div id="server" class="section level2">
 <h2>Server</h2>
+<p>The server defines how page elements interact with user input and server events.</p>
+<div id="components" class="section level3">
+<h3>Components</h3>
+<p>My code for the server is shown below and broken down in this section with an emphasis on the functions used. In the code below, I replaced opponent logic with <code>...</code> to keep the emphasis here on understanding server functions. This logic is revealed and detailed in the next section.</p>
+<pre><code>server &lt;- function(input, output) {
+  
+  # initialize variables (runs once when app visited)
+  values &lt;- reactiveValues()
+  values$round =0; # track round
+  values$opp_actions = c() # track opponent actions
+  values$score =0; # track score
+  values$scores=0; # track score history for feedback
+  values$grams = data.frame(&#39;rrrrr&#39;=rep(0,3)) # initialize to store gram counts
+  values$a = &quot;init&quot;;
+  values$as = c(&quot;r&quot;,&quot;p&quot;,&quot;s&quot;) # possible actions
+
+  # text feedback
+  #observeEvent(input$rock,{
+  #  values$t = values$t+1 # step in time
+  #})
+  
+  observeEvent(input$rock | input$paper | input$scissors,{
+      # if any action taken (done to block the first run when these are all NULL-&gt;0)
+      if(input$rock | input$paper | input$scissors){
+        # increment round
+        values$round  = values$round+1;
+        # policy -- code to greedily pick best action
+        ## if fewer than 5 actions taken, draw uniformly
+        if(length(values$opp_actions)&lt;5){
+          values$a=sample(values$as,1)
+          } else{ # if at least 5 actions taken
+          nobs = length(values$opp_actions)
+          ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = &quot;&quot;)
+          #cat(&quot;\n&quot;,ngram)
+          # if this pattern not observed before, initialize it and choose randomly
+          if(!any(names(values$grams)==ngram)){
+            values$grams[ngram]=rep(0,3)
+            values$a=sample(values$as,1)
+          } else { # if at least 5 actions taken, and this pattern has been seen before, 
+            pred = values$as[which.max(values$grams[ngram][[1]])]
+            values$a=switch(pred,&quot;r&quot;=&quot;p&quot;,&quot;p&quot;=&quot;s&quot;,&quot;s&quot;=&quot;r&quot;)
+          }
+          #cat(&quot;\n&quot;,names(values$grams))
+          #cat(&quot;\n&quot;,values$grams[ngram][[1]])
+        }
+        
+        # get opponent action and outcome
+        if(input$rock    -sum(values$opp_actions==&quot;r&quot;)==1){
+          opp_action=&quot;r&quot;
+          dscore = switch(values$a,&quot;r&quot;=0,&quot;p&quot;=-1,&quot;s&quot;=1)
+          }
+        if(input$paper   -sum(values$opp_actions==&quot;p&quot;)==1){
+          opp_action=&quot;p&quot;
+          dscore = switch(values$a,&quot;r&quot;=1,&quot;p&quot;=0,&quot;s&quot;=-1)
+        }
+        if(input$scissors-sum(values$opp_actions==&quot;s&quot;)==1){
+          opp_action=&quot;s&quot;
+          dscore = switch(values$a,&quot;r&quot;=-1,&quot;p&quot;=1,&quot;s&quot;=0)
+        }
+        
+        # evaluate outcome
+        values$score  = values$score+dscore
+        values$scores = c(values$scores,values$score);
+        
+        # update opponent model 
+        values$opp_actions = c(values$opp_actions,opp_action);
+        
+        if(length(values$opp_actions)&gt;5){
+          if(any(names(values$grams)==ngram)){
+            values$grams[ngram][[1]]=values$grams[ngram][[1]]+(values$as==opp_action)
+          }
+        }
+        
+      }
+    
+    # use strings to code, then just take last 5 strings and use as the key for the dictionary of 5-grams...
+    output$distPlot &lt;- renderPlot({
+      try({
+      x = seq(0,values$round);
+      y = values$scores;
+      cat(&quot;\n round:&quot;,values$round, &quot;, score:&quot;,values$score,&quot;, len(x): &quot;,length(x),&quot; len(y):&quot;,length(y),&quot;, opp_act:&quot;,values$opp_actions,
+          &quot;\n a: &quot;,values$a,
+          sep=&quot;&quot;)
+      # draw the histogram with the specified number of bins
+      plot(x,y,type=&quot;l&quot;,xlab = &quot;Rounds&quot;,ylab=&quot;Score&quot;,main=&quot;Cumulative Score&quot;)
+      })
+    })
+    })
+  
+  output$result = renderText({
+    paste(&quot;Opponent chose: &quot;,switch(values$a,&quot;r&quot;=&quot;Rock&quot;,&quot;p&quot;=&quot;Paper&quot;,&quot;s&quot;=&quot;Scissors&quot;,&quot;init&quot;=&quot;Nothing yet, ...&quot;))
+  })
+  
+}</code></pre>
+</div>
+<div id="rock-paper-scissors-agent-logic" class="section level3">
+<h3>Rock Paper Scissors Agent Logic</h3>
+</div>
 </div>
 <div id="hosting" class="section level2">
 <h2>Hosting</h2>
 </div>
-</div>
-<div id="rock-paper-scissors-app" class="section level1">
-<h1>Rock Paper Scissors App</h1>
 </div>
 
           </div>
