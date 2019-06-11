@@ -112,13 +112,16 @@ At Insight, data science hiring teams frequently visit. During the first week, w
 Attempt: 
 
 - Ask questions to assess fit: size, hierarchy, business model / monetization
-- Foster a connection and sense of trust by demonstrating curiosity and enthusiasm, and making the conterparty feel heard.
+- Ask about experiences -- "Tell me about a time when someone ...". This leads to an opportunity to make them feel heard and important, or to foster a sense of connection around a similar shared experience.
+- Demonstrating curiosity and engagement, to foster a connection and sense of trust.
 
 Avoid: 
 
-- "Questions" purely intended to demonstrate your own knowledge. Instead, introduce yourself after the talk. 
-- Trying to prove you are smarter than the conterparty, instead 
-- Implying that their product is inferior relative to a competitor, this can make them feel defensive and mitigate the potential for a trusting connection.
+- "Questions" purely intended to demonstrate your own knowledge. Instead, introduce yourself after the talk.
+- Trying to prove you are smarter than the conterparty, which can make them view you as a threat. Instead cooperate with them to foster trust.
+- Implying that their company is inferior to a competitor, this can make them feel defensive and mitigate the potential for a trusting connection.
+
+### Example Questions
 
 
 
