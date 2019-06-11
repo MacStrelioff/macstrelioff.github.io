@@ -4,7 +4,7 @@ authors:
 
 name: Mac Strelioff
 organizations:
-- name: University of California, Irvine
+- name: 
   url: ""
 role: Cognitive Scientist (Ph.D.) Statistician (M.S.)
 social:
