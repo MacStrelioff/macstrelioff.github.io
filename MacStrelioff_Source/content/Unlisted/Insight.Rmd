@@ -219,7 +219,16 @@ deployment
 
 I applied for, and was awarded, a consulting project. This section describes notes on professional consulting relationships. 
 
+
 - populate from consulting class...
+
+### MVP: 
+
+Working model and actionable insights
+
+### Final Deliverable
+
+Blog post describing the project
 
 
 ## Presentation
