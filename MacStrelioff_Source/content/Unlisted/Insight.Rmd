@@ -33,22 +33,6 @@ Open mindedness -- new problem space, ...
 
 Adaptability, identify weakenesses and adapt
 
-
-## Opportunities: Networking and Company Visits
-
-At Insight, data science hiring teams frequently visit. During the first week, we had visits from Square, Lab 41, and App Annie. 
-
-Attempt: 
-
-- Ask questions to assess fit: size, hierarchy, business model / monetization
-- 
-
-Avoid: 
-
-- "Questions" purely intended to demonstrate your own knowledge. Instead, introduce yourself after the talk. 
-- 
-
-
 ## Applying
 
 Identify strengths, and demonstrantions of value to a company
@@ -94,7 +78,6 @@ Tips:
 - Include URLs, for those who read on paper. 
 - Consistent puncuation, ... .
 
-
 ### Pitch
 
 A pitch is a quick and compelling story used to start conversations.
@@ -120,6 +103,24 @@ Kinds of questions to anticipate:
 - Business sense
 - Thought process -- diagnostics, model selection, validation or definition of success
 - Alternative approaches, and their strengths and weaknesses
+
+
+## Opportunities: Networking and Company Visits
+
+At Insight, data science hiring teams frequently visit. During the first week, we had visits from Square, Lab 41, and App Annie. 
+
+Attempt: 
+
+- Ask questions to assess fit: size, hierarchy, business model / monetization
+- Foster a connection and sense of trust by demonstrating curiosity and enthusiasm, and making the conterparty feel heard.
+
+Avoid: 
+
+- "Questions" purely intended to demonstrate your own knowledge. Instead, introduce yourself after the talk. 
+- Trying to prove you are smarter than the conterparty, instead 
+- Implying that their product is inferior relative to a competitor, this can make them feel defensive and mitigate the potential for a trusting connection.
+
+
 
 # Project
 
