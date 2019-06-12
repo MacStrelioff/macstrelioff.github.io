@@ -16,10 +16,11 @@ math: true
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 # Overview: 
 
 Made this doc to document my journey through the Insight Data Science program. 
+
+1-3 work on project and professional skills. Week 4 work on demo. Weeks 5-8 deliver demo, work on interview preparation. 
 
 # Professional Skills
 
@@ -201,21 +202,84 @@ Assess potential
 
 10. How might a company expand the product?
 
-## Business Value Statement
+## Guiding principles for analysis
+
+This wasn't taught at insight, so I'm drawing on my training in statistics and model building here.
+
+### Thinking about Variables
+
+1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
+2. 
+
+### Thinking about Models
+
+Estimand
+
+interpretation
+
+validation (CV)
+
+efficiency -- computational, memory load
+
+deployment
+
+## Consulting
+
+I applied for, and was awarded, a consulting project. This section describes notes on professional consulting relationships. 
+
+- populate from consulting class...
+
+Constant communication to clarify goals and stay on track. It can be tempting or habitual to conduct an extravagent analysis without regard for its usefulness to the cliant -- avoid this waste of time by continually checking in, presenting work, and clarifying the client's goals and desired outcomes. 
+
+## Minimum Viable Product (MVP)
+
+Working model and actionable insights
+
+## Final Deliverable
+
+Blog post describing the project
+
+
+## Presentation or Demo 
+
+- context
+- need 
+- vision ('stretch goal')
+- outcome
+
+Demonstrate: 
+
+- Value of the solution
+- Value of you -- 1-2 years of salary, benefits, ...
+- Reasoning throughout the project.
+
+
+### Business Value Statement
+
+[hub page](https://sites.google.com/insightdatascience.com/professional-skills-hub-sv-19b/communication/business-value-statement)
 
 1. Summarize project and its use case
 
 "I'm using [data] to develop [deliverable] that [outcome] so that [client] can [solution to problem]"
+
+Mine was: "I'm using daily user activity during a free trial to estimate the probability that the user will convert to a paid user, so that my client can decide when and how to nudge free users that are unlikely to convert"
 
 2. Quantify impact; 
 - Statistics that give the scope of the problem
 - What is the market, or how many potential customers exist?
 - What resources, and how much, will the solution save? 
 
+"The fate of a start-up hinges on user acquisition."
+
 3. Broaden use case. Convey the abstract or general challenge that was solved. 
+
+
 
 4. Combine for final pitch
 
+My value statement for this project was: 
+
+"The fate of a start-up depends on user acquisition. I'm using data on user behavior during a free trial to estimate the probability that a free user will convert to a paid user, and determine which product features drive this conversion. My analysis will guide decisions about when and how to nudge the free users that are unlikely to convert, so that my client can acquire more paying users"
 
 Things to consider; 
 
@@ -225,7 +289,6 @@ Things to consider;
 - What solutions already exist, how is yours better? How would this solution save time, money, emotional headache, ... ?
 - After watching the demo, what skills would the audiance know you can offer on Day 1? How will your demo make these skills explicit? 
 - Given the technical challenges of executing the project, who is going to be most excited to interview you? How does your project relate to the challenges they face? (specific companies, types of teams, industries, ... )
-
 
 Product: I'm conducting analyses on user demographics, and making a model to predict user conversion after a free trial. 
 
@@ -240,60 +303,8 @@ After demo: Summary stat skills for demographics, root cause analysis for findin
 Who will like the presentation?: Collaborative teams, since I delivered a little for mutltiple teams. Teams that rely on data scientists for business decisions, since I worked actionably product insights. 
 
 
-## Demo 
 
-Demonstrate: 
-
-- Value of the solution
-- Value of you -- 1-2 years of salary, benefits, ...
-- Reasoning throughout the project.
-
-
-
-## Guiding principles for analysis
-
-### Variables
-
-1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
-2. 
-
-### Models
-
-interpretation
-
-validation
-
-efficiency -- computational, memory load
-
-deployment
-
-## Consulting
-
-I applied for, and was awarded, a consulting project. This section describes notes on professional consulting relationships. 
-
-
-- populate from consulting class...
-
-### MVP: 
-
-Working model and actionable insights
-
-### Final Deliverable
-
-Blog post describing the project
-
-
-## Presentation
-
-### 5 min
-
-- context
-- need 
-- vision ('stretch goal')
-- outcome
-
-
-
+# Interview Preparation
 
 
 
