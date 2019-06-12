@@ -16,10 +16,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/banditalgos/</guid>
-      <description>TODO: redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.   Bandit Algorithms Much of this is from this blog.
+      <description>Sources / Alternatives  Netflix Experimentation and Sequential Testing Optamizely Google Analytics   TODO: redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.   Bandit Algorithms Much of this is from this blog.
 Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;
-Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
-\[ \begin{aligned} t &amp;amp;\in \{1,...,T\} \\ a_t &amp;amp;\in \mathcal{A} \\ s_t &amp;amp;\in \mathcal{S} \\ r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\ T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\ \pi(s_t)&amp;amp;=p(a_t|s_t) \end{aligned} \]</description>
+Problem Formalization Bandit tasks can be cast as a Markov Decision Process.</description>
     </item>
     
     <item>
@@ -28,7 +27,7 @@ Problem Formalization Bandit tasks can be cast as a Markov Decision Process.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/insight/</guid>
-      <description>Overview: Professional Skills Mindset (Day 1: 6/3/2019) Applying LinkedIn Resume Pitch Demos  Opportunities: Networking and Company Visits Example Questions   Project Ideation (5/21-6/5) Prediction Market Sentiment Analysis Stats Website Bandit Analysis Car price recommender Kaggle competition?  Selection Guiding principles for analysis Variables Models  Consulting MVP: Final Deliverable  Presentation 5 min     Overview: Made this doc to document my journey through the Insight Data Science program.</description>
+      <description>Overview: Professional Skills Mindset (Day 1: 6/3/2019) Applying LinkedIn Resume Pitch Demos  Opportunities: Networking and Company Visits Example Questions   Project Ideation (5/21-6/5) Prediction Market Sentiment Analysis Stats Website Bandit Analysis Car price recommender Kaggle competition?  Selection Business Value Statement Demo Guiding principles for analysis Variables Models  Consulting MVP: Final Deliverable  Presentation 5 min     Overview: Made this doc to document my journey through the Insight Data Science program.</description>
     </item>
     
     <item>

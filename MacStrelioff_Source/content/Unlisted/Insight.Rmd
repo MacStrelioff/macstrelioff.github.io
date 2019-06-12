@@ -201,6 +201,54 @@ Assess potential
 
 10. How might a company expand the product?
 
+## Business Value Statement
+
+1. Summarize project and its use case
+
+"I'm using [data] to develop [deliverable] that [outcome] so that [client] can [solution to problem]"
+
+2. Quantify impact; 
+- Statistics that give the scope of the problem
+- What is the market, or how many potential customers exist?
+- What resources, and how much, will the solution save? 
+
+3. Broaden use case. Convey the abstract or general challenge that was solved. 
+
+4. Combine for final pitch
+
+
+Things to consider; 
+
+- Concise description of project
+- Who are the potential users, how many exist?
+- What problem is solved, evidence that it is a real problem
+- What solutions already exist, how is yours better? How would this solution save time, money, emotional headache, ... ?
+- After watching the demo, what skills would the audiance know you can offer on Day 1? How will your demo make these skills explicit? 
+- Given the technical challenges of executing the project, who is going to be most excited to interview you? How does your project relate to the challenges they face? (specific companies, types of teams, industries, ... )
+
+
+Product: I'm conducting analyses on user demographics, and making a model to predict user conversion after a free trial. 
+
+Potential users: My client. Various teams will use the demographic analyses. 
+
+Problem: Want to know what features or experiences with the product are driving sales. 
+
+competitors: none here. 
+
+After demo: Summary stat skills for demographics, root cause analysis for finding features that drive conversion, feature engineering for the predictive model, ML model building and fitting. Interpreting data for a general audience. 
+
+Who will like the presentation?: Collaborative teams, since I delivered a little for mutltiple teams. Teams that rely on data scientists for business decisions, since I worked actionably product insights. 
+
+
+## Demo 
+
+Demonstrate: 
+
+- Value of the solution
+- Value of you -- 1-2 years of salary, benefits, ...
+- Reasoning throughout the project.
+
+
 
 ## Guiding principles for analysis
 
