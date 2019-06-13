@@ -126,16 +126,21 @@ Avoid:
 
 ### Profiling an opportunity
 
-1. Type of work? 
-- 
-2. Who are the colleagues? 
-- Number of employees
-- Team composition
-- Background and expertise of team members?
-3. Agency?
+1. Project lifecycles and autonomy? 
 - How do data scientists get projects? 
-- How often are check-ups with the team or managers?
 - What is the hierarchy?
+- How often are check-ups with the team or managers?
+2. Who are the colleagues? 
+- Team composition -- team size and roles?
+- Background and expertise of team members?
+3. Work culture
+- Company sponsored activities? 
+- Leanring or mentoring opportunities?
+- Work hours / work from home policies?
+- Vacation policies?
+4. Next steps
+- Interview and onboarding process?
+- Current projects? 
 
 
 
