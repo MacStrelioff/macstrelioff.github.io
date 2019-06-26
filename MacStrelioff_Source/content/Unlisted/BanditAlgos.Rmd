@@ -22,7 +22,6 @@ set.seed(10201991)
 - Optamizely
 - Google Analytics
 
-
 # TODO:
 1. redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script. 
 
@@ -34,6 +33,14 @@ https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recomm
 For Air BNB experimentation dashboard:
 https://medium.com/airbnb-engineering/experiment-reporting-framework-4e3fcd29e6c0
 --->
+
+
+# Intro
+
+Scientists and business students are trained in decision making from an outdated perspective -- classical decision making based on p-values.
+
+
+(make a case against p-values -- inflated error rates, incoherence, difficulty integrating with expected value)
 
 # Bandit Algorithms
 
