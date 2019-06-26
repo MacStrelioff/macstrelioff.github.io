@@ -243,6 +243,16 @@
   </url>
   
   <url>
+    <loc>/MacStrelioff/insight-consulting/consulting/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/insight-consulting/insight-elastic-projects/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/MacStrelioff/author/admin/</loc>
   </url>
   
@@ -257,6 +267,11 @@
   
   <url>
     <loc>/MacStrelioff/unlisted/insight/</loc>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/insight-consulting/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

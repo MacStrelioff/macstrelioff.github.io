@@ -16,9 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/banditalgos/</guid>
-      <description>Sources / Alternatives  Netflix Experimentation and Sequential Testing Optamizely Google Analytics   TODO: redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.   Bandit Algorithms Much of this is from this blog.
-Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;
-Problem Formalization Bandit tasks can be cast as a Markov Decision Process.</description>
+      <description>Sources / Alternatives  Netflix Experimentation and Sequential Testing Optamizely Google Analytics   TODO: redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.   Intro Scientists and business students are trained in decision making from an outdated perspective – classical decision making based on p-values.
+(make a case against p-values – inflated error rates, incoherence, difficulty integrating with expected value)</description>
     </item>
     
     <item>
