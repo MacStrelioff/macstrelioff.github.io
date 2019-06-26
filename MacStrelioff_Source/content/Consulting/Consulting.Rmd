@@ -4,313 +4,44 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Overview: 
+# Understanding User Acquisition
 
-Made this doc to document my journey through the Insight Data Science program. 
 
-1-3 work on project and professional skills. Week 4 work on demo. Weeks 5-8 deliver demo, work on interview preparation. 
+# Business value statement 
 
-# Professional Skills
+The survival of any business hinges on it's ability to acquire new users. 
 
-## Mindset (Day 1: 6/3/2019)
 
-Imposter syndrome
+# Data sources (exclude clearbit)
 
-Fail quickly and iterate
 
-Open mindedness -- new problem space, ...
+## Data preparation
 
-Adaptability, identify weakenesses and adapt
+feature engineering
 
-## Applying
+# Thinking
 
-Identify strengths, and demonstrantions of value to a company
+Payers and non-payers Might differ in distributions of activity
 
-### LinkedIn
+# Exploration
 
-[workshop](https://sites.google.com/insightdatascience.com/professional-skills-hub-sv-19b/resumes/linkedin?authuser=0)
+Modeling 
 
-### Resume
+discriminant analyses, ... 
 
-[hub page](https://sites.google.com/insightdatascience.com/professional-skills-hub-sv-19b/resumes)
+# Modeling
 
-[workshop lecture](https://www.youtube.com/watch?v=LEhTuQ4kvUU&feature=youtu.be)
+regression trees, boosted trees, support vector classifier
 
-Resume is a marketing tool to get an interview. Resumes should be understood in 15-45 seconds. 
 
-Audience: 
+# Results
 
-1. Hiring managers
-- Wants: quickly hire, culture fit, compliments skillsets on team
-- Dislike: lack of detail, 'fluff', verbose
-2. Recruiter 
-- Wants: Pass high quality 
-- Dislikes: Poor writing or grammer, "creative" resumes that take time to orient to, verbose
 
-Convey: 
 
-- Technical fit for role
-- Potential for learning and growth
-- Unique professional value (differentiation)
+# Conclusions
 
-Components:
 
-Order from most to least impactful. Focus on content relevant for next role.
 
-- Header, contact information. Location that is local to the company being applied to. LinkedIn should also include anything not on resume. 
-- Skills, core competencies for recruiter to check off required skills. Sort into meaningful clusters. 
-- Experience, for hiring manager. Include evidence of the skills. Talk about publications here, and emphasize their impact or value. Start with past-tense verb. Situation, Task, Action, Result. 
-- Education, also mainly for recruiters. Could include a section on specific courses, but would be more impactful as projects in the experience section.
-- NO SUMMARY, experience is more valuable. Can put one on LinkedIn. Avoid making too specific (pidgenhole) or general (cliche). 
-
-Tips: 
-
-- Include numbers to quantify impacts, numbers can be salient relative to text.
-- Include URLs, for those who read on paper. 
-- Consistent puncuation, ... .
-
-### Pitch
-
-A pitch is a quick and compelling story used to start conversations.
-
-10 second: 
-
-- "Hi I'm (). I got my PhD in () where I used () to ()"
-- "Hi I'm Mac. I got my PhD in Cognitive Science at UC Irvine, where I used reinforcement learning algorithms as models of how people learn about and interact with a new technology."
-
-30 second: 
-
-- Appeals to imagination and empathy to facilitate recall and decision-making
-- Differentaites you as a leader rather than hopeful employee
-- Creates a story from past experiences that clearly leads to the target job
-
-### Demos
-
-A demo is a presentation of work to a hiring committee. 
-
-Kinds of questions to anticipate: 
-
-- Very techinical questions
-- Business sense
-- Thought process -- diagnostics, model selection, validation or definition of success
-- Alternative approaches, and their strengths and weaknesses
-
-
-## Opportunities: Networking and Company Visits
-
-At Insight, data science hiring teams frequently visit. During the first week, we had visits from Square, Lab 41, and App Annie. 
-
-Attempt: 
-
-- Ask questions to assess fit: size, hierarchy, business model / monetization
-- Ask about experiences -- "Tell me about a time when someone ...". This leads to an opportunity to make them feel heard and important, or to foster a sense of connection around a similar shared experience.
-- Demonstrating curiosity and engagement, to foster a connection and sense of trust.
-
-Avoid: 
-
-- "Questions" purely intended to demonstrate your own knowledge. Instead, introduce yourself after the talk.
-- Trying to prove you are smarter than the conterparty, which can make them view you as a threat. Instead cooperate with them to foster trust.
-- Implying that their company is inferior to a competitor, this can make them feel defensive and mitigate the potential for a trusting connection.
-
-### Profiling an opportunity
-
-1. Project lifecycles and autonomy? 
-- How do data scientists get projects? 
-- What is the hierarchy?
-- How often are check-ups with the team or managers?
-2. Who are the colleagues? 
-- Team composition -- team size and roles?
-- Background and expertise of team members?
-3. Work culture
-- Company sponsored activities? 
-- Leanring or mentoring opportunities?
-- Work hours / work from home policies?
-- Vacation policies?
-4. Next steps
-- Interview and onboarding process?
-- Current projects? 
-
-
-
-# Project
-
-## Ideation (5/21-6/5)
-
-### Prediction Market
-
-### Sentiment Analysis
-
-[tools](https://medium.com/@datamonsters/sentiment-analysis-tools-overview-part-1-positive-and-negative-words-databases-ae35431a470c)
-
-https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e
-
-http://sentdex.com/sentiment-analysis/
-
-### Stats Website
-
-Shiny app that generates practice problems and contains lessons
-
-### Bandit Analysis
-
-[good example](http://fastml.com/ab-testing-with-bayesian-bandits-in-google-analytics/)
-
-https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
-
-[good dashboarding](https://blog.insightdatascience.com/visualizing-machine-learning-thresholds-to-make-better-business-decisions-4ab07f823415)
-
-### Car price recommender
-
-(this has already been done on fb...)
-
-Sync data from Facebook, Amazon, and Kelly Blue Book to find distributions over car prices, to empower buyers and sellers in social markets. 
-
-I wanted to sell a car and didn't know what it was worth. 
-
-Learn the KBB API, setup a shiny app that allows one to enter KBB info, and query KBB and FB and Amazon for KBB price, and amazon and fb postings. 
-
-### Kaggle competition?
-
-[Air bnb new user bookings](https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings)
-
-- Model a user's behavior from landing on site to their first booking.
-- Look for ways to improve bookings? -- book in fewer searches, book in less time, ...
-- Do all NDF locations have a missing 'date first booked' variable? 
-- Does a missing 'date_first_booked' mean that the person did not book? 
-
-[Google store revenue](https://www.kaggle.com/c/ga-customer-revenue-prediction/data)
-- few items
-- makeup items? 
-- predict probability of purchasing an item
-
-[Facebook checkin prediction](https://www.kaggle.com/c/facebook-v-predicting-check-ins/data)
-- fake data... 
-
-## Selection
-
-Data scientists make data products. 
-
-Assess value 
-
-1. What is the product? 
-2. Why is this useful to a specific company? 
-3. Why is it useful to users?
-
-Assess feasibility 
-
-4. What data is needed for this product? 
-5. How much data is there, where does it come from?
-6. What technical methods are used? 
-7. How could AI/ML improve the product?
-8. Are there any limits on data access or ethical constraints? 
-9. How could it be monetized? 
-
-Assess potential
-
-10. How might a company expand the product?
-
-## Guiding principles for analysis
-
-This wasn't taught at insight, so I'm drawing on my training in statistics and model building here.
-
-### Thinking about Variables
-
-1. Think of the variables and their structure, before seeing data; confounds, precision, neusance, ...
-2. 
-
-### Thinking about Models
-
-Estimand
-
-interpretation
-
-validation (CV)
-
-efficiency -- computational, memory load
-
-deployment
-
-## Consulting
-
-I applied for, and was awarded, a consulting project. This section describes notes on professional consulting relationships. 
-
-- populate from consulting class...
-
-Constant communication to clarify goals and stay on track. It can be tempting or habitual to conduct an extravagent analysis without regard for its usefulness to the cliant -- avoid this waste of time by continually checking in, presenting work, and clarifying the client's goals and desired outcomes. 
-
-## Minimum Viable Product (MVP)
-
-Working model and actionable insights
-
-## Final Deliverable
-
-Blog post describing the project
-
-
-## Presentation or Demo 
-
-- context
-- need 
-- vision ('stretch goal')
-- outcome
-
-Demonstrate: 
-
-- Value of the solution
-- Value of you -- 1-2 years of salary, benefits, ...
-- Reasoning throughout the project.
-
-
-### Business Value Statement
-
-[hub page](https://sites.google.com/insightdatascience.com/professional-skills-hub-sv-19b/communication/business-value-statement)
-
-1. Summarize project and its use case
-
-"I'm using [data] to develop [deliverable] that [outcome] so that [client] can [solution to problem]"
-
-Mine was: "I'm using daily user activity during a free trial to estimate the probability that the user will convert to a paid user, so that my client can decide when and how to nudge free users that are unlikely to convert"
-
-2. Quantify impact; 
-- Statistics that give the scope of the problem
-- What is the market, or how many potential customers exist?
-- What resources, and how much, will the solution save? 
-
-"The fate of a start-up hinges on user acquisition."
-
-3. Broaden use case. Convey the abstract or general challenge that was solved. 
-
-
-
-4. Combine for final pitch
-
-My value statement for this project was: 
-
-"The fate of a start-up depends on user acquisition. I'm using data on user behavior during a free trial to estimate the probability that a free user will convert to a paid user, and determine which product features drive this conversion. My analysis will guide decisions about when and how to nudge the free users that are unlikely to convert, so that my client can acquire more paying users"
-
-Things to consider; 
-
-- Concise description of project
-- Who are the potential users, how many exist?
-- What problem is solved, evidence that it is a real problem
-- What solutions already exist, how is yours better? How would this solution save time, money, emotional headache, ... ?
-- After watching the demo, what skills would the audiance know you can offer on Day 1? How will your demo make these skills explicit? 
-- Given the technical challenges of executing the project, who is going to be most excited to interview you? How does your project relate to the challenges they face? (specific companies, types of teams, industries, ... )
-
-Product: I'm conducting analyses on user demographics, and making a model to predict user conversion after a free trial. 
-
-Potential users: My client. Various teams will use the demographic analyses. 
-
-Problem: Want to know what features or experiences with the product are driving sales. 
-
-competitors: none here. 
-
-After demo: Summary stat skills for demographics, root cause analysis for finding features that drive conversion, feature engineering for the predictive model, ML model building and fitting. Interpreting data for a general audience. 
-
-Who will like the presentation?: Collaborative teams, since I delivered a little for mutltiple teams. Teams that rely on data scientists for business decisions, since I worked actionably product insights. 
-
-
-
-# Interview Preparation
 
 
 
