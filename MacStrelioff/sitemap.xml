@@ -136,7 +136,13 @@
   </url>
   
   <url>
-    <loc>/MacStrelioff/privacy/</loc>
+    <loc>/MacStrelioff/files/</loc>
+    <lastmod>2018-06-28T00:00:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/files/privacy/</loc>
     <lastmod>2018-06-28T00:00:00-07:00</lastmod>
   </url>
   
@@ -243,11 +249,6 @@
   </url>
   
   <url>
-    <loc>/MacStrelioff/consulting/consulting/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/MacStrelioff/author/admin/</loc>
   </url>
   
@@ -261,8 +262,7 @@
   </url>
   
   <url>
-    <loc>/MacStrelioff/consulting/</loc>
-    <priority>0</priority>
+    <loc>/MacStrelioff/consultingproject/</loc>
   </url>
   
   <url>

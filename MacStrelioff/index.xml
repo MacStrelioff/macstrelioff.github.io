@@ -1239,10 +1239,10 @@ true
     
     <item>
       <title>Privacy Policy</title>
-      <link>/MacStrelioff/privacy/</link>
+      <link>/MacStrelioff/files/privacy/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 -0700</pubDate>
       
-      <guid>/MacStrelioff/privacy/</guid>
+      <guid>/MacStrelioff/files/privacy/</guid>
       <description>&lt;p&gt;Anything you post here can be seen by others.&lt;/p&gt;
 </description>
     </item>
@@ -1558,51 +1558,6 @@ Figure 1: A fancy pie chart.
     </item>
     
     <item>
-      <title></title>
-      <link>/MacStrelioff/consulting/consulting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/consulting/consulting/</guid>
-      <description>
-
-
-&lt;div id=&#34;understanding-user-acquisition&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Understanding User Acquisition&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;business-value-statement&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Business value statement&lt;/h1&gt;
-&lt;p&gt;The survival of any business hinges on it’s ability to acquire new users.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-sources-exclude-clearbit&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data sources (exclude clearbit)&lt;/h1&gt;
-&lt;div id=&#34;data-preparation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data preparation&lt;/h2&gt;
-&lt;p&gt;feature engineering&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;thinking&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Thinking&lt;/h1&gt;
-&lt;p&gt;Payers and non-payers Might differ in distributions of activity&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;exploration&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Exploration&lt;/h1&gt;
-&lt;p&gt;Modeling&lt;/p&gt;
-&lt;p&gt;discriminant analyses, …&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;modeling&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Modeling&lt;/h1&gt;
-&lt;p&gt;regression trees, boosted trees, support vector classifier&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Results&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Conclusions&lt;/h1&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Bandit Algos for Estimation, Hypothesis Testing, and Decision Making</title>
       <link>/MacStrelioff/unlisted/banditalgos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1864,6 +1819,52 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;policy-comparisons&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Policy Comparisons&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Consulting</title>
+      <link>/MacStrelioff/consultingproject/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/consultingproject/</guid>
+      <description>
+
+
+&lt;div id=&#34;understanding-user-acquisition&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Understanding User Acquisition&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(test * 5\)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;business-value-statement&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Business value statement&lt;/h1&gt;
+&lt;p&gt;The survival of any business hinges on it’s ability to acquire new users.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-sources-exclude-clearbit&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data sources (exclude clearbit)&lt;/h1&gt;
+&lt;div id=&#34;data-preparation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data preparation&lt;/h2&gt;
+&lt;p&gt;feature engineering&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;thinking&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Thinking&lt;/h1&gt;
+&lt;p&gt;Payers and non-payers Might differ in distributions of activity&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exploration&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Exploration&lt;/h1&gt;
+&lt;p&gt;Modeling&lt;/p&gt;
+&lt;p&gt;discriminant analyses, …&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modeling&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Modeling&lt;/h1&gt;
+&lt;p&gt;regression trees, boosted trees, support vector classifier&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Results&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusions&lt;/h1&gt;
 &lt;/div&gt;
 </description>
     </item>
