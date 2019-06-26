@@ -9,11 +9,10 @@ math: true
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 # Understanding User Acquisition
 
 
-$test * 5$
+
 
 # Business value statement 
 
