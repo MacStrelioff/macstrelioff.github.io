@@ -1824,7 +1824,7 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Consulting</title>
+      <title>Growing Smarter: Unserdtanding User Acquisition</title>
       <link>/MacStrelioff/consultingproject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1832,23 +1832,38 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
       <description>
 
 
-&lt;div id=&#34;understanding-user-acquisition&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Understanding User Acquisition&lt;/h1&gt;
+&lt;div id=&#34;insight&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Insight&lt;/h1&gt;
+&lt;p&gt;Insight …&lt;/p&gt;
+&lt;p&gt;For my project, I consulted with Elastic Projects to understand user conversion on their product, Abstract.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;business-value-statement&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Business value statement&lt;/h1&gt;
-&lt;p&gt;The survival of any business hinges on it’s ability to acquire new users.&lt;/p&gt;
+&lt;div id=&#34;business-value&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Business Value&lt;/h1&gt;
+&lt;p&gt;The survival of any company hinges on it’s ability to acquire new users. One way to attract users, is to offer a free trials of a product. Elastic Projects offers a free trial of their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt; to new users for 30 days.&lt;/p&gt;
+&lt;p&gt;My work helped Elastic Projects to understand their user demographic and identify ways to nudge trial users that could increase the proportion of users that subscribe.&lt;/p&gt;
+&lt;div id=&#34;specific-goals&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Specific Goals&lt;/h2&gt;
+&lt;p&gt;Identify who to nudge and how to nudge them.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;data-sources-exclude-clearbit&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data sources (exclude clearbit)&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-sources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data sources&lt;/h1&gt;
+&lt;!---(exclude clearbit)---&gt;
+&lt;p&gt;There were two primary sources of data – user activity data, and product performance data.&lt;/p&gt;
+&lt;p&gt;Question: Do product issues stop users from engaging with the app?&lt;/p&gt;
 &lt;div id=&#34;data-preparation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data preparation&lt;/h2&gt;
 &lt;p&gt;feature engineering&lt;/p&gt;
+&lt;p&gt;account age&lt;/p&gt;
+&lt;p&gt;cumulative sums&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;thinking&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Thinking&lt;/h1&gt;
 &lt;p&gt;Payers and non-payers Might differ in distributions of activity&lt;/p&gt;
+&lt;p&gt;Those who end up paying might differ in the distribution of these engagement metrics.&lt;/p&gt;
+&lt;p&gt;This lead to exploration that focused on these distributions&lt;/p&gt;
+&lt;p&gt;This lead to LDA and QDA as the first algorithms that I considered.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exploration&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Exploration&lt;/h1&gt;
@@ -1857,6 +1872,7 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modeling&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Modeling&lt;/h1&gt;
+&lt;p&gt;LDA, QDA, … .&lt;/p&gt;
 &lt;p&gt;regression trees, boosted trees, support vector classifier&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
