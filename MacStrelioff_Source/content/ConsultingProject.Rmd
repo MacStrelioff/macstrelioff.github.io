@@ -123,6 +123,10 @@ Important features from the cross validation procedure described in the previous
 
 To understand the form of the relationship between these features and the proportion of users who converted, I binned users based on product feature usage and plotted the proportion of users across these bins. 
 
+- Focus on the important features. For users classified as unlikely to convert, identify which important features they are underutilizing, and target onboarding resources for those features.
+
+For example, if their projects per user is below 1, we could work with the organization to train contributors in project creation. 
+
 ![Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20\% to around 40\% above around 1 project per contributor.](projects_per_contributor.png)
 
 # Summary

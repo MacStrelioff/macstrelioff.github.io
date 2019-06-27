@@ -1941,6 +1941,10 @@ sum per contributor
 &lt;p class=&#34;caption&#34;&gt;Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;To understand the form of the relationship between these features and the proportion of users who converted, I binned users based on product feature usage and plotted the proportion of users across these bins.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Focus on the important features. For users classified as unlikely to convert, identify which important features they are underutilizing, and target onboarding resources for those features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, if their projects per user is below 1, we could work with the organization to train contributors in project creation.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;projects_per_contributor.png&#34; alt=&#34;Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 project per contributor.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 project per contributor.&lt;/p&gt;
