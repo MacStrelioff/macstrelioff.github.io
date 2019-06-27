@@ -38,6 +38,7 @@ My work presented here helped Elastic Projects to identify ways to increase the 
 
 Question: Do product issues stop users from engaging with the app?
 
+<!---
 # Thinking
 
 Payers and non-payers might differ in distributions of activity
@@ -47,7 +48,7 @@ Those who end up paying might differ in the distribution of these engagement met
 This lead to exploration that focused on these distributions
 
 This lead to LDA and QDA as the first algorithms that I considered.
-
+--->
 
 # Data sources and processing
 <!---(exclude clearbit)--->
@@ -56,7 +57,9 @@ The original dataset consisted of user activity and product performance data for
 
 ## Feature Engineering
 
-The original user activity data was in terms of counts of an action (e.g. file edit) on each date. To make the users comparible to each other, I created a new variable for account age. Also, rather than working with daily counts, I computed cumulative sums which represented a user's total usage of a product feature up to a particular age of their account. Finally, since multiple users (contributors) could be associated with an account, and since this is likely to be confounded with other measures of user activity because each contributor can take actions, I divided the cumulative sums by the number of contributors. Overall, the data features that I worked with were the total usage of each product feature per contributor up to a particular day of account age. 
+The original user activity data was in terms of counts of an action (e.g. file edit) on each date. To make the users comparible to each other, I created a new variable for account age. Also, rather than working with daily counts, I computed cumulative sums which represented a user's total usage of a product feature up to a particular age of their account. Finally, since multiple users (contributors) could be associated with an account, and since this is likely to be confounded with other measures of user activity because each contributor can take actions, I divided the cumulative sums by the number of contributors. Overall, the data features that I used were the total usage of each product feature per contributor up to a particular day of account age. 
+
+I initially thought that the distribution of these features would differ across user who never converted, relative to those who did convert. Also, the time of conversion could be many months after after a trial ends, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with Elastic Projects. To focus on classifying users as potential paying users based on activity, and to mitigate the possible lags in becoming a paying user, I created a variable that indicated whether an individual ever ended up a paying customer. I then conceptualized the problem as a classification problem where, based on a user's activity up to a particular day, I estimated the probability that the user would ever be a paying customer. 
 
 <!---
 feature engineering
@@ -70,6 +73,9 @@ sum per contributor
 
 # Exploration
 
+
+
+
 Modeling 
 
 discriminant analyses, ... 
@@ -79,6 +85,12 @@ discriminant analyses, ...
 LDA, QDA, ... .
 
 regression trees, boosted trees, support vector classifier
+
+CV for parameter tuning
+
+train test split.
+
+
 
 # Results
 

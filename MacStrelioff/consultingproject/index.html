@@ -478,14 +478,18 @@ Explain notion of user/org, contributor, viewer, and guest – this comes up lat
 My work presented here helped Elastic Projects to identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
 --->
 <p>Question: Do product issues stop users from engaging with the app?</p>
+<!---
+# Thinking
+
+Payers and non-payers might differ in distributions of activity
+
+Those who end up paying might differ in the distribution of these engagement metrics.
+
+This lead to exploration that focused on these distributions
+
+This lead to LDA and QDA as the first algorithms that I considered.
+--->
 </div>
-</div>
-<div id="thinking" class="section level1">
-<h1>Thinking</h1>
-<p>Payers and non-payers might differ in distributions of activity</p>
-<p>Those who end up paying might differ in the distribution of these engagement metrics.</p>
-<p>This lead to exploration that focused on these distributions</p>
-<p>This lead to LDA and QDA as the first algorithms that I considered.</p>
 </div>
 <div id="data-sources-and-processing" class="section level1">
 <h1>Data sources and processing</h1>
@@ -493,7 +497,8 @@ My work presented here helped Elastic Projects to identify ways to increase the 
 <p>The original dataset consisted of user activity and product performance data for all users over a one year period. There were a large number of users included in the dataset. The dataset also included users that were not germain to the central problem of identifying which free-trial users to nudge. Since the primary goal was to identify free-trial users to nudge, I excluded any users who were never on a free trial during the data collection period. In exploratory analysis, I found a large number of users who never showed any activity. This prompted me to believe there are two types of trial users that do not convert – 1) those who make an account then never engage with the product, and 2) those who engage with the product, then decide to stop engagement. In conversation with Elastic Projects, it seemed that making a commit was a baseline for minimal engagement with the project, so, to focus the analysis on users who at least minimally engaged with the product, I also excluded users who never made a commit. Finally, some product features were not avilable during the full duration of data collection. Since there was a large sample size, the easiest way to make the analyses pertenant for all features was to exclude data collected before all product features were available.</p>
 <div id="feature-engineering" class="section level2">
 <h2>Feature Engineering</h2>
-<p>The original user activity data was in terms of counts of an action (e.g. file edit) on each date. To make the users comparible to each other, I created a new variable for account age. Also, rather than working with daily counts, I computed cumulative sums which represented a user’s total usage of a product feature up to a particular age of their account. Finally, since multiple users (contributors) could be associated with an account, and since this is likely to be confounded with other measures of user activity because each contributor can take actions, I divided the cumulative sums by the number of contributors. Overall, the data features that I worked with were the total usage of each product feature per contributor up to a particular day of account age.</p>
+<p>The original user activity data was in terms of counts of an action (e.g. file edit) on each date. To make the users comparible to each other, I created a new variable for account age. Also, rather than working with daily counts, I computed cumulative sums which represented a user’s total usage of a product feature up to a particular age of their account. Finally, since multiple users (contributors) could be associated with an account, and since this is likely to be confounded with other measures of user activity because each contributor can take actions, I divided the cumulative sums by the number of contributors. Overall, the data features that I used were the total usage of each product feature per contributor up to a particular day of account age.</p>
+<p>I initially thought that the distribution of these features would differ across user who never converted, relative to those who did convert. Also, the time of conversion could be many months after after a trial ends, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with Elastic Projects. To focus on classifying users as potential paying users based on activity, and to mitigate the possible lags in becoming a paying user, I created a variable that indicated whether an individual ever ended up a paying customer. I then conceptualized the problem as a classification problem where, based on a user’s activity up to a particular day, I estimated the probability that the user would ever be a paying customer.</p>
 <!---
 feature engineering
 account age
@@ -514,6 +519,8 @@ sum per contributor
 <h1>Modeling</h1>
 <p>LDA, QDA, … .</p>
 <p>regression trees, boosted trees, support vector classifier</p>
+<p>CV for parameter tuning</p>
+<p>train test split.</p>
 </div>
 <div id="results" class="section level1">
 <h1>Results</h1>
