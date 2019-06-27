@@ -3,14 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/MacStrelioff/</loc>
+    <loc>/MacStrelioff/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/MacStrelioff/talk/example/</loc>
+    <loc>/MacStrelioff/</loc>
     <lastmod>2030-06-01T13:00:00-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

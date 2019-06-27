@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>admin on </title>
+    <title>admin on Mac Strelioff</title>
     <link>/MacStrelioff/authors/admin/</link>
-    <description>Recent content in admin on </description>
+    <description>Recent content in admin on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Apr 2019 00:00:00 -0700</lastBuildDate>
@@ -62,7 +62,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/author/admin/</guid>
-      <description>I&amp;rsquo;m interested in understanding the things people do. This lead me to focus on decision making through my undergraduate course work, and to draw on ideas from statistics and machine learning to build models of human learning during my dissertation work. I had a lot of fun thinking deeply about the models and underlying structure behind people’s actions, and would like to employ this line of thinking to build products that people love.</description>
+      <description>I’ve always been curious about people’s decision making processes and personally interested in making the best decisions possible. This lead me to pursue a PhD in a computational neuroscience lab, where I used bandit tasks and reinforcement learning models to understand human decision making and infer strategies from observed choices.</description>
     </item>
     
   </channel>

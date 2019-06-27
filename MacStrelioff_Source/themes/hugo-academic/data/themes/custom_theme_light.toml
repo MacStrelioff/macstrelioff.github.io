@@ -1,0 +1,22 @@
+# Theme metadata
+name = "Custom"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary       = "rgba(0,130,160,1)"#"hsl(339, 90%, 68%)" # for links
+primary_light = "rgba(0,150,150,1)"#"hsl(339, 90%, 78%)" 
+primary_dark  = "rgba(0,150,150,1)"#"hsl(339, 90%, 58%)" # for current selection in 'Project' menu
+
+# Menu
+menu_primary     = "rgba(240, 240, 240,1)" #"rgba(255, 240, 220,1)" # color of menu bar
+menu_text        = "rgba(0,130,160,1)" # color of menu text
+menu_text_active = "rgba(0,170,200,1)" # color of menu text when moused over
+menu_title       = "rgb(0, 0, 0)"#"#fff"
+
+# Home sections
+home_section_odd  = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"
+
+

@@ -4,7 +4,7 @@
 # Color theme.
 # theme .toml files at: themes > hugo-academic > data > themes
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`, 'custom_theme'.
-color_theme = "custom_theme"
+color_theme = "custom_theme_light"
 # Enable users to switch between day and night mode?
 day_night = true
 
@@ -54,7 +54,7 @@ time_format = "3:04 PM"
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "macstrelioff@gmail.com"
 phone = ""
-address = "San Francisco, CA"
+address = ""
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
 office_hours = ""

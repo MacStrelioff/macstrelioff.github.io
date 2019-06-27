@@ -41,20 +41,19 @@ education:
     institution: University of California, Irvine
     year: 2018
 
-email: "mstrelio@uci.edu"
+email: "macstrelioff@gmail.com"
 
 interests:
 - Applied Decision Theory
-- Dynamic Modeling
-- Automating Web Interactions
+- Experimentation
+- Bandit tasks
 ---
 
+I’ve always been curious about people’s decision making processes and personally interested in making the best decisions possible. This lead me to pursue a PhD in a computational neuroscience lab, where I used bandit tasks and reinforcement learning models to understand human decision making and infer strategies from observed choices.
+
 <!---
-test
---->
-
 I'm interested in understanding the things people do. This lead me to focus on decision making through my undergraduate course work, and to draw on ideas from statistics and machine learning to build models of human learning during my dissertation work. I had a lot of fun thinking deeply about the models and underlying structure behind people’s actions, and would like to employ this line of thinking to build products that people love. 
-
+--->
 
 
 
