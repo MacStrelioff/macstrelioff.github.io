@@ -5,6 +5,12 @@ date:
 math: true
 ---
 
+<!---
+NOTES: 
+for online, add a backslish in image paths. 
+For knitting an html, do not have this backslash.
+--->
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -73,26 +79,37 @@ sum per contributor
 
 # Exploration
 
+I visualized the data using boxplots split by converters vs non converters, across days. 
 
+![Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)](csum_files_per_contributor.png)
 
-
-Modeling 
-
-discriminant analyses, ... 
 
 # Modeling
 
-LDA, QDA, ... .
+## Considerations 
 
-regression trees, boosted trees, support vector classifier
+My intuition about differing distributions is natrually expressed in linear discriminant, and quadratic discriminant models. However, these algorithms hinge on an assumption that the features are Gaussian distributed, which they clearly were not (values were strictly non-negative, and distributions were skewed -- lots of values around 0 and some values far from the mean). Because of this violation, I also considered a support vector classifier with radial basis functions, and tree based algorithms -- random forests, and gradient boosted decision trees. 
 
-CV for parameter tuning
+Class imbalance was another issue, since around 80\% of users did not convert. I used SMOTE, an upsampling algorithm, to address the class imbalance. 
 
-train test split.
+## Initial Performance
 
+To get a baseline level of performance, I assess the algorithms with default hyperparameter values using sci-kit learn in Python. I focused on accuracy in a test set here, and the tree-based algorithms outperformed the others by approximately 10\%. This outperformance is likely due to the non-standard distributions of the features.
 
+## Parameter Tuning
+
+To assess performance across hyperparameters for the tree-based algorithms, I used grid searches with 5-fold cross validation. The performance of both tree based algorithms was mostly stable, except for poor performance for very low values. 
+
+## Fitting procedure
+
+5-fold cross validation based on features that performed well in the tuning above, with SMOTE performed within each fold. 
+
+since the algorithms performed comparably well across hyperparameter values, and because a proper grid search would have taken a long time to program, run, and evaluate, I did tuned parameters from marginal grid searches, then picked something that performed comparibly well. 
 
 # Results
+
+![Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds.](rf_feature_importance.png)
+
 
 
 # Conclusions

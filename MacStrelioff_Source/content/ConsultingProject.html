@@ -7,6 +7,11 @@ math: true
 
 
 
+<!---
+NOTES: 
+for online, add a backslish in image paths. 
+For knitting an html, do not have this backslash.
+--->
 <div id="insight" class="section level1">
 <h1>Insight</h1>
 <p>Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, <a href="https://www.abstract.com/">Abstract</a>. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.</p>
@@ -65,18 +70,39 @@ sum per contributor
 </div>
 <div id="exploration" class="section level1">
 <h1>Exploration</h1>
-<p>Modeling</p>
-<p>discriminant analyses, …</p>
+<p>I visualized the data using boxplots split by converters vs non converters, across days.</p>
+<div class="figure">
+<img src="csum_files_per_contributor.png" alt="Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)" />
+<p class="caption">Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)</p>
+</div>
 </div>
 <div id="modeling" class="section level1">
 <h1>Modeling</h1>
-<p>LDA, QDA, … .</p>
-<p>regression trees, boosted trees, support vector classifier</p>
-<p>CV for parameter tuning</p>
-<p>train test split.</p>
+<div id="considerations" class="section level2">
+<h2>Considerations</h2>
+<p>My intuition about differing distributions is natrually expressed in linear discriminant, and quadratic discriminant models. However, these algorithms hinge on an assumption that the features are Gaussian distributed, which they clearly were not (values were strictly non-negative, and distributions were skewed – lots of values around 0 and some values far from the mean). Because of this violation, I also considered a support vector classifier with radial basis functions, and tree based algorithms – random forests, and gradient boosted decision trees.</p>
+<p>Class imbalance was another issue, since around 80% of users did not convert. I used SMOTE, an upsampling algorithm, to address the class imbalance.</p>
+</div>
+<div id="initial-performance" class="section level2">
+<h2>Initial Performance</h2>
+<p>To get a baseline level of performance, I assess the algorithms with default hyperparameter values using sci-kit learn in Python. I focused on accuracy in a test set here, and the tree-based algorithms outperformed the others by approximately 10%. This outperformance is likely due to the non-standard distributions of the features.</p>
+</div>
+<div id="parameter-tuning" class="section level2">
+<h2>Parameter Tuning</h2>
+<p>To assess performance across hyperparameters for the tree-based algorithms, I used grid searches with 5-fold cross validation. The performance of both tree based algorithms was mostly stable, except for poor performance for very low values.</p>
+</div>
+<div id="fitting-procedure" class="section level2">
+<h2>Fitting procedure</h2>
+<p>5-fold cross validation based on features that performed well in the tuning above, with SMOTE performed within each fold.</p>
+<p>since the algorithms performed comparably well across hyperparameter values, and because a proper grid search would have taken a long time to program, run, and evaluate, I did tuned parameters from marginal grid searches, then picked something that performed comparibly well.</p>
+</div>
 </div>
 <div id="results" class="section level1">
 <h1>Results</h1>
+<div class="figure">
+<img src="rf_feature_importance.png" alt="Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds." />
+<p class="caption">Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds.</p>
+</div>
 </div>
 <div id="conclusions" class="section level1">
 <h1>Conclusions</h1>

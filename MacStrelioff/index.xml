@@ -1832,6 +1832,11 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
       <description>
 
 
+&lt;!---
+NOTES: 
+for online, add a backslish in image paths. 
+For knitting an html, do not have this backslash.
+---&gt;
 &lt;div id=&#34;insight&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Insight&lt;/h1&gt;
 &lt;p&gt;Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt;. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.&lt;/p&gt;
@@ -1890,18 +1895,39 @@ sum per contributor
 &lt;/div&gt;
 &lt;div id=&#34;exploration&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Exploration&lt;/h1&gt;
-&lt;p&gt;Modeling&lt;/p&gt;
-&lt;p&gt;discriminant analyses, …&lt;/p&gt;
+&lt;p&gt;I visualized the data using boxplots split by converters vs non converters, across days.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;csum_files_per_contributor.png&#34; alt=&#34;Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modeling&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Modeling&lt;/h1&gt;
-&lt;p&gt;LDA, QDA, … .&lt;/p&gt;
-&lt;p&gt;regression trees, boosted trees, support vector classifier&lt;/p&gt;
-&lt;p&gt;CV for parameter tuning&lt;/p&gt;
-&lt;p&gt;train test split.&lt;/p&gt;
+&lt;div id=&#34;considerations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Considerations&lt;/h2&gt;
+&lt;p&gt;My intuition about differing distributions is natrually expressed in linear discriminant, and quadratic discriminant models. However, these algorithms hinge on an assumption that the features are Gaussian distributed, which they clearly were not (values were strictly non-negative, and distributions were skewed – lots of values around 0 and some values far from the mean). Because of this violation, I also considered a support vector classifier with radial basis functions, and tree based algorithms – random forests, and gradient boosted decision trees.&lt;/p&gt;
+&lt;p&gt;Class imbalance was another issue, since around 80% of users did not convert. I used SMOTE, an upsampling algorithm, to address the class imbalance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;initial-performance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Initial Performance&lt;/h2&gt;
+&lt;p&gt;To get a baseline level of performance, I assess the algorithms with default hyperparameter values using sci-kit learn in Python. I focused on accuracy in a test set here, and the tree-based algorithms outperformed the others by approximately 10%. This outperformance is likely due to the non-standard distributions of the features.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;parameter-tuning&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Parameter Tuning&lt;/h2&gt;
+&lt;p&gt;To assess performance across hyperparameters for the tree-based algorithms, I used grid searches with 5-fold cross validation. The performance of both tree based algorithms was mostly stable, except for poor performance for very low values.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fitting-procedure&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Fitting procedure&lt;/h2&gt;
+&lt;p&gt;5-fold cross validation based on features that performed well in the tuning above, with SMOTE performed within each fold.&lt;/p&gt;
+&lt;p&gt;since the algorithms performed comparably well across hyperparameter values, and because a proper grid search would have taken a long time to program, run, and evaluate, I did tuned parameters from marginal grid searches, then picked something that performed comparibly well.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;results&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Results&lt;/h1&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;rf_feature_importance.png&#34; alt=&#34;Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds.&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Conclusions&lt;/h1&gt;
