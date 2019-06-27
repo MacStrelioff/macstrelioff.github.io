@@ -1,5 +1,5 @@
 ---
-title: "Growing Smarter: Unserdtanding User Acquisition"
+title: "Growing Smarter: Understanding User Acquisition"
 author: "Mac Strelioff"
 date: 
 math: true
@@ -9,31 +9,25 @@ math: true
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Insight 
+# Insight
 
-Insight ... 
+Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, [Abstract](https://www.abstract.com/). Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.
 
-For my project, I consulted with Elastic Projects to understand user conversion on their product, [Abstract](https://www.abstract.com/). 
-
-Abstract is a user friendly GitHub, ... 
 <!--- borrow information from Abstract's website --->
 
 # Business Value and Project Goals
 
-The survival of any company hinges on it's ability to acquire new users. One that Elastic Projects acquires users is through a 30-day free trial of Abstract. However, around 80\% of trial users fail to convert to paying customers. This leaves much opportunity to increase the Abstract userbase. 
+The survival of any company hinges on it's ability to acquire new users. One way that Elastic Projects acquires users is through a 30-day free trial of their product, [Abstract](https://www.abstract.com/). However, around 80\% of free-trial users fail to convert to paying customers. This leaves much opportunity to increase their userbase.
 
 ## Project Goals
 
+As a consultant for Elastic Projects, I helped with two major goals;
 
+1. User segmentation: Understand who was enrolling for free tirals of Abstract, and who continued as a paying customer.
+2. User acquisition: Identify who to nudge, and how to nude them.
 
 <!--- 
 My work presented here helped Elastic Projects to identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
---->
-
-<!---
-## Specific Goals
-
-Identify who to nudge and how to nudge them. 
 --->
 
 # Data sources
