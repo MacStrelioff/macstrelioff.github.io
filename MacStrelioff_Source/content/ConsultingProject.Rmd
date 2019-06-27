@@ -61,27 +61,17 @@ This prompted me to believe there are two types of trial users that do not conve
 The criteria for a minimal level of engagement was chosen based on dependencies between product features, and decided during discussion with Elastic Projects.
 Finally, some product features were not avilable during the full duration of data collection. Since there was a large sample size, the easiest way to make the analyses pertenant for all features was to exclude data collected before all product features were available. 
 
-## Feature Engineering
+## Feature Engineering and Exploration
 
 The original user activity data, at an account level, was in terms of counts of an action (e.g. file edits) on each date. To make the users easily comparible to each other across dates, I created a new variable for account age (days since the account was created). Also, rather than working with daily counts, I computed cumulative sums which represented a user's total usage of a product feature up to a particular age of their account. Finally, since multiple users (contributors) could be associated with an account, and since this is likely to be confounded with other measures of user activity because the counts were aggregated across contributors, I divided the cumulative sums by the number of contributors. After these changes, the features that I used were the total usage of each product feature per contributor up to a particular day since the creation of the account. 
 
 The time of conversion could be many months after after a trial had ended, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with Elastic Projects. To focus on classifying users as *potential* paying users based on activity, I created a variable that indicated whether an individual ever ended up as a paying customer. I then conceptualized the problem as a classification problem where, based on aaccount activity up to a particular day, I estimated the probability that the account would ever be a paying customer. 
 
-I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per contributor), relative to those that did not convert. 
-
 <!---
-feature engineering
-account age
-cumulative sums
-sum per contributor
---->
-<!---
-* make a figure that shows a daily feature, and it's cumulative sum. 
---->
-
 # Exploration
+--->
 
-I visualized the data using boxplots split by converters vs non converters, across days. And by plotting quantiles of feature usage across days, split by those users who converted versus those who did not.
+I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per contributor), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and $20^{th}$ to $80^{th}$ quantiles of cross sections of these features across days since the account was created, split by users who ended up converting versus those who did not. Ideally, there would be features that the converters clearly used more than those who did not convert. 
 
 ![Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)](csum_files_per_contributor.png)
 
