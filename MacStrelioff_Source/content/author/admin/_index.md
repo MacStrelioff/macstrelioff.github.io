@@ -13,7 +13,7 @@ social:
   link: '#contact'
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/mac-strelioff-64318793/
+  link: https://www.linkedin.com/in/macstrelioff/
 - icon: flask
   icon_pack: fa
   link: https://osf.io/4a75z

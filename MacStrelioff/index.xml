@@ -1837,21 +1837,19 @@ NOTES:
 for online, add a backslish in image paths. 
 For knitting an html, do not have this backslash.
 ---&gt;
-&lt;div id=&#34;insight&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Insight&lt;/h1&gt;
-&lt;p&gt;Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt;. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.&lt;/p&gt;
-&lt;p&gt;Explain notion of user/org, contributor, viewer, and guest – this comes up later when justifying the per contributor features.&lt;/p&gt;
-&lt;!--- borrow information from Abstract&#39;s website ---&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Background&lt;/h1&gt;
+&lt;p&gt;As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with the company Elastic Projects. The overall goal was to understand user conversion on their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt;, and identify users on a free trial who would convert to paying customers. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork. Users can be individuals or organizations, and a user account can assign roles of ‘contributor’ or ‘viewer’ to individual users associated with the account. Contributors have privileges to upload and edit files, while viewers cannot.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;business-need&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Business Need&lt;/h1&gt;
 &lt;p&gt;The survival of any company hinges on it’s ability to acquire new users. One way that Elastic Projects acquires users is through a 30-day free trial of their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt;. However, around 80% of free-trial users fail to convert to paying customers. This leaves much opportunity to increase their userbase.&lt;/p&gt;
 &lt;div id=&#34;project-goals&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Project Goals&lt;/h2&gt;
-&lt;p&gt;As a consultant for Elastic Projects, I helped with two major goals focused on issuing nudges to users in order to increase the probability of conversion to a paid customer;&lt;/p&gt;
+&lt;p&gt;As a consultant for Elastic Projects, I helped with two major goals focused on issuing nudges to users in order to increase user acquisition;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;As early as possible, identify which users to nudge&lt;/li&gt;
-&lt;li&gt;Determine how to nude them.&lt;/li&gt;
+&lt;li&gt;I used machine learning models to identify, as early as possible, which users were likely to convert.&lt;/li&gt;
+&lt;li&gt;I interpreted model metrics and performed descriptive analyses to determine which features to focus on when reaching out to users that were currently unlikely to convert.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;original-beliefs&#34; class=&#34;section level2&#34;&gt;

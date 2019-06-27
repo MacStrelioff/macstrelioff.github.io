@@ -27,9 +27,7 @@
   
     
   
-  <meta name="description" content="Insight Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, Abstract. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.
-Explain notion of user/org, contributor, viewer, and guest &ndash; this comes up later when justifying the per contributor features.
-Business Need The survival of any company hinges on it&rsquo;s ability to acquire new users.">
+  <meta name="description" content="Insight As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with the company Elastic Projects. The overall goal was to understand user conversion on their product, Abstract, and identify users on a free trial who would convert to paying customers. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork. Users can be individuals or organizations, and a user account can assign roles of &lsquo;contributor&rsquo; or &lsquo;viewer&rsquo; to individual users associated with the account.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/consultingproject.knit/">
@@ -138,9 +136,7 @@ Business Need The survival of any company hinges on it&rsquo;s ability to acquir
   <meta property="og:site_name" content="">
   <meta property="og:url" content="/MacStrelioff/consultingproject.knit/">
   <meta property="og:title" content="Growing Smarter: Understanding User Acquisition | ">
-  <meta property="og:description" content="Insight Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, Abstract. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.
-Explain notion of user/org, contributor, viewer, and guest &ndash; this comes up later when justifying the per contributor features.
-Business Need The survival of any company hinges on it&rsquo;s ability to acquire new users."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Insight As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with the company Elastic Projects. The overall goal was to understand user conversion on their product, Abstract, and identify users on a free trial who would convert to paying customers. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork. Users can be individuals or organizations, and a user account can assign roles of &lsquo;contributor&rsquo; or &lsquo;viewer&rsquo; to individual users associated with the account."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   
@@ -461,11 +457,7 @@ For knitting an html, do not have this backslash.
 
 <h1 id="insight">Insight</h1>
 
-<p>Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, <a href="https://www.abstract.com/" target="_blank">Abstract</a>. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.</p>
-
-<p>Explain notion of user/org, contributor, viewer, and guest &ndash; this comes up later when justifying the per contributor features.</p>
-
-<!--- borrow information from Abstract's website --->
+<p>As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with the company Elastic Projects. The overall goal was to understand user conversion on their product, <a href="https://www.abstract.com/" target="_blank">Abstract</a>, and identify users on a free trial who would convert to paying customers. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork. Users can be individuals or organizations, and a user account can assign roles of &lsquo;contributor&rsquo; or &lsquo;viewer&rsquo; to individual users associated with the account. Contributors have privileges to upload and edit files, while viewers cannot.</p>
 
 <h1 id="business-need">Business Need</h1>
 
@@ -527,7 +519,7 @@ sum per contributor
 
 <h1 id="exploration">Exploration</h1>
 
-<p>I visualized the data using boxplots split by converters vs non converters, across days.</p>
+<p>I visualized the data using boxplots split by converters vs non converters, across days. And by plotting quantiles of feature usage across days, split by those users who converted versus those who did not.</p>
 
 <p><img src="csum_files_per_contributor.png" alt="Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)" /></p>
 
@@ -549,21 +541,34 @@ sum per contributor
 
 <h2 id="fitting-procedure">Fitting procedure</h2>
 
-<p>5-fold cross validation based on features that performed well in the tuning above, with SMOTE performed within each fold.</p>
+<p>Since the algorithms performed comparably well across hyperparameter values, and because a proper grid search would have taken a long time to program, run, and evaluate, I did tuned parameters from marginal grid searches, then picked something that performed comparibly well.</p>
 
-<p>since the algorithms performed comparably well across hyperparameter values, and because a proper grid search would have taken a long time to program, run, and evaluate, I did tuned parameters from marginal grid searches, then picked something that performed comparibly well.</p>
+<p>5-fold cross validation based on features that performed well in the tuning above, with SMOTE performed within each fold.</p>
 
 <h1 id="actionable-results">Actionable Results</h1>
 
-<p>To get actionable results, I applied the random forests algorithm using all data</p>
+<p>To get actionable results, I applied the random forests algorithm using all data. This could help identify who to nudge. The erros that this would make are in the bottom left cell &ndash; users who intend to convert to paid users, that we identify as users who would not convert. The effect of this would be targeting onboarding resources toward these users, which may further increase their engagement.</p>
+
+<ul>
+<li>top left: Users who are on a free trial, that are classified as users unlikely to convert. Can target onboarding efforts toward them.</li>
+<li>top right: Users on free trial, classified as users likely to convert &ndash; can target salies efforts toward them.</li>
+<li>bottom left: Users who end up paying that are classified as users unlikely to pay &ndash; onboarding resources would be targeted toward them, which has minimal detremental effect, and could further increase their product engagement and hence their likelihood of converting sooner or staying with the product for longer.</li>
+<li>bottom right: Users who end up paying, that the model correctly classifies ad potential paid users &ndash; Either sales efforts would be allocated to them, if not currently paid users, or these users would be left alone / not annoyed with onboarding resources or sales efforts.</li>
+</ul>
 
 <p><img src="confusion_matrix.png" alt="confusion matrix based on all data, for identifying who to nudge." /></p>
 
-<p>Important features point to features to focus on when considering hor to nudge users..</p>
+<p>Important features from the cross validation procedure described in the previous section point to features to focus on when considering how to nudge users.</p>
 
-<p><img src="rf_feature_importance.png" alt="Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds." /></p>
+<p><img src="feature_importance.png" alt="Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds." /></p>
 
 <p>To understand the form of the relationship between these features and the proportion of users who converted, I binned users based on product feature usage and plotted the proportion of users across these bins.</p>
+
+<ul>
+<li>Focus on the important features. For users classified as unlikely to convert, identify which important features they are underutilizing, and target onboarding resources for those features.</li>
+</ul>
+
+<p>For example, if their projects per user is below 1, we could work with the organization to train contributors in project creation.</p>
 
 <p><img src="projects_per_contributor.png" alt="Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20\% to around 40\% above around 1 project per contributor." /></p>
 
