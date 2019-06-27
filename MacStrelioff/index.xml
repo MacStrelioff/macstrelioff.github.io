@@ -1835,6 +1835,7 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;insight&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Insight&lt;/h1&gt;
 &lt;p&gt;Insight is a data science fellowship where Fellows work on a 2 week project. For my project, I consulted with Elastic Projects to understand user conversion on their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt;. Abstract is a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork.&lt;/p&gt;
+&lt;p&gt;Explain notion of user/org, contributor, viewer, and guest – this comes up later when justifying the per contributor features.&lt;/p&gt;
 &lt;!--- borrow information from Abstract&#39;s website ---&gt;
 &lt;/div&gt;
 &lt;div id=&#34;business-value-and-project-goals&#34; class=&#34;section level1&#34;&gt;
@@ -1842,34 +1843,45 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The survival of any company hinges on it’s ability to acquire new users. One way that Elastic Projects acquires users is through a 30-day free trial of their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt;. However, around 80% of free-trial users fail to convert to paying customers. This leaves much opportunity to increase their userbase.&lt;/p&gt;
 &lt;div id=&#34;project-goals&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Project Goals&lt;/h2&gt;
-&lt;p&gt;As a consultant for Elastic Projects, I helped with two major goals;&lt;/p&gt;
+&lt;p&gt;As a consultant for Elastic Projects, I helped with two major goals focused on issuing nudges to users in order to increase the probability of conversion to a paid customer;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;User segmentation: Understand who was enrolling for free tirals of Abstract, and who continued as a paying customer.&lt;/li&gt;
-&lt;li&gt;User acquisition: Identify who to nudge, and how to nude them.&lt;/li&gt;
+&lt;li&gt;As early as possible, identify which users to nudge&lt;/li&gt;
+&lt;li&gt;Determine how to nude them.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;original-beliefs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Original Beliefs&lt;/h2&gt;
+&lt;p&gt;complex features were the source of Abstract’s value to users, and hence were the features driving user conversion.&lt;/p&gt;
 &lt;!--- 
 My work presented here helped Elastic Projects to identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
 ---&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-sources&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data sources&lt;/h1&gt;
-&lt;!---(exclude clearbit)---&gt;
-&lt;p&gt;There were two primary sources of data – user activity data, and product performance data.&lt;/p&gt;
 &lt;p&gt;Question: Do product issues stop users from engaging with the app?&lt;/p&gt;
-&lt;div id=&#34;data-preparation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data preparation&lt;/h2&gt;
-&lt;p&gt;feature engineering&lt;/p&gt;
-&lt;p&gt;account age&lt;/p&gt;
-&lt;p&gt;cumulative sums&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;thinking&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Thinking&lt;/h1&gt;
-&lt;p&gt;Payers and non-payers Might differ in distributions of activity&lt;/p&gt;
+&lt;p&gt;Payers and non-payers might differ in distributions of activity&lt;/p&gt;
 &lt;p&gt;Those who end up paying might differ in the distribution of these engagement metrics.&lt;/p&gt;
 &lt;p&gt;This lead to exploration that focused on these distributions&lt;/p&gt;
 &lt;p&gt;This lead to LDA and QDA as the first algorithms that I considered.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-sources-and-processing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data sources and processing&lt;/h1&gt;
+&lt;!---(exclude clearbit)---&gt;
+&lt;p&gt;The original dataset consisted of user activity and product performance data for all users over a one year period. There were a large number of users included in the dataset. The dataset also included users that were not germain to the central problem of identifying which free-trial users to nudge. Since the primary goal was to identify free-trial users to nudge, I excluded any users who were never on a free trial during the data collection period. In exploratory analysis, I found a large number of users who never showed any activity. This prompted me to believe there are two types of trial users that do not convert – 1) those who make an account then never engage with the product, and 2) those who engage with the product, then decide to stop engagement. In conversation with Elastic Projects, it seemed that making a commit was a baseline for minimal engagement with the project, so, to focus the analysis on users who at least minimally engaged with the product, I also excluded users who never made a commit. Finally, some product features were not avilable during the full duration of data collection. Since there was a large sample size, the easiest way to make the analyses pertenant for all features was to exclude data collected before all product features were available.&lt;/p&gt;
+&lt;div id=&#34;feature-engineering&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Feature Engineering&lt;/h2&gt;
+&lt;p&gt;The original user activity data was in terms of counts of an action (e.g. file edit) on each date. To make the users comparible to each other, I created a new variable for account age. Also, rather than working with daily counts, I computed cumulative sums which represented a user’s total usage of a product feature up to a particular age of their account. Finally, since multiple users (contributors) could be associated with an account, and since this is likely to be confounded with other measures of user activity because each contributor can take actions, I divided the cumulative sums by the number of contributors. Overall, the data features that I worked with were the total usage of each product feature per contributor up to a particular day of account age.&lt;/p&gt;
+&lt;!---
+feature engineering
+account age
+cumulative sums
+sum per contributor
+---&gt;
+&lt;!---
+* make a figure that shows a daily feature, and it&#39;s cumulative sum. 
+---&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exploration&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Exploration&lt;/h1&gt;
@@ -1886,6 +1898,8 @@ My work presented here helped Elastic Projects to identify ways to increase the 
 &lt;/div&gt;
 &lt;div id=&#34;conclusions&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Conclusions&lt;/h1&gt;
+&lt;p&gt;My work provided evidence against the original intuition of complex features driving user conversion.&lt;/p&gt;
+&lt;p&gt;This lead to … at Elastic Projects.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
