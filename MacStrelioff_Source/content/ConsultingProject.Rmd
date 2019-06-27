@@ -13,19 +13,20 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Insight ... 
 
-For my project, I consulted with Elastic Projects to understand user conversion on their product, Abstract. 
+For my project, I consulted with Elastic Projects to understand user conversion on their product, [Abstract](https://www.abstract.com/). 
+
+Abstract is a user friendly GitHub, ... 
+<!--- borrow information from Abstract's website --->
 
 # Business Value
 
-The survival of any company hinges on it's ability to acquire new users. One way to attract users, is to offer a free trials of a product. Elastic Projects offers a free trial of their product, [Abstract](https://www.abstract.com/) to new users for 30 days. 
-
-My work helped Elastic Projects to understand their user demographic and identify ways to nudge trial users that could increase the proportion of users that subscribe. 
+The survival of any company hinges on it's ability to acquire new users. One way to do this is with free trials. Elastic Projects offers a free trial of Abstract to new users for 30 days. My work presented here helped Elastic Projects to understand their user demographic and identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
 
 ## Specific Goals
 
 Identify who to nudge and how to nudge them. 
 
-# Data sources 
+# Data sources
 <!---(exclude clearbit)--->
 
 There were two primary sources of data -- user activity data, and product performance data. 
