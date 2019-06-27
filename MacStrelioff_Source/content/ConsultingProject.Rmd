@@ -18,13 +18,23 @@ For my project, I consulted with Elastic Projects to understand user conversion 
 Abstract is a user friendly GitHub, ... 
 <!--- borrow information from Abstract's website --->
 
-# Business Value
+# Business Value and Project Goals
 
-The survival of any company hinges on it's ability to acquire new users. One way to do this is with free trials. Elastic Projects offers a free trial of Abstract to new users for 30 days. My work presented here helped Elastic Projects to understand their user demographic and identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
+The survival of any company hinges on it's ability to acquire new users. One that Elastic Projects acquires users is through a 30-day free trial of Abstract. However, around 80\% of trial users fail to convert to paying customers. This leaves much opportunity to increase the Abstract userbase. 
 
+## Project Goals
+
+
+
+<!--- 
+My work presented here helped Elastic Projects to identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
+--->
+
+<!---
 ## Specific Goals
 
 Identify who to nudge and how to nudge them. 
+--->
 
 # Data sources
 <!---(exclude clearbit)--->

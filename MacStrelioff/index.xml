@@ -1838,12 +1838,19 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For my project, I consulted with Elastic Projects to understand user conversion on their product, &lt;a href=&#34;https://www.abstract.com/&#34;&gt;Abstract&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Abstract is a user friendly GitHub, … &lt;!--- borrow information from Abstract&#39;s website ---&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;business-value&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Business Value&lt;/h1&gt;
-&lt;p&gt;The survival of any company hinges on it’s ability to acquire new users. One way to do this is with free trials. Elastic Projects offers a free trial of Abstract to new users for 30 days. My work presented here helped Elastic Projects to understand their user demographic and identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert.&lt;/p&gt;
-&lt;div id=&#34;specific-goals&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Specific Goals&lt;/h2&gt;
-&lt;p&gt;Identify who to nudge and how to nudge them.&lt;/p&gt;
+&lt;div id=&#34;business-value-and-project-goals&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Business Value and Project Goals&lt;/h1&gt;
+&lt;p&gt;The survival of any company hinges on it’s ability to acquire new users. One that Elastic Projects acquires users is through a 30-day free trial of Abstract. However, around 80% of trial users fail to convert to paying customers. This leaves much opportunity to increase the Abstract userbase.&lt;/p&gt;
+&lt;div id=&#34;project-goals&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Project Goals&lt;/h2&gt;
+&lt;!--- 
+My work presented here helped Elastic Projects to identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
+---&gt;
+&lt;!---
+## Specific Goals
+
+Identify who to nudge and how to nudge them. 
+---&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-sources&#34; class=&#34;section level1&#34;&gt;
