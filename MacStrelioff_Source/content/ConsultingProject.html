@@ -1,8 +1,9 @@
 ---
 title: 'Growing Smarter: Understanding User Acquisition'
 author: "Mac Strelioff"
-date: '06/27/2019'
+date: "06/27/2019"
 output:
+  word_document: default
   html_document:
     df_print: paged
 math: yes
@@ -98,32 +99,26 @@ The algorithms performed comparably well in terms of F1 scores.
 <img src="feature_importance.png" alt="Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm." />
 <p class="caption">Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm.</p>
 </div>
-<p>To identify users to contact, I applied the GBT algorithm to all data and focused on the confusion matrix, shown below. Different actions would be taken with respect to users in each quadrant. Users in the top right represent those who have not yet become customers, but are behaving as if they were customers.</p>
-<p>Users in the top left represent those free-trial users that the model classifies as free users based on their product usage – <strong>these are the users that may benefit from outreach that demonstrates the value this product can add to their workflows</strong>.</p>
-<!---
-- top left: Users who are on a free trial, that are classified as users unlikely to convert. Can target onboarding efforts toward them. 
-- top right: Users on free trial, classified as users likely to convert -- can target salies efforts toward them. 
-- bottom left: Users who end up paying that are classified as users unlikely to pay -- onboarding resources would be targeted toward them, which has minimal detremental effect, and could further increase their product engagement and hence their likelihood of converting sooner or staying with the product for longer. 
-- bottom right: Users who end up paying, that the model correctly classifies ad potential paid users -- Either sales efforts would be allocated to them, if not currently paid users, or these users would be left alone / not annoyed with onboarding resources or sales efforts. 
---->
-<p>This could help identify who to nudge in the original dataset. The erros that this would make are in the bottom left cell – users who intend to convert to paid users, that we identify as users who would not convert. The effect of this would be targeting onboarding resources toward these users, which may further increase their engagement.</p>
+<p>To understand the form of the relationship between these features and continued user engagement, I binned users based on product feature usage and plotted the proportion of users who continue using the product after the free trial across these bins. Figures like this, paired with data on an individual user’s activity, could help in personalizing user outreach to focus on aligning the user’s feature usage with that of more successful users. For example, <strong>based on the figure below, if an account has fewer than 1 project per contributor, their experience might be improved by resources that make project creation easier to understand or engage with. </strong></p>
+<div class="figure">
+<img src="projects_per_contributor.png" alt="Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 project per contributor." />
+<p class="caption">Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 project per contributor.</p>
+</div>
+<p>To identify users to contact, I applied the GBT algorithm to all data and focused on the confusion matrix, shown below. Different actions could be taken with respect to users in each quadrant. Users in the <em>bottom right quadrant</em> are currently customers, and were identified as such by the algorithm. These are the users who were successful in identifying value in the product and establishing an ongoing relationship with my client. Users in the <em>top right quadrant</em> are those who have not yet become customers, but are engaging with the product in ways that are similar to those who have become customers. These users have likely identified valuable aspects of the product, and could be contacted by a customer relationship team to help them find a subscription plan that suits their needs.</p>
+<p>Users on the <em>top left</em> and <em>bottom left quadrants</em> were identified as users that would not continue with the product after the free-trial – <strong>these are the users that may benefit from outreach</strong> that demonstrates the value this product can add to their workflows. Users in the <em>top left quadrant</em>, were correctly identified as users that would not continue with the product. These users may have failed to identify valuable aspects of the product, and may have had a better experience if they had been contacted early by customer support. Users in the <em>bottom left quadrant</em> are those who became paying customers, but were incorrectly identified as users that would not continue with the product based on their activity in the first 7 days. Misclassifying these users has essentially no harm, as it would only encourage efforts to improve their experience early in their trial.</p>
 <div class="figure">
 <img src="confusion_matrix.png" alt="confusion matrix based on all data, for identifying who to nudge." />
 <p class="caption">confusion matrix based on all data, for identifying who to nudge.</p>
 </div>
-<p>To understand the form of the relationship between these features and the proportion of users who converted, I binned users based on product feature usage and plotted the proportion of users across these bins.</p>
-<ul>
-<li>Focus on the important features. For users classified as unlikely to convert, identify which important features they are underutilizing, and target onboarding resources for those features.</li>
-</ul>
-<p>For example, if their projects per user is below 1, we could work with the organization to train contributors in project creation.</p>
-<div class="figure">
-<img src="projects_per_contributor.png" alt="Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 project per contributor." />
-<p class="caption">Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 project per contributor.</p>
+<div id="limitations" class="section level2">
+<h2>Limitations</h2>
+<p>causation in terms of the feature recommendation.. Removing users who didn’t satisfy a minimum level of engagement might help with this slightly, by leaving only those who were looking for this kind of product in the sample..</p>
+<p>Or users might understand the project and just realize that it does not suit their needs – in this scenario, no amount of clarity or onboarding would help to convert the user. This information could still be useful; for example, if an advertising channel is found to bring in particularly this type of user, then ad funds could be better spent on other channels.</p>
 </div>
 </div>
 <div id="summary" class="section level1">
 <h1>Summary</h1>
 <p>I began with an intuition that users who convert would have a different distribution of aggregate product feature usage, relative to those who did not convert, when feature usage was assessed at cross sections based on account age. To explore this, I looked at the quantiles of distributions across feature usage. Focusing on this with formal models, I found that tree-based algorithms could achieve a high accuracy in identifying the users that eventually converted, based on daily snapshots of aggregate feature usage.</p>
 <p>To derive insights from this data, I focused on confusion matracies, which identified free users that acted like paid users (good targets for sales teams), and users who were currently unlikely to convert (good targets for onboarding or support teams). I focused on the features found to be important by the tree based algorithms in order to identify specific features to target when reaching out to users that were unlikely to convert. To discover how to nudge on these features, I looked at the proportion of users that converted across levels of engagement with the important product features.</p>
-<p>Overall, my work provided valuable tools for identifying users to target with sales and onboarding resources, and found that engagement with core features of the product were more important than engagement with the more compelx features.</p>
+<p>Overall, my work provided valuable tools for identifying users to connect with for sales or onboarding assistance, and found that engagement with core features of the product was generally more important than engagement with more compelx features.</p>
 </div>
