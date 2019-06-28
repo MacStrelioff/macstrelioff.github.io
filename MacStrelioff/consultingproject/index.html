@@ -517,16 +517,15 @@ This lead to LDA and QDA as the first algorithms that I considered.
 </div>
 <div id="initial-performance" class="section level2">
 <h2>Initial Performance</h2>
-<p>To quickly hone in on a model, I assess the algorithms mentioned above with default hyperparameter values using <a href="https://scikit-learn.org/stable/index.html">scikit learn</a> in Python. I focused on accuracy in a test set here, and the tree-based algorithms outperformed the others by approximately 10%. This outperformance is likely due to the non-standard distributions of the features.</p>
+<p>To quickly hone in on a model, I assessed the algorithms mentioned above with default hyperparameter values using <a href="https://scikit-learn.org/stable/index.html">scikit learn</a> in Python. I focused on classification accuracy in a test set, and the tree-based algorithms outperformed the others by approximately 10%. This outperformance is likely due to the non-standard distributions of the features.</p>
 </div>
-<div id="parameter-tuning" class="section level2">
-<h2>Parameter Tuning</h2>
-<p>To assess performance across hyperparameters for the tree-based algorithms, I created <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_validation_curve.html">validation curves</a> with 5-fold cross validation and a small set of different hyperparameter values. The performance of both tree based algorithms was mostly stable, except for poor performance when there were very few (~<span class="math inline">\(&lt;10\)</span>) estimators. To mitigate potential overfitting, I increased the minimum number of observations in a leaf to 10, but left all other hyperparameters at their default values.</p>
+<div id="hyperparameter-tuning" class="section level2">
+<h2>Hyperparameter Tuning</h2>
+<p>To assess performance across hyperparameters for the tree-based algorithms, I created <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_validation_curve.html">validation curves</a> with 5-fold cross validation and a small set of different hyperparameter values. The performance of both tree based algorithms was mostly stable in terms of <a href="https://en.wikipedia.org/wiki/F1_score">F1 scores</a>, except for poor performance when there were very few (~<span class="math inline">\(&lt;10\)</span>) estimators. To mitigate potential overfitting, I increased the minimum number of observations in a leaf to 10, but left all other hyperparameters at their default values.</p>
 </div>
 <div id="fitting-procedure" class="section level2">
-<h2>Fitting procedure</h2>
-<p>Since the algorithms performed comparably well across hyperparameter values, and because a proper grid search would have taken a long time to program, run, and evaluate, I did tuned parameters from marginal grid searches, then picked something that performed comparibly well.</p>
-<p>5-fold cross validation based on features that performed well in the tuning above, with SMOTE performed within each fold.</p>
+<h2>Fitting Procedure</h2>
+<p>I fit the random forests and gradient boosting trees algorithms to cross-sections of the data at 7, 14, and 30 days since account creation. For each cross section, I split the data into 5 folds, and used <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis">SMOTE</a> when training the algorithms within each fold to account for the class imbalance. In each fold, I logged the feature importances from both algorithms and performance metrics.</p>
 </div>
 </div>
 <div id="actionable-results" class="section level1">
