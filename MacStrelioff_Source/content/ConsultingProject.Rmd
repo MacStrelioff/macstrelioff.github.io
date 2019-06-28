@@ -3,11 +3,12 @@ title: 'Growing Smarter: Understanding User Acquisition'
 author: "Mac Strelioff"
 date: "06/27/2019"
 output:
-  word_document: default
   html_document:
     df_print: paged
+  word_document: default
 math: yes
 ---
+
 
 <!---
 NOTES: 
