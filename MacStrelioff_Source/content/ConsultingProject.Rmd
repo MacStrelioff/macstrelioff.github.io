@@ -80,24 +80,24 @@ I initially thought that the accounts that converted would differ in terms of th
 
 ## Considerations 
 
-My intuition about differing distributions is natrually expressed in linear discriminant, and quadratic discriminant models. However, these algorithms hinge on an assumption that the features are Gaussian distributed, which they clearly were not (values were strictly non-negative, and distributions were skewed -- lots of values around 0 and some values far from the mean). Because of this violation, I also considered a support vector classifier with radial basis functions, and tree based algorithms -- random forests, and gradient boosted decision trees. 
+My intuition about differing distributions is natrually expressed in [linear discriminant analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis) or [quadratic discriminant analysis](https://en.wikipedia.org/wiki/Quadratic_classifier). However, these algorithms hinge on an assumption that the features are Gaussian distributed, which they clearly were not -- values were strictly non-negative, and distributions were skewed such that there were lots of values around 0 and some values far from the mean. Because of this violation, I also considered a [support vector classifier](https://en.wikipedia.org/wiki/Support-vector_machine) with radial basis functions, and tree based algorithms -- [random forests](https://en.wikipedia.org/wiki/Random_forest), and [gradient boosting decision trees](https://en.wikipedia.org/wiki/Gradient_boosting). An advantage of the tree-based approaches is their robustness to any distribution of the features, and any functional relationship between the features and the probability of a user converting.
 
-Class imbalance was another issue, since around 80\% of users did not convert. I used SMOTE, an upsampling algorithm, to address the class imbalance. 
+Another issue was class imbalance, since around 80\% of users did not convert. I used [SMOTE](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis), an algorithm that generates synthetic data from the underrepresented class (paid users), to address the class imbalance when fitting the model in training sets. I also considered metrics beyond accuracy, such as [AUC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) and the [F1 score](https://en.wikipedia.org/wiki/F1_score), when selecting a final model.
 
 ## Initial Performance
 
-To get a baseline level of performance, I assess the algorithms with default hyperparameter values using sci-kit learn in Python. I focused on accuracy in a test set here, and the tree-based algorithms outperformed the others by approximately 10\%. This outperformance is likely due to the non-standard distributions of the features.
+To quickly hone in on a model, I assess the algorithms mentioned above with default hyperparameter values using [scikit learn](https://scikit-learn.org/stable/index.html) in Python. I focused on accuracy in a test set here, and the tree-based algorithms outperformed the others by approximately 10\%. This outperformance is likely due to the non-standard distributions of the features.
 
 ## Parameter Tuning
 
-To assess performance across hyperparameters for the tree-based algorithms, I used grid searches with 5-fold cross validation. The performance of both tree based algorithms was mostly stable, except for poor performance for very low values. 
+To assess performance across hyperparameters for the tree-based algorithms, I created [validation curves](https://scikit-learn.org/stable/auto_examples/model_selection/plot_validation_curve.html) with 5-fold cross validation and a small set of different hyperparameter values. The performance of both tree based algorithms was mostly stable, except for poor performance when there were very few (~$<10$) estimators. To mitigate potential overfitting, I increased the minimum number of observations in a leaf to 10, but left all other hyperparameters at their default values. 
 
 ## Fitting procedure
 
 Since the algorithms performed comparably well across hyperparameter values, and because a proper grid search would have taken a long time to program, run, and evaluate, I did tuned parameters from marginal grid searches, then picked something that performed comparibly well. 
 
 5-fold cross validation based on features that performed well in the tuning above, with SMOTE performed within each fold. 
-
+ 
 # Actionable Results
 
 To get actionable results, I applied the random forests algorithm using all data. This could help identify who to nudge. The erros that this would make are in the bottom left cell -- users who intend to convert to paid users, that we identify as users who would not convert. The effect of this would be targeting onboarding resources toward these users, which may further increase their engagement. 
