@@ -78,16 +78,20 @@ This lead to LDA and QDA as the first algorithms that I considered.
 </div>
 <div id="hyperparameter-tuning" class="section level2">
 <h2>Hyperparameter Tuning</h2>
-<p>To assess performance across hyperparameters for the tree-based algorithms, I created <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_validation_curve.html">validation curves</a> with 5-fold cross validation and a small set of different hyperparameter values. The performance of both tree based algorithms was mostly stable in terms of <a href="https://en.wikipedia.org/wiki/F1_score">F1 scores</a>, except for poor performance when there were very few (~<span class="math inline">\(&lt;10\)</span>) estimators. To mitigate potential overfitting, I increased the minimum number of observations in a leaf to 10, but left all other hyperparameters at their default values.</p>
+<p>To assess performance across hyperparameters for the tree-based algorithms, I created <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_validation_curve.html">validation curves</a> with 5-fold cross validation and a set of hyperparameter values. The performance of both tree based algorithms was mostly stable in terms of <a href="https://en.wikipedia.org/wiki/F1_score">F1 scores</a>, except for poor performance when there were very few (<span class="math inline">\(&lt;10\)</span>) estimators. To mitigate potential overfitting, I increased the minimum number of observations in a leaf to 10, but left all other hyperparameters at their default values.</p>
 </div>
 <div id="fitting-procedure" class="section level2">
 <h2>Fitting Procedure</h2>
-<p>I fit the random forests and gradient boosting trees algorithms to cross-sections of the data at 7, 14, and 30 days since account creation. For each cross section, I split the data into 5 folds, and used <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis">SMOTE</a> when training the algorithms within each fold to account for the class imbalance. In each fold, I logged the feature importances from both algorithms and performance metrics.</p>
+<p>I fit the random forests and gradient boosting trees algorithms to cross-sections of the data at 7, 14, and 30 days since account creation. For each cross section, I split the data into 5 folds, and used <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis">SMOTE</a> when training the algorithms within each fold to account for the class imbalance. In each fold, I logged the feature importances and performance metrics from both algorithms.</p>
 </div>
 </div>
 <div id="actionable-results" class="section level1">
 <h1>Actionable Results</h1>
-<p>To get actionable results, I applied the random forests algorithm using all data. This could help identify who to nudge. The erros that this would make are in the bottom left cell – users who intend to convert to paid users, that we identify as users who would not convert. The effect of this would be targeting onboarding resources toward these users, which may further increase their engagement.</p>
+<!---
+The algorithms performed comparably well in terms of F1 scores. 
+--->
+<p>To identify users to nudge, I applied the random forests algorithm using all data and focused on the confusion matrix.</p>
+<p>This could help identify who to nudge in the original dataset. The erros that this would make are in the bottom left cell – users who intend to convert to paid users, that we identify as users who would not convert. The effect of this would be targeting onboarding resources toward these users, which may further increase their engagement.</p>
 <ul>
 <li>top left: Users who are on a free trial, that are classified as users unlikely to convert. Can target onboarding efforts toward them.</li>
 <li>top right: Users on free trial, classified as users likely to convert – can target salies efforts toward them.</li>
