@@ -57,9 +57,11 @@ The time of conversion could be many months after a trial had ended, as it may t
 
 I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per user), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and $20^{th}$ to $80^{th}$ quantiles of cross sections of these features across account age, split by users who ended up converting versus those who did not. An example, focusing on the number of workspaces created per user, is shown in the figure below. Classification would be easiest and most interpretable if there were features that the converters clearly used more than those who never converted. 
 
-![Median (solid line) and middle 60\% (shading) of the distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)](csum_files_per_contributor.png)
+![Median (solid line) and middle 60\% (shading) of the distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)](/csum_files_per_contributor.png)
+
 <!---
 ^ This one should be a plot of median and 20-60% quantiless
+comments sometimes help the captions appear...
 --->
 
 # Modeling
@@ -86,20 +88,18 @@ I fit the random forests and GBT algorithms to cross-sections of the data at 7, 
 
 I used the mean feature importances across folds from the GBT algorithm to identify the features that differentiated between successful accounts and accounts with users that may have needed more onboarding. Since these features seperate continuing accounts from those that did not continue after the free trial, these are the features to prioritize when considering interventions to add value to the user's experience.
 
-![Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm. Feature names have been obscured at the client’s request](feature_importance.png)
-<!--- do comments make the caption appear? --->
+![Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm. Feature names have been obscured at the client’s request](/feature_importance.png)
 
 To understand the form of the relationship between these features and continued engagement after the trial, I binned accounts based on product feature usage and plotted the proportion of accounts that continued using the product after the free trial across these bins. Figures like this, paired with data on an individual account activity, could help in personalizing user outreach to focus on aligning users' feature usage with that of users in more successful accounts. For example, 
-**based on the figure below, if an account has fewer than 1 workspace per user, their experience might be improved by resources that make workspace creation easier to understand or engage with.** 
+**based on the figure below, if an account has fewer than 1 workspace per user, their experience might be improved by resources that make workspace creation easier to understand or engage with**. 
 
-![Proportion of accounts that convert as a function of workspaces per user. There seems to be a bump in conversion rates from around 20\% to around 40\% above around 1 workspace per user.](projects_per_contributor.png)
-<!--- comments help with the caption output? --->
+![Proportion of accounts that convert as a function of workspaces per user. There seems to be a bump in conversion rates from around 20\% to around 40\% above around 1 workspace per user.](/ConvertByFeature.png)
 
 To identify struggling accounts for outreach, I applied the GBT algorithm to all data and focused on the confusion matrix, shown below. Different actions could be taken with respect to accounts in each quadrant. Accounts in the *bottom right quadrant* are currently customers, and were identified as such by the algorithm. These are the accounts with users who were successful in identifying value in the product and establishing an ongoing relationship with my client. Accounts in the *top right quadrant* are those who have not yet become customers, but are engaging with the product in ways that are similar to those who have become customers. Users in these accounts have likely identified valuable aspects of the product, and could be contacted by a customer success team to help them find a subscription plan that suits their needs. 
 
 Accounts on the *top left* and *bottom left quadrants* were identified as accounts that would not continue with the product after the free trial -- **these are the accounts that may benefit from outreach** that demonstrates the value this product can add to their workflows. Accounts in the *top left quadrant* were correctly identified as accounts that would not continue with the product. Users in these accounts may have failed to identify valuable aspects of the product, and may have had a better experience if they had been contacted early by customer support or had access to educational resources that could have helped them use the product. Accounts in the *bottom left quadrant* are those that became paying customers, but were incorrectly identified as accounts that would not continue with the product based on their activity in the first 7 days. Misclassifying these accounts has essentially no harm, as it would only encourage efforts to improve their experience early in their trial.
 
-![Confusion matrix based on all data, for identifying who to contact.](confusion_matrix.png)
+![Confusion matrix based on all data, for identifying who to contact.](/confusion_matrix.png)
 <!--- comments help caption output --->
 
 
