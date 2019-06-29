@@ -6,8 +6,8 @@ output:
     toc: true
 menu:
   data-science:
-    parent: Fun 
-    weight: 1
+    parent: Projects
+    weight: 21
 linktitle: Twitter, Poisson Processes, and Conjugacy
 title: "Twitter, Poisson Processes, and Conjugacy"
 type: docs

@@ -139,9 +139,9 @@
   <meta property="og:description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-05-11T13:37:16&#43;00:00">
+  <meta property="article:published_time" content="2019-06-29T14:37:56&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-05-11T13:37:16&#43;00:00">
+  <meta property="article:modified_time" content="2019-06-29T14:37:56&#43;00:00">
   
 
   
@@ -272,7 +272,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/MacStrelioff/cv/">
             
-            <span>CV</span>
+            <span>Resume</span>
             
           </a>
         </li>
@@ -347,11 +347,16 @@
   
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/MacStrelioff/data-science/">Fun</a>
+    <a class="docs-toc-link" href="/MacStrelioff/data-science/">Landing Page</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/MacStrelioff/data-science/working-environment/">Foundations</a>
     <ul class="nav docs-sidenav">
       
-      <li class="active">
-        <a href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">Twitter, Poisson Processes, and Conjugacy</a>
+      <li >
+        <a href="/MacStrelioff/data-science/working-environment/">Working Environment</a>
       </li>
       
     </ul>
@@ -360,11 +365,11 @@
   </div>
   
   <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/MacStrelioff/data-science/learn-data-science/">Learn Data Science</a>
+    <a class="docs-toc-link" href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">Projects</a>
     <ul class="nav docs-sidenav">
       
-      <li >
-        <a href="/MacStrelioff/data-science/working-environment/">Working Environment</a>
+      <li class="active">
+        <a href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">Twitter, Poisson Processes, and Conjugacy</a>
       </li>
       
       <li >
@@ -509,7 +514,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a23c269b0&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a1ec00b00&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
@@ -961,7 +966,7 @@ plt.legend();</code></pre>
         </div>
 
         <div class="body-footer">
-          Last updated on May 11, 2019
+          Last updated on Jun 29, 2019
         </div>
 
       </article>

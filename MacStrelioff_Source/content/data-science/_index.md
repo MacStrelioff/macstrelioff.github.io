@@ -3,7 +3,7 @@ date: "`r Sys.time()`"
 draft: false
 menu:
   data-science:
-    name: Fun
+    name: Landing Page
     weight: 1
 title: Overview
 toc: 

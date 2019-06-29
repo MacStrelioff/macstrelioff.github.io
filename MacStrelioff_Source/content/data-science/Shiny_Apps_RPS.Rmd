@@ -12,7 +12,7 @@ type: docs
 math: true
 menu:
   data-science:
-    parent: Learn Data Science
+    parent: Projects
     weight: 31
 linktitle: Shiny Apps Intro
 ---

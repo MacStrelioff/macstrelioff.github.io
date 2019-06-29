@@ -7,8 +7,8 @@ output:
     toc: true
 menu:
   data-science:
-    parent: Learn Data Science
-    weight: 21
+    parent: Foundations
+    weight: 11
 linktitle: Working Environment
 type: docs
 ---
