@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Background As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with an external company. The overall goal was to identify users on a free trial who would convert to paying customers. Their product was a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork. Users can be individuals or organizations, and a user account can assign roles of &lsquo;contributor&rsquo; or &lsquo;viewer&rsquo; to individual users associated with the account.">
+  <meta name="description" content="Background As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Users can be individuals or teams, and can have different roles that enable different levels of privilege in the service. The overall goal was to identify users during the free trial who would convert to paying customers.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/consultingproject.knit/">
@@ -136,7 +136,7 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/consultingproject.knit/">
   <meta property="og:title" content="Growing Smarter: Understanding User Acquisition | Mac Strelioff">
-  <meta property="og:description" content="Background As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with an external company. The overall goal was to identify users on a free trial who would convert to paying customers. Their product was a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork. Users can be individuals or organizations, and a user account can assign roles of &lsquo;contributor&rsquo; or &lsquo;viewer&rsquo; to individual users associated with the account."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Background As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Users can be individuals or teams, and can have different roles that enable different levels of privilege in the service. The overall goal was to identify users during the free trial who would convert to paying customers."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   
@@ -457,40 +457,20 @@ For knitting an html, do not have this backslash.
 
 <h1 id="background">Background</h1>
 
-<p>As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with an external company. The overall goal was to identify users on a free trial who would convert to paying customers. Their product was a file sharing and versioning application, much like GitHub, with an emphasis on digital artwork. Users can be individuals or organizations, and a user account can assign roles of &lsquo;contributor&rsquo; or &lsquo;viewer&rsquo; to individual users associated with the account. Contributors have privileges to upload and edit files, while viewers cannot.</p>
+<p>As part of my fellowship at <a href="https://blog.insightdatascience.com/" target="_blank">Insight Data Science</a>, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Users can be individuals or teams, and can have different roles that enable different levels of privilege in the service. The overall goal was to identify users during the free trial who would convert to paying customers.</p>
 
 <h1 id="business-need">Business Need</h1>
 
-<p>The survival of any company hinges on it&rsquo;s ability to acquire new users. One way that Elastic Projects acquires users is through a 30-day free trial of Abstract. However, around 80\% of free-trial users fail to convert to paying customers. This leaves much opportunity to increase their userbase.</p>
+<p>The survival of any company hinges on it’s ability to acquire new users. However, the majority of free-trial teams for my client fail to convert to paying customers. This leaves much opportunity to increase their userbase.</p>
 
 <h2 id="project-goals">Project Goals</h2>
 
-<p>As a consultant for Elastic Projects, I helped with two major goals focused on issuing nudges to users in order to increase user acquisition;</p>
+<p>As a consultant for my client, I helped with two major goals focused on issuing nudges to users in order to increase user acquisition;</p>
 
 <ol>
-<li>Identify, as early as possible, which users were likely to convert.</li>
-<li>Determine which features to focus on when reaching out to users that were currently unlikely to convert.</li>
+<li>Identify, as early as possible, patterns in user behavior that indicate whether a user is likely to become a customer after the trial.</li>
+<li>Leverage those patterns to identify outreach strategies for users that were currently unlikely to convert.</li>
 </ol>
-
-<!---
-## Original Beliefs
-
-complex features were the source of Abstract's value to users, and hence were the features driving user conversion. 
-
-My work presented here helped Elastic Projects to identify ways to increase the proportion of users that subscribe for paid service by uncovering usage behavior most indicative of a propensity to convert. 
-
-Question: Do product issues stop users from engaging with the app?
-
-# Thinking
-
-Payers and non-payers might differ in distributions of activity
-
-Those who end up paying might differ in the distribution of these engagement metrics.
-
-This lead to exploration that focused on these distributions
-
-This lead to LDA and QDA as the first algorithms that I considered.
---->
 
 <h1 id="data-sources-and-processing">Data sources and processing</h1>
 
@@ -500,23 +480,26 @@ This lead to LDA and QDA as the first algorithms that I considered.
 The dataset contained a large number of users, including some that were not germain to the project goals.
 Since the primary goal was to identify free-trial users to nudge, I excluded any users who were never on a free trial during the data collection period.
 In exploratory analysis, I found a large number of users who showed little to no activity.
-This prompted me to believe there are two types of trial users that do not convert &ndash; 1) users who make an account then never engage with the product, and 2) users who engage with the product, fail to find the product valuable, and then decide to stop engagement. Since the strategies to address these users might differ, I decided to exclude anyone without a minimal degree of engagement with the product.
-The criteria for a minimal level of engagement was chosen based on dependencies between product features, and decided during discussion with Elastic Projects.
-Finally, some product features were not avilable during the full duration of data collection. Since there was a large sample size, the easiest way to make the analyses pertenant for all features was to exclude data collected before all product features were available.</p>
+This prompted me to believe there are two types of trial users that do not convert &ndash; 1) users who make an account then never engage with the product, and 2) users who engage with the product, fail to find the product valuable, and then decide to stop engagement. Since the strategies to address these users might differ, I decided to exclude anyone without a minimal degree of engagement with the product and focus on the $2^{nd}$ set.
+The criteria for a minimal level of engagement was chosen based on dependencies between product features, and decided during discussion with the client.
+Finally, some product features were not available during the full duration of data collection, as the product evolved over the course of the data collection. Since there was a large sample size, the easiest way to make the analyses pertinent for all features was to exclude data collected before all product features were available.</p>
 
 <h2 id="feature-engineering-and-exploration">Feature Engineering and Exploration</h2>
 
-<p>The original user activity data, at an account level, was in terms of counts of an action (e.g. file edits) on each date. To make the users easily comparible to each other across dates, I created a new variable for account age (days since the account was created). Also, rather than working with daily counts, I computed cumulative sums which represented a user&rsquo;s total usage of a product feature up to a particular age of their account. Finally, since multiple users (contributors) could be associated with an account, and since this is likely to be confounded with other measures of user activity because the counts were aggregated across contributors, I divided the cumulative sums by the number of contributors. After these changes, the features that I used were the total usage of each product feature per contributor up to a particular day since the creation of the account.</p>
+<p>The original user activity data, at an account level, was in terms of counts of an action (e.g. file edits) on each date. To make the users easily comparible to each other across dates, I created a new variable for account age (days since the account was created). Also, rather than working with daily counts, I computed cumulative sums which represented an account&rsquo;s total usage of a product feature up to a particular age of their account. Finally, since multiple users could be associated with an account, and since this is likely to be confounded with other measures of user activity because the counts were aggregated across users, I divided the cumulative sums by the number of users. After these changes, the features that I used were the total usage of each product feature per user up to a particular day since the creation of the account.</p>
 
-<p>The time of conversion could be many months after after a trial had ended, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with Elastic Projects. To focus on classifying users as <em>potential</em> paying users based on activity, I created a variable that indicated whether an individual ever ended up as a paying customer. I then conceptualized the problem as a classification problem where, based on aaccount activity up to a particular day, I estimated the probability that the account would ever be a paying customer.</p>
+<p>The time of conversion could be many months after after a trial had ended, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with the client. To focus on classifying users as <em>potential</em> paying users based on activity, I created a variable that indicated whether an account ever ended up as a paying customer. I then conceptualized the problem as a classification problem where, based on aaccount activity up to a particular day, I estimated the probability that the account would ever be a paying customer.</p>
 
 <!---
 # Exploration
 --->
 
-<p>I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per contributor), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and $20^{th}$ to $80^{th}$ quantiles of cross sections of these features across days since the account was created, split by users who ended up converting versus those who did not. Ideally, there would be features that the converters clearly used more than those who did not convert.</p>
+<p>I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per user), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and $20^{th}$ to $80^{th}$ quantiles of cross sections of these features across days since the account was created, split by users who ended up converting versus those who did not. Ideally, there would be features that the converters clearly used more than those who did not convert.</p>
 
-<p><img src="csum_files_per_contributor.png" alt="Distribution of cumulative files imported per contributor, split by those who ever paid (blue) and those that were on a free trial forever (red)" /></p>
+<p><img src="csum_files_per_contributor.png" alt="Distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)" />
+<!---
+^ This one should be a plot of median and 20-60% quantiless
+---></p>
 
 <h1 id="modeling">Modeling</h1>
 
@@ -524,7 +507,7 @@ Finally, some product features were not avilable during the full duration of dat
 
 <p>My intuition about differing distributions is natrually expressed in <a href="https://en.wikipedia.org/wiki/Linear_discriminant_analysis" target="_blank">linear discriminant analysis</a> or <a href="https://en.wikipedia.org/wiki/Quadratic_classifier" target="_blank">quadratic discriminant analysis</a>. However, these algorithms hinge on an assumption that the features are Gaussian distributed, which they clearly were not &ndash; values were strictly non-negative, and distributions were skewed such that there were lots of values around 0 and some values far from the mean. Because of this violation, I also considered a <a href="https://en.wikipedia.org/wiki/Support-vector_machine" target="_blank">support vector classifier</a> with radial basis functions, and tree based algorithms &ndash; <a href="https://en.wikipedia.org/wiki/Random_forest" target="_blank">random forests</a>, and <a href="https://en.wikipedia.org/wiki/Gradient_boosting" target="_blank">gradient boosting decision trees</a> (GBT). An advantage of the tree-based approaches is their robustness to any distribution of the features, and any functional relationship between the features and the probability of a user converting.</p>
 
-<p>Another issue was class imbalance, since around 80\% of users did not convert. I used <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis" target="_blank">SMOTE</a>, an algorithm that generates synthetic data from the underrepresented class (paid users), to address the class imbalance when fitting the model in training sets. I also considered metrics beyond accuracy, such as <a href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic" target="_blank">AUC</a> and the <a href="https://en.wikipedia.org/wiki/F1_score" target="_blank">F1 score</a>, when selecting a final model.</p>
+<p>Another issue was class imbalance, since the majority of users did not convert. I used <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis" target="_blank">SMOTE</a>, an algorithm that generates synthetic data from the underrepresented class (paid users), to address the class imbalance when fitting the model in training sets. I also considered metrics beyond accuracy, such as <a href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic" target="_blank">AUC</a> and the <a href="https://en.wikipedia.org/wiki/F1_score" target="_blank">F1 score</a>, when selecting a final model.</p>
 
 <h2 id="initial-performance">Initial Performance</h2>
 
@@ -548,43 +531,30 @@ The algorithms performed comparably well in terms of F1 scores.
 
 <p><img src="feature_importance.png" alt="Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm." /></p>
 
-<p>To identify users to contact, I applied the GBT algorithm to all data and focused on the confusion matrix, shown below. I interpreted this as follows;</p>
+<p>To understand the form of the relationship between these features and continued user engagement, I binned users based on product feature usage and plotted the proportion of users who continue using the product after the free trial across these bins. Figures like this, paired with data on an individual user&rsquo;s activity, could help in personalizing user outreach to focus on aligning the user&rsquo;s feature usage with that of more successful users. For example,
+**based on the figure below, if an account has fewer than 1 workspace per user, their experience might be improved by resources that make workspace creation easier to understand or engage with. **</p>
 
-<ul>
-<li>top left: Users who are on a free trial, that are classified as users unlikely to convert. Can target onboarding efforts toward them.</li>
-<li>top right: Users on free trial, classified as users likely to convert &ndash; can target salies efforts toward them.</li>
-<li>bottom left: Users who end up paying that are classified as users unlikely to pay &ndash; onboarding resources would be targeted toward them, which has minimal detremental effect, and could further increase their product engagement and hence their likelihood of converting sooner or staying with the product for longer.</li>
-<li>bottom right: Users who end up paying, that the model correctly classifies ad potential paid users &ndash; Either sales efforts would be allocated to them, if not currently paid users, or these users would be left alone / not annoyed with onboarding resources or sales efforts.</li>
-</ul>
+<p><img src="projects_per_contributor.png" alt="Proportion of accounts that convert as a function of workspaces per user There seems to be a bump in conversion rates from around 20\% to around 40\% above around 1 workspace per user." /></p>
 
-<p>This could help identify who to nudge in the original dataset. The erros that this would make are in the bottom left cell &ndash; users who intend to convert to paid users, that we identify as users who would not convert. The effect of this would be targeting onboarding resources toward these users, which may further increase their engagement.</p>
+<p>To identify users to contact, I applied the GBT algorithm to all data and focused on the confusion matrix, shown below. Different actions could be taken with respect to users in each quadrant. Users in the <em>bottom right quadrant</em> are currently customers, and were identified as such by the algorithm. These are the users who were successful in identifying value in the product and establishing an ongoing relationship with my client. Users in the <em>top right quadrant</em> are those who have not yet become customers, but are engaging with the product in ways that are similar to those who have become customers. These users have likely identified valuable aspects of the product, and could be contacted by a customer success team to help them find a subscription plan that suits their needs.</p>
 
-<ul>
-<li>top left: Users who are on a free trial, that are classified as users unlikely to convert. Can target onboarding efforts toward them.</li>
-<li>top right: Users on free trial, classified as users likely to convert &ndash; can target salies efforts toward them.</li>
-<li>bottom left: Users who end up paying that are classified as users unlikely to pay &ndash; onboarding resources would be targeted toward them, which has minimal detremental effect, and could further increase their product engagement and hence their likelihood of converting sooner or staying with the product for longer.</li>
-<li>bottom right: Users who end up paying, that the model correctly classifies ad potential paid users &ndash; Either sales efforts would be allocated to them, if not currently paid users, or these users would be left alone / not annoyed with onboarding resources or sales efforts.</li>
-</ul>
+<p>Users on the <em>top left</em> and <em>bottom left quadrants</em> were identified as users that would not continue with the product after the free-trial &ndash; <strong>these are the users that may benefit from outreach</strong> that demonstrates the value this product can add to their workflows. Users in the <em>top left quadrant</em>, were correctly identified as users that would not continue with the product. These users may have failed to identify valuable aspects of the product, and may have had a better experience if they had been contacted early by customer support or had access to other educational resources that might have helped them use the product. Users in the <em>bottom left quadrant</em> are those who became paying customers, but were incorrectly identified as users that would not continue with the product based on their activity in the first 7 days. Misclassifying these users has essentially no harm, as it would only encourage efforts to improve their experience early in their trial.</p>
 
 <p><img src="confusion_matrix.png" alt="confusion matrix based on all data, for identifying who to nudge." /></p>
 
-<p>To understand the form of the relationship between these features and the proportion of users who converted, I binned users based on product feature usage and plotted the proportion of users across these bins.</p>
+<h2 id="limitations">Limitations</h2>
 
-<ul>
-<li>Focus on the important features. For users classified as unlikely to convert, identify which important features they are underutilizing, and target onboarding resources for those features.</li>
-</ul>
+<p>causation in terms of the feature recommendation.. Removing users who didn&rsquo;t satisfy a minimum level of engagement might help with this slightly, by leaving only those who were looking for this kind of product in the sample..</p>
 
-<p>For example, if their projects per user is below 1, we could work with the organization to train contributors in project creation.</p>
-
-<p><img src="projects_per_contributor.png" alt="Proportion of users that convert as a function of projects per contributor. There seems to be a bump in conversion rates from around 20\% to around 40\% above around 1 project per contributor." /></p>
+<p>Or users might understand the product and just realize that it does not suit their needs &ndash; in this scenario, no amount of clarity or onboarding would help to convert the user. This information could still be useful; for example, if an advertising channel is found to bring in particularly this type of user, then ad funds could be better spent on other channels.</p>
 
 <h1 id="summary">Summary</h1>
 
 <p>I began with an intuition that users who convert would have a different distribution of aggregate product feature usage, relative to those who did not convert, when feature usage was assessed at cross sections based on account age. To explore this, I looked at the quantiles of distributions across feature usage. Focusing on this with formal models, I found that tree-based algorithms could achieve a high accuracy in identifying the users that eventually converted, based on daily snapshots of aggregate feature usage.</p>
 
-<p>To derive insights from this data, I focused on confusion matracies, which identified free users that acted like paid users (good targets for sales teams), and users who were currently unlikely to convert (good targets for onboarding or support teams). I focused on the features found to be important by the tree based algorithms in order to identify specific features to target when reaching out to users that were unlikely to convert. To discover how to nudge on these features, I looked at the proportion of users that converted across levels of engagement with the important product features.</p>
+<p>To derive insights from this data, I focused on confusion matrices, which identified free users that acted like paid users (good targets for sales teams), and users who were currently unlikely to convert (good targets for educational resources, and/or onboarding or support teams). I focused on the features found to be important by the tree based algorithms in order to identify specific features to target when reaching out to users that were unlikely to convert. To discover how to nudge on these features, I looked at the proportion of users that converted across levels of engagement with the important product features.</p>
 
-<p>Overall, my work provided valuable tools for identifying users to target with sales and onboarding resources, and found that engagement with core features of the product were more important than engagement with the more compelx features.</p>
+<p>Overall, my work provided valuable tools for identifying users to connect with for sales or onboarding assistance, and found that engagement with core features of the product was generally more important than engagement with more compelx features.</p>
 
     </div>
 
@@ -603,7 +573,7 @@ The algorithms performed comparably well in terms of F1 scores.
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/MacStrelioff/consultingproject/" rel="next"></a>
+    <a href="/MacStrelioff/consultingproject/" rel="next">Growing Smarter: Understanding User Acquisition</a>
   </div>
   
   

@@ -58,8 +58,10 @@ The time of conversion could be many months after after a trial had ended, as it
 
 I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per user), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and $20^{th}$ to $80^{th}$ quantiles of cross sections of these features across days since the account was created, split by users who ended up converting versus those who did not. Ideally, there would be features that the converters clearly used more than those who did not convert. 
 
-![Distribution of cumulative files imported per user, split by those who ever paid (blue) and those that were on a free trial forever (red)](csum_files_per_contributor.png)
-
+![Distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)](csum_files_per_contributor.png)
+<!---
+^ This one should be a plot of median and 20-60% quantiless
+--->
 
 # Modeling
 
@@ -106,9 +108,7 @@ Users on the *top left* and *bottom left quadrants* were identified as users tha
 
 causation in terms of the feature recommendation.. Removing users who didn't satisfy a minimum level of engagement might help with this slightly, by leaving only those who were looking for this kind of product in the sample.. 
 
-
 Or users might understand the product and just realize that it does not suit their needs -- in this scenario, no amount of clarity or onboarding would help to convert the user. This information could still be useful; for example, if an advertising channel is found to bring in particularly this type of user, then ad funds could be better spent on other channels. 
-
 
 # Summary
 

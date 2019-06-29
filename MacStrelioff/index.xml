@@ -1865,10 +1865,9 @@ For knitting an html, do not have this backslash.
 # Exploration
 ---&gt;
 &lt;p&gt;I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per user), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and &lt;span class=&#34;math inline&#34;&gt;\(20^{th}\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(80^{th}\)&lt;/span&gt; quantiles of cross sections of these features across days since the account was created, split by users who ended up converting versus those who did not. Ideally, there would be features that the converters clearly used more than those who did not convert.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;csum_files_per_contributor.png&#34; alt=&#34;Distribution of cumulative files imported per user, split by those who ever paid (blue) and those that were on a free trial forever (red)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Distribution of cumulative files imported per user, split by those who ever paid (blue) and those that were on a free trial forever (red)&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;csum_files_per_contributor.png&#34; alt=&#34;Distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)&#34; /&gt; &lt;!---
+^ This one should be a plot of median and 20-60% quantiless
+---&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modeling&#34; class=&#34;section level1&#34;&gt;
