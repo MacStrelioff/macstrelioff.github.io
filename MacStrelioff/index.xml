@@ -36,6 +36,306 @@
     </item>
     
     <item>
+      <title></title>
+      <link>/MacStrelioff/data-science/working-environment/</link>
+      <pubDate>Sat, 29 Jun 2019 10:59:04 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/working-environment/</guid>
+      <description>
+
+
+&lt;!---
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LgYl1ffS_6Y&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+---&gt;
+&lt;div id=&#34;working-environment&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Working Environment&lt;/h1&gt;
+&lt;p&gt;My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.&lt;/p&gt;
+&lt;div id=&#34;working-with-bash-and-git&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Working With Bash and Git&lt;/h2&gt;
+&lt;div id=&#34;useful-bash-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Useful Bash Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;login     # prompts for username and then password to log in
+man       # man (command) returns documentation a command&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;directory-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Directory Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;pwd       # print working directory
+cd        # changes directory to home
+cd \      # changes directory to (/path)
+cd ..     # moves up one folder in the directory
+ls -al    # lists contencts of directory, -a includes hidden items, -l includes details&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;file-operations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;File Operations&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;mkdir    # make a new directory
+touch    # create a file
+open     # open a file
+mv       # move (file) (to), can also be used to rename a file
+cp       # copy (file) (to) 
+rm       # delete a file&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-utilities&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Other Utilities&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;echo    # print commands screen
+date    # print date
+cal     # print calendar (year)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-custom-commands&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Creating Custom Commands&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e&#34;&gt;this Medium blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use the alias command to map an execution of bash commands to a single command. For example, this will create a command ‘hi’ where the Luca voice slowly says ‘hello world’;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias hi=&amp;quot;say -v Luca  -r 100 &amp;#39;hello world&amp;#39;&amp;quot;
+hi # test this alias&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Functions can be created with the following syntax;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function function_name() {
+ &amp;lt;args&amp;gt; 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Inputs are denoted with $1, $2, … . For example, when called from the terminal, this function will print ‘Your Input Was:’ followed by the first argument it receives;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function print_my_input() {
+ echo &amp;#39;Your Input Was:&amp;#39; $1 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To create a file where custom commands are defined, navigate to the home directory, create, and open the file that will hold function definitions;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd 
+touch .custom_commands
+open .custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define commands you wish to use in future Terminal sessions in the .custom_commands file. The next section describes how to source this file automatically when a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sourcing-files-during-terminal-initialization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sourcing Files During Terminal Initialization&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://stackoverflow.com/questions/19662713/where-do-i-find-the-bashrc-file-on-mac&#34;&gt;this StackOverflow post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bash sources a run control file (~/.bashrc) at initialization. Check if this file exists in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+ls -a&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there is no .bashrc file listed, then first open the .bash_profile file in a text editor and add the following;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then create and open a .bashrc file in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+touch .bashrc
+open .bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In a text editor add the following lines to the .bashrc file;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This last line will source the .custom_commands file described at the end of the previous section, thereby defining any aliases or functions in the .custom_commands file whenever a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scheduling-bash-functions-with-crontab&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Scheduling Bash Functions With Crontab&lt;/h2&gt;
+&lt;p&gt;Some basic crontab commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l # lists crontab jobs
+crontab -r # removes all crontab jobs
+crontab -e # edits list of crontab jobs&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The crontab -e command is somewhat hard to navigate, the following code is an easier way to create crontab jobs from ther terminal;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l | { cat; echo &amp;quot;* * * * * some entry&amp;quot;; } | crontab -
+
+# format for string argument for crontab;
+* * * * * &amp;quot;some entry&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I simplify this farther in a custom function called ‘schedule’ that I define in .&lt;/p&gt;
+&lt;p&gt;To execute functions from a user, the user must be specified in /etc/cron.allow – however, this file can only be edited by a superuser. To create and edit this file, use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd /etc
+sudo touch cron.allow
+sudo nano cron.allow&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;nano opens a text editor in ther terminal, and that can be used to edit and save changes to cron.allow.&lt;/p&gt;
+&lt;p&gt;More information on crontab &lt;a href=&#34;https://www.computerhope.com/unix/ucrontab.htm&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Git and GitHub&lt;/h2&gt;
+&lt;div id=&#34;setup&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# create user name and email for tagging contributions later
+git config --global user.name &amp;quot;USERNAME&amp;quot;   
+git config --global user.email &amp;quot;EMAIL&amp;quot; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Connecting to Git can be done through a username/password or through SSH verification.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;usernamepassword&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Username/Password&lt;/h3&gt;
+&lt;p&gt;This didn’t work for ubdates scheduled through crontab.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ssh&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;SSH&lt;/h3&gt;
+&lt;p&gt;First, &lt;a href=&#34;https://help.github.com/articles/checking-for-existing-ssh-keys/&#34;&gt;check for SSH keys with&lt;/a&gt;;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd ~/.ssh  # navigate to user/.ssh folder
+ls -a      # list all files&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A public SSH key is in id_rsa.pub, which can be opened in a text editor.&lt;/p&gt;
+&lt;p&gt;If no id_rsa file exists, or if you wish to create a new SSH key, you can use the following command to generate a new SSH key;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@example.com&amp;quot; # run this if id_rsa file does not exist&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will prompt you for the file location where the SSH key should be saved – id_rsa is the default file.&lt;/p&gt;
+&lt;p&gt;From here, follow the steps &lt;a href=&#34;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&#34;&gt;to add an SSH key&lt;/a&gt;, summarized below.&lt;/p&gt;
+&lt;p&gt;First, create a config file for the SSH agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;touch ~/.ssh/config&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open the config file in a text editor and add the the following commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, from Terminal, add the key from the file (e.g. id_rsa) to the ssh agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-add -K ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, &lt;a href=&#34;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&#34;&gt;add the ssh key to the GitHub account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;test the connection&lt;/a&gt; with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh -T git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;working-from-a-repository&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Working From a Repository&lt;/h3&gt;
+&lt;p&gt;Create a repository through GitHub’s user interface (log in and select ‘new repository’).&lt;/p&gt;
+&lt;p&gt;Then create a directory on a local computer, possibly using bash commands; mkdir and cd.&lt;/p&gt;
+&lt;p&gt;The simplest way is to clone the repo from GitHub with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git clone (url)     # this will clone from the url to the current directory&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another way, from inside the directory that is to be the local repo, issue these commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git init   # initialize a repo
+git remote add origin (url or SSH address) # point local repo to remote repo&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;switching-between-ssh-and-https-access&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Switching between SSH and HTTPS Access&lt;/h3&gt;
+&lt;p&gt;In both examples below, replace ‘USERNAME/REPOSITORY’ with the appropriate values. From within the local repo folder,&lt;/p&gt;
+&lt;p&gt;Change from HTTPS to SSH with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Change from SSH to HTTPS with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with https://github.com/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/changing-a-remote-s-url/&#34;&gt;More detailed guide here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Other methods for addressing ‘Device not configured’ errors &lt;a href=&#34;https://stackoverflow.com/questions/40274484/fatal-could-not-read-username-for-https-github-com-device-not-configured&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;repository-maintanence-and-collaboration&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Repository Maintanence And Collaboration&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# download.file(&amp;quot;https://i.stack.imgur.com/nWYnQ.png&amp;quot;,&amp;#39;y.jpg&amp;#39;, mode = &amp;#39;wb&amp;#39;)
+jj &amp;lt;- readPNG(&amp;quot;y.jpg&amp;quot;,native=TRUE)
+plot(0:1,0:1,type=&amp;quot;n&amp;quot;,ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,1,1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Working-Environment_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/MacStrelioff/y.jpg&#34; alt=&#34;Git workflow&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Git workflow&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Useful commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git pull    # adds files from the configured remote repo to your local repo and workspace
+git add .   # adds all new files to be tracked
+git add -u  # updates all files
+git add -A  # does both &amp;#39;.&amp;#39; and &amp;#39;-u&amp;#39;
+git commit -m &amp;quot;message&amp;quot; # saves changes local repo
+git push    # updates repo on GitHub&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Collaborators can all access the GitHub repo through push/pull commands. In collaborative settings you might need to pull, so that your repository is current, before pushing changes from the local repository to the remote repository on GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;useful-custom-aliases-and-functions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Useful Custom Aliases and Functions&lt;/h2&gt;
+&lt;div id=&#34;gitup-combines-add-commit-and-push-into-one-command&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitup: combines add, commit, and push into one command&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gitupall-updates-all-git-repos-in-my-git-folder&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitupall: updates all git repos in my git folder&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function gitupall{
+for filename in /Users/mac/git/*; do
+echo &amp;quot;**************************updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;; 
+gitup
+cd ..
+done
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;schedule-schedules-a-command-to-be-executed-periodically&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;schedule: schedules a command to be executed periodically&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+
+# format for string argument for crontab;
+* * * * * &amp;quot;command to be executed&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# e.g. use: schedule updating of all repos each hour
+schedule &amp;quot;0 0-23 * * * gitupall&amp;quot;
+crontab -l # lists crontab jobs after schedule call&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;my-setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;My Setup&lt;/h2&gt;
+&lt;div id=&#34;bash-aliases-functions-scheduled-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bash Aliases, Functions, Scheduled Commands&lt;/h3&gt;
+&lt;p&gt;In my root directory, I have a file called .custom_commands with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# aliases
+
+# goes to my folder of git projects
+alias gitgo=&amp;quot;cd /Users/mac/git; ls&amp;quot;
+echo &amp;#39;sourced alias gitgo&amp;#39;
+
+# pushes updates on a git project
+alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;
+echo &amp;#39;sourced alias gitup&amp;#39;
+
+# functions
+
+# schedule &amp;quot;(m h DoM M DoW command)&amp;quot;
+# schedules command to be executed at 
+# minute m of hour h on DoM days of the month in months M or DoW days of the week.
+function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+echo &amp;#39;sourced function schedule&amp;#39;
+
+# for updating all git projects, schedule this to be done periodically
+function gitupall(){
+for filename in /Users/mac/git/*; do
+echo &amp;quot;************************** updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;;
+git remote -v    # prints the fetch and push destinations
+gitup
+done
+cd # return to home directory
+}
+echo &amp;#39;sourced function gitupall&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a .bashrc file in my root directory, which sources the custom commands. Particularly the contents of the .bashrc file are;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source system-wide definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a file in my root directory for scheduling, called .scheduled with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# put all scheduled functions here
+
+# source custom commands
+source ~/.custom_commands
+
+# activate key agent
+eval &amp;quot;$(ssh-agent -s)&amp;quot;
+
+# test SSH key / print username
+ssh -T git@github.com
+
+# update all git repos
+gitupall&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I then scheduled this file to be read hourly by opening a terminal session, which sources .bashrc at initialization thereby sourcing my custom commands, and running;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;schedule &amp;quot;0 0-23 * * * source ~/.scheduled&amp;quot;
+crontab -l # the scheduled job should be listed as a crontab job&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
       <pubDate>Sat, 11 May 2019 13:37:16 +0000</pubDate>
@@ -599,302 +899,6 @@ plt.legend();&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;First I showed how to pull tweets as Status objects from Twitter’s API. Given Status objects, I then showed how to embed them in a notebook, view them as a dictionary, and otherwise access their attributes to construct a list of tweet timestamps. I then described Poisson Processes as they may apply to modeling user tweet rates and tweet counts over periods of time. I used kernel densities to check assumptions of a Poisson Process and found possible violations of homogeneity, and of the result that intervals between tweets should follow an exponential distribution.&lt;/p&gt;
 &lt;p&gt;Punting these violations, I developed a model of tweet frequency using conjugacy between Gamma priors and Exponential likelihoods. To predict tweet counts over a period of time, I derived a negative binomial predictive distribution that accounted for uncertainty in a user’s tweet rate. I compared this distribution to a Poisson distribution that ignored uncertainty by taking only the maximum a posteriori estimate of a user’s tweet rate.&lt;/p&gt;
 &lt;p&gt;Overall the model that discards posterior uncertainty attributes less mass to fringe counts, especially when there is little data or when the interval over which counts are being predicted is long. Incorporating posterior uncertainty broadens the predictive distribution to reflect uncertainty in the underlying tweet rate. That uncertainty exists regardless of the modeling approach – excluding it from predictive distributions only leads to narrow, overconfident predictions. This general principle of propagating uncertainty through a statistical process is one strong advantage of the Bayeian modeling approach that I developed and applied here.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/MacStrelioff/data-science/working-environment/</link>
-      <pubDate>Thu, 09 May 2019 23:39:20 +0000</pubDate>
-      
-      <guid>/MacStrelioff/data-science/working-environment/</guid>
-      <description>
-
-
-&lt;!---
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LgYl1ffS_6Y&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
----&gt;
-&lt;div id=&#34;working-environment&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Working Environment&lt;/h1&gt;
-&lt;p&gt;My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.&lt;/p&gt;
-&lt;div id=&#34;working-with-bash-and-git&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Working With Bash and Git&lt;/h2&gt;
-&lt;div id=&#34;useful-bash-commands&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Useful Bash Commands&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;login     # prompts for username and then password to log in
-man       # man (command) returns documentation a command&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;directory-commands&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Directory Commands&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;pwd       # print working directory
-cd        # changes directory to home
-cd \      # changes directory to (/path)
-cd ..     # moves up one folder in the directory
-ls -al    # lists contencts of directory, -a includes hidden items, -l includes details&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;file-operations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;File Operations&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;mkdir    # make a new directory
-touch    # create a file
-open     # open a file
-mv       # move (file) (to), can also be used to rename a file
-cp       # copy (file) (to) 
-rm       # delete a file&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-utilities&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Other Utilities&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;echo    # print commands screen
-date    # print date
-cal     # print calendar (year)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;creating-custom-commands&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Creating Custom Commands&lt;/h2&gt;
-&lt;p&gt;This section is partially based on &lt;a href=&#34;https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e&#34;&gt;this Medium blog post&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Use the alias command to map an execution of bash commands to a single command. For example, this will create a command ‘hi’ where the Luca voice slowly says ‘hello world’;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias hi=&amp;quot;say -v Luca  -r 100 &amp;#39;hello world&amp;#39;&amp;quot;
-hi # test this alias&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Functions can be created with the following syntax;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function function_name() {
- &amp;lt;args&amp;gt; 
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Inputs are denoted with $1, $2, … . For example, when called from the terminal, this function will print ‘Your Input Was:’ followed by the first argument it receives;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function print_my_input() {
- echo &amp;#39;Your Input Was:&amp;#39; $1 
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To create a file where custom commands are defined, navigate to the home directory, create, and open the file that will hold function definitions;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd 
-touch .custom_commands
-open .custom_commands&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Define commands you wish to use in future Terminal sessions in the .custom_commands file. The next section describes how to source this file automatically when a Terminal session is initialized.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sourcing-files-during-terminal-initialization&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Sourcing Files During Terminal Initialization&lt;/h2&gt;
-&lt;p&gt;This section is partially based on &lt;a href=&#34;https://stackoverflow.com/questions/19662713/where-do-i-find-the-bashrc-file-on-mac&#34;&gt;this StackOverflow post&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Bash sources a run control file (~/.bashrc) at initialization. Check if this file exists in the home directory with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
-ls -a&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If there is no .bashrc file listed, then first open the .bash_profile file in a text editor and add the following;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then create and open a .bashrc file in the home directory with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
-touch .bashrc
-open .bashrc&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In a text editor add the following lines to the .bashrc file;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
-# source file with function definitions
-source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This last line will source the .custom_commands file described at the end of the previous section, thereby defining any aliases or functions in the .custom_commands file whenever a Terminal session is initialized.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;scheduling-bash-functions-with-crontab&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Scheduling Bash Functions With Crontab&lt;/h2&gt;
-&lt;p&gt;Some basic crontab commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l # lists crontab jobs
-crontab -r # removes all crontab jobs
-crontab -e # edits list of crontab jobs&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The crontab -e command is somewhat hard to navigate, the following code is an easier way to create crontab jobs from ther terminal;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l | { cat; echo &amp;quot;* * * * * some entry&amp;quot;; } | crontab -
-
-# format for string argument for crontab;
-* * * * * &amp;quot;some entry&amp;quot;
-- - - - -
-| | | | |
-| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
-| | | ------- Month (1 - 12)
-| | --------- Day of month (1 - 31)
-| ----------- Hour (0 - 23)
-------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I simplify this farther in a custom function called ‘schedule’ that I define in .&lt;/p&gt;
-&lt;p&gt;To execute functions from a user, the user must be specified in /etc/cron.allow – however, this file can only be edited by a superuser. To create and edit this file, use;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd /etc
-sudo touch cron.allow
-sudo nano cron.allow&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;nano opens a text editor in ther terminal, and that can be used to edit and save changes to cron.allow.&lt;/p&gt;
-&lt;p&gt;More information on crontab &lt;a href=&#34;https://www.computerhope.com/unix/ucrontab.htm&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Git and GitHub&lt;/h2&gt;
-&lt;div id=&#34;setup&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Setup&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# create user name and email for tagging contributions later
-git config --global user.name &amp;quot;USERNAME&amp;quot;   
-git config --global user.email &amp;quot;EMAIL&amp;quot; &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Connecting to Git can be done through a username/password or through SSH verification.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;usernamepassword&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Username/Password&lt;/h3&gt;
-&lt;p&gt;This didn’t work for ubdates scheduled through crontab.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ssh&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;SSH&lt;/h3&gt;
-&lt;p&gt;First, &lt;a href=&#34;https://help.github.com/articles/checking-for-existing-ssh-keys/&#34;&gt;check for SSH keys with&lt;/a&gt;;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd ~/.ssh  # navigate to user/.ssh folder
-ls -a      # list all files&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;A public SSH key is in id_rsa.pub, which can be opened in a text editor.&lt;/p&gt;
-&lt;p&gt;If no id_rsa file exists, or if you wish to create a new SSH key, you can use the following command to generate a new SSH key;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@example.com&amp;quot; # run this if id_rsa file does not exist&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This will prompt you for the file location where the SSH key should be saved – id_rsa is the default file.&lt;/p&gt;
-&lt;p&gt;From here, follow the steps &lt;a href=&#34;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&#34;&gt;to add an SSH key&lt;/a&gt;, summarized below.&lt;/p&gt;
-&lt;p&gt;First, create a config file for the SSH agent with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;touch ~/.ssh/config&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Open the config file in a text editor and add the the following commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next, from Terminal, add the key from the file (e.g. id_rsa) to the ssh agent with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-add -K ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Finally, &lt;a href=&#34;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&#34;&gt;add the ssh key to the GitHub account&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;test the connection&lt;/a&gt; with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh -T git@github.com&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;working-from-a-repository&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Working From a Repository&lt;/h3&gt;
-&lt;p&gt;Create a repository through GitHub’s user interface (log in and select ‘new repository’).&lt;/p&gt;
-&lt;p&gt;Then create a directory on a local computer, possibly using bash commands; mkdir and cd.&lt;/p&gt;
-&lt;p&gt;The simplest way is to clone the repo from GitHub with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git clone (url)     # this will clone from the url to the current directory&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Another way, from inside the directory that is to be the local repo, issue these commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git init   # initialize a repo
-git remote add origin (url or SSH address) # point local repo to remote repo&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;switching-between-ssh-and-https-access&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Switching between SSH and HTTPS Access&lt;/h3&gt;
-&lt;p&gt;In both examples below, replace ‘USERNAME/REPOSITORY’ with the appropriate values. From within the local repo folder,&lt;/p&gt;
-&lt;p&gt;Change from HTTPS to SSH with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
-git remote -v # list fetch and push destinations, should start with git@github.com&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Change from SSH to HTTPS with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
-git remote -v # list fetch and push destinations, should start with https://github.com/&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/changing-a-remote-s-url/&#34;&gt;More detailed guide here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Other methods for addressing ‘Device not configured’ errors &lt;a href=&#34;https://stackoverflow.com/questions/40274484/fatal-could-not-read-username-for-https-github-com-device-not-configured&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;repository-maintanence-and-collaboration&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Repository Maintanence And Collaboration&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# download.file(&amp;quot;https://i.stack.imgur.com/nWYnQ.png&amp;quot;,&amp;#39;y.jpg&amp;#39;, mode = &amp;#39;wb&amp;#39;)
-jj &amp;lt;- readPNG(&amp;quot;y.jpg&amp;quot;,native=TRUE)
-plot(0:1,0:1,type=&amp;quot;n&amp;quot;,ann=FALSE,axes=FALSE)
-rasterImage(jj,0,0,1,1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioffdata-science/Working-Environment_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Useful commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git pull    # adds files from the configured remote repo to your local repo and workspace
-git add .   # adds all new files to be tracked
-git add -u  # updates all files
-git add -A  # does both &amp;#39;.&amp;#39; and &amp;#39;-u&amp;#39;
-git commit -m &amp;quot;message&amp;quot; # saves changes local repo
-git push    # updates repo on GitHub&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Collaborators can all access the GitHub repo through push/pull commands. In collaborative settings you might need to pull, so that your repository is current, before pushing changes from the local repository to the remote repository on GitHub.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;useful-custom-aliases-and-functions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Useful Custom Aliases and Functions&lt;/h2&gt;
-&lt;div id=&#34;gitup-combines-add-commit-and-push-into-one-command&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;gitup: combines add, commit, and push into one command&lt;/h4&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;gitupall-updates-all-git-repos-in-my-git-folder&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;gitupall: updates all git repos in my git folder&lt;/h4&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function gitupall{
-for filename in /Users/mac/git/*; do
-echo &amp;quot;**************************updating $filename&amp;quot;
-cd &amp;quot;$filename&amp;quot;; 
-gitup
-cd ..
-done
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;schedule-schedules-a-command-to-be-executed-periodically&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;schedule: schedules a command to be executed periodically&lt;/h4&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function schedule(){
-crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
-}
-
-# format for string argument for crontab;
-* * * * * &amp;quot;command to be executed&amp;quot;
-- - - - -
-| | | | |
-| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
-| | | ------- Month (1 - 12)
-| | --------- Day of month (1 - 31)
-| ----------- Hour (0 - 23)
-------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Example use;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# e.g. use: schedule updating of all repos each hour
-schedule &amp;quot;0 0-23 * * * gitupall&amp;quot;
-crontab -l # lists crontab jobs after schedule call&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;my-setup&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;My Setup&lt;/h2&gt;
-&lt;div id=&#34;bash-aliases-functions-scheduled-commands&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Bash Aliases, Functions, Scheduled Commands&lt;/h3&gt;
-&lt;p&gt;In my root directory, I have a file called .custom_commands with contents;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# aliases
-
-# goes to my folder of git projects
-alias gitgo=&amp;quot;cd /Users/mac/git; ls&amp;quot;
-echo &amp;#39;sourced alias gitgo&amp;#39;
-
-# pushes updates on a git project
-alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;
-echo &amp;#39;sourced alias gitup&amp;#39;
-
-# functions
-
-# schedule &amp;quot;(m h DoM M DoW command)&amp;quot;
-# schedules command to be executed at 
-# minute m of hour h on DoM days of the month in months M or DoW days of the week.
-function schedule(){
-crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
-}
-echo &amp;#39;sourced function schedule&amp;#39;
-
-# for updating all git projects, schedule this to be done periodically
-function gitupall(){
-for filename in /Users/mac/git/*; do
-echo &amp;quot;************************** updating $filename&amp;quot;
-cd &amp;quot;$filename&amp;quot;;
-git remote -v    # prints the fetch and push destinations
-gitup
-done
-cd # return to home directory
-}
-echo &amp;#39;sourced function gitupall&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I also have a .bashrc file in my root directory, which sources the custom commands. Particularly the contents of the .bashrc file are;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source system-wide definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
-# source file with function definitions
-source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I also have a file in my root directory for scheduling, called .scheduled with contents;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# put all scheduled functions here
-
-# source custom commands
-source ~/.custom_commands
-
-# activate key agent
-eval &amp;quot;$(ssh-agent -s)&amp;quot;
-
-# test SSH key / print username
-ssh -T git@github.com
-
-# update all git repos
-gitupall&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I then scheduled this file to be read hourly by opening a terminal session, which sources .bashrc at initialization thereby sourcing my custom commands, and running;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;schedule &amp;quot;0 0-23 * * * source ~/.scheduled&amp;quot;
-crontab -l # the scheduled job should be listed as a crontab job&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -1839,16 +1843,16 @@ For knitting an html, do not have this backslash.
 ---&gt;
 &lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;As part of my fellowship at &lt;a href=&#34;https://blog.insightdatascience.com/&#34;&gt;Insight Data Science&lt;/a&gt;, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Multiple users can be associated with an account, and users can have different roles that enable different privileges within the service. The overall goal was to identify free-trial accounts that would convert to subscription-based customers.&lt;/p&gt;
+&lt;p&gt;As part of my fellowship at &lt;a href=&#34;https://blog.insightdatascience.com/&#34;&gt;Insight Data Science&lt;/a&gt;, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Multiple users can be associated with an account, and users can have different roles that enable different privileges within the service. The overall goal was to identify free trial accounts that would convert to subscription-based customers.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;business-need&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Business Need&lt;/h1&gt;
-&lt;p&gt;The survival of any company hinges on it’s ability to acquire new users. However, the majority of free-trial users for my client failed to convert to customers. This leaves much opportunity to increase their userbase.&lt;/p&gt;
+&lt;p&gt;The survival of any company hinges on it’s ability to acquire new users. However, the majority of free trial users for my client failed to convert to customers. This leaves much opportunity to increase their userbase.&lt;/p&gt;
 &lt;div id=&#34;project-goals&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Project Goals&lt;/h2&gt;
 &lt;p&gt;As a consultant, I helped with two major goals focused on issuing nudges to users in order to increase user acquisition;&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Identify, as early as possible, patterns in user behavior that indicate whether a free-trial user is likely to become a customer after the trial.&lt;/li&gt;
+&lt;li&gt;Identify, as early as possible, patterns in user behavior that indicate whether a free trial user is likely to become a customer after the trial.&lt;/li&gt;
 &lt;li&gt;Leverage those patterns to identify outreach strategies for users that were currently unlikely to convert.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
@@ -1856,16 +1860,13 @@ For knitting an html, do not have this backslash.
 &lt;div id=&#34;data-sources-and-processing&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Data sources and processing&lt;/h1&gt;
 &lt;!---(exclude clearbit)---&gt;
-&lt;p&gt;The original dataset consisted of user activity and product performance data for all accounts over a one year period. The dataset contained a large number of users, including some that were not germain to the project goals. Since the primary goal focused on behavior during the free-trial, I excluded any users who were never on a free trial during the data collection period. In exploratory analysis, I found a large number of users who showed little to no activity. This prompted me to believe there are two types of trial users that do not convert – 1) users who make an account then never engage with the product, and 2) users who engage with the product, fail to find the product valuable, and then decide to stop engagement. Since the strategies to address these users might differ, I decided to exclude anyone without a minimal degree of engagement with the product and focus on the &lt;span class=&#34;math inline&#34;&gt;\(2^{nd}\)&lt;/span&gt; set. The criteria for a minimal level of engagement was chosen based on dependencies between product features, and decided during discussion with the client. Finally, some product features were not available during the full duration of data collection, as the product evolved over the course of the data collection. Since there was a large sample size, the easiest way to make the analyses pertinent for all features was to exclude data collected before all product features were available.&lt;/p&gt;
+&lt;p&gt;The original dataset consisted of account activity and product performance data for all accounts over a one year period. The dataset contained a large number of accounts, including some that were not germain to the project goals. Since the primary goal focused on behavior during the free trial, I excluded any accounts that were never on a free trial during the data collection period. In exploratory analysis, I found a large number of accounts that showed little to no activity. This prompted me to believe there are two types of trial accounts that do not convert – 1) accounts that were created then never engaged with the product, and 2) accounts that engaged with the product, then failed to find product valuable and decided to stop engagement. Since the strategies to address these accounts might differ, I decided to exclude any account without a minimal degree of engagement with the product and focus on the &lt;span class=&#34;math inline&#34;&gt;\(2^{nd}\)&lt;/span&gt; type of nonconversion. The criteria for a minimal level of engagement was chosen based on dependencies between product features, and decided during discussion with the client. Finally, some product features were not available during the full duration of data collection, as the product evolved over time. Since there was a large sample size, the easiest way to make the analyses pertinent for all features, and to keep accounts comparable to one another, was to exclude data collected before all product features were available.&lt;/p&gt;
 &lt;div id=&#34;feature-engineering-and-exploration&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Feature Engineering and Exploration&lt;/h2&gt;
-&lt;p&gt;The original user activity data, at an account level, was in terms of counts of an action (e.g. file edits) on each date. To make the users easily comparible to each other across dates, I created a new variable for account age (days since the account was created). Also, rather than working with daily counts, I computed cumulative sums which represented an account’s total usage of a product feature up to a particular age of their account. Finally, since multiple users could be associated with an account, and since this is likely to be confounded with other measures of user activity because the counts were aggregated across users, I divided the cumulative sums by the number of users. After these changes, the features that I used were the total usage of each product feature per user up to a particular day since the creation of the account.&lt;/p&gt;
-&lt;p&gt;The time of conversion could be many months after after a trial had ended, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with the client. To focus on classifying users as &lt;em&gt;potential&lt;/em&gt; paying users based on activity, I created a variable that indicated whether an account ever ended up as a paying customer. I then conceptualized the problem as a classification problem where, based on aaccount activity up to a particular day, I estimated the probability that the account would ever be a paying customer.&lt;/p&gt;
-&lt;!---
-# Exploration
----&gt;
-&lt;p&gt;I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per user), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and &lt;span class=&#34;math inline&#34;&gt;\(20^{th}\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(80^{th}\)&lt;/span&gt; quantiles of cross sections of these features across days since the account was created, split by users who ended up converting versus those who did not. Ideally, there would be features that the converters clearly used more than those who did not convert.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;csum_files_per_contributor.png&#34; alt=&#34;Distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)&#34; /&gt; &lt;!---
+&lt;p&gt;The original account activity data was in terms of counts of a each possible action (e.g. workspaces created) accross users on each date during data collection. To make the accounts easily comparible regardless of observation dates, I created a variable for account age (days since the account was created). Also, rather than working with daily counts I computed cumulative sums, which represented an account’s total usage aggregated over users of a product feature up to a particular age of their account. Finally, to mitigate confounding of the counts of activity by the number of users, I divided the cumulative sums by the number of users. These were features that I focused – total usage of each product feature per user up to a particular day since the creation of the account.&lt;/p&gt;
+&lt;p&gt;The time of conversion could be many months after after a trial had ended, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with my client. To focus on classifying free users as &lt;em&gt;potential&lt;/em&gt; customers based on activity, I created a variable that indicated whether an account &lt;em&gt;ever&lt;/em&gt; ended up as a customer. I then conceptualized the problem as a classification problem where, based on account activity over time since the account’s creation, I estimated the probability that the account would ever convert to a customer.&lt;/p&gt;
+&lt;p&gt;I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per user), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and &lt;span class=&#34;math inline&#34;&gt;\(20^{th}\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(80^{th}\)&lt;/span&gt; quantiles of cross sections of these features across account age, split by users who ended up converting versus those who did not. An example, focusing on the number of workspaces created per user, is shown in the figure below. Classification would be easiest if there were features that the converters clearly used more than those who never converted.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;csum_files_per_contributor.png&#34; alt=&#34;Median (solid line) and middle 60% (shading) of the distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)&#34; /&gt; &lt;!---
 ^ This one should be a plot of median and 20-60% quantiless
 ---&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1895,7 +1896,7 @@ For knitting an html, do not have this backslash.
 &lt;!---
 The algorithms performed comparably well in terms of F1 scores. 
 ---&gt;
-&lt;p&gt;I used the mean feature importances across folds from the GBT algorithm to identify the features that differentiated between successful users and users who may have needed more onboarding. Since these features seperate continuing users from those that did not continue engagement after the free-trial, these are the features to prioritize when considering interventions to add value to the user’s experience.&lt;/p&gt;
+&lt;p&gt;I used the mean feature importances across folds from the GBT algorithm to identify the features that differentiated between successful users and users who may have needed more onboarding. Since these features seperate continuing users from those that did not continue engagement after the free trial, these are the features to prioritize when considering interventions to add value to the user’s experience.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;feature_importance.png&#34; alt=&#34;Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm.&lt;/p&gt;
@@ -1906,7 +1907,7 @@ The algorithms performed comparably well in terms of F1 scores.
 &lt;p class=&#34;caption&#34;&gt;Proportion of accounts that convert as a function of workspaces per user There seems to be a bump in conversion rates from around 20% to around 40% above around 1 workspace per user.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;To identify users to contact, I applied the GBT algorithm to all data and focused on the confusion matrix, shown below. Different actions could be taken with respect to users in each quadrant. Users in the &lt;em&gt;bottom right quadrant&lt;/em&gt; are currently customers, and were identified as such by the algorithm. These are the users who were successful in identifying value in the product and establishing an ongoing relationship with my client. Users in the &lt;em&gt;top right quadrant&lt;/em&gt; are those who have not yet become customers, but are engaging with the product in ways that are similar to those who have become customers. These users have likely identified valuable aspects of the product, and could be contacted by a customer success team to help them find a subscription plan that suits their needs.&lt;/p&gt;
-&lt;p&gt;Users on the &lt;em&gt;top left&lt;/em&gt; and &lt;em&gt;bottom left quadrants&lt;/em&gt; were identified as users that would not continue with the product after the free-trial – &lt;strong&gt;these are the users that may benefit from outreach&lt;/strong&gt; that demonstrates the value this product can add to their workflows. Users in the &lt;em&gt;top left quadrant&lt;/em&gt;, were correctly identified as users that would not continue with the product. These users may have failed to identify valuable aspects of the product, and may have had a better experience if they had been contacted early by customer support or had access to other educational resources that might have helped them use the product. Users in the &lt;em&gt;bottom left quadrant&lt;/em&gt; are those who became paying customers, but were incorrectly identified as users that would not continue with the product based on their activity in the first 7 days. Misclassifying these users has essentially no harm, as it would only encourage efforts to improve their experience early in their trial.&lt;/p&gt;
+&lt;p&gt;Users on the &lt;em&gt;top left&lt;/em&gt; and &lt;em&gt;bottom left quadrants&lt;/em&gt; were identified as users that would not continue with the product after the free trial – &lt;strong&gt;these are the users that may benefit from outreach&lt;/strong&gt; that demonstrates the value this product can add to their workflows. Users in the &lt;em&gt;top left quadrant&lt;/em&gt;, were correctly identified as users that would not continue with the product. These users may have failed to identify valuable aspects of the product, and may have had a better experience if they had been contacted early by customer support or had access to other educational resources that might have helped them use the product. Users in the &lt;em&gt;bottom left quadrant&lt;/em&gt; are those who became paying customers, but were incorrectly identified as users that would not continue with the product based on their activity in the first 7 days. Misclassifying these users has essentially no harm, as it would only encourage efforts to improve their experience early in their trial.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;confusion_matrix.png&#34; alt=&#34;confusion matrix based on all data, for identifying who to nudge.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;confusion matrix based on all data, for identifying who to nudge.&lt;/p&gt;

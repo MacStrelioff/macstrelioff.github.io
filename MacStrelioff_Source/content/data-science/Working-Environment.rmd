@@ -303,6 +303,9 @@ plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
 rasterImage(jj,0,0,1,1)
 ```
 
+![Git workflow](/y.jpg)
+
+
 Useful commands;
 ```{bash,eval=FALSE}
 git pull    # adds files from the configured remote repo to your local repo and workspace
