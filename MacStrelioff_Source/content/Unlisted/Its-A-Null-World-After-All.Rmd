@@ -1,0 +1,42 @@
+---
+title: "Probability and Information"
+author: "Mac Strelioff"
+date: "5/13/2019"
+output: html_document
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here's a series of questions about hypothesis testing, parils of p-hacking, and an argument against a publication requirement for graduation.. 
+
+
+What is a p-value? 
+
+What is power?
+
+
+Assume all hypotheses in a field are false. Using z-tests or t-tests, testing at the $\alpha=.05$ level, ... 
+
+How many experiments, on average, would a graduate student have to run in order to find three significant effects? 
+
+What kind of distribution is this? 
+
+How would you find the probability that a graduate student who runs 10 experiments finds three or more significant effects? 
+
+
+From now on, assume students run 10 experiments during graduate school. 
+
+
+If the person tests two hypotheses per experiment? 
+
+
+What if there are some scientsits who test two hypotheses, and some who test one. Also assume someone needs three papers to graduate. What proportion of graduating scientists would only test one hypothses per experiment? 
+
+
+
+
+
+

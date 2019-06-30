@@ -1943,6 +1943,40 @@ comments sometimes help the captions appear...
     </item>
     
     <item>
+      <title>Hypothesis Testing as Classifier Evaluation</title>
+      <link>/MacStrelioff/unlisted/hypothesesaremodels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/hypothesesaremodels/</guid>
+      <description>
+
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Here I breed ideas from hypothesis testing, with those from the machine learning community on evaluating classifiers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hypothesis-testing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Hypothesis Testing&lt;/h1&gt;
+&lt;p&gt;Type I error –&lt;/p&gt;
+&lt;p&gt;Type II error –&lt;/p&gt;
+&lt;p&gt;alpha, beta&lt;/p&gt;
+&lt;p&gt;accept, reject&lt;/p&gt;
+&lt;p&gt;false discovery rate&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;classification-evaluation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Classification Evaluation&lt;/h1&gt;
+&lt;p&gt;positive, negative&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hybrid-ideas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Hybrid Ideas&lt;/h1&gt;
+&lt;p&gt;Relate &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;, and false discovery rate to accuracy, precision, recall.&lt;/p&gt;
+&lt;p&gt;sensitivity and specificity&lt;/p&gt;
+&lt;p&gt;Signal detection – hit, miss, false alarm?&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Insight</title>
       <link>/MacStrelioff/unlisted/insight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2354,6 +2388,28 @@ comments sometimes help the captions appear...
 &lt;p&gt;talk through code..&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Probability and Information</title>
+      <link>/MacStrelioff/unlisted/its-a-null-world-after-all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/its-a-null-world-after-all/</guid>
+      <description>
+
+
+&lt;p&gt;Here’s a series of questions about hypothesis testing, parils of p-hacking, and an argument against a publication requirement for graduation..&lt;/p&gt;
+&lt;p&gt;What is a p-value?&lt;/p&gt;
+&lt;p&gt;What is power?&lt;/p&gt;
+&lt;p&gt;Assume all hypotheses in a field are false. Using z-tests or t-tests, testing at the &lt;span class=&#34;math inline&#34;&gt;\(\alpha=.05\)&lt;/span&gt; level, …&lt;/p&gt;
+&lt;p&gt;How many experiments, on average, would a graduate student have to run in order to find three significant effects?&lt;/p&gt;
+&lt;p&gt;What kind of distribution is this?&lt;/p&gt;
+&lt;p&gt;How would you find the probability that a graduate student who runs 10 experiments finds three or more significant effects?&lt;/p&gt;
+&lt;p&gt;From now on, assume students run 10 experiments during graduate school.&lt;/p&gt;
+&lt;p&gt;If the person tests two hypotheses per experiment?&lt;/p&gt;
+&lt;p&gt;What if there are some scientsits who test two hypotheses, and some who test one. Also assume someone needs three papers to graduate. What proportion of graduating scientists would only test one hypothses per experiment?&lt;/p&gt;
 </description>
     </item>
     

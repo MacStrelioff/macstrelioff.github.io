@@ -1,0 +1,58 @@
+---
+title: "Hypothesis Testing as Classifier Evaluation"
+author: "Mac Strelioff"
+date: "5/13/2019"
+output: html_document
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+# Overview
+
+Here I breed ideas from hypothesis testing, with those from the machine learning community on evaluating classifiers. 
+
+
+# Hypothesis Testing
+
+Type I error -- 
+
+Type II error -- 
+
+alpha, beta
+
+accept, reject
+
+false discovery rate
+
+# Classification Evaluation
+
+positive, negative
+
+
+
+# Hybrid Ideas
+
+
+
+
+
+
+Relate $\alpha$, $\beta$, and false discovery rate to accuracy, precision, recall. 
+
+sensitivity and specificity
+
+
+Signal detection -- hit, miss, false alarm?
+
+
+
+
+
+
+

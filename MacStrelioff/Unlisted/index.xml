@@ -21,6 +21,25 @@
     </item>
     
     <item>
+      <title>Hypothesis Testing as Classifier Evaluation</title>
+      <link>/MacStrelioff/unlisted/hypothesesaremodels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/hypothesesaremodels/</guid>
+      <description> Overview Here I breed ideas from hypothesis testing, with those from the machine learning community on evaluating classifiers.
+ Hypothesis Testing Type I error –
+Type II error –
+alpha, beta
+accept, reject
+false discovery rate
+ Classification Evaluation positive, negative
+ Hybrid Ideas Relate \(\alpha\), \(\beta\), and false discovery rate to accuracy, precision, recall.
+sensitivity and specificity
+Signal detection – hit, miss, false alarm?
+ </description>
+    </item>
+    
+    <item>
       <title>Insight</title>
       <link>/MacStrelioff/unlisted/insight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -52,6 +71,20 @@ Success Metrics  Tracking Metrics   Metrics for Goals  Metrics for Insights  Com
       <description>  Overview Cookie clicker game..    Overview Madean autoclicker to play cookie clicker…
 Cookie clicker game.. talk through code..
   </description>
+    </item>
+    
+    <item>
+      <title>Probability and Information</title>
+      <link>/MacStrelioff/unlisted/its-a-null-world-after-all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/its-a-null-world-after-all/</guid>
+      <description>Here’s a series of questions about hypothesis testing, parils of p-hacking, and an argument against a publication requirement for graduation..
+What is a p-value?
+What is power?
+Assume all hypotheses in a field are false. Using z-tests or t-tests, testing at the \(\alpha=.05\) level, …
+How many experiments, on average, would a graduate student have to run in order to find three significant effects?
+What kind of distribution is this?</description>
     </item>
     
     <item>
