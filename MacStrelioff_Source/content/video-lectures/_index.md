@@ -4,12 +4,15 @@ draft: false
 menu:
   video-lectures:
     name: Statistics
-    weight: 1
+    weight: 20
 title: 
 toc: true
 type: docs 
 ---
 
+Use the menu on the left to change topics, and the menu on the right to find videos within this topic.
+
+# Basic Applied
 
 ## Model Comparison: F-test for nested models
 <iframe width="680" height="400" src="https://www.youtube.com/embed/hceIXHjQPdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

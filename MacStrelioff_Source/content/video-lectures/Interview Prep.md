@@ -3,8 +3,8 @@ date: "2018-09-09T00:00:00-07:00"
 draft: false
 menu:
   video-lectures:
-    name: Fun
-    weight: 100
+    name: Interview Prep
+    weight: 10
 title: 
 toc: true
 depthFrom: 1
