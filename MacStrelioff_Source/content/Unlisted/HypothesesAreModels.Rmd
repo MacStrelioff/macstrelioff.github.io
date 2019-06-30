@@ -20,20 +20,34 @@ Here I breed ideas from hypothesis testing, with those from the machine learning
 
 # Hypothesis Testing
 
+Hypothesis testing is based on a notion of accepting or rejecting a hypothesis based on data from an experiment. 
+
+accept, reject
+
 Type I error -- 
 
 Type II error -- 
 
-alpha, beta
+$\alpha$
+$\beta$
+power
 
-accept, reject
+base rates
 
 false discovery rate
 
 # Classification Evaluation
 
-positive, negative
+Calssification evaluation is based on selecting a model based on performance in out-of-sample performance. Many performance measures, that I'll cover throughout, as they relate to concepts from hypothesis testing. 
 
+positive (true), negative (false)
+true positive, true negative, false positive, false negative, ... 
+
+false discovery rates probably related to one of -- accuracy, precision, recall, sensitivity, specificity
+
+class imbalance (base rates)
+
+F1 score
 
 
 # Hybrid Ideas
@@ -51,7 +65,8 @@ sensitivity and specificity
 Signal detection -- hit, miss, false alarm?
 
 
-
+Resources with more detail on each metric; 
+[Most ML metrics](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)
 
 
 

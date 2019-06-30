@@ -26,17 +26,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/hypothesesaremodels/</guid>
-      <description> Overview Here I breed ideas from hypothesis testing, with those from the machine learning community on evaluating classifiers.
- Hypothesis Testing Type I error –
-Type II error –
-alpha, beta
+      <description>Overview Here I breed ideas from hypothesis testing, with those from the machine learning community on evaluating classifiers.
+ Hypothesis Testing Hypothesis testing is based on a notion of accepting or rejecting a hypothesis based on data from an experiment.
 accept, reject
+Type I error –
+Type II error –
+\(\alpha\) \(\beta\) power
+base rates
 false discovery rate
- Classification Evaluation positive, negative
- Hybrid Ideas Relate \(\alpha\), \(\beta\), and false discovery rate to accuracy, precision, recall.
-sensitivity and specificity
-Signal detection – hit, miss, false alarm?
- </description>
+ Classification Evaluation Calssification evaluation is based on selecting a model based on performance in out-of-sample performance.</description>
     </item>
     
     <item>
