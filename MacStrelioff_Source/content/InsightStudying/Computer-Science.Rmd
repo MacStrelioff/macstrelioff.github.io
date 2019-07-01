@@ -20,6 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(reticulate)
 
 # setup python usage
+# NOTE: python vars persist across chunks when knitting, but not in RStudio. 
 knitr::opts_chunk$set(comment = ">>>")
 #py_discover_config() # to see versions of Python
 use_python("/anaconda3/bin/python")
@@ -32,21 +33,38 @@ set.seed(10201991)
 
 Data type manipulation (char, string, numeric) regular expressions; 
 
+## Data Structures
+
 basic structures (tuples, list, arrays, dict), list comprehensions, 
+
+Data structures (hash, stack, queue, tree, linked list); 
+
+## Database and SQL
+
+SQL training resources;
+
+- [sqlbot](https://sqlbolt.com/lesson/select_queries_introduction)
+- [Mode Analytics](https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/) HackerRank (basic select, aggregation)
+- [Hacker Rank](https://www.hackerrank.com/domains/sql)
+- [W3School](https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1)
+
+## Complexity
+
+computational or memory...
 
 Complexity + O(N) notation
 
-# Searching
-
-binary search, 
 
 ```{python}
-
 print(1+5)
-
-
-
+a = 5
 ```
+
+# Searching
+
+binary search,
+
+Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
 
 # Sorting
 
@@ -56,22 +74,19 @@ Sorting and graph algos (depth-first and breadth-first seach)
 
 sorting (heap, tim)
 
-## Sort Algorithms
-
 Lots of [sort algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)
 
-## Search Algorithms
+e.g. 'find median in a large dataset' -- sort half of it.
 
-Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
-
-## Ranking Algorithms
+# Ranking Algorithms
 
 Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
 
-## Recommendation
+# Recommendation
 
 Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
 
+<!---
 Data science methods play a major role in discovering recommendations for users. 
 
 Econ, compliments and substitutes (competitors). 
@@ -79,10 +94,7 @@ Econ, compliments and substitutes (competitors).
 Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
 
 Temporal involves forecasting, which is a topic for another post. 
-
-# Data Structures
-
-Data structures (hash, stack, queue, tree, linked list); 
+--->
 
 # Algorithms
 
@@ -98,7 +110,10 @@ Functional programming
 
 git for version control (resolving merge conflicts)
 
+# General Practice Problems
 
+- [HackerRank](https://www.hackerrank.com/dashboard)
+- [LeetCode]()
 
 
 

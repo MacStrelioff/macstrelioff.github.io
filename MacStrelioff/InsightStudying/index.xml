@@ -6,7 +6,7 @@
     <description>Recent content in InsightStudyings on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jul 2019 09:00:48 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 09:51:58 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,17 +14,14 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Mon, 01 Jul 2019 09:00:48 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 09:51:58 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>Foundations Searching Sorting Sort Algorithms Search Algorithms Ranking Algorithms Recommendation  Data Structures Algorithms Tools   Foundations Data type manipulation (char, string, numeric) regular expressions;
-basic structures (tuples, list, arrays, dict), list comprehensions,
-Complexity + O(N) notation
- Searching binary search,
- print(1+5)  &amp;gt;&amp;gt;&amp;gt; 6  Sorting sorting (bubble, selection, insertion, merge, quick)
-Sorting and graph algos (depth-first and breadth-first seach)
-sorting (heap, tim)
-Sort Algorithms Lots of sort algorithms</description>
+      <description>Foundations Data Structures Database and SQL Complexity  Searching Sorting Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric) regular expressions;
+Data Structures basic structures (tuples, list, arrays, dict), list comprehensions,
+Data structures (hash, stack, queue, tree, linked list);
+ Database and SQL SQL training resources;
+ sqlbot Mode Analytics HackerRank (basic select, aggregation) Hacker Rank W3School   Complexity computational or memory…</description>
     </item>
     
     <item>

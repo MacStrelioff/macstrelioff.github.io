@@ -38,70 +38,84 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Mon, 01 Jul 2019 09:00:48 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 09:51:58 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#database-and-sql&#34;&gt;Database and SQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#sort-algorithms&#34;&gt;Sort Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#search-algorithms&#34;&gt;Search Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tools&#34;&gt;Tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#general-practice-problems&#34;&gt;General Practice Problems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Foundations&lt;/h1&gt;
 &lt;p&gt;Data type manipulation (char, string, numeric) regular expressions;&lt;/p&gt;
+&lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Structures&lt;/h2&gt;
 &lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
+&lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;database-and-sql&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Database and SQL&lt;/h2&gt;
+&lt;p&gt;SQL training resources;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_introduction&#34;&gt;sqlbot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/&#34;&gt;Mode Analytics&lt;/a&gt; HackerRank (basic select, aggregation)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;complexity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Complexity&lt;/h2&gt;
+&lt;p&gt;computational or memory…&lt;/p&gt;
 &lt;p&gt;Complexity + O(N) notation&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(1+5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;a = 5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Searching&lt;/h1&gt;
 &lt;p&gt;binary search,&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-print(1+5)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 6&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sorting&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Sorting&lt;/h1&gt;
 &lt;p&gt;sorting (bubble, selection, insertion, merge, quick)&lt;/p&gt;
 &lt;p&gt;Sorting and graph algos (depth-first and breadth-first seach)&lt;/p&gt;
 &lt;p&gt;sorting (heap, tim)&lt;/p&gt;
-&lt;div id=&#34;sort-algorithms&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Sort Algorithms&lt;/h2&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;e.g. ‘find median in a large dataset’ – sort half of it.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;search-algorithms&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Search Algorithms&lt;/h2&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Ranking Algorithms&lt;/h2&gt;
+&lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Ranking Algorithms&lt;/h1&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Ranking_(information_retrieval)&#34;&gt;ranking algorithms&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;recommendation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Recommendation&lt;/h2&gt;
+&lt;div id=&#34;recommendation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recommendation&lt;/h1&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Recommender_system&#34;&gt;recommendation algorithms&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Data science methods play a major role in discovering recommendations for users.&lt;/p&gt;
-&lt;p&gt;Econ, compliments and substitutes (competitors).&lt;/p&gt;
-&lt;p&gt;Types of recommendation; compliments (these go together), competitors (you might also like…), temporal (might buy this again in the future). Horizontal and vertical focus&lt;/p&gt;
-&lt;p&gt;Temporal involves forecasting, which is a topic for another post.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-structures&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data Structures&lt;/h1&gt;
-&lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
+&lt;!---
+Data science methods play a major role in discovering recommendations for users. 
+
+Econ, compliments and substitutes (competitors). 
+
+Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
+
+Temporal involves forecasting, which is a topic for another post. 
+---&gt;
 &lt;/div&gt;
 &lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Algorithms&lt;/h1&gt;
@@ -113,6 +127,13 @@ print(1+5)
 &lt;div id=&#34;tools&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Tools&lt;/h1&gt;
 &lt;p&gt;git for version control (resolving merge conflicts)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;general-practice-problems&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;General Practice Problems&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;&#34;&gt;LeetCode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
