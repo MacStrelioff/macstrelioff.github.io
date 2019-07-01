@@ -1,15 +1,13 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "3/20/2019"
+date: "`r Sys.time()`"
 math: true
-
 output:
   blogdown::html_page:
     toc: true
-type: docs
 menu:
-  data-science:
+  InsightStudying:
     parent: Foundations
     weight: 15
 linktitle: Computer Science
@@ -25,10 +23,43 @@ library(entropy)
 set.seed(10201991)
 ```
 
+# Fundamentals
 
+Data type manipulation (char, string, numeric) regular expressions; 
 
+basic structures (tuples, list, arrays, dict), list comprehensions, 
 
+Complexity + O(N) notation
 
+# Searching
+
+binary search, 
+
+# Sorting
+
+sorting (bubble, selection, insertion, merge, quick)
+
+Sorting and graph algos (depth-first and breadth-first seach)
+
+sorting (heap, tim)
+
+# Data Structures
+
+Data structures (hash, stack, queue, tree, linked list); 
+
+# Algorithms
+
+lambda functions;
+
+recursion; 
+
+Dijkstra's algorithm, dynamic programming (knapsack problem, Fibonacci sequence)
+
+Functional programming
+
+# Tools
+
+git for version control (resolving merge conflicts)
 
 
 

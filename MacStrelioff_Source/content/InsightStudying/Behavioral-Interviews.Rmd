@@ -1,0 +1,54 @@
+---
+title: "Business Sense"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+math: true
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 99
+linktitle: Business Sense
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site
+
+Why this company? what value can you add? Tell me about a time when… 
+
+STAR chart (Situation, Task, Action, Result)
+
+Mock interviews: Practice, practice, practice 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

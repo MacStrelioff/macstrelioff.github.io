@@ -31,42 +31,6 @@ Working With Bash and Git Useful Bash Commands login # prompts for username and 
     </item>
     
     <item>
-      <title>Business Sense</title>
-      <link>/MacStrelioff/data-science/business-sense/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/data-science/business-sense/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computer Science</title>
-      <link>/MacStrelioff/data-science/computer-science/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/data-science/computer-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>/MacStrelioff/data-science/machine-learning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/data-science/machine-learning/</guid>
-      <description>Sources / Alternatives TODO: Intro Bandit Algorithms Problem Formalization Use Cases and Evaluation Criteria Type I Error False Discovery Rate Regret  Uniform Policy Greedy Policies \(\epsilon\)-Greedy Policy Softmax Policy  Upper Confidence Bound (UCB) Policy Thompson Sampling Policy  Policy Comparisons   Sources / Alternatives  Netflix Experimentation and Sequential Testing Optamizely Google Analytics   TODO: redo in Python, make an agent that uses each strategy as a method.</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/data-science/probability-statistics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/data-science/probability-statistics/</guid>
-      <description>Sources / Alternatives TODO: Intro Bandit Algorithms Problem Formalization Use Cases and Evaluation Criteria Type I Error False Discovery Rate Regret  Uniform Policy Greedy Policies \(\epsilon\)-Greedy Policy Softmax Policy  Upper Confidence Bound (UCB) Policy Thompson Sampling Policy  Policy Comparisons   Sources / Alternatives  Netflix Experimentation and Sequential Testing Optamizely Google Analytics   TODO: redo in Python, make an agent that uses each strategy as a method.</description>
-    </item>
-    
-    <item>
       <title>Shiny Apps</title>
       <link>/MacStrelioff/data-science/shiny_apps_rps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

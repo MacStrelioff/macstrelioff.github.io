@@ -1,15 +1,10 @@
 ---
 title: "Business Sense"
 author: "Mac Strelioff"
-date: "3/20/2019"
+date: "`r Sys.time()`"
 math: true
-
-output:
-  blogdown::html_page:
-    toc: true
-type: docs
 menu:
-  data-science:
+  InsightStudying:
     parent: Foundations
     weight: 99
 linktitle: Business Sense
@@ -28,6 +23,19 @@ set.seed(10201991)
 
 
 
+Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis
+
+Experiment design, A/A and A/B testing, power analysis; 
+
+ML focused business case study (features, algorithms, validation, value), business focused data challenges
+
+Giulio Palombo's collection of business focused data challenges
+
+Company deep dives; data+schema brainstorming; ML algorithms; Insights;
+
+Company blogs are a great resource: check out how StitchFix, Instacart use data science.
+
+More company deep dives!
 
 
 
