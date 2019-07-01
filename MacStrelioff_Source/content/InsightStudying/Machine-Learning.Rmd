@@ -3,6 +3,10 @@ title: "Machine Learning"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 math: true
+
+  output:
+  blogdown::html_page:
+    toc: true
 menu:
   InsightStudying:
     parent: Foundations
@@ -20,23 +24,79 @@ library(entropy)
 set.seed(10201991)
 ```
 
+# Considerations
+
+## Bias-variance trade-off
+
+## Overfitting and Underfitting
+
+Cross Validation; Classification
+
+## Cost Functions and Metrics
+
+Modeling: Validation metrics, 
+
+metrics (precision, recall, F1)
+
+regularisation (ridge, lasso), 
+
+## Feature Engineering
+
+### Seperability
+
+### Assumptions about form of relationship
+
+Process: feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off
+
 # Unsupervised
-Unsupervised: kmeans + heirarchical clustering, PCA; 
-Unsupervised: SVD/LDA/LSA; 
+
+## Clustering
+
+### k-means
+
+### Agglomerative
+
+### Devisive
+
+## Matrix Decomposition
+
+### PCA Principle Components Analysis
+
+### SVD Singular Value Decomposition
+
+## Text-based
+
+### LDA Latent Direchilote Analysis
+
+### LSA Latent Semantic Analysis
 
 # Supervised
 
-Supervised: linear + logistic regression (derive); 
-Supervised: trees and forests, SVM, Naive Bayes, KNN; 
+## Regression
 
-# Process
+### Linear
 
-Modeling: Validation metrics, regularisation (ridge, lasso), 
-Cross Validation; Classification + metrics (precision, recall, F1)
-Process: boosting, feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off
+### Support Vector Machine (SVM)
 
+## Classification
 
-Ensemble methods, boosting, XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost
+### Naive Bayes
+
+### KNN
+
+### Logistic Regression
+
+# Ensemble Methods
+
+boosting, bagging
+
+XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost
+
+## Trees and Forests
+
+### Regression
+
+### Classification
 
 
 Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming

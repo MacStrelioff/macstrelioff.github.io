@@ -1,8 +1,13 @@
 ---
 title: "Machine Learning"
 author: "Mac Strelioff"
-date: "2019-06-30 19:51:28"
+date: "2019-07-01 07:59:51"
 math: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
 menu:
   InsightStudying:
     parent: Foundations
@@ -11,18 +16,147 @@ linktitle: Machine Learning
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#considerations">Considerations</a><ul>
+<li><a href="#bias-variance-trade-off">Bias-variance trade-off</a></li>
+<li><a href="#overfitting-and-underfitting">Overfitting and Underfitting</a></li>
+<li><a href="#cost-functions-and-metrics">Cost Functions and Metrics</a></li>
+<li><a href="#feature-engineering">Feature Engineering</a><ul>
+<li><a href="#seperability">Seperability</a></li>
+<li><a href="#assumptions-about-form-of-relationship">Assumptions about form of relationship</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#unsupervised">Unsupervised</a><ul>
+<li><a href="#clustering">Clustering</a><ul>
+<li><a href="#k-means">k-means</a></li>
+<li><a href="#agglomerative">Agglomerative</a></li>
+<li><a href="#devisive">Devisive</a></li>
+</ul></li>
+<li><a href="#matrix-decomposition">Matrix Decomposition</a><ul>
+<li><a href="#pca-principle-components-analysis">PCA Principle Components Analysis</a></li>
+<li><a href="#svd-singular-value-decomposition">SVD Singular Value Decomposition</a></li>
+</ul></li>
+<li><a href="#text-based">Text-based</a><ul>
+<li><a href="#lda-latent-direchilote-analysis">LDA Latent Direchilote Analysis</a></li>
+<li><a href="#lsa-latent-semantic-analysis">LSA Latent Semantic Analysis</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#supervised">Supervised</a><ul>
+<li><a href="#regression">Regression</a><ul>
+<li><a href="#linear">Linear</a></li>
+<li><a href="#support-vector-machine-svm">Support Vector Machine (SVM)</a></li>
+</ul></li>
+<li><a href="#classification">Classification</a><ul>
+<li><a href="#naive-bayes">Naive Bayes</a></li>
+<li><a href="#knn">KNN</a></li>
+<li><a href="#logistic-regression">Logistic Regression</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#ensemble-methods">Ensemble Methods</a><ul>
+<li><a href="#trees-and-forests">Trees and Forests</a><ul>
+<li><a href="#regression-1">Regression</a></li>
+<li><a href="#classification-1">Classification</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
 
+<div id="considerations" class="section level1">
+<h1>Considerations</h1>
+<div id="bias-variance-trade-off" class="section level2">
+<h2>Bias-variance trade-off</h2>
+</div>
+<div id="overfitting-and-underfitting" class="section level2">
+<h2>Overfitting and Underfitting</h2>
+<p>Cross Validation; Classification</p>
+</div>
+<div id="cost-functions-and-metrics" class="section level2">
+<h2>Cost Functions and Metrics</h2>
+<p>Modeling: Validation metrics,</p>
+<p>metrics (precision, recall, F1)</p>
+<p>regularisation (ridge, lasso),</p>
+</div>
+<div id="feature-engineering" class="section level2">
+<h2>Feature Engineering</h2>
+<div id="seperability" class="section level3">
+<h3>Seperability</h3>
+</div>
+<div id="assumptions-about-form-of-relationship" class="section level3">
+<h3>Assumptions about form of relationship</h3>
+<p>Process: feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off</p>
+</div>
+</div>
+</div>
 <div id="unsupervised" class="section level1">
 <h1>Unsupervised</h1>
-<p>Unsupervised: kmeans + heirarchical clustering, PCA; Unsupervised: SVD/LDA/LSA;</p>
+<div id="clustering" class="section level2">
+<h2>Clustering</h2>
+<div id="k-means" class="section level3">
+<h3>k-means</h3>
+</div>
+<div id="agglomerative" class="section level3">
+<h3>Agglomerative</h3>
+</div>
+<div id="devisive" class="section level3">
+<h3>Devisive</h3>
+</div>
+</div>
+<div id="matrix-decomposition" class="section level2">
+<h2>Matrix Decomposition</h2>
+<div id="pca-principle-components-analysis" class="section level3">
+<h3>PCA Principle Components Analysis</h3>
+</div>
+<div id="svd-singular-value-decomposition" class="section level3">
+<h3>SVD Singular Value Decomposition</h3>
+</div>
+</div>
+<div id="text-based" class="section level2">
+<h2>Text-based</h2>
+<div id="lda-latent-direchilote-analysis" class="section level3">
+<h3>LDA Latent Direchilote Analysis</h3>
+</div>
+<div id="lsa-latent-semantic-analysis" class="section level3">
+<h3>LSA Latent Semantic Analysis</h3>
+</div>
+</div>
 </div>
 <div id="supervised" class="section level1">
 <h1>Supervised</h1>
-<p>Supervised: linear + logistic regression (derive); Supervised: trees and forests, SVM, Naive Bayes, KNN;</p>
+<div id="regression" class="section level2">
+<h2>Regression</h2>
+<div id="linear" class="section level3">
+<h3>Linear</h3>
 </div>
-<div id="process" class="section level1">
-<h1>Process</h1>
-<p>Modeling: Validation metrics, regularisation (ridge, lasso), Cross Validation; Classification + metrics (precision, recall, F1) Process: boosting, feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off</p>
-<p>Ensemble methods, boosting, XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost</p>
+<div id="support-vector-machine-svm" class="section level3">
+<h3>Support Vector Machine (SVM)</h3>
+</div>
+</div>
+<div id="classification" class="section level2">
+<h2>Classification</h2>
+<div id="naive-bayes" class="section level3">
+<h3>Naive Bayes</h3>
+</div>
+<div id="knn" class="section level3">
+<h3>KNN</h3>
+</div>
+<div id="logistic-regression" class="section level3">
+<h3>Logistic Regression</h3>
+</div>
+</div>
+</div>
+<div id="ensemble-methods" class="section level1">
+<h1>Ensemble Methods</h1>
+<p>boosting, bagging</p>
+<p>XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost</p>
+<div id="trees-and-forests" class="section level2">
+<h2>Trees and Forests</h2>
+<div id="regression-1" class="section level3">
+<h3>Regression</h3>
+</div>
+<div id="classification-1" class="section level3">
+<h3>Classification</h3>
 <p>Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming</p>
+</div>
+</div>
 </div>

@@ -6,7 +6,7 @@
     <description>Recent content in InsightStudyings on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jun 2019 19:51:28 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 07:59:51 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,13 +14,10 @@
     <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Sun, 30 Jun 2019 19:51:28 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 07:59:51 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
-      <description>Unsupervised Unsupervised: kmeans + heirarchical clustering, PCA; Unsupervised: SVD/LDA/LSA;
- Supervised Supervised: linear + logistic regression (derive); Supervised: trees and forests, SVM, Naive Bayes, KNN;
- Process Modeling: Validation metrics, regularisation (ridge, lasso), Cross Validation; Classification + metrics (precision, recall, F1) Process: boosting, feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off
-Ensemble methods, boosting, XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost</description>
+      <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification     Considerations Bias-variance trade-off  Overfitting and Underfitting Cross Validation; Classification</description>
     </item>
     
     <item>
