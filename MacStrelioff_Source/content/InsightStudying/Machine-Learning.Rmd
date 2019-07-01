@@ -3,8 +3,7 @@ title: "Machine Learning"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 math: true
-
-  output:
+output:
   blogdown::html_page:
     toc: true
 menu:
@@ -37,6 +36,10 @@ Cross Validation; Classification
 Modeling: Validation metrics, 
 
 metrics (precision, recall, F1)
+
+R squared, RMSE
+
+Likelihood
 
 regularisation (ridge, lasso), 
 

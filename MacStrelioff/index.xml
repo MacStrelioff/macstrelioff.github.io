@@ -36,9 +36,167 @@
     </item>
     
     <item>
+      <title>Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Mon, 01 Jul 2019 09:00:48 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sort-algorithms&#34;&gt;Sort Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#search-algorithms&#34;&gt;Search Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tools&#34;&gt;Tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Foundations&lt;/h1&gt;
+&lt;p&gt;Data type manipulation (char, string, numeric) regular expressions;&lt;/p&gt;
+&lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
+&lt;p&gt;Complexity + O(N) notation&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Searching&lt;/h1&gt;
+&lt;p&gt;binary search,&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+print(1+5)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 6&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sorting&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sorting&lt;/h1&gt;
+&lt;p&gt;sorting (bubble, selection, insertion, merge, quick)&lt;/p&gt;
+&lt;p&gt;Sorting and graph algos (depth-first and breadth-first seach)&lt;/p&gt;
+&lt;p&gt;sorting (heap, tim)&lt;/p&gt;
+&lt;div id=&#34;sort-algorithms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sort Algorithms&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;search-algorithms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Search Algorithms&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ranking Algorithms&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Ranking_(information_retrieval)&#34;&gt;ranking algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recommendation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recommendation&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Recommender_system&#34;&gt;recommendation algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data science methods play a major role in discovering recommendations for users.&lt;/p&gt;
+&lt;p&gt;Econ, compliments and substitutes (competitors).&lt;/p&gt;
+&lt;p&gt;Types of recommendation; compliments (these go together), competitors (you might also like…), temporal (might buy this again in the future). Horizontal and vertical focus&lt;/p&gt;
+&lt;p&gt;Temporal involves forecasting, which is a topic for another post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-structures&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Structures&lt;/h1&gt;
+&lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Algorithms&lt;/h1&gt;
+&lt;p&gt;lambda functions;&lt;/p&gt;
+&lt;p&gt;recursion;&lt;/p&gt;
+&lt;p&gt;Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence)&lt;/p&gt;
+&lt;p&gt;Functional programming&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tools&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tools&lt;/h1&gt;
+&lt;p&gt;git for version control (resolving merge conflicts)&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Mon, 01 Jul 2019 08:39:28 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>
+
+
+&lt;p&gt;Fermi problems (order of magnitude)&lt;/p&gt;
+&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Probability Foundations&lt;/h1&gt;
+&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
+&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Rules&lt;/h2&gt;
+&lt;p&gt;basic probability rules&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;odds-and-other-transformations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Odds and other transformations&lt;/h2&gt;
+&lt;p&gt;odds, log odds, relative risk, … .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
+&lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;experimental-design&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Experimental Design&lt;/h1&gt;
+&lt;div id=&#34;estimands&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Estimands&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;control-groups&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Control Groups&lt;/h2&gt;
+&lt;p&gt;Propensity matching&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;effiencicy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Effiencicy&lt;/h2&gt;
+&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;– get table for different tests of means from soc sci 10 notes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;testing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Testing&lt;/h1&gt;
+&lt;div id=&#34;binary-or-proportions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Binary or Proportions&lt;/h2&gt;
+&lt;div id=&#34;fishers-z&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fisher’s Z&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;real-valued&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Real-Valued&lt;/h2&gt;
+&lt;div id=&#34;regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regression&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-models&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Linear Models&lt;/h1&gt;
+&lt;p&gt;regression&lt;/p&gt;
+&lt;p&gt;t-tests&lt;/p&gt;
+&lt;p&gt;ANOVA&lt;/p&gt;
+&lt;p&gt;t-test, ANOVA&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;GLMs&lt;/h1&gt;
+&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
+&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
+&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
+&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
+&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
+&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
+&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Mon, 01 Jul 2019 07:59:51 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 08:32:03 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>
@@ -102,6 +260,8 @@
 &lt;h2&gt;Cost Functions and Metrics&lt;/h2&gt;
 &lt;p&gt;Modeling: Validation metrics,&lt;/p&gt;
 &lt;p&gt;metrics (precision, recall, F1)&lt;/p&gt;
+&lt;p&gt;R squared, RMSE&lt;/p&gt;
+&lt;p&gt;Likelihood&lt;/p&gt;
 &lt;p&gt;regularisation (ridge, lasso),&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;feature-engineering&#34; class=&#34;section level2&#34;&gt;
@@ -191,24 +351,18 @@
     </item>
     
     <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 30 Jun 2019 19:47:00 +0000</pubDate>
+      <title>Behavioral Interviewing</title>
+      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
+      <pubDate>Mon, 01 Jul 2019 08:01:56 +0000</pubDate>
       
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>
 
 
-&lt;p&gt;Fermi problems (order of magnitude)&lt;/p&gt;
-&lt;p&gt;Stats: descriptive, R-squared, RMSE, chi-squared;&lt;/p&gt;
-&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
-&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
-&lt;p&gt;t-test, ANOVA&lt;/p&gt;
-&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
-&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
-&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
-&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
-&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
+&lt;p&gt;Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site&lt;/p&gt;
+&lt;p&gt;Why this company? what value can you add? Tell me about a time when…&lt;/p&gt;
+&lt;p&gt;STAR chart (Situation, Task, Action, Result)&lt;/p&gt;
+&lt;p&gt;Mock interviews: Practice, practice, practice&lt;/p&gt;
 </description>
     </item>
     
@@ -228,75 +382,6 @@
 &lt;p&gt;Company deep dives; data+schema brainstorming; ML algorithms; Insights;&lt;/p&gt;
 &lt;p&gt;Company blogs are a great resource: check out how StitchFix, Instacart use data science.&lt;/p&gt;
 &lt;p&gt;More company deep dives!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Computer Science</title>
-      <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 30 Jun 2019 19:37:48 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#fundamentals&#34;&gt;Fundamentals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tools&#34;&gt;Tools&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;fundamentals&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Fundamentals&lt;/h1&gt;
-&lt;p&gt;Data type manipulation (char, string, numeric) regular expressions;&lt;/p&gt;
-&lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
-&lt;p&gt;Complexity + O(N) notation&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Searching&lt;/h1&gt;
-&lt;p&gt;binary search,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sorting&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sorting&lt;/h1&gt;
-&lt;p&gt;sorting (bubble, selection, insertion, merge, quick)&lt;/p&gt;
-&lt;p&gt;Sorting and graph algos (depth-first and breadth-first seach)&lt;/p&gt;
-&lt;p&gt;sorting (heap, tim)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-structures&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data Structures&lt;/h1&gt;
-&lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Algorithms&lt;/h1&gt;
-&lt;p&gt;lambda functions;&lt;/p&gt;
-&lt;p&gt;recursion;&lt;/p&gt;
-&lt;p&gt;Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence)&lt;/p&gt;
-&lt;p&gt;Functional programming&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tools&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Tools&lt;/h1&gt;
-&lt;p&gt;git for version control (resolving merge conflicts)&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Business Sense</title>
-      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Sun, 30 Jun 2019 19:33:48 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
-      <description>
-
-
-&lt;p&gt;Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site&lt;/p&gt;
-&lt;p&gt;Why this company? what value can you add? Tell me about a time when…&lt;/p&gt;
-&lt;p&gt;STAR chart (Situation, Task, Action, Result)&lt;/p&gt;
-&lt;p&gt;Mock interviews: Practice, practice, practice&lt;/p&gt;
 </description>
     </item>
     
@@ -2256,45 +2341,6 @@ comments sometimes help the captions appear...
       <guid>/MacStrelioff/unlisted/insight/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#professional-skills&#34;&gt;Professional Skills&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#mindset-day-1-632019&#34;&gt;Mindset (Day 1: 6/3/2019)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#applying&#34;&gt;Applying&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#linkedin&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#resume&#34;&gt;Resume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pitch&#34;&gt;Pitch&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#demos&#34;&gt;Demos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#opportunities-networking-and-company-visits&#34;&gt;Opportunities: Networking and Company Visits&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#profiling-an-opportunity&#34;&gt;Profiling an opportunity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#project&#34;&gt;Project&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#ideation-521-65&#34;&gt;Ideation (5/21-6/5)&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#prediction-market&#34;&gt;Prediction Market&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sentiment-analysis&#34;&gt;Sentiment Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#stats-website&#34;&gt;Stats Website&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#bandit-analysis&#34;&gt;Bandit Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#car-price-recommender&#34;&gt;Car price recommender&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#kaggle-competition&#34;&gt;Kaggle competition?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#selection&#34;&gt;Selection&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#guiding-principles-for-analysis&#34;&gt;Guiding principles for analysis&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#thinking-about-variables&#34;&gt;Thinking about Variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#thinking-about-models&#34;&gt;Thinking about Models&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#consulting&#34;&gt;Consulting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#minimum-viable-product-mvp&#34;&gt;Minimum Viable Product (MVP)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#final-deliverable&#34;&gt;Final Deliverable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#presentation-or-demo&#34;&gt;Presentation or Demo&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#business-value-statement&#34;&gt;Business Value Statement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#interview-preparation&#34;&gt;Interview Preparation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview:&lt;/h1&gt;
@@ -2644,13 +2690,6 @@ comments sometimes help the captions appear...
       <guid>/MacStrelioff/unlisted/autoclicker/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#cookie-clicker-game..&#34;&gt;Cookie clicker game..&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview&lt;/h1&gt;
@@ -2872,14 +2911,6 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
       <guid>/MacStrelioff/unlisted/searchsortrank/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sort-algorithms&#34;&gt;Sort Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#search-algorithms&#34;&gt;Search Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 
 &lt;div id=&#34;recommendation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Recommendation&lt;/h2&gt;
@@ -3196,15 +3227,6 @@ if(length(values$opp_actions)&amp;gt;5){
       <guid>/MacStrelioff/unlisted/why_bayes/</guid>
       <description>
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#coherent&#34;&gt;Coherent&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#flexible&#34;&gt;Flexible&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#integration-with-decision-theory&#34;&gt;Integration with decision theory&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview&lt;/h1&gt;

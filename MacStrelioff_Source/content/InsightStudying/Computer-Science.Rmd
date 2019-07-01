@@ -17,13 +17,18 @@ linktitle: Computer Science
 knitr::opts_chunk$set(echo = TRUE)
 
 # libraries
-library(entropy)
+library(reticulate)
+
+# setup python usage
+knitr::opts_chunk$set(comment = ">>>")
+#py_discover_config() # to see versions of Python
+use_python("/anaconda3/bin/python")
 
 # set seed for reproducability
 set.seed(10201991)
 ```
 
-# Fundamentals
+# Foundations
 
 Data type manipulation (char, string, numeric) regular expressions; 
 
@@ -35,6 +40,14 @@ Complexity + O(N) notation
 
 binary search, 
 
+```{python}
+
+print(1+5)
+
+
+
+```
+
 # Sorting
 
 sorting (bubble, selection, insertion, merge, quick)
@@ -42,6 +55,30 @@ sorting (bubble, selection, insertion, merge, quick)
 Sorting and graph algos (depth-first and breadth-first seach)
 
 sorting (heap, tim)
+
+## Sort Algorithms
+
+Lots of [sort algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)
+
+## Search Algorithms
+
+Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
+
+## Ranking Algorithms
+
+Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
+
+## Recommendation
+
+Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
+
+Data science methods play a major role in discovering recommendations for users. 
+
+Econ, compliments and substitutes (competitors). 
+
+Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
+
+Temporal involves forecasting, which is a topic for another post. 
 
 # Data Structures
 

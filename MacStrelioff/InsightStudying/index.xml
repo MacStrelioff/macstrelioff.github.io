@@ -6,36 +6,61 @@
     <description>Recent content in InsightStudyings on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jul 2019 07:59:51 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 09:00:48 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Mon, 01 Jul 2019 09:00:48 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description>Foundations Searching Sorting Sort Algorithms Search Algorithms Ranking Algorithms Recommendation  Data Structures Algorithms Tools   Foundations Data type manipulation (char, string, numeric) regular expressions;
+basic structures (tuples, list, arrays, dict), list comprehensions,
+Complexity + O(N) notation
+ Searching binary search,
+ print(1+5)  &amp;gt;&amp;gt;&amp;gt; 6  Sorting sorting (bubble, selection, insertion, merge, quick)
+Sorting and graph algos (depth-first and breadth-first seach)
+sorting (heap, tim)
+Sort Algorithms Lots of sort algorithms</description>
+    </item>
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Mon, 01 Jul 2019 08:39:28 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>Fermi problems (order of magnitude)
+Probability Foundations combinatorics (permutations and combinations)
+Probability Rules basic probability rules
+ Odds and other transformations odds, log odds, relative risk, … .
+ Expectation and Variance expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
+  Experimental Design Estimands  Control Groups Propensity matching
+ Effiencicy e.g. with a two sample t-test, \(Y_t - Y_{t-1} = \beta_0\), versus a model \(Y_t = \beta_0 + \beta_1 Y_{t-1}\)</description>
+    </item>
+    
+    <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Mon, 01 Jul 2019 07:59:51 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 08:32:03 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification     Considerations Bias-variance trade-off  Overfitting and Underfitting Cross Validation; Classification</description>
     </item>
     
     <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 30 Jun 2019 19:47:00 +0000</pubDate>
+      <title>Behavioral Interviewing</title>
+      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
+      <pubDate>Mon, 01 Jul 2019 08:01:56 +0000</pubDate>
       
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>Fermi problems (order of magnitude)
-Stats: descriptive, R-squared, RMSE, chi-squared;
-combinatorics (permutations and combinations)
-Probability: distributions, CLT, sampling distributions, p-value,
-t-test, ANOVA
-Stats: k-s, Q-Q plot, hypothesis testing, experimentation;
-Probability: Bayes, bootstrap
-Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality
-Dynamic experimentation (multi-armed bandits)
-Unit testing; EDA visualization (seaborn, Plotly, Bokeh)</description>
+      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
+      <description>Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site
+Why this company? what value can you add? Tell me about a time when…
+STAR chart (Situation, Task, Action, Result)
+Mock interviews: Practice, practice, practice</description>
     </item>
     
     <item>
@@ -51,35 +76,6 @@ Giulio Palombo’s collection of business focused data challenges
 Company deep dives; data+schema brainstorming; ML algorithms; Insights;
 Company blogs are a great resource: check out how StitchFix, Instacart use data science.
 More company deep dives!</description>
-    </item>
-    
-    <item>
-      <title>Computer Science</title>
-      <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 30 Jun 2019 19:37:48 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>Fundamentals Searching Sorting Data Structures Algorithms Tools   Fundamentals Data type manipulation (char, string, numeric) regular expressions;
-basic structures (tuples, list, arrays, dict), list comprehensions,
-Complexity + O(N) notation
- Searching binary search,
- Sorting sorting (bubble, selection, insertion, merge, quick)
-Sorting and graph algos (depth-first and breadth-first seach)
-sorting (heap, tim)
- Data Structures Data structures (hash, stack, queue, tree, linked list);
- Algorithms lambda functions;</description>
-    </item>
-    
-    <item>
-      <title>Business Sense</title>
-      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Sun, 30 Jun 2019 19:33:48 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
-      <description>Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site
-Why this company? what value can you add? Tell me about a time when…
-STAR chart (Situation, Task, Action, Result)
-Mock interviews: Practice, practice, practice</description>
     </item>
     
   </channel>

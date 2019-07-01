@@ -23,13 +23,62 @@ set.seed(10201991)
 
 Fermi problems (order of magnitude)
 
-Stats: descriptive, R-squared, RMSE, chi-squared;  
+# Probability Foundations 
 
 combinatorics (permutations and combinations)
 
-Probability: distributions, CLT, sampling distributions, p-value, 
+## Probability Rules
+
+basic probability rules
+
+## Odds and other transformations
+
+odds, log odds, relative risk, ... .
+
+## Expectation and Variance
+
+expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
+
+# Experimental Design
+
+## Estimands
+
+## Control Groups
+
+Propensity matching
+
+## Effiencicy
+
+e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = \beta_0 + \beta_1 Y_{t-1}$
+
+-- get table for different tests of means from soc sci 10 notes.
+
+# Testing
+
+## Binary or Proportions
+
+### Fisher's Z
+
+## Real-Valued
+
+### Regression
+
+# Linear Models
+
+regression
+
+t-tests
+
+ANOVA
 
 t-test, ANOVA
+
+# GLMs
+
+Stats: descriptive, R-squared, chi-squared;  
+
+Probability: distributions, CLT, sampling distributions, p-value, 
+
 
 Stats: k-s, Q-Q plot, hypothesis testing, experimentation; 
 

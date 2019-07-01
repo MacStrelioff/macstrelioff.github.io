@@ -1,5 +1,5 @@
 ---
-title: "Business Sense"
+title: "Behavioral Interviewing"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 math: true
@@ -7,7 +7,7 @@ menu:
   InsightStudying:
     parent: Foundations
     weight: 99
-linktitle: Business Sense
+linktitle: Behavioral Interviewing
 ---
 
 ```{r setup, include=FALSE}
