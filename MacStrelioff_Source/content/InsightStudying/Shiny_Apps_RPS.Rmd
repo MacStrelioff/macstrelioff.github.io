@@ -1,0 +1,347 @@
+---
+title: "Shiny Apps"
+author: "Mac Strelioff"
+date: "5/13/2019"
+#output: 
+#  html_document:
+#    toc: true
+output:
+  blogdown::html_page:
+    toc: true
+type: docs
+math: true
+menu:
+  data-science:
+    parent: Projects
+    weight: 31
+linktitle: Shiny Apps Intro
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview
+
+Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments. My experiments were essentially simple games -- there would be buttons that participants could press, and feedback that they would see based on their actions. I decided to make a rock-paper-scissors app to gain experience with Shiny apps and probe their utility as tools for hosting experiments. You can check out the app [here (https://macstrelioff.shinyapps.io/rockpaperscissorsagent/)](https://macstrelioff.shinyapps.io/rockpaperscissorsagent/) though I only have 25 hours a month of free hosting, so it may be down occasionally. 
+
+The source code for this app can be found on my GitHub [here](https://github.com/MacStrelioff/RockPaperScissors)
+
+# Shiny apps
+
+[Shiny apps](http://shiny.rstudio.com/) are primarily a tool for dashboarding. A dashboard is a tool that a data professional could create in order to communicate insights and actionable results to decision-makers. Ideally these apps enable decison-makers to easily interact with the data in a way that streamlines their decision making process. Many examples, with code, can be seen in the [shiny app gallary](http://shiny.rstudio.com/gallery/) -- this was the primary resource I turned to while putting together my app.
+
+Shiny apps are comprised of a user interface (UI) component and a server component; a common layout might look like this; 
+
+```
+library(shiny)
+
+ui <- fluidPage()
+
+server <- function(input, output){}
+
+shinyApp(ui = ui, server = server)
+```
+
+The `ui` will contain functions that control the layout of the page and the names of interactive components like buttons and sliders. The `server` defines how the page changes in response to events and user actions, and the final line `shinyApp(ui=ui,server=server)` runs the app. For hosting on shinyapps.io (described below), the script that runs the app must be called `App.R`.
+
+## UI: User Interface
+
+My code for the user interface is shown below and broken down in this section;
+
+```
+ui <- fluidPage(
+  # Application title
+  titlePanel("Rock Paper Scissors!"),
+  # figure
+  fluidRow(
+    column(width=5,
+           plotOutput("distPlot")
+    )
+  ),
+  # buttons
+  fluidRow(
+    column(width=5,offest=2,
+           actionButton("rock","Rock"),
+           actionButton("paper","Paper"),
+           actionButton("scissors","Scissors")
+    )
+  ),
+  fluidRow(width=5,offset=5,
+           textOutput("result"),br(),
+           p("Source code available at: https://github.com/MacStrelioff/RockPaperScissors")
+           )
+  
+)
+```
+
+The `fluidPage()` function is named after a type of layout that adjusts to the dimensions of a browser. Functions within `fluidPage()` add elements to the webpage. `titlePanel("TITLE")` controls the large title at the top of a page. `fluidRow()` adds rows of elements to the page, the length of which are determined by the `column()` function. I add the figure with; 
+```
+column(width=5,
+       plotOutput("distPlot")
+)
+```
+Here `plotOutput("OUTPUT_NAME")` takes an output from the `server` function, described in the next section, and plots it. More information on reactive output can be found [here](http://shiny.rstudio.com/tutorial/written-tutorial/lesson4/). 
+
+Next I create the row of buttons with;
+```
+# buttons
+fluidRow(
+  column(width=5,offest=2,
+         actionButton("rock","Rock"),
+         actionButton("paper","Paper"),
+         actionButton("scissors","Scissors")
+  )
+)
+```
+Here `offset` controls spacing from a previous `column` call (not used here since everything is in one `column()` call). Each `actionButton()` call draws one of the buttons -- the first argument is the variable name of this button, which is used as input for the server, and the second argument is the text that appears on the button. An overview of the many kinds of interactive elements you can add is avilable [here](http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/).
+
+Finally I add some text to describe game events and point interested users to the source code, with; 
+```
+fluidRow(width=5,offset=5,
+         textOutput("result"),br(),
+         p("Source code available at: https://github.com/MacStrelioff/RockPaperScissors")
+         )
+```
+Here `textOutput("OUTPUT_NAME")` takes the text ouput variable `OUTPUT_NAME` from the server and displays it. `br()`, named after a line break in HTML (`<br>`) adds a line break. And `p()` adds static text, again named after a paragraph tag (`<p>`) in HTML. 
+
+## Server
+
+The server defines how page elements interact with user input and server events.
+
+### Components
+
+My code for the server is shown below and broken down in this section with an emphasis on the functions used. In the code below, I replaced opponent logic with `...` to keep the emphasis here on understanding server functions. This logic is revealed and detailed in the next section.
+```
+server <- function(input, output) {
+  
+  # initialize variables (runs once when app visited)
+  values <- reactiveValues()
+  values$round =0; # track round
+  values$opp_actions = c() # track opponent actions
+  values$score =0; # track score
+  values$scores=0; # track score history for feedback
+  values$grams = data.frame('rrrrr'=rep(0,3)) # initialize to store gram counts
+  values$a = "init";
+  values$as = c("r","p","s") # possible actions
+
+  observeEvent(input$rock | input$paper | input$scissors,{
+      # if any action taken (done to block the first run when these are all NULL->0)
+      if(input$rock | input$paper | input$scissors){
+        # increment round
+        values$round  = values$round+1;
+        # policy -- code to greedily pick best action
+        ## if fewer than 5 actions taken, draw uniformly
+        if(length(values$opp_actions)<5){
+          values$a=sample(values$as,1)
+          } else{ # if at least 5 actions taken
+          nobs = length(values$opp_actions)
+          ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = "")
+          #cat("\n",ngram)
+          # if this pattern not observed before, initialize it and choose randomly
+          if(!any(names(values$grams)==ngram)){
+            values$grams[ngram]=rep(0,3)
+            values$a=sample(values$as,1)
+          } else { # if at least 5 actions taken, and this pattern has been seen before, 
+            pred = values$as[which.max(values$grams[ngram][[1]])]
+            values$a=switch(pred,"r"="p","p"="s","s"="r")
+          }
+          #cat("\n",names(values$grams))
+          #cat("\n",values$grams[ngram][[1]])
+        }
+        
+        # get opponent action and outcome
+        if(input$rock    -sum(values$opp_actions=="r")==1){
+          opp_action="r"
+          dscore = switch(values$a,"r"=0,"p"=-1,"s"=1)
+          }
+        if(input$paper   -sum(values$opp_actions=="p")==1){
+          opp_action="p"
+          dscore = switch(values$a,"r"=1,"p"=0,"s"=-1)
+        }
+        if(input$scissors-sum(values$opp_actions=="s")==1){
+          opp_action="s"
+          dscore = switch(values$a,"r"=-1,"p"=1,"s"=0)
+        }
+        
+        # evaluate outcome
+        values$score  = values$score+dscore
+        values$scores = c(values$scores,values$score);
+        
+        # update opponent model 
+        values$opp_actions = c(values$opp_actions,opp_action);
+        
+        if(length(values$opp_actions)>5){
+          if(any(names(values$grams)==ngram)){
+            values$grams[ngram][[1]]=values$grams[ngram][[1]]+(values$as==opp_action)
+          }
+        }
+        
+      }
+    
+    # use strings to code, then just take last 5 strings and use as the key for the dictionary of 5-grams...
+    output$distPlot <- renderPlot({
+      try({
+      x = seq(0,values$round);
+      y = values$scores;
+      cat("\n round:",values$round, ", score:",values$score,", len(x): ",length(x)," len(y):",length(y),", opp_act:",values$opp_actions,
+          "\n a: ",values$a,
+          sep="")
+      # draw the histogram with the specified number of bins
+      plot(x,y,type="l",xlab = "Rounds",ylab="Score",main="Cumulative Score")
+      })
+    })
+    })
+  
+  output$result = renderText({
+    paste("Opponent chose: ",switch(values$a,"r"="Rock","p"="Paper","s"="Scissors","init"="Nothing yet, ..."))
+  })
+  
+}
+```
+
+The first chunk here, shown below, uses the `reactiveValues()` function to create a named list of variables that can be updated throughout the app session.
+```
+# initialize variables (runs once when app visited)
+values <- reactiveValues()
+values$round =0; # track round
+values$opp_actions = c() # track opponent actions
+values$score =0; # track score
+values$scores=0; # track score history for feedback
+values$grams = data.frame('rrrrr'=rep(0,3)) # initialize to store gram counts
+values$a = "init";
+values$as = c("r","p","s") # possible actions
+```
+
+The next section uses `observeEvent(LOGICAL)` to check if an event has occurred. Here the events are a `TRUE` value from any of the buttons, which would represent that the button had been pressed. The variables `input$NAME` represent the button whose label is `NAME`. The second argument is a script to run when an event is detected. Note that the values for variables that reflect button presses, here `input$rock`, `input$paper`, `input$scissors`, are initialized as `NULL`, so the server will first run once with these values as `NULL`. To avoid the game from starting on this run, I included a conditional that required one of their values to be `TRUE`, which would indicate that the player clicked one of the buttons. The rest of this block is replaced with `...` because it is game logic that is described below, however, it heavily relies on access to the reactive values stored in the `values` structure. 
+```
+  observeEvent(input$rock | input$paper | input$scissors,{
+      # if any action taken (done to block the first run when these are all NULL->0)
+      if(input$rock | input$paper | input$scissors){
+          ...
+        }
+      }
+```
+
+The last two chunks use the `renderPlot()` function to produce the `distPlot` variable, stored in the `output` structure, which is referenced in the `ui` when drawing the figure. This code occasionally crashed when button presses happened rapidly, so I wrapped it in a `try()` block. The `cat()` function was used to print values to the console while debugging. Finally, I used the `renderText()` function to assign textual feedback on the agent's actions to the output variable `result` which is referenced in the `ui` when displaying the text that is rendered here. 
+```
+output$distPlot <- renderPlot({
+  try({
+  x = seq(0,values$round);
+  y = values$scores;
+  cat("\n round:",values$round, ", score:",values$score,", len(x): ",length(x)," len(y):",length(y),", opp_act:",values$opp_actions,
+      "\n a: ",values$a,
+      sep="")
+  # draw the histogram with the specified number of bins
+  plot(x,y,type="l",xlab = "Rounds",ylab="Score",main="Cumulative Score")
+  })
+})
+})
+  
+output$result = renderText({
+  paste("Opponent chose: ",switch(values$a,"r"="Rock","p"="Paper","s"="Scissors","init"="Nothing yet, ..."))
+})
+```
+
+### Rock Paper Scissors Agent Logic
+
+Here I return to the logic inside the `observeEvent()` call that implements the game. This code is run whenever a user chooses an action. First I increment the round, which is stored in the `reactiveValue` structure, `values`;
+```
+# increment round
+values$round  = values$round+1;
+```
+
+I then implemented the agent's policy. In a reinforcement learning context, a policy is an agent's probability distribution over actions. The actions here are stored in the reactive value `as` which consists of "r","p", and "s", respectively representing the actions Rock, Paper, or Scissors. The policy I implemented here depends on the last 5 actions that a user takes. The entire history of a user's actions, excluding the current action, is stored in the reactive value `opp_actions` which is a string consisting of the charasters "r", "p", or "s". For example, if `opp_actions` is "rrps", it would mean that the user chose rock twice, then paper, then scissors, before picking the current action which is not yet part of the action history. The agent's action is stored in the reactive value `a`. On the first 5 rounds, the agent picks uniformly from the actions Rock, Paper, Scissors;
+```
+if(length(values$opp_actions)<5){
+  values$a=sample(values$as,1)
+  } 
+```
+
+After 5 rounds, the agent uses 5-grams (sequences of the last 5 user actions), to pick an action that will beat the most likely player action based on the previous times the player has emitted this sequence of 5 actions. To implement this, I first get the number of observed actions, `nobs`, and then get a string that represents the last 5 actions the user has taken, `ngram`. If theis sequence has not been observed, the agent creates an instance of the sequence in its memory of the users's 5-grams (`grams`), initializes counts of the uses subsequent Rock, Paper, Scissors actions to 0, and finally uniformly samples an action. Otherwise, if this sequence has been observed before, the agent predicts what the user will choose on this round (`pred`) by finding the action that the player most frequently chose in the past after an identical sequence of 5 actions, and then picks the action `a` that would beat what it expects the player to chose. The code that implements this process is shown below;
+```
+  else{ # if at least 5 actions taken
+  nobs = length(values$opp_actions)
+  ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = "")
+  # if this pattern not observed before, initialize it and choose randomly
+  if(!any(names(values$grams)==ngram)){
+    values$grams[ngram]=rep(0,3)
+    values$a=sample(values$as,1)
+  } else { # if at least 5 actions taken, and this pattern has been seen before, 
+    pred = values$as[which.max(values$grams[ngram][[1]])]
+    values$a=switch(pred,"r"="p","p"="s","s"="r")
+  }
+  #cat("\n",names(values$grams))
+  #cat("\n",values$grams[ngram][[1]])
+}
+```
+
+The game environment then processes the user's action and the agent's action, and determines an outcome of +1 if the user won, 0 if the agent and user tied, and -1 if the agent won;
+
+```
+# get opponent action and outcome
+if(input$rock    -sum(values$opp_actions=="r")==1){
+  opp_action="r"
+  dscore = switch(values$a,"r"=0,"p"=-1,"s"=1)
+  }
+if(input$paper   -sum(values$opp_actions=="p")==1){
+  opp_action="p"
+  dscore = switch(values$a,"r"=1,"p"=0,"s"=-1)
+}
+if(input$scissors-sum(values$opp_actions=="s")==1){
+  opp_action="s"
+  dscore = switch(values$a,"r"=-1,"p"=1,"s"=0)
+}
+```
+
+The outcome value is added to the cumulative score, `score`, and the score is appended to the `scores` variables which stores the score on every round for plotting. 
+```
+# evaluate outcome
+values$score  = values$score+dscore
+values$scores = c(values$scores,values$score);
+```
+
+Finally, the agent updates its model of the user by appending the current action to the user's action history, `opp_actions`, and updating it's memory of user behavior stored in `grams` by incrementing the count of the user's action associated with the 5-gram for this round, `ngram`.
+```
+# update opponent model 
+values$opp_actions = c(values$opp_actions,opp_action);
+
+if(length(values$opp_actions)>5){
+  if(any(names(values$grams)==ngram)){
+    values$grams[ngram][[1]]=values$grams[ngram][[1]]+(values$as==opp_action)
+  }
+```
+
+## Hosting
+
+
+### Hosting locally 
+
+Running the function `shinyApp(ui = ui, server = server)` from RStudio will run the application on a local host. This is great for debugging, but not great for making the app avilable to users on other computers.
+
+### Hosting online
+
+RStudio supports many ways of [hosting a shiny app](https://shiny.rstudio.com/deploy/), but the one that worked best for me was to host through the free plan at [Shinnyapps.io](https://www.shinyapps.io/). A detailed walkthrough on deploying shiny apps can be found [here](https://docs.rstudio.com/shinyapps.io/getting-started.html#deploying-applications).
+
+
+It is also possible to host a Shiny app through Amazon Web Services. More resources on that can be found [here](https://medium.com/@CharlesBordet/how-to-deploy-a-shiny-app-on-aws-part-1-4893d0a7432f), 
+[here](https://www.charlesbordet.com/en/shiny-aws-1/), or
+[here](https://stackoverflow.com/questions/47725234/understanding-the-scalability-of-rshiny-apps-hosted-on-shinyserver).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

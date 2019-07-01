@@ -36,6 +36,874 @@
     </item>
     
     <item>
+      <title></title>
+      <link>/MacStrelioff/insightstudying/working-environment/</link>
+      <pubDate>Sun, 30 Jun 2019 18:56:46 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/working-environment/</guid>
+      <description>
+
+
+&lt;!---
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LgYl1ffS_6Y&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+---&gt;
+&lt;div id=&#34;working-environment&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Working Environment&lt;/h1&gt;
+&lt;p&gt;My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.&lt;/p&gt;
+&lt;div id=&#34;working-with-bash-and-git&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Working With Bash and Git&lt;/h2&gt;
+&lt;div id=&#34;useful-bash-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Useful Bash Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;login     # prompts for username and then password to log in
+man       # man (command) returns documentation a command&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;directory-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Directory Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;pwd       # print working directory
+cd        # changes directory to home
+cd \      # changes directory to (/path)
+cd ..     # moves up one folder in the directory
+ls -al    # lists contencts of directory, -a includes hidden items, -l includes details&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;file-operations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;File Operations&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;mkdir    # make a new directory
+touch    # create a file
+open     # open a file
+mv       # move (file) (to), can also be used to rename a file
+cp       # copy (file) (to) 
+rm       # delete a file&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-utilities&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Other Utilities&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;echo    # print commands screen
+date    # print date
+cal     # print calendar (year)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-custom-commands&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Creating Custom Commands&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e&#34;&gt;this Medium blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use the alias command to map an execution of bash commands to a single command. For example, this will create a command ‘hi’ where the Luca voice slowly says ‘hello world’;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias hi=&amp;quot;say -v Luca  -r 100 &amp;#39;hello world&amp;#39;&amp;quot;
+hi # test this alias&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Functions can be created with the following syntax;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function function_name() {
+ &amp;lt;args&amp;gt; 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Inputs are denoted with $1, $2, … . For example, when called from the terminal, this function will print ‘Your Input Was:’ followed by the first argument it receives;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function print_my_input() {
+ echo &amp;#39;Your Input Was:&amp;#39; $1 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To create a file where custom commands are defined, navigate to the home directory, create, and open the file that will hold function definitions;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd 
+touch .custom_commands
+open .custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define commands you wish to use in future Terminal sessions in the .custom_commands file. The next section describes how to source this file automatically when a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sourcing-files-during-terminal-initialization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sourcing Files During Terminal Initialization&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://stackoverflow.com/questions/19662713/where-do-i-find-the-bashrc-file-on-mac&#34;&gt;this StackOverflow post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bash sources a run control file (~/.bashrc) at initialization. Check if this file exists in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+ls -a&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there is no .bashrc file listed, then first open the .bash_profile file in a text editor and add the following;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then create and open a .bashrc file in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+touch .bashrc
+open .bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In a text editor add the following lines to the .bashrc file;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This last line will source the .custom_commands file described at the end of the previous section, thereby defining any aliases or functions in the .custom_commands file whenever a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scheduling-bash-functions-with-crontab&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Scheduling Bash Functions With Crontab&lt;/h2&gt;
+&lt;p&gt;Some basic crontab commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l # lists crontab jobs
+crontab -r # removes all crontab jobs
+crontab -e # edits list of crontab jobs&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The crontab -e command is somewhat hard to navigate, the following code is an easier way to create crontab jobs from ther terminal;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l | { cat; echo &amp;quot;* * * * * some entry&amp;quot;; } | crontab -
+
+# format for string argument for crontab;
+* * * * * &amp;quot;some entry&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I simplify this farther in a custom function called ‘schedule’ that I define in .&lt;/p&gt;
+&lt;p&gt;To execute functions from a user, the user must be specified in /etc/cron.allow – however, this file can only be edited by a superuser. To create and edit this file, use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd /etc
+sudo touch cron.allow
+sudo nano cron.allow&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;nano opens a text editor in ther terminal, and that can be used to edit and save changes to cron.allow.&lt;/p&gt;
+&lt;p&gt;More information on crontab &lt;a href=&#34;https://www.computerhope.com/unix/ucrontab.htm&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Git and GitHub&lt;/h2&gt;
+&lt;div id=&#34;setup&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# create user name and email for tagging contributions later
+git config --global user.name &amp;quot;USERNAME&amp;quot;   
+git config --global user.email &amp;quot;EMAIL&amp;quot; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Connecting to Git can be done through a username/password or through SSH verification.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;usernamepassword&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Username/Password&lt;/h3&gt;
+&lt;p&gt;This didn’t work for ubdates scheduled through crontab.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ssh&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;SSH&lt;/h3&gt;
+&lt;p&gt;First, &lt;a href=&#34;https://help.github.com/articles/checking-for-existing-ssh-keys/&#34;&gt;check for SSH keys with&lt;/a&gt;;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd ~/.ssh  # navigate to user/.ssh folder
+ls -a      # list all files&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A public SSH key is in id_rsa.pub, which can be opened in a text editor.&lt;/p&gt;
+&lt;p&gt;If no id_rsa file exists, or if you wish to create a new SSH key, you can use the following command to generate a new SSH key;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@example.com&amp;quot; # run this if id_rsa file does not exist&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will prompt you for the file location where the SSH key should be saved – id_rsa is the default file.&lt;/p&gt;
+&lt;p&gt;From here, follow the steps &lt;a href=&#34;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&#34;&gt;to add an SSH key&lt;/a&gt;, summarized below.&lt;/p&gt;
+&lt;p&gt;First, create a config file for the SSH agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;touch ~/.ssh/config&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open the config file in a text editor and add the the following commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, from Terminal, add the key from the file (e.g. id_rsa) to the ssh agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-add -K ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, &lt;a href=&#34;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&#34;&gt;add the ssh key to the GitHub account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;test the connection&lt;/a&gt; with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh -T git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;working-from-a-repository&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Working From a Repository&lt;/h3&gt;
+&lt;p&gt;Create a repository through GitHub’s user interface (log in and select ‘new repository’).&lt;/p&gt;
+&lt;p&gt;Then create a directory on a local computer, possibly using bash commands; mkdir and cd.&lt;/p&gt;
+&lt;p&gt;The simplest way is to clone the repo from GitHub with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git clone (url)     # this will clone from the url to the current directory&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another way, from inside the directory that is to be the local repo, issue these commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git init   # initialize a repo
+git remote add origin (url or SSH address) # point local repo to remote repo&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;switching-between-ssh-and-https-access&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Switching between SSH and HTTPS Access&lt;/h3&gt;
+&lt;p&gt;In both examples below, replace ‘USERNAME/REPOSITORY’ with the appropriate values. From within the local repo folder,&lt;/p&gt;
+&lt;p&gt;Change from HTTPS to SSH with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Change from SSH to HTTPS with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with https://github.com/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/changing-a-remote-s-url/&#34;&gt;More detailed guide here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Other methods for addressing ‘Device not configured’ errors &lt;a href=&#34;https://stackoverflow.com/questions/40274484/fatal-could-not-read-username-for-https-github-com-device-not-configured&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;repository-maintanence-and-collaboration&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Repository Maintanence And Collaboration&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# download.file(&amp;quot;https://i.stack.imgur.com/nWYnQ.png&amp;quot;,&amp;#39;y.jpg&amp;#39;, mode = &amp;#39;wb&amp;#39;)
+jj &amp;lt;- readPNG(&amp;quot;y.jpg&amp;quot;,native=TRUE)
+plot(0:1,0:1,type=&amp;quot;n&amp;quot;,ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,1,1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/InsightStudying/Working-Environment_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/MacStrelioff/y.jpg&#34; alt=&#34;Git workflow&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Git workflow&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Useful commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git pull    # adds files from the configured remote repo to your local repo and workspace
+git add .   # adds all new files to be tracked
+git add -u  # updates all files
+git add -A  # does both &amp;#39;.&amp;#39; and &amp;#39;-u&amp;#39;
+git commit -m &amp;quot;message&amp;quot; # saves changes local repo
+git push    # updates repo on GitHub&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Collaborators can all access the GitHub repo through push/pull commands. In collaborative settings you might need to pull, so that your repository is current, before pushing changes from the local repository to the remote repository on GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;useful-custom-aliases-and-functions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Useful Custom Aliases and Functions&lt;/h2&gt;
+&lt;div id=&#34;gitup-combines-add-commit-and-push-into-one-command&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitup: combines add, commit, and push into one command&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gitupall-updates-all-git-repos-in-my-git-folder&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitupall: updates all git repos in my git folder&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function gitupall{
+for filename in /Users/mac/git/*; do
+echo &amp;quot;**************************updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;; 
+gitup
+cd ..
+done
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;schedule-schedules-a-command-to-be-executed-periodically&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;schedule: schedules a command to be executed periodically&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+
+# format for string argument for crontab;
+* * * * * &amp;quot;command to be executed&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# e.g. use: schedule updating of all repos each hour
+schedule &amp;quot;0 0-23 * * * gitupall&amp;quot;
+crontab -l # lists crontab jobs after schedule call&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;my-setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;My Setup&lt;/h2&gt;
+&lt;div id=&#34;bash-aliases-functions-scheduled-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bash Aliases, Functions, Scheduled Commands&lt;/h3&gt;
+&lt;p&gt;In my root directory, I have a file called .custom_commands with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# aliases
+
+# goes to my folder of git projects
+alias gitgo=&amp;quot;cd /Users/mac/git; ls&amp;quot;
+echo &amp;#39;sourced alias gitgo&amp;#39;
+
+# pushes updates on a git project
+alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;
+echo &amp;#39;sourced alias gitup&amp;#39;
+
+# functions
+
+# schedule &amp;quot;(m h DoM M DoW command)&amp;quot;
+# schedules command to be executed at 
+# minute m of hour h on DoM days of the month in months M or DoW days of the week.
+function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+echo &amp;#39;sourced function schedule&amp;#39;
+
+# for updating all git projects, schedule this to be done periodically
+function gitupall(){
+for filename in /Users/mac/git/*; do
+echo &amp;quot;************************** updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;;
+git remote -v    # prints the fetch and push destinations
+gitup
+done
+cd # return to home directory
+}
+echo &amp;#39;sourced function gitupall&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a .bashrc file in my root directory, which sources the custom commands. Particularly the contents of the .bashrc file are;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source system-wide definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a file in my root directory for scheduling, called .scheduled with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# put all scheduled functions here
+
+# source custom commands
+source ~/.custom_commands
+
+# activate key agent
+eval &amp;quot;$(ssh-agent -s)&amp;quot;
+
+# test SSH key / print username
+ssh -T git@github.com
+
+# update all git repos
+gitupall&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I then scheduled this file to be read hourly by opening a terminal session, which sources .bashrc at initialization thereby sourcing my custom commands, and running;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;schedule &amp;quot;0 0-23 * * * source ~/.scheduled&amp;quot;
+crontab -l # the scheduled job should be listed as a crontab job&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Twitter, Poisson Processes, and Conjugacy</title>
+      <link>/MacStrelioff/insightstudying/twitter-poisson-processes-and-conjugacy/</link>
+      <pubDate>Sat, 29 Jun 2019 14:37:56 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/twitter-poisson-processes-and-conjugacy/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#background-and-setup&#34;&gt;Background and Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#twitter-data&#34;&gt;Twitter Data&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pulling-data-from-twitters-api&#34;&gt;Pulling Data from Twitter’s API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#working-with-twitter-status-objects&#34;&gt;Working with Twitter Status objects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#embed-a-status&#34;&gt;Embed a Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#convert-a-status-to-a-dict&#34;&gt;Convert a Status to a dict&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#access-status-attributes-how-i-accessed-the-data-used-below&#34;&gt;Access Status Attributes (How I accessed the data used below)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#poisson-process&#34;&gt;Poisson Process&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#assumptions&#34;&gt;Assumptions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#specification-and-properties&#34;&gt;Specification and Properties&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#checking-the-homogeneity-assumption&#34;&gt;Checking the Homogeneity Assumption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#checking-the-exponential-distribution-of-intervals&#34;&gt;Checking the exponential distribution of intervals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#model-of-tweet-fequency-using-conjugacy&#34;&gt;Model of Tweet Fequency Using Conjugacy&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#inference-on-tweet-rate-lambda-over-time&#34;&gt;Inference On Tweet Rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; Over Time&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#predicting-number-of-tweets-in-interval-s&#34;&gt;Predicting Number Of Tweets In Interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;background-and-setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background and Setup&lt;/h2&gt;
+&lt;p&gt;In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.&lt;/p&gt;
+&lt;p&gt;To get started, I followed directions from three main sources that walked through the &lt;code&gt;twitter&lt;/code&gt; and &lt;code&gt;python-twitter&lt;/code&gt; libraries, and described how to apply for Twitter API access and use the keys;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;code&gt;python-twitter&lt;/code&gt;: Blogpost &lt;a href=&#34;https://medium.com/@YashSharma8388/collecting-data-from-twitter-using-python-twitter-library-and-twitter-api-42376c68d910&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tweepy&lt;/code&gt;: Blogpost &lt;a href=&#34;https://medium.com/@ssola/playing-with-twitter-streaming-api-b1f8912e50b0&#34;&gt;here&lt;/a&gt; and docs &lt;a href=&#34;http://docs.tweepy.org/en/v3.4.0/api.html&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Additional information on obtaining API keys and authenticating Twitter connections in a blogpost &lt;a href=&#34;https://medium.com/@fbilesanmi/how-to-login-with-twitter-api-using-python-6c9a0f7165c5&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I include my code to import the required libraries and set up API access keys, though the data used here were pulled and saved before writing the notebook. The main focus is on understanding Poisson processes and adaptive modeling of such processes using conjucacy.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(reticulate)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;reticulate&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Setup
+# for working with timestamps
+import pandas as pd
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
+# for basic math
+import numpy as np
+# for plotting
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# for working with distributions
+from scipy.stats import expon,gamma,poisson,nbinom
+
+# for general web data pulling
+import requests
+
+# for pulling tweets from Twitter API
+import twitter
+
+# keys for twitter API
+# (removed for this public document)
+api = twitter.Api(consumer_key=&amp;#39;&amp;#39;,
+              consumer_secret=&amp;#39;&amp;#39;,
+              access_token_key=&amp;#39;&amp;#39;,
+              access_token_secret=&amp;#39;&amp;#39;)
+
+# for saving and loading Python objects like dicts
+import pickle
+
+def save_obj(obj, name):
+    with open(name + &amp;#39;.pkl&amp;#39;, &amp;#39;wb&amp;#39;) as f:
+        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+def load_obj(name):
+    with open(name + &amp;#39;.pkl&amp;#39;, &amp;#39;rb&amp;#39;) as f:
+        return pickle.load(f)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;twitter-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Twitter Data&lt;/h2&gt;
+&lt;div id=&#34;pulling-data-from-twitters-api&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Pulling Data from Twitter’s API&lt;/h3&gt;
+&lt;p&gt;First I pulled data using the code below. For this code to work, your API keys will need to be specified in the setup above. To conceil my keys, I ran the commented code below earlier and saved the timeline object. The uncommented code loads my timeline and looks at the first element. The timeline is represented as a list of Status objects like the one output by the code below.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# # Twitter handel to pull data from
+# handle = &amp;#39;@macstrelioff&amp;#39;
+# 
+# # get timeline
+# timeline=api.GetUserTimeline(screen_name = handle, 
+#                     count=200, # 200 is maximum 
+#                     include_rts=True, 
+#                     trim_user=True, 
+#                     exclude_replies=False)
+# 
+# # save timeline object
+# save_obj(timeline,&amp;#39;timeline_macstrelioff_20190406&amp;#39;)
+
+# load timeline object
+timeline=load_obj(&amp;#39;timeline_macstrelioff_20190406&amp;#39;)
+timeline[0] # most recent tweet status object&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Status(ID=1113860296458756097, ScreenName=None, Created=Thu Apr 04 17:46:03 +0000 2019, Text=&amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;working-with-twitter-status-objects&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Working with Twitter Status objects&lt;/h3&gt;
+&lt;p&gt;I cover three ways to work with Status objects. 1. display the Status as a tweet! 2. Convert the Status to a dictionary and access values from keys 3. Access values directly as attributes of the Status&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;embed-a-status&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Embed a Status&lt;/h3&gt;
+&lt;p&gt;First, many the Status attributes (&lt;code&gt;created_at&lt;/code&gt;, &lt;code&gt;favorite_count&lt;/code&gt;, &lt;code&gt;text&lt;/code&gt;, …) can be cleanly displayed as a tweet embedded in a notebook. Below I create function that takes a username and tweet ID then, using Twitter’s embedding API, displayes the tweet as it would be seen on Twitter. (Note: this will only work properly if the Python kernel is trusted)&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# for displaying tweets based on username and tweet_id
+class disp_tweet(object):
+    def __init__(self, user_name, tweet_id):
+        # see: https://dev.twitter.com/web/embedded-tweets
+        api = &amp;#39;https://publish.twitter.com/oembed?url=https://twitter.com/&amp;#39;+ \
+               user_name + &amp;#39;/status/&amp;#39; + tweet_id
+        response  = requests.get(api)
+        self.text = response.json()[&amp;quot;html&amp;quot;]
+
+    def _repr_html_(self):
+        return self.text&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a1ec00b00&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+My desk is covered in random papers. It is the support of a stationery distribution.
+&lt;/p&gt;
+— mac strelioff (&lt;span class=&#34;citation&#34;&gt;@macstrelioff&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/macstrelioff/status/981338927419109376?ref_src=twsrc%5Etfw&#34;&gt;April 4, 2018&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;convert-a-status-to-a-dict&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Convert a Status to a dict&lt;/h3&gt;
+&lt;p&gt;Status objects have a bound method, &lt;code&gt;.AsDict()&lt;/code&gt;, that will convert them to a Python dictionary. This way the structure of the information is easily seen. In the code below, I convert the first status to a dictionary and output it contents.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(timeline[0].AsDict())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; {&amp;#39;created_at&amp;#39;: &amp;#39;Thu Apr 04 17:46:03 +0000 2019&amp;#39;, &amp;#39;favorite_count&amp;#39;: 20, &amp;#39;hashtags&amp;#39;: [], &amp;#39;id&amp;#39;: 1113860296458756097, &amp;#39;id_str&amp;#39;: &amp;#39;1113860296458756097&amp;#39;, &amp;#39;in_reply_to_screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;, &amp;#39;in_reply_to_status_id&amp;#39;: 1113822568211996672, &amp;#39;in_reply_to_user_id&amp;#39;: 19304217, &amp;#39;lang&amp;#39;: &amp;#39;da&amp;#39;, &amp;#39;media&amp;#39;: [{&amp;#39;display_url&amp;#39;: &amp;#39;pic.twitter.com/QOULUc5a0u&amp;#39;, &amp;#39;expanded_url&amp;#39;: &amp;#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&amp;#39;, &amp;#39;id&amp;#39;: 1113860285566046210, &amp;#39;media_url&amp;#39;: &amp;#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;, &amp;#39;media_url_https&amp;#39;: &amp;#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;, &amp;#39;sizes&amp;#39;: {&amp;#39;thumb&amp;#39;: {&amp;#39;w&amp;#39;: 150, &amp;#39;h&amp;#39;: 150, &amp;#39;resize&amp;#39;: &amp;#39;crop&amp;#39;}, &amp;#39;large&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}, &amp;#39;medium&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}, &amp;#39;small&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}}, &amp;#39;type&amp;#39;: &amp;#39;animated_gif&amp;#39;, &amp;#39;url&amp;#39;: &amp;#39;https://t.co/QOULUc5a0u&amp;#39;, &amp;#39;video_info&amp;#39;: {&amp;#39;aspect_ratio&amp;#39;: [125, 99], &amp;#39;variants&amp;#39;: [{&amp;#39;bitrate&amp;#39;: 0, &amp;#39;content_type&amp;#39;: &amp;#39;video/mp4&amp;#39;, &amp;#39;url&amp;#39;: &amp;#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&amp;#39;}]}}], &amp;#39;retweet_count&amp;#39;: 2, &amp;#39;source&amp;#39;: &amp;#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/android&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for Android&amp;lt;/a&amp;gt;&amp;#39;, &amp;#39;text&amp;#39;: &amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;, &amp;#39;urls&amp;#39;: [], &amp;#39;user&amp;#39;: {&amp;#39;id&amp;#39;: 70255183, &amp;#39;id_str&amp;#39;: &amp;#39;70255183&amp;#39;}, &amp;#39;user_mentions&amp;#39;: [{&amp;#39;id&amp;#39;: 19304217, &amp;#39;id_str&amp;#39;: &amp;#39;19304217&amp;#39;, &amp;#39;name&amp;#39;: &amp;#39;Vicki Boykis&amp;#39;, &amp;#39;screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;}]}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{&amp;#39;created_at&amp;#39;: &amp;#39;Thu Apr 04 17:46:03 +0000 2019&amp;#39;,
+ &amp;#39;favorite_count&amp;#39;: 20,
+ &amp;#39;hashtags&amp;#39;: [],
+ &amp;#39;id&amp;#39;: 1113860296458756097,
+ &amp;#39;id_str&amp;#39;: &amp;#39;1113860296458756097&amp;#39;,
+ &amp;#39;in_reply_to_screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;,
+ &amp;#39;in_reply_to_status_id&amp;#39;: 1113822568211996672,
+ &amp;#39;in_reply_to_user_id&amp;#39;: 19304217,
+ &amp;#39;lang&amp;#39;: &amp;#39;da&amp;#39;,
+ &amp;#39;media&amp;#39;: [{&amp;#39;display_url&amp;#39;: &amp;#39;pic.twitter.com/QOULUc5a0u&amp;#39;,
+   &amp;#39;expanded_url&amp;#39;: &amp;#39;https://twitter.com/macstrelioff/status/1113860296458756097/photo/1&amp;#39;,
+   &amp;#39;id&amp;#39;: 1113860285566046210,
+   &amp;#39;media_url&amp;#39;: &amp;#39;http://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;,
+   &amp;#39;media_url_https&amp;#39;: &amp;#39;https://pbs.twimg.com/tweet_video_thumb/D3U6BzqUUAIwYEC.jpg&amp;#39;,
+   &amp;#39;sizes&amp;#39;: {&amp;#39;thumb&amp;#39;: {&amp;#39;w&amp;#39;: 150, &amp;#39;h&amp;#39;: 150, &amp;#39;resize&amp;#39;: &amp;#39;crop&amp;#39;},
+    &amp;#39;large&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;},
+    &amp;#39;medium&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;},
+    &amp;#39;small&amp;#39;: {&amp;#39;w&amp;#39;: 250, &amp;#39;h&amp;#39;: 198, &amp;#39;resize&amp;#39;: &amp;#39;fit&amp;#39;}},
+   &amp;#39;type&amp;#39;: &amp;#39;animated_gif&amp;#39;,
+   &amp;#39;url&amp;#39;: &amp;#39;https://t.co/QOULUc5a0u&amp;#39;,
+   &amp;#39;video_info&amp;#39;: {&amp;#39;aspect_ratio&amp;#39;: [125, 99],
+    &amp;#39;variants&amp;#39;: [{&amp;#39;bitrate&amp;#39;: 0,
+      &amp;#39;content_type&amp;#39;: &amp;#39;video/mp4&amp;#39;,
+      &amp;#39;url&amp;#39;: &amp;#39;https://video.twimg.com/tweet_video/D3U6BzqUUAIwYEC.mp4&amp;#39;}]}}],
+ &amp;#39;retweet_count&amp;#39;: 2,
+ &amp;#39;source&amp;#39;: &amp;#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/android&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for Android&amp;lt;/a&amp;gt;&amp;#39;,
+ &amp;#39;text&amp;#39;: &amp;quot;@vboykis df.dropna(how=&amp;#39;brute force&amp;#39;) https://t.co/QOULUc5a0u&amp;quot;,
+ &amp;#39;urls&amp;#39;: [],
+ &amp;#39;user&amp;#39;: {&amp;#39;id&amp;#39;: 70255183, &amp;#39;id_str&amp;#39;: &amp;#39;70255183&amp;#39;},
+ &amp;#39;user_mentions&amp;#39;: [{&amp;#39;id&amp;#39;: 19304217,
+   &amp;#39;id_str&amp;#39;: &amp;#39;19304217&amp;#39;,
+   &amp;#39;name&amp;#39;: &amp;#39;Vicki Boykis&amp;#39;,
+   &amp;#39;screen_name&amp;#39;: &amp;#39;vboykis&amp;#39;}]}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;access-status-attributes-how-i-accessed-the-data-used-below&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Access Status Attributes (How I accessed the data used below)&lt;/h3&gt;
+&lt;p&gt;Since I’m interested in modeling expected number of tweets in a week, the most relevant attribute is the timestamps in the &lt;code&gt;created_at&lt;/code&gt; attribute. These attributes can be accessed directly from the Status object. Below I make a list of the times at which each tweet was created and check the first element of that list;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# get list of time stamps
+times = [pd.Timestamp(tweet.created_at) for tweet in timeline]
+times.reverse() # sort s.t. times[0] is lowest, times[-1] is highest
+times[0]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timestamp(&amp;#39;2018-11-01 05:56:58+0000&amp;#39;, tz=&amp;#39;tzutc()&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This creates a list of timestamps. By default, times from the twitter API are localized to the UTC timezone. Below I convert these to my local time in California;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;times = [time.tz_convert(&amp;quot;America/Los_Angeles&amp;quot;) for time in times]
+times[0]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timestamp(&amp;#39;2018-10-31 22:56:58-0700&amp;#39;, tz=&amp;#39;America/Los_Angeles&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we have a list of timestamps in local time! To get a sense of the duration over which this data spans, below I compute the time difference between the frist and last timestamp;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;times[-1]-times[0]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Timedelta(&amp;#39;154 days 11:49:05&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Woah, almost 155 days of my twitter activity!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;poisson-process&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Poisson Process&lt;/h2&gt;
+&lt;p&gt;A Poisson process is a common framework for modeling events that occurr in time or space. In this context, tweets are being created over time and we are interested in modeling the rate at which tweets are created in order to predict how many tweets will be created in a week.&lt;/p&gt;
+&lt;div id=&#34;assumptions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Assumptions&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;No more than one event can occur at a single point in time.
+&lt;ul&gt;
+&lt;li&gt;This can be violated when a user publishes a thread of multiple tweets at once. This can be fixed by recoding threads as a single status.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Independence: The interval lengths for each event are not influenced by any other event.
+&lt;ul&gt;
+&lt;li&gt;This can be violated if, instead of using Twitter’s thread option, a user ends a tweet with “…” to indicate that they will soon create another tweet. In this case, there are some tweets that imply a shorter interval before the next tweet.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Homogeneity: The distribution of intervals is the same throughout the entire process.
+&lt;ul&gt;
+&lt;li&gt;I probe this assumption in depth below, and it almost certainly violated.&lt;/li&gt;
+&lt;li&gt;There are methods for modeling inhomogeneous Poisson processes, but I ignore those here.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;specification-and-properties&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Specification and Properties&lt;/h3&gt;
+&lt;p&gt;In this context tweet events are occurring across time. I index tweets with &lt;span class=&#34;math inline&#34;&gt;\(i\in\{1,...,N\}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; is the total number of tweets observed. Each tweet is created at a time, &lt;span class=&#34;math inline&#34;&gt;\(t_i\)&lt;/span&gt;, and the next tweet is observed after an interval &lt;span class=&#34;math inline&#34;&gt;\(s_{i}\)&lt;/span&gt;. That is, if tweet &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; is created at time &lt;span class=&#34;math inline&#34;&gt;\(t_{i-1}\)&lt;/span&gt; then tweet &lt;span class=&#34;math inline&#34;&gt;\(i+1\)&lt;/span&gt; is created at time &lt;span class=&#34;math inline&#34;&gt;\(t_{i}=t_{i-1}+s_{i}\)&lt;/span&gt;. The interval between each tweet is &lt;span class=&#34;math inline&#34;&gt;\(s_i = t_{i}-t_{i-1} = (t_{i-1}+s_i)-t_{i-1}\)&lt;/span&gt;. The assumptions of a Poisson process permit the following distributions for three interesting features of this scenario.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The distribution of time between events, &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt;, is exponential; &lt;span class=&#34;math inline&#34;&gt;\(s_i\sim Expo(\lambda) \Rightarrow p(s_i|\lambda) = \lambda e^{-\lambda s_i}\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;Here &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; is a parameter that describes the tweet rate.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Given an interval of length &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;, the distribution of the count of events in that interval, &lt;span class=&#34;math inline&#34;&gt;\(c|s\)&lt;/span&gt;, is Poisson; &lt;span class=&#34;math inline&#34;&gt;\(c|s\sim Poisson(\lambda s) \Rightarrow p(c|s,\lambda) = \frac{(\lambda s)^{c}e^{-\lambda s}}{c!}\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;The count of events, &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;, in a fixed interval depends both on the rate of the events, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the duration of the interval, &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;The distribution of the total interval required for &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; events, &lt;span class=&#34;math inline&#34;&gt;\(s|c\)&lt;/span&gt;, is gamma; &lt;span class=&#34;math inline&#34;&gt;\(s|c \sim Gamma(c,\lambda) \Rightarrow p(s|c,\lambda) = \frac{\lambda^c}{\Gamma(c)}(s)^{c-1}e^{-\lambda s}\)&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;The interval, &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;, required for a fixed number of events depends on both the rate of the events, &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the number of events, &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;More information on these three kinds of distributions, and ways to implement them in Python, can be found in the &lt;a href=&#34;https://docs.scipy.org/doc/scipy/reference/stats.html&#34;&gt;scipy documentation on statistical functions&lt;/a&gt;. General information on each of these distributions can be found on the Wikipedia page for the &lt;a href=&#34;https://en.wikipedia.org/wiki/Exponential_distribution&#34;&gt;exponential&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Poisson_distribution&#34;&gt;Poisson&lt;/a&gt;, or &lt;a href=&#34;https://en.wikipedia.org/wiki/Gamma_distribution&#34;&gt;gamma&lt;/a&gt; distribution. A key difference between the standard uses of these distributions and their roles in a Poisson process is that the rate parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; is also scaled by the duration of an interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; when constructing a distribution for the count of events in interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; (2, above) or the duration of the interval required for &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; events (3, above).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;checking-the-homogeneity-assumption&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Checking the Homogeneity Assumption&lt;/h3&gt;
+&lt;p&gt;The homogeneity assumption strictly requires that tweet rates are constant across time. This would generate data that are uniform across meaningful intervals such as time in a week or time in a day. To check homogeneity, below I convert the timestamps into the hour within a week, minute within a day, and minute within an hour, and plot tweet counts across these representations of time.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# convert to hours in a week
+hour_of_week     = [t.weekday()*24+t.hour+t.minute/60 for t in times]
+minute_of_day    = [t.hour*60+t.minute+t.second/60 for t in times]
+minute_of_hour   = [t.minute+t.second/60 for t in times]
+plt.figure(figsize=(10,4));
+plt.hist(hour_of_week,bins=80);&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.title(&amp;quot;My Tweet Counts By Hour Of Week&amp;quot;);
+plt.ylabel(&amp;quot;Count&amp;quot;);
+plt.xlabel(&amp;quot;Hour In Week&amp;quot;);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The histogram above indicates that there might be some hours of the week that have a higher rate than others. For example, I don’t seem to tweet much early on Sunday (hours 0-5), but I do seem to tweet a lot during the day on Sunday (around hours 6-20). Below I use rug plots, which represent a tweet event with a vertical line near the x-axis, and an imposed kernel density estimate, which is a continuous version of a histogram. I remake this plot in terms of hours within a week, minutes within a day, and minutes within an hour. If the tweet rate (&lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;) were homogeneous, then the kernel density estimate would be approximately flat.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def rug_plot_and_density(dat,bw,xlab,xlim):
+    # rug plot + density
+    plt.figure(figsize=(10,4))
+    sns.distplot(dat, hist = False, kde = True, rug = True,
+                 color = &amp;#39;darkblue&amp;#39;, 
+                 kde_kws={&amp;#39;linewidth&amp;#39;: 3,&amp;quot;bw&amp;quot;:bw},
+                 rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;})
+    # formatting
+    plt.title(&amp;#39;Tweet Density By &amp;#39;+xlab)
+    plt.xlabel(xlab)
+    plt.ylabel(&amp;#39;Kernel Density&amp;#39;)
+    plt.xlim(xlim);
+    plt.show()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# data and plot formatting arguments
+dats = (hour_of_week,minute_of_day,minute_of_hour)
+xlabs=(&amp;#39;Hour of Week&amp;#39;,&amp;#39;Minute of Day&amp;#39;,&amp;#39;Minute of Hour&amp;#39;)
+xlims=([0,24*7],[0,24*60],[0,60]);
+bws  = (4,40,4)
+
+# make plots
+for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
+    rug_plot_and_density(dat=dat,bw=bw,xlab=xlab,xlim=xlim)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-2.png&#34; width=&#34;960&#34; /&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-3.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Are very sensitive to the choice of the bandwidth parameter that determines the window over which to aggregate events (similar to bin size when using a histogram). I’m using these plots to demonstrate possible violations of homogeneity that I would follow up on in a real analysis, but will not follow up on here.&lt;/p&gt;
+&lt;p&gt;From the top plot, there seems to be two patterns. First, a series of peaks and troughs that roughly correspond to daytime and night-time hours. I probably tweet with a higher frequency when I am awake, rather than asleep – meaning that &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; may depend on time within a day. Second, a generally lower kernel density estimate during the middle than the edges. I may tweet more during the weekends (edge hours) than week days (middle hours).&lt;/p&gt;
+&lt;p&gt;From the middle plot that displays tweet frequencies by minutes within a day, there again seem to be two trends. First, I rarely tweet before minute 400 (around 6:40AM). Second, I have peaks around minute 600 (10:00AM), 1000 (4:40PM), and 1350 (10:00PM). This might be related to the times that I take a break from working. I generally take a break around 5:00PM, and usually take another break before bed around 9:00-10:00PM.&lt;/p&gt;
+&lt;p&gt;The bottom plot displays tweet frequencies by minutes within an hour. This seems more flat overall longer periods of time, but I may strangely tend to tweet more during the first half of hours.&lt;/p&gt;
+&lt;p&gt;Overall, there are many reasons that the homogeneity assumption may be violated. For cases like this, the tweet rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; can be modeled as a function of time. However, to keep this example simple, I’ll ignore possible violations and proceede as if &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; were a constant with respect to time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;checking-the-exponential-distribution-of-intervals&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Checking the exponential distribution of intervals&lt;/h3&gt;
+&lt;p&gt;Let’s the distribution of the time between tweets, &lt;span class=&#34;math inline&#34;&gt;\(s_i\)&lt;/span&gt;. If the assumptions of the Poisson process were satisfied, then the intervals between tweets would follow an exponential distribution. Below I compute the number of seconds between tweets and display each value as a black dash on the x-axis. I overlay a histogram, a kernel density, and a exponential density based on the observed mean interval.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# compute intervals between tweets
+ss = [times[i]-times[i-1] for i in range(1,len(times))];
+# convert from Timedelta to total time in seconds
+ss = [si.total_seconds() for si in ss]
+
+# histogram and density plot
+plt.figure(figsize=(10,4))
+sns.distplot(ss, hist = True, kde = True, rug = True,
+             color = &amp;#39;darkblue&amp;#39;, bins=100,
+             hist_kws={&amp;#39;color&amp;#39;:[0,.7,.5,.5],&amp;#39;label&amp;#39;:&amp;#39;Histogram&amp;#39;},
+             kde_kws={&amp;#39;linewidth&amp;#39;: 3,&amp;quot;bw&amp;quot;:60*60,&amp;#39;label&amp;#39;:&amp;#39;Kernel Density&amp;#39;},
+             rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;})
+plt.xlim([0,680000]);&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.title(&amp;#39;Distribution of intervals between tweets&amp;#39;)
+plt.xlabel(&amp;#39;Seconds&amp;#39;)
+plt.ylabel(&amp;#39;Frequency&amp;#39;)
+
+# overlay an exponential density
+tmp_rate=np.mean(ss)
+tmpx = np.linspace(0,680000,680000*5)
+tmpy = expon.pdf(tmpx,scale=tmp_rate)
+plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label=&amp;#39;Exponential Density&amp;#39;);
+# add legend
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# check standard deviation
+np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; (90150.9122414953, 67076.1055276382, 1.3440093388300445)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The observed standard deviation is about 1.34 times larger (variance is about 1.80 times larger) than it would be if the data were exponentially distributed with the observed mean. While this could be accounted for with an overdispersion parameter, I will ignore this issue here for the sake of having a simple and fast online model.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-of-tweet-fequency-using-conjugacy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Model of Tweet Fequency Using Conjugacy&lt;/h2&gt;
+&lt;p&gt;First, I’ll assume (despite the overdispersion) that the intervals between tweets follow an exponential distribution;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+s_i|\lambda &amp;amp;\sim Expo(\lambda) \\
+\Rightarrow p(s_i|\lambda) &amp;amp;= \lambda e^{-s_i \lambda}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To account for uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, I’ll use a Gamma distribution with shape &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and rate &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda &amp;amp;\sim Gamma(\alpha,\beta) \\ 
+\Rightarrow p(\lambda|\alpha,\beta) &amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \lambda^{\alpha-1}e^{-\lambda \beta}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The choice of a Gamma distribution allows for fast updates using conjugacy between the prior beliefs about &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; based on data observed up to time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; and the exponential likelihood for the interval observed at time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda | s_t &amp;amp;\sim Gamma(\alpha_t,\beta_t) \\ 
+p(s_{t+1}|\lambda) &amp;amp;= \lambda e^{-s_{t+1} \lambda} \\
+p(\lambda|\alpha_t,\beta_t,s_{t+1}) &amp;amp;\propto p(s_{t+1}|\lambda) p(\lambda|\alpha_t,\beta_t) \\
+&amp;amp;= \lambda e^{-s_{t+1} \lambda} \frac{\beta_t^{\alpha_t}}{\Gamma(\alpha_t)} \lambda^{\alpha_t-1}e^{-\lambda \beta_t} \\
+&amp;amp;= \lambda^{\alpha_t} e^{-\lambda(s_{t+1}+\beta_t)} \\ 
+\Rightarrow \lambda | s_{t+1} &amp;amp;\sim Gamma(\alpha_t+1,\beta_t+s_{t+1})
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This implies the following update rules for computing the parameters of the posterior over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\alpha_{t+1} &amp;amp;\leftarrow \alpha_t +1 \\
+\beta_{t+1}  &amp;amp;\leftarrow \beta_t + s_{t+1} \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To answer the question of how many tweets might be observed in a period of time, I’ll assume that the count of tweets &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; is Poisson distributed with rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;. Then the number of tweets expected in an interval of length &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; would be;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\theta &amp;amp;= s\lambda \\ 
+c|\theta &amp;amp;\sim Poisson(\theta) \\
+\Rightarrow p(c|\theta) &amp;amp;= \frac{\theta^c e^{-\theta}}{c!}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This means that, rather than &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, we are actually interested in the distribution of &lt;span class=&#34;math inline&#34;&gt;\(\theta=s\lambda\)&lt;/span&gt;. I derive this below using a change of vairables;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\theta = s\lambda &amp;amp;\Rightarrow \lambda = \frac{\theta}{s} = \theta s^{-1} \\
+p_\theta(\theta | \lambda,s) &amp;amp;= p_\lambda\left(\theta s^{-1} | s,\alpha,\beta\right) \left| \frac{d \lambda}{d \theta}\right|\\
+&amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \left(\frac{\theta}{s}\right)^{\alpha-1}e^{-\frac{\theta}{s}\beta} \left|s^{-1}\right| \\
+&amp;amp;= \frac{\beta^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}s^{-({\alpha-1})-1}e^{-\frac{\theta}{s}\beta} \\
+\Rightarrow p(\theta|s,\alpha,\beta)&amp;amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}}\\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now we can find the distribution of &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; that accounts for uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; through the prior on &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p(c|s,\alpha,\beta) &amp;amp;= \int_\theta p(c|\theta)p(\theta|s,\alpha,\beta)d\theta \\
+&amp;amp;=\int_\theta \frac{\theta^c e^{-\theta}}{c!} \frac{\left(\frac{\beta}{s}\right)^\alpha}{\Gamma(\alpha)} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
+&amp;amp;= \frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\int_\theta \theta^c e^{-\theta} \theta^{(\alpha-1)}e^{-\theta\frac{\beta}{s}} d\theta \\
+&amp;amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\int_\theta \theta^{c+\alpha-1} e^{-\theta\left(\frac{\beta+s}{s}\right)} d\theta \\
+&amp;amp;=\frac{\left(\frac{\beta}{s}\right)^\alpha}{c!\Gamma(\alpha)}
+\frac{\Gamma(c+\alpha)}{\left(\frac{\beta+s}{s}\right)^{c+\alpha}} \\
+&amp;amp;=\frac{\Gamma(c+\alpha)}{c!\Gamma(\alpha)} \beta^\alpha s^{-\alpha} s^{c+\alpha}
+(\beta+s)^{-(c+\alpha)} \\
+&amp;amp;=\frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)}  \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\ 
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Since a Poisson Process assumes that no more than one event can occur in an interval, intervals can be treated as discrete Bernoulli trials in which an event either occurs or does not occur. In this discrete settng, the distribution of the count of intervals with an event &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; for a given number of intervals without the event &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; and a probability of the event in each interval &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt; will follow a negative binomial distribution;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+k &amp;amp;\sim NegBino(r,p) \\ 
+\Rightarrow p(k|r,p) &amp;amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
+&amp;amp;= \frac{\Gamma(k+r)}{\Gamma(r+1) \Gamma(k)}p^{k}(1-p)^{r} \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Combining the two results above, we see that the count &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; in an interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; will follow a negative binomial distribution such that &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; fixes the number of intervals in which no event occurs, and &lt;span class=&#34;math inline&#34;&gt;\(\frac{s}{\beta+s}\)&lt;/span&gt; captures the probability of an event in any unit length interval;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+c &amp;amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\ 
+\Rightarrow p(c|s,\alpha,\beta) &amp;amp;= \frac{\Gamma(c+\alpha)}{\Gamma(c+1)\Gamma(\alpha)} \left(\frac{s}{\beta+s}\right)^c \left(\frac{\beta}{\beta+s}\right)^\alpha \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In summary, the key components of this model are the exponential likelihood and gamma priors which allow for the fast and simple updating rules to compute the posterior over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;, and the negative binomial predictive distribution which accounts for the uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt;. So the applicable information from above is;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\lambda &amp;amp;\sim Gamma(\alpha_t,\beta_t) \\
+s_{t+1} &amp;amp;\sim Expo(\lambda) \\
+\alpha_{t+1} &amp;amp;\leftarrow \alpha_t + 1      \\ 
+\beta_{t+1}  &amp;amp;\leftarrow \beta_t + s_{t+1} \\ 
+c|s,\alpha,\beta &amp;amp;\sim NegBino\left(\alpha,\frac{s}{\beta+s}\right) \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here I investigate posterior predictive intervals for tweets over a period of time &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt; while using different components of this model. In the code below, I compute all values of &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; based on the update rules derived above from conjugacy.&lt;/p&gt;
+&lt;!---
+This formulation can be thought of as discretizing the Poisson Process into $c+\alpha$ trials defined as intervals of length $\frac{1}{\beta+s}$, where $\beta$ is the sum of the interval lengths for which no event occured, and $s$ is the sum of interval lengths for those intervals that included an event. 
+---&gt;
+&lt;!---
+$\lambda$ has units! 
+
+Gamma prior on the rate;
+$$ \lambda \sim Gamma(\alpha,\beta)$$
+$$p(\lambda)=\frac{\beta^\alpha}{\Gamma(\alpha)}\lambda^{\alpha-1}e^{-\beta \lambda}$$
+
+Observe an exponential interval;
+$$p(s|\lambda) = \lambda e^{-\lambda s}$$
+
+Then the posterior becomes; 
+
+$$p(\lambda|s)\propto p(s|\lambda)p(\lambda) 
+= \lambda^{\alpha-1}e^{-\beta \lambda} \lambda e^{-\lambda s} 
+= \lambda^{(\alpha+1)-1}e^{-\lambda (\beta+s)}$$
+$$\Rightarrow \lambda|s \sim Gamma(\alpha+1,\beta+s)$$
+
+To incorporate more prior information, the prior $\alpha$ would reflect the number of observations, and $\beta$ can reflect the sum of intervals associated with each observation.
+
+Given an estimate of $\lambda$, a poisson can be used to estimate the number of events in an interval (a week). 
+
+A Poisson and a gamma make a negative binomial, which is used for predictive densities that account for uncertainty in the rate.
+---&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# initialize alpha,beta as 0
+alpha,beta = 0,0
+alphas,betas = list(),list()
+# for each observed interval in ss,
+for si in ss:
+    si = si/(60*60*24) # si s/1 * 1/60 m/s * 1/60 h/m * 1/24 d/h convert to days
+    alpha+=1 # increment alpha by 1
+    beta+=si # increment beta by the interval length
+    # save parameters for analysis
+    alphas.append(alpha)
+    betas.append(beta)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The code above converts intervals from seconds to days and comptutes &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; for all intervals in my dataset. This gives the parameters for posterior beliefs over &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; as each tweet is observed. Below I check the final parameters and some statistics from the last posterior.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;a,b,mode,median,mean=(alpha,beta,(alpha-1)/beta,gamma.ppf(.5,a=alpha,scale=1/beta),alpha/beta)
+print(  &amp;#39;alpha : &amp;#39;+str(a)+
+      &amp;#39;\nbeta  : &amp;#39;+str(b)+
+      &amp;#39;\nmode  : &amp;#39;+str(mode)+
+      &amp;#39;\nmedian: &amp;#39;+str(median)+
+      &amp;#39;\nmean  : &amp;#39;+str(mean))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; alpha : 199
+&amp;gt;&amp;gt;&amp;gt; beta  : 154.49241898148153
+&amp;gt;&amp;gt;&amp;gt; mode  : 1.2816162845099446
+&amp;gt;&amp;gt;&amp;gt; median: 1.2859321345366828
+&amp;gt;&amp;gt;&amp;gt; mean  : 1.2880890940276715&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The value of &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; correctly indicates 199 observed intervals, and the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; of 154.59 also correctly reflects the time difference in days that was computed in the first section. Lastly the ordinal relationship of the mode, median, and mean is consistent with that of a gamma distribution.&lt;/p&gt;
+&lt;div id=&#34;inference-on-tweet-rate-lambda-over-time&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Inference On Tweet Rate &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; Over Time&lt;/h3&gt;
+&lt;p&gt;In the code below, I compute the maximum a posteriori (MAP) estimate, or posterior mode, across time. I plot this across time with the 97.5&lt;span class=&#34;math inline&#34;&gt;\(^{th}\)&lt;/span&gt; and 2.5&lt;span class=&#34;math inline&#34;&gt;\(^{th}\)&lt;/span&gt; percentiles as a shaded region representing the 95% credible interval.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# get MAP lambda
+lambda_map   = [(alpha-1)/beta for alpha,beta in zip(alphas,betas)]
+# get CI upper and lower bounds
+lambda_upper = [gamma.ppf(.975,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
+lambda_lower = [gamma.ppf(.025,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
+# plot over time
+plt.figure(figsize=(10,4))
+sns.distplot(times[1:], hist = False, kde = False, rug = True,
+             color = &amp;#39;darkblue&amp;#39;, 
+             rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;});
+plt.plot(times[1:],lambda_map,color=[0,0,1],label=&amp;#39;MAP&amp;#39;);
+plt.fill_between(times[1:], lambda_lower, lambda_upper,color=[0,0,1,.1],label=&amp;#39;95% CI&amp;#39;)
+plt.ylabel(&amp;#39;Posterior on Lambda (tweets/day)&amp;#39;)
+plt.xlabel(&amp;#39;Time&amp;#39;)
+plt.title(&amp;#39;Summary of the posterior over $\lambda$ across time&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; might be warrented.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;predicting-number-of-tweets-in-interval-s&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Predicting Number Of Tweets In Interval &lt;span class=&#34;math inline&#34;&gt;\(s\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Now I’ll visually compare predictions for the count of tweets in a week based on estimates of &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; after the first 20 tweets and using all 200 tweets, using two models; 1. A Poisson using &lt;span class=&#34;math inline&#34;&gt;\(\theta=s\lambda_{MAP}\)&lt;/span&gt; 2. The negative binomial derived in the model section above&lt;/p&gt;
+&lt;p&gt;First, an issue with the parameterization of the negative binomial has to be addressed. In my derivation, I ended with a negative binomial parameterized as;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+k&amp;amp;:\text{Number of successes} \\
+r&amp;amp;:\text{Number of failures} \\
+p&amp;amp;:\text{Probability of failure} \\
+p(k|r,p) &amp;amp;= \frac{(k+r-1)!}{r! (k-1)!}p^{k}(1-p)^{r} \\
+\end{aligned} 
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;Scipy.stats.nbinom&lt;/code&gt; function defines a negative binomial with;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+k&amp;amp;:\text{Number of failures} \\
+n&amp;amp;:\text{Number of successes} \\
+p&amp;amp;:\text{Probability of success} \\
+p(k|n,p) &amp;amp;= \frac{(k+n-1)!}{(n-1)!k!} p^{n}(1-p)^{k}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Recall in my derivation that the parameter corresponding to probability of failure was &lt;span class=&#34;math inline&#34;&gt;\(p=\frac{s}{\beta+s}\)&lt;/span&gt;. The differences in parameterization can be accounted for by supplying the &lt;code&gt;nbinom&lt;/code&gt; function with &lt;span class=&#34;math inline&#34;&gt;\(p=1-\frac{s}{\beta+s}=\frac{\beta}{\beta+s}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The code below plots predictive densities based on the two approaches above from estimates of &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; based only on the first 20 observations.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# for the first 20 tweets
+# parameters
+cs = range(20)
+s = 7
+index = 19
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
+# labels
+plt.ylabel(&amp;#39;Mass&amp;#39;)
+plt.xlabel(&amp;#39;Count&amp;#39;)
+plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using 20 Observations&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;With a small amount of data, the uncertainty in the estimate of tweet rates carries through the negative binomial model, which gives more mass to a wider range of counts relative to the Poisson model that discards uncertainty when by &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
+# parameters
+index = 198
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
+# labels
+plt.ylabel(&amp;#39;Mass&amp;#39;)
+plt.xlabel(&amp;#39;Count&amp;#39;)
+plt.title(&amp;#39;Predictions for Tweet Counts in a Week, Using All Data&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;With a larger amount of data and predicting the tweet count over a short interval (7 days), the predictive distribution from the negative binomial and Poisson models are nearly indistinguishable. Below I compare the predictions of these model for an interval of 1 year (365 days), again using all data.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Using all data
+# parameters
+cs=range(350,600)
+s = 365
+index = 198
+theta = s*lambda_map[index]
+plt.figure(figsize=(10,4))
+# plot the Poisson density
+plt.scatter(cs,poisson.pmf(cs,theta))
+plt.plot(   cs,poisson.pmf(cs,theta),label=&amp;#39;Poisson&amp;#39;)
+# plot the negative binomial density
+plt.scatter(cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])))
+plt.plot(   cs,nbinom.pmf(cs,n=alphas[index],p=betas[index]/(s+betas[index])),label=&amp;#39;Negative Binomial&amp;#39;);
+# labels
+plt.ylabel(&amp;#39;Mass&amp;#39;)
+plt.xlabel(&amp;#39;Count&amp;#39;)
+plt.title(&amp;#39;Predictions for Tweet Counts in a Year, Using All Data&amp;#39;)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;When considering a longer period of time, The uncertainty in &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; again carries through the negative binomial model, but is discarded in the Poisson model that uses &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{MAP}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This was a beefy notebook!&lt;/p&gt;
+&lt;p&gt;First I showed how to pull tweets as Status objects from Twitter’s API. Given Status objects, I then showed how to embed them in a notebook, view them as a dictionary, and otherwise access their attributes to construct a list of tweet timestamps. I then described Poisson Processes as they may apply to modeling user tweet rates and tweet counts over periods of time. I used kernel densities to check assumptions of a Poisson Process and found possible violations of homogeneity, and of the result that intervals between tweets should follow an exponential distribution.&lt;/p&gt;
+&lt;p&gt;Punting these violations, I developed a model of tweet frequency using conjugacy between Gamma priors and Exponential likelihoods. To predict tweet counts over a period of time, I derived a negative binomial predictive distribution that accounted for uncertainty in a user’s tweet rate. I compared this distribution to a Poisson distribution that ignored uncertainty by taking only the maximum a posteriori estimate of a user’s tweet rate.&lt;/p&gt;
+&lt;p&gt;Overall the model that discards posterior uncertainty attributes less mass to fringe counts, especially when there is little data or when the interval over which counts are being predicted is long. Incorporating posterior uncertainty broadens the predictive distribution to reflect uncertainty in the underlying tweet rate. That uncertainty exists regardless of the modeling approach – excluding it from predictive distributions only leads to narrow, overconfident predictions. This general principle of propagating uncertainty through a statistical process is one strong advantage of the Bayeian modeling approach that I developed and applied here.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
       <pubDate>Sat, 29 Jun 2019 14:37:56 +0000</pubDate>
@@ -1848,6 +2716,58 @@ c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
+      <title>Business Sense</title>
+      <link>/MacStrelioff/insightstudying/business-sense/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
+      <description>
+
+
+
+</description>
+    </item>
+    
+    <item>
+      <title>Business Sense</title>
+      <link>/MacStrelioff/data-science/business-sense/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/business-sense/</guid>
+      <description>
+
+
+
+</description>
+    </item>
+    
+    <item>
+      <title>Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description>
+
+
+
+</description>
+    </item>
+    
+    <item>
+      <title>Computer Science</title>
+      <link>/MacStrelioff/data-science/computer-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/computer-science/</guid>
+      <description>
+
+
+
+</description>
+    </item>
+    
+    <item>
       <title>Growing Smarter: Understanding User Acquisition</title>
       <link>/MacStrelioff/consultingproject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2372,6 +3292,584 @@ comments sometimes help the captions appear...
     </item>
     
     <item>
+      <title>Machine Learning</title>
+      <link>/MacStrelioff/insightstudying/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sources-alternatives&#34;&gt;Sources / Alternatives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo&#34;&gt;TODO:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bandit-algorithms&#34;&gt;Bandit Algorithms&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#problem-formalization&#34;&gt;Problem Formalization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-cases-and-evaluation-criteria&#34;&gt;Use Cases and Evaluation Criteria&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#type-i-error&#34;&gt;Type I Error&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#false-discovery-rate&#34;&gt;False Discovery Rate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#regret&#34;&gt;Regret&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uniform-policy&#34;&gt;Uniform Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#greedy-policies&#34;&gt;Greedy Policies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#epsilon-greedy-policy&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#softmax-policy&#34;&gt;Softmax Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#upper-confidence-bound-ucb-policy&#34;&gt;Upper Confidence Bound (UCB) Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#thompson-sampling-policy&#34;&gt;Thompson Sampling Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#policy-comparisons&#34;&gt;Policy Comparisons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;sources-alternatives&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sources / Alternatives&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/netflix-techblog/improving-experimentation-efficiency-at-netflix-with-meta-analysis-and-optimal-stopping-d8ec290ae5be&#34;&gt;Netflix Experimentation and Sequential Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optamizely&lt;/li&gt;
+&lt;li&gt;Google Analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!---
+See: 
+For Insight Bandit blogpost:
+https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
+
+For Air BNB experimentation dashboard:
+https://medium.com/airbnb-engineering/experiment-reporting-framework-4e3fcd29e6c0
+---&gt;
+&lt;/div&gt;
+&lt;div id=&#34;intro&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Scientists and business students are trained in decision making from an outdated perspective – classical decision making based on p-values.&lt;/p&gt;
+&lt;p&gt;(make a case against p-values – inflated error rates, incoherence, difficulty integrating with expected value)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bandit-algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bandit Algorithms&lt;/h1&gt;
+&lt;p&gt;Much of this is from &lt;a href=&#34;https://sudeepraja.github.io/Bandits/&#34;&gt;this blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;&lt;/p&gt;
+&lt;div id=&#34;problem-formalization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Problem Formalization&lt;/h2&gt;
+&lt;p&gt;Bandit tasks can be cast as a Markov Decision Process.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+t &amp;amp;\in \{1,...,T\} \\
+a_t &amp;amp;\in \mathcal{A} \\
+s_t &amp;amp;\in \mathcal{S} \\
+r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\
+T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\
+\pi(s_t)&amp;amp;=p(a_t|s_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; is referred to as a policy or decision rule. Mathematically, it is a probability distribution over actions – a funciton that maps from states to actions.&lt;/p&gt;
+&lt;p&gt;The decision maker’s goal here is to learn a policy (&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;) that is optimal for some criteria. A variety of possible criteria are discussed and evaluated below. This objective is considered when chooseing the value function &lt;span class=&#34;math inline&#34;&gt;\(v(s_{t+1}|a_t,s_t)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Objective is to maximize &lt;span class=&#34;math display&#34;&gt;\[
+E\left(\sum_t r_t\right)=\sum_tE(r_t)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In a typical testing scenario, the policy replaces the assignment mechanism. Hence, I treat assignment mechanisms as policies here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;use-cases-and-evaluation-criteria&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Use Cases and Evaluation Criteria&lt;/h2&gt;
+&lt;p&gt;Bandit problems arise across many theoretical and applied fields. Everything from industry A/B testing, medical clinical trials, experimental lab studies, and toy problems for reinforcement learning algorithms can be cast as a bandit task. These different domains generally have different goals. A/B tests are conducted to find evidence for an advantage of one version of a product over another while emphasizing classical statistical objectives like minimizing type I error rates or false discovery rates. The goal of clinical experiments is to quickly discover the best treatment so that patient lives can be improved or saved. In simulation settings, bandit problems have been used to benchmark a variety of algorithms in terms of regret. Here I conduct similar benchmarks, while also evaluating standard ‘best proctices’ in terms of type I error rates and false discovery rates.&lt;/p&gt;
+
+&lt;div id=&#34;type-i-error&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Type I Error&lt;/h3&gt;
+&lt;p&gt;Among situations where there is no difference, how often is a difference detected?&lt;/p&gt;
+&lt;p&gt;Type I error occurs when a null hypothesis is reongly rejected – so when a difference in outcomes of arms is detected when none actually exists.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;false-discovery-rate&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;False Discovery Rate&lt;/h3&gt;
+&lt;p&gt;Among detected differences, how many are real?&lt;/p&gt;
+&lt;p&gt;A false discovery occurs when an arm is selected but is not the actual optimal arm.&lt;/p&gt;
+&lt;p&gt;I’ll consider this on a trial-by-trial level as well as the result of the overall experiment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regret&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regret&lt;/h3&gt;
+&lt;p&gt;Regret is the difference between the reward that would have been obtained had the optimal action been chosen, and the reward that was actually obtained from the chosen action.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(Regret) &amp;amp;= \sum_t E(r^*_{t}-r_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;uniform-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Uniform Policy&lt;/h2&gt;
+&lt;p&gt;This corresponds to a simple random sample type of assignment mechanism – the gold standard for causal inference from experimental data.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\pi(s_t) &amp;amp;= \frac{1}{|\mathcal{A}|} \\
+E(Regret) &amp;amp;= TE(r^*_t) - \sum_t E(r_t|\pi) \\
+&amp;amp;= T(E(r^*_t) - E(r_t)) \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The expected regret on each trial is the difference between the maximal reward and mean reward across actions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;greedy-policies&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Greedy Policies&lt;/h2&gt;
+&lt;div id=&#34;epsilon-greedy-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;softmax-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Softmax Policy&lt;/h3&gt;
+&lt;p&gt;Might be good for parameter estimation while also reducing regret.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;na=5      # Number of arms
+as=1:na   # action IDs
+beta = 5
+R = runif(na) # arm probabilities
+#R[1]=1; R[2]=.5; R[3]=0
+T = 1500   # Number of trials
+q=rep(0,na) 
+
+pis = c()
+qs = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+pi = exp(beta*q)/sum(exp(beta*q))
+at = rmultinom(n=1,size=as,prob=pi)
+at = which(at==1)
+# observe outcome  
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+pis = rbind(pis,pi)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update action values
+q[at] = q[at] + .2 * (rt - q[at])
+qs = rbind(qs,q)
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(qs[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Estimation&amp;quot;,
+     ylab=&amp;quot;Q-value&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-1-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(pis[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Action Probabilities&amp;quot;,
+     ylab=&amp;quot;Policy&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-1-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                     1          2          3          4          5 
+## 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;upper-confidence-bound-ucb-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Upper Confidence Bound (UCB) Policy&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;thompson-sampling-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Thompson Sampling Policy&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#na=5      # Number of arms
+#as=1:na   # action IDs
+#beta = 5
+# keeps same as those above
+# R = runif(na) # arm probabilities
+#T = 5000   # Number of trials
+#priors: rows: actions, col1:alpha, col2:beta
+prior = matrix(1,nrow=na,ncol=2)
+
+aposts=c()
+bposts=c()
+thompsonSamples = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+thompsonSample=c()
+for(ai in as){
+thompsonSample = c(thompsonSample,rbeta(1,prior[ai,1],prior[ai,2]))
+}
+at = which.max(thompsonSample)
+# observe outcome
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+thompsonSamples = rbind(thompsonSamples,thompsonSample)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update beta distributions
+prior[at,1]=prior[at,1]+rt
+prior[at,2]=prior[at,2]+(1-rt)
+# save posterior parameters
+aposts=rbind(aposts,prior[,1])
+bposts=rbind(bposts,prior[,2])
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;,
+     main=&amp;quot;Regret = max E(reward) -  E(reward|choice)&amp;quot;,
+     ylab=&amp;quot;Cumulative Regret&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# something might be wrong with rbeta(x,vec1,vec2)
+
+cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(aposts[,ai]/(aposts[,ai]+bposts[,ai]),type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Reward Probability Estimation&amp;quot;,
+     ylab=&amp;quot;Posterior Means&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}
+legend(1100,.8,c(&amp;quot;Estimate&amp;quot;,&amp;quot;True&amp;quot;),lty=c(1,2))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(thompsonSamples[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Posterior Samples&amp;quot;,
+     #ylab=expression(&amp;#39;Sampled Value -- Policy=argmax&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;(sample&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;)&amp;#39;),
+     ylab=expression(&amp;#39;Sampled Value&amp;#39;),
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-2-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                       1           2           3           4           5 
+## 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;policy-comparisons&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Policy Comparisons&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/MacStrelioff/data-science/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/machine-learning/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sources-alternatives&#34;&gt;Sources / Alternatives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo&#34;&gt;TODO:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bandit-algorithms&#34;&gt;Bandit Algorithms&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#problem-formalization&#34;&gt;Problem Formalization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-cases-and-evaluation-criteria&#34;&gt;Use Cases and Evaluation Criteria&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#type-i-error&#34;&gt;Type I Error&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#false-discovery-rate&#34;&gt;False Discovery Rate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#regret&#34;&gt;Regret&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uniform-policy&#34;&gt;Uniform Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#greedy-policies&#34;&gt;Greedy Policies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#epsilon-greedy-policy&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#softmax-policy&#34;&gt;Softmax Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#upper-confidence-bound-ucb-policy&#34;&gt;Upper Confidence Bound (UCB) Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#thompson-sampling-policy&#34;&gt;Thompson Sampling Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#policy-comparisons&#34;&gt;Policy Comparisons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;sources-alternatives&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sources / Alternatives&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/netflix-techblog/improving-experimentation-efficiency-at-netflix-with-meta-analysis-and-optimal-stopping-d8ec290ae5be&#34;&gt;Netflix Experimentation and Sequential Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optamizely&lt;/li&gt;
+&lt;li&gt;Google Analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!---
+See: 
+For Insight Bandit blogpost:
+https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
+
+For Air BNB experimentation dashboard:
+https://medium.com/airbnb-engineering/experiment-reporting-framework-4e3fcd29e6c0
+---&gt;
+&lt;/div&gt;
+&lt;div id=&#34;intro&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Scientists and business students are trained in decision making from an outdated perspective – classical decision making based on p-values.&lt;/p&gt;
+&lt;p&gt;(make a case against p-values – inflated error rates, incoherence, difficulty integrating with expected value)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bandit-algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bandit Algorithms&lt;/h1&gt;
+&lt;p&gt;Much of this is from &lt;a href=&#34;https://sudeepraja.github.io/Bandits/&#34;&gt;this blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;&lt;/p&gt;
+&lt;div id=&#34;problem-formalization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Problem Formalization&lt;/h2&gt;
+&lt;p&gt;Bandit tasks can be cast as a Markov Decision Process.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+t &amp;amp;\in \{1,...,T\} \\
+a_t &amp;amp;\in \mathcal{A} \\
+s_t &amp;amp;\in \mathcal{S} \\
+r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\
+T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\
+\pi(s_t)&amp;amp;=p(a_t|s_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; is referred to as a policy or decision rule. Mathematically, it is a probability distribution over actions – a funciton that maps from states to actions.&lt;/p&gt;
+&lt;p&gt;The decision maker’s goal here is to learn a policy (&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;) that is optimal for some criteria. A variety of possible criteria are discussed and evaluated below. This objective is considered when chooseing the value function &lt;span class=&#34;math inline&#34;&gt;\(v(s_{t+1}|a_t,s_t)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Objective is to maximize &lt;span class=&#34;math display&#34;&gt;\[
+E\left(\sum_t r_t\right)=\sum_tE(r_t)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In a typical testing scenario, the policy replaces the assignment mechanism. Hence, I treat assignment mechanisms as policies here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;use-cases-and-evaluation-criteria&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Use Cases and Evaluation Criteria&lt;/h2&gt;
+&lt;p&gt;Bandit problems arise across many theoretical and applied fields. Everything from industry A/B testing, medical clinical trials, experimental lab studies, and toy problems for reinforcement learning algorithms can be cast as a bandit task. These different domains generally have different goals. A/B tests are conducted to find evidence for an advantage of one version of a product over another while emphasizing classical statistical objectives like minimizing type I error rates or false discovery rates. The goal of clinical experiments is to quickly discover the best treatment so that patient lives can be improved or saved. In simulation settings, bandit problems have been used to benchmark a variety of algorithms in terms of regret. Here I conduct similar benchmarks, while also evaluating standard ‘best proctices’ in terms of type I error rates and false discovery rates.&lt;/p&gt;
+
+&lt;div id=&#34;type-i-error&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Type I Error&lt;/h3&gt;
+&lt;p&gt;Among situations where there is no difference, how often is a difference detected?&lt;/p&gt;
+&lt;p&gt;Type I error occurs when a null hypothesis is reongly rejected – so when a difference in outcomes of arms is detected when none actually exists.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;false-discovery-rate&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;False Discovery Rate&lt;/h3&gt;
+&lt;p&gt;Among detected differences, how many are real?&lt;/p&gt;
+&lt;p&gt;A false discovery occurs when an arm is selected but is not the actual optimal arm.&lt;/p&gt;
+&lt;p&gt;I’ll consider this on a trial-by-trial level as well as the result of the overall experiment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regret&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regret&lt;/h3&gt;
+&lt;p&gt;Regret is the difference between the reward that would have been obtained had the optimal action been chosen, and the reward that was actually obtained from the chosen action.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(Regret) &amp;amp;= \sum_t E(r^*_{t}-r_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;uniform-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Uniform Policy&lt;/h2&gt;
+&lt;p&gt;This corresponds to a simple random sample type of assignment mechanism – the gold standard for causal inference from experimental data.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\pi(s_t) &amp;amp;= \frac{1}{|\mathcal{A}|} \\
+E(Regret) &amp;amp;= TE(r^*_t) - \sum_t E(r_t|\pi) \\
+&amp;amp;= T(E(r^*_t) - E(r_t)) \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The expected regret on each trial is the difference between the maximal reward and mean reward across actions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;greedy-policies&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Greedy Policies&lt;/h2&gt;
+&lt;div id=&#34;epsilon-greedy-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;softmax-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Softmax Policy&lt;/h3&gt;
+&lt;p&gt;Might be good for parameter estimation while also reducing regret.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;na=5      # Number of arms
+as=1:na   # action IDs
+beta = 5
+R = runif(na) # arm probabilities
+#R[1]=1; R[2]=.5; R[3]=0
+T = 1500   # Number of trials
+q=rep(0,na) 
+
+pis = c()
+qs = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+pi = exp(beta*q)/sum(exp(beta*q))
+at = rmultinom(n=1,size=as,prob=pi)
+at = which(at==1)
+# observe outcome  
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+pis = rbind(pis,pi)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update action values
+q[at] = q[at] + .2 * (rt - q[at])
+qs = rbind(qs,q)
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(qs[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Estimation&amp;quot;,
+     ylab=&amp;quot;Q-value&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-1-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(pis[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Action Probabilities&amp;quot;,
+     ylab=&amp;quot;Policy&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-1-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                     1          2          3          4          5 
+## 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;upper-confidence-bound-ucb-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Upper Confidence Bound (UCB) Policy&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;thompson-sampling-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Thompson Sampling Policy&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#na=5      # Number of arms
+#as=1:na   # action IDs
+#beta = 5
+# keeps same as those above
+# R = runif(na) # arm probabilities
+#T = 5000   # Number of trials
+#priors: rows: actions, col1:alpha, col2:beta
+prior = matrix(1,nrow=na,ncol=2)
+
+aposts=c()
+bposts=c()
+thompsonSamples = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+thompsonSample=c()
+for(ai in as){
+thompsonSample = c(thompsonSample,rbeta(1,prior[ai,1],prior[ai,2]))
+}
+at = which.max(thompsonSample)
+# observe outcome
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+thompsonSamples = rbind(thompsonSamples,thompsonSample)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update beta distributions
+prior[at,1]=prior[at,1]+rt
+prior[at,2]=prior[at,2]+(1-rt)
+# save posterior parameters
+aposts=rbind(aposts,prior[,1])
+bposts=rbind(bposts,prior[,2])
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;,
+     main=&amp;quot;Regret = max E(reward) -  E(reward|choice)&amp;quot;,
+     ylab=&amp;quot;Cumulative Regret&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# something might be wrong with rbeta(x,vec1,vec2)
+
+cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(aposts[,ai]/(aposts[,ai]+bposts[,ai]),type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Reward Probability Estimation&amp;quot;,
+     ylab=&amp;quot;Posterior Means&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}
+legend(1100,.8,c(&amp;quot;Estimate&amp;quot;,&amp;quot;True&amp;quot;),lty=c(1,2))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(thompsonSamples[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Posterior Samples&amp;quot;,
+     #ylab=expression(&amp;#39;Sampled Value -- Policy=argmax&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;(sample&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;)&amp;#39;),
+     ylab=expression(&amp;#39;Sampled Value&amp;#39;),
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Machine-Learning_files/figure-html/unnamed-chunk-2-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                       1           2           3           4           5 
+## 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;policy-comparisons&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Policy Comparisons&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Online Autoclicker</title>
       <link>/MacStrelioff/unlisted/autoclicker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2600,6 +4098,584 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
     </item>
     
     <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sources-alternatives&#34;&gt;Sources / Alternatives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo&#34;&gt;TODO:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bandit-algorithms&#34;&gt;Bandit Algorithms&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#problem-formalization&#34;&gt;Problem Formalization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-cases-and-evaluation-criteria&#34;&gt;Use Cases and Evaluation Criteria&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#type-i-error&#34;&gt;Type I Error&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#false-discovery-rate&#34;&gt;False Discovery Rate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#regret&#34;&gt;Regret&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uniform-policy&#34;&gt;Uniform Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#greedy-policies&#34;&gt;Greedy Policies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#epsilon-greedy-policy&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#softmax-policy&#34;&gt;Softmax Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#upper-confidence-bound-ucb-policy&#34;&gt;Upper Confidence Bound (UCB) Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#thompson-sampling-policy&#34;&gt;Thompson Sampling Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#policy-comparisons&#34;&gt;Policy Comparisons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;sources-alternatives&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sources / Alternatives&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/netflix-techblog/improving-experimentation-efficiency-at-netflix-with-meta-analysis-and-optimal-stopping-d8ec290ae5be&#34;&gt;Netflix Experimentation and Sequential Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optamizely&lt;/li&gt;
+&lt;li&gt;Google Analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!---
+See: 
+For Insight Bandit blogpost:
+https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
+
+For Air BNB experimentation dashboard:
+https://medium.com/airbnb-engineering/experiment-reporting-framework-4e3fcd29e6c0
+---&gt;
+&lt;/div&gt;
+&lt;div id=&#34;intro&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Scientists and business students are trained in decision making from an outdated perspective – classical decision making based on p-values.&lt;/p&gt;
+&lt;p&gt;(make a case against p-values – inflated error rates, incoherence, difficulty integrating with expected value)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bandit-algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bandit Algorithms&lt;/h1&gt;
+&lt;p&gt;Much of this is from &lt;a href=&#34;https://sudeepraja.github.io/Bandits/&#34;&gt;this blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;&lt;/p&gt;
+&lt;div id=&#34;problem-formalization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Problem Formalization&lt;/h2&gt;
+&lt;p&gt;Bandit tasks can be cast as a Markov Decision Process.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+t &amp;amp;\in \{1,...,T\} \\
+a_t &amp;amp;\in \mathcal{A} \\
+s_t &amp;amp;\in \mathcal{S} \\
+r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\
+T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\
+\pi(s_t)&amp;amp;=p(a_t|s_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; is referred to as a policy or decision rule. Mathematically, it is a probability distribution over actions – a funciton that maps from states to actions.&lt;/p&gt;
+&lt;p&gt;The decision maker’s goal here is to learn a policy (&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;) that is optimal for some criteria. A variety of possible criteria are discussed and evaluated below. This objective is considered when chooseing the value function &lt;span class=&#34;math inline&#34;&gt;\(v(s_{t+1}|a_t,s_t)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Objective is to maximize &lt;span class=&#34;math display&#34;&gt;\[
+E\left(\sum_t r_t\right)=\sum_tE(r_t)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In a typical testing scenario, the policy replaces the assignment mechanism. Hence, I treat assignment mechanisms as policies here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;use-cases-and-evaluation-criteria&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Use Cases and Evaluation Criteria&lt;/h2&gt;
+&lt;p&gt;Bandit problems arise across many theoretical and applied fields. Everything from industry A/B testing, medical clinical trials, experimental lab studies, and toy problems for reinforcement learning algorithms can be cast as a bandit task. These different domains generally have different goals. A/B tests are conducted to find evidence for an advantage of one version of a product over another while emphasizing classical statistical objectives like minimizing type I error rates or false discovery rates. The goal of clinical experiments is to quickly discover the best treatment so that patient lives can be improved or saved. In simulation settings, bandit problems have been used to benchmark a variety of algorithms in terms of regret. Here I conduct similar benchmarks, while also evaluating standard ‘best proctices’ in terms of type I error rates and false discovery rates.&lt;/p&gt;
+
+&lt;div id=&#34;type-i-error&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Type I Error&lt;/h3&gt;
+&lt;p&gt;Among situations where there is no difference, how often is a difference detected?&lt;/p&gt;
+&lt;p&gt;Type I error occurs when a null hypothesis is reongly rejected – so when a difference in outcomes of arms is detected when none actually exists.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;false-discovery-rate&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;False Discovery Rate&lt;/h3&gt;
+&lt;p&gt;Among detected differences, how many are real?&lt;/p&gt;
+&lt;p&gt;A false discovery occurs when an arm is selected but is not the actual optimal arm.&lt;/p&gt;
+&lt;p&gt;I’ll consider this on a trial-by-trial level as well as the result of the overall experiment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regret&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regret&lt;/h3&gt;
+&lt;p&gt;Regret is the difference between the reward that would have been obtained had the optimal action been chosen, and the reward that was actually obtained from the chosen action.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(Regret) &amp;amp;= \sum_t E(r^*_{t}-r_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;uniform-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Uniform Policy&lt;/h2&gt;
+&lt;p&gt;This corresponds to a simple random sample type of assignment mechanism – the gold standard for causal inference from experimental data.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\pi(s_t) &amp;amp;= \frac{1}{|\mathcal{A}|} \\
+E(Regret) &amp;amp;= TE(r^*_t) - \sum_t E(r_t|\pi) \\
+&amp;amp;= T(E(r^*_t) - E(r_t)) \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The expected regret on each trial is the difference between the maximal reward and mean reward across actions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;greedy-policies&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Greedy Policies&lt;/h2&gt;
+&lt;div id=&#34;epsilon-greedy-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;softmax-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Softmax Policy&lt;/h3&gt;
+&lt;p&gt;Might be good for parameter estimation while also reducing regret.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;na=5      # Number of arms
+as=1:na   # action IDs
+beta = 5
+R = runif(na) # arm probabilities
+#R[1]=1; R[2]=.5; R[3]=0
+T = 1500   # Number of trials
+q=rep(0,na) 
+
+pis = c()
+qs = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+pi = exp(beta*q)/sum(exp(beta*q))
+at = rmultinom(n=1,size=as,prob=pi)
+at = which(at==1)
+# observe outcome  
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+pis = rbind(pis,pi)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update action values
+q[at] = q[at] + .2 * (rt - q[at])
+qs = rbind(qs,q)
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(qs[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Estimation&amp;quot;,
+     ylab=&amp;quot;Q-value&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-1-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(pis[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Action Probabilities&amp;quot;,
+     ylab=&amp;quot;Policy&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-1-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                     1          2          3          4          5 
+## 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;upper-confidence-bound-ucb-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Upper Confidence Bound (UCB) Policy&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;thompson-sampling-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Thompson Sampling Policy&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#na=5      # Number of arms
+#as=1:na   # action IDs
+#beta = 5
+# keeps same as those above
+# R = runif(na) # arm probabilities
+#T = 5000   # Number of trials
+#priors: rows: actions, col1:alpha, col2:beta
+prior = matrix(1,nrow=na,ncol=2)
+
+aposts=c()
+bposts=c()
+thompsonSamples = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+thompsonSample=c()
+for(ai in as){
+thompsonSample = c(thompsonSample,rbeta(1,prior[ai,1],prior[ai,2]))
+}
+at = which.max(thompsonSample)
+# observe outcome
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+thompsonSamples = rbind(thompsonSamples,thompsonSample)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update beta distributions
+prior[at,1]=prior[at,1]+rt
+prior[at,2]=prior[at,2]+(1-rt)
+# save posterior parameters
+aposts=rbind(aposts,prior[,1])
+bposts=rbind(bposts,prior[,2])
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;,
+     main=&amp;quot;Regret = max E(reward) -  E(reward|choice)&amp;quot;,
+     ylab=&amp;quot;Cumulative Regret&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# something might be wrong with rbeta(x,vec1,vec2)
+
+cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(aposts[,ai]/(aposts[,ai]+bposts[,ai]),type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Reward Probability Estimation&amp;quot;,
+     ylab=&amp;quot;Posterior Means&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}
+legend(1100,.8,c(&amp;quot;Estimate&amp;quot;,&amp;quot;True&amp;quot;),lty=c(1,2))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(thompsonSamples[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Posterior Samples&amp;quot;,
+     #ylab=expression(&amp;#39;Sampled Value -- Policy=argmax&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;(sample&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;)&amp;#39;),
+     ylab=expression(&amp;#39;Sampled Value&amp;#39;),
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-2-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                       1           2           3           4           5 
+## 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;policy-comparisons&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Policy Comparisons&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/data-science/probability-statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/probability-statistics/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sources-alternatives&#34;&gt;Sources / Alternatives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo&#34;&gt;TODO:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bandit-algorithms&#34;&gt;Bandit Algorithms&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#problem-formalization&#34;&gt;Problem Formalization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-cases-and-evaluation-criteria&#34;&gt;Use Cases and Evaluation Criteria&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#type-i-error&#34;&gt;Type I Error&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#false-discovery-rate&#34;&gt;False Discovery Rate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#regret&#34;&gt;Regret&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uniform-policy&#34;&gt;Uniform Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#greedy-policies&#34;&gt;Greedy Policies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#epsilon-greedy-policy&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#softmax-policy&#34;&gt;Softmax Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#upper-confidence-bound-ucb-policy&#34;&gt;Upper Confidence Bound (UCB) Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#thompson-sampling-policy&#34;&gt;Thompson Sampling Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#policy-comparisons&#34;&gt;Policy Comparisons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;sources-alternatives&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sources / Alternatives&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/netflix-techblog/improving-experimentation-efficiency-at-netflix-with-meta-analysis-and-optimal-stopping-d8ec290ae5be&#34;&gt;Netflix Experimentation and Sequential Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optamizely&lt;/li&gt;
+&lt;li&gt;Google Analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;redo in Python, make an agent that uses each strategy as a method. Build the agent throughout the script.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!---
+See: 
+For Insight Bandit blogpost:
+https://blog.insightdatascience.com/multi-armed-bandits-for-dynamic-movie-recommendations-5eb8f325ed1d
+
+For Air BNB experimentation dashboard:
+https://medium.com/airbnb-engineering/experiment-reporting-framework-4e3fcd29e6c0
+---&gt;
+&lt;/div&gt;
+&lt;div id=&#34;intro&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Scientists and business students are trained in decision making from an outdated perspective – classical decision making based on p-values.&lt;/p&gt;
+&lt;p&gt;(make a case against p-values – inflated error rates, incoherence, difficulty integrating with expected value)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bandit-algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bandit Algorithms&lt;/h1&gt;
+&lt;p&gt;Much of this is from &lt;a href=&#34;https://sudeepraja.github.io/Bandits/&#34;&gt;this blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here I evaluate different algorithms for bandit problems similar to those anticipated in industry or testing settings. Criteria of consideration are;&lt;/p&gt;
+&lt;div id=&#34;problem-formalization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Problem Formalization&lt;/h2&gt;
+&lt;p&gt;Bandit tasks can be cast as a Markov Decision Process.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+t &amp;amp;\in \{1,...,T\} \\
+a_t &amp;amp;\in \mathcal{A} \\
+s_t &amp;amp;\in \mathcal{S} \\
+r_t &amp;amp;= R(s_{t+1}|a_t,s_t) = v(s_{t+1}|a_t,s_t) \\
+T(s_{t+1}|a_t,s_t) &amp;amp;= p(s_{t+1}|a_t,s_t) \\
+\pi(s_t)&amp;amp;=p(a_t|s_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt; is referred to as a policy or decision rule. Mathematically, it is a probability distribution over actions – a funciton that maps from states to actions.&lt;/p&gt;
+&lt;p&gt;The decision maker’s goal here is to learn a policy (&lt;span class=&#34;math inline&#34;&gt;\(\pi\)&lt;/span&gt;) that is optimal for some criteria. A variety of possible criteria are discussed and evaluated below. This objective is considered when chooseing the value function &lt;span class=&#34;math inline&#34;&gt;\(v(s_{t+1}|a_t,s_t)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Objective is to maximize &lt;span class=&#34;math display&#34;&gt;\[
+E\left(\sum_t r_t\right)=\sum_tE(r_t)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In a typical testing scenario, the policy replaces the assignment mechanism. Hence, I treat assignment mechanisms as policies here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;use-cases-and-evaluation-criteria&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Use Cases and Evaluation Criteria&lt;/h2&gt;
+&lt;p&gt;Bandit problems arise across many theoretical and applied fields. Everything from industry A/B testing, medical clinical trials, experimental lab studies, and toy problems for reinforcement learning algorithms can be cast as a bandit task. These different domains generally have different goals. A/B tests are conducted to find evidence for an advantage of one version of a product over another while emphasizing classical statistical objectives like minimizing type I error rates or false discovery rates. The goal of clinical experiments is to quickly discover the best treatment so that patient lives can be improved or saved. In simulation settings, bandit problems have been used to benchmark a variety of algorithms in terms of regret. Here I conduct similar benchmarks, while also evaluating standard ‘best proctices’ in terms of type I error rates and false discovery rates.&lt;/p&gt;
+
+&lt;div id=&#34;type-i-error&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Type I Error&lt;/h3&gt;
+&lt;p&gt;Among situations where there is no difference, how often is a difference detected?&lt;/p&gt;
+&lt;p&gt;Type I error occurs when a null hypothesis is reongly rejected – so when a difference in outcomes of arms is detected when none actually exists.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;false-discovery-rate&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;False Discovery Rate&lt;/h3&gt;
+&lt;p&gt;Among detected differences, how many are real?&lt;/p&gt;
+&lt;p&gt;A false discovery occurs when an arm is selected but is not the actual optimal arm.&lt;/p&gt;
+&lt;p&gt;I’ll consider this on a trial-by-trial level as well as the result of the overall experiment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regret&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regret&lt;/h3&gt;
+&lt;p&gt;Regret is the difference between the reward that would have been obtained had the optimal action been chosen, and the reward that was actually obtained from the chosen action.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E(Regret) &amp;amp;= \sum_t E(r^*_{t}-r_t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;uniform-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Uniform Policy&lt;/h2&gt;
+&lt;p&gt;This corresponds to a simple random sample type of assignment mechanism – the gold standard for causal inference from experimental data.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\pi(s_t) &amp;amp;= \frac{1}{|\mathcal{A}|} \\
+E(Regret) &amp;amp;= TE(r^*_t) - \sum_t E(r_t|\pi) \\
+&amp;amp;= T(E(r^*_t) - E(r_t)) \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The expected regret on each trial is the difference between the maximal reward and mean reward across actions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;greedy-policies&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Greedy Policies&lt;/h2&gt;
+&lt;div id=&#34;epsilon-greedy-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt;-Greedy Policy&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;softmax-policy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Softmax Policy&lt;/h3&gt;
+&lt;p&gt;Might be good for parameter estimation while also reducing regret.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;na=5      # Number of arms
+as=1:na   # action IDs
+beta = 5
+R = runif(na) # arm probabilities
+#R[1]=1; R[2]=.5; R[3]=0
+T = 1500   # Number of trials
+q=rep(0,na) 
+
+pis = c()
+qs = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+pi = exp(beta*q)/sum(exp(beta*q))
+at = rmultinom(n=1,size=as,prob=pi)
+at = which(at==1)
+# observe outcome  
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+pis = rbind(pis,pi)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update action values
+q[at] = q[at] + .2 * (rt - q[at])
+qs = rbind(qs,q)
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(qs[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Estimation&amp;quot;,
+     ylab=&amp;quot;Q-value&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-1-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(pis[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Action Probabilities&amp;quot;,
+     ylab=&amp;quot;Policy&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-1-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                     1          2          3          4          5 
+## 1.41206826 0.01533333 0.68200000 0.03400000 0.14333333 0.12533333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;upper-confidence-bound-ucb-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Upper Confidence Bound (UCB) Policy&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;thompson-sampling-policy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Thompson Sampling Policy&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#na=5      # Number of arms
+#as=1:na   # action IDs
+#beta = 5
+# keeps same as those above
+# R = runif(na) # arm probabilities
+#T = 5000   # Number of trials
+#priors: rows: actions, col1:alpha, col2:beta
+prior = matrix(1,nrow=na,ncol=2)
+
+aposts=c()
+bposts=c()
+thompsonSamples = c()
+ats = c()
+rts = c()
+regret = c()
+regrett= 0;
+
+for(ti in 1:T){
+# select action
+thompsonSample=c()
+for(ai in as){
+thompsonSample = c(thompsonSample,rbeta(1,prior[ai,1],prior[ai,2]))
+}
+at = which.max(thompsonSample)
+# observe outcome
+rt = rbinom(1,size=1,prob=R[at])
+# save stats
+thompsonSamples = rbind(thompsonSamples,thompsonSample)
+ats = c(ats,at)
+rts = c(rts,rt)
+# update beta distributions
+prior[at,1]=prior[at,1]+rt
+prior[at,2]=prior[at,2]+(1-rt)
+# save posterior parameters
+aposts=rbind(aposts,prior[,1])
+bposts=rbind(bposts,prior[,2])
+# regret
+regrett= regrett+max(R)-R[at]
+regret = c(regret,regrett)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(regret,type=&amp;quot;l&amp;quot;,
+     main=&amp;quot;Regret = max E(reward) -  E(reward|choice)&amp;quot;,
+     ylab=&amp;quot;Cumulative Regret&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# something might be wrong with rbeta(x,vec1,vec2)
+
+cols = rainbow(na,s=1,v=.7)
+for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(aposts[,ai]/(aposts[,ai]+bposts[,ai]),type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Reward Probability Estimation&amp;quot;,
+     ylab=&amp;quot;Posterior Means&amp;quot;,
+     xlab=&amp;quot;Trial&amp;quot;)
+abline(h=R[ai],col=cols[ai],lty=2)
+}
+legend(1100,.8,c(&amp;quot;Estimate&amp;quot;,&amp;quot;True&amp;quot;),lty=c(1,2))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for(ai in as){
+if( ai&amp;gt;1){par(new=TRUE)}
+plot(thompsonSamples[,ai],type=&amp;quot;l&amp;quot;,ylim=c(0,1),col=cols[ai],
+     main=&amp;quot;Posterior Samples&amp;quot;,
+     #ylab=expression(&amp;#39;Sampled Value -- Policy=argmax&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;(sample&amp;#39;[&amp;#39;a&amp;#39;]*&amp;#39;)&amp;#39;),
+     ylab=expression(&amp;#39;Sampled Value&amp;#39;),
+     xlab=&amp;quot;Trial&amp;quot;)
+#abline(h=R[ai],col=cols[ai],lty=2)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/data-science/Probability-Statistics_files/figure-html/unnamed-chunk-2-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ent = 0
+ps=c()
+for(ai in as){
+p = sum(ats==ai)/length(ats)
+ent = ent + p*(-log2(p))
+ps=c(ps,p)
+}
+c(ent,ps)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(entropy.empirical(table(ats),unit=&amp;quot;log2&amp;quot;),freqs.empirical(table(ats)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                       1           2           3           4           5 
+## 0.109426242 0.001333333 0.988666667 0.003333333 0.001333333 0.005333333&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;policy-comparisons&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Policy Comparisons&lt;/h1&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Recommending: Searching, Sorting, Ranking</title>
       <link>/MacStrelioff/unlisted/searchsortrank/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2635,6 +4711,290 @@ I(E_1;E_2)=\int_{E_2} \int_{E_1} p(e_a,e_2)log\left(\frac{p(e_1,e_2)}{p(e_1)p(e_
 &lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ranking Algorithms&lt;/h2&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Ranking_(information_retrieval)&#34;&gt;ranking algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shiny Apps</title>
+      <link>/MacStrelioff/insightstudying/shiny_apps_rps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/shiny_apps_rps/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#shiny-apps&#34;&gt;Shiny apps&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#ui-user-interface&#34;&gt;UI: User Interface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#server&#34;&gt;Server&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#components&#34;&gt;Components&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rock-paper-scissors-agent-logic&#34;&gt;Rock Paper Scissors Agent Logic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hosting&#34;&gt;Hosting&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#hosting-locally&#34;&gt;Hosting locally&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hosting-online&#34;&gt;Hosting online&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments. My experiments were essentially simple games – there would be buttons that participants could press, and feedback that they would see based on their actions. I decided to make a rock-paper-scissors app to gain experience with Shiny apps and probe their utility as tools for hosting experiments. You can check out the app &lt;a href=&#34;https://macstrelioff.shinyapps.io/rockpaperscissorsagent/&#34;&gt;here (https://macstrelioff.shinyapps.io/rockpaperscissorsagent/)&lt;/a&gt; though I only have 25 hours a month of free hosting, so it may be down occasionally.&lt;/p&gt;
+&lt;p&gt;The source code for this app can be found on my GitHub &lt;a href=&#34;https://github.com/MacStrelioff/RockPaperScissors&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shiny-apps&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Shiny apps&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34;&gt;Shiny apps&lt;/a&gt; are primarily a tool for dashboarding. A dashboard is a tool that a data professional could create in order to communicate insights and actionable results to decision-makers. Ideally these apps enable decison-makers to easily interact with the data in a way that streamlines their decision making process. Many examples, with code, can be seen in the &lt;a href=&#34;http://shiny.rstudio.com/gallery/&#34;&gt;shiny app gallary&lt;/a&gt; – this was the primary resource I turned to while putting together my app.&lt;/p&gt;
+&lt;p&gt;Shiny apps are comprised of a user interface (UI) component and a server component; a common layout might look like this;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(shiny)
+
+ui &amp;lt;- fluidPage()
+
+server &amp;lt;- function(input, output){}
+
+shinyApp(ui = ui, server = server)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;ui&lt;/code&gt; will contain functions that control the layout of the page and the names of interactive components like buttons and sliders. The &lt;code&gt;server&lt;/code&gt; defines how the page changes in response to events and user actions, and the final line &lt;code&gt;shinyApp(ui=ui,server=server)&lt;/code&gt; runs the app. For hosting on shinyapps.io (described below), the script that runs the app must be called &lt;code&gt;App.R&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;ui-user-interface&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;UI: User Interface&lt;/h2&gt;
+&lt;p&gt;My code for the user interface is shown below and broken down in this section;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ui &amp;lt;- fluidPage(
+  # Application title
+  titlePanel(&amp;quot;Rock Paper Scissors!&amp;quot;),
+  # figure
+  fluidRow(
+    column(width=5,
+           plotOutput(&amp;quot;distPlot&amp;quot;)
+    )
+  ),
+  # buttons
+  fluidRow(
+    column(width=5,offest=2,
+           actionButton(&amp;quot;rock&amp;quot;,&amp;quot;Rock&amp;quot;),
+           actionButton(&amp;quot;paper&amp;quot;,&amp;quot;Paper&amp;quot;),
+           actionButton(&amp;quot;scissors&amp;quot;,&amp;quot;Scissors&amp;quot;)
+    )
+  ),
+  fluidRow(width=5,offset=5,
+           textOutput(&amp;quot;result&amp;quot;),br(),
+           p(&amp;quot;Source code available at: https://github.com/MacStrelioff/RockPaperScissors&amp;quot;)
+           )
+  
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;fluidPage()&lt;/code&gt; function is named after a type of layout that adjusts to the dimensions of a browser. Functions within &lt;code&gt;fluidPage()&lt;/code&gt; add elements to the webpage. &lt;code&gt;titlePanel(&amp;quot;TITLE&amp;quot;)&lt;/code&gt; controls the large title at the top of a page. &lt;code&gt;fluidRow()&lt;/code&gt; adds rows of elements to the page, the length of which are determined by the &lt;code&gt;column()&lt;/code&gt; function. I add the figure with;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;column(width=5,
+       plotOutput(&amp;quot;distPlot&amp;quot;)
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here &lt;code&gt;plotOutput(&amp;quot;OUTPUT_NAME&amp;quot;)&lt;/code&gt; takes an output from the &lt;code&gt;server&lt;/code&gt; function, described in the next section, and plots it. More information on reactive output can be found &lt;a href=&#34;http://shiny.rstudio.com/tutorial/written-tutorial/lesson4/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Next I create the row of buttons with;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# buttons
+fluidRow(
+  column(width=5,offest=2,
+         actionButton(&amp;quot;rock&amp;quot;,&amp;quot;Rock&amp;quot;),
+         actionButton(&amp;quot;paper&amp;quot;,&amp;quot;Paper&amp;quot;),
+         actionButton(&amp;quot;scissors&amp;quot;,&amp;quot;Scissors&amp;quot;)
+  )
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here &lt;code&gt;offset&lt;/code&gt; controls spacing from a previous &lt;code&gt;column&lt;/code&gt; call (not used here since everything is in one &lt;code&gt;column()&lt;/code&gt; call). Each &lt;code&gt;actionButton()&lt;/code&gt; call draws one of the buttons – the first argument is the variable name of this button, which is used as input for the server, and the second argument is the text that appears on the button. An overview of the many kinds of interactive elements you can add is avilable &lt;a href=&#34;http://shiny.rstudio.com/tutorial/written-tutorial/lesson3/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Finally I add some text to describe game events and point interested users to the source code, with;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fluidRow(width=5,offset=5,
+         textOutput(&amp;quot;result&amp;quot;),br(),
+         p(&amp;quot;Source code available at: https://github.com/MacStrelioff/RockPaperScissors&amp;quot;)
+         )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here &lt;code&gt;textOutput(&amp;quot;OUTPUT_NAME&amp;quot;)&lt;/code&gt; takes the text ouput variable &lt;code&gt;OUTPUT_NAME&lt;/code&gt; from the server and displays it. &lt;code&gt;br()&lt;/code&gt;, named after a line break in HTML (&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;) adds a line break. And &lt;code&gt;p()&lt;/code&gt; adds static text, again named after a paragraph tag (&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;) in HTML.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;server&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Server&lt;/h2&gt;
+&lt;p&gt;The server defines how page elements interact with user input and server events.&lt;/p&gt;
+&lt;div id=&#34;components&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Components&lt;/h3&gt;
+&lt;p&gt;My code for the server is shown below and broken down in this section with an emphasis on the functions used. In the code below, I replaced opponent logic with &lt;code&gt;...&lt;/code&gt; to keep the emphasis here on understanding server functions. This logic is revealed and detailed in the next section.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;server &amp;lt;- function(input, output) {
+  
+  # initialize variables (runs once when app visited)
+  values &amp;lt;- reactiveValues()
+  values$round =0; # track round
+  values$opp_actions = c() # track opponent actions
+  values$score =0; # track score
+  values$scores=0; # track score history for feedback
+  values$grams = data.frame(&amp;#39;rrrrr&amp;#39;=rep(0,3)) # initialize to store gram counts
+  values$a = &amp;quot;init&amp;quot;;
+  values$as = c(&amp;quot;r&amp;quot;,&amp;quot;p&amp;quot;,&amp;quot;s&amp;quot;) # possible actions
+
+  observeEvent(input$rock | input$paper | input$scissors,{
+      # if any action taken (done to block the first run when these are all NULL-&amp;gt;0)
+      if(input$rock | input$paper | input$scissors){
+        # increment round
+        values$round  = values$round+1;
+        # policy -- code to greedily pick best action
+        ## if fewer than 5 actions taken, draw uniformly
+        if(length(values$opp_actions)&amp;lt;5){
+          values$a=sample(values$as,1)
+          } else{ # if at least 5 actions taken
+          nobs = length(values$opp_actions)
+          ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = &amp;quot;&amp;quot;)
+          #cat(&amp;quot;\n&amp;quot;,ngram)
+          # if this pattern not observed before, initialize it and choose randomly
+          if(!any(names(values$grams)==ngram)){
+            values$grams[ngram]=rep(0,3)
+            values$a=sample(values$as,1)
+          } else { # if at least 5 actions taken, and this pattern has been seen before, 
+            pred = values$as[which.max(values$grams[ngram][[1]])]
+            values$a=switch(pred,&amp;quot;r&amp;quot;=&amp;quot;p&amp;quot;,&amp;quot;p&amp;quot;=&amp;quot;s&amp;quot;,&amp;quot;s&amp;quot;=&amp;quot;r&amp;quot;)
+          }
+          #cat(&amp;quot;\n&amp;quot;,names(values$grams))
+          #cat(&amp;quot;\n&amp;quot;,values$grams[ngram][[1]])
+        }
+        
+        # get opponent action and outcome
+        if(input$rock    -sum(values$opp_actions==&amp;quot;r&amp;quot;)==1){
+          opp_action=&amp;quot;r&amp;quot;
+          dscore = switch(values$a,&amp;quot;r&amp;quot;=0,&amp;quot;p&amp;quot;=-1,&amp;quot;s&amp;quot;=1)
+          }
+        if(input$paper   -sum(values$opp_actions==&amp;quot;p&amp;quot;)==1){
+          opp_action=&amp;quot;p&amp;quot;
+          dscore = switch(values$a,&amp;quot;r&amp;quot;=1,&amp;quot;p&amp;quot;=0,&amp;quot;s&amp;quot;=-1)
+        }
+        if(input$scissors-sum(values$opp_actions==&amp;quot;s&amp;quot;)==1){
+          opp_action=&amp;quot;s&amp;quot;
+          dscore = switch(values$a,&amp;quot;r&amp;quot;=-1,&amp;quot;p&amp;quot;=1,&amp;quot;s&amp;quot;=0)
+        }
+        
+        # evaluate outcome
+        values$score  = values$score+dscore
+        values$scores = c(values$scores,values$score);
+        
+        # update opponent model 
+        values$opp_actions = c(values$opp_actions,opp_action);
+        
+        if(length(values$opp_actions)&amp;gt;5){
+          if(any(names(values$grams)==ngram)){
+            values$grams[ngram][[1]]=values$grams[ngram][[1]]+(values$as==opp_action)
+          }
+        }
+        
+      }
+    
+    # use strings to code, then just take last 5 strings and use as the key for the dictionary of 5-grams...
+    output$distPlot &amp;lt;- renderPlot({
+      try({
+      x = seq(0,values$round);
+      y = values$scores;
+      cat(&amp;quot;\n round:&amp;quot;,values$round, &amp;quot;, score:&amp;quot;,values$score,&amp;quot;, len(x): &amp;quot;,length(x),&amp;quot; len(y):&amp;quot;,length(y),&amp;quot;, opp_act:&amp;quot;,values$opp_actions,
+          &amp;quot;\n a: &amp;quot;,values$a,
+          sep=&amp;quot;&amp;quot;)
+      # draw the histogram with the specified number of bins
+      plot(x,y,type=&amp;quot;l&amp;quot;,xlab = &amp;quot;Rounds&amp;quot;,ylab=&amp;quot;Score&amp;quot;,main=&amp;quot;Cumulative Score&amp;quot;)
+      })
+    })
+    })
+  
+  output$result = renderText({
+    paste(&amp;quot;Opponent chose: &amp;quot;,switch(values$a,&amp;quot;r&amp;quot;=&amp;quot;Rock&amp;quot;,&amp;quot;p&amp;quot;=&amp;quot;Paper&amp;quot;,&amp;quot;s&amp;quot;=&amp;quot;Scissors&amp;quot;,&amp;quot;init&amp;quot;=&amp;quot;Nothing yet, ...&amp;quot;))
+  })
+  
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first chunk here, shown below, uses the &lt;code&gt;reactiveValues()&lt;/code&gt; function to create a named list of variables that can be updated throughout the app session.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# initialize variables (runs once when app visited)
+values &amp;lt;- reactiveValues()
+values$round =0; # track round
+values$opp_actions = c() # track opponent actions
+values$score =0; # track score
+values$scores=0; # track score history for feedback
+values$grams = data.frame(&amp;#39;rrrrr&amp;#39;=rep(0,3)) # initialize to store gram counts
+values$a = &amp;quot;init&amp;quot;;
+values$as = c(&amp;quot;r&amp;quot;,&amp;quot;p&amp;quot;,&amp;quot;s&amp;quot;) # possible actions&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The next section uses &lt;code&gt;observeEvent(LOGICAL)&lt;/code&gt; to check if an event has occurred. Here the events are a &lt;code&gt;TRUE&lt;/code&gt; value from any of the buttons, which would represent that the button had been pressed. The variables &lt;code&gt;input$NAME&lt;/code&gt; represent the button whose label is &lt;code&gt;NAME&lt;/code&gt;. The second argument is a script to run when an event is detected. Note that the values for variables that reflect button presses, here &lt;code&gt;input$rock&lt;/code&gt;, &lt;code&gt;input$paper&lt;/code&gt;, &lt;code&gt;input$scissors&lt;/code&gt;, are initialized as &lt;code&gt;NULL&lt;/code&gt;, so the server will first run once with these values as &lt;code&gt;NULL&lt;/code&gt;. To avoid the game from starting on this run, I included a conditional that required one of their values to be &lt;code&gt;TRUE&lt;/code&gt;, which would indicate that the player clicked one of the buttons. The rest of this block is replaced with &lt;code&gt;...&lt;/code&gt; because it is game logic that is described below, however, it heavily relies on access to the reactive values stored in the &lt;code&gt;values&lt;/code&gt; structure.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  observeEvent(input$rock | input$paper | input$scissors,{
+      # if any action taken (done to block the first run when these are all NULL-&amp;gt;0)
+      if(input$rock | input$paper | input$scissors){
+          ...
+        }
+      }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The last two chunks use the &lt;code&gt;renderPlot()&lt;/code&gt; function to produce the &lt;code&gt;distPlot&lt;/code&gt; variable, stored in the &lt;code&gt;output&lt;/code&gt; structure, which is referenced in the &lt;code&gt;ui&lt;/code&gt; when drawing the figure. This code occasionally crashed when button presses happened rapidly, so I wrapped it in a &lt;code&gt;try()&lt;/code&gt; block. The &lt;code&gt;cat()&lt;/code&gt; function was used to print values to the console while debugging. Finally, I used the &lt;code&gt;renderText()&lt;/code&gt; function to assign textual feedback on the agent’s actions to the output variable &lt;code&gt;result&lt;/code&gt; which is referenced in the &lt;code&gt;ui&lt;/code&gt; when displaying the text that is rendered here.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;output$distPlot &amp;lt;- renderPlot({
+  try({
+  x = seq(0,values$round);
+  y = values$scores;
+  cat(&amp;quot;\n round:&amp;quot;,values$round, &amp;quot;, score:&amp;quot;,values$score,&amp;quot;, len(x): &amp;quot;,length(x),&amp;quot; len(y):&amp;quot;,length(y),&amp;quot;, opp_act:&amp;quot;,values$opp_actions,
+      &amp;quot;\n a: &amp;quot;,values$a,
+      sep=&amp;quot;&amp;quot;)
+  # draw the histogram with the specified number of bins
+  plot(x,y,type=&amp;quot;l&amp;quot;,xlab = &amp;quot;Rounds&amp;quot;,ylab=&amp;quot;Score&amp;quot;,main=&amp;quot;Cumulative Score&amp;quot;)
+  })
+})
+})
+  
+output$result = renderText({
+  paste(&amp;quot;Opponent chose: &amp;quot;,switch(values$a,&amp;quot;r&amp;quot;=&amp;quot;Rock&amp;quot;,&amp;quot;p&amp;quot;=&amp;quot;Paper&amp;quot;,&amp;quot;s&amp;quot;=&amp;quot;Scissors&amp;quot;,&amp;quot;init&amp;quot;=&amp;quot;Nothing yet, ...&amp;quot;))
+})&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rock-paper-scissors-agent-logic&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Rock Paper Scissors Agent Logic&lt;/h3&gt;
+&lt;p&gt;Here I return to the logic inside the &lt;code&gt;observeEvent()&lt;/code&gt; call that implements the game. This code is run whenever a user chooses an action. First I increment the round, which is stored in the &lt;code&gt;reactiveValue&lt;/code&gt; structure, &lt;code&gt;values&lt;/code&gt;;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# increment round
+values$round  = values$round+1;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I then implemented the agent’s policy. In a reinforcement learning context, a policy is an agent’s probability distribution over actions. The actions here are stored in the reactive value &lt;code&gt;as&lt;/code&gt; which consists of “r”,“p”, and “s”, respectively representing the actions Rock, Paper, or Scissors. The policy I implemented here depends on the last 5 actions that a user takes. The entire history of a user’s actions, excluding the current action, is stored in the reactive value &lt;code&gt;opp_actions&lt;/code&gt; which is a string consisting of the charasters “r”, “p”, or “s”. For example, if &lt;code&gt;opp_actions&lt;/code&gt; is “rrps”, it would mean that the user chose rock twice, then paper, then scissors, before picking the current action which is not yet part of the action history. The agent’s action is stored in the reactive value &lt;code&gt;a&lt;/code&gt;. On the first 5 rounds, the agent picks uniformly from the actions Rock, Paper, Scissors;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if(length(values$opp_actions)&amp;lt;5){
+  values$a=sample(values$as,1)
+  } &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After 5 rounds, the agent uses 5-grams (sequences of the last 5 user actions), to pick an action that will beat the most likely player action based on the previous times the player has emitted this sequence of 5 actions. To implement this, I first get the number of observed actions, &lt;code&gt;nobs&lt;/code&gt;, and then get a string that represents the last 5 actions the user has taken, &lt;code&gt;ngram&lt;/code&gt;. If theis sequence has not been observed, the agent creates an instance of the sequence in its memory of the users’s 5-grams (&lt;code&gt;grams&lt;/code&gt;), initializes counts of the uses subsequent Rock, Paper, Scissors actions to 0, and finally uniformly samples an action. Otherwise, if this sequence has been observed before, the agent predicts what the user will choose on this round (&lt;code&gt;pred&lt;/code&gt;) by finding the action that the player most frequently chose in the past after an identical sequence of 5 actions, and then picks the action &lt;code&gt;a&lt;/code&gt; that would beat what it expects the player to chose. The code that implements this process is shown below;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  else{ # if at least 5 actions taken
+  nobs = length(values$opp_actions)
+  ngram = paste(values$opp_actions[(nobs-4):nobs],collapse = &amp;quot;&amp;quot;)
+  # if this pattern not observed before, initialize it and choose randomly
+  if(!any(names(values$grams)==ngram)){
+    values$grams[ngram]=rep(0,3)
+    values$a=sample(values$as,1)
+  } else { # if at least 5 actions taken, and this pattern has been seen before, 
+    pred = values$as[which.max(values$grams[ngram][[1]])]
+    values$a=switch(pred,&amp;quot;r&amp;quot;=&amp;quot;p&amp;quot;,&amp;quot;p&amp;quot;=&amp;quot;s&amp;quot;,&amp;quot;s&amp;quot;=&amp;quot;r&amp;quot;)
+  }
+  #cat(&amp;quot;\n&amp;quot;,names(values$grams))
+  #cat(&amp;quot;\n&amp;quot;,values$grams[ngram][[1]])
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The game environment then processes the user’s action and the agent’s action, and determines an outcome of +1 if the user won, 0 if the agent and user tied, and -1 if the agent won;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# get opponent action and outcome
+if(input$rock    -sum(values$opp_actions==&amp;quot;r&amp;quot;)==1){
+  opp_action=&amp;quot;r&amp;quot;
+  dscore = switch(values$a,&amp;quot;r&amp;quot;=0,&amp;quot;p&amp;quot;=-1,&amp;quot;s&amp;quot;=1)
+  }
+if(input$paper   -sum(values$opp_actions==&amp;quot;p&amp;quot;)==1){
+  opp_action=&amp;quot;p&amp;quot;
+  dscore = switch(values$a,&amp;quot;r&amp;quot;=1,&amp;quot;p&amp;quot;=0,&amp;quot;s&amp;quot;=-1)
+}
+if(input$scissors-sum(values$opp_actions==&amp;quot;s&amp;quot;)==1){
+  opp_action=&amp;quot;s&amp;quot;
+  dscore = switch(values$a,&amp;quot;r&amp;quot;=-1,&amp;quot;p&amp;quot;=1,&amp;quot;s&amp;quot;=0)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The outcome value is added to the cumulative score, &lt;code&gt;score&lt;/code&gt;, and the score is appended to the &lt;code&gt;scores&lt;/code&gt; variables which stores the score on every round for plotting.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# evaluate outcome
+values$score  = values$score+dscore
+values$scores = c(values$scores,values$score);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, the agent updates its model of the user by appending the current action to the user’s action history, &lt;code&gt;opp_actions&lt;/code&gt;, and updating it’s memory of user behavior stored in &lt;code&gt;grams&lt;/code&gt; by incrementing the count of the user’s action associated with the 5-gram for this round, &lt;code&gt;ngram&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# update opponent model 
+values$opp_actions = c(values$opp_actions,opp_action);
+
+if(length(values$opp_actions)&amp;gt;5){
+  if(any(names(values$grams)==ngram)){
+    values$grams[ngram][[1]]=values$grams[ngram][[1]]+(values$as==opp_action)
+  }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hosting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Hosting&lt;/h2&gt;
+&lt;div id=&#34;hosting-locally&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hosting locally&lt;/h3&gt;
+&lt;p&gt;Running the function &lt;code&gt;shinyApp(ui = ui, server = server)&lt;/code&gt; from RStudio will run the application on a local host. This is great for debugging, but not great for making the app avilable to users on other computers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hosting-online&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hosting online&lt;/h3&gt;
+&lt;p&gt;RStudio supports many ways of &lt;a href=&#34;https://shiny.rstudio.com/deploy/&#34;&gt;hosting a shiny app&lt;/a&gt;, but the one that worked best for me was to host through the free plan at &lt;a href=&#34;https://www.shinyapps.io/&#34;&gt;Shinnyapps.io&lt;/a&gt;. A detailed walkthrough on deploying shiny apps can be found &lt;a href=&#34;https://docs.rstudio.com/shinyapps.io/getting-started.html#deploying-applications&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is also possible to host a Shiny app through Amazon Web Services. More resources on that can be found &lt;a href=&#34;https://medium.com/@CharlesBordet/how-to-deploy-a-shiny-app-on-aws-part-1-4893d0a7432f&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.charlesbordet.com/en/shiny-aws-1/&#34;&gt;here&lt;/a&gt;, or &lt;a href=&#34;https://stackoverflow.com/questions/47725234/understanding-the-scalability-of-rshiny-apps-hosted-on-shinyserver&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

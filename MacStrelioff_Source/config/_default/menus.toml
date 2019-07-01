@@ -31,8 +31,10 @@
   url = "#contact"
   weight = 100
 
-
-
+[[menu.InsightStudying]]
+  name = "Contact"
+  url = "#contact"
+  weight = 100
 
 
  

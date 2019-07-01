@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview on Mac Strelioff</title>
+    <link>/MacStrelioff/insightstudying/</link>
+    <description>Recent content in Overview on Mac Strelioff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jun 2019 18:56:46 +0000</lastBuildDate>
+    
+	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/MacStrelioff/insightstudying/working-environment/</link>
+      <pubDate>Sun, 30 Jun 2019 18:56:46 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/working-environment/</guid>
+      <description>--- Working Environment My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.
+Working With Bash and Git Useful Bash Commands login # prompts for username and then password to log in man # man (command) returns documentation a command  Directory Commands pwd # print working directory cd # changes directory to home cd \ # changes directory to (/path) cd .</description>
+    </item>
+    
+    <item>
+      <title>Twitter, Poisson Processes, and Conjugacy</title>
+      <link>/MacStrelioff/insightstudying/twitter-poisson-processes-and-conjugacy/</link>
+      <pubDate>Sat, 29 Jun 2019 14:37:56 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/twitter-poisson-processes-and-conjugacy/</guid>
+      <description>Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.</description>
+    </item>
+    
+    <item>
+      <title>Business Sense</title>
+      <link>/MacStrelioff/insightstudying/business-sense/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/MacStrelioff/insightstudying/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
+      <description>Sources / Alternatives TODO: Intro Bandit Algorithms Problem Formalization Use Cases and Evaluation Criteria Type I Error False Discovery Rate Regret  Uniform Policy Greedy Policies \(\epsilon\)-Greedy Policy Softmax Policy  Upper Confidence Bound (UCB) Policy Thompson Sampling Policy  Policy Comparisons   Sources / Alternatives  Netflix Experimentation and Sequential Testing Optamizely Google Analytics   TODO: redo in Python, make an agent that uses each strategy as a method.</description>
+    </item>
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>Sources / Alternatives TODO: Intro Bandit Algorithms Problem Formalization Use Cases and Evaluation Criteria Type I Error False Discovery Rate Regret  Uniform Policy Greedy Policies \(\epsilon\)-Greedy Policy Softmax Policy  Upper Confidence Bound (UCB) Policy Thompson Sampling Policy  Policy Comparisons   Sources / Alternatives  Netflix Experimentation and Sequential Testing Optamizely Google Analytics   TODO: redo in Python, make an agent that uses each strategy as a method.</description>
+    </item>
+    
+    <item>
+      <title>Shiny Apps</title>
+      <link>/MacStrelioff/insightstudying/shiny_apps_rps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/shiny_apps_rps/</guid>
+      <description>Overview Shiny apps UI: User Interface Server Components Rock Paper Scissors Agent Logic  Hosting Hosting locally Hosting online     Overview Here I document what I learned, and what resources I found helpful, while I was making my first Shiny app. Shiny apps are an easy way to make web apps from RStudio, with a syntax geared towards online dashboards. As a graduate student in an experimental psychology lab, I wondered if shiny apps could be used to host online experiments.</description>
+    </item>
+    
+  </channel>
+</rss>
