@@ -101,13 +101,8 @@ Temporal involves forecasting, which is a topic for another post.
 lambda functions;
 
 ```{python}
-tmp = [2,7,11,15]
 
-print(tmp[0])
-print(tmp.index(9-2))
-
-if 1==2: print('r')
-
+0
 ```
 
 

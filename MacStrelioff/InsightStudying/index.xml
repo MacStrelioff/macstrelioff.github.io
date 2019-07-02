@@ -6,7 +6,7 @@
     <description>Recent content in InsightStudyings on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jul 2019 21:06:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 21:46:03 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Mon, 01 Jul 2019 21:06:08 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 21:46:03 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>Foundations Data Structures Database and SQL Complexity  Searching Sorting Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric) regular expressions;
