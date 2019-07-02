@@ -100,6 +100,17 @@ Temporal involves forecasting, which is a topic for another post.
 
 lambda functions;
 
+```{python}
+tmp = [2,7,11,15]
+
+print(tmp[0])
+print(tmp.index(9-2))
+
+if 1==2: print('r')
+
+```
+
+
 recursion; 
 
 Dijkstra's algorithm, dynamic programming (knapsack problem, Fibonacci sequence)
@@ -113,7 +124,7 @@ git for version control (resolving merge conflicts)
 # General Practice Problems
 
 - [HackerRank](https://www.hackerrank.com/dashboard)
-- [LeetCode]()
+- [LeetCode](https://leetcode.com/)
 
 
 
