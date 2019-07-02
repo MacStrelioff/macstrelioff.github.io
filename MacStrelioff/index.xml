@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Mon, 01 Jul 2019 21:46:03 +0000</pubDate>
+      <pubDate>Mon, 01 Jul 2019 22:50:59 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -121,8 +121,19 @@ Temporal involves forecasting, which is a topic for another post.
 &lt;h1&gt;Algorithms&lt;/h1&gt;
 &lt;p&gt;lambda functions;&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 0&lt;/code&gt;&lt;/pre&gt;
+nums=[1,1,2,2,1]
+val=1
+
+count = 0
+for i in range(len(nums)):
+  if nums[i] != val:
+    nums[count] = nums[i]
+    count += 1
+
+print(count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(nums)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [2, 2, 2, 2, 1]&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;recursion;&lt;/p&gt;
 &lt;p&gt;Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence)&lt;/p&gt;
 &lt;p&gt;Functional programming&lt;/p&gt;

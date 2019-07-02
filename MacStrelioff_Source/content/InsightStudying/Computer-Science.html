@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-01 21:46:03"
+date: "2019-07-01 22:50:59"
 math: true
 output:
   blogdown::html_page:
@@ -92,8 +92,19 @@ Temporal involves forecasting, which is a topic for another post.
 <h1>Algorithms</h1>
 <p>lambda functions;</p>
 <pre class="python"><code>
-0</code></pre>
-<pre><code>&gt;&gt;&gt; 0</code></pre>
+nums=[1,1,2,2,1]
+val=1
+
+count = 0
+for i in range(len(nums)):
+  if nums[i] != val:
+    nums[count] = nums[i]
+    count += 1
+
+print(count)</code></pre>
+<pre><code>&gt;&gt;&gt; 2</code></pre>
+<pre class="python"><code>print(nums)</code></pre>
+<pre><code>&gt;&gt;&gt; [2, 2, 2, 2, 1]</code></pre>
 <p>recursion;</p>
 <p>Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence)</p>
 <p>Functional programming</p>
