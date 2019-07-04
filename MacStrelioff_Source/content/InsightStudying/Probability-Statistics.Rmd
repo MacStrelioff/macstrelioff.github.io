@@ -45,7 +45,7 @@ expectation, variance, conditional or iterated expectations, law of total varian
 
 Metrics (fill in from udamy course section on metrics)
 
-Netflix metrics -- viewing time, viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
+Netflix metrics -- streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
 
 ## Treatment Units
 

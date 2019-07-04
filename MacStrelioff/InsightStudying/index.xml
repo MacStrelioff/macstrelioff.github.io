@@ -6,7 +6,7 @@
     <description>Recent content in InsightStudyings on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jul 2019 17:01:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jul 2019 17:01:57 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Wed, 03 Jul 2019 17:01:08 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2019 17:01:57 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>Fermi problems (order of magnitude)
@@ -23,7 +23,7 @@ Probability Rules basic probability rules
  Odds and other transformations odds, log odds, relative risk, … .
  Expectation and Variance expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
   Experimental Design Metircs, objectives Metrics (fill in from udamy course section on metrics)
-Netflix metrics – viewing time, viewing for a title (e.</description>
+Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.</description>
     </item>
     
     <item>
