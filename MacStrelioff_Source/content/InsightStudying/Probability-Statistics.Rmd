@@ -56,9 +56,13 @@ People, clusters, accounts, ...
 
 How are units assigned to treatments?
 
+### Cohorts
+
 Random sample, cluster-based, stratified, serial, balanced, ... 
 
+### Implementation
 
+Batched, or real-time
 
 ## Estimands
 

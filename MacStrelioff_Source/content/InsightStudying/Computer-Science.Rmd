@@ -60,12 +60,6 @@ print(1+5)
 a = 5
 ```
 
-# Searching
-
-binary search,
-
-Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
-
 # Sorting
 
 sorting (bubble, selection, insertion, merge, quick)
@@ -77,6 +71,12 @@ sorting (heap, tim)
 Lots of [sort algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)
 
 e.g. 'find median in a large dataset' -- sort half of it.
+
+# Searching
+
+binary search,
+
+Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
 
 # Ranking Algorithms
 
