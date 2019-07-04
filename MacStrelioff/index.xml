@@ -36,6 +36,96 @@
     </item>
     
     <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Wed, 03 Jul 2019 17:01:08 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>
+
+
+&lt;p&gt;Fermi problems (order of magnitude)&lt;/p&gt;
+&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Probability Foundations&lt;/h1&gt;
+&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
+&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Rules&lt;/h2&gt;
+&lt;p&gt;basic probability rules&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;odds-and-other-transformations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Odds and other transformations&lt;/h2&gt;
+&lt;p&gt;odds, log odds, relative risk, … .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
+&lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;experimental-design&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Experimental Design&lt;/h1&gt;
+&lt;div id=&#34;metircs-objectives&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Metircs, objectives&lt;/h2&gt;
+&lt;p&gt;Metrics (fill in from udamy course section on metrics)&lt;/p&gt;
+&lt;p&gt;Netflix metrics – viewing time, viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;treatment-units&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Treatment Units&lt;/h2&gt;
+&lt;p&gt;What is the unit at which we assign treatments? People, clusters, accounts, …&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
+&lt;p&gt;How are units assigned to treatments?&lt;/p&gt;
+&lt;p&gt;Random sample, cluster-based, stratified, serial, balanced, …&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimands&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Estimands&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;control-groups&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Control Groups&lt;/h2&gt;
+&lt;p&gt;Propensity matching&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;effiencicy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Effiencicy&lt;/h2&gt;
+&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;– get table for different tests of means from soc sci 10 notes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;testing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Testing&lt;/h1&gt;
+&lt;div id=&#34;binary-or-proportions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Binary or Proportions&lt;/h2&gt;
+&lt;div id=&#34;fishers-z&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fisher’s Z&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;real-valued&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Real-Valued&lt;/h2&gt;
+&lt;div id=&#34;regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regression&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-models&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Linear Models&lt;/h1&gt;
+&lt;p&gt;regression&lt;/p&gt;
+&lt;p&gt;t-tests&lt;/p&gt;
+&lt;p&gt;ANOVA&lt;/p&gt;
+&lt;p&gt;t-test, ANOVA&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;GLMs&lt;/h1&gt;
+&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
+&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
+&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
+&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
+&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
+&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
+&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
       <pubDate>Mon, 01 Jul 2019 22:50:59 +0000</pubDate>
@@ -148,82 +238,6 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Mon, 01 Jul 2019 08:39:28 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>
-
-
-&lt;p&gt;Fermi problems (order of magnitude)&lt;/p&gt;
-&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Probability Foundations&lt;/h1&gt;
-&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
-&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Rules&lt;/h2&gt;
-&lt;p&gt;basic probability rules&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;odds-and-other-transformations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Odds and other transformations&lt;/h2&gt;
-&lt;p&gt;odds, log odds, relative risk, … .&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
-&lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;experimental-design&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Experimental Design&lt;/h1&gt;
-&lt;div id=&#34;estimands&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Estimands&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;control-groups&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Control Groups&lt;/h2&gt;
-&lt;p&gt;Propensity matching&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;effiencicy&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Effiencicy&lt;/h2&gt;
-&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;– get table for different tests of means from soc sci 10 notes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;testing&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Testing&lt;/h1&gt;
-&lt;div id=&#34;binary-or-proportions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Binary or Proportions&lt;/h2&gt;
-&lt;div id=&#34;fishers-z&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Fisher’s Z&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;real-valued&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Real-Valued&lt;/h2&gt;
-&lt;div id=&#34;regression&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Regression&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;linear-models&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Linear Models&lt;/h1&gt;
-&lt;p&gt;regression&lt;/p&gt;
-&lt;p&gt;t-tests&lt;/p&gt;
-&lt;p&gt;ANOVA&lt;/p&gt;
-&lt;p&gt;t-test, ANOVA&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;GLMs&lt;/h1&gt;
-&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
-&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
-&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
-&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
-&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
-&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
-&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

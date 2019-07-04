@@ -41,6 +41,25 @@ expectation, variance, conditional or iterated expectations, law of total varian
 
 # Experimental Design
 
+## Metircs, objectives
+
+Metrics (fill in from udamy course section on metrics)
+
+Netflix metrics -- viewing time, viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
+
+## Treatment Units
+
+What is the unit at which we assign treatments? 
+People, clusters, accounts, ...
+
+## Assignment Mechanism 
+
+How are units assigned to treatments?
+
+Random sample, cluster-based, stratified, serial, balanced, ... 
+
+
+
 ## Estimands
 
 ## Control Groups
