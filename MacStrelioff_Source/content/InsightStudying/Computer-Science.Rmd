@@ -39,6 +39,12 @@ basic structures (tuples, list, arrays, dict), list comprehensions,
 
 Data structures (hash, stack, queue, tree, linked list); 
 
+## Trees
+
+### Binary search trees
+
+
+
 ## Database and SQL
 
 SQL training resources;
@@ -85,6 +91,7 @@ Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_
 # Recommendation
 
 Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
+
 
 <!---
 Data science methods play a major role in discovering recommendations for users. 

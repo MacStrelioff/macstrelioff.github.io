@@ -6,7 +6,7 @@
     <description>Recent content in InsightStudyings on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jul 2019 16:02:40 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 11:58:01 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,13 +14,13 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Thu, 04 Jul 2019 16:02:40 +0000</pubDate>
+      <pubDate>Fri, 05 Jul 2019 11:58:01 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>Foundations Data Structures Database and SQL Complexity  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric) regular expressions;
+      <description>Foundations Data Structures Trees Binary search trees  Database and SQL Complexity  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric) regular expressions;
 Data Structures basic structures (tuples, list, arrays, dict), list comprehensions,
 Data structures (hash, stack, queue, tree, linked list);
- Database and SQL SQL training resources;
+ Trees Binary search trees   Database and SQL SQL training resources;
  sqlbot Mode Analytics HackerRank (basic select, aggregation) Hacker Rank W3School   Complexity computational or memory…</description>
     </item>
     

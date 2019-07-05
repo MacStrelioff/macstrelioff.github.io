@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Thu, 04 Jul 2019 16:02:40 +0000</pubDate>
+      <pubDate>Fri, 05 Jul 2019 11:58:01 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -47,6 +47,9 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#trees&#34;&gt;Trees&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#binary-search-trees&#34;&gt;Binary search trees&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#database-and-sql&#34;&gt;Database and SQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -67,6 +70,12 @@
 &lt;h2&gt;Data Structures&lt;/h2&gt;
 &lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
 &lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trees&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Trees&lt;/h2&gt;
+&lt;div id=&#34;binary-search-trees&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Binary search trees&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;database-and-sql&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Database and SQL&lt;/h2&gt;
