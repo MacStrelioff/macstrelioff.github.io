@@ -6,6 +6,7 @@ math: true
 output:
   blogdown::html_page:
     toc: true
+    toc_depth: 4
 menu:
   InsightStudying:
     parent: Foundations
@@ -31,7 +32,52 @@ set.seed(10201991)
 
 # Foundations
 
-Data type manipulation (char, string, numeric) regular expressions; 
+Data type manipulation (char, string, numeric, binary, ascii) regular expressions; 
+
+## Complexity
+
+The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where $O(f(n))$ is used to represent the terms that remain relevant when taking a limit of $f(n)$ as $n$ approaches $\infty$. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements). 
+
+### Computational Complexity 
+
+#### Constant Time: O(1)
+
+$O(1)$ represents comstant time complexity -- a component of an algorithm that is only performed once, regardless of the input size.
+
+```{python}
+n=1
+def constant_example(n):
+  a = 0  # O(1)
+  a +=1  # O(1) -> O(1)*O(1) = O(1)
+
+constant_example(n)
+```
+
+#### Polynomial Time: O(n), O(n^2), ...
+
+Each for loop scales complexity by a factor of $n$, so one loop would be linear ($O(n)$), two loops would be quadratic $O(n^2)$, and three loops would be cubic ($O(n^3)$), and so on. The example below is a quadratic time example. 
+
+```{python}
+n=1
+
+def quadratic_example(n):
+  num_operations=0
+  for i in range(n):    # O(n)
+    for j in range(n):  # O(n) -> O(n*n)   = O(n^2)
+      num_operations += 1          # O(1) -> O(1*n*n) = O(n^2)
+      
+quadratic_example(n)
+```
+
+#### Exponential Time: $O(x^n)$
+
+
+```{python}
+print(1+5)
+a = 5
+```
+
+#### Logrithmic Time: O(log(N))
 
 ## Data Structures
 
@@ -57,18 +103,6 @@ SQL training resources;
 - [Mode Analytics](https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/) HackerRank (basic select, aggregation)
 - [Hacker Rank](https://www.hackerrank.com/domains/sql)
 - [W3School](https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1)
-
-## Complexity
-
-computational or memory...
-
-Complexity + O(N) notation
-
-
-```{python}
-print(1+5)
-a = 5
-```
 
 # Sorting
 

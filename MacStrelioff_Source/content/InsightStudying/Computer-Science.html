@@ -1,11 +1,12 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-05 17:06:21"
+date: "2019-07-06 10:39:08"
 math: true
 output:
   blogdown::html_page:
     toc: true
+    toc_depth: 4
 menu:
   InsightStudying:
     parent: Foundations
@@ -17,12 +18,19 @@ linktitle: Computer Science
 <div id="TOC">
 <ul>
 <li><a href="#foundations">Foundations</a><ul>
+<li><a href="#complexity">Complexity</a><ul>
+<li><a href="#computational-complexity">Computational Complexity</a><ul>
+<li><a href="#constant-time-o1">Constant Time: O(1)</a></li>
+<li><a href="#polynomial-time-on-on2">Polynomial Time: O(n), O(n^2), …</a></li>
+<li><a href="#exponential-time-oxn">Exponential Time: <span class="math inline">\(O(x^n)\)</span></a></li>
+<li><a href="#logrithmic-time-ologn">Logrithmic Time: O(log(N))</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#data-structures">Data Structures</a></li>
 <li><a href="#trees">Trees</a><ul>
 <li><a href="#binary-search-trees">Binary search trees</a></li>
 </ul></li>
 <li><a href="#database-and-sql">Database and SQL</a></li>
-<li><a href="#complexity">Complexity</a></li>
 </ul></li>
 <li><a href="#sorting">Sorting</a></li>
 <li><a href="#searching">Searching</a></li>
@@ -36,7 +44,46 @@ linktitle: Computer Science
 
 <div id="foundations" class="section level1">
 <h1>Foundations</h1>
-<p>Data type manipulation (char, string, numeric) regular expressions;</p>
+<p>Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</p>
+<div id="complexity" class="section level2">
+<h2>Complexity</h2>
+<p>The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where <span class="math inline">\(O(f(n))\)</span> is used to represent the terms that remain relevant when taking a limit of <span class="math inline">\(f(n)\)</span> as <span class="math inline">\(n\)</span> approaches <span class="math inline">\(\infty\)</span>. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements).</p>
+<div id="computational-complexity" class="section level3">
+<h3>Computational Complexity</h3>
+<div id="constant-time-o1" class="section level4">
+<h4>Constant Time: O(1)</h4>
+<p><span class="math inline">\(O(1)\)</span> represents comstant time complexity – a component of an algorithm that is only performed once, regardless of the input size.</p>
+<pre class="python"><code>n=1
+def constant_example(n):
+  a = 0  # O(1)
+  a +=1  # O(1) -&gt; O(1)*O(1) = O(1)
+
+constant_example(n)</code></pre>
+</div>
+<div id="polynomial-time-on-on2" class="section level4">
+<h4>Polynomial Time: O(n), O(n^2), …</h4>
+<p>Each for loop scales complexity by a factor of <span class="math inline">\(n\)</span>, so one loop would be linear (<span class="math inline">\(O(n)\)</span>), two loops would be quadratic <span class="math inline">\(O(n^2)\)</span>, and three loops would be cubic (<span class="math inline">\(O(n^3)\)</span>), and so on. The example below is a quadratic time example.</p>
+<pre class="python"><code>n=1
+
+def quadratic_example(n):
+  num_operations=0
+  for i in range(n):    # O(n)
+    for j in range(n):  # O(n) -&gt; O(n*n)   = O(n^2)
+      num_operations += 1          # O(1) -&gt; O(1*n*n) = O(n^2)
+      
+quadratic_example(n)</code></pre>
+</div>
+<div id="exponential-time-oxn" class="section level4">
+<h4>Exponential Time: <span class="math inline">\(O(x^n)\)</span></h4>
+<pre class="python"><code>print(1+5)</code></pre>
+<pre><code>&gt;&gt;&gt; 6</code></pre>
+<pre class="python"><code>a = 5</code></pre>
+</div>
+<div id="logrithmic-time-ologn" class="section level4">
+<h4>Logrithmic Time: O(log(N))</h4>
+</div>
+</div>
+</div>
 <div id="data-structures" class="section level2">
 <h2>Data Structures</h2>
 <p>basic structures (tuples, list, arrays, dict), list comprehensions,</p>
@@ -59,14 +106,6 @@ linktitle: Computer Science
 <li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
 <li><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></li>
 </ul>
-</div>
-<div id="complexity" class="section level2">
-<h2>Complexity</h2>
-<p>computational or memory…</p>
-<p>Complexity + O(N) notation</p>
-<pre class="python"><code>print(1+5)</code></pre>
-<pre><code>&gt;&gt;&gt; 6</code></pre>
-<pre class="python"><code>a = 5</code></pre>
 </div>
 </div>
 <div id="sorting" class="section level1">

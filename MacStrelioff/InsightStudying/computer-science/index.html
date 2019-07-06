@@ -27,11 +27,8 @@
   
     
   
-  <meta name="description" content="Foundations Data Structures Trees Binary search trees  Database and SQL Complexity  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric) regular expressions;
-Data Structures basic structures (tuples, list, arrays, dict), list comprehensions,
-Good descriptions of lists, dicts, and why some operations are much faster in sets or dict keys.
-In depth description of hash tables.
-Data structures (hash, stack, queue, tree, linked list);">
+  <meta name="description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
+Complexity The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where \(O(f(n))\) is used to represent the terms that remain relevant when taking a limit of \(f(n)\) as \(n\) approaches \(\infty\).">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/computer-science/">
@@ -140,16 +137,13 @@ Data structures (hash, stack, queue, tree, linked list);">
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/computer-science/">
   <meta property="og:title" content="Computer Science | Mac Strelioff">
-  <meta property="og:description" content="Foundations Data Structures Trees Binary search trees  Database and SQL Complexity  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric) regular expressions;
-Data Structures basic structures (tuples, list, arrays, dict), list comprehensions,
-Good descriptions of lists, dicts, and why some operations are much faster in sets or dict keys.
-In depth description of hash tables.
-Data structures (hash, stack, queue, tree, linked list);"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
+Complexity The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where \(O(f(n))\) is used to represent the terms that remain relevant when taking a limit of \(f(n)\) as \(n\) approaches \(\infty\)."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-05T17:06:21&#43;00:00">
+  <meta property="article:published_time" content="2019-07-06T10:39:08&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-05T17:06:21&#43;00:00">
+  <meta property="article:modified_time" content="2019-07-06T10:39:08&#43;00:00">
   
 
   
@@ -362,8 +356,8 @@ Data structures (hash, stack, queue, tree, linked list);"><meta property="og:ima
 
 
 
-<meta content="2019-07-05 17:06:21 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-05 17:06:21 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-07-06 10:39:08 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-06 10:39:08 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -376,7 +370,7 @@ Data structures (hash, stack, queue, tree, linked list);"><meta property="og:ima
     
       
     
-    <time>Jul 5, 2019</time>
+    <time>Jul 6, 2019</time>
   </span>
   
 
@@ -469,12 +463,19 @@ Data structures (hash, stack, queue, tree, linked list);"><meta property="og:ima
 <div id="TOC">
 <ul>
 <li><a href="#foundations">Foundations</a><ul>
+<li><a href="#complexity">Complexity</a><ul>
+<li><a href="#computational-complexity">Computational Complexity</a><ul>
+<li><a href="#constant-time-o1">Constant Time: O(1)</a></li>
+<li><a href="#polynomial-time-on-on2">Polynomial Time: O(n), O(n^2), …</a></li>
+<li><a href="#exponential-time-oxn">Exponential Time: <span class="math inline">\(O(x^n)\)</span></a></li>
+<li><a href="#logrithmic-time-ologn">Logrithmic Time: O(log(N))</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#data-structures">Data Structures</a></li>
 <li><a href="#trees">Trees</a><ul>
 <li><a href="#binary-search-trees">Binary search trees</a></li>
 </ul></li>
 <li><a href="#database-and-sql">Database and SQL</a></li>
-<li><a href="#complexity">Complexity</a></li>
 </ul></li>
 <li><a href="#sorting">Sorting</a></li>
 <li><a href="#searching">Searching</a></li>
@@ -488,7 +489,46 @@ Data structures (hash, stack, queue, tree, linked list);"><meta property="og:ima
 
 <div id="foundations" class="section level1">
 <h1>Foundations</h1>
-<p>Data type manipulation (char, string, numeric) regular expressions;</p>
+<p>Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</p>
+<div id="complexity" class="section level2">
+<h2>Complexity</h2>
+<p>The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where <span class="math inline">\(O(f(n))\)</span> is used to represent the terms that remain relevant when taking a limit of <span class="math inline">\(f(n)\)</span> as <span class="math inline">\(n\)</span> approaches <span class="math inline">\(\infty\)</span>. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements).</p>
+<div id="computational-complexity" class="section level3">
+<h3>Computational Complexity</h3>
+<div id="constant-time-o1" class="section level4">
+<h4>Constant Time: O(1)</h4>
+<p><span class="math inline">\(O(1)\)</span> represents comstant time complexity – a component of an algorithm that is only performed once, regardless of the input size.</p>
+<pre class="python"><code>n=1
+def constant_example(n):
+  a = 0  # O(1)
+  a +=1  # O(1) -&gt; O(1)*O(1) = O(1)
+
+constant_example(n)</code></pre>
+</div>
+<div id="polynomial-time-on-on2" class="section level4">
+<h4>Polynomial Time: O(n), O(n^2), …</h4>
+<p>Each for loop scales complexity by a factor of <span class="math inline">\(n\)</span>, so one loop would be linear (<span class="math inline">\(O(n)\)</span>), two loops would be quadratic <span class="math inline">\(O(n^2)\)</span>, and three loops would be cubic (<span class="math inline">\(O(n^3)\)</span>), and so on. The example below is a quadratic time example.</p>
+<pre class="python"><code>n=1
+
+def quadratic_example(n):
+  num_operations=0
+  for i in range(n):    # O(n)
+    for j in range(n):  # O(n) -&gt; O(n*n)   = O(n^2)
+      num_operations += 1          # O(1) -&gt; O(1*n*n) = O(n^2)
+      
+quadratic_example(n)</code></pre>
+</div>
+<div id="exponential-time-oxn" class="section level4">
+<h4>Exponential Time: <span class="math inline">\(O(x^n)\)</span></h4>
+<pre class="python"><code>print(1+5)</code></pre>
+<pre><code>&gt;&gt;&gt; 6</code></pre>
+<pre class="python"><code>a = 5</code></pre>
+</div>
+<div id="logrithmic-time-ologn" class="section level4">
+<h4>Logrithmic Time: O(log(N))</h4>
+</div>
+</div>
+</div>
 <div id="data-structures" class="section level2">
 <h2>Data Structures</h2>
 <p>basic structures (tuples, list, arrays, dict), list comprehensions,</p>
@@ -511,14 +551,6 @@ Data structures (hash, stack, queue, tree, linked list);"><meta property="og:ima
 <li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
 <li><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></li>
 </ul>
-</div>
-<div id="complexity" class="section level2">
-<h2>Complexity</h2>
-<p>computational or memory…</p>
-<p>Complexity + O(N) notation</p>
-<pre class="python"><code>print(1+5)</code></pre>
-<pre><code>&gt;&gt;&gt; 6</code></pre>
-<pre class="python"><code>a = 5</code></pre>
 </div>
 </div>
 <div id="sorting" class="section level1">

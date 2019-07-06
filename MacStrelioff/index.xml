@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Fri, 05 Jul 2019 17:06:21 +0000</pubDate>
+      <pubDate>Sat, 06 Jul 2019 10:39:08 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -46,12 +46,19 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#computational-complexity&#34;&gt;Computational Complexity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#constant-time-o1&#34;&gt;Constant Time: O(1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#polynomial-time-on-on2&#34;&gt;Polynomial Time: O(n), O(n^2), …&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exponential-time-oxn&#34;&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logrithmic-time-ologn&#34;&gt;Logrithmic Time: O(log(N))&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#trees&#34;&gt;Trees&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#binary-search-trees&#34;&gt;Binary search trees&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#database-and-sql&#34;&gt;Database and SQL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;/li&gt;
@@ -65,7 +72,46 @@
 
 &lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Foundations&lt;/h1&gt;
-&lt;p&gt;Data type manipulation (char, string, numeric) regular expressions;&lt;/p&gt;
+&lt;p&gt;Data type manipulation (char, string, numeric, binary, ascii) regular expressions;&lt;/p&gt;
+&lt;div id=&#34;complexity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Complexity&lt;/h2&gt;
+&lt;p&gt;The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where &lt;span class=&#34;math inline&#34;&gt;\(O(f(n))\)&lt;/span&gt; is used to represent the terms that remain relevant when taking a limit of &lt;span class=&#34;math inline&#34;&gt;\(f(n)\)&lt;/span&gt; as &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; approaches &lt;span class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements).&lt;/p&gt;
+&lt;div id=&#34;computational-complexity&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Computational Complexity&lt;/h3&gt;
+&lt;div id=&#34;constant-time-o1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Constant Time: O(1)&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(1)\)&lt;/span&gt; represents comstant time complexity – a component of an algorithm that is only performed once, regardless of the input size.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;n=1
+def constant_example(n):
+  a = 0  # O(1)
+  a +=1  # O(1) -&amp;gt; O(1)*O(1) = O(1)
+
+constant_example(n)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;polynomial-time-on-on2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Polynomial Time: O(n), O(n^2), …&lt;/h4&gt;
+&lt;p&gt;Each for loop scales complexity by a factor of &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, so one loop would be linear (&lt;span class=&#34;math inline&#34;&gt;\(O(n)\)&lt;/span&gt;), two loops would be quadratic &lt;span class=&#34;math inline&#34;&gt;\(O(n^2)\)&lt;/span&gt;, and three loops would be cubic (&lt;span class=&#34;math inline&#34;&gt;\(O(n^3)\)&lt;/span&gt;), and so on. The example below is a quadratic time example.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;n=1
+
+def quadratic_example(n):
+  num_operations=0
+  for i in range(n):    # O(n)
+    for j in range(n):  # O(n) -&amp;gt; O(n*n)   = O(n^2)
+      num_operations += 1          # O(1) -&amp;gt; O(1*n*n) = O(n^2)
+      
+quadratic_example(n)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exponential-time-oxn&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/h4&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(1+5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 6&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;a = 5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;logrithmic-time-ologn&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Logrithmic Time: O(log(N))&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Structures&lt;/h2&gt;
 &lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
@@ -88,14 +134,6 @@
 &lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;complexity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Complexity&lt;/h2&gt;
-&lt;p&gt;computational or memory…&lt;/p&gt;
-&lt;p&gt;Complexity + O(N) notation&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(1+5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 6&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;a = 5&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sorting&#34; class=&#34;section level1&#34;&gt;
