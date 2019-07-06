@@ -37,6 +37,10 @@ Data type manipulation (char, string, numeric) regular expressions;
 
 basic structures (tuples, list, arrays, dict), list comprehensions, 
 
+Good descriptions of [lists](https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html), [dicts](https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html), and [why some operations are much faster in sets or dict keys](https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists).
+
+In depth description of [hash tables](https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc). 
+
 Data structures (hash, stack, queue, tree, linked list); 
 
 ## Trees

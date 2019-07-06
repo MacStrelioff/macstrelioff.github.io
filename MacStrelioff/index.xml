@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Fri, 05 Jul 2019 11:58:01 +0000</pubDate>
+      <pubDate>Fri, 05 Jul 2019 17:06:21 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -69,6 +69,8 @@
 &lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Structures&lt;/h2&gt;
 &lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
+&lt;p&gt;Good descriptions of &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html&#34;&gt;lists&lt;/a&gt;, &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html&#34;&gt;dicts&lt;/a&gt;, and &lt;a href=&#34;https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists&#34;&gt;why some operations are much faster in sets or dict keys&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In depth description of &lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc&#34;&gt;hash tables&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;trees&#34; class=&#34;section level2&#34;&gt;
