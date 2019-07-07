@@ -3,6 +3,10 @@ title: "Probability and Statistics"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 math: true
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 4
 menu:
   InsightStudying:
     parent: Foundations
@@ -39,22 +43,85 @@ odds, log odds, relative risk, ... .
 
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
 
-# Experimental Design
+## Central limit theorem
 
-## Metircs, objectives
+Sum of any random variable converges to normal distribution. 
+
+- show for binomial case, to justify Z test
+
+# Experiment Design
+
+## Objective, demand, and value
+
+Objective is based on a metric (increase clickthrough or revenue per user). 
+
+Demand -- if adding a new user feature, how can demand for the feature be assessed? 
+
+value = benefit - cost. 
+
+Expected value helps with decisions about the size and duration of an experiment
+
+## Metrics and Scoping
+
+Once an objective is clear, the details of what can be measured need to be flushed out. 
 
 Metrics (fill in from udamy course section on metrics)
 
 Netflix metrics -- streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
 
+### User flow and target metrics
+
+Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states. 
+
+- number of clicks
+- time on page
+- ... 
+
+### Invariants
+
+Metrics that shouldn't change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change. 
+
+
+### Confounding variables
+
+
+### Precision variables
+
+## Metric Validation
+
+User expreience research, retrospective analyses of past data or log files, ... . 
+
+## Conditions
+
+Define the experimental manipulations. 
+
 ## Treatment Units
 
 What is the unit at which we assign treatments? 
-People, clusters, accounts, ...
+
+Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals. 
+
+Proxies for individuals include;
+
+- User ID or account -- most clearly tied to a user, but 
+- cookies -- device and browser specific, so these could differ across a user's browsers or devices.
+- IP address (device request return address) -- device specific, so a user's experience might differ across devices.
+
+In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).
 
 ## Assignment Mechanism 
 
+The assignment mechanism samples members from a population and assignes them to conditions. 
+
 How are units assigned to treatments?
+
+Randomized control trials are the ideal, but many issues arise in online experimentation settings. 
+
+(look up desirable properties form causal inference notes)
+
+### Population 
+
+What group is being sampled from?
 
 ### Cohorts
 
@@ -64,11 +131,24 @@ Random sample, cluster-based, stratified, serial, balanced, ...
 
 Batched, or real-time
 
-## Estimands
-
-## Control Groups
+### Synthetic Control Groups
 
 Propensity matching
+
+### Limitations
+
+- Non-compliance: Those assicned to treatment may not actually experience the treatment. 
+- Crossover: Those assigned to control might gain access to the treatment. 
+
+
+# Effect Estimation
+
+power, sample size
+
+## Estimands
+
+- Average treatment effect
+- Treatment on treated
 
 ## Effiencicy
 

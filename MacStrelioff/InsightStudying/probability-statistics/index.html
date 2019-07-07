@@ -27,13 +27,7 @@
   
     
   
-  <meta name="description" content="Fermi problems (order of magnitude)
-Probability Foundations combinatorics (permutations and combinations)
-Probability Rules basic probability rules
- Odds and other transformations odds, log odds, relative risk, … .
- Expectation and Variance expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
-  Experimental Design Metircs, objectives Metrics (fill in from udamy course section on metrics)
-Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.">
+  <meta name="description" content="Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Experiment Design Objective, demand, and value Metrics and Scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Implementation Synthetic Control Groups Limitations   Effect Estimation Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs   Fermi problems (order of magnitude)">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/probability-statistics/">
@@ -142,18 +136,12 @@ Netflix metrics – streaming hours, retention (users staying on platform), view
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/probability-statistics/">
   <meta property="og:title" content="Probability and Statistics | Mac Strelioff">
-  <meta property="og:description" content="Fermi problems (order of magnitude)
-Probability Foundations combinatorics (permutations and combinations)
-Probability Rules basic probability rules
- Odds and other transformations odds, log odds, relative risk, … .
- Expectation and Variance expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
-  Experimental Design Metircs, objectives Metrics (fill in from udamy course section on metrics)
-Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Experiment Design Objective, demand, and value Metrics and Scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Implementation Synthetic Control Groups Limitations   Effect Estimation Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs   Fermi problems (order of magnitude)"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-04T16:01:36&#43;00:00">
+  <meta property="article:published_time" content="2019-07-06T21:00:58&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-04T16:01:36&#43;00:00">
+  <meta property="article:modified_time" content="2019-07-06T21:00:58&#43;00:00">
   
 
   
@@ -366,8 +354,8 @@ Netflix metrics – streaming hours, retention (users staying on platform), view
 
 
 
-<meta content="2019-07-04 16:01:36 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-04 16:01:36 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-07-06 21:00:58 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-06 21:00:58 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -380,7 +368,7 @@ Netflix metrics – streaming hours, retention (users staying on platform), view
     
       
     
-    <time>Jul 4, 2019</time>
+    <time>Jul 6, 2019</time>
   </span>
   
 
@@ -470,6 +458,49 @@ Netflix metrics – streaming hours, retention (users staying on platform), view
     <div class="article-style" itemprop="articleBody">
       
 
+<div id="TOC">
+<ul>
+<li><a href="#probability-foundations">Probability Foundations</a><ul>
+<li><a href="#probability-rules">Probability Rules</a></li>
+<li><a href="#odds-and-other-transformations">Odds and other transformations</a></li>
+<li><a href="#expectation-and-variance">Expectation and Variance</a></li>
+<li><a href="#central-limit-theorem">Central limit theorem</a></li>
+</ul></li>
+<li><a href="#experiment-design">Experiment Design</a><ul>
+<li><a href="#objective-demand-and-value">Objective, demand, and value</a></li>
+<li><a href="#metrics-and-scoping">Metrics and Scoping</a><ul>
+<li><a href="#user-flow-and-target-metrics">User flow and target metrics</a></li>
+<li><a href="#invariants">Invariants</a></li>
+<li><a href="#confounding-variables">Confounding variables</a></li>
+<li><a href="#precision-variables">Precision variables</a></li>
+</ul></li>
+<li><a href="#metric-validation">Metric Validation</a></li>
+<li><a href="#conditions">Conditions</a></li>
+<li><a href="#treatment-units">Treatment Units</a></li>
+<li><a href="#assignment-mechanism">Assignment Mechanism</a><ul>
+<li><a href="#population">Population</a></li>
+<li><a href="#cohorts">Cohorts</a></li>
+<li><a href="#implementation">Implementation</a></li>
+<li><a href="#synthetic-control-groups">Synthetic Control Groups</a></li>
+<li><a href="#limitations">Limitations</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#effect-estimation">Effect Estimation</a><ul>
+<li><a href="#estimands">Estimands</a></li>
+<li><a href="#effiencicy">Effiencicy</a></li>
+</ul></li>
+<li><a href="#testing">Testing</a><ul>
+<li><a href="#binary-or-proportions">Binary or Proportions</a><ul>
+<li><a href="#fishers-z">Fisher’s Z</a></li>
+</ul></li>
+<li><a href="#real-valued">Real-Valued</a><ul>
+<li><a href="#regression">Regression</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#linear-models">Linear Models</a></li>
+<li><a href="#glms">GLMs</a></li>
+</ul>
+</div>
 
 <p>Fermi problems (order of magnitude)</p>
 <div id="probability-foundations" class="section level1">
@@ -487,21 +518,78 @@ Netflix metrics – streaming hours, retention (users staying on platform), view
 <h2>Expectation and Variance</h2>
 <p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
 </div>
+<div id="central-limit-theorem" class="section level2">
+<h2>Central limit theorem</h2>
+<p>Sum of any random variable converges to normal distribution.</p>
+<ul>
+<li>show for binomial case, to justify Z test</li>
+</ul>
 </div>
-<div id="experimental-design" class="section level1">
-<h1>Experimental Design</h1>
-<div id="metircs-objectives" class="section level2">
-<h2>Metircs, objectives</h2>
+</div>
+<div id="experiment-design" class="section level1">
+<h1>Experiment Design</h1>
+<div id="objective-demand-and-value" class="section level2">
+<h2>Objective, demand, and value</h2>
+<p>Objective is based on a metric (increase clickthrough or revenue per user).</p>
+<p>Demand – if adding a new user feature, how can demand for the feature be assessed?</p>
+<p>value = benefit - cost.</p>
+<p>Expected value helps with decisions about the size and duration of an experiment</p>
+</div>
+<div id="metrics-and-scoping" class="section level2">
+<h2>Metrics and Scoping</h2>
+<p>Once an objective is clear, the details of what can be measured need to be flushed out.</p>
 <p>Metrics (fill in from udamy course section on metrics)</p>
 <p>Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)</p>
+<div id="user-flow-and-target-metrics" class="section level3">
+<h3>User flow and target metrics</h3>
+<p>Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states.</p>
+<ul>
+<li>number of clicks</li>
+<li>time on page</li>
+<li>…</li>
+</ul>
+</div>
+<div id="invariants" class="section level3">
+<h3>Invariants</h3>
+<p>Metrics that shouldn’t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change.</p>
+</div>
+<div id="confounding-variables" class="section level3">
+<h3>Confounding variables</h3>
+</div>
+<div id="precision-variables" class="section level3">
+<h3>Precision variables</h3>
+</div>
+</div>
+<div id="metric-validation" class="section level2">
+<h2>Metric Validation</h2>
+<p>User expreience research, retrospective analyses of past data or log files, … .</p>
+</div>
+<div id="conditions" class="section level2">
+<h2>Conditions</h2>
+<p>Define the experimental manipulations.</p>
 </div>
 <div id="treatment-units" class="section level2">
 <h2>Treatment Units</h2>
-<p>What is the unit at which we assign treatments? People, clusters, accounts, …</p>
+<p>What is the unit at which we assign treatments?</p>
+<p>Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.</p>
+<p>Proxies for individuals include;</p>
+<ul>
+<li>User ID or account – most clearly tied to a user, but</li>
+<li>cookies – device and browser specific, so these could differ across a user’s browsers or devices.</li>
+<li>IP address (device request return address) – device specific, so a user’s experience might differ across devices.</li>
+</ul>
+<p>In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).</p>
 </div>
 <div id="assignment-mechanism" class="section level2">
 <h2>Assignment Mechanism</h2>
+<p>The assignment mechanism samples members from a population and assignes them to conditions.</p>
 <p>How are units assigned to treatments?</p>
+<p>Randomized control trials are the ideal, but many issues arise in online experimentation settings.</p>
+<p>(look up desirable properties form causal inference notes)</p>
+<div id="population" class="section level3">
+<h3>Population</h3>
+<p>What group is being sampled from?</p>
+</div>
 <div id="cohorts" class="section level3">
 <h3>Cohorts</h3>
 <p>Random sample, cluster-based, stratified, serial, balanced, …</p>
@@ -510,13 +598,28 @@ Netflix metrics – streaming hours, retention (users staying on platform), view
 <h3>Implementation</h3>
 <p>Batched, or real-time</p>
 </div>
+<div id="synthetic-control-groups" class="section level3">
+<h3>Synthetic Control Groups</h3>
+<p>Propensity matching</p>
 </div>
+<div id="limitations" class="section level3">
+<h3>Limitations</h3>
+<ul>
+<li>Non-compliance: Those assicned to treatment may not actually experience the treatment.</li>
+<li>Crossover: Those assigned to control might gain access to the treatment.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="effect-estimation" class="section level1">
+<h1>Effect Estimation</h1>
+<p>power, sample size</p>
 <div id="estimands" class="section level2">
 <h2>Estimands</h2>
-</div>
-<div id="control-groups" class="section level2">
-<h2>Control Groups</h2>
-<p>Propensity matching</p>
+<ul>
+<li>Average treatment effect</li>
+<li>Treatment on treated</li>
+</ul>
 </div>
 <div id="effiencicy" class="section level2">
 <h2>Effiencicy</h2>
@@ -692,15 +795,8 @@ Netflix metrics – streaming hours, retention (users staying on platform), view
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/MacStrelioff/insightstudying/computer-science/" rel="next">Computer Science</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/MacStrelioff/insightstudying/machine-learning/" rel="prev">Machine Learning</a>
+    <a href="/MacStrelioff/insightstudying/computer-science/" rel="prev">Computer Science</a>
   </div>
   
 </div>

@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 13:57:36 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 21:00:58 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Sat, 06 Jul 2019 21:00:58 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Experiment Design Objective, demand, and value Metrics and Scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Implementation Synthetic Control Groups Limitations   Effect Estimation Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs   Fermi problems (order of magnitude)</description>
+    </item>
     
     <item>
       <title>Computer Science</title>
@@ -19,21 +28,6 @@
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
 Complexity The worst-case complexity of an algorithm is represented with big-O notation.</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Thu, 04 Jul 2019 16:01:36 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>Fermi problems (order of magnitude)
-Probability Foundations combinatorics (permutations and combinations)
-Probability Rules basic probability rules
- Odds and other transformations odds, log odds, relative risk, … .
- Expectation and Variance expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
-  Experimental Design Metircs, objectives Metrics (fill in from udamy course section on metrics)
-Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.</description>
     </item>
     
     <item>
