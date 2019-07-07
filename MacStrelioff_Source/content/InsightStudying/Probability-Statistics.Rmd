@@ -61,7 +61,7 @@ value = benefit - cost.
 
 Expected value helps with decisions about the size and duration of an experiment
 
-## Metrics and Scoping
+## Constructs, metrics, and scoping
 
 Once an objective is clear, the details of what can be measured need to be flushed out. 
 
@@ -127,10 +127,6 @@ What group is being sampled from?
 
 Random sample, cluster-based, stratified, serial, balanced, ... 
 
-### Implementation
-
-Batched, or real-time
-
 ### Synthetic Control Groups
 
 Propensity matching
@@ -140,10 +136,25 @@ Propensity matching
 - Non-compliance: Those assicned to treatment may not actually experience the treatment. 
 - Crossover: Those assigned to control might gain access to the treatment. 
 
+# Implementation
 
-# Effect Estimation
+Batched, or real-time
+
+## Size
 
 power, sample size
+
+## Duration
+
+### Temporal variation
+
+### Optional stopping
+
+Why it's an issue for frequentists
+
+Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting
+
+Bayesian justifications
 
 ## Estimands
 

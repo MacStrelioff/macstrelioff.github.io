@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-07-06 21:00:58"
+date: "2019-07-06 21:03:45"
 math: true
 output:
   blogdown::html_page:
@@ -25,7 +25,7 @@ linktitle: Probability and Statistics
 </ul></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
 <li><a href="#objective-demand-and-value">Objective, demand, and value</a></li>
-<li><a href="#metrics-and-scoping">Metrics and Scoping</a><ul>
+<li><a href="#constructs-metrics-and-scoping">Constructs, metrics, and scoping</a><ul>
 <li><a href="#user-flow-and-target-metrics">User flow and target metrics</a></li>
 <li><a href="#invariants">Invariants</a></li>
 <li><a href="#confounding-variables">Confounding variables</a></li>
@@ -37,12 +37,16 @@ linktitle: Probability and Statistics
 <li><a href="#assignment-mechanism">Assignment Mechanism</a><ul>
 <li><a href="#population">Population</a></li>
 <li><a href="#cohorts">Cohorts</a></li>
-<li><a href="#implementation">Implementation</a></li>
 <li><a href="#synthetic-control-groups">Synthetic Control Groups</a></li>
 <li><a href="#limitations">Limitations</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#effect-estimation">Effect Estimation</a><ul>
+<li><a href="#implementation">Implementation</a><ul>
+<li><a href="#size">Size</a></li>
+<li><a href="#duration">Duration</a><ul>
+<li><a href="#temporal-variation">Temporal variation</a></li>
+<li><a href="#optional-stopping">Optional stopping</a></li>
+</ul></li>
 <li><a href="#estimands">Estimands</a></li>
 <li><a href="#effiencicy">Effiencicy</a></li>
 </ul></li>
@@ -92,8 +96,8 @@ linktitle: Probability and Statistics
 <p>value = benefit - cost.</p>
 <p>Expected value helps with decisions about the size and duration of an experiment</p>
 </div>
-<div id="metrics-and-scoping" class="section level2">
-<h2>Metrics and Scoping</h2>
+<div id="constructs-metrics-and-scoping" class="section level2">
+<h2>Constructs, metrics, and scoping</h2>
 <p>Once an objective is clear, the details of what can be measured need to be flushed out.</p>
 <p>Metrics (fill in from udamy course section on metrics)</p>
 <p>Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)</p>
@@ -151,10 +155,6 @@ linktitle: Probability and Statistics
 <h3>Cohorts</h3>
 <p>Random sample, cluster-based, stratified, serial, balanced, …</p>
 </div>
-<div id="implementation" class="section level3">
-<h3>Implementation</h3>
-<p>Batched, or real-time</p>
-</div>
 <div id="synthetic-control-groups" class="section level3">
 <h3>Synthetic Control Groups</h3>
 <p>Propensity matching</p>
@@ -168,9 +168,25 @@ linktitle: Probability and Statistics
 </div>
 </div>
 </div>
-<div id="effect-estimation" class="section level1">
-<h1>Effect Estimation</h1>
+<div id="implementation" class="section level1">
+<h1>Implementation</h1>
+<p>Batched, or real-time</p>
+<div id="size" class="section level2">
+<h2>Size</h2>
 <p>power, sample size</p>
+</div>
+<div id="duration" class="section level2">
+<h2>Duration</h2>
+<div id="temporal-variation" class="section level3">
+<h3>Temporal variation</h3>
+</div>
+<div id="optional-stopping" class="section level3">
+<h3>Optional stopping</h3>
+<p>Why it’s an issue for frequentists</p>
+<p>Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting</p>
+<p>Bayesian justifications</p>
+</div>
+</div>
 <div id="estimands" class="section level2">
 <h2>Estimands</h2>
 <ul>

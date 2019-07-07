@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sat, 06 Jul 2019 21:00:58 +0000</pubDate>
+      <pubDate>Sat, 06 Jul 2019 21:03:45 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -53,7 +53,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#objective-demand-and-value&#34;&gt;Objective, demand, and value&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#metrics-and-scoping&#34;&gt;Metrics and Scoping&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#constructs-metrics-and-scoping&#34;&gt;Constructs, metrics, and scoping&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#user-flow-and-target-metrics&#34;&gt;User flow and target metrics&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#invariants&#34;&gt;Invariants&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#confounding-variables&#34;&gt;Confounding variables&lt;/a&gt;&lt;/li&gt;
@@ -65,12 +65,16 @@
 &lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#population&#34;&gt;Population&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#cohorts&#34;&gt;Cohorts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#implementation&#34;&gt;Implementation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#synthetic-control-groups&#34;&gt;Synthetic Control Groups&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#limitations&#34;&gt;Limitations&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#effect-estimation&#34;&gt;Effect Estimation&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#implementation&#34;&gt;Implementation&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#size&#34;&gt;Size&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#temporal-variation&#34;&gt;Temporal variation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#optional-stopping&#34;&gt;Optional stopping&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#estimands&#34;&gt;Estimands&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#effiencicy&#34;&gt;Effiencicy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -120,8 +124,8 @@
 &lt;p&gt;value = benefit - cost.&lt;/p&gt;
 &lt;p&gt;Expected value helps with decisions about the size and duration of an experiment&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;metrics-and-scoping&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Metrics and Scoping&lt;/h2&gt;
+&lt;div id=&#34;constructs-metrics-and-scoping&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Constructs, metrics, and scoping&lt;/h2&gt;
 &lt;p&gt;Once an objective is clear, the details of what can be measured need to be flushed out.&lt;/p&gt;
 &lt;p&gt;Metrics (fill in from udamy course section on metrics)&lt;/p&gt;
 &lt;p&gt;Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)&lt;/p&gt;
@@ -179,10 +183,6 @@
 &lt;h3&gt;Cohorts&lt;/h3&gt;
 &lt;p&gt;Random sample, cluster-based, stratified, serial, balanced, …&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;implementation&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Implementation&lt;/h3&gt;
-&lt;p&gt;Batched, or real-time&lt;/p&gt;
-&lt;/div&gt;
 &lt;div id=&#34;synthetic-control-groups&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Synthetic Control Groups&lt;/h3&gt;
 &lt;p&gt;Propensity matching&lt;/p&gt;
@@ -196,9 +196,25 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;effect-estimation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Effect Estimation&lt;/h1&gt;
+&lt;div id=&#34;implementation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Implementation&lt;/h1&gt;
+&lt;p&gt;Batched, or real-time&lt;/p&gt;
+&lt;div id=&#34;size&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Size&lt;/h2&gt;
 &lt;p&gt;power, sample size&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Duration&lt;/h2&gt;
+&lt;div id=&#34;temporal-variation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Temporal variation&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;optional-stopping&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Optional stopping&lt;/h3&gt;
+&lt;p&gt;Why it’s an issue for frequentists&lt;/p&gt;
+&lt;p&gt;Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting&lt;/p&gt;
+&lt;p&gt;Bayesian justifications&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div id=&#34;estimands&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Estimands&lt;/h2&gt;
 &lt;ul&gt;
