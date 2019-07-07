@@ -193,7 +193,6 @@ Stats: descriptive, R-squared, chi-squared;
 
 Probability: distributions, CLT, sampling distributions, p-value, 
 
-
 Stats: k-s, Q-Q plot, hypothesis testing, experimentation; 
 
 Probability: Bayes, bootstrap
@@ -203,5 +202,13 @@ Probability: maximum likelihood estimation; time series analysis (ARIMA models),
 Dynamic experimentation (multi-armed bandits)
 
 Unit testing; EDA visualization (seaborn, Plotly, Bokeh)
+
+# Emperical Variance Estimation
+
+bootstrapping
+
+A/A testing
+
+
 
 

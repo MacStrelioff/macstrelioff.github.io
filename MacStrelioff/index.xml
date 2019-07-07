@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sat, 06 Jul 2019 21:03:45 +0000</pubDate>
+      <pubDate>Sun, 07 Jul 2019 11:36:21 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -88,6 +88,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#linear-models&#34;&gt;Linear Models&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#emperical-variance-estimation&#34;&gt;Emperical Variance Estimation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -259,6 +260,11 @@
 &lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
 &lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
 &lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;emperical-variance-estimation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Emperical Variance Estimation&lt;/h1&gt;
+&lt;p&gt;bootstrapping&lt;/p&gt;
+&lt;p&gt;A/A testing&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
