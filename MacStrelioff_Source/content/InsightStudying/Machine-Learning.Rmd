@@ -97,6 +97,10 @@ XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec system
 
 ## Trees and Forests
 
+[Good blog on analysis of feature importance](https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e)
+
+
+
 ### Regression
 
 ### Classification
