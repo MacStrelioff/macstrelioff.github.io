@@ -43,7 +43,21 @@ e.g. higher engagement, better labels for training data or other user behaivors
 - UX interviews / shadows
 - Retrospective analysis (looking at past user behavior)
 
+## Treatment Design
 
+How exactly will this be implemented in the treatment group? 
+
+Specify treatment and control groups.
+
+### Issues
+
+- Networks: Users that interact might be in different conditions
+- Learning effects: Users might respond differently initially than they do asymptotically. Can run experiments longer until the treatment effect seems to stabalize. 
+
+## Variables / Metrics
+
+
+## 
 
 
 

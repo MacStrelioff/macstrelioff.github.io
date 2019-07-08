@@ -36,6 +36,62 @@
     </item>
     
     <item>
+      <title>Business Sense</title>
+      <link>/MacStrelioff/insightstudying/business-sense/</link>
+      <pubDate>Mon, 08 Jul 2019 13:58:45 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
+      <description>
+
+
+&lt;p&gt;Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis&lt;/p&gt;
+&lt;p&gt;Experiment design, A/A and A/B testing, power analysis;&lt;/p&gt;
+&lt;p&gt;ML focused business case study (features, algorithms, validation, value), business focused data challenges&lt;/p&gt;
+&lt;div id=&#34;template&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Template&lt;/h1&gt;
+&lt;div id=&#34;value-of-a-new-feature&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Value of a new feature&lt;/h2&gt;
+&lt;p&gt;e.g. higher engagement, better labels for training data or other user behaivors&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deamand-for-a-feature&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Deamand for a feature&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Surveys&lt;/li&gt;
+&lt;li&gt;Focus Groups&lt;/li&gt;
+&lt;li&gt;UX interviews / shadows&lt;/li&gt;
+&lt;li&gt;Retrospective analysis (looking at past user behavior)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;treatment-design&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Treatment Design&lt;/h2&gt;
+&lt;p&gt;How exactly will this be implemented in the treatment group?&lt;/p&gt;
+&lt;p&gt;Specify treatment and control groups.&lt;/p&gt;
+&lt;div id=&#34;issues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Issues&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Networks: Users that interact might be in different conditions&lt;/li&gt;
+&lt;li&gt;Learning effects: Users might respond differently initially than they do asymptotically. Can run experiments longer until the treatment effect seems to stabalize.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variables-metrics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Variables / Metrics&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;example-question-formats&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Example Question Formats&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://datamasked.com/&#34;&gt;Giulio Palombo’s collection of business focused data challenges&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Company deep dives; data+schema brainstorming; ML algorithms; Insights;&lt;/p&gt;
+&lt;p&gt;Company blogs are a great resource: check out how StitchFix, Instacart use data science.&lt;/p&gt;
+&lt;p&gt;More company deep dives!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
       <pubDate>Mon, 08 Jul 2019 12:58:31 +0000</pubDate>
@@ -273,44 +329,6 @@
 &lt;h1&gt;Emperical Variance Estimation&lt;/h1&gt;
 &lt;p&gt;bootstrapping&lt;/p&gt;
 &lt;p&gt;A/A testing&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Business Sense</title>
-      <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Mon, 08 Jul 2019 12:58:29 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
-      <description>
-
-
-&lt;p&gt;Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis&lt;/p&gt;
-&lt;p&gt;Experiment design, A/A and A/B testing, power analysis;&lt;/p&gt;
-&lt;p&gt;ML focused business case study (features, algorithms, validation, value), business focused data challenges&lt;/p&gt;
-&lt;div id=&#34;template&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Template&lt;/h1&gt;
-&lt;div id=&#34;value-of-a-new-feature&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Value of a new feature&lt;/h2&gt;
-&lt;p&gt;e.g. higher engagement, better labels for training data or other user behaivors&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;deamand-for-a-feature&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Deamand for a feature&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Surveys&lt;/li&gt;
-&lt;li&gt;Focus Groups&lt;/li&gt;
-&lt;li&gt;UX interviews / shadows&lt;/li&gt;
-&lt;li&gt;Retrospective analysis (looking at past user behavior)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;example-question-formats&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Example Question Formats&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://datamasked.com/&#34;&gt;Giulio Palombo’s collection of business focused data challenges&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Company deep dives; data+schema brainstorming; ML algorithms; Insights;&lt;/p&gt;
-&lt;p&gt;Company blogs are a great resource: check out how StitchFix, Instacart use data science.&lt;/p&gt;
-&lt;p&gt;More company deep dives!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
