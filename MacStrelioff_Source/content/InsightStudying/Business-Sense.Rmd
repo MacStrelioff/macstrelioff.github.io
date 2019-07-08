@@ -56,9 +56,20 @@ Specify treatment and control groups.
 
 ## Variables / Metrics
 
+## Assignment Mechanism
 
-## 
+## Experiment Design
 
+### Method
+
+
+### Size 
+
+Power analysis
+
+### Duration
+
+Bandits versus A/B tests, 
 
 
 # Example Question Formats

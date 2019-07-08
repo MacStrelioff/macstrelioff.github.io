@@ -38,7 +38,7 @@
     <item>
       <title>Business Sense</title>
       <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Mon, 08 Jul 2019 13:58:45 +0000</pubDate>
+      <pubDate>Mon, 08 Jul 2019 14:02:05 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/business-sense/</guid>
       <description>
@@ -77,8 +77,22 @@
 &lt;div id=&#34;variables-metrics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Variables / Metrics&lt;/h2&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;/h2&gt;
+&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;experiment-design&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Experiment Design&lt;/h2&gt;
+&lt;div id=&#34;method&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Method&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;size&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Size&lt;/h3&gt;
+&lt;p&gt;Power analysis&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;duration&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Duration&lt;/h3&gt;
+&lt;p&gt;Bandits versus A/B tests,&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;example-question-formats&#34; class=&#34;section level1&#34;&gt;
