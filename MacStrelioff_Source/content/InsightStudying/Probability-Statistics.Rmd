@@ -84,8 +84,17 @@ Metrics that shouldn't change or differ across groups. For example, demographic 
 
 ### Confounding variables
 
+Mitigated by randomization. 
 
 ### Precision variables
+
+Can also highlight features that one would want to match treatment and control on.
+
+Examples: 
+
+- number of posts
+- number of followers
+- visibility / impressions
 
 ## Metric Validation
 
