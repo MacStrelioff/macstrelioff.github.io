@@ -72,6 +72,11 @@ Power analysis
 Bandits versus A/B tests, 
 
 
+### Other considerations: 
+
+- Heterogenous treatment effects
+
+
 # Example Question Formats
 
 

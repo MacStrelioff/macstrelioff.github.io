@@ -108,6 +108,47 @@ Also see [SHAP](https://github.com/slundberg/shap) for interpreting predictions 
 
 Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming
 
+# Open ended Template
+
+## Raw data structure? 
+
+- Table of information about consumer
+- Table of transaction history
+
+
+## Define target variable
+
+e.g. Fraud would be if a consumer calls and labels a transaction as fraud. 
+
+## Preprocession, 
+
+- EDA - distributions, correlations
+
+## Feature engineering
+
+## Performance metrics and how they apply
+
+- Precision
+- Recall 
+- ... 
+
+## Cautions: 
+
+- Don't mention models you aren't familiar with
+
+## Imagine rolling the model out 
+
+- What issues might arise? 
+- What actions do you take in production? 
+
+
+
+
+
+
+
+
+
 
 
 

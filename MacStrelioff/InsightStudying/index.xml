@@ -6,15 +6,24 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jul 2019 14:02:05 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 10:48:14 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Machine Learning</title>
+      <link>/MacStrelioff/insightstudying/machine-learning/</link>
+      <pubDate>Wed, 10 Jul 2019 10:48:14 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
+      <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?</description>
+    </item>
+    
+    <item>
       <title>Business Sense</title>
       <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Mon, 08 Jul 2019 14:02:05 +0000</pubDate>
+      <pubDate>Wed, 10 Jul 2019 10:26:11 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/business-sense/</guid>
       <description>Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis
@@ -31,15 +40,6 @@ Template Value of a new feature e.g. higher engagement, better labels for train
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Fermi problems (order of magnitude)</description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Sun, 07 Jul 2019 21:57:43 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
-      <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification     Considerations Bias-variance trade-off  Overfitting and Underfitting Cross Validation; Classification</description>
     </item>
     
     <item>
