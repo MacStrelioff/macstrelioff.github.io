@@ -155,6 +155,11 @@ XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec system
 
 Also see [SHAP](https://github.com/slundberg/shap) for interpreting predictions from tree models!
 
+
+Benefits of trees over OLS
+
+https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables
+
 ### Regression
 
 ### Classification
