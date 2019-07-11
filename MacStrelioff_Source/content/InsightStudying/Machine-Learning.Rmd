@@ -85,9 +85,63 @@ Process: feature selection, data cleaning / imputation with common pitfalls, mod
 
 ### Naive Bayes
 
+### Discriminant Analysis
+
+#### LDA
+
+When to use: 
+
+- 
+
+Pros: 
+
+- 
+
+Cons: 
+
+- 
+
+#### QDA
+
+When to use: 
+
+- 
+
+Pros: 
+
+- 
+
+Cons: 
+
+- 
+
 ### KNN
 
+When to use: 
+
+- 
+
+Pros: 
+
+- 
+
+Cons: 
+
+- 
+
 ### Logistic Regression
+
+When to use: 
+
+- 
+
+Pros: 
+
+- 
+
+Cons: 
+
+- 
 
 # Ensemble Methods
 
