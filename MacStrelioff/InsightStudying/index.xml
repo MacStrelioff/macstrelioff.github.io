@@ -6,10 +6,23 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jul 2019 10:48:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 17:34:31 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Business Sense</title>
+      <link>/MacStrelioff/insightstudying/business-sense/</link>
+      <pubDate>Wed, 10 Jul 2019 17:34:31 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
+      <description>Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis
+Experiment design, A/A and A/B testing, power analysis;
+ML focused business case study (features, algorithms, validation, value), business focused data challenges
+Template Value of a new feature e.g. higher engagement, better labels for training data or other user behaivors
+ Deamand for a feature  Surveys Focus Groups UX interviews / shadows Retrospective analysis (looking at past user behavior)   Treatment Design How exactly will this be implemented in the treatment group?</description>
+    </item>
     
     <item>
       <title>Machine Learning</title>
@@ -18,19 +31,6 @@
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?</description>
-    </item>
-    
-    <item>
-      <title>Business Sense</title>
-      <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Wed, 10 Jul 2019 10:26:11 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
-      <description>Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis
-Experiment design, A/A and A/B testing, power analysis;
-ML focused business case study (features, algorithms, validation, value), business focused data challenges
-Template Value of a new feature e.g. higher engagement, better labels for training data or other user behaivors
- Deamand for a feature  Surveys Focus Groups UX interviews / shadows Retrospective analysis (looking at past user behavior)   Treatment Design How exactly will this be implemented in the treatment group?</description>
     </item>
     
     <item>

@@ -56,6 +56,27 @@ Specify treatment and control groups.
 
 ## Variables / Metrics
 
+Engagement:
+
+- Lift
+- CTR
+- Duration
+
+Monetization: 
+
+- CTR
+- revenue per user
+- add revenue
+- ...
+
+Guard Rail Metrics:
+
+- 
+
+## Optimizing for?
+
+Note that the choice of metrics determines what the platform is being optimized for. So think about what will happen if the platform is optimized for the chosen metric?
+
 ## Assignment Mechanism
 
 ## Experiment Design
