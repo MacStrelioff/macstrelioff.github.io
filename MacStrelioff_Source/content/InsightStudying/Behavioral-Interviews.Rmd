@@ -53,7 +53,7 @@ prediction markets are used kind of like filtering, where we aggregate over indi
 
 Generally, the answer can show clear communication of a problem, an approach, challenges, solutions, and relevance to the company or role.
 
-
+At Insight I worked on a consulting project for an external company. This company's user funnel was something like -- visitors come to their website, are offered a trial, and some portion of trialers become subscribers. Problem was, around 80% of trialers weren't becoming subscribers. 
 
 
 ## "Why are you interested in a career as a data scientist or data engineer?"
