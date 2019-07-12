@@ -6,10 +6,20 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jul 2019 00:16:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 20:48:34 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Thu, 11 Jul 2019 20:48:34 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
+Complexity The worst-case complexity of an algorithm is represented with big-O notation.</description>
+    </item>
     
     <item>
       <title>Machine Learning</title>
@@ -40,16 +50,6 @@ Template Value of a new feature e.g. higher engagement, better labels for train
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Fermi problems (order of magnitude)</description>
-    </item>
-    
-    <item>
-      <title>Computer Science</title>
-      <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sat, 06 Jul 2019 13:57:36 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
-Complexity The worst-case complexity of an algorithm is represented with big-O notation.</description>
     </item>
     
     <item>
