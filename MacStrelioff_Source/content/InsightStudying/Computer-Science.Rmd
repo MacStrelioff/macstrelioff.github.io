@@ -167,6 +167,31 @@ SQL training resources;
 - [Hacker Rank](https://www.hackerrank.com/domains/sql)
 - [W3School](https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1)
 
+
+### General Structure of SQL querys
+
+```{SQL, eval=FALSE, echo=TRUE}
+SELECT (column names to select) [AS (name for selection)]
+
+FROM (table to select from)
+
+WHERE (logical condition on rows)
+  column = (value or subquery)
+
+```
+
+The `SELECT` clause can contain aggregations, and subqueries. 
+
+The `FROM` clause can contain joins.
+
+The `WHERE` clause can also contain sub queries.
+
+
+### Aggregation functions
+
+
+
+
 # Sorting
 
 sorting (bubble, selection, insertion, merge, quick)

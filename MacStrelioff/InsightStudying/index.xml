@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jul 2019 20:48:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 21:29:12 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Thu, 11 Jul 2019 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 11 Jul 2019 21:29:12 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
+      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL General Structure of SQL querys Aggregation functions   Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
 Complexity The worst-case complexity of an algorithm is represented with big-O notation.</description>
     </item>
     

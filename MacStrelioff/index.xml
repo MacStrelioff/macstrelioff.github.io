@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Thu, 11 Jul 2019 20:48:34 +0000</pubDate>
+      <pubDate>Thu, 11 Jul 2019 21:29:12 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -59,7 +59,10 @@
 &lt;li&gt;&lt;a href=&#34;#trees&#34;&gt;Trees&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#binary-search-trees&#34;&gt;Binary search trees&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#database-and-sql&#34;&gt;Database and SQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#database-and-sql&#34;&gt;Database and SQL&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#general-structure-of-sql-querys&#34;&gt;General Structure of SQL querys&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aggregation-functions&#34;&gt;Aggregation functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;/li&gt;
@@ -204,6 +207,22 @@ for n in ns_to_test:
 &lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;general-structure-of-sql-querys&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;General Structure of SQL querys&lt;/h3&gt;
+&lt;pre class=&#34;sql&#34;&gt;&lt;code&gt;SELECT (column names to select) [AS (name for selection)]
+
+FROM (table to select from)
+
+WHERE (logical condition on rows)
+  column = (value or subquery)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;SELECT&lt;/code&gt; clause can contain aggregations, and subqueries.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;FROM&lt;/code&gt; clause can contain joins.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;WHERE&lt;/code&gt; clause can also contain sub queries.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;aggregation-functions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Aggregation functions&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sorting&#34; class=&#34;section level1&#34;&gt;

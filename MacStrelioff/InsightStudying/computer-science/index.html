@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
+  <meta name="description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL General Structure of SQL querys Aggregation functions   Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
 Complexity The worst-case complexity of an algorithm is represented with big-O notation.">
 
   
@@ -137,13 +137,13 @@ Complexity The worst-case complexity of an algorithm is represented with big-O n
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/computer-science/">
   <meta property="og:title" content="Computer Science | Mac Strelioff">
-  <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL  Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
+  <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL General Structure of SQL querys Aggregation functions   Sorting Searching Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;
 Complexity The worst-case complexity of an algorithm is represented with big-O notation."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-11T20:48:34&#43;00:00">
+  <meta property="article:published_time" content="2019-07-11T21:29:12&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-11T20:48:34&#43;00:00">
+  <meta property="article:modified_time" content="2019-07-11T21:29:12&#43;00:00">
   
 
   
@@ -356,8 +356,8 @@ Complexity The worst-case complexity of an algorithm is represented with big-O n
 
 
 
-<meta content="2019-07-11 20:48:34 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-11 20:48:34 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-07-11 21:29:12 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-11 21:29:12 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -476,7 +476,10 @@ Complexity The worst-case complexity of an algorithm is represented with big-O n
 <li><a href="#trees">Trees</a><ul>
 <li><a href="#binary-search-trees">Binary search trees</a></li>
 </ul></li>
-<li><a href="#database-and-sql">Database and SQL</a></li>
+<li><a href="#database-and-sql">Database and SQL</a><ul>
+<li><a href="#general-structure-of-sql-querys">General Structure of SQL querys</a></li>
+<li><a href="#aggregation-functions">Aggregation functions</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#sorting">Sorting</a></li>
 <li><a href="#searching">Searching</a></li>
@@ -621,6 +624,22 @@ for n in ns_to_test:
 <li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
 <li><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></li>
 </ul>
+<div id="general-structure-of-sql-querys" class="section level3">
+<h3>General Structure of SQL querys</h3>
+<pre class="sql"><code>SELECT (column names to select) [AS (name for selection)]
+
+FROM (table to select from)
+
+WHERE (logical condition on rows)
+  column = (value or subquery)
+</code></pre>
+<p>The <code>SELECT</code> clause can contain aggregations, and subqueries.</p>
+<p>The <code>FROM</code> clause can contain joins.</p>
+<p>The <code>WHERE</code> clause can also contain sub queries.</p>
+</div>
+<div id="aggregation-functions" class="section level3">
+<h3>Aggregation functions</h3>
+</div>
 </div>
 </div>
 <div id="sorting" class="section level1">

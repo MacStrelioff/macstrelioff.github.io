@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-11 20:48:34"
+date: "2019-07-11 21:29:12"
 output:
   blogdown::html_page:
     toc: true
@@ -31,7 +31,10 @@ math: true
 <li><a href="#trees">Trees</a><ul>
 <li><a href="#binary-search-trees">Binary search trees</a></li>
 </ul></li>
-<li><a href="#database-and-sql">Database and SQL</a></li>
+<li><a href="#database-and-sql">Database and SQL</a><ul>
+<li><a href="#general-structure-of-sql-querys">General Structure of SQL querys</a></li>
+<li><a href="#aggregation-functions">Aggregation functions</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#sorting">Sorting</a></li>
 <li><a href="#searching">Searching</a></li>
@@ -176,6 +179,22 @@ for n in ns_to_test:
 <li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
 <li><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></li>
 </ul>
+<div id="general-structure-of-sql-querys" class="section level3">
+<h3>General Structure of SQL querys</h3>
+<pre class="sql"><code>SELECT (column names to select) [AS (name for selection)]
+
+FROM (table to select from)
+
+WHERE (logical condition on rows)
+  column = (value or subquery)
+</code></pre>
+<p>The <code>SELECT</code> clause can contain aggregations, and subqueries.</p>
+<p>The <code>FROM</code> clause can contain joins.</p>
+<p>The <code>WHERE</code> clause can also contain sub queries.</p>
+</div>
+<div id="aggregation-functions" class="section level3">
+<h3>Aggregation functions</h3>
+</div>
 </div>
 </div>
 <div id="sorting" class="section level1">
