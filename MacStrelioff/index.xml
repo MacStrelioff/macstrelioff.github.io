@@ -36,6 +36,59 @@
     </item>
     
     <item>
+      <title>Behavioral Interviewing</title>
+      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
+      <pubDate>Fri, 12 Jul 2019 09:00:20 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
+      <description>
+
+
+&lt;p&gt;Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site&lt;/p&gt;
+&lt;p&gt;Why this company? what value can you add? Tell me about a time when…&lt;/p&gt;
+&lt;p&gt;STAR chart (Situation, Task, Action, Result)&lt;/p&gt;
+&lt;p&gt;Mock interviews: Practice, practice, practice&lt;/p&gt;
+&lt;div id=&#34;common-behavioral-questions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Common Behavioral Questions&lt;/h1&gt;
+&lt;div id=&#34;tell-me-a-little-about-your-background.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“Tell me a little about your background.”&lt;/h2&gt;
+&lt;p&gt;PhD projects can include:&lt;/p&gt;
+&lt;div id=&#34;child-bandits&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Child bandits:&lt;/h3&gt;
+&lt;p&gt;Bandit tasks are a common paradigm for studying individual level decision making and making claims about the way people make decisions. But in lots of contexts, the results you get when you addregate over trials can be different from the actual result on any trial. So I developed a model to infer on a trial by trial level, what decision making strategy kids were using to choose between two ‘bandits’ that gave out stickers. – I have an interest in using more customized models and Bayesian inference to overcome issues that arise from aggregating data at too high a level. If you had averaged over trials, then there may have been evidence for one or another model, but the dynamic changes in decision making strategies would have gone unnoticed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar approaches could be useful for dynamic experimental designs, OR in the context of Netflix, for personalization. If we could dynamically infer something like the strategy or emotional state of a user, then we could use that inference to personalize our recommended content or things like cover art or other aesthetic aspects of Netflix.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;predictit&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;PredictIt&lt;/h3&gt;
+&lt;p&gt;prediction markets are used kind of like filtering, where we aggregate over individual opinions to get a more accurate concensus opinion. But, individual opinions have systematic biases, so would the aggregation of these also have biases? To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases – miscalibration and also subadativity (superaditivity)?…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rl&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;RL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;RL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tell-me-about-the-project-you-worked-on-at-insight.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“Tell me about the project you worked on at Insight.”&lt;/h2&gt;
+&lt;p&gt;Generally, the answer can show clear communication of a problem, an approach, challenges, solutions, and relevance to the company or role.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-are-you-interested-in-a-career-as-a-data-scientist-or-data-engineer&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“Why are you interested in a career as a data scientist or data engineer?”&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tell-me-about-your-researchtalk-to-me-about-your-last-role.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“Tell me about your research/talk to me about your last role.”&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-are-you-interested-in-joining-this-company&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“Why are you interested in joining this company?”&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
       <pubDate>Thu, 11 Jul 2019 21:29:12 +0000</pubDate>
@@ -898,22 +951,6 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;bootstrapping&lt;/p&gt;
 &lt;p&gt;A/A testing&lt;/p&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Behavioral Interviewing</title>
-      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Mon, 01 Jul 2019 08:01:56 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
-      <description>
-
-
-&lt;p&gt;Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site&lt;/p&gt;
-&lt;p&gt;Why this company? what value can you add? Tell me about a time when…&lt;/p&gt;
-&lt;p&gt;STAR chart (Situation, Task, Action, Result)&lt;/p&gt;
-&lt;p&gt;Mock interviews: Practice, practice, practice&lt;/p&gt;
 </description>
     </item>
     

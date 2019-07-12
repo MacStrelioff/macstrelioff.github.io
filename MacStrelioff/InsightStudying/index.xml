@@ -6,10 +6,24 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jul 2019 21:29:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 09:00:20 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Behavioral Interviewing</title>
+      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
+      <pubDate>Fri, 12 Jul 2019 09:00:20 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
+      <description>Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site
+Why this company? what value can you add? Tell me about a time when…
+STAR chart (Situation, Task, Action, Result)
+Mock interviews: Practice, practice, practice
+Common Behavioral Questions “Tell me a little about your background.” PhD projects can include:
+Child bandits: Bandit tasks are a common paradigm for studying individual level decision making and making claims about the way people make decisions.</description>
+    </item>
     
     <item>
       <title>Computer Science</title>
@@ -50,18 +64,6 @@ Template Value of a new feature e.g. higher engagement, better labels for train
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Fermi problems (order of magnitude)</description>
-    </item>
-    
-    <item>
-      <title>Behavioral Interviewing</title>
-      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Mon, 01 Jul 2019 08:01:56 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
-      <description>Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site
-Why this company? what value can you add? Tell me about a time when…
-STAR chart (Situation, Task, Action, Result)
-Mock interviews: Practice, practice, practice</description>
     </item>
     
   </channel>
