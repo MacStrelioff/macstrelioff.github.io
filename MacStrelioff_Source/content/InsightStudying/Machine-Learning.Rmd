@@ -164,8 +164,13 @@ https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-norma
 
 ### Classification
 
-
 Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming
+
+#### Assessment
+
+Confusion matrix, F1, precision-recall curve
+
+ROC, AUC
 
 # Open ended Template
 
