@@ -182,7 +182,7 @@ t:&\text{ Nodes} \\
 s_t:&\text{ Split }t \text{ into } t_L,t_R\\
 v(s_t):&\text{Variable split on at } s_t \\
 p(t):& \text{Proportion of total samples at node } t \\
-Imp(X_m)=&\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) i(s_t,t)
+Imp(X_m)=&\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta i(s_t,t)
 \end{aligned}
 $$
 
