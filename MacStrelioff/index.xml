@@ -38,7 +38,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Sat, 13 Jul 2019 14:19:12 +0000</pubDate>
+      <pubDate>Sat, 13 Jul 2019 17:00:14 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>
@@ -107,6 +107,7 @@
 &lt;div id=&#34;overfitting-and-underfitting&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Overfitting and Underfitting&lt;/h2&gt;
 &lt;p&gt;Cross Validation; Classification&lt;/p&gt;
+&lt;p&gt;Assess by comparing a performance metric on training and testing data.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;cost-functions-and-metrics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Cost Functions and Metrics&lt;/h2&gt;
