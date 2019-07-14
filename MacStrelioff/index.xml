@@ -38,7 +38,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Sat, 13 Jul 2019 17:00:14 +0000</pubDate>
+      <pubDate>Sat, 13 Jul 2019 21:00:16 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>
@@ -248,6 +248,22 @@
 &lt;p&gt;XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost&lt;/p&gt;
 &lt;div id=&#34;trees-and-forests&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Trees and Forests&lt;/h2&gt;
+&lt;p&gt;Gini Impurity: &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+m:&amp;amp;\text{ Region} \\
+k:&amp;amp; \text{ Class} \\
+G =&amp;amp; \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
+\\=&amp;amp; 1 - \Sigma_k \hat{p}_{m,k}^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Decrease in Impurity &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+t:&amp;amp;\text{ Node} \\
+N_t:&amp;amp;\text{ Samples at node }t \\
+s_t:&amp;amp;\text{ Split }t \text{ into } t_L,t_R\\
+\Delta i(s_t,t)=&amp;amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e&#34;&gt;Good blog on analysis of feature importance&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Also see &lt;a href=&#34;https://github.com/slundberg/shap&#34;&gt;SHAP&lt;/a&gt; for interpreting predictions from tree models!&lt;/p&gt;
 &lt;p&gt;Benefits of trees over OLS&lt;/p&gt;

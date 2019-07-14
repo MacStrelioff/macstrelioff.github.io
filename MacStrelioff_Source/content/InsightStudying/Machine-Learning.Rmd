@@ -153,6 +153,29 @@ XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec system
 
 ## Trees and Forests
 
+Gini Impurity:
+$$
+\begin{aligned}
+m:&\text{ Region} \\
+k:& \text{ Class} \\
+G =& \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
+\\=& 1 - \Sigma_k \hat{p}_{m,k}^2
+\end{aligned}
+$$
+
+Decrease in Impurity
+$$
+\begin{aligned}
+t:&\text{ Node} \\
+N_t:&\text{ Samples at node }t \\
+s_t:&\text{ Split }t \text{ into } t_L,t_R\\
+\Delta i(s_t,t)=& i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
+\end{aligned}
+$$
+
+
+
+
 [Good blog on analysis of feature importance](https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e)
 
 Also see [SHAP](https://github.com/slundberg/shap) for interpreting predictions from tree models!

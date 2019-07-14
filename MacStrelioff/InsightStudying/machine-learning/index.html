@@ -139,9 +139,9 @@
   <meta property="og:description" content="Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-13T17:00:14&#43;00:00">
+  <meta property="article:published_time" content="2019-07-13T21:00:16&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-13T17:00:14&#43;00:00">
+  <meta property="article:modified_time" content="2019-07-13T21:00:16&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-07-13 17:00:14 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-13 17:00:14 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-07-13 21:00:16 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-13 21:00:16 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -663,6 +663,22 @@
 <p>XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost</p>
 <div id="trees-and-forests" class="section level2">
 <h2>Trees and Forests</h2>
+<p>Gini Impurity: <span class="math display">\[
+\begin{aligned}
+m:&amp;\text{ Region} \\
+k:&amp; \text{ Class} \\
+G =&amp; \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
+\\=&amp; 1 - \Sigma_k \hat{p}_{m,k}^2
+\end{aligned}
+\]</span></p>
+<p>Decrease in Impurity <span class="math display">\[
+\begin{aligned}
+t:&amp;\text{ Node} \\
+N_t:&amp;\text{ Samples at node }t \\
+s_t:&amp;\text{ Split }t \text{ into } t_L,t_R\\
+\Delta i(s_t,t)=&amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
+\end{aligned}
+\]</span></p>
 <p><a href="https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e">Good blog on analysis of feature importance</a></p>
 <p>Also see <a href="https://github.com/slundberg/shap">SHAP</a> for interpreting predictions from tree models!</p>
 <p>Benefits of trees over OLS</p>

@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning"
 author: "Mac Strelioff"
-date: "2019-07-13 17:00:14"
+date: "2019-07-13 21:00:16"
 math: true
 output:
   blogdown::html_page:
@@ -219,6 +219,22 @@ linktitle: Machine Learning
 <p>XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost</p>
 <div id="trees-and-forests" class="section level2">
 <h2>Trees and Forests</h2>
+<p>Gini Impurity: <span class="math display">\[
+\begin{aligned}
+m:&amp;\text{ Region} \\
+k:&amp; \text{ Class} \\
+G =&amp; \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
+\\=&amp; 1 - \Sigma_k \hat{p}_{m,k}^2
+\end{aligned}
+\]</span></p>
+<p>Decrease in Impurity <span class="math display">\[
+\begin{aligned}
+t:&amp;\text{ Node} \\
+N_t:&amp;\text{ Samples at node }t \\
+s_t:&amp;\text{ Split }t \text{ into } t_L,t_R\\
+\Delta i(s_t,t)=&amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
+\end{aligned}
+\]</span></p>
 <p><a href="https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e">Good blog on analysis of feature importance</a></p>
 <p>Also see <a href="https://github.com/slundberg/shap">SHAP</a> for interpreting predictions from tree models!</p>
 <p>Benefits of trees over OLS</p>
