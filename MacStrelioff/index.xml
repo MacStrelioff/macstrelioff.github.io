@@ -38,7 +38,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Sat, 13 Jul 2019 21:00:16 +0000</pubDate>
+      <pubDate>Sat, 13 Jul 2019 21:07:53 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>
@@ -262,6 +262,17 @@ t:&amp;amp;\text{ Node} \\
 N_t:&amp;amp;\text{ Samples at node }t \\
 s_t:&amp;amp;\text{ Split }t \text{ into } t_L,t_R\\
 \Delta i(s_t,t)=&amp;amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Mean Decrease in Impurity: &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+T:&amp;amp; \text{Trees} \\
+N_T:&amp;amp; \text{Number of trees} \\
+t:&amp;amp;\text{ Nodes} \\
+s_t:&amp;amp;\text{ Split }t \text{ into } t_L,t_R\\
+v(s_t):&amp;amp;\text{Variable split on at } s_t \\
+p(t):&amp;amp; \text{Proportion of total samples at node } t \\
+Imp(X_m)=&amp;amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) i(s_t,t)
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e&#34;&gt;Good blog on analysis of feature importance&lt;/a&gt;&lt;/p&gt;
