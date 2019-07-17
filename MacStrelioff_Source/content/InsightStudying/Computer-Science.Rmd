@@ -161,6 +161,7 @@ Data structures (hash, stack, queue, tree, linked list);
 SQL training resources;
 
 
+- [Udacity course](https://classroom.udacity.com/courses/ud198)
 - [pgexercises](https://pgexercises.com/)
 - [sqlbot](https://sqlbolt.com/lesson/select_queries_introduction)
 - [Mode Analytics](https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/) HackerRank (basic select, aggregation)
