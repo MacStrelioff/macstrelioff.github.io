@@ -23,8 +23,16 @@ set.seed(10201991)
 
 # Problem Solving Strategy
 
-1. Contextualize: Draw a user funnel or user flow for the specific product
-2. Draw a dashboard, then populate with platform and product metrics
+Overall product sense is about what to build and why. 
+
+1. Overarching goals / stage of the company
+2. Contextualize: Draw a user funnel or user flow for the specific product
+3. Draw a dashboard, then populate with platform and product metrics
+
+# Overall resources
+
+- [https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA](https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA)
+
 
 # Platform Concepts and Metrics
 
@@ -38,8 +46,14 @@ funnel analysis
 
 ### User Flow
 
-- Landing page
-- Actions ... 
+- Traffic source: Where users come from (search, referral, ... )
+- number new visits, percent new visits
+- Page visits: users arriving at page
+- Bounce rate: the percentage of visitors to a particular website who navigate away from the site after viewing only one page.
+- Pages viewed / visit
+- Time on pages
+- 
+- Time on site
 
 ### Lifetime Value
 
@@ -62,12 +76,17 @@ funnel analysis
 
 ## Engagement
 
+- clicks
+- bounce rate on subsequent page -- used combined with clicks to mitigate click bait
+- Shares
+- Upvotes
 - DAU
 - time of sessions
 
 ## Value
 
-
+- Shares
+- Upvotes
 
 
 

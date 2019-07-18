@@ -38,7 +38,7 @@
     <item>
       <title>Business Sense</title>
       <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Thu, 18 Jul 2019 10:02:43 +0000</pubDate>
+      <pubDate>Thu, 18 Jul 2019 10:52:53 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/business-sense/</guid>
       <description>
@@ -46,10 +46,18 @@
 
 &lt;div id=&#34;problem-solving-strategy&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Problem Solving Strategy&lt;/h1&gt;
+&lt;p&gt;Overall product sense is about what to build and why.&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Overarching goals / stage of the company&lt;/li&gt;
 &lt;li&gt;Contextualize: Draw a user funnel or user flow for the specific product&lt;/li&gt;
 &lt;li&gt;Draw a dashboard, then populate with platform and product metrics&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;overall-resources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overall resources&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;platform-concepts-and-metrics&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Platform Concepts and Metrics&lt;/h1&gt;
@@ -63,8 +71,14 @@
 &lt;div id=&#34;user-flow&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;User Flow&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Landing page&lt;/li&gt;
-&lt;li&gt;Actions …&lt;/li&gt;
+&lt;li&gt;Traffic source: Where users come from (search, referral, … )&lt;/li&gt;
+&lt;li&gt;number new visits, percent new visits&lt;/li&gt;
+&lt;li&gt;Page visits: users arriving at page&lt;/li&gt;
+&lt;li&gt;Bounce rate: the percentage of visitors to a particular website who navigate away from the site after viewing only one page.&lt;/li&gt;
+&lt;li&gt;Pages viewed / visit&lt;/li&gt;
+&lt;li&gt;Time on pages&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Time on site&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lifetime-value&#34; class=&#34;section level3&#34;&gt;
@@ -96,12 +110,20 @@
 &lt;div id=&#34;engagement&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Engagement&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;clicks&lt;/li&gt;
+&lt;li&gt;bounce rate on subsequent page – used combined with clicks to mitigate click bait&lt;/li&gt;
+&lt;li&gt;Shares&lt;/li&gt;
+&lt;li&gt;Upvotes&lt;/li&gt;
 &lt;li&gt;DAU&lt;/li&gt;
 &lt;li&gt;time of sessions&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;value&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Value&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Shares&lt;/li&gt;
+&lt;li&gt;Upvotes&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;old-notes&#34; class=&#34;section level1&#34;&gt;
