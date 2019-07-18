@@ -54,7 +54,7 @@ Specify treatment and control groups.
 - Networks: Users that interact might be in different conditions
 - Learning effects: Users might respond differently initially than they do asymptotically. Can run experiments longer until the treatment effect seems to stabalize. 
 
-## Variables / Metrics
+## Constructs and Metrics
 
 Engagement:
 
@@ -73,16 +73,11 @@ Guard Rail Metrics:
 
 - 
 
-## Optimizing for?
+## Metric evaluation and selection
 
-Note that the choice of metrics determines what the platform is being optimized for. So think about what will happen if the platform is optimized for the chosen metric?
-
-## Assignment Mechanism
-
-## Experiment Design
+1. What if we optimize for ... ?: The choice of metrics determines what the platform is being optimized for, so think about what will happen if the platform is optimized for the chosen metric.
 
 ### Method
-
 
 ### Size 
 
@@ -92,13 +87,129 @@ Power analysis
 
 Bandits versus A/B tests, 
 
-
 ### Other considerations: 
 
 - Heterogenous treatment effects
 
 
 # Example Question Formats
+
+
+# Mock questions and templates 
+
+## Monitoring Twitter serach
+
+Metrics:
+
+Measure health: 
+
+Working well + being used … 
+
+Track number of users using search! 
+
+Consider people who have used the search once.. (can assess need) 
+
+
+Use of search
+
+ # users that use search
+
+Usage (prop of users that interact with search)
+
+ # users using search / # active users
+
+Proportion of times a user comes and uses search 
+
+Time interval(s):
+
+Daily
+
+Weekly
+
+ # number of search sessions 
+
+Total search volume (server traffic, … -- important!) 
+
+
+Quality of search
+
+
+Chose any suggestion
+
+Rank of suggestion that they chose
+
+Look at total number of searches, and searches in different categories / segmentations
+
+Depends on infrastructure / ease of cutting later
+
+
+-- favorites, retweets, … Other metrics from a deep-dive.
+
+
+CUTS IN  DATA
+
+
+Think of groups that might be using feature differently
+
+New vs old users
+
+Device type (iphone vs android) 
+
+Browser
+
+
+
+Conditions where the feature may be behaving differently (languages, countries, …) .. 
+
+Note: countries would have different bandwidths (country easier to measure than bandiwdth itself) 
+
+Language that the search is using. 
+
+
+
+
+SPIKE IN THE METRIC # of searches
+
+
+Bug
+
+
+Event
+
+
+
+Think of more people on platform moving with searches… 
+
+
+ # clicks and # searches -- if it’s a bug, then clicks prob wouldn’t also spike.
+
+
+
+
+
+Impressions, clicks, … 
+
+
+Top of funnel, 
+
+
+Logging in, going to search, writing stuff, hitting search .
+
+
+‘Ok lets write down some ideas and see how we feel about them … ‘
+
+
+Looking for intuition about how things will move and interact? 
+
+
+Looking for: 
+
+Organized in thinking
+
+Incl understanding of problem space
+
+Communicating thinking well
+
 
 
 
