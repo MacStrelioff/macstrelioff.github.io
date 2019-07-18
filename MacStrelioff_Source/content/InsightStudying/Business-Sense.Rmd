@@ -21,13 +21,67 @@ set.seed(10201991)
 ```
 
 
+# Problem Solving Strategy
+
+1. Contextualize: Draw a user funnel or user flow for the specific product
+2. Draw a dashboard, then populate with platform and product metrics
+
+# Platform Concepts and Metrics
+
+## Users
+
+### User Funnel
+
+Churn,
+
+funnel analysis
+
+### User Flow
+
+- Landing page
+- Actions ... 
+
+### Lifetime Value
+
+## KPIs
+
+- Daily active users (DAU)
+- Support ticiets: new tickets + unresolved tickets
+- Time to ticket resolution
+
+- [https://www.klipfolio.com/resources/kpi-examples](https://www.klipfolio.com/resources/kpi-examples)
+
+## Monetization 
+
+- customer lifetime value (LTV)
+- monthly recurring revenue (MRR)
+
+# Product Concepts and Metrics
+
+## Demand
+
+## Engagement
+
+- DAU
+- time of sessions
+
+## Value
 
 
-Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis
+
+
+
+
+
+# OLD NOTES: 
+
+# Insight topics list:
+engagement, search engine optimization (SEO), key-performance indicators (KPIs),
 
 Experiment design, A/A and A/B testing, power analysis; 
 
 ML focused business case study (features, algorithms, validation, value), business focused data challenges
+
 
 
 # Template

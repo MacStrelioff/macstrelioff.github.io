@@ -38,15 +38,81 @@
     <item>
       <title>Business Sense</title>
       <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Thu, 18 Jul 2019 08:59:20 +0000</pubDate>
+      <pubDate>Thu, 18 Jul 2019 10:02:43 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/business-sense/</guid>
       <description>
 
 
-&lt;p&gt;Churn, engagement, search engine optimization (SEO), customer lifetime value (LTV), key-performance indicators (KPIs), funnel analysis&lt;/p&gt;
+&lt;div id=&#34;problem-solving-strategy&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Problem Solving Strategy&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Contextualize: Draw a user funnel or user flow for the specific product&lt;/li&gt;
+&lt;li&gt;Draw a dashboard, then populate with platform and product metrics&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;platform-concepts-and-metrics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Platform Concepts and Metrics&lt;/h1&gt;
+&lt;div id=&#34;users&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Users&lt;/h2&gt;
+&lt;div id=&#34;user-funnel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;User Funnel&lt;/h3&gt;
+&lt;p&gt;Churn,&lt;/p&gt;
+&lt;p&gt;funnel analysis&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;user-flow&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;User Flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Landing page&lt;/li&gt;
+&lt;li&gt;Actions …&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lifetime-value&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lifetime Value&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;kpis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;KPIs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Daily active users (DAU)&lt;/li&gt;
+&lt;li&gt;Support ticiets: new tickets + unresolved tickets&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Time to ticket resolution&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.klipfolio.com/resources/kpi-examples&#34; class=&#34;uri&#34;&gt;https://www.klipfolio.com/resources/kpi-examples&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;monetization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Monetization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;customer lifetime value (LTV)&lt;/li&gt;
+&lt;li&gt;monthly recurring revenue (MRR)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;product-concepts-and-metrics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Product Concepts and Metrics&lt;/h1&gt;
+&lt;div id=&#34;demand&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Demand&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;engagement&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Engagement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DAU&lt;/li&gt;
+&lt;li&gt;time of sessions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;value&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Value&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;old-notes&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;OLD NOTES:&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;insight-topics-list&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Insight topics list:&lt;/h1&gt;
+&lt;p&gt;engagement, search engine optimization (SEO), key-performance indicators (KPIs),&lt;/p&gt;
 &lt;p&gt;Experiment design, A/A and A/B testing, power analysis;&lt;/p&gt;
 &lt;p&gt;ML focused business case study (features, algorithms, validation, value), business focused data challenges&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;template&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Template&lt;/h1&gt;
 &lt;div id=&#34;value-of-a-new-feature&#34; class=&#34;section level2&#34;&gt;
