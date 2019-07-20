@@ -78,7 +78,7 @@ Bandit tasks are a common paradigm for studying individual level decision making
 
 ## "Tell me about the project you worked on at Insight."
 
-This questions gives an opportunity to demonstrate what I'd be capable of on day 1. Clarity 
+This question gives an opportunity to demonstrate what I'd be capable of on day 1. Clarity 
 
 Template: 
 
@@ -178,23 +178,40 @@ Evaluation:
 - Result: How do you know your solution was successful? 
 - Takeaways: What did you learn from this situation? What would you do the same or differently next time?
 
-Judgment: What factors (like misunderstanding, incomplete information, technical errors, etc.) did you use to explain the mistake? Was the mistake a reasonable one -- or were you being careless? 
-Responsibility: Did you tell someone about the error and make sure the situation was fixed right away? Or did you give excuses for why this wasn't really your fault? 
-Wisdom: As a result of your experiences, are you likely to avoid a similar mistake in the future? Can what you learned in this situation be applied to broader team scenarios?
 
 Evaluation: 
 
 - Your principles for mistakes: 
 - Knowledge of company values around rapid iteration, learning through failure, and troubleshooting
-- 
+- Judgment: How did you explain the mistake (misunderstanding, incomplete information, technical errors)? Was it due to carelessness. 
+- Responsibility: Did you make excuses, or make solutions? 
+- Wisdom: Are you likely to avoid a similar mistake in the future? Can lessons here apply more broadly? 
 
 ## "Talk about a situation that required you to explain your technical work to someone outside your industry or field."
 
 
 
+Evaluation: 
+
+- Ability to communicate with stakeholders: 
+- Impact: Understanding of what the other party needed to know
+- Adaptability: Techniques (analogy, visualization, ...) used to simply communicate ideas. How did you decide what to include. Did you clarify that the explanation made sense. 
+- Attitude: Will you patiently explain your ideas? 
+
+
 ## "Talk about a time you were asked to manage an important project." 
 
+Evaluation: 
 
+- Knowledge of company values on leadership
+- Trust: Why were you chosen to lead?
+- Respect and responsibility: 
+- Delegation: 
+- People management: 
+- Executive decision-making: 
+- Team dynamics: 
+- Potential: Strengths and weaknesses in leading.
+- Interest in management roles: 
 
 
 
