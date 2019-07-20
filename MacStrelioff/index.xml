@@ -38,7 +38,7 @@
     <item>
       <title>Behavioral Interviewing</title>
       <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Sat, 20 Jul 2019 13:19:22 +0000</pubDate>
+      <pubDate>Sat, 20 Jul 2019 15:01:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>
@@ -48,19 +48,18 @@
 &lt;li&gt;&lt;a href=&#34;#principles&#34;&gt;Principles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#common-behavioral-questions&#34;&gt;Common Behavioral Questions&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#tell-me-a-little-about-your-background.&#34;&gt;“Tell me a little about your background.”&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#predictit&#34;&gt;PredictIt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#child-bandits&#34;&gt;Child bandits:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#rl&#34;&gt;RL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tell-me-about-the-project-you-worked-on-at-insight.&#34;&gt;“Tell me about the project you worked on at Insight.”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#why-are-you-interested-in-a-career-as-a-data-scientist-or-data-engineer&#34;&gt;“Why are you interested in a career as a data scientist or data engineer?”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tell-me-about-your-researchtalk-to-me-about-your-last-role.&#34;&gt;“Tell me about your research/talk to me about your last role.”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-are-you-interested-in-a-career-as-a-data-scientist&#34;&gt;“Why are you interested in a career as a data scientist?”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tell-me-about-your-research-talk-to-me-about-your-last-role.&#34;&gt;“Tell me about your research / talk to me about your last role.”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#why-are-you-interested-in-joining-this-company&#34;&gt;“Why are you interested in joining this company?”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#talk-about-a-time-you-were-on-a-team-that-struggled-with-effective-communication.&#34;&gt;“Talk about a time you were on a team that struggled with effective communication.”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tell-me-about-a-time-you-made-a-mistake-at-work.&#34;&gt;“Tell me about a time you made a mistake at work.”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#talk-about-a-situation-that-required-you-to-explain-your-technical-work-to-someone-outside-your-industry-or-field.&#34;&gt;“Talk about a situation that required you to explain your technical work to someone outside your industry or field.”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#talk-about-a-time-you-were-asked-to-manage-an-important-project.&#34;&gt;“Talk about a time you were asked to manage an important project.”&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deep-dives&#34;&gt;Deep-Dives&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -87,9 +86,7 @@
 &lt;li&gt;Value: Why should people care&lt;/li&gt;
 &lt;li&gt;Project Outline: Methods, results&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;PhD projects can include:&lt;/p&gt;
-&lt;div id=&#34;predictit&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;PredictIt&lt;/h3&gt;
+&lt;p&gt;Example answer:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Problem: Wisdom of the crowds, like the social science equivalent of ensemble learners. However, many fallacies and biases in probabilistic reasoning hove been demonstrated in lab settings.&lt;/li&gt;
 &lt;li&gt;Context: Ryan and I.. I was like a statistician/behavioral economist, and he was a programmer. So I’d lead algorithm developemnt and he would code and deploy.&lt;/li&gt;
@@ -105,18 +102,11 @@
 &lt;li&gt;Transferrable skills: Mention some of the models used.&lt;/li&gt;
 &lt;li&gt;Value adds: Realized prediction markets are biased close to expiration – their signal is weaker than previously thought. Also able to profit literally by rolling out trading algorithms.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
 &lt;div id=&#34;child-bandits&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Child bandits:&lt;/h3&gt;
 &lt;p&gt;Bandit tasks are a common paradigm for studying individual level decision making and making claims about the way people make decisions. But in lots of contexts, the results you get when you addregate over trials can be different from the actual result on any trial. So I developed a model to infer on a trial by trial level, what decision making strategy kids were using to choose between two ‘bandits’ that gave out stickers. – I have an interest in using more customized models and Bayesian inference to overcome issues that arise from aggregating data at too high a level. If you had averaged over trials, then there may have been evidence for one or another model, but the dynamic changes in decision making strategies would have gone unnoticed.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Similar approaches could be useful for dynamic experimental designs, OR in the context of Netflix, for personalization. If we could dynamically infer something like the strategy or emotional state of a user, then we could use that inference to personalize our recommended content or things like cover art or other aesthetic aspects of Netflix.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;rl&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;RL&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;RL.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -139,20 +129,80 @@
 &lt;li&gt;Logic: Were sensible solutions tried in a sensible order?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;why-are-you-interested-in-a-career-as-a-data-scientist-or-data-engineer&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;“Why are you interested in a career as a data scientist or data engineer?”&lt;/h2&gt;
+&lt;div id=&#34;why-are-you-interested-in-a-career-as-a-data-scientist&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“Why are you interested in a career as a data scientist?”&lt;/h2&gt;
+&lt;p&gt;This is an opportunity to show that becoming a data sceientist at the company is the logical next career move, and to demonstrate that you know what to expect in the new role.&lt;/p&gt;
+&lt;p&gt;Outline of topics that may resonate with a hiring manager:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skills, Technical: Tools, technologies, methods you have used.&lt;/li&gt;
+&lt;li&gt;Skills, Conceptual: Your approach to understanding problems and navigating to solutions&lt;/li&gt;
+&lt;li&gt;Interests: What are you eager to do in this next phase of your professional life?&lt;/li&gt;
+&lt;li&gt;Interests, Broad: Knowledge of problems tackled by data professionals in this industry&lt;/li&gt;
+&lt;li&gt;Interests, Specific: Knowledge of technical challenges that will be faced by someone in this role&lt;/li&gt;
+&lt;li&gt;Growth, Skills: What you’re excited to learn in the next few years&lt;/li&gt;
+&lt;li&gt;Growth, Trajectory: Relate this job to an ultimate career trajectory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example answer:&lt;/p&gt;
+&lt;p&gt;Evaluation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Educated Enthusasiam:&lt;/li&gt;
+&lt;li&gt;Professional Goals:&lt;/li&gt;
+&lt;li&gt;Niche area:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;tell-me-about-your-researchtalk-to-me-about-your-last-role.&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;“Tell me about your research/talk to me about your last role.”&lt;/h2&gt;
+&lt;div id=&#34;tell-me-about-your-research-talk-to-me-about-your-last-role.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“Tell me about your research / talk to me about your last role.”&lt;/h2&gt;
+&lt;p&gt;Evaluation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skills:&lt;/li&gt;
+&lt;li&gt;Relevance: Show how previous work relates to the responsibilities of the current role.&lt;/li&gt;
+&lt;li&gt;Clarity:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;why-are-you-interested-in-joining-this-company&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Why are you interested in joining this company?”&lt;/h2&gt;
+&lt;p&gt;This is an opportunity to demonstrate knowledge of and interest in the current role.&lt;/p&gt;
+&lt;p&gt;Evaluation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry knowledge:&lt;/li&gt;
+&lt;li&gt;Company knowledge:&lt;/li&gt;
+&lt;li&gt;Potential for impact:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;talk-about-a-time-you-were-on-a-team-that-struggled-with-effective-communication.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Talk about a time you were on a team that struggled with effective communication.”&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation: Where / when did this happen? What were you working on, and with whom?&lt;/li&gt;
+&lt;li&gt;Task: What were you responsible for? What challenges did you face?&lt;/li&gt;
+&lt;li&gt;Action: How did you decide the appropriate response to the situation? How did you implement it?&lt;/li&gt;
+&lt;li&gt;Result: How do you know your solution was successful?&lt;/li&gt;
+&lt;li&gt;Takeaways: What did you learn from this situation? What would you do the same or differently next time?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Evaluation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Knowledge of company values around communication:&lt;/li&gt;
+&lt;li&gt;Your principles for communication:&lt;/li&gt;
+&lt;li&gt;Awareness of problem:&lt;/li&gt;
+&lt;li&gt;Initiative:&lt;/li&gt;
+&lt;li&gt;Lessons Learned:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tell-me-about-a-time-you-made-a-mistake-at-work.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Tell me about a time you made a mistake at work.”&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation: Where/when did this happen? What were you working on, and with whom?&lt;/li&gt;
+&lt;li&gt;Task: What were you responsible for? What challenges did you face?&lt;/li&gt;
+&lt;li&gt;Action: How did you decide the appropriate response to the situation? How did you implement it?&lt;/li&gt;
+&lt;li&gt;Result: How do you know your solution was successful?&lt;/li&gt;
+&lt;li&gt;Takeaways: What did you learn from this situation? What would you do the same or differently next time?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Judgment: What factors (like misunderstanding, incomplete information, technical errors, etc.) did you use to explain the mistake? Was the mistake a reasonable one – or were you being careless? Responsibility: Did you tell someone about the error and make sure the situation was fixed right away? Or did you give excuses for why this wasn’t really your fault? Wisdom: As a result of your experiences, are you likely to avoid a similar mistake in the future? Can what you learned in this situation be applied to broader team scenarios?&lt;/p&gt;
+&lt;p&gt;Evaluation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your principles for mistakes:&lt;/li&gt;
+&lt;li&gt;Knowledge of company values around rapid iteration, learning through failure, and troubleshooting&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;talk-about-a-situation-that-required-you-to-explain-your-technical-work-to-someone-outside-your-industry-or-field.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Talk about a situation that required you to explain your technical work to someone outside your industry or field.”&lt;/h2&gt;
@@ -160,6 +210,10 @@
 &lt;div id=&#34;talk-about-a-time-you-were-asked-to-manage-an-important-project.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Talk about a time you were asked to manage an important project.”&lt;/h2&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deep-dives&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Deep-Dives&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://sites.google.com/insightdatascience.com/interviewstrategies/interviews/interview-logistics/deep-dives?authuser=0&#34;&gt;Deep Dive guide&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

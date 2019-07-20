@@ -51,9 +51,7 @@ Template:
 - Value: Why should people care
 - Project Outline: Methods, results
 
-PhD projects can include: 
-
-### PredictIt 
+Example answer: 
 
 - Problem: Wisdom of the crowds, like the social science equivalent of ensemble learners. However, many fallacies and biases in probabilistic reasoning hove been demonstrated in lab settings. 
 - Context: Ryan and I.. I was like a statistician/behavioral economist, and he was a programmer. So I'd lead algorithm developemnt and he would code and deploy.
@@ -77,9 +75,6 @@ Bandit tasks are a common paradigm for studying individual level decision making
 
 - Similar approaches could be useful for dynamic experimental designs, OR in the context of Netflix, for personalization. If we could dynamically infer something like the strategy or emotional state of a user, then we could use that inference to personalize our recommended content or things like cover art or other aesthetic aspects of Netflix. 
 
-### RL
-
-- RL. 
 
 ## "Tell me about the project you worked on at Insight."
 
@@ -103,24 +98,98 @@ Evaluation:
 - Relevance: Do the skills add value to the company? 
 - Logic: Were sensible solutions tried in a sensible order? 
 
-## "Why are you interested in a career as a data scientist or data engineer?"
+## "Why are you interested in a career as a data scientist?"
+
+This is an opportunity to show that becoming a data sceientist at the company is the logical next career move, and to demonstrate that you know what to expect in the new role. 
+
+Outline of topics that may resonate with a hiring manager: 
+
+- Skills, Technical: Tools, technologies, methods you have used.
+- Skills, Conceptual: Your approach to understanding problems and navigating to solutions
+- Interests: What are you eager to do in this next phase of your professional life?
+- Interests, Broad: Knowledge of problems tackled by data professionals in this industry
+- Interests, Specific: Knowledge of technical challenges that will be faced by someone in this role
+- Growth, Skills: What you’re excited to learn in the next few years
+- Growth, Trajectory: Relate this job to an ultimate career trajectory
+
+
+Example answer: 
 
 
 
-## "Tell me about your research/talk to me about your last role."
+
+Evaluation: 
+
+- Educated Enthusasiam: 
+- Professional Goals: 
+- Niche area: 
+
+
+## "Tell me about your research / talk to me about your last role."
+
+
+
+
+Evaluation: 
+
+- Skills: 
+- Relevance: Show how previous work relates to the responsibilities of the current role. 
+- Clarity: 
 
 
 
 ## "Why are you interested in joining this company?"
 
+This is an opportunity to demonstrate knowledge of and interest in the current role. 
+
+
+Evaluation: 
+
+- Industry knowledge: 
+- Company knowledge: 
+- Potential for impact: 
 
 ## "Talk about a time you were on a team that struggled with effective communication." 
+
+
+- Situation: Where / when did this happen? What were you working on, and with whom?
+- Task: What were you responsible for? What challenges did you face? 
+- Action: How did you decide the appropriate response to the situation? How did you implement it?
+- Result: How do you know your solution was successful? 
+- Takeaways: What did you learn from this situation? What would you do the same or differently next time?
+
+
+Evaluation: 
+
+- Knowledge of company values around communication: 
+- Your principles for communication: 
+- Awareness of problem: 
+- Initiative: 
+- Lessons Learned: 
 
 
 ## "Tell me about a time you made a mistake at work." 
 
 
+
+- Situation: Where/when did this happen? What were you working on, and with whom?
+- Task: What were you responsible for? What challenges did you face? 
+- Action: How did you decide the appropriate response to the situation? How did you implement it?
+- Result: How do you know your solution was successful? 
+- Takeaways: What did you learn from this situation? What would you do the same or differently next time?
+
+Judgment: What factors (like misunderstanding, incomplete information, technical errors, etc.) did you use to explain the mistake? Was the mistake a reasonable one -- or were you being careless? 
+Responsibility: Did you tell someone about the error and make sure the situation was fixed right away? Or did you give excuses for why this wasn't really your fault? 
+Wisdom: As a result of your experiences, are you likely to avoid a similar mistake in the future? Can what you learned in this situation be applied to broader team scenarios?
+
+Evaluation: 
+
+- Your principles for mistakes: 
+- Knowledge of company values around rapid iteration, learning through failure, and troubleshooting
+- 
+
 ## "Talk about a situation that required you to explain your technical work to someone outside your industry or field."
+
 
 
 ## "Talk about a time you were asked to manage an important project." 
@@ -129,7 +198,9 @@ Evaluation:
 
 
 
+# Deep-Dives
 
+[Deep Dive guide](https://sites.google.com/insightdatascience.com/interviewstrategies/interviews/interview-logistics/deep-dives?authuser=0)
 
 
 
