@@ -3,6 +3,10 @@ title: "Behavioral Interviewing"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 math: true
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 4
 menu:
   InsightStudying:
     parent: Foundations
@@ -20,6 +24,12 @@ library(entropy)
 set.seed(10201991)
 ```
 
+# Principles
+
+- Interviews are conversations, not tests
+- Use stories to establish a connection and demonstrate fit for a role and company
+
+
 Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site
 
 Why this company? what value can you add? Tell me about a time when… 
@@ -32,7 +42,33 @@ Mock interviews: Practice, practice, practice
 
 ## "Tell me a little about your background."
 
+This questions gives an opportunity to demonstrate claer communication, curiosity, enthusiasm, transferrable skills, and value adds. 
+
+Template: 
+
+- Problem: Concepts and context
+- Curiosity: Open question
+- Value: Why should people care
+- Project Outline: Methods, results
+
 PhD projects can include: 
+
+### PredictIt 
+
+- Problem: Wisdom of the crowds, like the social science equivalent of ensemble learners. However, many fallacies and biases in probabilistic reasoning hove been demonstrated in lab settings. 
+- Context: Ryan and I.. I was like a statistician/behavioral economist, and he was a programmer. So I'd lead algorithm developemnt and he would code and deploy.
+- Curiosity: Would prices in prediction markets be good estimators of real probabilities, since they incentivise and aggregate individual estimates, or would they show the same biases as individual probabilistic judgments, since they are aggregating over biased individuals? 
+- Value: Finding systematic biases could result in profitable trading strategies.
+- Project Outline: 
+
+prediction markets are used kind of like filtering, where we aggregate over individual opinions to get a more accurate concensus opinion. But, individual opinions have systematic biases, so would the aggregation of these also have biases? To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases -- miscalibration and also subadativity (superaditivity)?... 
+
+Evaluation:
+
+- Communication: Clearly explain prediction market mechanics, wisdom of the crowds, and an individual level fallacy. 
+- Transferrable skills: Mention some of the models used. Interest in markets and complex problems. 
+- Value adds: Realized prediction markets are biased close to expiration -- their signal is weaker than previously thought. Also able to profit literally by rolling out trading algorithms. 
+
 
 ### Child bandits: 
 
@@ -40,16 +76,17 @@ Bandit tasks are a common paradigm for studying individual level decision making
 
 - Similar approaches could be useful for dynamic experimental designs, OR in the context of Netflix, for personalization. If we could dynamically infer something like the strategy or emotional state of a user, then we could use that inference to personalize our recommended content or things like cover art or other aesthetic aspects of Netflix. 
 
-### PredictIt 
-
-prediction markets are used kind of like filtering, where we aggregate over individual opinions to get a more accurate concensus opinion. But, individual opinions have systematic biases, so would the aggregation of these also have biases? To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases -- miscalibration and also subadativity (superaditivity)?... 
-
 ### RL
 
 - RL. 
 
+### sff
+
 
 ## "Tell me about the project you worked on at Insight."
+
+
+
 
 Generally, the answer can show clear communication of a problem, an approach, challenges, solutions, and relevance to the company or role.
 
