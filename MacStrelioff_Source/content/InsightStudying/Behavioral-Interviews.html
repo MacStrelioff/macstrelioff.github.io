@@ -1,7 +1,7 @@
 ---
 title: "Behavioral Interviewing"
 author: "Mac Strelioff"
-date: "2019-07-20 16:57:40"
+date: "2019-07-20 17:54:25"
 math: true
 output:
   blogdown::html_page:
@@ -60,19 +60,14 @@ linktitle: Behavioral Interviewing
 </ul>
 <p>Example answer:</p>
 <ul>
-<li>Open: I recently graduated from UC Irvine, where I studied statistics and cognitive science, and worked on a few lines of research.</li>
-<li>Problem: Wisdom of the crowds, like the social science equivalent of ensemble learners. However, many fallacies and biases in probabilistic reasoning hove been demonstrated in lab settings.</li>
-<li>Context: Ryan and I.. I was like a statistician/behavioral economist, and he was a programmer. So I’d lead algorithm developemnt and he would code and deploy.</li>
-<li>Curiosity: Would prices in prediction markets be good estimators of real probabilities, since they incentivise and aggregate individual estimates, or would they show the same biases as individual probabilistic judgments, since they are aggregating over biased individuals?</li>
-<li>Value: Finding systematic biases could result in corrections for market bias.</li>
-<li>Project Overview:</li>
-<li>Trajectory: Overall, I realized that I enjoy these kinds of impactful analyses of real-world data so I decided to join Insight and bridge into a career in data science.</li>
+<li>Open: I recently graduates from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in prediction markets and arbitrage.</li>
+<li>Problem: So prediction markets are a platform where people can buy and sell contracts on events that pay a dollar if the event occurs and nothing if it doesn’t occur. So for example, one market might be Who will win the 2020 election, and contracts might be ‘Bernie Sanders’, ‘Andrew Yang’, ‘Donnald Trump’, … . Since the contracts pay out $1, the theory is that the price should estimate the underlying probability of the event occuring. And since the market is aggregating information across individuals, it should be a pretty good estimate. However, individuals have shown a number of biases in probabilistic reasoning in lab studies, so I was wondering if these same biases would exist in prediction market prices. If they did, then I could make profitable trading algorithms.</li>
+<li>So I partnered with a large online prediction market to get access to their data, and found evidence of some biases consistent with those observed in lab studies.</li>
+<li>Trajectory: Overall, I realized that I enjoy these kinds of impactful analyses of real-world data, moreso than theory building through laboratory studies, so I decided to bridge into a career in data science, and joined Insight to become part of a network of data scientists.</li>
 </ul>
-<p>To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases – miscalibration and also subadativity (superaditivity)?…</p>
-<p>I recently graduates from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in stocks and arbitrage. So prediction markets are a platform where people can buy and sell contracts on events that pay a dollar if the event occurs and nothing if it doesn’t occur. So for example, one market might be Who will win the 2020 election, and contracts might be ‘Bernie Sanders’, ‘Andrew Yang’, ‘Donnald Trump’, … . Since the contracts pay out $1, the theory is that the price should estimate the underlying probability of the event occuring. And since the market is aggregating information across individuals, it should be a pretty good estimate. However, individuals have shown a number of biases in probabilistic reasoning in lab studies, so I was wondering if these same biases would exist in prediction market prices. If they did, then I could make profitable trading algorithms. So I partnered with a large online prediction market to get access to their data, and found evidence of some biases consistent with those observed in lab studies. - Overall, I realized that I enjoy these kinds of impactful analyses of real-world data, moreso than theory building through laboratory studies, so I decided to join Insight and bridge into a career in data science.</p>
 <p>Evaluation:</p>
 <ul>
-<li>Communication: Clearly explain prediction market mechanics, wisdom of the crowds, and an individual level fallacy.</li>
+<li>Communication: Clearly explain prediction market mechanics.</li>
 <li>Enthusasism: Interest in markets and complex problems.</li>
 <li>Transferrable skills: Mention some of the models used.</li>
 <li>Value adds: Realized prediction markets are biased close to expiration – their signal is weaker than previously thought. Also able to profit literally by rolling out trading algorithms.</li>
@@ -90,9 +85,10 @@ linktitle: Behavioral Interviewing
 <p>This question gives an opportunity to demonstrate what you’ll be capable of on Day 1.</p>
 <p>Template:</p>
 <ul>
-<li>Open: At Insight I worked on a consulting project for an external company. This company acquired users through a free trial, after which users would subscribe.</li>
-<li>Purpose: They wanted to 1) identify, early on, who would become a subscriber, and 2) How successful users were using the product.</li>
-<li>Methods: I usually think about a generative process. Here I thought about LDA or QDA. Later thought about other algorithms because this was primarily a prediction problem.</li>
+<li>Open: At Insight I worked on a consulting project for an external company. This company acquired users by offering a free trial, after which users would subscribe.</li>
+<li>Purpose: Goals of the project were to to 1) identify, early on, who would become a subscriber, and 2) identify how the successful users were using the product.</li>
+<li>Approach: I usually think about a generative process. Here I framed the problem as a classification problem and thought about using LDA or QDA because I thought the distributions of features would be different based on the classes.</li>
+<li>Methods: Later thought about other algorithms because this was primarily a prediction problem, and because the assumption of normally distributed features was violated. So I tried tree-based algorithms and those performed the best across all metrics – F1 score, accuracy, precision, and recall.</li>
 <li>Challenges: Non-normal features (could break LDA, QDA)</li>
 </ul>
 <p>How could I have used a mixed effects model here? (See Maime’s blog?)</p>
@@ -116,7 +112,7 @@ linktitle: Behavioral Interviewing
 <li>Growth, Skills: What you’re excited to learn in the next few years</li>
 <li>Growth, Trajectory: Relate this job to an ultimate career trajectory</li>
 </ul>
-<p>Example answer:</p>
+<p>Example answer: When I was in my PhD, I worked on a variety of projects and realized that I most enjoyed the ones that derived some impactful analysis from larger scale data – namely the prediction market project.</p>
 <p>Evaluation:</p>
 <ul>
 <li>Educated Enthusasiam:</li>
@@ -126,6 +122,7 @@ linktitle: Behavioral Interviewing
 </div>
 <div id="tell-me-about-your-research-talk-to-me-about-your-last-role." class="section level2">
 <h2>“Tell me about your research / talk to me about your last role.”</h2>
+<p>Same as in ‘tell me about your background..’</p>
 <p>Evaluation:</p>
 <ul>
 <li>Skills:</li>
@@ -136,6 +133,7 @@ linktitle: Behavioral Interviewing
 <div id="why-are-you-interested-in-joining-this-company" class="section level2">
 <h2>“Why are you interested in joining this company?”</h2>
 <p>This is an opportunity to demonstrate knowledge of and interest in the current role.</p>
+<p>Depends on deep-dive.</p>
 <p>Evaluation:</p>
 <ul>
 <li>Industry knowledge:</li>
@@ -150,7 +148,11 @@ linktitle: Behavioral Interviewing
 <li>Task: What were you responsible for? What challenges did you face?</li>
 <li>Action: How did you decide the appropriate response to the situation? How did you implement it?</li>
 <li>Result: How do you know your solution was successful?</li>
-<li>Takeaways: What did you learn from this situation? What would you do the same or differently next time?</li>
+<li><p>Takeaways: What did you learn from this situation? What would you do the same or differently next time?</p></li>
+<li>Can’t think of one.. In community college I worked as a TA for my mentor, and I lead a research project which is very rare in community college settings. She was extremely supportive and I think communication and goals were clear across the team – I would make outlines / agendas for team meetings.</li>
+<li>At UC Davis, for my Bachelors, my mentor was really bad with email. But he was nice, and his office door was always open, so whenever I needed something I would stop by and chat.</li>
+<li>At Irvine people were always available via email or even phone if needed.</li>
+<li><p>Also I had taken a consulting class as part of the stats masters, and a portion of that emphasized the importance of clear communication with clients, so in consulting relationships I maintain clear goals and deliverables.</p></li>
 </ul>
 <p>Evaluation:</p>
 <ul>
@@ -170,6 +172,7 @@ linktitle: Behavioral Interviewing
 <li>Result: How do you know your solution was successful?</li>
 <li>Takeaways: What did you learn from this situation? What would you do the same or differently next time?</li>
 </ul>
+<p>Forgot to add code to save a questionnaire at the end of an experiment. From that point on I ran myself and analyzed my data before running any real subjects – so kind of like I learned the importance of unit tests from that experience.</p>
 <p>Evaluation:</p>
 <ul>
 <li>Your principles for mistakes:</li>
