@@ -38,7 +38,7 @@
     <item>
       <title>Behavioral Interviewing</title>
       <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Sat, 20 Jul 2019 15:59:49 +0000</pubDate>
+      <pubDate>Sat, 20 Jul 2019 16:57:40 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>
@@ -78,7 +78,7 @@
 &lt;h1&gt;Common Behavioral Questions&lt;/h1&gt;
 &lt;div id=&#34;tell-me-a-little-about-your-background.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Tell me a little about your background.”&lt;/h2&gt;
-&lt;p&gt;This questions gives an opportunity to demonstrate claer communication, curiosity, enthusiasm, transferrable skills, and value adds.&lt;/p&gt;
+&lt;p&gt;This question gives an opportunity to demonstrate clear communication, curiosity, enthusiasm, transferrable skills, and value adds. This is also an opportunity to align past experience with the current job opportunity.&lt;/p&gt;
 &lt;p&gt;Template:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Problem: Concepts and context&lt;/li&gt;
@@ -88,13 +88,16 @@
 &lt;/ul&gt;
 &lt;p&gt;Example answer:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Open: I recently graduated from UC Irvine, where I studied statistics and cognitive science, and worked on a few lines of research.&lt;/li&gt;
 &lt;li&gt;Problem: Wisdom of the crowds, like the social science equivalent of ensemble learners. However, many fallacies and biases in probabilistic reasoning hove been demonstrated in lab settings.&lt;/li&gt;
 &lt;li&gt;Context: Ryan and I.. I was like a statistician/behavioral economist, and he was a programmer. So I’d lead algorithm developemnt and he would code and deploy.&lt;/li&gt;
 &lt;li&gt;Curiosity: Would prices in prediction markets be good estimators of real probabilities, since they incentivise and aggregate individual estimates, or would they show the same biases as individual probabilistic judgments, since they are aggregating over biased individuals?&lt;/li&gt;
-&lt;li&gt;Value: Finding systematic biases could result in profitable trading strategies.&lt;/li&gt;
-&lt;li&gt;Project Outline:&lt;/li&gt;
+&lt;li&gt;Value: Finding systematic biases could result in corrections for market bias.&lt;/li&gt;
+&lt;li&gt;Project Overview:&lt;/li&gt;
+&lt;li&gt;Trajectory: Overall, I realized that I enjoy these kinds of impactful analyses of real-world data so I decided to join Insight and bridge into a career in data science.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;prediction markets are used kind of like filtering, where we aggregate over individual opinions to get a more accurate concensus opinion. But, individual opinions have systematic biases, so would the aggregation of these also have biases? To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases – miscalibration and also subadativity (superaditivity)?…&lt;/p&gt;
+&lt;p&gt;To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases – miscalibration and also subadativity (superaditivity)?…&lt;/p&gt;
+&lt;p&gt;I recently graduates from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in stocks and arbitrage. So prediction markets are a platform where people can buy and sell contracts on events that pay a dollar if the event occurs and nothing if it doesn’t occur. So for example, one market might be Who will win the 2020 election, and contracts might be ‘Bernie Sanders’, ‘Andrew Yang’, ‘Donnald Trump’, … . Since the contracts pay out $1, the theory is that the price should estimate the underlying probability of the event occuring. And since the market is aggregating information across individuals, it should be a pretty good estimate. However, individuals have shown a number of biases in probabilistic reasoning in lab studies, so I was wondering if these same biases would exist in prediction market prices. If they did, then I could make profitable trading algorithms. So I partnered with a large online prediction market to get access to their data, and found evidence of some biases consistent with those observed in lab studies. - Overall, I realized that I enjoy these kinds of impactful analyses of real-world data, moreso than theory building through laboratory studies, so I decided to join Insight and bridge into a career in data science.&lt;/p&gt;
 &lt;p&gt;Evaluation:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Communication: Clearly explain prediction market mechanics, wisdom of the crowds, and an individual level fallacy.&lt;/li&gt;
@@ -112,15 +115,14 @@
 &lt;/div&gt;
 &lt;div id=&#34;tell-me-about-the-project-you-worked-on-at-insight.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Tell me about the project you worked on at Insight.”&lt;/h2&gt;
-&lt;p&gt;This question gives an opportunity to demonstrate what I’d be capable of on day 1. Clarity&lt;/p&gt;
+&lt;p&gt;This question gives an opportunity to demonstrate what you’ll be capable of on Day 1.&lt;/p&gt;
 &lt;p&gt;Template:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Purpose: Client acquired users through a free trial. They wanted to 1) identify, early on, who would become a subscriber, and 2) How successful users were using the product.&lt;/li&gt;
+&lt;li&gt;Open: At Insight I worked on a consulting project for an external company. This company acquired users through a free trial, after which users would subscribe.&lt;/li&gt;
+&lt;li&gt;Purpose: They wanted to 1) identify, early on, who would become a subscriber, and 2) How successful users were using the product.&lt;/li&gt;
 &lt;li&gt;Methods: I usually think about a generative process. Here I thought about LDA or QDA. Later thought about other algorithms because this was primarily a prediction problem.&lt;/li&gt;
 &lt;li&gt;Challenges: Non-normal features (could break LDA, QDA)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Generally, the answer can show clear communication of a problem, an approach, challenges, solutions, and relevance to the company or role.&lt;/p&gt;
-&lt;p&gt;At Insight I worked on a consulting project for an external company. This company’s user funnel was something like – visitors come to their website, are offered a trial, and some portion of trialers become subscribers. Problem was, around 80% of trialers weren’t becoming subscribers.&lt;/p&gt;
 &lt;p&gt;How could I have used a mixed effects model here? (See Maime’s blog?)&lt;/p&gt;
 &lt;p&gt;Evaluation:&lt;/p&gt;
 &lt;ul&gt;

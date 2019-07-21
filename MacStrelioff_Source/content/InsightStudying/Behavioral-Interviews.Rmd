@@ -42,7 +42,7 @@ Mock interviews: Practice, practice, practice
 
 ## "Tell me a little about your background."
 
-This questions gives an opportunity to demonstrate claer communication, curiosity, enthusiasm, transferrable skills, and value adds. 
+This question gives an opportunity to demonstrate clear communication, curiosity, enthusiasm, transferrable skills, and value adds. This is also an opportunity to align past experience with the current job opportunity.
 
 Template: 
 
@@ -53,13 +53,21 @@ Template:
 
 Example answer: 
 
+- Open: I recently graduated from UC Irvine, where I studied statistics and cognitive science, and worked on a few lines of research. 
 - Problem: Wisdom of the crowds, like the social science equivalent of ensemble learners. However, many fallacies and biases in probabilistic reasoning hove been demonstrated in lab settings. 
 - Context: Ryan and I.. I was like a statistician/behavioral economist, and he was a programmer. So I'd lead algorithm developemnt and he would code and deploy.
 - Curiosity: Would prices in prediction markets be good estimators of real probabilities, since they incentivise and aggregate individual estimates, or would they show the same biases as individual probabilistic judgments, since they are aggregating over biased individuals? 
-- Value: Finding systematic biases could result in profitable trading strategies.
-- Project Outline: 
+- Value: Finding systematic biases could result in corrections for market bias. 
+- Project Overview: 
+- Trajectory: Overall, I realized that I enjoy these kinds of impactful analyses of real-world data so I decided to join Insight and bridge into a career in data science. 
 
-prediction markets are used kind of like filtering, where we aggregate over individual opinions to get a more accurate concensus opinion. But, individual opinions have systematic biases, so would the aggregation of these also have biases? To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases -- miscalibration and also subadativity (superaditivity)?... 
+
+To answer this, I partnered with a large prediction market provider and found evidence of mispricings consistent with individual level biases -- miscalibration and also subadativity (superaditivity)?... 
+
+I recently graduates from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in stocks and arbitrage. So prediction markets are a platform where people can buy and sell contracts on events that pay a dollar if the event occurs and nothing if it doesn't occur. So for example, one market might be Who will win the 2020 election, and contracts might be 'Bernie Sanders', 'Andrew Yang', 'Donnald Trump', ... . Since the contracts pay out $1, the theory is that the price should estimate the underlying probability of the event occuring. And since the market is aggregating information across individuals, it should be a pretty good estimate. However, individuals have shown a number of biases in probabilistic reasoning in lab studies, so I was wondering if these same biases would exist in prediction market prices. If they did, then I could make profitable trading algorithms. 
+So I partnered with a large online prediction market to get access to their data, and found evidence of some biases consistent with those observed in lab studies. 
+- Overall, I realized that I enjoy these kinds of impactful analyses of real-world data, moreso than theory building through laboratory studies, so I decided to join Insight and bridge into a career in data science. 
+
 
 Evaluation:
 
@@ -78,17 +86,14 @@ Bandit tasks are a common paradigm for studying individual level decision making
 
 ## "Tell me about the project you worked on at Insight."
 
-This question gives an opportunity to demonstrate what I'd be capable of on day 1. Clarity 
+This question gives an opportunity to demonstrate what you'll be capable of on Day 1.
 
 Template: 
 
-- Purpose: Client acquired users through a free trial. They wanted to 1) identify, early on, who would become a subscriber, and 2) How successful users were using the product. 
+- Open: At Insight I worked on a consulting project for an external company. This company acquired users through a free trial, after which users would subscribe.
+- Purpose: They wanted to 1) identify, early on, who would become a subscriber, and 2) How successful users were using the product. 
 - Methods: I usually think about a generative process. Here I thought about LDA or QDA. Later thought about other algorithms because this was primarily a prediction problem. 
 - Challenges: Non-normal features (could break LDA, QDA)
-
-Generally, the answer can show clear communication of a problem, an approach, challenges, solutions, and relevance to the company or role.
-
-At Insight I worked on a consulting project for an external company. This company's user funnel was something like -- visitors come to their website, are offered a trial, and some portion of trialers become subscribers. Problem was, around 80% of trialers weren't becoming subscribers. 
 
 How could I have used a mixed effects model here? (See Maime's blog?)
 
