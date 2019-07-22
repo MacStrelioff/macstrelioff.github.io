@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-16 19:19:41"
+date: "2019-07-21 22:29:38"
 output:
   blogdown::html_page:
     toc: true
@@ -34,6 +34,7 @@ math: true
 <li><a href="#database-and-sql">Database and SQL</a><ul>
 <li><a href="#general-structure-of-sql-querys">General Structure of SQL querys</a></li>
 <li><a href="#aggregation-functions">Aggregation functions</a></li>
+<li><a href="#window-functions">Window functions</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#sorting">Sorting</a></li>
@@ -195,6 +196,13 @@ WHERE (logical condition on rows)
 </div>
 <div id="aggregation-functions" class="section level3">
 <h3>Aggregation functions</h3>
+<p>The <code>GROUP BY</code> clause can contain <code>GROUPING SETS</code>, such as a <code>ROLLUP()</code> and <code>CUBE()</code> functions. These hierarchically group the rows passed to the aggregation functions. <code>ROLLUP()</code> hierarchically groups by arguments, starting left to right. <code>CUBE()</code> passes all permutations of its arguments to the aggregation functions.</p>
+<p><a href="https://pgexercises.com/questions/aggregates/fachoursbymonth3.html">Grouping sets are described a little here</a>.</p>
+</div>
+<div id="window-functions" class="section level3">
+<h3>Window functions</h3>
+<p><a href="https://pgexercises.com/questions/aggregates/countmembers.html">Order() explained here</a>. Some more detailed information <a href="http://www.sqlservertutorial.net/sql-server-window-functions/">here</a>.</p>
+<p>Window functions include <code>OVER()</code> and <code>ROW_NUMBER()</code>. They take two optional arguments, <code>PARTITION BY</code> and <code>ORDER BY</code>.</p>
 </div>
 </div>
 </div>
