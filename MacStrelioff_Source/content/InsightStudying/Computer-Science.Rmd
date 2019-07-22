@@ -187,11 +187,11 @@ The `FROM` clause can contain joins.
 
 The `WHERE` clause can also contain sub queries.
 
-
 ### Aggregation functions
 
+The `GROUP BY` clause can contain `GROUPING SETS`, such as a `ROLLUP()` and `CUBE()` functions. These hierarchically group the rows passed to the aggregation functions. `ROLLUP()` hierarchically groups by arguments, starting left to right. `CUBE()` passes all permutations of its arguments to the aggregation functions. 
 
-
+[Grouping sets are described a little here](https://pgexercises.com/questions/aggregates/fachoursbymonth3.html).
 
 # Sorting
 

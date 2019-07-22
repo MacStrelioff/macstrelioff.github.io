@@ -184,7 +184,6 @@ Evaluation:
 ## "Talk about a situation that required you to explain your technical work to someone outside your industry or field."
 
 
-
 Evaluation: 
 
 - Ability to communicate with stakeholders: 
