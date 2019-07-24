@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-24 14:13:51"
+date: "2019-07-24 15:27:28"
 output:
   blogdown::html_page:
     toc: true
@@ -176,13 +176,14 @@ for n in ns_to_test:
 <ul>
 <li><a href="https://classroom.udacity.com/courses/ud198">Udacity course</a></li>
 <li><a href="https://pgexercises.com/">pgexercises</a></li>
-<li><a href="https://sqlbolt.com/lesson/select_queries_introduction">sqlbot</a></li>
+<li><a href="https://sqlbolt.com/lesson/select_queries_introduction">sqlbolt</a></li>
 <li><a href="https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/">Mode Analytics</a> HackerRank (basic select, aggregation)</li>
 <li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
 <li><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></li>
 </ul>
 <div id="general-structure-of-sql-querys" class="section level3">
 <h3>General Structure of SQL querys</h3>
+<p><a href="https://sqlbolt.com/lesson/select_queries_order_of_execution">Order of execution for clauses below</a></p>
 <pre class="sql"><code>SELECT (column names to select) [AS (name for selection)]
 
 FROM (table to select from)
@@ -190,6 +191,9 @@ FROM (table to select from)
 WHERE (logical condition on rows)
   column = (value or subquery)
   
+GROUP BY 
+
+HAVING (constraint on grouped rows)
   
 LIMIT n [OFFSET m]
 </code></pre>

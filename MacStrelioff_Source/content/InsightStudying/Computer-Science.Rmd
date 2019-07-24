@@ -163,13 +163,15 @@ SQL training resources;
 
 - [Udacity course](https://classroom.udacity.com/courses/ud198)
 - [pgexercises](https://pgexercises.com/)
-- [sqlbot](https://sqlbolt.com/lesson/select_queries_introduction)
+- [sqlbolt](https://sqlbolt.com/lesson/select_queries_introduction)
 - [Mode Analytics](https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/) HackerRank (basic select, aggregation)
 - [Hacker Rank](https://www.hackerrank.com/domains/sql)
 - [W3School](https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1)
 
 
 ### General Structure of SQL querys
+
+[Order of execution for clauses below](https://sqlbolt.com/lesson/select_queries_order_of_execution)
 
 ```{SQL, eval=FALSE, echo=TRUE}
 SELECT (column names to select) [AS (name for selection)]
@@ -179,6 +181,9 @@ FROM (table to select from)
 WHERE (logical condition on rows)
   column = (value or subquery)
   
+GROUP BY 
+
+HAVING (constraint on grouped rows)
   
 LIMIT n [OFFSET m]
 

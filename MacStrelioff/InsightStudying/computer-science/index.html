@@ -141,9 +141,9 @@ Complexity The worst-case complexity of an algorithm is represented with big-O n
 Complexity The worst-case complexity of an algorithm is represented with big-O notation."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-24T14:13:51&#43;00:00">
+  <meta property="article:published_time" content="2019-07-24T15:27:28&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-24T14:13:51&#43;00:00">
+  <meta property="article:modified_time" content="2019-07-24T15:27:28&#43;00:00">
   
 
   
@@ -356,8 +356,8 @@ Complexity The worst-case complexity of an algorithm is represented with big-O n
 
 
 
-<meta content="2019-07-24 14:13:51 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-24 14:13:51 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-07-24 15:27:28 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-24 15:27:28 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -621,13 +621,14 @@ for n in ns_to_test:
 <ul>
 <li><a href="https://classroom.udacity.com/courses/ud198">Udacity course</a></li>
 <li><a href="https://pgexercises.com/">pgexercises</a></li>
-<li><a href="https://sqlbolt.com/lesson/select_queries_introduction">sqlbot</a></li>
+<li><a href="https://sqlbolt.com/lesson/select_queries_introduction">sqlbolt</a></li>
 <li><a href="https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/">Mode Analytics</a> HackerRank (basic select, aggregation)</li>
 <li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
 <li><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></li>
 </ul>
 <div id="general-structure-of-sql-querys" class="section level3">
 <h3>General Structure of SQL querys</h3>
+<p><a href="https://sqlbolt.com/lesson/select_queries_order_of_execution">Order of execution for clauses below</a></p>
 <pre class="sql"><code>SELECT (column names to select) [AS (name for selection)]
 
 FROM (table to select from)
@@ -635,6 +636,9 @@ FROM (table to select from)
 WHERE (logical condition on rows)
   column = (value or subquery)
   
+GROUP BY 
+
+HAVING (constraint on grouped rows)
   
 LIMIT n [OFFSET m]
 </code></pre>

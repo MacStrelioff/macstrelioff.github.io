@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Wed, 24 Jul 2019 14:13:51 +0000</pubDate>
+      <pubDate>Wed, 24 Jul 2019 15:27:28 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -204,13 +204,14 @@ for n in ns_to_test:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://classroom.udacity.com/courses/ud198&#34;&gt;Udacity course&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://pgexercises.com/&#34;&gt;pgexercises&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_introduction&#34;&gt;sqlbot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_introduction&#34;&gt;sqlbolt&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/&#34;&gt;Mode Analytics&lt;/a&gt; HackerRank (basic select, aggregation)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;general-structure-of-sql-querys&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;General Structure of SQL querys&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_order_of_execution&#34;&gt;Order of execution for clauses below&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;sql&#34;&gt;&lt;code&gt;SELECT (column names to select) [AS (name for selection)]
 
 FROM (table to select from)
@@ -218,6 +219,9 @@ FROM (table to select from)
 WHERE (logical condition on rows)
   column = (value or subquery)
   
+GROUP BY 
+
+HAVING (constraint on grouped rows)
   
 LIMIT n [OFFSET m]
 &lt;/code&gt;&lt;/pre&gt;
