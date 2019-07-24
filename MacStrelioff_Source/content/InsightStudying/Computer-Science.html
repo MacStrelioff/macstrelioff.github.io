@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-21 22:29:38"
+date: "2019-07-24 14:13:51"
 output:
   blogdown::html_page:
     toc: true
@@ -189,6 +189,9 @@ FROM (table to select from)
 
 WHERE (logical condition on rows)
   column = (value or subquery)
+  
+  
+LIMIT n [OFFSET m]
 </code></pre>
 <p>The <code>SELECT</code> clause can contain aggregations, and subqueries.</p>
 <p>The <code>FROM</code> clause can contain joins.</p>
@@ -201,7 +204,7 @@ WHERE (logical condition on rows)
 </div>
 <div id="window-functions" class="section level3">
 <h3>Window functions</h3>
-<p><a href="https://pgexercises.com/questions/aggregates/countmembers.html">Order() explained here</a>. Some more detailed information <a href="http://www.sqlservertutorial.net/sql-server-window-functions/">here</a>.</p>
+<p><a href="https://pgexercises.com/questions/aggregates/countmembers.html">Orver() explained here</a>. Some more detailed information <a href="http://www.sqlservertutorial.net/sql-server-window-functions/">here</a>.</p>
 <p>Window functions include <code>OVER()</code> and <code>ROW_NUMBER()</code>. They take two optional arguments, <code>PARTITION BY</code> and <code>ORDER BY</code>.</p>
 </div>
 </div>

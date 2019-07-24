@@ -178,6 +178,9 @@ FROM (table to select from)
 
 WHERE (logical condition on rows)
   column = (value or subquery)
+  
+  
+LIMIT n [OFFSET m]
 
 ```
 
@@ -195,7 +198,7 @@ The `GROUP BY` clause can contain `GROUPING SETS`, such as a `ROLLUP()` and `CUB
 
 ### Window functions
 
-[Order() explained here](https://pgexercises.com/questions/aggregates/countmembers.html). Some more detailed information [here](http://www.sqlservertutorial.net/sql-server-window-functions/).
+[Orver() explained here](https://pgexercises.com/questions/aggregates/countmembers.html). Some more detailed information [here](http://www.sqlservertutorial.net/sql-server-window-functions/).
 
 Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arguments, `PARTITION BY` and `ORDER BY`. 
 
