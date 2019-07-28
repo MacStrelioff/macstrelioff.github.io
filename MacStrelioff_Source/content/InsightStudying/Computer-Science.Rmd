@@ -221,9 +221,13 @@ e.g. 'find median in a large dataset' -- sort half of it.
 
 # Searching
 
-binary search,
+## Linear Search: Binary Search
 
 Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
+
+## Graph Search: DFS and BFS
+
+[good hackerrank video](https://www.youtube.com/watch?v=zaBhtODEL0w)
 
 # Ranking Algorithms
 

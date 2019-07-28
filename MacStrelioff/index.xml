@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Wed, 24 Jul 2019 15:27:28 +0000</pubDate>
+      <pubDate>Sun, 28 Jul 2019 10:58:04 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -66,7 +66,10 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graph-search-dfs-and-bfs&#34;&gt;Graph Search: DFS and BFS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
@@ -251,8 +254,14 @@ LIMIT n [OFFSET m]
 &lt;/div&gt;
 &lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Searching&lt;/h1&gt;
-&lt;p&gt;binary search,&lt;/p&gt;
+&lt;div id=&#34;linear-search-binary-search&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear Search: Binary Search&lt;/h2&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;graph-search-dfs-and-bfs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Graph Search: DFS and BFS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Ranking Algorithms&lt;/h1&gt;
