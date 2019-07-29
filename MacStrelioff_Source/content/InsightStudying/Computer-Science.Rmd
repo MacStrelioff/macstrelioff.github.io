@@ -221,13 +221,19 @@ e.g. 'find median in a large dataset' -- sort half of it.
 
 # Searching
 
+Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
+
 ## Linear Search: Binary Search
 
-Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
+[good hackerrank video](https://www.youtube.com/watch?v=P3YID7liBug)
+
+- requires sorting before applying the search
 
 ## Graph Search: DFS and BFS
 
 [good hackerrank video](https://www.youtube.com/watch?v=zaBhtODEL0w)
+
+- DFS can use a dictionary or set to 
 
 # Ranking Algorithms
 

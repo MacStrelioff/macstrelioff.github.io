@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 28 Jul 2019 10:58:04 +0000</pubDate>
+      <pubDate>Sun, 28 Jul 2019 16:34:11 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -254,13 +254,20 @@ LIMIT n [OFFSET m]
 &lt;/div&gt;
 &lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Searching&lt;/h1&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;linear-search-binary-search&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Linear Search: Binary Search&lt;/h2&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P3YID7liBug&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;requires sorting before applying the search&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;graph-search-dfs-and-bfs&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Graph Search: DFS and BFS&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DFS can use a dictionary or set to&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level1&#34;&gt;
