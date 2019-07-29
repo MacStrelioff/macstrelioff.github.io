@@ -1,409 +1,24 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
+---
+author: "Mac Strelioff"
+date: "2019-07-29 05:09:20"
+draft: True
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  data-science:
+    parent: Projects
+    weight: 21
+linktitle: Cookie Clicker Bot
+title: "Cookie Clicker Bot"
+type: docs
+math: true
+---
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.2.5">
-
-  
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Mac Strelioff">
-
-  
-  
-  
-    
-  
-  <meta name="description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.">
-
-  
-  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-  <meta name="theme-color" content="rgba(0,130,160,1)">
-  
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
-
-    
-    
-    
-      
-    
-    
-      
-      
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
-      
-    
-
-    
-
-    
-
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="/MacStrelioff/css/academic.min.9c3a903cc870878595d69f08d98aa322.css">
-
-  
-
-  
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-140153670-1', 'auto');
-      
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
-    
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
-    
-  
-  
-
-  
-
-  <link rel="manifest" href="/MacStrelioff/site.webmanifest">
-  <link rel="icon" type="image/png" href="/MacStrelioff/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/MacStrelioff/img/icon-192.png">
-
-  <link rel="canonical" href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
-
-  
-  
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary">
-  
-  <meta property="twitter:site" content="@macstrelioff">
-  <meta property="twitter:creator" content="@macstrelioff">
-  
-  <meta property="og:site_name" content="Mac Strelioff">
-  <meta property="og:url" content="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">
-  <meta property="og:title" content="Twitter, Poisson Processes, and Conjugacy | Mac Strelioff">
-  <meta property="og:description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
-  <meta property="og:locale" content="en-us">
-  
-  <meta property="article:published_time" content="2019-06-29T14:37:56&#43;00:00">
-  
-  <meta property="article:modified_time" content="2019-06-29T14:37:56&#43;00:00">
-  
-
-  
-
-  
-
-  <title>Twitter, Poisson Processes, and Conjugacy | Mac Strelioff</title>
-
-</head>
-<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
-
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
-        
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
-
-
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
-  <div class="container">
-
-    
-      <a class="navbar-brand" href="/MacStrelioff/">Mac Strelioff</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
-
-    
-    <div class="collapse navbar-collapse" id="navbar">
-
-      
-      
-      <ul class="navbar-nav ml-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/MacStrelioff/#about">
-            
-            <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/MacStrelioff/data-science/">
-            
-            <span>Data Science</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/MacStrelioff/video-lectures/">
-            
-            <span>Videos</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/MacStrelioff/cv/">
-            
-            <span>Resume</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/MacStrelioff/#contact">
-            
-            <span>Contact</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-      
-
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
-
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
-
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-
-
-<div class="container-fluid docs">
-  <div class="row flex-xl-nowrap">
-    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
-      
-
-
-
-
-<form class="docs-search d-flex align-items-center">
-  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    <span><i class="fas fa-bars"></i></span>
-  </button>
-
-  
-  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
-  
-</form>
-
-<nav class="collapse docs-links" id="docs-nav">
-  
-  
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/MacStrelioff/data-science/">Landing Page</a>
-
-  </div>
-  
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/MacStrelioff/data-science/working-environment/">Foundations</a>
-    <ul class="nav docs-sidenav">
-      
-      <li >
-        <a href="/MacStrelioff/data-science/working-environment/">Working Environment</a>
-      </li>
-      
-    </ul>
-    
-
-  </div>
-  
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/MacStrelioff/data-science/cookie-clicker-bot/">Projects</a>
-    <ul class="nav docs-sidenav">
-      
-      <li >
-        <a href="/MacStrelioff/data-science/cookie-clicker-bot/">Cookie Clicker Bot</a>
-      </li>
-      
-      <li class="active">
-        <a href="/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/">Twitter, Poisson Processes, and Conjugacy</a>
-      </li>
-      
-      <li >
-        <a href="/MacStrelioff/data-science/shiny_apps_rps/">Shiny Apps Intro</a>
-      </li>
-      
-    </ul>
-    
-
-  </div>
-  
-  
-</nav>
-
-    </div>
-
-    
-
-    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
-
-      <article class="article" itemscope itemtype="http://schema.org/Article">
-
-        <div class="docs-article-container">
-          <h1 itemprop="name">Twitter, Poisson Processes, and Conjugacy</h1>
-
-          <div class="article-style" itemprop="articleBody">
-            
 
 <div id="TOC">
 <ul>
+<li><a href="#this-is-a-draft-still-being-written">This is a draft / still being written</a></li>
 <li><a href="#background-and-setup">Background and Setup</a></li>
 <li><a href="#twitter-data">Twitter Data</a><ul>
 <li><a href="#pulling-data-from-twitters-api">Pulling Data from Twitter’s API</a></li>
@@ -426,6 +41,9 @@
 </ul>
 </div>
 
+<div id="this-is-a-draft-still-being-written" class="section level2">
+<h2>This is a draft / still being written</h2>
+</div>
 <div id="background-and-setup" class="section level2">
 <h2>Background and Setup</h2>
 <p>In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.</p>
@@ -518,7 +136,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a1ec00b00&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a2ae88a58&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
@@ -637,7 +255,7 @@ plt.hist(hour_of_week,bins=80);</code></pre>
 <pre class="python"><code>plt.title(&quot;My Tweet Counts By Hour Of Week&quot;);
 plt.ylabel(&quot;Count&quot;);
 plt.xlabel(&quot;Hour In Week&quot;);</code></pre>
-<p><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-11-1.png" width="960" /></p>
+<p><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-11-1.png" width="960" /></p>
 <p>The histogram above indicates that there might be some hours of the week that have a higher rate than others. For example, I don’t seem to tweet much early on Sunday (hours 0-5), but I do seem to tweet a lot during the day on Sunday (around hours 6-20). Below I use rug plots, which represent a tweet event with a vertical line near the x-axis, and an imposed kernel density estimate, which is a continuous version of a histogram. I remake this plot in terms of hours within a week, minutes within a day, and minutes within an hour. If the tweet rate (<span class="math inline">\(\lambda\)</span>) were homogeneous, then the kernel density estimate would be approximately flat.</p>
 <pre class="python"><code>def rug_plot_and_density(dat,bw,xlab,xlim):
     # rug plot + density
@@ -661,7 +279,7 @@ bws  = (4,40,4)
 # make plots
 for dat,xlab,xlim,bw in zip(dats,xlabs,xlims,bws):
     rug_plot_and_density(dat=dat,bw=bw,xlab=xlab,xlim=xlim)</code></pre>
-<p><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-1.png" width="960" /><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-2.png" width="960" /><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-13-3.png" width="960" /></p>
+<p><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-13-1.png" width="960" /><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-13-2.png" width="960" /><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-13-3.png" width="960" /></p>
 <p>Are very sensitive to the choice of the bandwidth parameter that determines the window over which to aggregate events (similar to bin size when using a histogram). I’m using these plots to demonstrate possible violations of homogeneity that I would follow up on in a real analysis, but will not follow up on here.</p>
 <p>From the top plot, there seems to be two patterns. First, a series of peaks and troughs that roughly correspond to daytime and night-time hours. I probably tweet with a higher frequency when I am awake, rather than asleep – meaning that <span class="math inline">\(\lambda\)</span> may depend on time within a day. Second, a generally lower kernel density estimate during the middle than the edges. I may tweet more during the weekends (edge hours) than week days (middle hours).</p>
 <p>From the middle plot that displays tweet frequencies by minutes within a day, there again seem to be two trends. First, I rarely tweet before minute 400 (around 6:40AM). Second, I have peaks around minute 600 (10:00AM), 1000 (4:40PM), and 1350 (10:00PM). This might be related to the times that I take a break from working. I generally take a break around 5:00PM, and usually take another break before bed around 9:00-10:00PM.</p>
@@ -695,7 +313,7 @@ tmpy = expon.pdf(tmpx,scale=tmp_rate)
 plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label=&#39;Exponential Density&#39;);
 # add legend
 plt.legend();</code></pre>
-<p><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-14-1.png" width="960" /></p>
+<p><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-14-1.png" width="960" /></p>
 <p>Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.</p>
 <pre class="python"><code># check standard deviation
 np.std(ss),np.mean(ss),np.std(ss)/np.mean(ss)</code></pre>
@@ -866,7 +484,7 @@ plt.ylabel(&#39;Posterior on Lambda (tweets/day)&#39;)
 plt.xlabel(&#39;Time&#39;)
 plt.title(&#39;Summary of the posterior over $\lambda$ across time&#39;)
 plt.legend();</code></pre>
-<p><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-18-1.png" width="960" /></p>
+<p><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-18-1.png" width="960" /></p>
 <p>The posterior seems to tighten dramatically around the mode during the first month, and the mode seems to stabalize after about that much time. However, this method seems slow to adjust to the slower rate of tweets in 2019. One way to address this might be to add weights to the parameter updates such that <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are more sensitive to recent data than past data. These weights (or stepsize or learning rates) can be based on the surprisal, or likelihood, of a new tweet under the posterior. If the new interval was well anticipated, then little updating is needed, but if the new interval was very surprising or unlikely, then a sharpe change in <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> might be warrented.</p>
 </div>
 </div>
@@ -911,7 +529,7 @@ plt.ylabel(&#39;Mass&#39;)
 plt.xlabel(&#39;Count&#39;)
 plt.title(&#39;Predictions for Tweet Counts in a Week, Using 20 Observations&#39;)
 plt.legend();</code></pre>
-<p><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
+<p><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
 <p>With a small amount of data, the uncertainty in the estimate of tweet rates carries through the negative binomial model, which gives more mass to a wider range of counts relative to the Poisson model that discards uncertainty when by <span class="math inline">\(\lambda_{MAP}\)</span>.</p>
 <pre class="python"><code># Using all data
 # parameters
@@ -929,7 +547,7 @@ plt.ylabel(&#39;Mass&#39;)
 plt.xlabel(&#39;Count&#39;)
 plt.title(&#39;Predictions for Tweet Counts in a Week, Using All Data&#39;)
 plt.legend();</code></pre>
-<p><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-20-1.png" width="960" /></p>
+<p><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-20-1.png" width="960" /></p>
 <p>With a larger amount of data and predicting the tweet count over a short interval (7 days), the predictive distribution from the negative binomial and Poisson models are nearly indistinguishable. Below I compare the predictions of these model for an interval of 1 year (365 days), again using all data.</p>
 <pre class="python"><code># Using all data
 # parameters
@@ -949,7 +567,7 @@ plt.ylabel(&#39;Mass&#39;)
 plt.xlabel(&#39;Count&#39;)
 plt.title(&#39;Predictions for Tweet Counts in a Year, Using All Data&#39;)
 plt.legend();</code></pre>
-<p><img src="/MacStrelioff/data-science/Twitter-Poisson-Processes-and-Conjugacy_files/figure-html/unnamed-chunk-21-1.png" width="960" /></p>
+<p><img src="/MacStrelioff/data-science/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-21-1.png" width="960" /></p>
 <p>When considering a longer period of time, The uncertainty in <span class="math inline">\(\lambda\)</span> again carries through the negative binomial model, but is discarded in the Poisson model that uses <span class="math inline">\(\lambda_{MAP}\)</span>.</p>
 </div>
 <div id="summary" class="section level2">
@@ -959,154 +577,3 @@ plt.legend();</code></pre>
 <p>Punting these violations, I developed a model of tweet frequency using conjugacy between Gamma priors and Exponential likelihoods. To predict tweet counts over a period of time, I derived a negative binomial predictive distribution that accounted for uncertainty in a user’s tweet rate. I compared this distribution to a Poisson distribution that ignored uncertainty by taking only the maximum a posteriori estimate of a user’s tweet rate.</p>
 <p>Overall the model that discards posterior uncertainty attributes less mass to fringe counts, especially when there is little data or when the interval over which counts are being predicted is long. Incorporating posterior uncertainty broadens the predictive distribution to reflect uncertainty in the underlying tweet rate. That uncertainty exists regardless of the modeling approach – excluding it from predictive distributions only leads to narrow, overconfident predictions. This general principle of propagating uncertainty through a statistical process is one strong advantage of the Bayeian modeling approach that I developed and applied here.</p>
 </div>
-
-          </div>
-
-          
-
-
-
-          
-        </div>
-
-        <div class="body-footer">
-          Last updated on Jun 29, 2019
-        </div>
-
-      </article>
-
-      <footer class="site-footer">
-  
-  <p class="powered-by">
-    <a href="/MacStrelioff/files/privacy/">Privacy Policy</a>
-  </p>
-  
-
-  <p class="powered-by">
-    
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-  </p>
-</footer>
-
-
-    </main>
-  </div>
-</div>
-
-    
-
-    
-    
-    
-    <script src="/MacStrelioff/js/mathjax-config.js"></script>
-    
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
-
-      
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-        
-      
-
-      
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
-    
-
-    
-    
-
-    
-    
-    
-    <script id="dsq-count-scr" src="//@macstrelioff.disqus.com/count.js" async></script>
-    
-
-    
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script>
-      const search_index_filename = "/MacStrelioff/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
-      </div>
-      </div>
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    
-    
-    
-    <script src="/MacStrelioff/js/academic.min.d813ae958640746e240f434cafc95afb.js"></script>
-
-  </body>
-</html>
-
-

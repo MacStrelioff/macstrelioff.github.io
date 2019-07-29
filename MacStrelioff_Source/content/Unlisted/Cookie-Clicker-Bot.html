@@ -1,0 +1,82 @@
+---
+title: "DRAFT OF: Cookie Clicker Bot"
+author: "Mac Strelioff"
+date: "2019-07-29 05:41:42"
+output:
+  blogdown::html_page:
+    toc: true
+math: true
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#this-is-a-draft-still-being-written">This is a draft / still being written</a><ul>
+<li><a href="#todo">TODO:</a></li>
+<li><a href="#background-and-setup">Background and Setup</a><ul>
+<li><a href="#cookie-clicker-game">Cookie Clicker Game</a></li>
+</ul></li>
+<li><a href="#strategies">Strategies</a><ul>
+<li><a href="#naive">Naive</a></li>
+<li><a href="#max-revenue-per-second">Max revenue per second</a></li>
+<li><a href="#min-wait-time-until-the-highest-rps-option">Min wait time until the highest rps option</a></li>
+</ul></li>
+<li><a href="#performance">Performance</a></li>
+</ul></li>
+</ul>
+</div>
+
+<pre class="r"><code>library(reticulate)</code></pre>
+<pre><code>## Warning: package &#39;reticulate&#39; was built under R version 3.5.2</code></pre>
+<div id="this-is-a-draft-still-being-written" class="section level1">
+<h1>This is a draft / still being written</h1>
+<div id="todo" class="section level2">
+<h2>TODO:</h2>
+<ul>
+<li>look into class inheritance, to make the other two classes simpler to implement / help with cleaner code</li>
+<li>rename variables in naive class to be consistent with others (epochs for balance and revenue)</li>
+<li>run again without upgrades</li>
+<li>track start/end time, and log based on time instead of clicks.</li>
+</ul>
+</div>
+<div id="background-and-setup" class="section level2">
+<h2>Background and Setup</h2>
+<ul>
+<li>I was interested in developing programs that can intelligently interact with a web interface..</li>
+<li>I’ll highlight some bits of code, but a Jupyter notebook with all code to run these algorithms can be found (HERE) – link to my git repo with the notebook…</li>
+</ul>
+<div id="cookie-clicker-game" class="section level3">
+<h3>Cookie Clicker Game</h3>
+<ul>
+<li>pic of the interface</li>
+<li>You get cookies for clicking the big cookie. You can spend these cookies on buildings, which generate a number of cookies per second. Buildings get more expensive when bought, so the marginal benefit of any particular building depends on how many are currently owned.</li>
+</ul>
+</div>
+</div>
+<div id="strategies" class="section level2">
+<h2>Strategies</h2>
+<div id="naive" class="section level3">
+<h3>Naive</h3>
+<p>Simple to implement, but probably not the best.</p>
+</div>
+<div id="max-revenue-per-second" class="section level3">
+<h3>Max revenue per second</h3>
+</div>
+<div id="min-wait-time-until-the-highest-rps-option" class="section level3">
+<h3>Min wait time until the highest rps option</h3>
+<ul>
+<li>rationale: differences in revenue per building are quite large, so … .</li>
+<li>pics from ipad of concept figure</li>
+<li>proof that balance doesn’t matter</li>
+<li>sketches of preference as rps and cost of another building change.</li>
+</ul>
+</div>
+</div>
+<div id="performance" class="section level2">
+<h2>Performance</h2>
+<ul>
+<li><p>revenue per second across clicks (proxy for time)</p></li>
+<li><p>building counts per across clicks (proxy for time)</p></li>
+</ul>
+</div>
+</div>

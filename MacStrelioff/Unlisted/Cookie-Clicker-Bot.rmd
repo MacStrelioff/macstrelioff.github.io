@@ -1,0 +1,73 @@
+---
+title: "DRAFT OF: Cookie Clicker Bot"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+output:
+  blogdown::html_page:
+    toc: true
+math: true
+---
+
+```{r}
+library(reticulate)
+```
+
+```{r,include=FALSE}
+knitr::opts_chunk$set(comment = ">>>")
+#py_discover_config() # to see versions of Python
+use_python("/anaconda3/bin/python")
+# py_config() # check paths
+# test imports
+#import("numpy",as="np")
+#import("requests")
+
+# path to interpreter from python (I ran in a juperter nb to find the path used here)
+# import sys
+# print(sys.executable)
+
+# for figures, without issues..;
+# https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/
+```
+
+# This is a draft / still being written
+
+## TODO:
+- look into class inheritance, to make the other two classes simpler to implement / help with cleaner code
+- rename variables in naive class to be consistent with others (epochs for balance and revenue)
+- run again without upgrades
+- track start/end time, and log based on time instead of clicks.
+
+## Background and Setup 
+
+- I was interested in developing programs that can intelligently interact with a web interface.. 
+- I'll highlight some bits of code, but a Jupyter notebook with all code to run these algorithms can be found (HERE) -- link to my git repo with the notebook...
+
+### Cookie Clicker Game
+
+- pic of the interface
+- You get cookies for clicking the big cookie. You can spend these cookies on buildings, which generate a number of cookies per second. Buildings get more expensive when bought, so the marginal benefit of any particular building depends on how many are currently owned. 
+
+## Strategies
+
+### Naive
+
+Simple to implement, but probably not the best.
+
+### Max revenue per second
+
+### Min wait time until the highest rps option
+
+- rationale: differences in revenue per building are quite large, so ... .
+- pics from ipad of concept figure
+- proof that balance doesn't matter 
+- sketches of preference as rps and cost of another building change. 
+
+## Performance 
+
+- revenue per second across clicks (proxy for time)
+
+- building counts per across clicks (proxy for time)
+
+
+
+
