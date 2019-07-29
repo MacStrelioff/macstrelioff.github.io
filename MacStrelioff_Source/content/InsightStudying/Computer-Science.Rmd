@@ -82,6 +82,8 @@ for n in ns_to_test:
 
 #### Polynomial Time: O(n), O(n^2), ...
 
+[good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi](https://www.youtube.com/watch?v=P8Xa2BitN3I&list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&index=11)
+
 Each for loop scales complexity by a factor of $n$, so one loop would be linear ($O(n)$), two loops would be quadratic $O(n^2)$, and three loops would be cubic ($O(n^3)$), and so on. The example below is a quadratic time example. 
 
 ```{python}
@@ -173,7 +175,7 @@ SQL training resources;
 
 [Order of execution for clauses below](https://sqlbolt.com/lesson/select_queries_order_of_execution)
 
-```{SQL, eval=FALSE, echo=TRUE}
+```{, eval=FALSE, echo=TRUE}
 SELECT (column names to select) [AS (name for selection)]
 
 FROM (table to select from)

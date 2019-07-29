@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 28 Jul 2019 16:34:11 +0000</pubDate>
+      <pubDate>Sun, 28 Jul 2019 17:10:52 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -127,6 +127,7 @@ for n in ns_to_test:
 &lt;/div&gt;
 &lt;div id=&#34;polynomial-time-on-on2&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Polynomial Time: O(n), O(n^2), …&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P8Xa2BitN3I&amp;amp;list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&amp;amp;index=11&#34;&gt;good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Each for loop scales complexity by a factor of &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, so one loop would be linear (&lt;span class=&#34;math inline&#34;&gt;\(O(n)\)&lt;/span&gt;), two loops would be quadratic &lt;span class=&#34;math inline&#34;&gt;\(O(n^2)\)&lt;/span&gt;, and three loops would be cubic (&lt;span class=&#34;math inline&#34;&gt;\(O(n^3)\)&lt;/span&gt;), and so on. The example below is a quadratic time example.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def linear_example(n): 
     num_ops = 1         # 1 operation
@@ -215,19 +216,13 @@ for n in ns_to_test:
 &lt;div id=&#34;general-structure-of-sql-querys&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;General Structure of SQL querys&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_order_of_execution&#34;&gt;Order of execution for clauses below&lt;/a&gt;&lt;/p&gt;
-&lt;pre class=&#34;sql&#34;&gt;&lt;code&gt;SELECT (column names to select) [AS (name for selection)]
-
-FROM (table to select from)
-
-WHERE (logical condition on rows)
-  column = (value or subquery)
-  
-GROUP BY 
-
-HAVING (constraint on grouped rows)
-  
-LIMIT n [OFFSET m]
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]&lt;/p&gt;
+&lt;p&gt;FROM (table to select from)&lt;/p&gt;
+&lt;p&gt;WHERE (logical condition on rows) column = (value or subquery)&lt;/p&gt;
+&lt;p&gt;GROUP BY&lt;/p&gt;
+&lt;p&gt;HAVING (constraint on grouped rows)&lt;/p&gt;
+&lt;p&gt;LIMIT n [OFFSET m]&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;SELECT&lt;/code&gt; clause can contain aggregations, and subqueries.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;FROM&lt;/code&gt; clause can contain joins.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;WHERE&lt;/code&gt; clause can also contain sub queries.&lt;/p&gt;

@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-28 16:34:11"
+date: "2019-07-28 17:10:52"
 output:
   blogdown::html_page:
     toc: true
@@ -99,6 +99,7 @@ for n in ns_to_test:
 </div>
 <div id="polynomial-time-on-on2" class="section level4">
 <h4>Polynomial Time: O(n), O(n^2), …</h4>
+<p><a href="https://www.youtube.com/watch?v=P8Xa2BitN3I&amp;list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&amp;index=11">good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi</a></p>
 <p>Each for loop scales complexity by a factor of <span class="math inline">\(n\)</span>, so one loop would be linear (<span class="math inline">\(O(n)\)</span>), two loops would be quadratic <span class="math inline">\(O(n^2)\)</span>, and three loops would be cubic (<span class="math inline">\(O(n^3)\)</span>), and so on. The example below is a quadratic time example.</p>
 <pre class="python"><code>def linear_example(n): 
     num_ops = 1         # 1 operation
@@ -187,19 +188,13 @@ for n in ns_to_test:
 <div id="general-structure-of-sql-querys" class="section level3">
 <h3>General Structure of SQL querys</h3>
 <p><a href="https://sqlbolt.com/lesson/select_queries_order_of_execution">Order of execution for clauses below</a></p>
-<pre class="sql"><code>SELECT (column names to select) [AS (name for selection)]
-
-FROM (table to select from)
-
-WHERE (logical condition on rows)
-  column = (value or subquery)
-  
-GROUP BY 
-
-HAVING (constraint on grouped rows)
-  
-LIMIT n [OFFSET m]
-</code></pre>
+<p>```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]</p>
+<p>FROM (table to select from)</p>
+<p>WHERE (logical condition on rows) column = (value or subquery)</p>
+<p>GROUP BY</p>
+<p>HAVING (constraint on grouped rows)</p>
+<p>LIMIT n [OFFSET m]</p>
+<p>```</p>
 <p>The <code>SELECT</code> clause can contain aggregations, and subqueries.</p>
 <p>The <code>FROM</code> clause can contain joins.</p>
 <p>The <code>WHERE</code> clause can also contain sub queries.</p>
