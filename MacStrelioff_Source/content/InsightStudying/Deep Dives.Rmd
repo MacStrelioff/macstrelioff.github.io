@@ -1,12 +1,15 @@
 ---
-title: "Business Sense"
+title: "Yelp Notes"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
-math: true
+output:
+  pdf_document: default
+  word_document: default
 menu:
   InsightStudying:
     parent: Foundations
     weight: 99
+math: yes
 linktitle: Business Sense
 ---
 
@@ -28,7 +31,7 @@ set.seed(10201991)
 ### Business Model, Culture, and Vision
 
 - Mission: Connect people with great local places
-- Main source of revenue is business ads
+- Main source of revenue is business ads, [overview of offerings here](https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38)
 - Want: openness, curiosity, approachable
 - DS team has "Office hours" to facilitate communication
 - Journal clubs and learning groups
@@ -66,10 +69,71 @@ Job consists of reining in management, helping with experimentation. Common deli
 
 ## Recruiter Call
 
+- Q: why did you apply to Yelp? Show enthusiasm for yelp during interview.
+
+Interview topics and evaluation:
+
+1. Technical skills (analysis, stats, programming)
+2. product/bus intuition -- impact for business opportunities
+3. communication -- clarity and insight
+4. Can discuss past work with large data or complicated work
+5. Might get metrics or experimentation based on questions Yelp is facing at the moment
+6. A/B testing, Python
+7. Enthusiasm for company -- why yelp versus another company
+8. Communicate while going along while solving the problems. 
+
+Other info:
+
+- Team: ~ 600 engs, 70 PMs, 20 DS. 
+- DS mostly work with feature team, to create, calculate, and validate metrics for feature work. Modeling user engagement, predicting delivery time, 
+- DS works on sub team -- Bus, consumer, core
+- DS works with product groups, growth, contributions, ads. 
+- PM prioritizes projects based on impact. 
+- DS Helps with A/B testing, experimentation.. Looking to solve 
+- Can work with 1-3PMs within group. 50-70% of time working on projects for product groups. Most time is getting and giving feedback on approach to specific problems. 
+- Expert on knowing the data we can work with to address PM problems. 
+- Measure "goodness" of a feature in scientific and principled way. 
+
+
+1. What role am I being considered for?
+
+Don't have anything posted on careers page. This role just opened. Role just opened up. Data scientist rec. 
+
+can send panel and links to their linkedin -- meeting with four folks. Sebastian, Inhan, Nick, Peter.
+
+3. What topics might be covered? 
+
+- Should I bring anything? Laptop, ... ? Could bring laptop, but there are laptops that can be borrowed as well. Whiteboards will be in the room. 
+
 ## Deep Dive
 
 
-- think of how my decision making background can inform strategy at Yelp...
+### Metrics
+
+Overall, consider units of individuals (accounts, unique visitors, cookies, IPs...), units of time (daily, weekly), and referents (week over week, ...)
+
+- Monthly unique visitors
+- Web Reservations
+- Pad Reservations
+- Wait times at restaurants
+- Traffic to business pages
+- Engagement (from potential customers)
+- [Some metrics for business partners](https://biz.yelp.com/)
+
+
+### Current issues
+
+- Trust, businesses can game Yelp by [asking for low ratings](https://thehustle.co/botto-bistro-1-star-yelp/), 
+- Trust, Businesses accuse Yelp of [maliciously manipulating reviews](https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9), to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to [this response](https://www.yelp.com/extortion).
+- Influence: "Such ubiquity has consequences. A study from last year found that a measly half-star difference made it 19% more likely that a San Francisco restaurant would be busy at peak times." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
+- Analyst downgrade because of low innovation: "He cited a lack of growth from several of the site’s advertising efforts for his downgrade, as well as a lack of “consequential” new products “to reduce churn or drive revenue.” [this post](https://www.barrons.com/articles/what-the-democratic-debates-mean-for-health-care-investors-51564665029)
+
+
+### Competitors
+
+- "On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
+- Full paragraph: "For better and for worse, strangers' opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews. While more democratic, they're also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad."
+
 
 ## Onsite
 
