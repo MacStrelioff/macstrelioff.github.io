@@ -32,6 +32,7 @@ set.seed(10201991)
 
 - Mission: Connect people with great local places
 - Main source of revenue is business ads, [overview of offerings here](https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38)
+- [More services for businesses](https://biz.yelp.com/guide_to_success)
 - Want: openness, curiosity, approachable
 - DS team has "Office hours" to facilitate communication
 - Journal clubs and learning groups
@@ -107,6 +108,10 @@ can send panel and links to their linkedin -- meeting with four folks. Sebastian
 
 ## Deep Dive
 
+### Users
+
+- website visitors who write and read reviews
+- businesses who pay for exposure
 
 ### Metrics
 
@@ -126,7 +131,8 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - Trust, businesses can game Yelp by [asking for low ratings](https://thehustle.co/botto-bistro-1-star-yelp/), 
 - Trust, Businesses accuse Yelp of [maliciously manipulating reviews](https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9), to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to [this response](https://www.yelp.com/extortion).
 - Influence: "Such ubiquity has consequences. A study from last year found that a measly half-star difference made it 19% more likely that a San Francisco restaurant would be busy at peak times." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
-- Analyst downgrade because of low innovation: "He cited a lack of growth from several of the site’s advertising efforts for his downgrade, as well as a lack of “consequential” new products “to reduce churn or drive revenue.” [this post](https://www.barrons.com/articles/what-the-democratic-debates-mean-for-health-care-investors-51564665029)
+- Lack of expected growth: "He cited a lack of growth from several of the site’s advertising efforts for his downgrade, as well as a lack of “consequential” new products “to reduce churn or drive revenue.” [this post](https://www.barrons.com/articles/what-the-democratic-debates-mean-for-health-care-investors-51564665029)
+- Balancing review usefulness, reliability, and legitimacy - 
 
 
 ### Competitors
