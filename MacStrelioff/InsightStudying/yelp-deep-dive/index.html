@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?">
+  <meta name="description" content="Yelp Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.g. project: decrease experiment duration not much collaboration with UX other than maybe getting data from them data: crowd-sourced data on businesses   DS Role  Looking for 2 roles  DS  Job consists of reining in management, helping with experimentation.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/machine-learning/">
+  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/yelp-deep-dive/">
 
   
 
@@ -119,7 +119,7 @@
   <link rel="icon" type="image/png" href="/MacStrelioff/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/MacStrelioff/img/icon-192.png">
 
-  <link rel="canonical" href="/MacStrelioff/insightstudying/machine-learning/">
+  <link rel="canonical" href="/MacStrelioff/insightstudying/yelp-deep-dive/">
 
   
   
@@ -134,21 +134,21 @@
   <meta property="twitter:creator" content="@macstrelioff">
   
   <meta property="og:site_name" content="Mac Strelioff">
-  <meta property="og:url" content="/MacStrelioff/insightstudying/machine-learning/">
-  <meta property="og:title" content="Machine Learning | Mac Strelioff">
-  <meta property="og:description" content="Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:url" content="/MacStrelioff/insightstudying/yelp-deep-dive/">
+  <meta property="og:title" content="Yelp Notes | Mac Strelioff">
+  <meta property="og:description" content="Yelp Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.g. project: decrease experiment duration not much collaboration with UX other than maybe getting data from them data: crowd-sourced data on businesses   DS Role  Looking for 2 roles  DS  Job consists of reining in management, helping with experimentation."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-14T11:52:10&#43;00:00">
+  <meta property="article:published_time" content="2019-08-01T15:33:43&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-14T11:52:10&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2019-08-01T15:33:43&#43;00:00">
   
 
   
 
-  <title>Machine Learning | Mac Strelioff</title>
+  
+
+  <title>Yelp Notes | Mac Strelioff</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -345,7 +345,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Machine Learning</h1>
+  <h1 itemprop="name">Yelp Notes</h1>
 
   
 
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-07-14 11:52:10 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-14 11:52:10 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-01 15:33:43 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-01 15:33:43 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -368,7 +368,7 @@
     
       
     
-    <time>Jul 14, 2019</time>
+    <time>Aug 1, 2019</time>
   </span>
   
 
@@ -379,7 +379,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/MacStrelioff/insightstudying/machine-learning/#disqus_thread"></a>
+  <a href="/MacStrelioff/insightstudying/yelp-deep-dive/#disqus_thread"></a>
   
 
   
@@ -458,298 +458,150 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<div id="TOC">
-<ul>
-<li><a href="#considerations">Considerations</a><ul>
-<li><a href="#bias-variance-trade-off">Bias-variance trade-off</a></li>
-<li><a href="#overfitting-and-underfitting">Overfitting and Underfitting</a></li>
-<li><a href="#cost-functions-and-metrics">Cost Functions and Metrics</a></li>
-<li><a href="#feature-engineering">Feature Engineering</a><ul>
-<li><a href="#seperability">Seperability</a></li>
-<li><a href="#assumptions-about-form-of-relationship">Assumptions about form of relationship</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#unsupervised">Unsupervised</a><ul>
-<li><a href="#clustering">Clustering</a><ul>
-<li><a href="#k-means">k-means</a></li>
-<li><a href="#agglomerative">Agglomerative</a></li>
-<li><a href="#devisive">Devisive</a></li>
-</ul></li>
-<li><a href="#matrix-decomposition">Matrix Decomposition</a><ul>
-<li><a href="#pca-principle-components-analysis">PCA Principle Components Analysis</a></li>
-<li><a href="#svd-singular-value-decomposition">SVD Singular Value Decomposition</a></li>
-</ul></li>
-<li><a href="#text-based">Text-based</a><ul>
-<li><a href="#lda-latent-direchilote-analysis">LDA Latent Direchilote Analysis</a></li>
-<li><a href="#lsa-latent-semantic-analysis">LSA Latent Semantic Analysis</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#supervised">Supervised</a><ul>
-<li><a href="#regression">Regression</a><ul>
-<li><a href="#linear">Linear</a></li>
-<li><a href="#support-vector-machine-svm">Support Vector Machine (SVM)</a></li>
-</ul></li>
-<li><a href="#classification">Classification</a><ul>
-<li><a href="#naive-bayes">Naive Bayes</a></li>
-<li><a href="#discriminant-analysis">Discriminant Analysis</a></li>
-<li><a href="#knn">KNN</a></li>
-<li><a href="#logistic-regression">Logistic Regression</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#ensemble-methods">Ensemble Methods</a><ul>
-<li><a href="#trees-and-forests">Trees and Forests</a><ul>
-<li><a href="#regression-1">Regression</a></li>
-<li><a href="#classification-1">Classification</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#open-ended-template">Open ended Template</a><ul>
-<li><a href="#raw-data-structure">Raw data structure?</a></li>
-<li><a href="#define-target-variable">Define target variable</a></li>
-<li><a href="#preprocession">Preprocession,</a></li>
-<li><a href="#feature-engineering-1">Feature engineering</a></li>
-<li><a href="#performance-metrics-and-how-they-apply">Performance metrics and how they apply</a></li>
-<li><a href="#cautions">Cautions:</a></li>
-<li><a href="#imagine-rolling-the-model-out">Imagine rolling the model out</a></li>
-</ul></li>
-</ul>
-</div>
 
-<div id="considerations" class="section level1">
-<h1>Considerations</h1>
-<div id="bias-variance-trade-off" class="section level2">
-<h2>Bias-variance trade-off</h2>
-</div>
-<div id="overfitting-and-underfitting" class="section level2">
-<h2>Overfitting and Underfitting</h2>
-<p>Cross Validation; Classification</p>
-<p>Assess by comparing a performance metric on training and testing data.</p>
-</div>
-<div id="cost-functions-and-metrics" class="section level2">
-<h2>Cost Functions and Metrics</h2>
-<p>Modeling: Validation metrics,</p>
-<p>metrics (precision, recall, F1)</p>
-<p>R squared, RMSE</p>
-<p>Likelihood</p>
-<p>regularisation (ridge, lasso),</p>
-</div>
-<div id="feature-engineering" class="section level2">
-<h2>Feature Engineering</h2>
-<div id="seperability" class="section level3">
-<h3>Seperability</h3>
-</div>
-<div id="assumptions-about-form-of-relationship" class="section level3">
-<h3>Assumptions about form of relationship</h3>
-<p>Process: feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off</p>
-</div>
-</div>
-</div>
-<div id="unsupervised" class="section level1">
-<h1>Unsupervised</h1>
-<div id="clustering" class="section level2">
-<h2>Clustering</h2>
-<div id="k-means" class="section level3">
-<h3>k-means</h3>
-</div>
-<div id="agglomerative" class="section level3">
-<h3>Agglomerative</h3>
-</div>
-<div id="devisive" class="section level3">
-<h3>Devisive</h3>
-</div>
-</div>
-<div id="matrix-decomposition" class="section level2">
-<h2>Matrix Decomposition</h2>
-<div id="pca-principle-components-analysis" class="section level3">
-<h3>PCA Principle Components Analysis</h3>
-</div>
-<div id="svd-singular-value-decomposition" class="section level3">
-<h3>SVD Singular Value Decomposition</h3>
-</div>
-</div>
-<div id="text-based" class="section level2">
-<h2>Text-based</h2>
-<div id="lda-latent-direchilote-analysis" class="section level3">
-<h3>LDA Latent Direchilote Analysis</h3>
-</div>
-<div id="lsa-latent-semantic-analysis" class="section level3">
-<h3>LSA Latent Semantic Analysis</h3>
-</div>
-</div>
-</div>
-<div id="supervised" class="section level1">
-<h1>Supervised</h1>
-<div id="regression" class="section level2">
-<h2>Regression</h2>
-<div id="linear" class="section level3">
-<h3>Linear</h3>
-</div>
-<div id="support-vector-machine-svm" class="section level3">
-<h3>Support Vector Machine (SVM)</h3>
-</div>
-</div>
-<div id="classification" class="section level2">
-<h2>Classification</h2>
-<div id="naive-bayes" class="section level3">
-<h3>Naive Bayes</h3>
-</div>
-<div id="discriminant-analysis" class="section level3">
-<h3>Discriminant Analysis</h3>
-<div id="lda" class="section level4">
-<h4>LDA</h4>
-<p>When to use:</p>
+<div id="yelp" class="section level1">
+<h1>Yelp</h1>
+<div id="company-visit" class="section level2">
+<h2>Company Visit</h2>
+<div id="business-model-culture-and-vision" class="section level3">
+<h3>Business Model, Culture, and Vision</h3>
 <ul>
-<li></li>
-</ul>
-<p>Pros:</p>
-<ul>
-<li></li>
-</ul>
-<p>Cons:</p>
-<ul>
-<li></li>
+<li>Mission: Connect people with great local places</li>
+<li>Main source of revenue is business ads, <a href="https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38">overview of offerings here</a></li>
+<li><a href="https://biz.yelp.com/guide_to_success">More services for businesses</a></li>
+<li>Want: openness, curiosity, approachable</li>
+<li>DS team has “Office hours” to facilitate communication</li>
+<li>Journal clubs and learning groups</li>
+<li>Can move to PM or ML teams</li>
 </ul>
 </div>
-<div id="qda" class="section level4">
-<h4>QDA</h4>
-<p>When to use:</p>
+<div id="projects-tasks-and-data" class="section level3">
+<h3>Projects, Tasks, and Data</h3>
 <ul>
-<li></li>
+<li>Working on personalization</li>
+<li>e.g. project: decrease experiment duration</li>
+<li>not much collaboration with UX other than maybe getting data from them</li>
+<li>data: crowd-sourced data on businesses</li>
 </ul>
-<p>Pros:</p>
+</div>
+<div id="ds-role" class="section level3">
+<h3>DS Role</h3>
 <ul>
-<li></li>
+<li>Looking for 2 roles</li>
 </ul>
-<p>Cons:</p>
+<ol style="list-style-type: decimal">
+<li>DS</li>
+</ol>
+<p>Job consists of reining in management, helping with experimentation. Common deliverables are a Jupyter notebook and reports.</p>
 <ul>
-<li></li>
+<li>Deliverables are reports and Jupyter notebooks</li>
+<li>More confident decisions based on data</li>
+<li>Investigate and define metrics</li>
+<li>Design and analyze experiments on centralized platform.</li>
+<li>Helps with scaling up experiments and interpreting results.</li>
+<li>Predictive modeling</li>
+<li>Qualities: Generalist, communication, statistical inference, experimental design, empathy of understanding of other roles in the business</li>
+<li>Skills: SQL, Python (possibly R for analysis), clean code, reproducible results.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>ML</li>
+</ol>
+<ul>
+<li>Back end of production models</li>
+<li>Assists DE team with feature engineering</li>
+<li>Want: ML, DE, Python, Java, CS and mathematics.</li>
 </ul>
 </div>
 </div>
-<div id="knn" class="section level3">
-<h3>KNN</h3>
-<p>When to use:</p>
+<div id="recruiter-call" class="section level2">
+<h2>Recruiter Call</h2>
 <ul>
-<li></li>
+<li>Q: why did you apply to Yelp? Show enthusiasm for yelp during interview.</li>
 </ul>
-<p>Pros:</p>
+<p>Interview topics and evaluation:</p>
+<ol style="list-style-type: decimal">
+<li>Technical skills (analysis, stats, programming)</li>
+<li>product/bus intuition – impact for business opportunities</li>
+<li>communication – clarity and insight</li>
+<li>Can discuss past work with large data or complicated work</li>
+<li>Might get metrics or experimentation based on questions Yelp is facing at the moment</li>
+<li>A/B testing, Python</li>
+<li>Enthusiasm for company – why yelp versus another company</li>
+<li>Communicate while going along while solving the problems.</li>
+</ol>
+<p>Other info:</p>
 <ul>
-<li></li>
+<li>Team: ~ 600 engs, 70 PMs, 20 DS.</li>
+<li>DS mostly work with feature team, to create, calculate, and validate metrics for feature work. Modeling user engagement, predicting delivery time,</li>
+<li>DS works on sub team – Bus, consumer, core</li>
+<li>DS works with product groups, growth, contributions, ads.</li>
+<li>PM prioritizes projects based on impact.</li>
+<li>DS Helps with A/B testing, experimentation.. Looking to solve</li>
+<li>Can work with 1-3PMs within group. 50-70% of time working on projects for product groups. Most time is getting and giving feedback on approach to specific problems.</li>
+<li>Expert on knowing the data we can work with to address PM problems.</li>
+<li>Measure “goodness” of a feature in scientific and principled way.</li>
 </ul>
-<p>Cons:</p>
+<ol style="list-style-type: decimal">
+<li>What role am I being considered for?</li>
+</ol>
+<p>Don’t have anything posted on careers page. This role just opened. Role just opened up. Data scientist rec.</p>
+<p>can send panel and links to their linkedin – meeting with four folks. Sebastian, Inhan, Nick, Peter.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>What topics might be covered?</li>
+</ol>
 <ul>
-<li></li>
-</ul>
-</div>
-<div id="logistic-regression" class="section level3">
-<h3>Logistic Regression</h3>
-<p>When to use:</p>
-<ul>
-<li></li>
-</ul>
-<p>Pros:</p>
-<ul>
-<li></li>
-</ul>
-<p>Cons:</p>
-<ul>
-<li></li>
-</ul>
-</div>
-</div>
-</div>
-<div id="ensemble-methods" class="section level1">
-<h1>Ensemble Methods</h1>
-<p>boosting, bagging</p>
-<p>XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost</p>
-<div id="trees-and-forests" class="section level2">
-<h2>Trees and Forests</h2>
-<p>Gini Impurity: <span class="math display">\[
-\begin{aligned}
-m:&amp;\text{ Region} \\
-k:&amp; \text{ Class} \\
-G =&amp; \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
-\\=&amp; 1 - \Sigma_k \hat{p}_{m,k}^2
-\end{aligned}
-\]</span></p>
-<p>Decrease in Impurity <span class="math display">\[
-\begin{aligned}
-t:&amp;\text{ Node} \\
-N_t:&amp;\text{ Samples at node }t \\
-s_t:&amp;\text{ Split }t \text{ into } t_L,t_R\\
-\Delta i(s_t,t)=&amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
-\end{aligned}
-\]</span></p>
-<p>Mean Decrease in Impurity: <span class="math display">\[
-\begin{aligned}
-T:&amp; \text{Trees} \\
-N_T:&amp; \text{Number of trees} \\
-t:&amp;\text{ Nodes} \\
-s_t:&amp;\text{ Split }t \text{ into } t_L,t_R\\
-v(s_t):&amp;\text{Variable split on at } s_t \\
-p(t):&amp; \text{Proportion of total samples at node } t \\
-Imp(X_m)=&amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta i(s_t,t)
-\end{aligned}
-\]</span></p>
-<p><a href="https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e">Good blog on analysis of feature importance</a></p>
-<p>Also see <a href="https://github.com/slundberg/shap">SHAP</a> for interpreting predictions from tree models!</p>
-<p>Benefits of trees over OLS</p>
-<p><a href="https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables" class="uri">https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables</a></p>
-<div id="regression-1" class="section level3">
-<h3>Regression</h3>
-</div>
-<div id="classification-1" class="section level3">
-<h3>Classification</h3>
-<p>Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming</p>
-<div id="assessment" class="section level4">
-<h4>Assessment</h4>
-<p>Confusion matrix, F1, precision-recall curve</p>
-<p>ROC, AUC</p>
-</div>
-</div>
-</div>
-</div>
-<div id="open-ended-template" class="section level1">
-<h1>Open ended Template</h1>
-<div id="raw-data-structure" class="section level2">
-<h2>Raw data structure?</h2>
-<ul>
-<li>Table of information about consumer</li>
-<li>Table of transaction history</li>
+<li>Should I bring anything? Laptop, … ? Could bring laptop, but there are laptops that can be borrowed as well. Whiteboards will be in the room.</li>
 </ul>
 </div>
-<div id="define-target-variable" class="section level2">
-<h2>Define target variable</h2>
-<p>e.g. Fraud would be if a consumer calls and labels a transaction as fraud.</p>
-</div>
-<div id="preprocession" class="section level2">
-<h2>Preprocession,</h2>
+<div id="deep-dive" class="section level2">
+<h2>Deep Dive</h2>
+<div id="users" class="section level3">
+<h3>Users</h3>
 <ul>
-<li>EDA - distributions, correlations</li>
+<li>website visitors who write and read reviews</li>
+<li>businesses who pay for exposure</li>
 </ul>
 </div>
-<div id="feature-engineering-1" class="section level2">
-<h2>Feature engineering</h2>
-</div>
-<div id="performance-metrics-and-how-they-apply" class="section level2">
-<h2>Performance metrics and how they apply</h2>
+<div id="metrics" class="section level3">
+<h3>Metrics</h3>
+<p>Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)</p>
 <ul>
-<li>Precision</li>
-<li>Recall</li>
-<li>…</li>
+<li>Monthly unique visitors</li>
+<li>Web Reservations</li>
+<li>Pad Reservations</li>
+<li>Wait times at restaurants</li>
+<li>Traffic to business pages</li>
+<li>Engagement (from potential customers)</li>
+<li><a href="https://biz.yelp.com/">Some metrics for business partners</a></li>
 </ul>
 </div>
-<div id="cautions" class="section level2">
-<h2>Cautions:</h2>
+<div id="current-issues" class="section level3">
+<h3>Current issues</h3>
 <ul>
-<li>Don’t mention models you aren’t familiar with</li>
+<li>Trust, businesses can game Yelp by <a href="https://thehustle.co/botto-bistro-1-star-yelp/">asking for low ratings</a>,</li>
+<li>Trust, Businesses accuse Yelp of <a href="https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9">maliciously manipulating reviews</a>, to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to <a href="https://www.yelp.com/extortion">this response</a>.</li>
+<li>Influence: “Such ubiquity has consequences. A study from last year found that a measly half-star difference made it 19% more likely that a San Francisco restaurant would be busy at peak times.” - <a href="https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood">this post</a></li>
+<li>Lack of expected growth: “He cited a lack of growth from several of the site’s advertising efforts for his downgrade, as well as a lack of “consequential” new products “to reduce churn or drive revenue.” <a href="https://www.barrons.com/articles/what-the-democratic-debates-mean-for-health-care-investors-51564665029">this post</a></li>
+<li>Balancing review usefulness, reliability, and legitimacy -</li>
 </ul>
 </div>
-<div id="imagine-rolling-the-model-out" class="section level2">
-<h2>Imagine rolling the model out</h2>
+<div id="competitors" class="section level3">
+<h3>Competitors</h3>
 <ul>
-<li>What issues might arise?</li>
-<li>What actions do you take in production?</li>
+<li>“On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews.” - <a href="https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood">this post</a></li>
+<li>Full paragraph: “For better and for worse, strangers’ opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews. While more democratic, they’re also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad.”</li>
 </ul>
+</div>
+</div>
+<div id="onsite" class="section level2">
+<h2>Onsite</h2>
+<ul>
+<li>Expect from company visit: SQL, Python, statistics, experiment design</li>
+<li>Expect from recruiter call: A/B testing, product sense</li>
+</ul>
+<div id="meeting-notes" class="section level3">
+<h3>meeting notes</h3>
+</div>
 </div>
 </div>
 
@@ -889,9 +741,15 @@ Imp(X_m)=&amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta 
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/MacStrelioff/insightstudying/business-sense/" rel="next">Business Sense</a>
+    <a href="/MacStrelioff/insightstudying/probability-statistics/" rel="next">Probability and Statistics</a>
   </div>
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/MacStrelioff/insightstudying/computer-science/" rel="prev">Computer Science</a>
+  </div>
   
 </div>
 

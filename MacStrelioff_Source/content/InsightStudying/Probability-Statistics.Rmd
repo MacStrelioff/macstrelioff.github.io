@@ -49,6 +49,28 @@ Sum of any random variable converges to normal distribution.
 
 - show for binomial case, to justify Z test
 
+# Common Tests
+
+## Z test 
+
+Normal data
+
+Binary data
+
+
+## t-test
+
+- different variance formulations. 
+- one-sample
+- two independent sampels
+- two dependent samples
+
+## Chi-Square
+
+
+## Linear Models
+
+
 # Experiment Design
 
 ## Objective, demand, and value

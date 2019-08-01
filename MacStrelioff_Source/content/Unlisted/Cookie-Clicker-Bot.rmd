@@ -29,40 +29,40 @@ use_python("/anaconda3/bin/python")
 # https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/
 ```
 
-# This is a draft / still being written
 
-## TODO:
-- look into class inheritance, to make the other two classes simpler to implement / help with cleaner code
-- rename variables in naive class to be consistent with others (epochs for balance and revenue)
-- run again without upgrades
-- track start/end time, and log based on time instead of clicks.
+# Overview
 
-## Background and Setup 
+
+
+
+
+
+# Background and Setup 
 
 - I was interested in developing programs that can intelligently interact with a web interface.. 
 - I'll highlight some bits of code, but a Jupyter notebook with all code to run these algorithms can be found (HERE) -- link to my git repo with the notebook...
 
-### Cookie Clicker Game
+## Cookie Clicker Game
 
 - pic of the interface
 - You get cookies for clicking the big cookie. You can spend these cookies on buildings, which generate a number of cookies per second. Buildings get more expensive when bought, so the marginal benefit of any particular building depends on how many are currently owned. 
 
-## Strategies
+# Strategies
 
-### Naive
+## Naive
 
 Simple to implement, but probably not the best.
 
-### Max revenue per second
+## Max revenue per second
 
-### Min wait time until the highest rps option
+## Min wait time until the highest rps option
 
 - rationale: differences in revenue per building are quite large, so ... .
 - pics from ipad of concept figure
 - proof that balance doesn't matter 
 - sketches of preference as rps and cost of another building change. 
 
-## Performance 
+# Performance 
 
 - revenue per second across clicks (proxy for time)
 

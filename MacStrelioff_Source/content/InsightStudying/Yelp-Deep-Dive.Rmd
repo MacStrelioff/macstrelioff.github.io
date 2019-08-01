@@ -2,15 +2,12 @@
 title: "Yelp Notes"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
-output:
-  pdf_document: default
-  word_document: default
 menu:
   InsightStudying:
     parent: Foundations
     weight: 99
 math: yes
-linktitle: Business Sense
+linktitle: Yelp Deep Dive
 ---
 
 ```{r setup, include=FALSE}

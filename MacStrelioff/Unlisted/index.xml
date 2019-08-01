@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jul 2019 05:41:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 15:44:22 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/unlisted/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>DRAFT OF: Cookie Clicker Bot</title>
       <link>/MacStrelioff/unlisted/cookie-clicker-bot/</link>
-      <pubDate>Mon, 29 Jul 2019 05:41:42 +0000</pubDate>
+      <pubDate>Thu, 01 Aug 2019 15:44:22 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/cookie-clicker-bot/</guid>
-      <description>This is a draft / still being written TODO: Background and Setup Cookie Clicker Game  Strategies Naive Max revenue per second Min wait time until the highest rps option  Performance    library(reticulate) ## Warning: package &amp;#39;reticulate&amp;#39; was built under R version 3.5.2 This is a draft / still being written TODO:  look into class inheritance, to make the other two classes simpler to implement / help with cleaner code rename variables in naive class to be consistent with others (epochs for balance and revenue) run again without upgrades track start/end time, and log based on time instead of clicks.</description>
+      <description>Overview Background and Setup Cookie Clicker Game  Strategies Naive Max revenue per second Min wait time until the highest rps option  Performance   library(reticulate) ## Warning: package &amp;#39;reticulate&amp;#39; was built under R version 3.5.2 Overview  Background and Setup  I was interested in developing programs that can intelligently interact with a web interface.. I’ll highlight some bits of code, but a Jupyter notebook with all code to run these algorithms can be found (HERE) – link to my git repo with the notebook…  Cookie Clicker Game  pic of the interface You get cookies for clicking the big cookie.</description>
     </item>
     
     <item>
