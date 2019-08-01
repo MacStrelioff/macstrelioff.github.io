@@ -152,6 +152,17 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 
 
 
+### meeting notes 
+
+
+
+
+
+
+
+
+
+
 
 
 
