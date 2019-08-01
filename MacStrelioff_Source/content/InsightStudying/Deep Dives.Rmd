@@ -1,0 +1,99 @@
+---
+title: "Business Sense"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+math: true
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 99
+linktitle: Business Sense
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+
+# Yelp
+
+## Company Visit
+
+### Business Model, Culture, and Vision
+
+- Mission: Connect people with great local places
+- Main source of revenue is business ads
+- Want: openness, curiosity, approachable
+- DS team has "Office hours" to facilitate communication
+- Journal clubs and learning groups
+- Can move to PM or ML teams
+
+### Projects, Tasks, and Data
+
+- Working on personalization
+- e.g. project: decrease experiment duration
+- not much collaboration with UX other than maybe getting data from them
+- data: crowd-sourced data on businesses 
+
+### DS Role
+
+- Looking for 2 roles
+
+1. DS
+
+Job consists of reining in management, helping with experimentation. Common deliverables are a Jupyter notebook and reports. 
+
+- Deliverables are reports and Jupyter notebooks
+- More confident decisions based on data
+- Investigate and define metrics
+- Design and analyze experiments on centralized platform.
+- Helps with scaling up experiments and interpreting results.
+- Predictive modeling
+- Qualities: Generalist, communication, statistical inference, experimental design, empathy of understanding of other roles in the business
+- Skills: SQL, Python (possibly R for analysis), clean code, reproducible results. 
+
+2. ML
+
+- Back end of production models
+- Assists DE team with feature engineering
+- Want: ML, DE, Python, Java, CS and mathematics.
+
+## Recruiter Call
+
+## Deep Dive
+
+
+- think of how my decision making background can inform strategy at Yelp...
+
+## Onsite
+
+- Expect from company visit: SQL, Python, statistics, experiment design
+- Expect from recruiter call: A/B testing, product sense
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
