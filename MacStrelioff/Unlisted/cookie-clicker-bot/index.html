@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="ADD PROJECT TO GIT HUB, AND LINK TO IT Overview Background and Setup Cookie Clicker Game  Strategies Naive Max revenue per second Min wait time until the highest rps option  Performance   ADD PROJECT TO GIT HUB, AND LINK TO IT  Overview Lately I’ve been interested in writing algorithms that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms.">
+  <meta name="description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxCPS: Buy best revenue to price ratio MinWait: Buy what reduces wait until the highest revenue purchase  Performance   Overview Lately I’ve been interested in writing algorithms that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/unlisted/cookie-clicker-bot/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/unlisted/cookie-clicker-bot/">
   <meta property="og:title" content="DRAFT OF: Cookie Clicker Bot | Mac Strelioff">
-  <meta property="og:description" content="ADD PROJECT TO GIT HUB, AND LINK TO IT Overview Background and Setup Cookie Clicker Game  Strategies Naive Max revenue per second Min wait time until the highest rps option  Performance   ADD PROJECT TO GIT HUB, AND LINK TO IT  Overview Lately I’ve been interested in writing algorithms that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxCPS: Buy best revenue to price ratio MinWait: Buy what reduces wait until the highest revenue purchase  Performance   Overview Lately I’ve been interested in writing algorithms that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-01T16:52:36&#43;00:00">
+  <meta property="article:published_time" content="2019-08-01T17:57:33&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-01T16:52:36&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-01T17:57:33&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-01 16:52:36 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-01 16:52:36 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-01 17:57:33 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-01 17:57:33 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -460,23 +460,20 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#add-project-to-git-hub-and-link-to-it">ADD PROJECT TO GIT HUB, AND LINK TO IT</a></li>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#background-and-setup">Background and Setup</a><ul>
 <li><a href="#cookie-clicker-game">Cookie Clicker Game</a></li>
 </ul></li>
+<li><a href="#helper-functions">Helper Functions</a></li>
 <li><a href="#strategies">Strategies</a><ul>
-<li><a href="#naive">Naive</a></li>
-<li><a href="#max-revenue-per-second">Max revenue per second</a></li>
-<li><a href="#min-wait-time-until-the-highest-rps-option">Min wait time until the highest rps option</a></li>
+<li><a href="#naive-buy-all-affordible-investments">Naive: Buy all affordible investments</a></li>
+<li><a href="#maxcps-buy-best-revenue-to-price-ratio">MaxCPS: Buy best revenue to price ratio</a></li>
+<li><a href="#minwait-buy-what-reduces-wait-until-the-highest-revenue-purchase">MinWait: Buy what reduces wait until the highest revenue purchase</a></li>
 </ul></li>
 <li><a href="#performance">Performance</a></li>
 </ul>
 </div>
 
-<div id="add-project-to-git-hub-and-link-to-it" class="section level1">
-<h1>ADD PROJECT TO GIT HUB, AND LINK TO IT</h1>
-</div>
 <div id="overview" class="section level1">
 <h1>Overview</h1>
 <p>Lately I’ve been interested in writing algorithms that interact with websites. The game <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a> is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies. Here I’ll walk through three algorithms that I made to play this game, and assess their performance in the game. The code that implements these algorithms and reproduces all figures in this blog post can be found on my GitHub, here: <a href="https://github.com/MacStrelioff/CookieClickerAgent" class="uri">https://github.com/MacStrelioff/CookieClickerAgent</a></p>
@@ -485,37 +482,149 @@
 <h1>Background and Setup</h1>
 <div id="cookie-clicker-game" class="section level2">
 <h2>Cookie Clicker Game</h2>
-<ul>
-<li>pic of the interface</li>
-<li>You get cookies for clicking the big cookie. You can spend these cookies on buildings, which generate a number of cookies per second. Buildings get more expensive when bought, so the marginal benefit of any particular building depends on how many are currently owned.</li>
-</ul>
+<p>The interface for this game is shown below.</p>
+<!--- UPDATE IMAGE POINTER TO ONE THAT IS CORRECT IN THE FILE STRUCTURE OF THE HOSTED FILES --->
+<div class="figure">
+<img src="Cookie_Clicker_Images/CookieClickerGameEdited.png" />
+
 </div>
+<p>The goal of the game is to amass cookies. A user can earn cookies (currency) by clicking the large cookie. Buildings, shown at the bottom right, are unlocked as one acquires wealth. Purchasing a building provides recurring revenue (cookies per second). For any specific building, the price of the building increases each time the building is purchased. I focused on two metrics when developing the algorithms described below: revenue (cookies per second), and price or cost of a building.</p>
+<p>The game has other mechanics (upgrades, ascension, golden cookies, …). I also programed functions to purchase upgrades and click golden cookies for temporary buffs, but these functions were disabled here to allow for a more controlled comparison of the algorithms, which only differed in their strategy for purchasing buildings.</p>
+</div>
+</div>
+<div id="helper-functions" class="section level1">
+<h1>Helper Functions</h1>
+<p>This section can be skipped if you are only interested in the different strategies and their performance, which are covered completely in the next two sections. This section explains the code used for numerous helper functions that extracted information from the game interface.</p>
 </div>
 <div id="strategies" class="section level1">
 <h1>Strategies</h1>
-<div id="naive" class="section level2">
-<h2>Naive</h2>
-<p>Simple to implement, but probably not the best.</p>
+<p>While the goal is to earn as many cookies as possible, the game also allows revenue to accrue player is away, and the amount of cookies earned by a click can scale with the revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.</p>
+<div id="naive-buy-all-affordible-investments" class="section level2">
+<h2>Naive: Buy all affordible investments</h2>
+<p>The simplest strategy was to purchase any affordible building.</p>
+<pre class="python"><code>def buy_products(self):
+    products = driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;)
+    while products: # if there are affordible products, buy them
+        products[-1].click()
+        products = driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;)</code></pre>
+<p>The code above defines the investment strategy for this agent. First, <code>driver.find_elements_by_xpath('//div[@class=&quot;product unlocked enabled&quot;]')</code> is used to get a list of the affordible products. The while loop below then clicks (buys) all affordible products, starting with the most expensive.</p>
 </div>
-<div id="max-revenue-per-second" class="section level2">
-<h2>Max revenue per second</h2>
+<div id="maxcps-buy-best-revenue-to-price-ratio" class="section level2">
+<h2>MaxCPS: Buy best revenue to price ratio</h2>
+<p>The second, more advanced strategy would be to buy the option that had the best revenue to price ratio.</p>
+<p>One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked.</p>
+<pre class="python"><code>class agent_class_max_rps_price_ratio(agent_class_naive):
+    # overwrite the buy_products method
+    def buy_products(self):
+        ## update building info
+        self.get_building_info()
+        # while best is affordible, buy the best rps/price building
+        best_building_affordible = True
+        while best_building_affordible:
+            ## get unlocked products
+            products = (driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;) + 
+                        driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked disabled&quot;]&#39;))
+            # find max rps/price building
+            max_rps_pp,building_to_buy,product_to_buy = 0,[],[]
+            for i,building in enumerate(self.building_info):
+                # get rps/price for building
+                cur_rps_pp = self.building_info[building][&#39;cps/price&#39;] 
+                # if it&#39;s the best so far, update max and building id
+                if cur_rps_pp &gt; max_rps_pp:
+                    max_rps_pp,building_to_buy = cur_rps_pp,building
+                    product_to_buy = products[i] # store element to click
+            # update balance
+            self.log_balance_and_revenue()
+            # check if best building is affordible.
+            if self.building_info[building_to_buy][&#39;price&#39;]&lt;=self.balance:
+                # buy building_to_buy (click on this product)
+                product_to_buy.click()
+                # update building info (including rps per price rps_pp)
+                self.get_building_info()
+            else: best_building_affordible=False # if not affordible, break the loop  </code></pre>
 </div>
-<div id="min-wait-time-until-the-highest-rps-option" class="section level2">
-<h2>Min wait time until the highest rps option</h2>
+<div id="minwait-buy-what-reduces-wait-until-the-highest-revenue-purchase" class="section level2">
+<h2>MinWait: Buy what reduces wait until the highest revenue purchase</h2>
+<p>This final strategy is a bit more complex.</p>
 <ul>
 <li>rationale: differences in revenue per building are quite large, so … .</li>
 <li>pics from ipad of concept figure</li>
 <li>proof that balance doesn’t matter</li>
 <li>sketches of preference as rps and cost of another building change.</li>
 </ul>
+<p>The code to implement this, which makes ample use of helper functions, is provided below.</p>
+<pre class="python"><code># Max RPS/price agent
+class agent_class_min_wait(agent_class_naive):
+    # overwrite the buy_products method for this agent&#39;s purchase logic
+    def buy_products(self):
+        ## update building info
+        self.get_building_info()
+        # while best building affordible, buy it and look for next best building
+        best_building_affordible = True
+        while best_building_affordible:
+            ## get unlocked products
+            products = (driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;) + 
+                        driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked disabled&quot;]&#39;))
+            # find building with max revenue per second and it&#39;s cost
+            max_rps,cost_max_rps = 0, float(&#39;inf&#39;)
+            building_to_buy,product_to_buy = [], []
+            for i,building in enumerate(self.building_info):
+                # get rps for building
+                cur_rps = self.building_info[building][&#39;cps&#39;] 
+                # if it&#39;s the best rps far, update max, cost, and building id
+                if cur_rps &gt; max_rps:
+                    max_rps,building_to_buy = cur_rps,building
+                    cost_max_rps = self.building_info[building][&#39;price&#39;] 
+                    product_to_buy = products[i] # queue this building to buy
+
+            # update revenue for computations below
+            self.log_balance_and_revenue()
+            # check if any other purchase would reduce wait time to buying max_rps product
+            wait_max = float(cost_max_rps) / self.revenue if self.revenue else 0 # stops division by 0
+            for i,building in enumerate(self.building_info):
+                cost_cur = self.building_info[building][&#39;price&#39;]
+                rps_cur  = self.revenue + self.building_info[building][&#39;cps&#39;]
+                # conditional to stop division by 0
+                wait_till_cur = float(cost_cur) / self.revenue if self.revenue else 0
+                wait_cur = (wait_till_cur + 
+                             cost_max_rps / rps_cur)
+                if wait_cur &lt;= wait_max: 
+                    wait_max = wait_cur # update minimum wait
+                    building_to_buy = building
+                    product_to_buy = products[i] # queue this building to buy instead
+            # update balance for checking if building affordible
+            self.log_balance_and_revenue()
+            # buy either max_rps product, or the building that would reduce wait time
+            # check if best building is affordible
+            if self.building_info[building_to_buy][&#39;price&#39;]&lt;=self.balance:
+                # buy building_to_buy (click on this product)
+                product_to_buy.click()
+                # update building info (including rps per price rps_pp)
+                self.get_building_info()
+            else: best_building_affordible=False # if not affordible, break purchase loop </code></pre>
 </div>
 </div>
 <div id="performance" class="section level1">
 <h1>Performance</h1>
-<ul>
-<li><p>revenue per second across clicks (proxy for time)</p></li>
-<li><p>building counts per across clicks (proxy for time)</p></li>
-</ul>
+<p>Each agent ran for 100,000 big cookie clicks. The Naive algorithm ran for approximately 3,550 seconds, while the other two ran for around 3,700-3,800. The differences in runtime were small enough that I wasn’t worried about differences in the performance metrics below being attributable to extra income earned from a longer runtime.</p>
+<div class="figure">
+<img src="Cookie_Clicker_Images/Revenue.png" />
+
+</div>
+<p>The MaxCps and MinWait strategies clearly performed better than the Naive strategy in terms of maximizing revenue over time.</p>
+<div class="figure">
+<img src="Cookie_Clicker_Images/BuildingCount.png" />
+
+</div>
+<div class="figure">
+<img src="Cookie_Clicker_Images/Price.png" />
+
+</div>
+<div class="figure">
+<img src="Cookie_Clicker_Images/RevenuePerPrice.png" />
+
+</div>
+<p>Most telling, the MaxCPS strategy seems to equalize the ratio between revenue and price across the investments. The MinWait strategy similarly picks options with a good ratio here, but it also frequently chooses worse deals.</p>
 </div>
 
     </div>

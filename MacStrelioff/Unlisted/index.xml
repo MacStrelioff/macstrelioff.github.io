@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 16:52:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 17:57:33 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/unlisted/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>DRAFT OF: Cookie Clicker Bot</title>
       <link>/MacStrelioff/unlisted/cookie-clicker-bot/</link>
-      <pubDate>Thu, 01 Aug 2019 16:52:36 +0000</pubDate>
+      <pubDate>Thu, 01 Aug 2019 17:57:33 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/cookie-clicker-bot/</guid>
-      <description>ADD PROJECT TO GIT HUB, AND LINK TO IT Overview Background and Setup Cookie Clicker Game  Strategies Naive Max revenue per second Min wait time until the highest rps option  Performance   ADD PROJECT TO GIT HUB, AND LINK TO IT  Overview Lately I’ve been interested in writing algorithms that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms.</description>
+      <description>Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxCPS: Buy best revenue to price ratio MinWait: Buy what reduces wait until the highest revenue purchase  Performance   Overview Lately I’ve been interested in writing algorithms that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies.</description>
     </item>
     
     <item>
