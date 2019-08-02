@@ -1,7 +1,7 @@
 ---
 title: "Cookie Clicker Agent"
 author: "Mac Strelioff"
-date: "2019-08-02 14:56:24"
+date: "2019-08-02 15:55:12"
 output:
   blogdown::html_page:
     toc: true
@@ -28,7 +28,7 @@ math: true
 </ul></li>
 <li><a href="#conclusions">Conclusions</a></li>
 <li><a href="#appendix">Appendix:</a><ul>
-<li><a href="#more-minwait-math">More MinWait Math</a></li>
+<li><a href="#minwait-decision-is-independent-of-balance">MinWait Decision is Independent of Balance</a></li>
 <li><a href="#helper-functions">Helper Functions</a><ul>
 <li><a href="#browser-and-game-initialization">Browser and Game Initialization</a></li>
 <li><a href="#clicking-cookies">Clicking Cookies</a></li>
@@ -226,7 +226,7 @@ for i,building in enumerate(self.building_info):
 <img src="../Cookie_Clicker_Images/BuildingCount.png" />
 
 </div>
-<p>The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxCps agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment.</p>
+<p>The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxROI agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment.</p>
 </div>
 <div id="building-prices" class="section level2">
 <h2>Building Prices</h2>
@@ -234,7 +234,7 @@ for i,building in enumerate(self.building_info):
 <img src="../Cookie_Clicker_Images/Price.png" />
 
 </div>
-<p>The Naieve strategy results in equalizing prices, while both the MaxCps and MinWait strategies can save to purchase the most expensive investment.</p>
+<p>The Naieve strategy results in equalizing prices, while both the MaxROI and MinWait strategies can save to purchase the most expensive investment.</p>
 </div>
 <div id="return-on-investment-revenue-per-cost" class="section level2">
 <h2>Return on Investment (Revenue Per Cost)</h2>
@@ -242,23 +242,33 @@ for i,building in enumerate(self.building_info):
 <img src="../Cookie_Clicker_Images/RevenuePerPrice.png" />
 
 </div>
-<p>The Naive strategy rarely chooses the best ROI option. The MaxCPS strategy equalizes the ratio between revenue and price across the investments, while the MinWait strategy similarly picks options with a good ratio here but also frequently chooses worse deals. Overall the Naive and MinWait strategies often end up paying more than they should for revenue.</p>
+<p>The Naive strategy rarely chooses the best ROI option. The MaxROI strategy equalizes the ratio between revenue and price across the investments, while the MinWait strategy similarly picks options with a good ratio here but also frequently chooses worse deals. Overall the Naive and MinWait strategies often end up paying more than they should for revenue.</p>
 </div>
 </div>
 <div id="conclusions" class="section level1">
 <h1>Conclusions</h1>
-<ul>
-<li>best strategy might be a combination between MaxROI and MinWait</li>
-</ul>
+<p>Both the MaxROI and MinWait agents perform far better than the Naive agent in terms of maximizing revenue. The MaxROI agent performed better when in a buying cycle, but the MinWait agent surpassed the MaxROI agent during long periods of saving for an expensive purchase. Perhaps a better algorithm would be a hybrid that follows the MaxROI strategy when all revenues are known, and uses the MinWait strategy when saving up for an expensive option with an unknown revenue.</p>
 </div>
 <div id="appendix" class="section level1">
 <h1>Appendix:</h1>
-<div id="more-minwait-math" class="section level2">
-<h2>More MinWait Math</h2>
-<ul>
-<li><p>show that balance is irrelevant</p></li>
-<li><p>sketches of preference as rps and cost of another building change.</p></li>
-</ul>
+<div id="minwait-decision-is-independent-of-balance" class="section level2">
+<h2>MinWait Decision is Independent of Balance</h2>
+<p>Another consideration for the MinWait strategy was that the balance could reduce wait overall, and this might mathematically result in a preference reversal if the wait for <span class="math inline">\(b\)</span> becomes negligably small. Accounting for balance and using <span class="math inline">\(c_{max}\)</span> to represent the cost of the maximum revenue option, <span class="math inline">\(r_t\)</span> to represent the current revenue, <span class="math inline">\(c_b\)</span> to represent the cost of another investment, and <span class="math inline">\(r_b\)</span> to be the additional revenue provided by that investment, the wait time calculations become;</p>
+<p><span class="math display">\[ 
+\begin{aligned} 
+w_{max} &amp;= \frac{c_{max}-balance}{r_t}  \\
+w_{b} &amp;= \frac{c_b-balance}{r_t} + \frac{c_{max}}{r_t+r_b}
+\end{aligned}
+\]</span></p>
+<p>The the decision rule can be cast as: buy <span class="math inline">\(b\)</span> if <span class="math inline">\(w_{max} - w_{b}&lt;0\)</span>. This results in the decision function:</p>
+<p><span class="math display">\[ 
+\begin{aligned} 
+w_{max} -  w_{b} &amp; = \frac{c_{max}-balance}{r_t} - \left(\frac{c_b-balance}{r_t} + \frac{c_{max}}{r_t+r_b}\right) \\
+&amp;= \frac{c_{max}-balance-c_b+balance}{r_t} + \frac{c_{max}}{r_t+r_b} \\
+&amp;= \frac{c_{max}-c_b}{r_t} + \frac{c_{max}}{r_t+r_b} \\
+\end{aligned}
+\]</span></p>
+<p>The same function results from <span class="math inline">\(w_{max}=\frac{c_{max}}{r_t}\)</span> and <span class="math inline">\(w_{b} = \frac{c_b}{r_t} + \frac{c_{max}}{r_t+r_b}\)</span>, hence the decision does not depend on balance.</p>
 </div>
 <div id="helper-functions" class="section level2">
 <h2>Helper Functions</h2>

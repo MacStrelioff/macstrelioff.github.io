@@ -269,35 +269,49 @@ The MaxROI and MinWait strategies clearly performed better than the Naive strate
 
 ![](../Cookie_Clicker_Images/BuildingCount.png)
 
-The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxCps agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment. 
+The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxROI agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment. 
 
 ## Building Prices
 
 ![](../Cookie_Clicker_Images/Price.png)
 
-The Naieve strategy results in equalizing prices, while both the MaxCps and MinWait strategies can save to purchase the most expensive investment. 
+The Naieve strategy results in equalizing prices, while both the MaxROI and MinWait strategies can save to purchase the most expensive investment. 
 
 ## Return on Investment (Revenue Per Cost)
 
 ![](../Cookie_Clicker_Images/RevenuePerPrice.png)
 
 
-The Naive strategy rarely chooses the best ROI option. The MaxCPS strategy equalizes the ratio between revenue and price across the investments, while the MinWait strategy similarly picks options with a good ratio here but also frequently chooses worse deals. Overall the Naive and MinWait strategies often end up paying more than they should for revenue.
+The Naive strategy rarely chooses the best ROI option. The MaxROI strategy equalizes the ratio between revenue and price across the investments, while the MinWait strategy similarly picks options with a good ratio here but also frequently chooses worse deals. Overall the Naive and MinWait strategies often end up paying more than they should for revenue.
 
 # Conclusions
 
-- best strategy might be a combination between MaxROI and MinWait
-
+Both the MaxROI and MinWait agents perform far better than the Naive agent in terms of maximizing revenue. The MaxROI agent performed better when in a buying cycle, but the MinWait agent surpassed the MaxROI agent during long periods of saving for an expensive purchase. Perhaps a better algorithm would be a hybrid that follows the MaxROI strategy when all revenues are known, and uses the MinWait strategy when saving up for an expensive option with an unknown revenue. 
 
 # Appendix: 
 
-## More MinWait Math
+## MinWait Decision is Independent of Balance
 
-- show that balance is irrelevant
+Another consideration for the MinWait strategy was that the balance could reduce wait overall, and this might mathematically result in a preference reversal if the wait for $b$ becomes negligably small. Accounting for balance and using $c_{max}$ to represent the cost of the maximum revenue option, $r_t$ to represent the current revenue, $c_b$ to represent the cost of another investment, and $r_b$ to be the additional revenue provided by that investment, the wait time calculations become; 
 
+$$ 
+\begin{aligned} 
+w_{max} &= \frac{c_{max}-balance}{r_t}  \\
+w_{b} &= \frac{c_b-balance}{r_t} + \frac{c_{max}}{r_t+r_b}
+\end{aligned}
+$$ 
 
-- sketches of preference as rps and cost of another building change. 
+The the decision rule can be cast as: buy $b$ if $w_{max} - w_{b}<0$. This results in the decision function: 
 
+$$ 
+\begin{aligned} 
+w_{max} -  w_{b} & = \frac{c_{max}-balance}{r_t} - \left(\frac{c_b-balance}{r_t} + \frac{c_{max}}{r_t+r_b}\right) \\
+&= \frac{c_{max}-balance-c_b+balance}{r_t} + \frac{c_{max}}{r_t+r_b} \\
+&= \frac{c_{max}-c_b}{r_t} + \frac{c_{max}}{r_t+r_b} \\
+\end{aligned}
+$$ 
+
+The same function results from $w_{max}=\frac{c_{max}}{r_t}$ and $w_{b} = \frac{c_b}{r_t} + \frac{c_{max}}{r_t+r_b}$, hence the decision does not depend on balance.
 
 ## Helper Functions
 
