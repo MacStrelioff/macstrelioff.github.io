@@ -40,15 +40,169 @@ Lately I've been interested in writing algorithms (agents) that interact with we
 The interface for [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) is shown below. 
 
 <!--- UPDATE IMAGE POINTER TO ONE THAT IS CORRECT IN THE FILE STRUCTURE OF THE HOSTED FILES --->
-![](./Cookie_Clicker_Images/CookieClickerGameEdited.png)
+![](../Cookie_Clicker_Images/CookieClickerGameEdited.png)
 
 The goal of the game is to amass wealth (cookies) and your balance and revenue are shown above the large cookie. Cookies are earned each time you click the large cookie. Investments, shown at the bottom right, are unlocked as you acquire wealth. Purchasing an investment (Cursor, Grandma, ...) provides recurring revenue (cookies per second). For any specific investment, the price of the next investment increases each time the investment is purchased. In developing the algorithms below I focused on maximizing revenue, which would over time maximize wealth.
 
 The game has other mechanics (upgrades, ascension, golden cookies, ...). I also programed functions to purchase upgrades and click golden cookies for temporary buffs, but these functions were disabled in the analyses below to allow for a more controlled comparison of the algorithms, which only differed in their strategy for building purchases.
 
-# Helper Functions
+## Helper Functions
 
-This section can be skipped if you are only interested in the different strategies and their performance, which are covered completely in the next two sections. This section explains the code used for numerous helper functions that extracted information from the game interface. 
+The base agent class, `agent_class_naive`, contained many helper functions as well as the naive investment purchasing logic. This section explains the code used for the helper functions that extracted information from the game interface. The different strategies and their performance are covered completely in the next two sections, so this section can be skipped if you are uninterested in the helper functions.
+
+### Browser and Game Initialization
+
+The agent was initialized with a web driver object, created with: `driver = webdriver.Chrome('./chromedriver')`. The `__init__` method is shown below:
+
+```{python,eval=FALSE}
+# Naive agent
+class agent_class_naive:
+    def __init__(self,driver):
+        # navigate to site
+        driver.get('https://orteil.dashnet.org/cookieclicker/')
+        time.sleep(10) # time for page to load
+        self.big_cookie = driver.find_element_by_id('bigCookie')
+        self.golden_cookie_clicks = 0
+        # initialize balance and revenue variables
+        self.balance=0
+        self.revenue=0 
+        # initialize balance and revenue logs
+        self.log_balance=[0]
+        self.log_revenue=[0]
+        self.log_bal_rev_epoch=[0]
+        # initialize building info, and logs of building info
+        self.get_building_info()
+        self.log_build_info = dict()
+        self.building_info_logger(epoch=0)
+        
+        # CHANGE GRAPHICS AND OTHER SETTINGS
+        # click 'options' tab
+        driver.find_element_by_id("prefsButton").click()
+        time.sleep(1) # let page load
+        # disable text instead of numbers, e.g. 'million' -> '000,000'
+        driver.find_element_by_id("numbersButton").click()
+        # slide volume to around 25%
+        time.sleep(.5) # so actions don't happen too fast
+        volume = driver.find_element_by_class_name("slider")
+        move = ActionChains(driver)
+        move.click_and_hold(volume).move_by_offset(-50, 0).release().perform()
+        # change graphics for optimal performance
+        buttons = ("fancyButton","particlesButton","cursorsButton",
+                  "milkButton","wobblyButton","cookiesoundButton",
+                  "formatButton","extraButtonsButton","customGrandmasButton")
+        for button in buttons:
+            time.sleep(.5) # so actions don't happen too fast to execute
+            driver.find_element_by_id(button).click()
+```
+
+
+### Clicking Cookies
+
+```{python,eval=FALSE}
+    def click_cookie(self):
+        self.big_cookie.click()
+        
+    def click_golden_cookie(self):
+        golden_cookies = driver.find_elements_by_xpath('//div[@class="shimmer"]')
+        while len(golden_cookies)>0: # if there are products, and while we can afford products,
+            for golden_cookie in golden_cookies:
+                golden_cookie.click() # buy each one
+                self.golden_cookie_clicks+=1
+            golden_cookies = driver.find_elements_by_xpath('//div[@class="shimmer"]')
+```
+
+### Purchasing Upgrades 
+
+
+```{python,eval=FALSE}
+    def buy_upgrades(self):
+        upgrades = driver.find_elements_by_xpath('//div[@class="crate upgrade enabled"]')
+        while len(upgrades)>0: # if there are products, and while we can afford products,
+            try: upgrades[-1].click() # buy each one, most expensive first
+            except: None
+            upgrades = driver.find_elements_by_xpath('//div[@class="crate upgrade enabled"]')
+```
+
+
+
+### Logging balance and revenue
+
+called without epoch, this just updated balance and revenue for purchasing logic described in the strategy sections below. Called with epoch, this would log balance and revenue for analyzing the agent's performance. 
+
+```{python,eval=FALSE}
+    def log_balance_and_revenue(self,epoch=None):
+        # log balance and revenue
+        tmp = driver.find_elements_by_xpath('//div[@id="cookies"]')
+        tmp = tmp[0].text.replace(',','') # remove camas 1,000 -> 1000
+        tmp = re.findall("\d+",tmp) # extract balance and revenue
+        tmp = [int(i) for i in tmp] # convert str -> int
+        self.balance = tmp[0] # update current balance
+        self.revenue = tmp[1] # new for min_wait agent
+        if epoch: # epoch passed when this is called to log info, not just to update balance
+            self.log_bal_rev_epoch.append(epoch) # index for balance and revenue
+            self.log_balance.append(tmp[0]) # log balance
+            self.log_revenue.append(tmp[1]) # log revenue
+```
+
+### Get building information
+
+```{python,eval=FALSE}
+    def get_building_info(self):
+        # get unlocked products
+        products_unlocked = (driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]') + 
+                             driver.find_elements_by_xpath('//div[@class="product unlocked disabled"]'))
+        # info for unlocked buildings
+        building_info = dict()
+        for i,building in enumerate(products_unlocked):
+            # get info from building button
+            tmp=building.text.replace(',','').split(sep="\n")
+            building_name,building_price,building_count = tmp if len(tmp)==3 else tmp+[0]
+            # initialize dict for building
+            building_info[building_name] = dict()
+            # fill in count and price
+            building_info[building_name]['count']=int(building_count)
+            building_info[building_name]['price']=int(building_price)
+            # get info from building tooltip
+            hover = ActionChains(driver).move_to_element(building)
+            hover.perform()
+            tooltip = driver.find_elements_by_xpath('//div[@id="tooltip"]')
+            tmp=tooltip[0].text.replace(',','');
+            # tmp_cps = re.findall(r"[-+]?\d*\.\d+ cookies per|\d+ cookies per",tmp)
+            # ^ fails for grandmas because of their text
+            tmp_cps  = re.findall(r"produces [-+]?\d*\.\d+|produces \d+",tmp);
+            # > 'produces X'
+            if tmp_cps: # if building has been purchased
+                tmp_cps_2=float(re.findall(r"[-+]?\d*\.\d+|\d+",tmp_cps[0])[0])
+                building_cps = tmp_cps_2
+            else: # if building hasn't been purchased, store cps as infinity
+                building_cps = float('inf')
+            # > X
+            #### default of inf below encourages purchasing unlocked, unowned buildings
+            #building_cps = float(tmp_cps[0][:tmp_cps[0].find(' ')]) if tmp_cps else float('inf')
+            building_info[building_name]['cps']=building_cps
+            building_info[building_name]['cps/price']=building_cps/int(building_price)
+        self.building_info = building_info
+```
+
+```{python,eval=FALSE}
+    def building_info_logger(self,epoch):
+        if self.building_info: # if self.building_info exists
+            # modified from get_building_info to append.
+            log_keys = ['count','price','cps','cps/price']
+            # info for unlocked buildings
+            for building in self.building_info:
+                # initialize new buildings
+                if building not in self.log_build_info:
+                    self.log_build_info[building] = dict()
+                    for k in log_keys+['epoch']:
+                        self.log_build_info[building][k]=[]
+                # fill in count,price,cps, cps/price
+                for k in log_keys:
+                    self.log_build_info[building][k].append(self.building_info[building][k])
+                # log epoch, within each building since buildings become available at different times
+                self.log_build_info[building]['epoch'].append(epoch)
+
+```
 
 
 - in describing the method for getting building information:
@@ -263,52 +417,23 @@ Here the MinWait agent gets the cost of a candidate investment, `cost_cur` and t
 Like the MaxROI agent, the last few lines of code check if the investment is affordible, and if not, terminates the ends the purchasing loop.
 
 
-# Execution
-
-Each agent class was instantiated as `agent`, run for 100,000 big cookie clicks, with the purchasing logic being run every 200 clicks using the code below:
-
-```{python, eval=FALSE}
-# run algorithm for a specified number of cookie clicks
-clicks = 100000-ci
-t0=time.time()
-initial_ci = ci
-stop = ci+clicks # run for `clicks` additional clicks
-while ci<stop:
-    ci += 1 # increment click counter
-    agent.click_cookie()
-    if ci%200 == 0: # to speed pure clicking
-        agent.buy_products()
-        # log data
-        agent.log_balance_and_revenue(epoch=ci)
-        agent.get_building_info()
-        agent.building_info_logger(epoch=ci)
-        # feedback
-        clear_output()
-        print('click: '+str(ci-initial_ci)+' of '+str(stop-initial_ci)+
-             '\npct: '+str((ci-initial_ci)/(stop-initial_ci))+
-             '\nGolden Clicks: '+str(agent.golden_cookie_clicks))
-t1=time.time()
-print('Total Time: '+ str(t1-t0) +'sec')
-```
-
-
 # Performance 
 
-Each agent ran for 100,000 big cookie clicks. The Naive algorithm ran for approximately 3,550 seconds, while the other two ran for around 3,700-3,800. The differences in runtime were small enough that I wasn't worried about differences in the performance metrics below being attributable to extra income earned from a longer runtime. 
+Each agent class was instantiated as `agent` and run for 100,000 big cookie clicks, with the purchasing logic being run every 200 clicks. The Naive algorithm ran for approximately 3,550 seconds, while the other two ran for around 3,700-3,800. The differences in runtime were small enough that I wasn't worried about differences in the performance metrics below being attributable to extra income earned from a longer runtime. 
 
-![](./Cookie_Clicker_Images/Revenue.png)
+![](../Cookie_Clicker_Images/Revenue.png)
 
 The MaxCps and MinWait strategies clearly performed better than the Naive strategy in terms of maximizing revenue over time. 
 
-![](./Cookie_Clicker_Images/BuildingCount.png)
+![](../Cookie_Clicker_Images/BuildingCount.png)
 
 The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxCps agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment. 
 
-![](./Cookie_Clicker_Images/Price.png)
+![](../Cookie_Clicker_Images/Price.png)
 
 The Naieve strategy equalizes price, while both the MaxCps and MinWait strategies can save to purchase the most expensive investment. 
 
-![](./Cookie_Clicker_Images/RevenuePerPrice.png)
+![](../Cookie_Clicker_Images/RevenuePerPrice.png)
 
 Most telling, the MaxCPS strategy seems to equalize the ratio between revenue and price across the investments. The MinWait strategy similarly picks options with a good ratio here, but it also frequently chooses worse deals. 
 
