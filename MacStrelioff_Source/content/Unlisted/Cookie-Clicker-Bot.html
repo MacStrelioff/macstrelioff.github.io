@@ -1,7 +1,7 @@
 ---
 title: "Cookie Clicker Agent"
 author: "Mac Strelioff"
-date: "2019-08-02 13:57:15"
+date: "2019-08-02 14:56:24"
 output:
   blogdown::html_page:
     toc: true
@@ -15,12 +15,17 @@ math: true
 <li><a href="#background-and-setup">Background and Setup</a><ul>
 <li><a href="#cookie-clicker-game">Cookie Clicker Game</a></li>
 </ul></li>
-<li><a href="#strategies">Strategies</a><ul>
+<li><a href="#agents">Agents</a><ul>
 <li><a href="#naive-buy-all-affordable-investments">Naive: Buy all affordable investments</a></li>
 <li><a href="#maxroi-buy-best-return-on-investment">MaxROI: Buy best return on investment</a></li>
-<li><a href="#minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase">MinWait: Buy what minizes the time to the highest revenue purchase</a></li>
+<li><a href="#minwait-buy-what-minimizes-the-time-to-the-highest-revenue-purchase">MinWait: Buy what minimizes the time to the highest revenue purchase</a></li>
 </ul></li>
-<li><a href="#performance">Performance</a></li>
+<li><a href="#performance">Performance</a><ul>
+<li><a href="#revenue">Revenue</a></li>
+<li><a href="#building-count">Building Count</a></li>
+<li><a href="#building-prices">Building Prices</a></li>
+<li><a href="#return-on-investment-revenue-per-cost">Return on Investment (Revenue Per Cost)</a></li>
+</ul></li>
 <li><a href="#conclusions">Conclusions</a></li>
 <li><a href="#appendix">Appendix:</a><ul>
 <li><a href="#more-minwait-math">More MinWait Math</a></li>
@@ -50,11 +55,11 @@ math: true
 
 </div>
 <p>The goal of the game is to amass wealth in the form of cookies. Your balance and revenue are shown above the large cookie. Cookies are earned each time you click the large cookie and investments, shown at the bottom right, are unlocked as you acquire wealth. Purchasing an investment (Cursor, Grandma, …) provides recurring revenue in cookies per second. For any specific investment, the price of the next investment increases each time the investment is purchased. In developing the algorithms below I focused on maximizing revenue, which would maximize wealth over time.</p>
-<p>The game has other mechanics (upgrades, ascension, golden cookies, …). I programed functions to purchase upgrades and click golden cookies, but these functions were disabled in the analyses below to allow for a controlled comparison of the algorithms, which only differed in their strategy for building purchases.</p>
+<p>The game has other mechanics (upgrades, ascension, golden cookies, …). I programed functions to purchase upgrades and click golden cookies, but these functions were disabled in the analyses below to allow for a controlled comparison of the agents.</p>
 </div>
 </div>
-<div id="strategies" class="section level1">
-<h1>Strategies</h1>
+<div id="agents" class="section level1">
+<h1>Agents</h1>
 <p>While the goal was to earn as many cookies as possible, the game also allows revenue to accrue while the player is away, and the amount of cookies earned per click can scale with revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.</p>
 <div id="naive-buy-all-affordable-investments" class="section level2">
 <h2>Naive: Buy all affordable investments</h2>
@@ -114,13 +119,13 @@ for i,building in enumerate(self.building_info):
     if cur_rps_pp &gt; max_rps_pp:
         max_rps_pp,building_to_buy = cur_rps_pp,building
         product_to_buy = products[i] # store element to click</code></pre>
-<p>This is an <span class="math inline">\(O(N)\)</span> search through the buildings that have information, where <span class="math inline">\(N\)</span> is the number of buildings. This code logs the maximum ROI in <code>max_rps_pp</code> and the building associated with this ROI in <code>building_to_buy</code>, as well as the web element to click in order to purchase this building, <code>product_to_buy</code>. After the best ROI investment is found, the next few lines of code update the agent’s balance and check if the investment is affordable. If it is, this process repeats, if it is not then <code>best_building_affordable</code> is set to <code>False</code> which ends the while loop.</p>
+<p>This is an <span class="math inline">\(O(N)\)</span> search through the buildings that have information, where <span class="math inline">\(N\)</span> is the number of buildings. This code logs the maximum ROI in <code>max_rps_pp</code> and the building associated with this ROI in <code>building_to_buy</code>, as well as the web element to click in order to purchase this building, <code>product_to_buy</code>. After the best ROI investment is found, the next few lines of code update the agent’s balance and check if the investment is affordable. If it is, the agent buys it and this process repeats, if it is not then <code>best_building_affordable</code> is set to <code>False</code> which ends the while loop.</p>
 </div>
-<div id="minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase" class="section level2">
-<h2>MinWait: Buy what minizes the time to the highest revenue purchase</h2>
-<p>The intuition of this strategy is to buy the investment that maximizes revenue, however, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in the figure below, where the naive waiter (red) waits until they can purchase a hypothetical maximum revenue investment for 200, and the MinWait algorithm makes an investment for 100 that increases revenue enough to purchase the 200 maximum revenue investment faster than the naive waiter:</p>
+<div id="minwait-buy-what-minimizes-the-time-to-the-highest-revenue-purchase" class="section level2">
+<h2>MinWait: Buy what minimizes the time to the highest revenue purchase</h2>
+<p>The intuition of this strategy is to buy the investment that maximizes revenue, however, those investments can be expensive. Other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in the figure below, where the naive waiter (red) waits until they can purchase a hypothetical maximum revenue investment for 200, and the MinWait algorithm makes an investment for 100 that increases revenue enough to purchase the maximum revenue investment faster than the naive waiter:</p>
 <p><img src="/MacStrelioff/Unlisted/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>Formally, this algorithm first computes the wait until the maximum revenue investment can be purchased (<span class="math inline">\(w_{max}\)</span>), then searches for investments that can reduce the wait and purchases any that it finds. For a given current revenue <span class="math inline">\(r_{t}\)</span> and cost of the maximum revenue investment, <span class="math inline">\(c_{max}\)</span>, the wait until this investment can be purchased is <span class="math inline">\(w_{max}=\frac{c_{max}}{r_t}\)</span>, which corresponds to the time when the red line reaches 200. This formula ignores current balance, but in the appendix I show that the current balance is irrelevant for the purchasing decision. An alternative investment, <span class="math inline">\(b\)</span>, could improve the wait time if it’s addition to revenue is large enough to make up for its cost within before the time <span class="math inline">\(w_{max}\)</span>. This is shown with the blue dashed line in the example above. If investment <span class="math inline">\(b\)</span> adds <span class="math inline">\(r_b\)</span> to the current revenue <span class="math inline">\(r_t\)</span>, and costs <span class="math inline">\(c_b\)</span>, then the wait until the maximum revenue investment if <span class="math inline">\(b\)</span> is purchased is: <span class="math inline">\(w_b = \frac{c_b}{r_t}+\frac{c_a}{r_t+r_b}\)</span>. This algorithm then buys investment <span class="math inline">\(b\)</span> if <span class="math inline">\(w_b&lt;w_{max}\)</span>; that is, if purchasing <span class="math inline">\(b\)</span> reduces the wait until the maximum revenue investment can be purchased.</p>
+<p>Formally, this algorithm first computes the wait until the maximum revenue investment can be purchased (<span class="math inline">\(w_{max}\)</span>), then searches for investments that can reduce the wait and purchases any that it finds. For a given current revenue <span class="math inline">\(r_{t}\)</span> and cost of the maximum revenue investment, <span class="math inline">\(c_{max}\)</span>, the wait until this investment can be purchased is <span class="math inline">\(w_{max}=\frac{c_{max}}{r_t}\)</span>, which corresponds to the time when the red line reaches 200. This formula ignores current balance, but in the appendix I show that the current balance is irrelevant for the purchasing decision. An alternative investment, <span class="math inline">\(b\)</span>, could improve the wait time if it’s addition to revenue is large enough to make up for its cost before the time <span class="math inline">\(w_{max}\)</span>. This is shown with the blue dashed line in the example above. If investment <span class="math inline">\(b\)</span> adds <span class="math inline">\(r_b\)</span> to the current revenue <span class="math inline">\(r_t\)</span>, and costs <span class="math inline">\(c_b\)</span>, then the wait until the maximum revenue investment if <span class="math inline">\(b\)</span> is purchased is: <span class="math inline">\(w_b = \frac{c_b}{r_t}+\frac{c_a}{r_t+r_b}\)</span>. This algorithm buys <span class="math inline">\(b\)</span> if <span class="math inline">\(w_b&lt;w_{max}\)</span>; that is, if purchasing <span class="math inline">\(b\)</span> reduces the wait until the maximum revenue investment can be purchased.</p>
 <p>The code I used to implement this is provided below.</p>
 <pre class="python"><code># Max RPS/price agent
 class agent_class_min_wait(agent_class_naive):
@@ -171,7 +176,7 @@ class agent_class_min_wait(agent_class_naive):
                 # update building info (including rps per price rps_pp)
                 self.get_building_info()
             else: best_building_affordable=False # if not affordable, break purchase loop </code></pre>
-<p>This implementation again extends the <code>agent_class_naive</code> class by replacing the <code>buy_products</code> method. This algorithm works with two passes through the list of unlocked investments. The fist pass is copied below:</p>
+<p>This implementation again extends the <code>agent_class_naive</code> class by replacing the <code>buy_products</code> method. The algorithm makes two passes through the list of unlocked investments. The fist pass is copied below:</p>
 <pre class="python"><code># find building with max revenue per second and it&#39;s cost
 max_rps,cost_max_rps = 0, float(&#39;inf&#39;)
 building_to_buy,product_to_buy = [], []
@@ -183,10 +188,11 @@ for i,building in enumerate(self.building_info):
         max_rps,building_to_buy = cur_rps,building
         cost_max_rps = self.building_info[building][&#39;price&#39;] 
         product_to_buy = products[i] # queue this building to buy</code></pre>
-<p>Similar to that used in the MaxROI agent, this code is an <span class="math inline">\(O(N)\)</span> search through the <span class="math inline">\(N\)</span> unlocked buildings. This code logs the maximum revenue in <code>max_rps</code> and the building associated with this revenue in <code>building_to_buy</code>, as well as the web element to click in order to purchase this building, <code>product_to_buy</code>.</p>
+<p>Similar to that used in the MaxROI agent, this code is an <span class="math inline">\(O(N)\)</span> search through the <span class="math inline">\(N\)</span> unlocked buildings. It logs the maximum revenue in <code>max_rps</code> and the building associated with this revenue in <code>building_to_buy</code>, as well as the web element to click in order to purchase this building, <code>product_to_buy</code>.</p>
 <p>Then the agent computes <span class="math inline">\(w_{max}\)</span> with:</p>
 <pre class="python"><code>wait_max = float(cost_max_rps) / self.revenue if self.revenue else 0 # stops division by 0</code></pre>
-<p>And runs another pass through the list of buildings again, this time searching for a building that will reduce the wait time:</p>
+<p>The <code>(value) if (condition) else 0</code> is used to stop division by 0 – if <code>self.revenue</code> is 0, then wait_max will take the value 0 rather than the computed value which is undefined when <code>self.revenue</code> is 0.</p>
+<p>Next, another pass through the list of buildings, this time searching for a building that will reduce the wait time:</p>
 <pre class="python"><code>for i,building in enumerate(self.building_info):
     cost_cur = self.building_info[building][&#39;price&#39;]
     rps_cur  = self.revenue + self.building_info[building][&#39;cps&#39;]
@@ -204,27 +210,40 @@ for i,building in enumerate(self.building_info):
 </div>
 <div id="performance" class="section level1">
 <h1>Performance</h1>
-<p>Each agent class was instantiated as <code>agent</code> and run for 100,000 big cookie clicks, with the purchasing logic being run every 200 clicks. The Naive algorithm ran for approximately 3,550 seconds, while the other two ran for around 3,700-3,800. The differences in runtime were small enough that I wasn’t worried about differences in the performance metrics below being attributable to extra income earned from a longer runtime.</p>
+<p>Each agent class was instantiated as <code>agent</code> and run for 100,000 big cookie clicks, with the purchase logic run after every 200 clicks. The Naive, MaxROI, and MinWait agents ran for approximately 3650 seconds, 3785 seconds, and 3800 seconds, respectively. The differences in runtime were small enough that I wasn’t worried about differences in the performance metrics below being attributable to extra income earned from a longer runtime.</p>
+<div id="revenue" class="section level2">
+<h2>Revenue</h2>
+<p>First I looked at the main metric, revenue per second, shown in the figure below:</p>
 <div class="figure">
 <img src="../Cookie_Clicker_Images/Revenue.png" />
 
 </div>
-<p>The MaxCps and MinWait strategies clearly performed better than the Naive strategy in terms of maximizing revenue over time.</p>
+<p>The MaxROI and MinWait strategies clearly performed better than the Naive strategy in terms of maximizing revenue per second. It also appeared that the MaxROI algorithm generally had higher revenue when in a purchasing cycle, but the MinWait algorithm surpassed the MaxROI algorithm when waiting for a large purchase.</p>
+</div>
+<div id="building-count" class="section level2">
+<h2>Building Count</h2>
 <div class="figure">
 <img src="../Cookie_Clicker_Images/BuildingCount.png" />
 
 </div>
 <p>The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxCps agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment.</p>
+</div>
+<div id="building-prices" class="section level2">
+<h2>Building Prices</h2>
 <div class="figure">
 <img src="../Cookie_Clicker_Images/Price.png" />
 
 </div>
-<p>The Naieve strategy equalizes price, while both the MaxCps and MinWait strategies can save to purchase the most expensive investment.</p>
+<p>The Naieve strategy results in equalizing prices, while both the MaxCps and MinWait strategies can save to purchase the most expensive investment.</p>
+</div>
+<div id="return-on-investment-revenue-per-cost" class="section level2">
+<h2>Return on Investment (Revenue Per Cost)</h2>
 <div class="figure">
 <img src="../Cookie_Clicker_Images/RevenuePerPrice.png" />
 
 </div>
-<p>Most telling, the MaxCPS strategy seems to equalize the ratio between revenue and price across the investments. The MinWait strategy similarly picks options with a good ratio here, but it also frequently chooses worse deals.</p>
+<p>The Naive strategy rarely chooses the best ROI option. The MaxCPS strategy equalizes the ratio between revenue and price across the investments, while the MinWait strategy similarly picks options with a good ratio here but also frequently chooses worse deals. Overall the Naive and MinWait strategies often end up paying more than they should for revenue.</p>
+</div>
 </div>
 <div id="conclusions" class="section level1">
 <h1>Conclusions</h1>
