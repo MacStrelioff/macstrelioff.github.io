@@ -1,0 +1,529 @@
+---
+title: "Example Web Agent"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+output:
+  blogdown::html_page:
+    toc: true
+menu:
+  data-science:
+    parent: Projects
+    weight: 11
+linktitle: Example Web Agent
+type: docs
+math: true
+---
+
+```{r,include=FALSE}
+library(reticulate)
+```
+
+```{r,include=FALSE}
+knitr::opts_chunk$set(comment = ">>>")
+#py_discover_config() # to see versions of Python
+use_python("/anaconda3/bin/python")
+# py_config() # check paths
+# test imports
+#import("numpy",as="np")
+#import("requests")
+
+# path to interpreter from python (I ran in a juperter nb to find the path used here)
+# import sys
+# print(sys.executable)
+
+# for figures, without issues..;
+# https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/
+```
+
+<!---
+- Write post and tag https://twitter.com/Orteil42 and the cookie clicker twitter in final post
+--->
+
+# Overview
+
+Lately I've been interested in writing algorithms (agents) that interact with websites. The game [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies). Here I'll describe three agents that I made for this game and assess their performance. I also describe many of the helper functions involved in implementing these agents. The code that implements these agents and reproduces all figures in this blog post can be found on my GitHub, here: [https://github.com/MacStrelioff/CookieClickerAgent](https://github.com/MacStrelioff/CookieClickerAgent)
+
+# Background and Setup 
+
+## Cookie Clicker Game
+
+The interface for [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) is shown below. 
+
+<!--- UPDATE IMAGE POINTER TO ONE THAT IS CORRECT IN THE FILE STRUCTURE OF THE HOSTED FILES --->
+![](../Cookie_Clicker_Images/CookieClickerGameEdited.png)
+
+The goal of the game is to amass wealth in the form of cookies. Your balance and revenue are shown above the large cookie. Cookies are earned each time you click the large cookie and investments, shown at the bottom right, are unlocked as you acquire wealth. Purchasing an investment (Cursor, Grandma, ...) provides recurring revenue in cookies per second. For any specific investment, the price of the next investment increases each time the investment is purchased. In developing the algorithms below I focused on maximizing revenue, which would maximize wealth over time.
+
+The game has other mechanics (upgrades, ascension, golden cookies, ...). I programed functions to purchase upgrades and click golden cookies, but these functions were disabled in the analyses below to allow for a controlled comparison of the agents.
+
+# Agents
+
+While the goal was to earn as many cookies as possible, the game also allows revenue to accrue while the player is away, and the amount of cookies earned per click can scale with revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.
+
+## Naive: Buy all affordable investments
+
+The simplest investment strategy was to purchase any affordable building. This is implemented in the code below:
+
+```{python, eval=FALSE}
+class agent_class_naive:
+
+...
+
+def buy_products(self):
+    products = driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]')
+    while products: # if there are affordable products, buy them
+        products[-1].click()
+        products = driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]')
+        
+...
+
+
+```
+
+Here `products` is a list of the web elements that represent the affordable buildings, and the while loop cycles over them, buying the most expensive ones first with `products[-1].click()`, until no more buildings are affordable. This purchasing logic is implemented through a `buy_products` method of the naive agent, `agent_class_naive`. In [my code](https://github.com/MacStrelioff/CookieClickerAgent), the naive agent class also contained the necessary helper functions, described in the section above. 
+
+## MaxROI: Buy best return on investment
+
+The second strategy is to buy the option that will have the best return on investment (revenue to price ratio). The code below extends the naive agent, `agent_class_naive`, by overriding the `buy_products` method that implements the investment strategy. 
+
+```{python, eval=FALSE}
+class agent_class_max_rps_price_ratio(agent_class_naive):
+    # overwrite the buy_products method
+    def buy_products(self):
+        ## update building info
+        self.get_building_info()
+        # while best is affordable, buy the best rps/price building
+        best_building_affordable = True
+        while best_building_affordable:
+            ## get unlocked products
+            products = (driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]') + 
+                        driver.find_elements_by_xpath('//div[@class="product unlocked disabled"]'))
+            # find max rps/price building
+            max_rps_pp,building_to_buy,product_to_buy = 0,[],[]
+            for i,building in enumerate(self.building_info):
+                # get rps/price for building
+                cur_rps_pp = self.building_info[building]['cps/price'] 
+                # if it's the best so far, update max and building id
+                if cur_rps_pp > max_rps_pp:
+                    max_rps_pp,building_to_buy = cur_rps_pp,building
+                    product_to_buy = products[i] # store element to click
+            # update balance
+            self.log_balance_and_revenue()
+            # check if best building is affordable.
+            if self.building_info[building_to_buy]['price']<=self.balance:
+                # buy building_to_buy (click on this product)
+                product_to_buy.click()
+                # update building info (including rps per price rps_pp)
+                self.get_building_info()
+            else: best_building_affordable=False # if not affordable, break the loop  
+
+```
+
+First the MaxROI agent updates building information, including; cookies per second, price, and the ratio cps/price, using the helper method `get_building_info()`. Then it purchases the buildings that provide the max ROI, until the best building by this metric is unaffordable. The search for the best building is implemented in the section: 
+
+```{python,eval=FALSE}
+# find max rps/price building
+max_rps_pp,building_to_buy,product_to_buy = 0,[],[]
+for i,building in enumerate(self.building_info):
+    # get rps/price for building
+    cur_rps_pp = self.building_info[building]['cps/price'] 
+    # if it's the best so far, update max and building id
+    if cur_rps_pp > max_rps_pp:
+        max_rps_pp,building_to_buy = cur_rps_pp,building
+        product_to_buy = products[i] # store element to click
+```
+
+This is an $O(N)$ search through the buildings that have information, where $N$ is the number of buildings. This code logs the maximum ROI in `max_rps_pp` and the building associated with this ROI in `building_to_buy`, as well as the web element to click in order to purchase this building, `product_to_buy`. After the best ROI investment is found, the next few lines of code update the agent's balance and check if the investment is affordable. If it is, the agent buys it and this process repeats, if it is not then `best_building_affordable` is set to `False` which ends the while loop. 
+
+## MinWait: Buy what minimizes the time to the highest revenue purchase
+
+The intuition of this strategy is to buy the investment that maximizes revenue, however, those investments can be expensive. Other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in the figure below, where the naive waiter (red) waits until they can purchase a hypothetical maximum revenue investment for 
+200, and the MinWait algorithm makes an investment for 100 that increases revenue enough to purchase the maximum revenue investment faster than the naive waiter: 
+
+```{r,echo=FALSE}
+# time and balance for a Naive waiter
+ta = seq(0,200)
+ya = ta*1
+# time and balance for a MinWaiter
+t1 = seq(0,100)
+y1 = t1*1
+t2 = seq(0,100)
+y2 = t2*2.5
+plot(ta,ya,type='l',            lwd=3,col=rgb(.8,0,0),
+     xlab = "Time",
+     ylab = "Balance",
+     main = "Intuition for MinWait Agent")
+lines(c(t1,t2[y2<=200]+max(t1)),c(y1,y2[y2<=200]),lwd=3,col=rgb(0,0,.8),lty=2)
+abline(h=100,lty=2,lwd=2)
+abline(h=200,lty=1,lwd=1)
+abline(v=max(ta[ya<=200])        ,lty=3,col=rgb(.8,0,0),lwd=2)
+abline(v=max(t2[y2<=200]+max(t1)),lty=3,col=rgb(0,0,.8),lwd=2)
+legend(0,175,c("Naive Wait","MinWait"),lty=c(1,2),lwd=2,col=c(rgb(.8,0,0),rgb(0,0,.8)))
+```
+
+Formally, this algorithm first computes the wait until the maximum revenue investment can be purchased ($w_{max}$), then searches for investments that can reduce the wait and purchases any that it finds. For a given current revenue $r_{t}$ and cost of the maximum revenue investment, $c_{max}$, the wait until this investment can be purchased is $w_{max}=\frac{c_{max}}{r_t}$, which corresponds to the time when the red line reaches 200. This formula ignores current balance, but in the appendix I show that the current balance is irrelevant for the purchasing decision. An alternative investment, $b$, could improve the wait time if it's addition to revenue is large enough to make up for its cost before the time $w_{max}$. This is shown with the blue dashed line in the example above. If investment $b$ adds $r_b$ to the current revenue $r_t$, and costs $c_b$, then the wait until the maximum revenue investment if $b$ is purchased is: $w_b = \frac{c_b}{r_t}+\frac{c_a}{r_t+r_b}$. This algorithm buys $b$ if $w_b<w_{max}$; that is, if purchasing $b$ reduces the wait until the maximum revenue investment can be purchased.
+
+The code I used to implement this is provided below. 
+
+```{python, eval=FALSE}
+# Max RPS/price agent
+class agent_class_min_wait(agent_class_naive):
+    # overwrite the buy_products method for this agent's purchase logic
+    def buy_products(self):
+        ## update building info
+        self.get_building_info()
+        # while best building affordable, buy it and look for next best building
+        best_building_affordable = True
+        while best_building_affordable:
+            ## get unlocked products
+            products = (driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]') + 
+                        driver.find_elements_by_xpath('//div[@class="product unlocked disabled"]'))
+            # find building with max revenue per second and it's cost
+            max_rps,cost_max_rps = 0, float('inf')
+            building_to_buy,product_to_buy = [], []
+            for i,building in enumerate(self.building_info):
+                # get rps for building
+                cur_rps = self.building_info[building]['cps'] 
+                # if it's the best rps far, update max, cost, and building id
+                if cur_rps > max_rps:
+                    max_rps,building_to_buy = cur_rps,building
+                    cost_max_rps = self.building_info[building]['price'] 
+                    product_to_buy = products[i] # queue this building to buy
+
+            # update revenue for computations below
+            self.log_balance_and_revenue()
+            # check if any other purchase would reduce wait time to buying max_rps product
+            wait_max = float(cost_max_rps) / self.revenue if self.revenue else 0 # stops division by 0
+            for i,building in enumerate(self.building_info):
+                cost_cur = self.building_info[building]['price']
+                rps_cur  = self.revenue + self.building_info[building]['cps']
+                # conditional to stop division by 0
+                wait_till_cur = float(cost_cur) / self.revenue if self.revenue else 0
+                wait_cur = (wait_till_cur + 
+                             cost_max_rps / rps_cur)
+                if wait_cur <= wait_max: 
+                    wait_max = wait_cur # update minimum wait
+                    building_to_buy = building
+                    product_to_buy = products[i] # queue this building to buy instead
+            # update balance for checking if building affordable
+            self.log_balance_and_revenue()
+            # buy either max_rps product, or the building that would reduce wait time
+            # check if best building is affordable
+            if self.building_info[building_to_buy]['price']<=self.balance:
+                # buy building_to_buy (click on this product)
+                product_to_buy.click()
+                # update building info (including rps per price rps_pp)
+                self.get_building_info()
+            else: best_building_affordable=False # if not affordable, break purchase loop 
+```
+
+This implementation again extends the `agent_class_naive` class by replacing the `buy_products` method. The algorithm makes two passes through the list of unlocked investments. The fist pass is copied below: 
+
+```{python, eval=FALSE}
+# find building with max revenue per second and it's cost
+max_rps,cost_max_rps = 0, float('inf')
+building_to_buy,product_to_buy = [], []
+for i,building in enumerate(self.building_info):
+    # get rps for building
+    cur_rps = self.building_info[building]['cps'] 
+    # if it's the best rps far, update max, cost, and building id
+    if cur_rps > max_rps:
+        max_rps,building_to_buy = cur_rps,building
+        cost_max_rps = self.building_info[building]['price'] 
+        product_to_buy = products[i] # queue this building to buy
+```
+
+Similar to that used in the MaxROI agent, this code is an $O(N)$ search through the $N$ unlocked buildings. It logs the maximum revenue in `max_rps` and the building associated with this revenue in `building_to_buy`, as well as the web element to click in order to purchase this building, `product_to_buy`.
+
+Then the agent computes $w_{max}$ with: 
+
+```{python,eval=FALSE}
+wait_max = float(cost_max_rps) / self.revenue if self.revenue else 0 # stops division by 0
+```
+
+The `(value) if (condition) else 0` is used to stop division by 0 -- if `self.revenue` is 0, then wait_max will take the value 0 rather than the computed value which is undefined when `self.revenue` is 0.
+
+Next, another pass through the list of buildings, this time searching for a building that will reduce the wait time: 
+
+```{python,eval=FALSE}
+for i,building in enumerate(self.building_info):
+    cost_cur = self.building_info[building]['price']
+    rps_cur  = self.revenue + self.building_info[building]['cps']
+    # conditional to stop division by 0
+    wait_till_cur = float(cost_cur) / self.revenue if self.revenue else 0
+    wait_cur = (wait_till_cur + 
+                 cost_max_rps / rps_cur)
+    if wait_cur <= wait_max: 
+        wait_max = wait_cur # update minimum wait
+        building_to_buy = building
+        product_to_buy = products[i] # queue this building to buy instead
+```
+
+Here the MinWait agent gets the cost of a candidate investment, `cost_cur` and the revenue that would be attained if this investment is bought `rps_cur`. Then computes the time before this candidate investment could be bought at the current revenue, `wait_till_cur` and finally computes $w_b$, the wait until the maximum revenue option could be bought if the candidate investment is bought first as `wait_cur`. Lastly, if this is lower than `wait_max` ($w_{max}$), then the agent stores the best wait in `wait_max` and updates the building to buy and the web element to click. 
+
+Like the MaxROI agent, the last few lines of code check if the investment is affordable, and if not, terminates the ends the purchasing loop.
+
+
+# Performance 
+
+Each agent class was instantiated as `agent` and run for 100,000 big cookie clicks, with the purchase logic run after every 200 clicks. The Naive, MaxROI, and MinWait agents ran for approximately 3650 seconds, 3785 seconds, and 3800 seconds, respectively. The differences in runtime were small enough that I wasn't worried about differences in the performance metrics below being attributable to extra income earned from a longer runtime. 
+
+## Revenue 
+First I looked at the main metric, revenue per second, shown in the figure below:
+
+![](../Cookie_Clicker_Images/Revenue.png)
+
+The MaxROI and MinWait strategies clearly performed better than the Naive strategy in terms of maximizing revenue per second. It also appeared that the MaxROI algorithm generally had higher revenue when in a purchasing cycle, but the MinWait algorithm surpassed the MaxROI algorithm when waiting for a large purchase. 
+
+## Building Count
+
+![](../Cookie_Clicker_Images/BuildingCount.png)
+
+The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxROI agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment. 
+
+## Building Prices
+
+![](../Cookie_Clicker_Images/Price.png)
+
+The Naieve strategy results in equalizing prices, while both the MaxROI and MinWait strategies can save to purchase the most expensive investment. 
+
+## Return on Investment (Revenue Per Cost)
+
+![](../Cookie_Clicker_Images/RevenuePerPrice.png)
+
+
+The Naive strategy rarely chooses the best ROI option. The MaxROI strategy equalizes the ratio between revenue and price across the investments, while the MinWait strategy similarly picks options with a good ratio here but also frequently chooses worse deals. Overall the Naive and MinWait strategies often end up paying more than they should for revenue.
+
+# Conclusions
+
+Both the MaxROI and MinWait agents perform far better than the Naive agent in terms of maximizing revenue. The MaxROI agent performed better when in a buying cycle, but the MinWait agent surpassed the MaxROI agent during long periods of saving for an expensive purchase. Perhaps a better algorithm would be a hybrid that follows the MaxROI strategy when all revenues are known, and uses the MinWait strategy when saving up for an expensive option with an unknown revenue. 
+
+# Appendix: 
+
+## MinWait Decision is Independent of Balance
+
+Another consideration for the MinWait strategy was that the balance could reduce wait overall, and this might mathematically result in a preference reversal if the wait for $b$ becomes negligably small. Accounting for balance and using $c_{max}$ to represent the cost of the maximum revenue option, $r_t$ to represent the current revenue, $c_b$ to represent the cost of another investment, and $r_b$ to be the additional revenue provided by that investment, the wait time calculations become; 
+
+$$ 
+\begin{aligned} 
+w_{max} &= \frac{c_{max}-balance}{r_t}  \\
+w_{b} &= \frac{c_b-balance}{r_t} + \frac{c_{max}}{r_t+r_b}
+\end{aligned}
+$$ 
+
+The the decision rule can be cast as: buy $b$ if $w_{max} - w_{b}<0$. This results in the decision function: 
+
+$$ 
+\begin{aligned} 
+w_{max} -  w_{b} & = \frac{c_{max}-balance}{r_t} - \left(\frac{c_b-balance}{r_t} + \frac{c_{max}}{r_t+r_b}\right) \\
+&= \frac{c_{max}-balance-c_b+balance}{r_t} + \frac{c_{max}}{r_t+r_b} \\
+&= \frac{c_{max}-c_b}{r_t} + \frac{c_{max}}{r_t+r_b} \\
+\end{aligned}
+$$ 
+
+The same function results from $w_{max}=\frac{c_{max}}{r_t}$ and $w_{b} = \frac{c_b}{r_t} + \frac{c_{max}}{r_t+r_b}$, hence the decision does not depend on balance.
+
+## Helper Functions
+
+The base agent class, `agent_class_naive`, contained many helper functions as well as the naive investment purchasing logic. This section explains the 
+code used for the helper functions.
+
+### Browser and Game Initialization
+
+The agent was initialized with a web driver object stored in `driver`. The first part of the agent class `__init__` method is copied below:
+
+```{python,eval=FALSE}
+class agent_class_naive:
+    def __init__(self,driver):
+        # navigate to site
+        driver.get('https://orteil.dashnet.org/cookieclicker/')
+        time.sleep(10) # time for page to load
+        self.big_cookie = driver.find_element_by_id('bigCookie')
+        self.golden_cookie_clicks = 0
+        # initialize balance and revenue variables
+        self.balance=0
+        self.revenue=0 
+        # initialize balance and revenue logs
+        self.log_balance=[0]
+        self.log_revenue=[0]
+        self.log_bal_rev_epoch=[0]
+        # initialize building info, and logs of building info
+        self.get_building_info()
+        self.log_build_info = dict()
+        self.building_info_logger(epoch=0)
+        
+        ...
+```
+
+First the agent navigates the webdriver to the Cookie Clicker URL and pauses for 10 seconds to let the page load. After that, the agent finds the big cookie web element and assigns it to attribute `big_cookie`. The remaining lines above initialize various attributes that were either used in purchasing logic, or used to log data on agent performance. 
+
+The second part of the `__init__` method navigated to the 'options' tab and changed the game settings. One important setting to change was the `numbersButton` option -- this toggled between displaying numbers numerically, '1,000,000', versus with words, '1 million'. Since the balance is scraped from this text, the agents require that numbers be displayed numerically. The other changed settings related to graphics and game performance. Code for this second part of `__init__` is shown below:
+
+```{python,eval=FALSE}
+        # CHANGE GRAPHICS AND OTHER SETTINGS
+        # click 'options' tab
+        driver.find_element_by_id("prefsButton").click()
+        time.sleep(1) # let page load
+        # disable text instead of numbers, e.g. 'million' -> '000,000'
+        driver.find_element_by_id("numbersButton").click()
+        # slide volume to around 25%
+        time.sleep(.5) # so actions don't happen too fast
+        volume = driver.find_element_by_class_name("slider")
+        move = ActionChains(driver)
+        move.click_and_hold(volume).move_by_offset(-50, 0).release().perform()
+        # change graphics for optimal performance
+        buttons = ("fancyButton","particlesButton","cursorsButton",
+                  "milkButton","wobblyButton","cookiesoundButton",
+                  "formatButton","extraButtonsButton","customGrandmasButton")
+        for button in buttons:
+            time.sleep(.5) # so actions don't happen too fast to execute
+            driver.find_element_by_id(button).click()
+
+```
+
+### Clicking Cookies
+
+A simple, important function, `click_cookie()` effects the cookie click. The game also has golden cookies that provide a large lump sum of cookies, or transient increases in revenue. Golden cookies appear at random times, and at random locations on the screen. The second function below identifies and clicks these golden cookies until there are no more golden cookies on the screen, and logs the number of golden cookie clicks.
+
+```{python,eval=FALSE}
+    def click_cookie(self):
+        self.big_cookie.click()
+        
+    def click_golden_cookie(self):
+        golden_cookies = driver.find_elements_by_xpath('//div[@class="shimmer"]')
+        while len(golden_cookies)>0: # if there are products, and while we can afford products,
+            for golden_cookie in golden_cookies:
+                golden_cookie.click() # buy each one
+                self.golden_cookie_clicks+=1
+            golden_cookies = driver.find_elements_by_xpath('//div[@class="shimmer"]')
+```
+
+### Purchasing Upgrades 
+
+Upgrades are another way to spend cookies. The function below finds affordable upgrades and purchases (click) them, starting with the most expensive avilable upgrade. 
+
+```{python,eval=FALSE}
+    def buy_upgrades(self):
+        upgrades = driver.find_elements_by_xpath('//div[@class="crate upgrade enabled"]')
+        while len(upgrades)>0: # if there are products, and while we can afford products,
+            try: upgrades[-1].click() # buy each one, most expensive first
+            except: None
+            upgrades = driver.find_elements_by_xpath('//div[@class="crate upgrade enabled"]')
+```
+
+### Logging balance and revenue
+
+Balance and revenue were important for some strategies and were logged as a metric to compare the agents. To facilitate both use cases, I created a method that took an argument `epoch`. This method parses the text above the big cookie to convert a string like '177 cookies \\n per second: 1.1' to extract the balance of 177 and revenue of 1.1. If the method is called without an `epoch`, then it only updates the balance and revenue. Alternatively, if an `epoch` is passed, then this method also logs the balance, revenue, and eopch or click number. The code for this is shown below:
+
+```{python,eval=FALSE}
+    def log_balance_and_revenue(self,epoch=None):
+        # parse string with balance and revenue
+        tmp = driver.find_elements_by_xpath('//div[@id="cookies"]')
+        tmp = tmp[0].text.replace(',','') # remove camas 1,000 -> 1000
+        tmp = re.findall("\d+",tmp) # extract balance and revenue
+        tmp = [int(i) for i in tmp] # convert str -> int
+        # update balance and revenue
+        self.balance = tmp[0] # update current balance
+        self.revenue = tmp[1] # update revenue
+        # if epoch passed, log balance and revenue at this epoch
+        if epoch:
+            self.log_bal_rev_epoch.append(epoch) # index for balance and revenue
+            self.log_balance.append(tmp[0]) # log balance
+            self.log_revenue.append(tmp[1]) # log revenue
+```
+
+### Get building information
+
+Building information like the cost and revenue was used in purchasing logic. The code used to extract this is shown below, and each component is elaborated on afterwards:
+
+```{python,eval=FALSE}
+    def get_building_info(self):
+        # get unlocked products
+        products_unlocked = (driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]') + 
+                             driver.find_elements_by_xpath('//div[@class="product unlocked disabled"]'))
+        # info for unlocked buildings
+        building_info = dict()
+        for i,building in enumerate(products_unlocked):
+            # get info from building button
+            tmp=building.text.replace(',','').split(sep="\n")
+            building_name,building_price,building_count = tmp if len(tmp)==3 else tmp+[0]
+            # initialize dict for building
+            building_info[building_name] = dict()
+            # fill in count and price
+            building_info[building_name]['count']=int(building_count)
+            building_info[building_name]['price']=int(building_price)
+            # get info from building tooltip
+            hover = ActionChains(driver).move_to_element(building)
+            hover.perform()
+            tooltip = driver.find_elements_by_xpath('//div[@id="tooltip"]')
+            tmp=tooltip[0].text.replace(',','');
+            tmp_cps  = re.findall(r"produces [-+]?\d*\.\d+|produces \d+",tmp);
+            # > 'produces X'
+            if tmp_cps: # if building has been purchased
+                tmp_cps_2=float(re.findall(r"[-+]?\d*\.\d+|\d+",tmp_cps[0])[0])
+                building_cps = tmp_cps_2
+            else: # if building hasn't been purchased, store cps as infinity
+                building_cps = float('inf')
+            # > X
+            #### default of inf below encourages purchasing unlocked, unowned buildings
+            #building_cps = float(tmp_cps[0][:tmp_cps[0].find(' ')]) if tmp_cps else float('inf')
+            building_info[building_name]['cps']=building_cps
+            building_info[building_name]['cps/price']=building_cps/int(building_price)
+        self.building_info = building_info
+```
+
+This code first obtains a list of the buildings that are unlocked, `products_unlocked`, then iterates over these to extract the relevant information: count or number owned, price of the next building, revenue, and the revenue to price ratio. Count and price could be obtained by parsing the text on the building button. This was done in the the following lines: 
+
+```{python,eval=FALSE}
+# get info from building button
+tmp=building.text.replace(',','').split(sep="\n")
+building_name,building_price,building_count = tmp if len(tmp)==3 else tmp+[0]
+# initialize dict for building
+building_info[building_name] = dict()
+# fill in count and price
+building_info[building_name]['count']=int(building_count)
+building_info[building_name]['price']=int(building_price)
+```
+
+Revenue could only be obtained from a tooltip that appeared when the mouse hovered over the building button. The code below effects a mouse hover over the building, then extracts and parses the text from the building tooltip;
+
+```{python,eval=FALSE}
+# get info from building tooltip
+hover = ActionChains(driver).move_to_element(building)
+hover.perform()
+tooltip = driver.find_elements_by_xpath('//div[@id="tooltip"]')
+tmp=tooltip[0].text.replace(',','');
+tmp_cps  = re.findall(r"produces [-+]?\d*\.\d+|produces \d+",tmp);
+if tmp_cps: # if building has been purchased
+    tmp_cps_2=float(re.findall(r"[-+]?\d*\.\d+|\d+",tmp_cps[0])[0])
+    building_cps = tmp_cps_2
+else: # if building hasn't been purchased, store cps as infinity
+    building_cps = float('inf')
+```
+
+One challenge was that the revenue was only viewable for owned buildings. To address this, I assumed a revenue of infinity for unowned buildings. This would incentivise agents that bought based on revenue to save and purchase the new building -- which was reasonable because these buildings had higher revenue than the owned buildings. The last few lines in the code chunk above extract the revenue for owned buildings, and impute a revenue of infinity for unlocked but unowned buildings. 
+
+Finally, the last few lines of code log the revenue and the return on investment (revenue divided by price) for each building and store the updated building information.
+
+Since this method was long already, I used a seperate method when logging this information. This logging function is shown below:
+
+```{python,eval=FALSE}
+    def building_info_logger(self,epoch):
+        if self.building_info: # if self.building_info exists
+            # modified from get_building_info to append.
+            log_keys = ['count','price','cps','cps/price']
+            # info for unlocked buildings
+            for building in self.building_info:
+                # initialize new buildings
+                if building not in self.log_build_info:
+                    self.log_build_info[building] = dict()
+                    for k in log_keys+['epoch']:
+                        self.log_build_info[building][k]=[]
+                # fill in count,price,cps, cps/price
+                for k in log_keys:
+                    self.log_build_info[building][k].append(self.building_info[building][k])
+                # log epoch, within each building since buildings become available at different times
+                self.log_build_info[building]['epoch'].append(epoch)
+
+```
+

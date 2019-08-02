@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.2.5">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Mac Strelioff">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Background As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Multiple users can be associated with an account, and users can have different roles that enable different privileges within the service. The overall goal was to identify free trial accounts that would convert to subscription-based paying customers.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/consultingproject/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="rgba(0,130,160,1)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/MacStrelioff/css/academic.min.9c3a903cc870878595d69f08d98aa322.css">
+
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-140153670-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+
+  <link rel="manifest" href="/MacStrelioff/site.webmanifest">
+  <link rel="icon" type="image/png" href="/MacStrelioff/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/MacStrelioff/img/icon-192.png">
+
+  <link rel="canonical" href="/MacStrelioff/consultingproject/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@macstrelioff">
+  <meta property="twitter:creator" content="@macstrelioff">
+  
+  <meta property="og:site_name" content="Mac Strelioff">
+  <meta property="og:url" content="/MacStrelioff/consultingproject/">
+  <meta property="og:title" content="Growing Smarter: Understanding User Acquisition | Mac Strelioff">
+  <meta property="og:description" content="Background As part of my fellowship at Insight Data Science, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Multiple users can be associated with an account, and users can have different roles that enable different privileges within the service. The overall goal was to identify free trial accounts that would convert to subscription-based paying customers."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  
+  
+  
+
+  
+
+  
+
+  <title>Growing Smarter: Understanding User Acquisition | Mac Strelioff</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/MacStrelioff/">Mac Strelioff</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/data-science/">
+            
+            <span>Data Science</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/video-lectures/">
+            
+            <span>Videos</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/cv/">
+            
+            <span>Resume</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Growing Smarter: Understanding User Acquisition</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="" itemprop="datePublished">
+<meta content="" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/MacStrelioff/consultingproject/#disqus_thread"></a>
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url="
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u="
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<!---
+NOTES: 
+for online, add a backslish in image paths. 
+For knitting an html, do not have this backslash.
+--->
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>As part of my fellowship at <a href="https://blog.insightdatascience.com/">Insight Data Science</a>, I worked on a 2 week consulting project with an external company. Their product was a SaaS application enabling team collaboration on shared files, and has a 30-day free trial model. Multiple users can be associated with an account, and users can have different roles that enable different privileges within the service. The overall goal was to identify free trial accounts that would convert to subscription-based paying customers.</p>
+<p>At the request of the client, some of the information in this post has been masked so as to not reveal any confidential information.</p>
+</div>
+<div id="business-need" class="section level1">
+<h1>Business Need</h1>
+<p>The survival of any company hinges on it’s ability to acquire new users. However, the majority of free trial users for my client failed to convert to customers. This leaves much opportunity to increase their userbase.</p>
+<div id="project-goals" class="section level2">
+<h2>Project Goals</h2>
+<p>As a consultant, I helped with two major goals focused on issuing nudges to users in order to increase user acquisition:</p>
+<ol style="list-style-type: decimal">
+<li>Identify, as early as possible, patterns in user behavior that indicate whether a free trial user is likely to become a customer after the trial.</li>
+<li>Leverage those patterns to identify outreach strategies for users that might otherwise be unlikely to continue using the service..</li>
+</ol>
+</div>
+</div>
+<div id="data-sources-and-processing" class="section level1">
+<h1>Data sources and processing</h1>
+<!---(exclude clearbit)--->
+<p>The original dataset consisted of account activity and product performance data for all accounts over a one year period. The dataset contained a large number of accounts, including some that were not germane to the project goals. Since the primary goal focused on behavior during the free trial, I excluded any accounts that were never on a free trial during the data collection period. In exploratory analysis, I found a large number of accounts that showed little to no activity. This prompted me to believe there are two types of trial accounts that do not convert to paying customers – 1) accounts that were created then never engaged with the product, and 2) accounts that engaged with the product, then failed to find the product valuable and decided to stop engagement. Since the strategies to address these accounts might differ, I decided to exclude any account without a minimal degree of engagement with the product and focus on the <span class="math inline">\(2^{nd}\)</span> type of nonconversion. The criteria for a minimal level of engagement was chosen based on dependencies between product features, and decided during discussion with the client. Finally, some product features were not available during the full duration of data collection, as the product evolved over time. Since there was a large sample size, the easiest way to make the analyses pertinent for all features, and to keep accounts comparable to one another, was to exclude data collected before all product features were available.</p>
+<div id="feature-engineering-and-exploration" class="section level2">
+<h2>Feature Engineering and Exploration</h2>
+<p>The original account activity data was in terms of counts of each possible action (e.g. workspaces created) on each date during data collection. To make the accounts easily comparable regardless of observation dates, I created a variable for account age (days since the account was created). Also, rather than working with daily counts I computed cumulative sums, which represented an account’s total usage aggregated over all its users’ activity of a product feature up to a particular age of their account. Finally, to mitigate confounding of the counts of activity by the number of users, I divided the cumulative sums by the number of users. These were features that I focused on – total usage of each product activity per user up to a particular day since the creation of the account.</p>
+<p>The time of conversion could be many months after a trial had ended, as it may take time for a user associated with an organization to gain approval to purchase a subscription, or it may take time for a large organization to negotiate a price with my client. To focus on classifying free users as <em>potential</em> customers based on activity, I created a variable that indicated whether an account <em>ever</em> ended up as a customer. I then conceptualized the problem as a classification problem where, based on account activity over time since the account’s creation, I estimated the probability that the account would ever convert to a customer.</p>
+<p>I initially thought that the accounts that converted would differ in terms of the distribution of these features (cumulative activity per user), relative to those that did not convert. Hence, in exploration, I focused on probing this intuition by plotting the median and <span class="math inline">\(20^{th}\)</span> to <span class="math inline">\(80^{th}\)</span> quantiles of cross sections of these features across account age, split by users who ended up converting versus those who did not. An example, focusing on the number of workspaces created per user, is shown in the figure below. Classification would be easiest and most interpretable if there were features that the converters clearly used more than those who never converted.</p>
+<div class="figure">
+<img src="../csum_files_per_contributor.png" alt="Median (solid line) and middle 60% (shading) of the distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)" />
+<p class="caption">Median (solid line) and middle 60% (shading) of the distribution of cumulative workspaces created per user, split by those who ever paid (blue) and those that were on a free trial forever (red)</p>
+</div>
+<!---
+^ This one should be a plot of median and 20-60% quantiless
+comments sometimes help the captions appear...
+--->
+</div>
+</div>
+<div id="modeling" class="section level1">
+<h1>Modeling</h1>
+<div id="considerations" class="section level2">
+<h2>Considerations</h2>
+<p>My intuition about differing distributions is natrually expressed in <a href="https://en.wikipedia.org/wiki/Linear_discriminant_analysis">linear discriminant analysis</a> or <a href="https://en.wikipedia.org/wiki/Quadratic_classifier">quadratic discriminant analysis</a>. However, these algorithms hinge on an assumption that the features are Gaussian distributed, which was clearly not the case – values were strictly non-negative, and distributions were skewed such that there were lots of values around 0 and some values far from the mean. Because of these violations, I also considered a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">support vector classifier</a> with radial basis functions, and tree based algorithms – <a href="https://en.wikipedia.org/wiki/Random_forest">random forests</a>, and <a href="https://en.wikipedia.org/wiki/Gradient_boosting">gradient boosting decision trees</a> (GBT). An advantage of the tree-based approaches is their robustness to any distribution of the features, and any functional relationship between the features and the probability of an account continuing product use after the free trial.</p>
+<p>Another issue was class imbalance, since the majority of accounts did not continue. I used <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis">SMOTE</a>, an algorithm that generates synthetic data from the underrepresented class (continuing customers), to address the class imbalance when fitting the model in training sets. I also considered metrics beyond accuracy, such as <a href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic">AUC</a> and the <a href="https://en.wikipedia.org/wiki/F1_score">F1 score</a>, when selecting a final model.</p>
+</div>
+<div id="initial-performance" class="section level2">
+<h2>Initial Performance</h2>
+<p>To quickly hone in on a model, I assessed the algorithms mentioned above with default hyperparameter values using <a href="https://scikit-learn.org/stable/index.html">scikit learn</a> in Python. I focused on classification accuracy in a test set, and the tree-based algorithms outperformed the others by approximately 10%. This outperformance is likely due to the non-standard distributions of the features.</p>
+</div>
+<div id="hyperparameter-tuning" class="section level2">
+<h2>Hyperparameter Tuning</h2>
+<p>To assess performance across hyperparameters for the tree-based algorithms, I created <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_validation_curve.html">validation curves</a> with 5-fold cross validation and a set of hyperparameter values. The performance of both tree based algorithms was mostly stable in terms of <a href="https://en.wikipedia.org/wiki/F1_score">F1 scores</a>, except for poor performance when there were very few (<span class="math inline">\(&lt;10\)</span>) estimators. To mitigate potential overfitting, I increased the minimum number of observations in a leaf to 10, but left all other hyperparameters at their default values.</p>
+</div>
+<div id="fitting-procedure" class="section level2">
+<h2>Fitting Procedure</h2>
+<p>I fit the random forests and GBT algorithms to cross-sections of the data at 7, 14, and 30 days since account creation. For each cross section, I split the data into 5 folds, and used <a href="https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis">SMOTE</a> when training the algorithms within each fold to account for the class imbalance. In each fold, I logged the feature importances and performance metrics from both algorithms.</p>
+</div>
+</div>
+<div id="actionable-results" class="section level1">
+<h1>Actionable Results</h1>
+<p>I used the mean feature importances across folds from the GBT algorithm to identify the features that differentiated between successful accounts and accounts with users that may have needed more onboarding. Since these features seperate continuing accounts from those that did not continue after the free trial, these are the features to prioritize when considering interventions to add value to the user’s experience.</p>
+<div class="figure">
+<img src="../feature_importance.png" alt="Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm. Feature names have been obscured at the client’s request." />
+<p class="caption">Mean (bar length) and standard deviation (black error bars) of feature importance evaluated across the 5 folds for the gradient boosting trees algorithm. Feature names have been obscured at the client’s request.</p>
+</div>
+<p>To understand the form of the relationship between these features and continued engagement after the trial, I binned accounts based on product feature usage and plotted the proportion of accounts that continued using the product after the free trial across these bins. Figures like this, paired with data on an individual account activity, could help in personalizing user outreach to focus on aligning users’ feature usage with that of users in more successful accounts. For example, <strong>based on the figure below, if an account has fewer than 1 workspace per user, their experience might be improved by resources that make workspace creation easier to understand or engage with</strong>.</p>
+<div class="figure">
+<img src="../ConvertByFeature.png" alt="Proportion of accounts that convert as a function of workspaces per user. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 workspace per user." />
+<p class="caption">Proportion of accounts that convert as a function of workspaces per user. There seems to be a bump in conversion rates from around 20% to around 40% above around 1 workspace per user.</p>
+</div>
+<p>To identify struggling accounts for outreach, I applied the GBT algorithm to all data and focused on the confusion matrix, shown below. Different actions could be taken with respect to accounts in each quadrant. Accounts in the <em>bottom right quadrant</em> are currently customers, and were identified as such by the algorithm. These are the accounts with users who were successful in identifying value in the product and establishing an ongoing relationship with my client. Accounts in the <em>top right quadrant</em> are those who have not yet become customers, but are engaging with the product in ways that are similar to those who have become customers. Users in these accounts have likely identified valuable aspects of the product, and could be contacted by a customer success team to help them find a subscription plan that suits their needs.</p>
+<p>Accounts on the <em>top left</em> and <em>bottom left quadrants</em> were identified as accounts that would not continue with the product after the free trial – <strong>these are the accounts that may benefit from outreach</strong> that demonstrates the value this product can add to their workflows. Accounts in the <em>top left quadrant</em> were correctly identified as accounts that would not continue with the product. Users in these accounts may have failed to identify valuable aspects of the product, and may have had a better experience if they had been contacted early by customer support or had access to educational resources that could have helped them use the product. Accounts in the <em>bottom left quadrant</em> are those that became paying customers, but were incorrectly identified as accounts that would not continue with the product based on their activity in the first 7 days. Misclassifying these accounts has essentially no harm, as it would only encourage efforts to improve their experience early in their trial.</p>
+<p><img src="../confusion_matrix.png" alt="Confusion matrix based on all data, for identifying who to contact." /> <!--- comments help caption output ---></p>
+</div>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>I began with an intuition that accounts that converted would have a different distribution of product feature usage per user, relative to those that did not convert, when feature usage was assessed at cross sections based on account age. To explore this, I looked at the quantiles of distributions across feature usage. Focusing on this with formal models, I found that tree-based algorithms could perform well across accuracy, precision, recall, and F1 scores, in identifying the accounts that converted, based on daily snapshots of aggregate feature usage.</p>
+<p>To derive insights from this data and analysis, I focused on confusion matrices which identified free trial accounts that acted as if they would continue product usage, and accounts that were currently unlikely to continue with the product (those in need of educational resources, and/or contact from support teams). I focused on the features found to be important by the tree based algorithms in order to identify specific features to target when reaching out to users in struggling accounts. To discover how feature usage relates to a propensity to continue using the product, I looked at the proportion of accounts that continued after trial across levels of engagement with the important product features.</p>
+<p>Overall, my work provided valuable tools for identifying accounts to connect with for long term relationships or for onboarding and educational assistance, as well as feature usage patterns indicative of success with the product.</p>
+</div>
+
+    </div>
+
+    
+
+
+
+    
+
+    
+    <div class="article-widget">
+      
+<div class="post-nav">
+  
+  
+</div>
+
+    </div>
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "@macstrelioff" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/MacStrelioff/files/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/MacStrelioff/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//@macstrelioff.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/MacStrelioff/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/MacStrelioff/js/academic.min.d813ae958640746e240f434cafc95afb.js"></script>
+
+  </body>
+</html>
+

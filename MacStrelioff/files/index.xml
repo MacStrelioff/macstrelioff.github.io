@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Files on Mac Strelioff</title>
+    <link>/MacStrelioff/files/</link>
+    <description>Recent content in Files on Mac Strelioff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jun 2018 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="/MacStrelioff/files/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/MacStrelioff/files/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0700</pubDate>
+      
+      <guid>/MacStrelioff/files/privacy/</guid>
+      <description>Anything you post here can be seen by others.</description>
+    </item>
+    
+  </channel>
+</rss>

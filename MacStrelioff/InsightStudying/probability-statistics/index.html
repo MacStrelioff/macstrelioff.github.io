@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.2.5">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Mac Strelioff">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Common Tests Z test t-test Chi-Square Linear Models  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Fermi problems (order of magnitude)">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/probability-statistics/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="rgba(0,130,160,1)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/MacStrelioff/css/academic.min.9c3a903cc870878595d69f08d98aa322.css">
+
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-140153670-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+
+  <link rel="manifest" href="/MacStrelioff/site.webmanifest">
+  <link rel="icon" type="image/png" href="/MacStrelioff/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/MacStrelioff/img/icon-192.png">
+
+  <link rel="canonical" href="/MacStrelioff/insightstudying/probability-statistics/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@macstrelioff">
+  <meta property="twitter:creator" content="@macstrelioff">
+  
+  <meta property="og:site_name" content="Mac Strelioff">
+  <meta property="og:url" content="/MacStrelioff/insightstudying/probability-statistics/">
+  <meta property="og:title" content="Probability and Statistics | Mac Strelioff">
+  <meta property="og:description" content="Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Common Tests Z test t-test Chi-Square Linear Models  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Fermi problems (order of magnitude)"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-08-01T15:39:36&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-08-01T15:39:36&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Probability and Statistics | Mac Strelioff</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/MacStrelioff/">Mac Strelioff</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/data-science/">
+            
+            <span>Data Science</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/video-lectures/">
+            
+            <span>Videos</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/cv/">
+            
+            <span>Resume</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/MacStrelioff/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Probability and Statistics</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-08-01 15:39:36 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-01 15:39:36 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Aug 1, 2019</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/MacStrelioff/insightstudying/probability-statistics/#disqus_thread"></a>
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url="
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u="
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<div id="TOC">
+<ul>
+<li><a href="#probability-foundations">Probability Foundations</a><ul>
+<li><a href="#probability-rules">Probability Rules</a></li>
+<li><a href="#odds-and-other-transformations">Odds and other transformations</a></li>
+<li><a href="#expectation-and-variance">Expectation and Variance</a></li>
+<li><a href="#central-limit-theorem">Central limit theorem</a></li>
+</ul></li>
+<li><a href="#common-tests">Common Tests</a><ul>
+<li><a href="#z-test">Z test</a></li>
+<li><a href="#t-test">t-test</a></li>
+<li><a href="#chi-square">Chi-Square</a></li>
+<li><a href="#linear-models">Linear Models</a></li>
+</ul></li>
+<li><a href="#experiment-design">Experiment Design</a><ul>
+<li><a href="#objective-demand-and-value">Objective, demand, and value</a></li>
+<li><a href="#constructs-metrics-and-scoping">Constructs, metrics, and scoping</a><ul>
+<li><a href="#user-flow-and-target-metrics">User flow and target metrics</a></li>
+<li><a href="#invariants">Invariants</a></li>
+<li><a href="#confounding-variables">Confounding variables</a></li>
+<li><a href="#precision-variables">Precision variables</a></li>
+</ul></li>
+<li><a href="#metric-validation">Metric Validation</a></li>
+<li><a href="#conditions">Conditions</a></li>
+<li><a href="#treatment-units">Treatment Units</a></li>
+<li><a href="#assignment-mechanism">Assignment Mechanism</a><ul>
+<li><a href="#population">Population</a></li>
+<li><a href="#cohorts">Cohorts</a></li>
+<li><a href="#synthetic-control-groups">Synthetic Control Groups</a></li>
+<li><a href="#limitations">Limitations</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#implementation">Implementation</a><ul>
+<li><a href="#size">Size</a></li>
+<li><a href="#duration">Duration</a><ul>
+<li><a href="#temporal-variation">Temporal variation</a></li>
+<li><a href="#optional-stopping">Optional stopping</a></li>
+</ul></li>
+<li><a href="#estimands">Estimands</a></li>
+<li><a href="#effiencicy">Effiencicy</a></li>
+</ul></li>
+<li><a href="#testing">Testing</a><ul>
+<li><a href="#binary-or-proportions">Binary or Proportions</a><ul>
+<li><a href="#fishers-z">Fisher’s Z</a></li>
+</ul></li>
+<li><a href="#real-valued">Real-Valued</a><ul>
+<li><a href="#regression">Regression</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#linear-models-1">Linear Models</a></li>
+<li><a href="#glms">GLMs</a></li>
+<li><a href="#emperical-variance-estimation">Emperical Variance Estimation</a></li>
+</ul>
+</div>
+
+<p>Fermi problems (order of magnitude)</p>
+<div id="probability-foundations" class="section level1">
+<h1>Probability Foundations</h1>
+<p>combinatorics (permutations and combinations)</p>
+<div id="probability-rules" class="section level2">
+<h2>Probability Rules</h2>
+<p>basic probability rules</p>
+</div>
+<div id="odds-and-other-transformations" class="section level2">
+<h2>Odds and other transformations</h2>
+<p>odds, log odds, relative risk, … .</p>
+</div>
+<div id="expectation-and-variance" class="section level2">
+<h2>Expectation and Variance</h2>
+<p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
+</div>
+<div id="central-limit-theorem" class="section level2">
+<h2>Central limit theorem</h2>
+<p>Sum of any random variable converges to normal distribution.</p>
+<ul>
+<li>show for binomial case, to justify Z test</li>
+</ul>
+</div>
+</div>
+<div id="common-tests" class="section level1">
+<h1>Common Tests</h1>
+<div id="z-test" class="section level2">
+<h2>Z test</h2>
+<p>Normal data</p>
+<p>Binary data</p>
+</div>
+<div id="t-test" class="section level2">
+<h2>t-test</h2>
+<ul>
+<li>different variance formulations.</li>
+<li>one-sample</li>
+<li>two independent sampels</li>
+<li>two dependent samples</li>
+</ul>
+</div>
+<div id="chi-square" class="section level2">
+<h2>Chi-Square</h2>
+</div>
+<div id="linear-models" class="section level2">
+<h2>Linear Models</h2>
+</div>
+</div>
+<div id="experiment-design" class="section level1">
+<h1>Experiment Design</h1>
+<div id="objective-demand-and-value" class="section level2">
+<h2>Objective, demand, and value</h2>
+<p>Objective is based on a metric (increase clickthrough or revenue per user).</p>
+<p>Demand – if adding a new user feature, how can demand for the feature be assessed?</p>
+<p>value = benefit - cost.</p>
+<p>Expected value helps with decisions about the size and duration of an experiment</p>
+</div>
+<div id="constructs-metrics-and-scoping" class="section level2">
+<h2>Constructs, metrics, and scoping</h2>
+<p>Once an objective is clear, the details of what can be measured need to be flushed out.</p>
+<p>Metrics (fill in from udamy course section on metrics)</p>
+<p>Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)</p>
+<div id="user-flow-and-target-metrics" class="section level3">
+<h3>User flow and target metrics</h3>
+<p>Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states.</p>
+<ul>
+<li>number of clicks</li>
+<li>time on page</li>
+<li>…</li>
+</ul>
+</div>
+<div id="invariants" class="section level3">
+<h3>Invariants</h3>
+<p>Metrics that shouldn’t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change.</p>
+</div>
+<div id="confounding-variables" class="section level3">
+<h3>Confounding variables</h3>
+<p>Mitigated by randomization.</p>
+</div>
+<div id="precision-variables" class="section level3">
+<h3>Precision variables</h3>
+<p>Can also highlight features that one would want to match treatment and control on.</p>
+<p>Examples:</p>
+<ul>
+<li>number of posts</li>
+<li>number of followers</li>
+<li>visibility / impressions</li>
+</ul>
+</div>
+</div>
+<div id="metric-validation" class="section level2">
+<h2>Metric Validation</h2>
+<p>User expreience research, retrospective analyses of past data or log files, … .</p>
+</div>
+<div id="conditions" class="section level2">
+<h2>Conditions</h2>
+<p>Define the experimental manipulations.</p>
+</div>
+<div id="treatment-units" class="section level2">
+<h2>Treatment Units</h2>
+<p>What is the unit at which we assign treatments?</p>
+<p>Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.</p>
+<p>Proxies for individuals include;</p>
+<ul>
+<li>User ID or account – most clearly tied to a user, but</li>
+<li>cookies – device and browser specific, so these could differ across a user’s browsers or devices.</li>
+<li>IP address (device request return address) – device specific, so a user’s experience might differ across devices.</li>
+</ul>
+<p>In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).</p>
+</div>
+<div id="assignment-mechanism" class="section level2">
+<h2>Assignment Mechanism</h2>
+<p>The assignment mechanism samples members from a population and assignes them to conditions.</p>
+<p>How are units assigned to treatments?</p>
+<p>Randomized control trials are the ideal, but many issues arise in online experimentation settings.</p>
+<p>(look up desirable properties form causal inference notes)</p>
+<div id="population" class="section level3">
+<h3>Population</h3>
+<p>What group is being sampled from?</p>
+</div>
+<div id="cohorts" class="section level3">
+<h3>Cohorts</h3>
+<p>Random sample, cluster-based, stratified, serial, balanced, …</p>
+</div>
+<div id="synthetic-control-groups" class="section level3">
+<h3>Synthetic Control Groups</h3>
+<p>Propensity matching</p>
+</div>
+<div id="limitations" class="section level3">
+<h3>Limitations</h3>
+<ul>
+<li>Non-compliance: Those assicned to treatment may not actually experience the treatment.</li>
+<li>Crossover: Those assigned to control might gain access to the treatment.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="implementation" class="section level1">
+<h1>Implementation</h1>
+<p>Batched, or real-time</p>
+<div id="size" class="section level2">
+<h2>Size</h2>
+<p>power, sample size</p>
+</div>
+<div id="duration" class="section level2">
+<h2>Duration</h2>
+<div id="temporal-variation" class="section level3">
+<h3>Temporal variation</h3>
+</div>
+<div id="optional-stopping" class="section level3">
+<h3>Optional stopping</h3>
+<p>Why it’s an issue for frequentists</p>
+<p>Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting</p>
+<p>Bayesian justifications</p>
+</div>
+</div>
+<div id="estimands" class="section level2">
+<h2>Estimands</h2>
+<ul>
+<li>Average treatment effect</li>
+<li>Treatment on treated</li>
+</ul>
+</div>
+<div id="effiencicy" class="section level2">
+<h2>Effiencicy</h2>
+<p>e.g. with a two sample t-test, <span class="math inline">\(Y_t - Y_{t-1} = \beta_0\)</span>, versus a model <span class="math inline">\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)</span></p>
+<p>– get table for different tests of means from soc sci 10 notes.</p>
+</div>
+</div>
+<div id="testing" class="section level1">
+<h1>Testing</h1>
+<div id="binary-or-proportions" class="section level2">
+<h2>Binary or Proportions</h2>
+<div id="fishers-z" class="section level3">
+<h3>Fisher’s Z</h3>
+</div>
+</div>
+<div id="real-valued" class="section level2">
+<h2>Real-Valued</h2>
+<div id="regression" class="section level3">
+<h3>Regression</h3>
+</div>
+</div>
+</div>
+<div id="linear-models-1" class="section level1">
+<h1>Linear Models</h1>
+<p>regression</p>
+<p>t-tests</p>
+<p>ANOVA</p>
+<p>t-test, ANOVA</p>
+</div>
+<div id="glms" class="section level1">
+<h1>GLMs</h1>
+<p>Stats: descriptive, R-squared, chi-squared;</p>
+<p>Probability: distributions, CLT, sampling distributions, p-value,</p>
+<p>Stats: k-s, Q-Q plot, hypothesis testing, experimentation;</p>
+<p>Probability: Bayes, bootstrap</p>
+<p>Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality</p>
+<p>Dynamic experimentation (multi-armed bandits)</p>
+<p>Unit testing; EDA visualization (seaborn, Plotly, Bokeh)</p>
+</div>
+<div id="emperical-variance-estimation" class="section level1">
+<h1>Emperical Variance Estimation</h1>
+<p>bootstrapping</p>
+<p>A/A testing</p>
+</div>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="/MacStrelioff/author/admin/avatar_hu27f7dc34c9db8fd2b063f3fba6be9864_288907_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+  
+
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/MacStrelioff/authors/admin">Mac Strelioff</a></h5>
+    <h6 class="card-subtitle">Cognitive Scientist (Ph.D.) Statistician (M.S.)</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/MacStrelioff/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://www.linkedin.com/in/macstrelioff/" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://osf.io/4a75z" target="_blank" rel="noopener">
+          <i class="fa fa-flask"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/macstrelioff" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/macstrelioff" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+      
+      
+    
+
+    
+    <div class="article-widget">
+      
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/MacStrelioff/insightstudying/yelp-deep-dive/" rel="prev">Yelp Notes</a>
+  </div>
+  
+</div>
+
+    </div>
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "@macstrelioff" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/MacStrelioff/files/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/MacStrelioff/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//@macstrelioff.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/MacStrelioff/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/MacStrelioff/js/academic.min.d813ae958640746e240f434cafc95afb.js"></script>
+
+  </body>
+</html>
+

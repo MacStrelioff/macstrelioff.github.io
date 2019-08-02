@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac Strelioff</title>
+    <link>/MacStrelioff/video-lectures/</link>
+    <description>Recent content on Mac Strelioff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="/MacStrelioff/video-lectures/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/MacStrelioff/video-lectures/fun/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 -0700</pubDate>
+      
+      <guid>/MacStrelioff/video-lectures/fun/</guid>
+      <description>Check back later&amp;hellip;
+ --- </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/MacStrelioff/video-lectures/interview-prep/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 -0700</pubDate>
+      
+      <guid>/MacStrelioff/video-lectures/interview-prep/</guid>
+      <description>Check back later&amp;hellip;
+ --- </description>
+    </item>
+    
+  </channel>
+</rss>
