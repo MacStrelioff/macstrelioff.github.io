@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Performance   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies).">
+  <meta name="description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Performance Appendix: More MinWait Math   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies).">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/unlisted/cookie-clicker-bot/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/unlisted/cookie-clicker-bot/">
   <meta property="og:title" content="Cookie Clicker Agent | Mac Strelioff">
-  <meta property="og:description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Performance   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies)."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Performance Appendix: More MinWait Math   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies)."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-02T08:59:58&#43;00:00">
+  <meta property="article:published_time" content="2019-08-02T09:55:12&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-02T08:59:58&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-02T09:55:12&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-02 08:59:58 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-02 08:59:58 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-02 09:55:12 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-02 09:55:12 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -471,6 +471,7 @@
 <li><a href="#minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase">MinWait: Buy what minizes the time to the highest revenue purchase</a></li>
 </ul></li>
 <li><a href="#performance">Performance</a></li>
+<li><a href="#appendix-more-minwait-math">Appendix: More MinWait Math</a></li>
 </ul>
 </div>
 
@@ -495,6 +496,10 @@
 <div id="helper-functions" class="section level1">
 <h1>Helper Functions</h1>
 <p>This section can be skipped if you are only interested in the different strategies and their performance, which are covered completely in the next two sections. This section explains the code used for numerous helper functions that extracted information from the game interface.</p>
+<ul>
+<li>in describing the method for getting building information:</li>
+<li>One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked.</li>
+</ul>
 </div>
 <div id="strategies" class="section level1">
 <h1>Strategies</h1>
@@ -503,17 +508,23 @@ While the goal is to earn as many cookies as possible, the game also allows reve
 -->
 <div id="naive-buy-all-affordible-investments" class="section level2">
 <h2>Naive: Buy all affordible investments</h2>
-<p>The simplest investment strategy was to purchase any affordible building. In the code below, <code>products</code> is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with <code>products[-1].click()</code>, until no more buildings are affordible.</p>
-<pre class="python"><code>def buy_products(self):
+<p>The simplest investment strategy was to purchase any affordible building. This is implemented in the code below:</p>
+<pre class="python"><code>class agent_class_naive:
+
+...
+
+def buy_products(self):
     products = driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;)
     while products: # if there are affordible products, buy them
         products[-1].click()
-        products = driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;)</code></pre>
+        products = driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;)
+        
+...</code></pre>
+<p>Here <code>products</code> is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with <code>products[-1].click()</code>, until no more buildings are affordible. This purchasing logic is implemented through a <code>buy_products</code> method of the naive agent, <code>agent_class_naive</code>. In <a href="https://github.com/MacStrelioff/CookieClickerAgent">my code</a>, the naive agent class also contained the necessary helper functions, described in the section above.</p>
 </div>
 <div id="maxroi-buy-best-return-on-investment" class="section level2">
 <h2>MaxROI: Buy best return on investment</h2>
-<p>The second, slightly more advanced strategy would be to buy the option that will have the best return on investment (revenue to price ratio).</p>
-<p>One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked.</p>
+<p>The second strategy is to buy the option that will have the best return on investment (revenue to price ratio). The code below extends the naive agent, <code>agent_class_naive</code>, by overriding the <code>buy_products</code> method that implements the investment strategy.</p>
 <pre class="python"><code>class agent_class_max_rps_price_ratio(agent_class_naive):
     # overwrite the buy_products method
     def buy_products(self):
@@ -543,10 +554,23 @@ While the goal is to earn as many cookies as possible, the game also allows reve
                 # update building info (including rps per price rps_pp)
                 self.get_building_info()
             else: best_building_affordible=False # if not affordible, break the loop  </code></pre>
+<p>First the MaxROI agent updates building information, including; cookies per second, price, and the ratio cps/price, using the helper method <code>get_building_info()</code>. Then it purchases the buildings that provide the max ROI, until the best building by this metric is unaffordible. The search for the best building is implemented in the section:</p>
+<pre class="python"><code># find max rps/price building
+max_rps_pp,building_to_buy,product_to_buy = 0,[],[]
+for i,building in enumerate(self.building_info):
+    # get rps/price for building
+    cur_rps_pp = self.building_info[building][&#39;cps/price&#39;] 
+    # if it&#39;s the best so far, update max and building id
+    if cur_rps_pp &gt; max_rps_pp:
+        max_rps_pp,building_to_buy = cur_rps_pp,building
+        product_to_buy = products[i] # store element to click</code></pre>
+<p>This is an <span class="math inline">\(O(N)\)</span> search through the buildings that have information, where <span class="math inline">\(N\)</span> is the number of buildings. This code logs the maximum ROI in <code>max_rps_pp</code> and the building associated with this ROI in <code>building_to_buy</code>, as well as the web element to click in order to purchase this building, <code>product_to_buy</code>. After the best ROI investment is found, the next few lines of code update the agent’s balance and check if the investment is affordible. If it is, this process repeats, if it is not then <code>best_building_affordible</code> is set to <code>False</code> which ends the while loop.</p>
 </div>
 <div id="minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase" class="section level2">
 <h2>MinWait: Buy what minizes the time to the highest revenue purchase</h2>
-<p>This final strategy is a bit more complex. The intuition of this strategy is that buildings which are not the best may still increase revenue enough to decrease the amount of time before the highest revenue option can be purchased.</p>
+<p>This final strategy is a bit more complex. The intuition of this strategy is to buy the investment that maximizes revenue. However, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in a figure below:</p>
+<p><img src="/MacStrelioff/Unlisted/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Formally, for a given current revenue <span class="math inline">\(r_{t}\)</span> and cost of the investment that would add the most to revenue, <span class="math inline">\(c_{max}\)</span>, the time until this investment can be purchased is <span class="math inline">\(t_{max}=\frac{c_{max}}{r_t}\)</span>. This formula ignores current balance, but in the appendix I prove that the current balance is irrelevant for the purchasing decision here.</p>
 <ul>
 <li>formulas for the purchase logic</li>
 <li><p>possible figure of two rates to a threshold, or one that simulates an intermittent purchase that leads to the larger purchase occurring earlier than it would have with the base revenue – i.e. plot the images I’ve sketched.</p></li>
@@ -630,6 +654,12 @@ class agent_class_min_wait(agent_class_naive):
 
 </div>
 <p>Most telling, the MaxCPS strategy seems to equalize the ratio between revenue and price across the investments. The MinWait strategy similarly picks options with a good ratio here, but it also frequently chooses worse deals.</p>
+</div>
+<div id="appendix-more-minwait-math" class="section level1">
+<h1>Appendix: More MinWait Math</h1>
+<ul>
+<li>show that balance is irrelevant</li>
+</ul>
 </div>
 
     </div>

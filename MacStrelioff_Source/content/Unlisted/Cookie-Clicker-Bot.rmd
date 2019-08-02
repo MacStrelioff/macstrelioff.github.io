@@ -50,6 +50,10 @@ The game has other mechanics (upgrades, ascension, golden cookies, ...). I also 
 
 This section can be skipped if you are only interested in the different strategies and their performance, which are covered completely in the next two sections. This section explains the code used for numerous helper functions that extracted information from the game interface. 
 
+
+- in describing the method for getting building information:
+- One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked. 
+
 # Strategies
 
 <!--
@@ -58,21 +62,29 @@ While the goal is to earn as many cookies as possible, the game also allows reve
 
 ## Naive: Buy all affordible investments
 
-The simplest investment strategy was to purchase any affordible building. In the code below, `products` is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with `products[-1].click()`, until no more buildings are affordible. 
+The simplest investment strategy was to purchase any affordible building. This is implemented in the code below:
 
 ```{python, eval=FALSE}
+class agent_class_naive:
+
+...
+
 def buy_products(self):
     products = driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]')
     while products: # if there are affordible products, buy them
         products[-1].click()
         products = driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]')
+        
+...
+
+
 ```
+
+Here `products` is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with `products[-1].click()`, until no more buildings are affordible. This purchasing logic is implemented through a `buy_products` method of the naive agent, `agent_class_naive`. In [my code](https://github.com/MacStrelioff/CookieClickerAgent), the naive agent class also contained the necessary helper functions, described in the section above. 
 
 ## MaxROI: Buy best return on investment
 
-The second, slightly more advanced strategy would be to buy the option that will have the best return on investment (revenue to price ratio). 
-
-One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked. 
+The second strategy is to buy the option that will have the best return on investment (revenue to price ratio). The code below extends the naive agent, `agent_class_naive`, by overriding the `buy_products` method that implements the investment strategy. 
 
 ```{python, eval=FALSE}
 class agent_class_max_rps_price_ratio(agent_class_naive):
@@ -107,10 +119,53 @@ class agent_class_max_rps_price_ratio(agent_class_naive):
 
 ```
 
+First the MaxROI agent updates building information, including; cookies per second, price, and the ratio cps/price, using the helper method `get_building_info()`. Then it purchases the buildings that provide the max ROI, until the best building by this metric is unaffordible. The search for the best building is implemented in the section: 
+
+```{python,eval=FALSE}
+# find max rps/price building
+max_rps_pp,building_to_buy,product_to_buy = 0,[],[]
+for i,building in enumerate(self.building_info):
+    # get rps/price for building
+    cur_rps_pp = self.building_info[building]['cps/price'] 
+    # if it's the best so far, update max and building id
+    if cur_rps_pp > max_rps_pp:
+        max_rps_pp,building_to_buy = cur_rps_pp,building
+        product_to_buy = products[i] # store element to click
+```
+
+This is an $O(N)$ search through the buildings that have information, where $N$ is the number of buildings. This code logs the maximum ROI in `max_rps_pp` and the building associated with this ROI in `building_to_buy`, as well as the web element to click in order to purchase this building, `product_to_buy`. After the best ROI investment is found, the next few lines of code update the agent's balance and check if the investment is affordible. If it is, this process repeats, if it is not then `best_building_affordible` is set to `False` which ends the while loop. 
 
 ## MinWait: Buy what minizes the time to the highest revenue purchase
 
-This final strategy is a bit more complex. The intuition of this strategy is that buildings which are not the best may still increase revenue enough to decrease the amount of time before the highest revenue option can be purchased. 
+This final strategy is a bit more complex. The intuition of this strategy is to buy the investment that maximizes revenue. However, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in a figure below: 
+
+```{r,echo=FALSE}
+# time and balance for a Naive waiter
+ta = seq(0,200)
+ya = ta*1
+# time and balance for a MinWaiter
+t1 = seq(0,100)
+y1 = t1*1
+t2 = seq(0,100)
+y2 = t2*2.5
+plot(ta,ya,type='l',            lwd=3,col=rgb(.8,0,0),
+     xlab = "Time",
+     ylab = "Balance",
+     main = "Intuition for MinWait Agent")
+lines(c(t1,t2[y2<=200]+max(t1)),c(y1,y2[y2<=200]),lwd=3,col=rgb(0,0,.8),lty=2)
+abline(h=100,lty=2,lwd=2)
+abline(h=200,lty=1,lwd=1)
+abline(v=max(ta[ya<=200])        ,lty=3,col=rgb(.8,0,0),lwd=2)
+abline(v=max(t2[y2<=200]+max(t1)),lty=3,col=rgb(0,0,.8),lwd=2)
+legend(0,175,c("Naive Wait","MinWait"),lty=c(1,2),lwd=2,col=c(rgb(.8,0,0),rgb(0,0,.8)))
+```
+
+
+
+
+
+
+Formally, for a given current revenue $r_{t}$ and cost of the investment that would add the most to revenue, $c_{max}$, the time until this investment can be purchased is $t_{max}=\frac{c_{max}}{r_t}$. This formula ignores current balance, but in the appendix I prove that the current balance is irrelevant for the purchasing decision here. 
 
 
 - formulas for the purchase logic
@@ -198,9 +253,9 @@ Most telling, the MaxCPS strategy seems to equalize the ratio between revenue an
 
 
 
+# Appendix: More MinWait Math
 
-
-
+- show that balance is irrelevant
 
 
 

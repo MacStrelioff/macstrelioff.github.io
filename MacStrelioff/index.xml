@@ -38,7 +38,7 @@
     <item>
       <title>Cookie Clicker Agent</title>
       <link>/MacStrelioff/unlisted/cookie-clicker-bot/</link>
-      <pubDate>Fri, 02 Aug 2019 08:59:58 +0000</pubDate>
+      <pubDate>Fri, 02 Aug 2019 09:55:12 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/cookie-clicker-bot/</guid>
       <description>
@@ -56,6 +56,7 @@
 &lt;li&gt;&lt;a href=&#34;#minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase&#34;&gt;MinWait: Buy what minizes the time to the highest revenue purchase&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#performance&#34;&gt;Performance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#appendix-more-minwait-math&#34;&gt;Appendix: More MinWait Math&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -80,6 +81,10 @@
 &lt;div id=&#34;helper-functions&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Helper Functions&lt;/h1&gt;
 &lt;p&gt;This section can be skipped if you are only interested in the different strategies and their performance, which are covered completely in the next two sections. This section explains the code used for numerous helper functions that extracted information from the game interface.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;in describing the method for getting building information:&lt;/li&gt;
+&lt;li&gt;One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;strategies&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Strategies&lt;/h1&gt;
@@ -88,17 +93,23 @@ While the goal is to earn as many cookies as possible, the game also allows reve
 --&gt;
 &lt;div id=&#34;naive-buy-all-affordible-investments&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Naive: Buy all affordible investments&lt;/h2&gt;
-&lt;p&gt;The simplest investment strategy was to purchase any affordible building. In the code below, &lt;code&gt;products&lt;/code&gt; is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with &lt;code&gt;products[-1].click()&lt;/code&gt;, until no more buildings are affordible.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def buy_products(self):
+&lt;p&gt;The simplest investment strategy was to purchase any affordible building. This is implemented in the code below:&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;class agent_class_naive:
+
+...
+
+def buy_products(self):
     products = driver.find_elements_by_xpath(&amp;#39;//div[@class=&amp;quot;product unlocked enabled&amp;quot;]&amp;#39;)
     while products: # if there are affordible products, buy them
         products[-1].click()
-        products = driver.find_elements_by_xpath(&amp;#39;//div[@class=&amp;quot;product unlocked enabled&amp;quot;]&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+        products = driver.find_elements_by_xpath(&amp;#39;//div[@class=&amp;quot;product unlocked enabled&amp;quot;]&amp;#39;)
+        
+...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here &lt;code&gt;products&lt;/code&gt; is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with &lt;code&gt;products[-1].click()&lt;/code&gt;, until no more buildings are affordible. This purchasing logic is implemented through a &lt;code&gt;buy_products&lt;/code&gt; method of the naive agent, &lt;code&gt;agent_class_naive&lt;/code&gt;. In &lt;a href=&#34;https://github.com/MacStrelioff/CookieClickerAgent&#34;&gt;my code&lt;/a&gt;, the naive agent class also contained the necessary helper functions, described in the section above.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;maxroi-buy-best-return-on-investment&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;MaxROI: Buy best return on investment&lt;/h2&gt;
-&lt;p&gt;The second, slightly more advanced strategy would be to buy the option that will have the best return on investment (revenue to price ratio).&lt;/p&gt;
-&lt;p&gt;One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked.&lt;/p&gt;
+&lt;p&gt;The second strategy is to buy the option that will have the best return on investment (revenue to price ratio). The code below extends the naive agent, &lt;code&gt;agent_class_naive&lt;/code&gt;, by overriding the &lt;code&gt;buy_products&lt;/code&gt; method that implements the investment strategy.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;class agent_class_max_rps_price_ratio(agent_class_naive):
     # overwrite the buy_products method
     def buy_products(self):
@@ -128,10 +139,23 @@ While the goal is to earn as many cookies as possible, the game also allows reve
                 # update building info (including rps per price rps_pp)
                 self.get_building_info()
             else: best_building_affordible=False # if not affordible, break the loop  &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First the MaxROI agent updates building information, including; cookies per second, price, and the ratio cps/price, using the helper method &lt;code&gt;get_building_info()&lt;/code&gt;. Then it purchases the buildings that provide the max ROI, until the best building by this metric is unaffordible. The search for the best building is implemented in the section:&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# find max rps/price building
+max_rps_pp,building_to_buy,product_to_buy = 0,[],[]
+for i,building in enumerate(self.building_info):
+    # get rps/price for building
+    cur_rps_pp = self.building_info[building][&amp;#39;cps/price&amp;#39;] 
+    # if it&amp;#39;s the best so far, update max and building id
+    if cur_rps_pp &amp;gt; max_rps_pp:
+        max_rps_pp,building_to_buy = cur_rps_pp,building
+        product_to_buy = products[i] # store element to click&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is an &lt;span class=&#34;math inline&#34;&gt;\(O(N)\)&lt;/span&gt; search through the buildings that have information, where &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; is the number of buildings. This code logs the maximum ROI in &lt;code&gt;max_rps_pp&lt;/code&gt; and the building associated with this ROI in &lt;code&gt;building_to_buy&lt;/code&gt;, as well as the web element to click in order to purchase this building, &lt;code&gt;product_to_buy&lt;/code&gt;. After the best ROI investment is found, the next few lines of code update the agent’s balance and check if the investment is affordible. If it is, this process repeats, if it is not then &lt;code&gt;best_building_affordible&lt;/code&gt; is set to &lt;code&gt;False&lt;/code&gt; which ends the while loop.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;MinWait: Buy what minizes the time to the highest revenue purchase&lt;/h2&gt;
-&lt;p&gt;This final strategy is a bit more complex. The intuition of this strategy is that buildings which are not the best may still increase revenue enough to decrease the amount of time before the highest revenue option can be purchased.&lt;/p&gt;
+&lt;p&gt;This final strategy is a bit more complex. The intuition of this strategy is to buy the investment that maximizes revenue. However, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in a figure below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/MacStrelioff/MacStrelioff/Unlisted/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Formally, for a given current revenue &lt;span class=&#34;math inline&#34;&gt;\(r_{t}\)&lt;/span&gt; and cost of the investment that would add the most to revenue, &lt;span class=&#34;math inline&#34;&gt;\(c_{max}\)&lt;/span&gt;, the time until this investment can be purchased is &lt;span class=&#34;math inline&#34;&gt;\(t_{max}=\frac{c_{max}}{r_t}\)&lt;/span&gt;. This formula ignores current balance, but in the appendix I prove that the current balance is irrelevant for the purchasing decision here.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;formulas for the purchase logic&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;possible figure of two rates to a threshold, or one that simulates an intermittent purchase that leads to the larger purchase occurring earlier than it would have with the base revenue – i.e. plot the images I’ve sketched.&lt;/p&gt;&lt;/li&gt;
@@ -215,6 +239,12 @@ class agent_class_min_wait(agent_class_naive):
 
 &lt;/div&gt;
 &lt;p&gt;Most telling, the MaxCPS strategy seems to equalize the ratio between revenue and price across the investments. The MinWait strategy similarly picks options with a good ratio here, but it also frequently chooses worse deals.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;appendix-more-minwait-math&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Appendix: More MinWait Math&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;show that balance is irrelevant&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
