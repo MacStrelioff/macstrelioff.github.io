@@ -1,5 +1,5 @@
 ---
-title: "DRAFT OF: Cookie Clicker Bot"
+title: "Cookie Clicker Agent"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 output:
@@ -31,21 +31,20 @@ use_python("/anaconda3/bin/python")
 
 # Overview
 
-Lately I've been interested in writing algorithms that interact with websites. The game [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies. Here I'll walk through three algorithms that I made to play this game, and assess their performance in the game. The code that implements these algorithms and reproduces all figures in this blog post can be found on my GitHub, here: [https://github.com/MacStrelioff/CookieClickerAgent](https://github.com/MacStrelioff/CookieClickerAgent)
+Lately I've been interested in writing algorithms (agents) that interact with websites. The game [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies). Here I'll describe three agents that I made for this game and assess their performance. The code that implements these agents and reproduces all figures in this blog post can be found on my GitHub, here: [https://github.com/MacStrelioff/CookieClickerAgent](https://github.com/MacStrelioff/CookieClickerAgent)
 
 # Background and Setup 
 
 ## Cookie Clicker Game
 
-The interface for this game is shown below. 
+The interface for [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) is shown below. 
 
 <!--- UPDATE IMAGE POINTER TO ONE THAT IS CORRECT IN THE FILE STRUCTURE OF THE HOSTED FILES --->
 ![](./Cookie_Clicker_Images/CookieClickerGameEdited.png)
 
+The goal of the game is to amass wealth (cookies) and your balance and revenue are shown above the large cookie. Cookies are earned each time you click the large cookie. Investments, shown at the bottom right, are unlocked as you acquire wealth. Purchasing an investment (Cursor, Grandma, ...) provides recurring revenue (cookies per second). For any specific investment, the price of the next investment increases each time the investment is purchased. In developing the algorithms below I focused on maximizing revenue, which would over time maximize wealth.
 
-The goal of the game is to amass cookies. A user can earn cookies (currency) by clicking the large cookie. Buildings, shown at the bottom right, are unlocked as one acquires wealth. Purchasing a building provides recurring revenue (cookies per second). For any specific building, the price of the building increases each time the building is purchased. I focused on two metrics when developing the algorithms described below: revenue (cookies per second), and price or cost of a building. 
-
-The game has other mechanics (upgrades, ascension, golden cookies, ...). I also programed functions to purchase upgrades and click golden cookies for temporary buffs, but these functions were disabled here to allow for a more controlled comparison of the algorithms, which only differed in their strategy for purchasing buildings. 
+The game has other mechanics (upgrades, ascension, golden cookies, ...). I also programed functions to purchase upgrades and click golden cookies for temporary buffs, but these functions were disabled in the analyses below to allow for a more controlled comparison of the algorithms, which only differed in their strategy for building purchases.
 
 # Helper Functions
 
@@ -53,11 +52,13 @@ This section can be skipped if you are only interested in the different strategi
 
 # Strategies
 
+<!--
 While the goal is to earn as many cookies as possible, the game also allows revenue to accrue player is away, and the amount of cookies earned by a click can scale with the revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.
+-->
 
 ## Naive: Buy all affordible investments
 
-The simplest strategy was to purchase any affordible building. 
+The simplest investment strategy was to purchase any affordible building. In the code below, `products` is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with `products[-1].click()`, until no more buildings are affordible. 
 
 ```{python, eval=FALSE}
 def buy_products(self):
@@ -67,12 +68,9 @@ def buy_products(self):
         products = driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]')
 ```
 
+## MaxROI: Buy best return on investment
 
-The code above defines the investment strategy for this agent. First, `driver.find_elements_by_xpath('//div[@class="product unlocked enabled"]')` is used to get a list of the affordible products. The while loop below then clicks (buys) all affordible products, starting with the most expensive. 
-
-## MaxCPS: Buy best revenue to price ratio
-
-The second, more advanced strategy would be to buy the option that had the best revenue to price ratio. 
+The second, slightly more advanced strategy would be to buy the option that will have the best return on investment (revenue to price ratio). 
 
 One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked. 
 
@@ -110,15 +108,18 @@ class agent_class_max_rps_price_ratio(agent_class_naive):
 ```
 
 
-## MinWait: Buy what reduces wait until the highest revenue purchase
+## MinWait: Buy what minizes the time to the highest revenue purchase
 
-This final strategy is a bit more complex. 
+This final strategy is a bit more complex. The intuition of this strategy is that buildings which are not the best may still increase revenue enough to decrease the amount of time before the highest revenue option can be purchased. 
+
+
+- formulas for the purchase logic
+- possible figure of two rates to a threshold, or one that simulates an intermittent purchase that leads to the larger purchase occurring earlier than it would have with the base revenue -- i.e. plot the images I've sketched. 
 
 - rationale: differences in revenue per building are quite large, so ... .
 - pics from ipad of concept figure
 - proof that balance doesn't matter 
 - sketches of preference as rps and cost of another building change. 
-
 
 The code to implement this, which makes ample use of helper functions, is provided below. 
 
@@ -184,11 +185,11 @@ The MaxCps and MinWait strategies clearly performed better than the Naive strate
 
 ![](./Cookie_Clicker_Images/BuildingCount.png)
 
-
+The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxCps agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment. 
 
 ![](./Cookie_Clicker_Images/Price.png)
 
-
+The Naieve strategy equalizes price, while both the MaxCps and MinWait strategies can save to purchase the most expensive investment. 
 
 ![](./Cookie_Clicker_Images/RevenuePerPrice.png)
 

@@ -1,7 +1,7 @@
 ---
-title: "DRAFT OF: Cookie Clicker Bot"
+title: "Cookie Clicker Agent"
 author: "Mac Strelioff"
-date: "2019-08-01 17:57:33"
+date: "2019-08-02 08:59:58"
 output:
   blogdown::html_page:
     toc: true
@@ -18,8 +18,8 @@ math: true
 <li><a href="#helper-functions">Helper Functions</a></li>
 <li><a href="#strategies">Strategies</a><ul>
 <li><a href="#naive-buy-all-affordible-investments">Naive: Buy all affordible investments</a></li>
-<li><a href="#maxcps-buy-best-revenue-to-price-ratio">MaxCPS: Buy best revenue to price ratio</a></li>
-<li><a href="#minwait-buy-what-reduces-wait-until-the-highest-revenue-purchase">MinWait: Buy what reduces wait until the highest revenue purchase</a></li>
+<li><a href="#maxroi-buy-best-return-on-investment">MaxROI: Buy best return on investment</a></li>
+<li><a href="#minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase">MinWait: Buy what minizes the time to the highest revenue purchase</a></li>
 </ul></li>
 <li><a href="#performance">Performance</a></li>
 </ul>
@@ -27,20 +27,20 @@ math: true
 
 <div id="overview" class="section level1">
 <h1>Overview</h1>
-<p>Lately I’ve been interested in writing algorithms that interact with websites. The game <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a> is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies. Here I’ll walk through three algorithms that I made to play this game, and assess their performance in the game. The code that implements these algorithms and reproduces all figures in this blog post can be found on my GitHub, here: <a href="https://github.com/MacStrelioff/CookieClickerAgent" class="uri">https://github.com/MacStrelioff/CookieClickerAgent</a></p>
+<p>Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a> is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies). Here I’ll describe three agents that I made for this game and assess their performance. The code that implements these agents and reproduces all figures in this blog post can be found on my GitHub, here: <a href="https://github.com/MacStrelioff/CookieClickerAgent" class="uri">https://github.com/MacStrelioff/CookieClickerAgent</a></p>
 </div>
 <div id="background-and-setup" class="section level1">
 <h1>Background and Setup</h1>
 <div id="cookie-clicker-game" class="section level2">
 <h2>Cookie Clicker Game</h2>
-<p>The interface for this game is shown below.</p>
+<p>The interface for <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a> is shown below.</p>
 <!--- UPDATE IMAGE POINTER TO ONE THAT IS CORRECT IN THE FILE STRUCTURE OF THE HOSTED FILES --->
 <div class="figure">
 <img src="Cookie_Clicker_Images/CookieClickerGameEdited.png" />
 
 </div>
-<p>The goal of the game is to amass cookies. A user can earn cookies (currency) by clicking the large cookie. Buildings, shown at the bottom right, are unlocked as one acquires wealth. Purchasing a building provides recurring revenue (cookies per second). For any specific building, the price of the building increases each time the building is purchased. I focused on two metrics when developing the algorithms described below: revenue (cookies per second), and price or cost of a building.</p>
-<p>The game has other mechanics (upgrades, ascension, golden cookies, …). I also programed functions to purchase upgrades and click golden cookies for temporary buffs, but these functions were disabled here to allow for a more controlled comparison of the algorithms, which only differed in their strategy for purchasing buildings.</p>
+<p>The goal of the game is to amass wealth (cookies) and your balance and revenue are shown above the large cookie. Cookies are earned each time you click the large cookie. Investments, shown at the bottom right, are unlocked as you acquire wealth. Purchasing an investment (Cursor, Grandma, …) provides recurring revenue (cookies per second). For any specific investment, the price of the next investment increases each time the investment is purchased. In developing the algorithms below I focused on maximizing revenue, which would over time maximize wealth.</p>
+<p>The game has other mechanics (upgrades, ascension, golden cookies, …). I also programed functions to purchase upgrades and click golden cookies for temporary buffs, but these functions were disabled in the analyses below to allow for a more controlled comparison of the algorithms, which only differed in their strategy for building purchases.</p>
 </div>
 </div>
 <div id="helper-functions" class="section level1">
@@ -49,20 +49,21 @@ math: true
 </div>
 <div id="strategies" class="section level1">
 <h1>Strategies</h1>
-<p>While the goal is to earn as many cookies as possible, the game also allows revenue to accrue player is away, and the amount of cookies earned by a click can scale with the revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.</p>
+<!--
+While the goal is to earn as many cookies as possible, the game also allows revenue to accrue player is away, and the amount of cookies earned by a click can scale with the revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.
+-->
 <div id="naive-buy-all-affordible-investments" class="section level2">
 <h2>Naive: Buy all affordible investments</h2>
-<p>The simplest strategy was to purchase any affordible building.</p>
+<p>The simplest investment strategy was to purchase any affordible building. In the code below, <code>products</code> is a list of the web elements that represent the affordible buildings, and the while loop cycles over them, buying the most expensive ones first with <code>products[-1].click()</code>, until no more buildings are affordible.</p>
 <pre class="python"><code>def buy_products(self):
     products = driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;)
     while products: # if there are affordible products, buy them
         products[-1].click()
         products = driver.find_elements_by_xpath(&#39;//div[@class=&quot;product unlocked enabled&quot;]&#39;)</code></pre>
-<p>The code above defines the investment strategy for this agent. First, <code>driver.find_elements_by_xpath('//div[@class=&quot;product unlocked enabled&quot;]')</code> is used to get a list of the affordible products. The while loop below then clicks (buys) all affordible products, starting with the most expensive.</p>
 </div>
-<div id="maxcps-buy-best-revenue-to-price-ratio" class="section level2">
-<h2>MaxCPS: Buy best revenue to price ratio</h2>
-<p>The second, more advanced strategy would be to buy the option that had the best revenue to price ratio.</p>
+<div id="maxroi-buy-best-return-on-investment" class="section level2">
+<h2>MaxROI: Buy best return on investment</h2>
+<p>The second, slightly more advanced strategy would be to buy the option that will have the best return on investment (revenue to price ratio).</p>
 <p>One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked.</p>
 <pre class="python"><code>class agent_class_max_rps_price_ratio(agent_class_naive):
     # overwrite the buy_products method
@@ -94,14 +95,16 @@ math: true
                 self.get_building_info()
             else: best_building_affordible=False # if not affordible, break the loop  </code></pre>
 </div>
-<div id="minwait-buy-what-reduces-wait-until-the-highest-revenue-purchase" class="section level2">
-<h2>MinWait: Buy what reduces wait until the highest revenue purchase</h2>
-<p>This final strategy is a bit more complex.</p>
+<div id="minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase" class="section level2">
+<h2>MinWait: Buy what minizes the time to the highest revenue purchase</h2>
+<p>This final strategy is a bit more complex. The intuition of this strategy is that buildings which are not the best may still increase revenue enough to decrease the amount of time before the highest revenue option can be purchased.</p>
 <ul>
+<li>formulas for the purchase logic</li>
+<li><p>possible figure of two rates to a threshold, or one that simulates an intermittent purchase that leads to the larger purchase occurring earlier than it would have with the base revenue – i.e. plot the images I’ve sketched.</p></li>
 <li>rationale: differences in revenue per building are quite large, so … .</li>
 <li>pics from ipad of concept figure</li>
 <li>proof that balance doesn’t matter</li>
-<li>sketches of preference as rps and cost of another building change.</li>
+<li><p>sketches of preference as rps and cost of another building change.</p></li>
 </ul>
 <p>The code to implement this, which makes ample use of helper functions, is provided below.</p>
 <pre class="python"><code># Max RPS/price agent
@@ -167,10 +170,12 @@ class agent_class_min_wait(agent_class_naive):
 <img src="Cookie_Clicker_Images/BuildingCount.png" />
 
 </div>
+<p>The Naive agent purchases each investment at about the same rate. At the other extreme, MinWait agent generally saves for the highest revenue option, then occasionally buys cheaper options to reduce the wait until the next purchase of the highest revenue option. This is most clearly seen in the spikes across buildings soon after a new, expensive, building is purchased. Like the Naive agent, the MaxCps agent also buys each investment frequently, however this agent prioritizes the investments that give the best return on investment.</p>
 <div class="figure">
 <img src="Cookie_Clicker_Images/Price.png" />
 
 </div>
+<p>The Naieve strategy equalizes price, while both the MaxCps and MinWait strategies can save to purchase the most expensive investment.</p>
 <div class="figure">
 <img src="Cookie_Clicker_Images/RevenuePerPrice.png" />
 
