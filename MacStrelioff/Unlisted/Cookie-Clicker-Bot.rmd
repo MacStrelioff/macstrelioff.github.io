@@ -8,7 +8,7 @@ output:
 math: true
 ---
 
-```{r}
+```{r,include=FALSE}
 library(reticulate)
 ```
 
@@ -30,19 +30,17 @@ use_python("/anaconda3/bin/python")
 ```
 
 
+# ADD PROJECT TO GIT HUB, AND LINK TO IT
+
 # Overview
 
-
-
-
-
+Lately I've been interested in writing algorithms that interact with websites. The game [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies. Here I'll walk through three algorithms that I made to play this game, and assess their performance in the game. The code that implements these algorithms and reproduces all figures in this blog post can be found on my GitHub, here: [https://github.com/MacStrelioff/CookieClickerAgent](https://github.com/MacStrelioff/CookieClickerAgent)
 
 # Background and Setup 
 
-- I was interested in developing programs that can intelligently interact with a web interface.. 
-- I'll highlight some bits of code, but a Jupyter notebook with all code to run these algorithms can be found (HERE) -- link to my git repo with the notebook...
-
 ## Cookie Clicker Game
+
+
 
 - pic of the interface
 - You get cookies for clicking the big cookie. You can spend these cookies on buildings, which generate a number of cookies per second. Buildings get more expensive when bought, so the marginal benefit of any particular building depends on how many are currently owned. 

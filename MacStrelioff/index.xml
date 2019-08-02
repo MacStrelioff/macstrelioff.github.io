@@ -38,13 +38,14 @@
     <item>
       <title>DRAFT OF: Cookie Clicker Bot</title>
       <link>/MacStrelioff/unlisted/cookie-clicker-bot/</link>
-      <pubDate>Thu, 01 Aug 2019 15:44:22 +0000</pubDate>
+      <pubDate>Thu, 01 Aug 2019 16:52:36 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/cookie-clicker-bot/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#add-project-to-git-hub-and-link-to-it&#34;&gt;ADD PROJECT TO GIT HUB, AND LINK TO IT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#background-and-setup&#34;&gt;Background and Setup&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#cookie-clicker-game&#34;&gt;Cookie Clicker Game&lt;/a&gt;&lt;/li&gt;
@@ -58,17 +59,15 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(reticulate)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;reticulate&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;add-project-to-git-hub-and-link-to-it&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;ADD PROJECT TO GIT HUB, AND LINK TO IT&lt;/h1&gt;
+&lt;/div&gt;
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Lately I’ve been interested in writing algorithms that interact with websites. The game &lt;a href=&#34;https://orteil.dashnet.org/cookieclicker/&#34;&gt;Cookie Clicker&lt;/a&gt; is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn cookies (money) that can be used to buy buildings, which in turn generate more cookies. Here I’ll walk through three algorithms that I made to play this game, and assess their performance in the game. The code that implements these algorithms and reproduces all figures in this blog post can be found on my GitHub, here: &lt;a href=&#34;https://github.com/MacStrelioff/CookieClickerAgent&#34; class=&#34;uri&#34;&gt;https://github.com/MacStrelioff/CookieClickerAgent&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;background-and-setup&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Background and Setup&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;I was interested in developing programs that can intelligently interact with a web interface..&lt;/li&gt;
-&lt;li&gt;I’ll highlight some bits of code, but a Jupyter notebook with all code to run these algorithms can be found (HERE) – link to my git repo with the notebook…&lt;/li&gt;
-&lt;/ul&gt;
 &lt;div id=&#34;cookie-clicker-game&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Cookie Clicker Game&lt;/h2&gt;
 &lt;ul&gt;
