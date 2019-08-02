@@ -137,7 +137,9 @@ This is an $O(N)$ search through the buildings that have information, where $N$ 
 
 ## MinWait: Buy what minizes the time to the highest revenue purchase
 
-This final strategy is a bit more complex. The intuition of this strategy is to buy the investment that maximizes revenue. However, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in a figure below: 
+The intuition of this strategy is to buy the investment that maximizes revenue, however, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in the figure below, where the naive waiter (red) waits until they can purchase a hypothetical maximum revenue investment for 
+200, and the MinWait algorithm makes an investment for 100 that increases revenue enough to purchase the 
+200 maximum revenue investment faster than the naive waiter: 
 
 ```{r,echo=FALSE}
 # time and balance for a Naive waiter
@@ -160,23 +162,9 @@ abline(v=max(t2[y2<=200]+max(t1)),lty=3,col=rgb(0,0,.8),lwd=2)
 legend(0,175,c("Naive Wait","MinWait"),lty=c(1,2),lwd=2,col=c(rgb(.8,0,0),rgb(0,0,.8)))
 ```
 
+Formally, this algorithm first computes the wait until the maximum revenue investment can be purchased ($w_{max}$), then searches for investments that can reduce the wait and purchases any that it finds. For a given current revenue $r_{t}$ and cost of the maximum revenue investment, $c_{max}$, the wait until this investment can be purchased is $w_{max}=\frac{c_{max}}{r_t}$, which corresponds to the time when the red line reaches 200. This formula ignores current balance, but in the appendix I show that the current balance is irrelevant for the purchasing decision. An alternative investment, $b$, could improve the wait time if it's addition to revenue is large enough to make up for its cost within before the time $w_{max}$. This is shown with the blue dashed line in the example above. If investment $b$ adds $r_b$ to the current revenue $r_t$, and costs $c_b$, then the wait until the maximum revenue investment if $b$ is purchased is: $w_b = \frac{c_b}{r_t}+\frac{c_a}{r_t+r_b}$. This algorithm then buys investment $b$ if $w_b<w_{max}$; that is, if purchasing $b$ reduces the wait until the maximum revenue investment can be purchased.
 
-
-
-
-
-Formally, for a given current revenue $r_{t}$ and cost of the investment that would add the most to revenue, $c_{max}$, the time until this investment can be purchased is $t_{max}=\frac{c_{max}}{r_t}$. This formula ignores current balance, but in the appendix I prove that the current balance is irrelevant for the purchasing decision here. 
-
-
-- formulas for the purchase logic
-- possible figure of two rates to a threshold, or one that simulates an intermittent purchase that leads to the larger purchase occurring earlier than it would have with the base revenue -- i.e. plot the images I've sketched. 
-
-- rationale: differences in revenue per building are quite large, so ... .
-- pics from ipad of concept figure
-- proof that balance doesn't matter 
-- sketches of preference as rps and cost of another building change. 
-
-The code to implement this, which makes ample use of helper functions, is provided below. 
+The code I used to implement this is provided below. 
 
 ```{python, eval=FALSE}
 # Max RPS/price agent
@@ -230,6 +218,80 @@ class agent_class_min_wait(agent_class_naive):
             else: best_building_affordible=False # if not affordible, break purchase loop 
 ```
 
+This implementation again extends the `agent_class_naive` class by replacing the `buy_products` method. This algorithm works with two passes through the list of unlocked investments. The fist pass is copied below: 
+
+```{python, eval=FALSE}
+# find building with max revenue per second and it's cost
+max_rps,cost_max_rps = 0, float('inf')
+building_to_buy,product_to_buy = [], []
+for i,building in enumerate(self.building_info):
+    # get rps for building
+    cur_rps = self.building_info[building]['cps'] 
+    # if it's the best rps far, update max, cost, and building id
+    if cur_rps > max_rps:
+        max_rps,building_to_buy = cur_rps,building
+        cost_max_rps = self.building_info[building]['price'] 
+        product_to_buy = products[i] # queue this building to buy
+```
+
+Similar to that used in the MaxROI agent, this code is an $O(N)$ search through the $N$ unlocked buildings. This code logs the maximum revenue in `max_rps` and the building associated with this revenue in `building_to_buy`, as well as the web element to click in order to purchase this building, `product_to_buy`.
+
+Then the agent computes $w_{max}$ with: 
+
+```{python,eval=FALSE}
+wait_max = float(cost_max_rps) / self.revenue if self.revenue else 0 # stops division by 0
+```
+
+And runs another pass through the list of buildings again, this time searching for a building that will reduce the wait time: 
+
+```{python,eval=FALSE}
+for i,building in enumerate(self.building_info):
+    cost_cur = self.building_info[building]['price']
+    rps_cur  = self.revenue + self.building_info[building]['cps']
+    # conditional to stop division by 0
+    wait_till_cur = float(cost_cur) / self.revenue if self.revenue else 0
+    wait_cur = (wait_till_cur + 
+                 cost_max_rps / rps_cur)
+    if wait_cur <= wait_max: 
+        wait_max = wait_cur # update minimum wait
+        building_to_buy = building
+        product_to_buy = products[i] # queue this building to buy instead
+```
+
+Here the MinWait agent gets the cost of a candidate investment, `cost_cur` and the revenue that would be attained if this investment is bought `rps_cur`. Then computes the time before this candidate investment could be bought at the current revenue, `wait_till_cur` and finally computes $w_b$, the wait until the maximum revenue option could be bought if the candidate investment is bought first as `wait_cur`. Lastly, if this is lower than `wait_max` ($w_{max}$), then the agent stores the best wait in `wait_max` and updates the building to buy and the web element to click. 
+
+Like the MaxROI agent, the last few lines of code check if the investment is affordible, and if not, terminates the ends the purchasing loop.
+
+
+# Execution
+
+Each agent class was instantiated as `agent`, run for 100,000 big cookie clicks, with the purchasing logic being run every 200 clicks using the code below:
+
+```{python, eval=FALSE}
+# run algorithm for a specified number of cookie clicks
+clicks = 100000-ci
+t0=time.time()
+initial_ci = ci
+stop = ci+clicks # run for `clicks` additional clicks
+while ci<stop:
+    ci += 1 # increment click counter
+    agent.click_cookie()
+    if ci%200 == 0: # to speed pure clicking
+        agent.buy_products()
+        # log data
+        agent.log_balance_and_revenue(epoch=ci)
+        agent.get_building_info()
+        agent.building_info_logger(epoch=ci)
+        # feedback
+        clear_output()
+        print('click: '+str(ci-initial_ci)+' of '+str(stop-initial_ci)+
+             '\npct: '+str((ci-initial_ci)/(stop-initial_ci))+
+             '\nGolden Clicks: '+str(agent.golden_cookie_clicks))
+t1=time.time()
+print('Total Time: '+ str(t1-t0) +'sec')
+```
+
+
 # Performance 
 
 Each agent ran for 100,000 big cookie clicks. The Naive algorithm ran for approximately 3,550 seconds, while the other two ran for around 3,700-3,800. The differences in runtime were small enough that I wasn't worried about differences in the performance metrics below being attributable to extra income earned from a longer runtime. 
@@ -258,7 +320,7 @@ Most telling, the MaxCPS strategy seems to equalize the ratio between revenue an
 - show that balance is irrelevant
 
 
-
+- sketches of preference as rps and cost of another building change. 
 
 
 

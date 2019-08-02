@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Performance Appendix: More MinWait Math   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies).">
+  <meta name="description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Execution Performance Appendix: More MinWait Math   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies).">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/unlisted/cookie-clicker-bot/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/unlisted/cookie-clicker-bot/">
   <meta property="og:title" content="Cookie Clicker Agent | Mac Strelioff">
-  <meta property="og:description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Performance Appendix: More MinWait Math   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies)."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Overview Background and Setup Cookie Clicker Game  Helper Functions Strategies Naive: Buy all affordible investments MaxROI: Buy best return on investment MinWait: Buy what minizes the time to the highest revenue purchase  Execution Performance Appendix: More MinWait Math   Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites. The game Cookie Clicker is a great testing ground for such algorithms. The game is played by clicking a big cooke to earn money (cookies) that can be used to invest in instruments (buy buildings), which in turn generate revenue (more cookies)."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-02T09:55:12&#43;00:00">
+  <meta property="article:published_time" content="2019-08-02T10:59:54&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-02T09:55:12&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-02T10:59:54&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-02 09:55:12 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-02 09:55:12 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-02 10:59:54 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-02 10:59:54 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -470,6 +470,7 @@
 <li><a href="#maxroi-buy-best-return-on-investment">MaxROI: Buy best return on investment</a></li>
 <li><a href="#minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase">MinWait: Buy what minizes the time to the highest revenue purchase</a></li>
 </ul></li>
+<li><a href="#execution">Execution</a></li>
 <li><a href="#performance">Performance</a></li>
 <li><a href="#appendix-more-minwait-math">Appendix: More MinWait Math</a></li>
 </ul>
@@ -568,18 +569,10 @@ for i,building in enumerate(self.building_info):
 </div>
 <div id="minwait-buy-what-minizes-the-time-to-the-highest-revenue-purchase" class="section level2">
 <h2>MinWait: Buy what minizes the time to the highest revenue purchase</h2>
-<p>This final strategy is a bit more complex. The intuition of this strategy is to buy the investment that maximizes revenue. However, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in a figure below:</p>
+<p>The intuition of this strategy is to buy the investment that maximizes revenue, however, those investments can be expensive and other investments may increase revenue enough to decrease the amount of time before the highest revenue investment can be purchased. This intuition is sketched in the figure below, where the naive waiter (red) waits until they can purchase a hypothetical maximum revenue investment for 200, and the MinWait algorithm makes an investment for 100 that increases revenue enough to purchase the 200 maximum revenue investment faster than the naive waiter:</p>
 <p><img src="/MacStrelioff/Unlisted/Cookie-Clicker-Bot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>Formally, for a given current revenue <span class="math inline">\(r_{t}\)</span> and cost of the investment that would add the most to revenue, <span class="math inline">\(c_{max}\)</span>, the time until this investment can be purchased is <span class="math inline">\(t_{max}=\frac{c_{max}}{r_t}\)</span>. This formula ignores current balance, but in the appendix I prove that the current balance is irrelevant for the purchasing decision here.</p>
-<ul>
-<li>formulas for the purchase logic</li>
-<li><p>possible figure of two rates to a threshold, or one that simulates an intermittent purchase that leads to the larger purchase occurring earlier than it would have with the base revenue – i.e. plot the images I’ve sketched.</p></li>
-<li>rationale: differences in revenue per building are quite large, so … .</li>
-<li>pics from ipad of concept figure</li>
-<li>proof that balance doesn’t matter</li>
-<li><p>sketches of preference as rps and cost of another building change.</p></li>
-</ul>
-<p>The code to implement this, which makes ample use of helper functions, is provided below.</p>
+<p>Formally, this algorithm first computes the wait until the maximum revenue investment can be purchased (<span class="math inline">\(w_{max}\)</span>), then searches for investments that can reduce the wait and purchases any that it finds. For a given current revenue <span class="math inline">\(r_{t}\)</span> and cost of the maximum revenue investment, <span class="math inline">\(c_{max}\)</span>, the wait until this investment can be purchased is <span class="math inline">\(w_{max}=\frac{c_{max}}{r_t}\)</span>, which corresponds to the time when the red line reaches 200. This formula ignores current balance, but in the appendix I show that the current balance is irrelevant for the purchasing decision. An alternative investment, <span class="math inline">\(b\)</span>, could improve the wait time if it’s addition to revenue is large enough to make up for its cost within before the time <span class="math inline">\(w_{max}\)</span>. This is shown with the blue dashed line in the example above. If investment <span class="math inline">\(b\)</span> adds <span class="math inline">\(r_b\)</span> to the current revenue <span class="math inline">\(r_t\)</span>, and costs <span class="math inline">\(c_b\)</span>, then the wait until the maximum revenue investment if <span class="math inline">\(b\)</span> is purchased is: <span class="math inline">\(w_b = \frac{c_b}{r_t}+\frac{c_a}{r_t+r_b}\)</span>. This algorithm then buys investment <span class="math inline">\(b\)</span> if <span class="math inline">\(w_b&lt;w_{max}\)</span>; that is, if purchasing <span class="math inline">\(b\)</span> reduces the wait until the maximum revenue investment can be purchased.</p>
+<p>The code I used to implement this is provided below.</p>
 <pre class="python"><code># Max RPS/price agent
 class agent_class_min_wait(agent_class_naive):
     # overwrite the buy_products method for this agent&#39;s purchase logic
@@ -629,7 +622,61 @@ class agent_class_min_wait(agent_class_naive):
                 # update building info (including rps per price rps_pp)
                 self.get_building_info()
             else: best_building_affordible=False # if not affordible, break purchase loop </code></pre>
+<p>This implementation again extends the <code>agent_class_naive</code> class by replacing the <code>buy_products</code> method. This algorithm works with two passes through the list of unlocked investments. The fist pass is copied below:</p>
+<pre class="python"><code># find building with max revenue per second and it&#39;s cost
+max_rps,cost_max_rps = 0, float(&#39;inf&#39;)
+building_to_buy,product_to_buy = [], []
+for i,building in enumerate(self.building_info):
+    # get rps for building
+    cur_rps = self.building_info[building][&#39;cps&#39;] 
+    # if it&#39;s the best rps far, update max, cost, and building id
+    if cur_rps &gt; max_rps:
+        max_rps,building_to_buy = cur_rps,building
+        cost_max_rps = self.building_info[building][&#39;price&#39;] 
+        product_to_buy = products[i] # queue this building to buy</code></pre>
+<p>Similar to that used in the MaxROI agent, this code is an <span class="math inline">\(O(N)\)</span> search through the <span class="math inline">\(N\)</span> unlocked buildings. This code logs the maximum revenue in <code>max_rps</code> and the building associated with this revenue in <code>building_to_buy</code>, as well as the web element to click in order to purchase this building, <code>product_to_buy</code>.</p>
+<p>Then the agent computes <span class="math inline">\(w_{max}\)</span> with:</p>
+<pre class="python"><code>wait_max = float(cost_max_rps) / self.revenue if self.revenue else 0 # stops division by 0</code></pre>
+<p>And runs another pass through the list of buildings again, this time searching for a building that will reduce the wait time:</p>
+<pre class="python"><code>for i,building in enumerate(self.building_info):
+    cost_cur = self.building_info[building][&#39;price&#39;]
+    rps_cur  = self.revenue + self.building_info[building][&#39;cps&#39;]
+    # conditional to stop division by 0
+    wait_till_cur = float(cost_cur) / self.revenue if self.revenue else 0
+    wait_cur = (wait_till_cur + 
+                 cost_max_rps / rps_cur)
+    if wait_cur &lt;= wait_max: 
+        wait_max = wait_cur # update minimum wait
+        building_to_buy = building
+        product_to_buy = products[i] # queue this building to buy instead</code></pre>
+<p>Here the MinWait agent gets the cost of a candidate investment, <code>cost_cur</code> and the revenue that would be attained if this investment is bought <code>rps_cur</code>. Then computes the time before this candidate investment could be bought at the current revenue, <code>wait_till_cur</code> and finally computes <span class="math inline">\(w_b\)</span>, the wait until the maximum revenue option could be bought if the candidate investment is bought first as <code>wait_cur</code>. Lastly, if this is lower than <code>wait_max</code> (<span class="math inline">\(w_{max}\)</span>), then the agent stores the best wait in <code>wait_max</code> and updates the building to buy and the web element to click.</p>
+<p>Like the MaxROI agent, the last few lines of code check if the investment is affordible, and if not, terminates the ends the purchasing loop.</p>
 </div>
+</div>
+<div id="execution" class="section level1">
+<h1>Execution</h1>
+<p>Each agent class was instantiated as <code>agent</code>, run for 100,000 big cookie clicks, with the purchasing logic being run every 200 clicks using the code below:</p>
+<pre class="python"><code># run algorithm for a specified number of cookie clicks
+clicks = 100000-ci
+t0=time.time()
+initial_ci = ci
+stop = ci+clicks # run for `clicks` additional clicks
+while ci&lt;stop:
+    ci += 1 # increment click counter
+    agent.click_cookie()
+    if ci%200 == 0: # to speed pure clicking
+        agent.buy_products()
+        # log data
+        agent.log_balance_and_revenue(epoch=ci)
+        agent.get_building_info()
+        agent.building_info_logger(epoch=ci)
+        # feedback
+        clear_output()
+        print(&#39;click: &#39;+str(ci-initial_ci)+&#39; of &#39;+str(stop-initial_ci)+
+             &#39;\npct: &#39;+str((ci-initial_ci)/(stop-initial_ci))+
+             &#39;\nGolden Clicks: &#39;+str(agent.golden_cookie_clicks))
+t1=time.time()
+print(&#39;Total Time: &#39;+ str(t1-t0) +&#39;sec&#39;)</code></pre>
 </div>
 <div id="performance" class="section level1">
 <h1>Performance</h1>
@@ -658,7 +705,8 @@ class agent_class_min_wait(agent_class_naive):
 <div id="appendix-more-minwait-math" class="section level1">
 <h1>Appendix: More MinWait Math</h1>
 <ul>
-<li>show that balance is irrelevant</li>
+<li><p>show that balance is irrelevant</p></li>
+<li><p>sketches of preference as rps and cost of another building change.</p></li>
 </ul>
 </div>
 
