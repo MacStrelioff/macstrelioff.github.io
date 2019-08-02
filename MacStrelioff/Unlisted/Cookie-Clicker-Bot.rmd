@@ -52,10 +52,9 @@ The base agent class, `agent_class_naive`, contained many helper functions as we
 
 ### Browser and Game Initialization
 
-The agent was initialized with a web driver object, created with: `driver = webdriver.Chrome('./chromedriver')`. The `__init__` method is shown below:
+The agent was initialized with a web driver object, created with: `driver = webdriver.Chrome('./chromedriver')`. The first part of the `__init__` method is copied below:
 
 ```{python,eval=FALSE}
-# Naive agent
 class agent_class_naive:
     def __init__(self,driver):
         # navigate to site
@@ -75,6 +74,13 @@ class agent_class_naive:
         self.log_build_info = dict()
         self.building_info_logger(epoch=0)
         
+        ...
+```
+
+First the agent navigates the webdriver to the Cookie Clicker URL. Then it pauses for 10 seconds to let the page load. After that, the agent finds the big cookie web element and assigns it to attribute `big_cookie`. The remaining lines above initialize various attributes that are either used in purchasing logic, or used to log data used to assess agent performance. 
+
+The second part of the `__init__` method navigated to the 'options' tab and changed the game settings. One important option to change is the `numbersButton` option -- this toggles between displaying numbers numerically, '1,000,000', versus with words, '1 million'. Since the balance is scraped from this text, the agents require that numbers be displayed numerically. The other settings were changes to maximize game performance. Code for this second part of `__init__` is shown below:
+```{python,eval=FALSE}
         # CHANGE GRAPHICS AND OTHER SETTINGS
         # click 'options' tab
         driver.find_element_by_id("prefsButton").click()
@@ -93,10 +99,12 @@ class agent_class_naive:
         for button in buttons:
             time.sleep(.5) # so actions don't happen too fast to execute
             driver.find_element_by_id(button).click()
+
 ```
 
-
 ### Clicking Cookies
+
+A simple, but important, function is that which effects the cookie click, `click_cookie()`. The game also has golden cookies that provide a large lump sum of cookies, or increases in revenue. Golden cookies appear at random times, and at random locations on the screen. The second function below identifies and clicks these golden cookies until there are no more golden cookies on the screen, and logs the number of golden cookie clicks.
 
 ```{python,eval=FALSE}
     def click_cookie(self):
@@ -113,6 +121,7 @@ class agent_class_naive:
 
 ### Purchasing Upgrades 
 
+Upgrades are another way to spend cookies. The function below finds affordible upgrades and purchases (click) them, starting with the most expensive avilable upgrade. 
 
 ```{python,eval=FALSE}
     def buy_upgrades(self):
@@ -123,28 +132,30 @@ class agent_class_naive:
             upgrades = driver.find_elements_by_xpath('//div[@class="crate upgrade enabled"]')
 ```
 
-
-
 ### Logging balance and revenue
 
-called without epoch, this just updated balance and revenue for purchasing logic described in the strategy sections below. Called with epoch, this would log balance and revenue for analyzing the agent's performance. 
+Balance and revenue were important for some of the agents described below, and were also logged as a metric to compare the agents. To facilitate both of these needs, I created a method that took an argument `epoch`. This method parses the text above the big cookie to convert a string like '177 cookies per second: 1.1' to extract the balance of 177 and revenue of 1.1. If the method is called without an `epoch`, then it only updates the balance and revenue for use in purchasing logic presented below. Alternatively, if an `epoch` is passed, then this method also logs the balance, revenue, and eopch or click number, so that this information can be compared across agents. The code for this is shown below:
 
 ```{python,eval=FALSE}
     def log_balance_and_revenue(self,epoch=None):
-        # log balance and revenue
+        # parse string with balance and revenue
         tmp = driver.find_elements_by_xpath('//div[@id="cookies"]')
         tmp = tmp[0].text.replace(',','') # remove camas 1,000 -> 1000
         tmp = re.findall("\d+",tmp) # extract balance and revenue
         tmp = [int(i) for i in tmp] # convert str -> int
+        # update balance and revenue
         self.balance = tmp[0] # update current balance
-        self.revenue = tmp[1] # new for min_wait agent
-        if epoch: # epoch passed when this is called to log info, not just to update balance
+        self.revenue = tmp[1] # update revenue
+        # if epoch passed, log balance and revenue at this epoch
+        if epoch:
             self.log_bal_rev_epoch.append(epoch) # index for balance and revenue
             self.log_balance.append(tmp[0]) # log balance
             self.log_revenue.append(tmp[1]) # log revenue
 ```
 
 ### Get building information
+
+Building information like the cost and revenue was used in purchasing logic. The code used to extract this is shown below, and each component is elaborated on afterwards:
 
 ```{python,eval=FALSE}
     def get_building_info(self):
@@ -184,6 +195,43 @@ called without epoch, this just updated balance and revenue for purchasing logic
         self.building_info = building_info
 ```
 
+This code first obtains a list of the buildings that are unlocked, `products_unlocked`, then iterates over these to extract the relevant information: count or number owned, price of the next building, revenue, and the revenue to price ratio. Count and price could be obtained by parsing the text on the building button. This was done in the the following lines: 
+
+```{python,eval=FALSE}
+# get info from building button
+tmp=building.text.replace(',','').split(sep="\n")
+building_name,building_price,building_count = tmp if len(tmp)==3 else tmp+[0]
+# initialize dict for building
+building_info[building_name] = dict()
+# fill in count and price
+building_info[building_name]['count']=int(building_count)
+building_info[building_name]['price']=int(building_price)
+```
+
+Revenue could only be obtained from a tooltip that appeared when the mouse hovered over the building button. The code below effects a mouse hover over the building, then extracts and parses the text from the building tooltip;
+
+```{python,eval=FALSE}
+# get info from building tooltip
+hover = ActionChains(driver).move_to_element(building)
+hover.perform()
+tooltip = driver.find_elements_by_xpath('//div[@id="tooltip"]')
+tmp=tooltip[0].text.replace(',','');
+# tmp_cps = re.findall(r"[-+]?\d*\.\d+ cookies per|\d+ cookies per",tmp)
+# ^ fails for grandmas because of their text
+tmp_cps  = re.findall(r"produces [-+]?\d*\.\d+|produces \d+",tmp);
+if tmp_cps: # if building has been purchased
+    tmp_cps_2=float(re.findall(r"[-+]?\d*\.\d+|\d+",tmp_cps[0])[0])
+    building_cps = tmp_cps_2
+else: # if building hasn't been purchased, store cps as infinity
+    building_cps = float('inf')
+```
+
+One challenge was that the revenue was only viewable for owned buildings. When a new building was unlocked, but not yet purchased, the revenue was not viewable. To address this, I assumed a revenue of infinity for unowned buildings. This would incentivise agents that bought based on maximum revenue to save and purchase the new building -- which was reasonable because these buildings had higher revenue than the owned buildings. The last few lines in the code chunk above extract the revenue for owned buildings, and impute a revenue of infinity for unlocked and unowned buildings. 
+
+Finally, the last few lines of code log the revenue and the return on investment (revenue divided by price) for each building and store the updated building information.
+
+Since this method was long already, I used a seperate method when logging this information. This logging function is shown below:
+
 ```{python,eval=FALSE}
     def building_info_logger(self,epoch):
         if self.building_info: # if self.building_info exists
@@ -204,15 +252,9 @@ called without epoch, this just updated balance and revenue for purchasing logic
 
 ```
 
-
-- in describing the method for getting building information:
-- One challenge was that the revenue is unknown for buildings that have not been purchased yet. I addressed this by imputing a CPS of infinity, which would incentivize buying at least one of these buildings once they become unlocked. 
-
 # Strategies
 
-<!--
-While the goal is to earn as many cookies as possible, the game also allows revenue to accrue player is away, and the amount of cookies earned by a click can scale with the revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.
--->
+While the goal was to earn as many cookies as possible, the game also allows revenue to accrue while the player is away, and the amount of cookies earned per click can scale with revenue. For these reasons, I focused on maximizing revenue as the overall goal for any strategy.
 
 ## Naive: Buy all affordible investments
 
@@ -437,7 +479,9 @@ The Naieve strategy equalizes price, while both the MaxCps and MinWait strategie
 
 Most telling, the MaxCPS strategy seems to equalize the ratio between revenue and price across the investments. The MinWait strategy similarly picks options with a good ratio here, but it also frequently chooses worse deals. 
 
+# Conclusions
 
+- best strategy might be a combination between MaxROI and MinWait
 
 
 # Appendix: More MinWait Math
