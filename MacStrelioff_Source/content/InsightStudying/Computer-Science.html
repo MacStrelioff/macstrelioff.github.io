@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-07-28 17:10:52"
+date: "2019-08-03 16:36:05"
 output:
   blogdown::html_page:
     toc: true
@@ -28,14 +28,6 @@ math: true
 </ul></li>
 </ul></li>
 <li><a href="#data-structures">Data Structures</a></li>
-<li><a href="#trees">Trees</a><ul>
-<li><a href="#binary-search-trees">Binary search trees</a></li>
-</ul></li>
-<li><a href="#database-and-sql">Database and SQL</a><ul>
-<li><a href="#general-structure-of-sql-querys">General Structure of SQL querys</a></li>
-<li><a href="#aggregation-functions">Aggregation functions</a></li>
-<li><a href="#window-functions">Window functions</a></li>
-</ul></li>
 </ul></li>
 <li><a href="#sorting">Sorting</a></li>
 <li><a href="#searching">Searching</a><ul>
@@ -45,8 +37,21 @@ math: true
 <li><a href="#ranking-algorithms">Ranking Algorithms</a></li>
 <li><a href="#recommendation">Recommendation</a></li>
 <li><a href="#algorithms">Algorithms</a></li>
-<li><a href="#tools">Tools</a></li>
-<li><a href="#general-practice-problems">General Practice Problems</a></li>
+<li><a href="#todo-other-topics">TODO / Other Topics:</a><ul>
+<li><a href="#recursion">recursion;</a></li>
+<li><a href="#dijkstras-algorithm">Dijkstra’s algorithm,</a></li>
+<li><a href="#dynamic-programming-knapsack-problem-fibonacci-sequence">dynamic programming (knapsack problem, Fibonacci sequence)</a></li>
+<li><a href="#functional-programming">Functional programming</a></li>
+</ul></li>
+<li><a href="#tools">Tools</a><ul>
+<li><a href="#git-and-github">Git and GitHub</a></li>
+<li><a href="#sql">SQL</a><ul>
+<li><a href="#general-structure-of-sql-querys">General Structure of SQL querys</a></li>
+<li><a href="#aggregation-functions">Aggregation functions</a></li>
+<li><a href="#window-functions">Window functions</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#resources">Resources</a></li>
 </ul>
 </div>
 
@@ -82,27 +87,26 @@ for n in ns_to_test:
 <p>Very slowly increases in computational demand. It can result from splitting the input on each recusrive call.</p>
 <pre class="python"><code>def log_example(n,num_ops=0):
     # 1 operation per call
-    num_ops += 1
     # if n&gt;1, half n and recursively call again
     if n&gt;=1:
-        n/=2
+        n/=2; num_ops += 1
         num_ops += log_example(n)
     return num_ops
         
 for n in ns_to_test:
     out=log_example(n)
     print(&#39;f({}): {}&#39;.format(n,out))</code></pre>
-<pre><code>&gt;&gt;&gt; f(0): 1
-&gt;&gt;&gt; f(1): 2
-&gt;&gt;&gt; f(10): 5
-&gt;&gt;&gt; f(20): 6</code></pre>
+<pre><code>&gt;&gt;&gt; f(0): 0
+&gt;&gt;&gt; f(1): 1
+&gt;&gt;&gt; f(10): 4
+&gt;&gt;&gt; f(20): 5</code></pre>
 </div>
 <div id="polynomial-time-on-on2" class="section level4">
 <h4>Polynomial Time: O(n), O(n^2), …</h4>
 <p><a href="https://www.youtube.com/watch?v=P8Xa2BitN3I&amp;list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&amp;index=11">good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi</a></p>
 <p>Each for loop scales complexity by a factor of <span class="math inline">\(n\)</span>, so one loop would be linear (<span class="math inline">\(O(n)\)</span>), two loops would be quadratic <span class="math inline">\(O(n^2)\)</span>, and three loops would be cubic (<span class="math inline">\(O(n^3)\)</span>), and so on. The example below is a quadratic time example.</p>
 <pre class="python"><code>def linear_example(n): 
-    num_ops = 1         # 1 operation
+    num_ops = 0         # initialize counter
     for i in range(n):  # n times, perform...
         num_ops +=1     # 1 operation (n*1)
     return num_ops      # 1+n*1 = 1+n operations, O(n)
@@ -111,14 +115,13 @@ for n in ns_to_test:
 for n in ns_to_test:
     out=linear_example(n)
     print(&#39;f({}): {}&#39;.format(n,out))</code></pre>
-<pre><code>&gt;&gt;&gt; f(0): 1
-&gt;&gt;&gt; f(1): 2
-&gt;&gt;&gt; f(10): 11
-&gt;&gt;&gt; f(20): 21</code></pre>
+<pre><code>&gt;&gt;&gt; f(0): 0
+&gt;&gt;&gt; f(1): 1
+&gt;&gt;&gt; f(10): 10
+&gt;&gt;&gt; f(20): 20</code></pre>
 <pre class="python"><code>def quadratic_example(n):
-    num_ops = 1             # 1 operation
+    num_ops = 0             # initialize counter
     for i in range(n):      # n times
-        num_ops+=1          # 1 operation (n*1)
         for j in range(n):  # n times (n*n)
             num_ops+=1      # 1 operation (1*n*n)
     return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
@@ -127,10 +130,10 @@ for n in ns_to_test:
 for n in ns_to_test:
     out=quadratic_example(n)
     print(&#39;f({}): {}&#39;.format(n,out))</code></pre>
-<pre><code>&gt;&gt;&gt; f(0): 1
-&gt;&gt;&gt; f(1): 3
-&gt;&gt;&gt; f(10): 111
-&gt;&gt;&gt; f(20): 421</code></pre>
+<pre><code>&gt;&gt;&gt; f(0): 0
+&gt;&gt;&gt; f(1): 1
+&gt;&gt;&gt; f(10): 100
+&gt;&gt;&gt; f(20): 400</code></pre>
 </div>
 <div id="exponential-time-oxn" class="section level4">
 <h4>Exponential Time: <span class="math inline">\(O(x^n)\)</span></h4>
@@ -138,7 +141,7 @@ for n in ns_to_test:
 <p>In the example below, I call the function twice within each call. The complexity is then a geometric series, and the closed for solution for the number of operations can be found with;</p>
 <p><span class="math display">\[ \sum_{i=1}^N ar^{i-1} = \frac{a(1-r^{N})}{1-r} \]</span></p>
 <p>Where <span class="math inline">\(r=2\)</span>, <span class="math inline">\(a=2\)</span>, <span class="math inline">\(n\)</span> is looped over, and we start the index at 0 (<span class="math inline">\(i-1\)</span>) instead of 1, so:</p>
-<p><span class="math display">\[ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = -(1-2^{n+1}) = 2^{n+1}-1 \]</span></p>
+<p><span class="math display">\[ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 \]</span></p>
 <pre class="python"><code>def exponential_example(n,num_ops=0):
     num_ops += 1 # 1 operation per call
     # recursively called twice for each n&gt;0 (2**n times)    
@@ -167,48 +170,6 @@ for n in ns_to_test:
 <p>Good descriptions of <a href="https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html">lists</a>, <a href="https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html">dicts</a>, and <a href="https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists">why some operations are much faster in sets or dict keys</a>.</p>
 <p>In depth description of <a href="https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc">hash tables</a>.</p>
 <p>Data structures (hash, stack, queue, tree, linked list);</p>
-</div>
-<div id="trees" class="section level2">
-<h2>Trees</h2>
-<div id="binary-search-trees" class="section level3">
-<h3>Binary search trees</h3>
-</div>
-</div>
-<div id="database-and-sql" class="section level2">
-<h2>Database and SQL</h2>
-<p>SQL training resources;</p>
-<ul>
-<li><a href="https://classroom.udacity.com/courses/ud198">Udacity course</a></li>
-<li><a href="https://pgexercises.com/">pgexercises</a></li>
-<li><a href="https://sqlbolt.com/lesson/select_queries_introduction">sqlbolt</a></li>
-<li><a href="https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/">Mode Analytics</a> HackerRank (basic select, aggregation)</li>
-<li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
-<li><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></li>
-</ul>
-<div id="general-structure-of-sql-querys" class="section level3">
-<h3>General Structure of SQL querys</h3>
-<p><a href="https://sqlbolt.com/lesson/select_queries_order_of_execution">Order of execution for clauses below</a></p>
-<p>```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]</p>
-<p>FROM (table to select from)</p>
-<p>WHERE (logical condition on rows) column = (value or subquery)</p>
-<p>GROUP BY</p>
-<p>HAVING (constraint on grouped rows)</p>
-<p>LIMIT n [OFFSET m]</p>
-<p>```</p>
-<p>The <code>SELECT</code> clause can contain aggregations, and subqueries.</p>
-<p>The <code>FROM</code> clause can contain joins.</p>
-<p>The <code>WHERE</code> clause can also contain sub queries.</p>
-</div>
-<div id="aggregation-functions" class="section level3">
-<h3>Aggregation functions</h3>
-<p>The <code>GROUP BY</code> clause can contain <code>GROUPING SETS</code>, such as a <code>ROLLUP()</code> and <code>CUBE()</code> functions. These hierarchically group the rows passed to the aggregation functions. <code>ROLLUP()</code> hierarchically groups by arguments, starting left to right. <code>CUBE()</code> passes all permutations of its arguments to the aggregation functions.</p>
-<p><a href="https://pgexercises.com/questions/aggregates/fachoursbymonth3.html">Grouping sets are described a little here</a>.</p>
-</div>
-<div id="window-functions" class="section level3">
-<h3>Window functions</h3>
-<p><a href="https://pgexercises.com/questions/aggregates/countmembers.html">Orver() explained here</a>. Some more detailed information <a href="http://www.sqlservertutorial.net/sql-server-window-functions/">here</a>.</p>
-<p>Window functions include <code>OVER()</code> and <code>ROW_NUMBER()</code>. They take two optional arguments, <code>PARTITION BY</code> and <code>ORDER BY</code>.</p>
-</div>
 </div>
 </div>
 <div id="sorting" class="section level1">
@@ -271,18 +232,68 @@ print(count)</code></pre>
 <pre><code>&gt;&gt;&gt; 2</code></pre>
 <pre class="python"><code>print(nums)</code></pre>
 <pre><code>&gt;&gt;&gt; [2, 2, 2, 2, 1]</code></pre>
-<p>recursion;</p>
-<p>Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence)</p>
-<p>Functional programming</p>
+</div>
+<div id="todo-other-topics" class="section level1">
+<h1>TODO / Other Topics:</h1>
+<div id="recursion" class="section level2">
+<h2>recursion;</h2>
+</div>
+<div id="dijkstras-algorithm" class="section level2">
+<h2>Dijkstra’s algorithm,</h2>
+</div>
+<div id="dynamic-programming-knapsack-problem-fibonacci-sequence" class="section level2">
+<h2>dynamic programming (knapsack problem, Fibonacci sequence)</h2>
+</div>
+<div id="functional-programming" class="section level2">
+<h2>Functional programming</h2>
+</div>
 </div>
 <div id="tools" class="section level1">
 <h1>Tools</h1>
+<div id="git-and-github" class="section level2">
+<h2>Git and GitHub</h2>
 <p>git for version control (resolving merge conflicts)</p>
 </div>
-<div id="general-practice-problems" class="section level1">
-<h1>General Practice Problems</h1>
+<div id="sql" class="section level2">
+<h2>SQL</h2>
+<div id="general-structure-of-sql-querys" class="section level3">
+<h3>General Structure of SQL querys</h3>
+<p><a href="https://sqlbolt.com/lesson/select_queries_order_of_execution">Order of execution for clauses below</a></p>
+<p>```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]</p>
+<p>FROM (table to select from)</p>
+<p>WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery)</p>
+<p>GROUP BY</p>
+<p>HAVING (constraint on grouped rows)</p>
+<p>LIMIT n [OFFSET m]</p>
+<p>```</p>
+<p>The <code>SELECT</code> clause can contain aggregations, and subqueries.</p>
+<p>The <code>FROM</code> clause can contain joins.</p>
+<p>The <code>WHERE</code> clause can also contain sub queries.</p>
+</div>
+<div id="aggregation-functions" class="section level3">
+<h3>Aggregation functions</h3>
+<p>The <code>GROUP BY</code> clause can contain <code>GROUPING SETS</code>, such as a <code>ROLLUP()</code> and <code>CUBE()</code> functions. These hierarchically group the rows passed to the aggregation functions. <code>ROLLUP()</code> hierarchically groups by arguments, starting left to right. <code>CUBE()</code> passes all permutations of its arguments to the aggregation functions.</p>
+<p><a href="https://pgexercises.com/questions/aggregates/fachoursbymonth3.html">Grouping sets are described a little here</a>.</p>
+</div>
+<div id="window-functions" class="section level3">
+<h3>Window functions</h3>
+<p><a href="https://pgexercises.com/questions/aggregates/countmembers.html">Orver() explained here</a>. Some more detailed information <a href="http://www.sqlservertutorial.net/sql-server-window-functions/">here</a>.</p>
+<p>Window functions include <code>OVER()</code> and <code>ROW_NUMBER()</code>. They take two optional arguments, <code>PARTITION BY</code> and <code>ORDER BY</code>.</p>
+</div>
+</div>
+</div>
+<div id="resources" class="section level1">
+<h1>Resources</h1>
 <ul>
+<li>SQL training resources;</li>
+<li><a href="https://pgexercises.com/">pgexercises</a></li>
+<li><a href="https://classroom.udacity.com/courses/ud198">Udacity course</a></li>
+<li><a href="https://sqlbolt.com/lesson/select_queries_introduction">sqlbolt</a></li>
+<li><a href="https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/">Mode Analytics</a> HackerRank (basic select, aggregation)</li>
+<li><a href="https://www.hackerrank.com/domains/sql">Hacker Rank</a></li>
+<li><p><a href="https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1">W3School</a></p></li>
+<li>Python and other coding languages:</li>
 <li><a href="https://www.hackerrank.com/dashboard">HackerRank</a></li>
-<li><a href="https://leetcode.com/">LeetCode</a></li>
+<li><p><a href="https://leetcode.com/">LeetCode</a></p></li>
 </ul>
 </div>

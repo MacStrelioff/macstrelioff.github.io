@@ -68,10 +68,9 @@ Very slowly increases in computational demand. It can result from splitting the 
 ```{python}
 def log_example(n,num_ops=0):
     # 1 operation per call
-    num_ops += 1
     # if n>1, half n and recursively call again
     if n>=1:
-        n/=2
+        n/=2; num_ops += 1
         num_ops += log_example(n)
     return num_ops
         
@@ -88,7 +87,7 @@ Each for loop scales complexity by a factor of $n$, so one loop would be linear 
 
 ```{python}
 def linear_example(n): 
-    num_ops = 1         # 1 operation
+    num_ops = 0         # initialize counter
     for i in range(n):  # n times, perform...
         num_ops +=1     # 1 operation (n*1)
     return num_ops      # 1+n*1 = 1+n operations, O(n)
@@ -99,9 +98,8 @@ for n in ns_to_test:
     print('f({}): {}'.format(n,out))
 
 def quadratic_example(n):
-    num_ops = 1             # 1 operation
+    num_ops = 0             # initialize counter
     for i in range(n):      # n times
-        num_ops+=1          # 1 operation (n*1)
         for j in range(n):  # n times (n*n)
             num_ops+=1      # 1 operation (1*n*n)
     return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
@@ -122,8 +120,7 @@ $$ \sum_{i=1}^N ar^{i-1} = \frac{a(1-r^{N})}{1-r} $$
 
 Where $r=2$, $a=2$, $n$ is looped over, and we start the index at 0 ($i-1$) instead of 1, so: 
 
-$$ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = -(1-2^{n+1}) = 2^{n+1}-1 $$
-
+$$ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 $$
 
 ```{python}
 def exponential_example(n,num_ops=0):
@@ -151,63 +148,6 @@ Good descriptions of [lists](https://runestone.academy/runestone/books/published
 In depth description of [hash tables](https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc). 
 
 Data structures (hash, stack, queue, tree, linked list); 
-
-## Trees
-
-### Binary search trees
-
-
-
-## Database and SQL
-
-SQL training resources;
-
-
-- [Udacity course](https://classroom.udacity.com/courses/ud198)
-- [pgexercises](https://pgexercises.com/)
-- [sqlbolt](https://sqlbolt.com/lesson/select_queries_introduction)
-- [Mode Analytics](https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/) HackerRank (basic select, aggregation)
-- [Hacker Rank](https://www.hackerrank.com/domains/sql)
-- [W3School](https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1)
-
-
-### General Structure of SQL querys
-
-[Order of execution for clauses below](https://sqlbolt.com/lesson/select_queries_order_of_execution)
-
-```{, eval=FALSE, echo=TRUE}
-SELECT (column names to select) [AS (name for selection)]
-
-FROM (table to select from)
-
-WHERE (logical condition on rows)
-  column = (value or subquery)
-  
-GROUP BY 
-
-HAVING (constraint on grouped rows)
-  
-LIMIT n [OFFSET m]
-
-```
-
-The `SELECT` clause can contain aggregations, and subqueries. 
-
-The `FROM` clause can contain joins.
-
-The `WHERE` clause can also contain sub queries.
-
-### Aggregation functions
-
-The `GROUP BY` clause can contain `GROUPING SETS`, such as a `ROLLUP()` and `CUBE()` functions. These hierarchically group the rows passed to the aggregation functions. `ROLLUP()` hierarchically groups by arguments, starting left to right. `CUBE()` passes all permutations of its arguments to the aggregation functions. 
-
-[Grouping sets are described a little here](https://pgexercises.com/questions/aggregates/fachoursbymonth3.html).
-
-### Window functions
-
-[Orver() explained here](https://pgexercises.com/questions/aggregates/countmembers.html). Some more detailed information [here](http://www.sqlservertutorial.net/sql-server-window-functions/).
-
-Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arguments, `PARTITION BY` and `ORDER BY`. 
 
 # Sorting
 
@@ -276,18 +216,74 @@ print(nums)
 ```
 
 
-recursion; 
+# TODO / Other Topics:  
 
-Dijkstra's algorithm, dynamic programming (knapsack problem, Fibonacci sequence)
+## recursion; 
 
-Functional programming
+## Dijkstra's algorithm, 
+
+## dynamic programming (knapsack problem, Fibonacci sequence)
+
+## Functional programming
 
 # Tools
 
+## Git and GitHub
+
 git for version control (resolving merge conflicts)
 
-# General Practice Problems
+## SQL 
 
+### General Structure of SQL querys
+
+[Order of execution for clauses below](https://sqlbolt.com/lesson/select_queries_order_of_execution)
+
+```{, eval=FALSE, echo=TRUE}
+SELECT (column names to select) [AS (name for selection)]
+
+FROM (table to select from)
+
+WHERE (logical condition on rows)
+  column = (value or subquery),
+  OR column IN (list or subquery)
+  
+GROUP BY 
+
+HAVING (constraint on grouped rows)
+  
+LIMIT n [OFFSET m]
+
+```
+
+The `SELECT` clause can contain aggregations, and subqueries. 
+
+The `FROM` clause can contain joins.
+
+The `WHERE` clause can also contain sub queries.
+
+### Aggregation functions
+
+The `GROUP BY` clause can contain `GROUPING SETS`, such as a `ROLLUP()` and `CUBE()` functions. These hierarchically group the rows passed to the aggregation functions. `ROLLUP()` hierarchically groups by arguments, starting left to right. `CUBE()` passes all permutations of its arguments to the aggregation functions. 
+
+[Grouping sets are described a little here](https://pgexercises.com/questions/aggregates/fachoursbymonth3.html).
+
+### Window functions
+
+[Orver() explained here](https://pgexercises.com/questions/aggregates/countmembers.html). Some more detailed information [here](http://www.sqlservertutorial.net/sql-server-window-functions/).
+
+Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arguments, `PARTITION BY` and `ORDER BY`. 
+
+# Resources
+
+- SQL training resources;
+- [pgexercises](https://pgexercises.com/)
+- [Udacity course](https://classroom.udacity.com/courses/ud198)
+- [sqlbolt](https://sqlbolt.com/lesson/select_queries_introduction)
+- [Mode Analytics](https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/) HackerRank (basic select, aggregation)
+- [Hacker Rank](https://www.hackerrank.com/domains/sql)
+- [W3School](https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1)
+
+- Python and other coding languages:
 - [HackerRank](https://www.hackerrank.com/dashboard)
 - [LeetCode](https://leetcode.com/)
 

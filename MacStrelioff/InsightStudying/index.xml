@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 15:39:36 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 16:36:05 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Sat, 03 Aug 2019 16:36:05 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures  Sorting Searching Linear Search: Binary Search Graph Search: DFS and BFS  Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</description>
+    </item>
     
     <item>
       <title>Probability and Statistics</title>
@@ -27,15 +36,6 @@
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>Yelp Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.g. project: decrease experiment duration not much collaboration with UX other than maybe getting data from them data: crowd-sourced data on businesses   DS Role  Looking for 2 roles  DS  Job consists of reining in management, helping with experimentation.</description>
-    </item>
-    
-    <item>
-      <title>Computer Science</title>
-      <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 28 Jul 2019 17:10:52 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\) Logrithmic Time: O(log(N))   Data Structures Trees Binary search trees  Database and SQL General Structure of SQL querys Aggregation functions Window functions   Sorting Searching Linear Search: Binary Search Graph Search: DFS and BFS  Ranking Algorithms Recommendation Algorithms Tools General Practice Problems   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</description>
     </item>
     
     <item>
