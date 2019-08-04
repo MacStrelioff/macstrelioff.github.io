@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 04 Aug 2019 14:58:22 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 15:46:42 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -59,7 +59,10 @@
 &lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graph-search-dfs-and-bfs&#34;&gt;Graph Search: DFS and BFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graph-search&#34;&gt;Graph Search&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#breadth-first-bfs-and-queues&#34;&gt;Breadth First (BFS) and queues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#depth-first-dfs-and-recursion&#34;&gt;Depth First (DFS) and recursion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt;&lt;/li&gt;
@@ -214,12 +217,71 @@ for n in ns_to_test:
 &lt;li&gt;requires sorting before applying the search&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;graph-search-dfs-and-bfs&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Graph Search: DFS and BFS&lt;/h2&gt;
+&lt;div id=&#34;graph-search&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Graph Search&lt;/h2&gt;
+&lt;p&gt;Graphs are a collection of nodes and edges (connections between nodes). In the code below, I use dictionaries to represent graphs – keys represent nodes, and the list of elements represents all of the nodes that the parent node is connected to.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# examples
+Examples = []
+
+# Example 1: something where DFS would do equally well?
+tmp_graph = {1: [2,4], 2: [3], 3: [5], 4: [5,7], 5: [6,7], 6: [], 7: []}
+Examples.append(tmp_graph)
+
+# Example 2: something where DFS will run faster
+tmp_graph = {1:[2,3,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[7],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)
+
+# Example 3: something where BFS will run faster (swapped 3 and 10)
+tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;breadth-first-bfs-and-queues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Breadth First (BFS) and queues&lt;/h3&gt;
+&lt;p&gt;Breadth Frist Search (BFS) queues nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# breadth first search: just a queue
+def BFS_queue(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        visiting = queue[0]
+        # if this was visited already, continue
+        if visiting in visited: continue
+        # mark node as visited
+        visited.add(visiting)
+        # if this is the end, return 
+        if visiting == end: return True,visited
+        # otherwise, append children to search queue
+        for child in graph[visiting]: queue.append(child)
+        queue.remove(visiting) # remove the visited node
+    # if end was never found, return False
+    return False,visited
+
+# breadth first search: For loop over each layer
+def BFS(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        for visiting in queue:
+            # if this was visited already, continue
+            if visiting in visited: continue
+            # mark node as visited
+            visited.add(visiting)
+            # if this is the end, return 
+            if visiting == end: return True,visited
+            # otherwise, append children to search queue
+            for child in graph[visiting]:
+                queue.append(child)
+    # if end was never found, return False
+    return False,visited&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;depth-first-dfs-and-recursion&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Depth First (DFS) and recursion&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;DFS can use a dictionary or set to&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level1&#34;&gt;

@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures  Sorting Searching Linear Search: Binary Search Graph Search: DFS and BFS  Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;">
+  <meta name="description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures  Sorting Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) and recursion   Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/computer-science/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/computer-science/">
   <meta property="og:title" content="Computer Science | Mac Strelioff">
-  <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures  Sorting Searching Linear Search: Binary Search Graph Search: DFS and BFS  Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures  Sorting Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) and recursion   Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm, dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-04T14:58:22&#43;00:00">
+  <meta property="article:published_time" content="2019-08-04T15:46:42&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-04T14:58:22&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-04T15:46:42&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-04 14:58:22 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-04 14:58:22 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-04 15:46:42 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-04 15:46:42 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -474,7 +474,10 @@
 <li><a href="#sorting">Sorting</a></li>
 <li><a href="#searching">Searching</a><ul>
 <li><a href="#linear-search-binary-search">Linear Search: Binary Search</a></li>
-<li><a href="#graph-search-dfs-and-bfs">Graph Search: DFS and BFS</a></li>
+<li><a href="#graph-search">Graph Search</a><ul>
+<li><a href="#breadth-first-bfs-and-queues">Breadth First (BFS) and queues</a></li>
+<li><a href="#depth-first-dfs-and-recursion">Depth First (DFS) and recursion</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#ranking-algorithms">Ranking Algorithms</a></li>
 <li><a href="#recommendation">Recommendation</a></li>
@@ -629,12 +632,71 @@ for n in ns_to_test:
 <li>requires sorting before applying the search</li>
 </ul>
 </div>
-<div id="graph-search-dfs-and-bfs" class="section level2">
-<h2>Graph Search: DFS and BFS</h2>
+<div id="graph-search" class="section level2">
+<h2>Graph Search</h2>
+<p>Graphs are a collection of nodes and edges (connections between nodes). In the code below, I use dictionaries to represent graphs – keys represent nodes, and the list of elements represents all of the nodes that the parent node is connected to.</p>
+<pre class="python"><code># examples
+Examples = []
+
+# Example 1: something where DFS would do equally well?
+tmp_graph = {1: [2,4], 2: [3], 3: [5], 4: [5,7], 5: [6,7], 6: [], 7: []}
+Examples.append(tmp_graph)
+
+# Example 2: something where DFS will run faster
+tmp_graph = {1:[2,3,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[7],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)
+
+# Example 3: something where BFS will run faster (swapped 3 and 10)
+tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)</code></pre>
+<div id="breadth-first-bfs-and-queues" class="section level3">
+<h3>Breadth First (BFS) and queues</h3>
+<p>Breadth Frist Search (BFS) queues nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.</p>
+<pre class="python"><code># breadth first search: just a queue
+def BFS_queue(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        visiting = queue[0]
+        # if this was visited already, continue
+        if visiting in visited: continue
+        # mark node as visited
+        visited.add(visiting)
+        # if this is the end, return 
+        if visiting == end: return True,visited
+        # otherwise, append children to search queue
+        for child in graph[visiting]: queue.append(child)
+        queue.remove(visiting) # remove the visited node
+    # if end was never found, return False
+    return False,visited
+
+# breadth first search: For loop over each layer
+def BFS(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        for visiting in queue:
+            # if this was visited already, continue
+            if visiting in visited: continue
+            # mark node as visited
+            visited.add(visiting)
+            # if this is the end, return 
+            if visiting == end: return True,visited
+            # otherwise, append children to search queue
+            for child in graph[visiting]:
+                queue.append(child)
+    # if end was never found, return False
+    return False,visited</code></pre>
+</div>
+<div id="depth-first-dfs-and-recursion" class="section level3">
+<h3>Depth First (DFS) and recursion</h3>
 <p><a href="https://www.youtube.com/watch?v=zaBhtODEL0w">good hackerrank video</a></p>
 <ul>
 <li>DFS can use a dictionary or set to</li>
 </ul>
+</div>
 </div>
 </div>
 <div id="ranking-algorithms" class="section level1">

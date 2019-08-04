@@ -137,7 +137,6 @@ for n in ns_to_test:
     print('f({}): {}'.format(n,out))
 ```
 
-
 ## Data Structures
 
 basic structures (tuples, list, arrays, dict), list comprehensions, 
@@ -170,11 +169,79 @@ Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algori
 
 - requires sorting before applying the search
 
-## Graph Search: DFS and BFS
+## Graph Search
+
+Graphs are a collection of nodes and edges (connections between nodes). In the code below, I use dictionaries to represent graphs -- keys represent nodes, and the list of elements represents all of the nodes that the parent node is connected to. 
+
+```{python}
+# examples
+Examples = []
+
+# Example 1: something where DFS would do equally well?
+tmp_graph = {1: [2,4], 2: [3], 3: [5], 4: [5,7], 5: [6,7], 6: [], 7: []}
+Examples.append(tmp_graph)
+
+# Example 2: something where DFS will run faster
+tmp_graph = {1:[2,3,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[7],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)
+
+# Example 3: something where BFS will run faster (swapped 3 and 10)
+tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)
+```
+
+
+### Breadth First (BFS) and queues
+
+Breadth Frist Search (BFS) queues nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list. 
+
+```{python}
+# breadth first search: just a queue
+def BFS_queue(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        visiting = queue[0]
+        # if this was visited already, continue
+        if visiting in visited: continue
+        # mark node as visited
+        visited.add(visiting)
+        # if this is the end, return 
+        if visiting == end: return True,visited
+        # otherwise, append children to search queue
+        for child in graph[visiting]: queue.append(child)
+        queue.remove(visiting) # remove the visited node
+    # if end was never found, return False
+    return False,visited
+
+# breadth first search: For loop over each layer
+def BFS(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        for visiting in queue:
+            # if this was visited already, continue
+            if visiting in visited: continue
+            # mark node as visited
+            visited.add(visiting)
+            # if this is the end, return 
+            if visiting == end: return True,visited
+            # otherwise, append children to search queue
+            for child in graph[visiting]:
+                queue.append(child)
+    # if end was never found, return False
+    return False,visited
+```
+
+### Depth First (DFS) and recursion
+
 
 [good hackerrank video](https://www.youtube.com/watch?v=zaBhtODEL0w)
 
 - DFS can use a dictionary or set to 
+
 
 # Ranking Algorithms
 
