@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Sat, 03 Aug 2019 18:45:12 +0000</pubDate>
+      <pubDate>Sat, 03 Aug 2019 19:57:43 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -165,7 +165,6 @@
 &lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Neuroscience at Caltech&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Inhan (maybe &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;?),&lt;/p&gt;
 &lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/samuelhansen/&#34;&gt;Samuel Hansen&lt;/a&gt;&lt;/p&gt;
@@ -177,6 +176,15 @@
 &lt;li&gt;Constructed behavioral segmentation of Yelp Transactions Platform users to understand food-ordering patterns with K-means and factor analysis, primarily identifying user clusters using mealtime, delivery type, and food category.&lt;/li&gt;
 &lt;li&gt;Built RShiny application with interactive geographical map of spatial-temporal changes in Yelp activity.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/wolfe-styke-98108920/&#34;&gt;Wolfe Styke&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switched from SWE to DS&lt;/li&gt;
+&lt;li&gt;Continuing involvement with new experiment framework at Yelp from a data science perspective.&lt;/li&gt;
+&lt;li&gt;Defining, implementing, and spreading awareness among product managers and engineers of user retention analysis for experiments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/yang-song-516350b2/&#34;&gt;Yang Song&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I work at the marketplace team, products include Yelp Waitlist, Yelp Reservations, Yelp Request a Quote and Yelp Local Services&lt;/p&gt;
+&lt;p&gt;Projects I have done: - Built ML models on waitlist waiting time estimation - Various of observational causal inferences projects (User Behavior, Biz page features, Quotes qualities) - Geo experiment(For ads fulfillment, CPC, CTR) - Randomized A/B Testing - Sequential A/B Testing (Which allow PMs to peek A/B testing results) - Local services categories recommendation&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Deep Dive&lt;/h2&gt;
@@ -215,6 +223,13 @@
 &lt;ul&gt;
 &lt;li&gt;“On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews.” - &lt;a href=&#34;https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood&#34;&gt;this post&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Full paragraph: “For better and for worse, strangers’ opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews. While more democratic, they’re also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ideas&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ideas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate’s or restaurant’s revenue for that quarter?&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;

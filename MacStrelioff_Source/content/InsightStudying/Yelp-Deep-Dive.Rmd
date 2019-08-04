@@ -133,7 +133,6 @@ Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)),
 [Peter](https://www.linkedin.com/in/peter-weir/).
 
 - Neuroscience at Caltech
-- 
 
 
 Inhan (maybe [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)?), 
@@ -147,6 +146,24 @@ Another DS person: [Samuel Hansen](https://www.linkedin.com/in/samuelhansen/)
 -	Developed pipeline to predict Yelp Transactions Platform user retention by scripting SQL queries, engineering longitudinal features, and implementing machine learning classifiers, lifting AUC 10% over the baseline model. 
 - Constructed behavioral segmentation of Yelp Transactions Platform users to understand food-ordering patterns with K-means and factor analysis, primarily identifying user clusters using mealtime, delivery type, and food category.
 - Built RShiny application with interactive geographical map of spatial-temporal changes in Yelp activity.
+
+Another DS person: [Wolfe Styke](https://www.linkedin.com/in/wolfe-styke-98108920/)
+
+- switched from SWE to DS
+- Continuing involvement with new experiment framework at Yelp from a data science perspective. 
+- Defining, implementing, and spreading awareness among product managers and engineers of user retention analysis for experiments.
+
+Another DS person: [Yang Song](https://www.linkedin.com/in/yang-song-516350b2/)
+
+I work at the marketplace team, products include Yelp Waitlist, Yelp Reservations, Yelp Request a Quote and Yelp Local Services
+
+Projects I have done: 
+- Built ML models on waitlist waiting time estimation
+- Various of observational causal inferences projects (User Behavior, Biz page features, Quotes qualities)
+- Geo experiment(For ads fulfillment, CPC, CTR)
+- Randomized A/B Testing
+- Sequential A/B Testing (Which allow PMs to peek A/B testing results)
+- Local services categories recommendation
 
 ## Deep Dive
 
@@ -182,6 +199,11 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - "On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
 - Full paragraph: "For better and for worse, strangers' opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews. While more democratic, they're also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad."
 
+
+### Ideas
+
+- check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate's or restaurant's revenue for that quarter? 
+- 
 
 ## Onsite
 
