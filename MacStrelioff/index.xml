@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Sun, 04 Aug 2019 12:04:52 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 13:58:12 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -229,9 +229,10 @@
 &lt;h3&gt;Ideas and excitement&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;I like that they have &lt;a href=&#34;https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data&#34;&gt;data challenges&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I like their openness with data, particularly the &lt;a href=&#34;https://www.kaggle.com/datasets?search=yelp&#34;&gt;datasets on Kaggle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;I like their openness with data, particularly the &lt;a href=&#34;https://www.kaggle.com/datasets?search=yelp&#34;&gt;datasets on Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;li&gt;check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate’s or restaurant’s revenue for that quarter?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Since a restaurant’s revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Since a restaurant’s revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -241,6 +242,26 @@
 &lt;li&gt;Expect from company visit: SQL, Python, statistics, experiment design&lt;/li&gt;
 &lt;li&gt;Expect from recruiter call: A/B testing, product sense&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;How to evaluate the features classifying spams and emails.&lt;/li&gt;
+&lt;li&gt;How to swap two elements of a list&lt;/li&gt;
+&lt;li&gt;Whats the difference between decision trees and extreme boosted trees mathematically?&lt;/li&gt;
+&lt;li&gt;List the strings that are anagrams from a set of strings&lt;/li&gt;
+&lt;li&gt;Mid-level coding/algorithm questions; ask you to explain the projects you’ve worked on.&lt;/li&gt;
+&lt;li&gt;about my project on resume.&lt;/li&gt;
+&lt;li&gt;3 Sum&lt;/li&gt;
+&lt;li&gt;What programming language do you use? What are some pros and cons of it?&lt;/li&gt;
+&lt;li&gt;The difference between Bayesian vs frequentist statistics&lt;/li&gt;
+&lt;li&gt;Setting up A/B tests to improve engagement&lt;/li&gt;
+&lt;li&gt;What features would you use to predict the number of likes on a review?&lt;/li&gt;
+&lt;li&gt;questions around product/metrics, A/B Testing, stats, ML&lt;/li&gt;
+&lt;li&gt;If you had to propose a new Yelp feature, what would it be?&lt;/li&gt;
+&lt;li&gt;What is an n-gram?&lt;/li&gt;
+&lt;li&gt;Simple coding and high level ML questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&#34;meeting-notes&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;meeting notes&lt;/h3&gt;
 &lt;/div&gt;
