@@ -137,7 +137,6 @@ for n in ns_to_test:
     print('f({}): {}'.format(n,out))
 ```
 
-#### Logrithmic Time: O(log(N))
 
 ## Data Structures
 
