@@ -1,5 +1,5 @@
 ---
-title: "Business Sense"
+title: "Product Sense"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 math: true
@@ -7,7 +7,7 @@ menu:
   InsightStudying:
     parent: Foundations
     weight: 99
-linktitle: Business Sense
+linktitle: Product Sense
 ---
 
 ```{r setup, include=FALSE}
@@ -88,9 +88,10 @@ funnel analysis
 - Shares
 - Upvotes
 
+## Add from meeting with Alejandro
 
-
-
+- User data (ways users use the app)
+- Usage data (ways the app interacts with devices, networks, servers, product versions, ...)
 
 # OLD NOTES: 
 

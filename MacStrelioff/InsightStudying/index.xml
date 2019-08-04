@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Aug 2019 19:57:43 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2019 11:52:49 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,31 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Sat, 03 Aug 2019 19:57:43 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 11:52:49 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>Yelp Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.g. project: decrease experiment duration not much collaboration with UX other than maybe getting data from them data: crowd-sourced data on businesses   DS Role  Looking for 2 roles  DS  Job consists of reining in management, helping with experimentation.</description>
+    </item>
+    
+    <item>
+      <title>Product Sense</title>
+      <link>/MacStrelioff/insightstudying/business-sense/</link>
+      <pubDate>Sat, 03 Aug 2019 20:27:38 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
+      <description>Problem Solving Strategy Overall product sense is about what to build and why.
+Overarching goals / stage of the company Contextualize: Draw a user funnel or user flow for the specific product Draw a dashboard, then populate with platform and product metrics   Overall resources  https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA   Platform Concepts and Metrics Users User Funnel Churn,
+funnel analysis
+ User Flow  Traffic source: Where users come from (search, referral, … ) number new visits, percent new visits Page visits: users arriving at page Bounce rate: the percentage of visitors to a particular website who navigate away from the site after viewing only one page.</description>
+    </item>
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Sat, 03 Aug 2019 20:26:20 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Common Tests Z test Chi-Square Linear Models ANOVA t-test Mixed Effects Models GLMs: Logistic Regression  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy or Variance Reduction Checking assignment integrety  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Fermi problems (order of magnitude)</description>
     </item>
     
     <item>
@@ -30,33 +51,12 @@
     </item>
     
     <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Thu, 01 Aug 2019 15:39:36 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Common Tests Z test t-test Chi-Square Linear Models  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Fermi problems (order of magnitude)</description>
-    </item>
-    
-    <item>
       <title>Behavioral Interviewing</title>
       <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
       <pubDate>Sun, 21 Jul 2019 22:29:35 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>Principles Common Behavioral Questions “Tell me a little about your background.” Child bandits:  “Tell me about the project you worked on at Insight.” “Why are you interested in a career as a data scientist?” “Tell me about your research / talk to me about your last role.” “Why are you interested in joining this company?” “Talk about a time you were on a team that struggled with effective communication.</description>
-    </item>
-    
-    <item>
-      <title>Business Sense</title>
-      <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Thu, 18 Jul 2019 10:52:53 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
-      <description>Problem Solving Strategy Overall product sense is about what to build and why.
-Overarching goals / stage of the company Contextualize: Draw a user funnel or user flow for the specific product Draw a dashboard, then populate with platform and product metrics   Overall resources  https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA   Platform Concepts and Metrics Users User Funnel Churn,
-funnel analysis
- User Flow  Traffic source: Where users come from (search, referral, … ) number new visits, percent new visits Page visits: users arriving at page Bounce rate: the percentage of visitors to a particular website who navigate away from the site after viewing only one page.</description>
     </item>
     
     <item>

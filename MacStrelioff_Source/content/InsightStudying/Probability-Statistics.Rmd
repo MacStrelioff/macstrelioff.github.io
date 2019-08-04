@@ -58,6 +58,14 @@ Normal data
 Binary data
 
 
+## Chi-Square
+
+
+## Linear Models
+
+
+## ANOVA
+
 ## t-test
 
 - different variance formulations. 
@@ -65,10 +73,13 @@ Binary data
 - two independent sampels
 - two dependent samples
 
-## Chi-Square
+
+## Mixed Effects Models
+
+- Maime's consulting project? Other use cases?
 
 
-## Linear Models
+## GLMs: Logistic Regression
 
 
 # Experiment Design
@@ -102,7 +113,6 @@ Think of the sequence of actions a user might take on the site. Experiments can 
 ### Invariants
 
 Metrics that shouldn't change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change. 
-
 
 ### Confounding variables
 
@@ -166,6 +176,7 @@ Propensity matching
 
 - Non-compliance: Those assicned to treatment may not actually experience the treatment. 
 - Crossover: Those assigned to control might gain access to the treatment. 
+- Treatment inhomogenaity: Some user segments might respond differently than others.
 
 # Implementation
 
@@ -176,6 +187,11 @@ Batched, or real-time
 power, sample size
 
 ## Duration
+
+- learning effects: initial exploration or novelty seeking
+- learning effects: initial change aversion
+
+Solution: Consider running experiment past any initial observed effect.
 
 ### Temporal variation
 
@@ -192,11 +208,17 @@ Bayesian justifications
 - Average treatment effect
 - Treatment on treated
 
-## Effiencicy
+## Effiencicy or Variance Reduction
+
+- look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser. 
 
 e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = \beta_0 + \beta_1 Y_{t-1}$
 
--- get table for different tests of means from soc sci 10 notes.
+- get table for different tests of means from soc sci 10 notes.
+
+## Checking assignment integrety
+
+- Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets. 
 
 # Testing
 
