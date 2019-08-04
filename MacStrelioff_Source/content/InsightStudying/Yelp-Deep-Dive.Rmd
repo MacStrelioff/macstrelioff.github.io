@@ -97,11 +97,34 @@ Other info:
 
 Don't have anything posted on careers page. This role just opened. Role just opened up. Data scientist rec. 
 
-can send panel and links to their linkedin -- meeting with four folks. Sebastian, Inhan, Nick, Peter.
+can send panel and links to their linkedin -- meeting with four folks. [Sebastian](https://www.linkedin.com/in/sebastiencouvidat/), Inhan (maybe [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)?), Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)), [Peter](https://www.linkedin.com/in/peter-weir/).
 
 3. What topics might be covered? 
 
 - Should I bring anything? Laptop, ... ? Could bring laptop, but there are laptops that can be borrowed as well. Whiteboards will be in the room. 
+
+## Likely Interviewers: 
+
+
+[Sebastian](https://www.linkedin.com/in/sebastiencouvidat/), 
+
+- Lead DS, 4y4m at Yelp
+- 10 years in research at Stanford
+- Astrophysics postdoc
+- Coursera courses on finance and computational investing
+
+
+Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)), 
+
+- DS Manager, 3y8m at Yelp
+- Insight
+- Neuroscience UT Austin
+
+[Peter](https://www.linkedin.com/in/peter-weir/).
+
+
+Inhan (maybe [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)?), 
+
 
 ## Deep Dive
 
