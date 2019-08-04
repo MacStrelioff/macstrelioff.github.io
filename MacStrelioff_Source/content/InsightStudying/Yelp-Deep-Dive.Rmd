@@ -112,6 +112,16 @@ can send panel and links to their linkedin -- meeting with four folks. [Sebastia
 - 10 years in research at Stanford
 - Astrophysics postdoc
 - Coursera courses on finance and computational investing
+- Yelp Job responsibilities: 
+- Data scientist in the consumer and mobile products division. Examples of activities include:
+- helping product managers and decision makers to reach fact-based decision
+- providing support to engineering teams for A/B test design and analysis
+- writing Python scripts to perform frequentist and Bayesian analysis of A/B tests
+- using machine-learning algorithms to predict revenue metrics and identify leads for sales force
+- providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.
+- testing the integrity and accuracy of some curated data in the company databases
+- implementing dashboard solutions for product managers for easy access to, and visualization of, relevant metrics
+
 
 
 Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)), 
@@ -122,9 +132,21 @@ Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)),
 
 [Peter](https://www.linkedin.com/in/peter-weir/).
 
+- Neuroscience at Caltech
+- 
+
 
 Inhan (maybe [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)?), 
 
+
+Another DS person: [Samuel Hansen](https://www.linkedin.com/in/samuelhansen/)
+
+- Member of Core Data Science team, supporting: 
+- Yelp's Local Economic Outlook (LEO) initiative to derive measures of economic health from Yelp data; 
+- Data infrastructure improvements to optimize analysis workflows.
+-	Developed pipeline to predict Yelp Transactions Platform user retention by scripting SQL queries, engineering longitudinal features, and implementing machine learning classifiers, lifting AUC 10% over the baseline model. 
+- Constructed behavioral segmentation of Yelp Transactions Platform users to understand food-ordering patterns with K-means and factor analysis, primarily identifying user clusters using mealtime, delivery type, and food category.
+- Built RShiny application with interactive geographical map of spatial-temporal changes in Yelp activity.
 
 ## Deep Dive
 
