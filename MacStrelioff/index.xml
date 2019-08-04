@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Sun, 04 Aug 2019 11:52:49 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 12:04:52 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -228,7 +228,8 @@
 &lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Ideas and excitement&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;I like that they have &lt;a href=&#34;https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data&#34;&gt;data challenges&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;I like that they have &lt;a href=&#34;https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data&#34;&gt;data challenges&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I like their openness with data, particularly the &lt;a href=&#34;https://www.kaggle.com/datasets?search=yelp&#34;&gt;datasets on Kaggle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate’s or restaurant’s revenue for that quarter?&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Since a restaurant’s revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
