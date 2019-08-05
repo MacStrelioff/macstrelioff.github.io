@@ -139,9 +139,9 @@
   <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS  Pointers  Algorithms TODO / Other Topics: Recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions Tricks:   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-05T12:34:45&#43;00:00">
+  <meta property="article:published_time" content="2019-08-05T13:57:06&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-05T12:34:45&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-05T13:57:06&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-05 12:34:45 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-05 12:34:45 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-05 13:57:06 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-05 13:57:06 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -721,7 +721,7 @@ def BFS(graph,start,end):
 <h3>Depth First (DFS)</h3>
 <p>Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). <a href="https://www.youtube.com/watch?v=zaBhtODEL0w">good hackerrank video</a></p>
 <ul>
-<li>DFS can use a dictionary or set to</li>
+<li>Example using DFS to find if a path to a node exists.</li>
 </ul>
 <pre class="python"><code># Depth first search with recursion
 def DFS(graph,start,end):
@@ -740,6 +740,52 @@ def _DFS(graph,start,end,visited):
         if _DFS(graph,child,end,visited):
             return True
     return False</code></pre>
+<ul>
+<li>L332: Reconstruct a flight path</li>
+</ul>
+<pre class="python"><code>
+tickets = [[&quot;JFK&quot;,&quot;KUL&quot;],[&quot;JFK&quot;,&quot;NRT&quot;],[&quot;NRT&quot;,&quot;JFK&quot;]]
+
+# convert to graph implemented in dict:
+import collections
+d = collections.defaultdict(list)
+for flight in tickets:
+    d[flight[0]].append(flight[1]),
+
+# start at JFK</code></pre>
+<pre><code>&gt;&gt;&gt; (None,)
+&gt;&gt;&gt; (None,)
+&gt;&gt;&gt; (None,)</code></pre>
+<pre class="python"><code>route = [&quot;JFK&quot;]
+
+# define DFS algo
+def dfs(start = &#39;JFK&#39;):
+    # success condition -- all tickets have been accounted for
+    if len(route) == len(tickets) + 1: 
+        return route
+    # get destinations (children) from current node
+    myDsts = sorted(d[start])
+    # feedback to show path as it develops
+    print(route)
+    # iterate over children of this node
+    for dst in myDsts:
+        # count child in route
+        d[start].remove(dst)
+        route.append(dst)
+        # call DFS again starting at the child node
+        worked = dfs(dst)
+        if worked:
+            return worked
+        route.pop()
+        d[start].append(dst)
+
+# run the dfs algo
+dfs()</code></pre>
+<pre><code>&gt;&gt;&gt; [&#39;JFK&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;KUL&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;NRT&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;NRT&#39;, &#39;JFK&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;NRT&#39;, &#39;JFK&#39;, &#39;KUL&#39;]</code></pre>
 </div>
 <div id="dfs-vs-bfs" class="section level3">
 <h3>DFS vs BFS</h3>

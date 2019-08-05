@@ -38,7 +38,7 @@
     <item>
       <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Mon, 05 Aug 2019 12:34:45 +0000</pubDate>
+      <pubDate>Mon, 05 Aug 2019 13:57:06 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -306,7 +306,7 @@ def BFS(graph,start,end):
 &lt;h3&gt;Depth First (DFS)&lt;/h3&gt;
 &lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;DFS can use a dictionary or set to&lt;/li&gt;
+&lt;li&gt;Example using DFS to find if a path to a node exists.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Depth first search with recursion
 def DFS(graph,start,end):
@@ -325,6 +325,52 @@ def _DFS(graph,start,end,visited):
         if _DFS(graph,child,end,visited):
             return True
     return False&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;L332: Reconstruct a flight path&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+tickets = [[&amp;quot;JFK&amp;quot;,&amp;quot;KUL&amp;quot;],[&amp;quot;JFK&amp;quot;,&amp;quot;NRT&amp;quot;],[&amp;quot;NRT&amp;quot;,&amp;quot;JFK&amp;quot;]]
+
+# convert to graph implemented in dict:
+import collections
+d = collections.defaultdict(list)
+for flight in tickets:
+    d[flight[0]].append(flight[1]),
+
+# start at JFK&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; (None,)
+&amp;gt;&amp;gt;&amp;gt; (None,)
+&amp;gt;&amp;gt;&amp;gt; (None,)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;route = [&amp;quot;JFK&amp;quot;]
+
+# define DFS algo
+def dfs(start = &amp;#39;JFK&amp;#39;):
+    # success condition -- all tickets have been accounted for
+    if len(route) == len(tickets) + 1: 
+        return route
+    # get destinations (children) from current node
+    myDsts = sorted(d[start])
+    # feedback to show path as it develops
+    print(route)
+    # iterate over children of this node
+    for dst in myDsts:
+        # count child in route
+        d[start].remove(dst)
+        route.append(dst)
+        # call DFS again starting at the child node
+        worked = dfs(dst)
+        if worked:
+            return worked
+        route.pop()
+        d[start].append(dst)
+
+# run the dfs algo
+dfs()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;dfs-vs-bfs&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;DFS vs BFS&lt;/h3&gt;

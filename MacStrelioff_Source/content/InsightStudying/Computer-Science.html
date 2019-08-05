@@ -1,7 +1,7 @@
 ---
 title: "Basic Computer Science"
 author: "Mac Strelioff"
-date: "2019-08-05 12:34:45"
+date: "2019-08-05 13:57:06"
 output:
   blogdown::html_page:
     toc: true
@@ -278,7 +278,7 @@ def BFS(graph,start,end):
 <h3>Depth First (DFS)</h3>
 <p>Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). <a href="https://www.youtube.com/watch?v=zaBhtODEL0w">good hackerrank video</a></p>
 <ul>
-<li>DFS can use a dictionary or set to</li>
+<li>Example using DFS to find if a path to a node exists.</li>
 </ul>
 <pre class="python"><code># Depth first search with recursion
 def DFS(graph,start,end):
@@ -297,6 +297,52 @@ def _DFS(graph,start,end,visited):
         if _DFS(graph,child,end,visited):
             return True
     return False</code></pre>
+<ul>
+<li>L332: Reconstruct a flight path</li>
+</ul>
+<pre class="python"><code>
+tickets = [[&quot;JFK&quot;,&quot;KUL&quot;],[&quot;JFK&quot;,&quot;NRT&quot;],[&quot;NRT&quot;,&quot;JFK&quot;]]
+
+# convert to graph implemented in dict:
+import collections
+d = collections.defaultdict(list)
+for flight in tickets:
+    d[flight[0]].append(flight[1]),
+
+# start at JFK</code></pre>
+<pre><code>&gt;&gt;&gt; (None,)
+&gt;&gt;&gt; (None,)
+&gt;&gt;&gt; (None,)</code></pre>
+<pre class="python"><code>route = [&quot;JFK&quot;]
+
+# define DFS algo
+def dfs(start = &#39;JFK&#39;):
+    # success condition -- all tickets have been accounted for
+    if len(route) == len(tickets) + 1: 
+        return route
+    # get destinations (children) from current node
+    myDsts = sorted(d[start])
+    # feedback to show path as it develops
+    print(route)
+    # iterate over children of this node
+    for dst in myDsts:
+        # count child in route
+        d[start].remove(dst)
+        route.append(dst)
+        # call DFS again starting at the child node
+        worked = dfs(dst)
+        if worked:
+            return worked
+        route.pop()
+        d[start].append(dst)
+
+# run the dfs algo
+dfs()</code></pre>
+<pre><code>&gt;&gt;&gt; [&#39;JFK&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;KUL&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;NRT&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;NRT&#39;, &#39;JFK&#39;]
+&gt;&gt;&gt; [&#39;JFK&#39;, &#39;NRT&#39;, &#39;JFK&#39;, &#39;KUL&#39;]</code></pre>
 </div>
 <div id="dfs-vs-bfs" class="section level3">
 <h3>DFS vs BFS</h3>

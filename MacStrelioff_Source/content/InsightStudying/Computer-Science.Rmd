@@ -259,7 +259,7 @@ def BFS(graph,start,end):
 Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). 
 [good hackerrank video](https://www.youtube.com/watch?v=zaBhtODEL0w)
 
-- DFS can use a dictionary or set to 
+- Example using DFS to find if a path to a node exists.
 
 ```{python}
 # Depth first search with recursion
@@ -280,6 +280,49 @@ def _DFS(graph,start,end,visited):
             return True
     return False
 ```
+
+- L332: Reconstruct a flight path
+
+```{python}
+
+tickets = [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+
+# convert to graph implemented in dict:
+import collections
+d = collections.defaultdict(list)
+for flight in tickets:
+    d[flight[0]].append(flight[1]),
+
+# start at JFK
+route = ["JFK"]
+
+# define DFS algo
+def dfs(start = 'JFK'):
+    # success condition -- all tickets have been accounted for
+    if len(route) == len(tickets) + 1: 
+        return route
+    # get destinations (children) from current node
+    myDsts = sorted(d[start])
+    # feedback to show path as it develops
+    print(route)
+    # iterate over children of this node
+    for dst in myDsts:
+        # count child in route
+        d[start].remove(dst)
+        route.append(dst)
+        # call DFS again starting at the child node
+        worked = dfs(dst)
+        if worked:
+            return worked
+        route.pop()
+        d[start].append(dst)
+
+# run the dfs algo
+dfs()
+```
+
+
+
 
 ### DFS vs BFS
 
