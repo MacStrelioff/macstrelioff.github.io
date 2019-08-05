@@ -1,0 +1,265 @@
+---
+title: "Yelp Notes"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 99
+math: yes
+linktitle: Yelp Deep Dive
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+
+# Yelp
+
+## Company Visit
+
+### Business Model, Culture, and Vision
+
+- Mission: Connect people with great local places
+- Main source of revenue is business ads, [overview of offerings here](https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38)
+- [More services for businesses](https://biz.yelp.com/guide_to_success)
+- Want: openness, curiosity, approachable
+- DS team has "Office hours" to facilitate communication
+- Journal clubs and learning groups
+- Can move to PM or ML teams
+
+### Projects, Tasks, and Data
+
+- Working on personalization
+- e.g. project: decrease experiment duration
+- not much collaboration with UX other than maybe getting data from them
+- data: crowd-sourced data on businesses 
+
+### DS Role
+
+- Looking for 2 roles
+
+1. DS
+
+Job consists of reining in management, helping with experimentation. Common deliverables are a Jupyter notebook and reports. 
+
+- Deliverables are reports and Jupyter notebooks
+- More confident decisions based on data
+- Investigate and define metrics
+- Design and analyze experiments on centralized platform.
+- Helps with scaling up experiments and interpreting results.
+- Predictive modeling
+- Qualities: Generalist, communication, statistical inference, experimental design, empathy of understanding of other roles in the business
+- Skills: SQL, Python (possibly R for analysis), clean code, reproducible results. 
+
+2. ML
+
+- Back end of production models
+- Assists DE team with feature engineering
+- Want: ML, DE, Python, Java, CS and mathematics.
+
+## Recruiter Call
+
+- Q: why did you apply to Yelp? Show enthusiasm for yelp during interview.
+
+Interview topics and evaluation:
+
+1. Technical skills (analysis, stats, programming)
+2. product/bus intuition -- impact for business opportunities
+3. communication -- clarity and insight
+4. Can discuss past work with large data or complicated work
+5. Might get metrics or experimentation based on questions Yelp is facing at the moment
+6. A/B testing, Python
+7. Enthusiasm for company -- why yelp versus another company
+8. Communicate while going along while solving the problems. 
+
+Other info:
+
+- Team: ~ 600 engs, 70 PMs, 20 DS. 
+- DS mostly work with feature team, to create, calculate, and validate metrics for feature work. Modeling user engagement, predicting delivery time, 
+- DS works on sub team -- Bus, consumer, core
+- DS works with product groups, growth, contributions, ads. 
+- PM prioritizes projects based on impact. 
+- DS Helps with A/B testing, experimentation.. Looking to solve 
+- Can work with 1-3PMs within group. 50-70% of time working on projects for product groups. Most time is getting and giving feedback on approach to specific problems. 
+- Expert on knowing the data we can work with to address PM problems. 
+- Measure "goodness" of a feature in scientific and principled way. 
+
+
+1. What role am I being considered for?
+
+Don't have anything posted on careers page. This role just opened. Role just opened up. Data scientist rec. 
+
+can send panel and links to their linkedin -- meeting with four folks. [Sebastian](https://www.linkedin.com/in/sebastiencouvidat/), Inhan (maybe [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)?), Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)), [Peter](https://www.linkedin.com/in/peter-weir/).
+
+3. What topics might be covered? 
+
+- Should I bring anything? Laptop, ... ? Could bring laptop, but there are laptops that can be borrowed as well. Whiteboards will be in the room. 
+
+## Likely Interviewers: 
+
+
+[Sebastian](https://www.linkedin.com/in/sebastiencouvidat/), 
+
+- Lead DS, 4y4m at Yelp
+- 10 years in research at Stanford
+- Astrophysics postdoc
+- Coursera courses on finance and computational investing
+- Yelp Job responsibilities: 
+- Data scientist in the consumer and mobile products division. Examples of activities include:
+- helping product managers and decision makers to reach fact-based decision
+- providing support to engineering teams for A/B test design and analysis
+- writing Python scripts to perform frequentist and Bayesian analysis of A/B tests
+- using machine-learning algorithms to predict revenue metrics and identify leads for sales force
+- providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.
+- testing the integrity and accuracy of some curated data in the company databases
+- implementing dashboard solutions for product managers for easy access to, and visualization of, relevant metrics
+
+
+
+Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)), 
+
+- DS Manager, 3y8m at Yelp
+- Insight
+- Neuroscience UT Austin
+
+[Peter](https://www.linkedin.com/in/peter-weir/).
+
+- Neuroscience at Caltech
+
+
+Inhan (maybe [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)?), 
+
+
+Another DS person: [Samuel Hansen](https://www.linkedin.com/in/samuelhansen/)
+
+- Member of Core Data Science team, supporting: 
+- Yelp's Local Economic Outlook (LEO) initiative to derive measures of economic health from Yelp data; 
+- Data infrastructure improvements to optimize analysis workflows.
+-	Developed pipeline to predict Yelp Transactions Platform user retention by scripting SQL queries, engineering longitudinal features, and implementing machine learning classifiers, lifting AUC 10% over the baseline model. 
+- Constructed behavioral segmentation of Yelp Transactions Platform users to understand food-ordering patterns with K-means and factor analysis, primarily identifying user clusters using mealtime, delivery type, and food category.
+- Built RShiny application with interactive geographical map of spatial-temporal changes in Yelp activity.
+
+Another DS person: [Wolfe Styke](https://www.linkedin.com/in/wolfe-styke-98108920/)
+
+- switched from SWE to DS
+- Continuing involvement with new experiment framework at Yelp from a data science perspective. 
+- Defining, implementing, and spreading awareness among product managers and engineers of user retention analysis for experiments.
+
+Another DS person: [Yang Song](https://www.linkedin.com/in/yang-song-516350b2/)
+
+I work at the marketplace team, products include Yelp Waitlist, Yelp Reservations, Yelp Request a Quote and Yelp Local Services
+
+Projects I have done: 
+- Built ML models on waitlist waiting time estimation
+- Various of observational causal inferences projects (User Behavior, Biz page features, Quotes qualities)
+- Geo experiment(For ads fulfillment, CPC, CTR)
+- Randomized A/B Testing
+- Sequential A/B Testing (Which allow PMs to peek A/B testing results)
+- Local services categories recommendation
+
+## Deep Dive
+
+### Users
+
+- website visitors who write and read reviews
+- businesses who pay for exposure
+
+### Metrics
+
+Overall, consider units of individuals (accounts, unique visitors, cookies, IPs...), units of time (daily, weekly), and referents (week over week, ...)
+
+- Monthly unique visitors
+- Web Reservations
+- Pad Reservations
+- Wait times at restaurants
+- Traffic to business pages
+- Engagement (from potential customers)
+- [Some metrics for business partners](https://biz.yelp.com/)
+
+
+### Current issues
+
+- Trust, businesses can game Yelp by [asking for low ratings](https://thehustle.co/botto-bistro-1-star-yelp/), 
+- Trust, Businesses accuse Yelp of [maliciously manipulating reviews](https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9), to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to [this response](https://www.yelp.com/extortion).
+- Influence: "Such ubiquity has consequences. A study from last year found that a measly half-star difference made it 19% more likely that a San Francisco restaurant would be busy at peak times." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
+- Lack of expected growth: "He cited a lack of growth from several of the site’s advertising efforts for his downgrade, as well as a lack of “consequential” new products “to reduce churn or drive revenue.” [this post](https://www.barrons.com/articles/what-the-democratic-debates-mean-for-health-care-investors-51564665029)
+- Balancing review usefulness, reliability, and legitimacy - 
+
+
+### Competitors
+
+- "On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
+- Full paragraph: "For better and for worse, strangers' opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews. While more democratic, they're also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad."
+
+
+### Ideas and excitement
+
+- I like that they have [data challenges](https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data)
+- I like their openness with data, particularly the [datasets on Kaggle](https://www.kaggle.com/datasets?search=yelp)
+- 
+
+- check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate's or restaurant's revenue for that quarter? 
+- Since a restaurant's revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.
+
+
+## Onsite
+
+- Expect from company visit: SQL, Python, statistics, experiment design
+- Expect from recruiter call: A/B testing, product sense
+
+### Glassdoor interview questions
+
+- How to evaluate the features classifying spams and emails.
+- How to swap two elements of a list
+- Whats the difference between decision trees and extreme boosted trees mathematically?
+- List the strings that are anagrams from a set of strings
+- Mid-level coding/algorithm questions; ask you to explain the projects you've worked on.
+- about my project on resume.
+- 3 Sum
+- What programming language do you use? What are some pros and cons of it?
+- The difference between Bayesian vs frequentist statistics
+- Setting up A/B tests to improve engagement
+- What features would you use to predict the number of likes on a review?
+- questions around product/metrics, A/B Testing, stats, ML
+- If you had to propose a new Yelp feature, what would it be?
+- What is an n-gram?
+- Simple coding and high level ML questions
+
+
+
+
+
+### meeting notes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
