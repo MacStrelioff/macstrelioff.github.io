@@ -1,5 +1,5 @@
 ---
-title: "Computer Science"
+title: "Basic Computer Science"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 output:
@@ -139,6 +139,8 @@ for n in ns_to_test:
 
 ## Data Structures
 
+### Lists and Dictionaries
+
 basic structures (tuples, list, arrays, dict), list comprehensions, 
 
 Good descriptions of [lists](https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html), [dicts](https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html), and [why some operations are much faster in sets or dict keys](https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists).
@@ -146,6 +148,12 @@ Good descriptions of [lists](https://runestone.academy/runestone/books/published
 In depth description of [hash tables](https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc). 
 
 Data structures (hash, stack, queue, tree, linked list); 
+
+### Stacks and Queues
+
+
+### Trees
+
 
 # Sorting
 
@@ -193,7 +201,7 @@ Examples.append(tmp_graph)
 
 ### Breadth First (BFS) and queues
 
-Breadth Frist Search (BFS) queues (FILO) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list. 
+Breadth Frist Search (BFS) queues (FILO structures) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list. 
 
 ```{python}
 # breadth first search: just a queue
@@ -237,7 +245,7 @@ def BFS(graph,start,end):
 
 ### Depth First (DFS) 
 
-Depth First search can be implemented with recursively (below) or with a stack (LIFO). 
+Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). 
 [good hackerrank video](https://www.youtube.com/watch?v=zaBhtODEL0w)
 
 - DFS can use a dictionary or set to 
@@ -317,7 +325,7 @@ print(nums)
 
 ## recursion; 
 
-## Dijkstra's algorithm, 
+## Dijkstra's algorithm
 
 ## dynamic programming (knapsack problem, Fibonacci sequence)
 

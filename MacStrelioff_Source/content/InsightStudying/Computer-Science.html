@@ -1,7 +1,7 @@
 ---
-title: "Computer Science"
+title: "Basic Computer Science"
 author: "Mac Strelioff"
-date: "2019-08-04 16:44:17"
+date: "2019-08-04 17:51:58"
 output:
   blogdown::html_page:
     toc: true
@@ -26,7 +26,11 @@ math: true
 <li><a href="#exponential-time-oxn">Exponential Time: <span class="math inline">\(O(x^n)\)</span></a></li>
 </ul></li>
 </ul></li>
-<li><a href="#data-structures">Data Structures</a></li>
+<li><a href="#data-structures">Data Structures</a><ul>
+<li><a href="#lists-and-dictionaries">Lists and Dictionaries</a></li>
+<li><a href="#stacks-and-queues">Stacks and Queues</a></li>
+<li><a href="#trees">Trees</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#sorting">Sorting</a></li>
 <li><a href="#searching">Searching</a><ul>
@@ -42,7 +46,7 @@ math: true
 <li><a href="#algorithms">Algorithms</a></li>
 <li><a href="#todo-other-topics">TODO / Other Topics:</a><ul>
 <li><a href="#recursion">recursion;</a></li>
-<li><a href="#dijkstras-algorithm">Dijkstra’s algorithm,</a></li>
+<li><a href="#dijkstras-algorithm">Dijkstra’s algorithm</a></li>
 <li><a href="#dynamic-programming-knapsack-problem-fibonacci-sequence">dynamic programming (knapsack problem, Fibonacci sequence)</a></li>
 <li><a href="#functional-programming">Functional programming</a></li>
 </ul></li>
@@ -166,10 +170,19 @@ for n in ns_to_test:
 </div>
 <div id="data-structures" class="section level2">
 <h2>Data Structures</h2>
+<div id="lists-and-dictionaries" class="section level3">
+<h3>Lists and Dictionaries</h3>
 <p>basic structures (tuples, list, arrays, dict), list comprehensions,</p>
 <p>Good descriptions of <a href="https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html">lists</a>, <a href="https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html">dicts</a>, and <a href="https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists">why some operations are much faster in sets or dict keys</a>.</p>
 <p>In depth description of <a href="https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc">hash tables</a>.</p>
 <p>Data structures (hash, stack, queue, tree, linked list);</p>
+</div>
+<div id="stacks-and-queues" class="section level3">
+<h3>Stacks and Queues</h3>
+</div>
+<div id="trees" class="section level3">
+<h3>Trees</h3>
+</div>
 </div>
 </div>
 <div id="sorting" class="section level1">
@@ -209,7 +222,7 @@ tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
 Examples.append(tmp_graph)</code></pre>
 <div id="breadth-first-bfs-and-queues" class="section level3">
 <h3>Breadth First (BFS) and queues</h3>
-<p>Breadth Frist Search (BFS) queues (FILO) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.</p>
+<p>Breadth Frist Search (BFS) queues (FILO structures) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.</p>
 <pre class="python"><code># breadth first search: just a queue
 def BFS_queue(graph,start,end):
     queue = [start] 
@@ -250,7 +263,7 @@ def BFS(graph,start,end):
 </div>
 <div id="depth-first-dfs" class="section level3">
 <h3>Depth First (DFS)</h3>
-<p>Depth First search can be implemented with recursively (below) or with a stack (LIFO). <a href="https://www.youtube.com/watch?v=zaBhtODEL0w">good hackerrank video</a></p>
+<p>Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). <a href="https://www.youtube.com/watch?v=zaBhtODEL0w">good hackerrank video</a></p>
 <ul>
 <li>DFS can use a dictionary or set to</li>
 </ul>
@@ -335,7 +348,7 @@ print(count)</code></pre>
 <h2>recursion;</h2>
 </div>
 <div id="dijkstras-algorithm" class="section level2">
-<h2>Dijkstra’s algorithm,</h2>
+<h2>Dijkstra’s algorithm</h2>
 </div>
 <div id="dynamic-programming-knapsack-problem-fibonacci-sequence" class="section level2">
 <h2>dynamic programming (knapsack problem, Fibonacci sequence)</h2>

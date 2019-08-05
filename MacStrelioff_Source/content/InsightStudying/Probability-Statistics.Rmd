@@ -25,7 +25,9 @@ set.seed(10201991)
 ```
 
 
+<!--
 Fermi problems (order of magnitude)
+--> 
 
 # Probability Foundations 
 

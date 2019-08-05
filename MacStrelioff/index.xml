@@ -36,9 +36,9 @@
     </item>
     
     <item>
-      <title>Computer Science</title>
+      <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 04 Aug 2019 16:44:17 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 17:51:58 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -54,7 +54,11 @@
 &lt;li&gt;&lt;a href=&#34;#exponential-time-oxn&#34;&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#lists-and-dictionaries&#34;&gt;Lists and Dictionaries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#stacks-and-queues&#34;&gt;Stacks and Queues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#trees&#34;&gt;Trees&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
@@ -70,7 +74,7 @@
 &lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#todo-other-topics&#34;&gt;TODO / Other Topics:&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;recursion;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#dijkstras-algorithm&#34;&gt;Dijkstra’s algorithm,&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dijkstras-algorithm&#34;&gt;Dijkstra’s algorithm&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#dynamic-programming-knapsack-problem-fibonacci-sequence&#34;&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#functional-programming&#34;&gt;Functional programming&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -194,10 +198,19 @@ for n in ns_to_test:
 &lt;/div&gt;
 &lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Structures&lt;/h2&gt;
+&lt;div id=&#34;lists-and-dictionaries&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lists and Dictionaries&lt;/h3&gt;
 &lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
 &lt;p&gt;Good descriptions of &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html&#34;&gt;lists&lt;/a&gt;, &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html&#34;&gt;dicts&lt;/a&gt;, and &lt;a href=&#34;https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists&#34;&gt;why some operations are much faster in sets or dict keys&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In depth description of &lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc&#34;&gt;hash tables&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stacks-and-queues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Stacks and Queues&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trees&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Trees&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sorting&#34; class=&#34;section level1&#34;&gt;
@@ -237,7 +250,7 @@ tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
 Examples.append(tmp_graph)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;breadth-first-bfs-and-queues&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Breadth First (BFS) and queues&lt;/h3&gt;
-&lt;p&gt;Breadth Frist Search (BFS) queues (FILO) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
+&lt;p&gt;Breadth Frist Search (BFS) queues (FILO structures) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# breadth first search: just a queue
 def BFS_queue(graph,start,end):
     queue = [start] 
@@ -278,7 +291,7 @@ def BFS(graph,start,end):
 &lt;/div&gt;
 &lt;div id=&#34;depth-first-dfs&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Depth First (DFS)&lt;/h3&gt;
-&lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;DFS can use a dictionary or set to&lt;/li&gt;
 &lt;/ul&gt;
@@ -363,7 +376,7 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;recursion;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div id=&#34;dijkstras-algorithm&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Dijkstra’s algorithm,&lt;/h2&gt;
+&lt;h2&gt;Dijkstra’s algorithm&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div id=&#34;dynamic-programming-knapsack-problem-fibonacci-sequence&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/h2&gt;
@@ -420,6 +433,607 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Sun, 04 Aug 2019 17:40:55 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-foundations&#34;&gt;Probability Foundations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#odds-and-other-transformations&#34;&gt;Odds and other transformations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#expectation-and-variance&#34;&gt;Expectation and Variance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#central-limit-theorem&#34;&gt;Central limit theorem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#common-tests&#34;&gt;Common Tests&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#z-test&#34;&gt;Z test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chi-square&#34;&gt;Chi-Square&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-models&#34;&gt;Linear Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#anova&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#t-test&#34;&gt;t-test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mixed-effects-models&#34;&gt;Mixed Effects Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#glms-logistic-regression&#34;&gt;GLMs: Logistic Regression&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#objective-demand-and-value&#34;&gt;Objective, demand, and value&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#constructs-metrics-and-scoping&#34;&gt;Constructs, metrics, and scoping&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#user-flow-and-target-metrics&#34;&gt;User flow and target metrics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#invariants&#34;&gt;Invariants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#confounding-variables&#34;&gt;Confounding variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#precision-variables&#34;&gt;Precision variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#metric-validation&#34;&gt;Metric Validation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conditions&#34;&gt;Conditions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#treatment-units&#34;&gt;Treatment Units&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#population&#34;&gt;Population&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cohorts&#34;&gt;Cohorts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#synthetic-control-groups&#34;&gt;Synthetic Control Groups&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#limitations&#34;&gt;Limitations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#implementation&#34;&gt;Implementation&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#size&#34;&gt;Size&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#temporal-variation&#34;&gt;Temporal variation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#optional-stopping&#34;&gt;Optional stopping&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#estimands&#34;&gt;Estimands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#effiencicy-or-variance-reduction&#34;&gt;Effiencicy or Variance Reduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#checking-assignment-integrety&#34;&gt;Checking assignment integrety&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#testing&#34;&gt;Testing&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#binary-or-proportions&#34;&gt;Binary or Proportions&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#fishers-z&#34;&gt;Fisher’s Z&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#real-valued&#34;&gt;Real-Valued&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#regression&#34;&gt;Regression&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-models-1&#34;&gt;Linear Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#emperical-variance-estimation&#34;&gt;Emperical Variance Estimation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--
+Fermi problems (order of magnitude)
+--&gt;
+&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Probability Foundations&lt;/h1&gt;
+&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
+&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Rules&lt;/h2&gt;
+&lt;p&gt;basic probability rules&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;odds-and-other-transformations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Odds and other transformations&lt;/h2&gt;
+&lt;p&gt;odds, log odds, relative risk, … .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
+&lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;central-limit-theorem&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Central limit theorem&lt;/h2&gt;
+&lt;p&gt;Sum of any random variable converges to normal distribution.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;show for binomial case, to justify Z test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;common-tests&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Common Tests&lt;/h1&gt;
+&lt;div id=&#34;z-test&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Z test&lt;/h2&gt;
+&lt;p&gt;Normal data&lt;/p&gt;
+&lt;p&gt;Binary data&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;chi-square&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Chi-Square&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear Models&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;anova&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;ANOVA&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;t-test&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;t-test&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;different variance formulations.&lt;/li&gt;
+&lt;li&gt;one-sample&lt;/li&gt;
+&lt;li&gt;two independent sampels&lt;/li&gt;
+&lt;li&gt;two dependent samples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mixed-effects-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mixed Effects Models&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Maime’s consulting project? Other use cases?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms-logistic-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;GLMs: Logistic Regression&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Experiment Design&lt;/h1&gt;
+&lt;div id=&#34;objective-demand-and-value&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objective, demand, and value&lt;/h2&gt;
+&lt;p&gt;Objective is based on a metric (increase clickthrough or revenue per user).&lt;/p&gt;
+&lt;p&gt;Demand – if adding a new user feature, how can demand for the feature be assessed?&lt;/p&gt;
+&lt;p&gt;value = benefit - cost.&lt;/p&gt;
+&lt;p&gt;Expected value helps with decisions about the size and duration of an experiment&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;constructs-metrics-and-scoping&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Constructs, metrics, and scoping&lt;/h2&gt;
+&lt;p&gt;Once an objective is clear, the details of what can be measured need to be flushed out.&lt;/p&gt;
+&lt;p&gt;Metrics (fill in from udamy course section on metrics)&lt;/p&gt;
+&lt;p&gt;Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)&lt;/p&gt;
+&lt;div id=&#34;user-flow-and-target-metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;User flow and target metrics&lt;/h3&gt;
+&lt;p&gt;Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of clicks&lt;/li&gt;
+&lt;li&gt;time on page&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;invariants&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Invariants&lt;/h3&gt;
+&lt;p&gt;Metrics that shouldn’t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;confounding-variables&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Confounding variables&lt;/h3&gt;
+&lt;p&gt;Mitigated by randomization.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;precision-variables&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Precision variables&lt;/h3&gt;
+&lt;p&gt;Can also highlight features that one would want to match treatment and control on.&lt;/p&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of posts&lt;/li&gt;
+&lt;li&gt;number of followers&lt;/li&gt;
+&lt;li&gt;visibility / impressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metric-validation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Metric Validation&lt;/h2&gt;
+&lt;p&gt;User expreience research, retrospective analyses of past data or log files, … .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conditions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conditions&lt;/h2&gt;
+&lt;p&gt;Define the experimental manipulations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;treatment-units&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Treatment Units&lt;/h2&gt;
+&lt;p&gt;What is the unit at which we assign treatments?&lt;/p&gt;
+&lt;p&gt;Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.&lt;/p&gt;
+&lt;p&gt;Proxies for individuals include;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User ID or account – most clearly tied to a user, but&lt;/li&gt;
+&lt;li&gt;cookies – device and browser specific, so these could differ across a user’s browsers or devices.&lt;/li&gt;
+&lt;li&gt;IP address (device request return address) – device specific, so a user’s experience might differ across devices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
+&lt;p&gt;The assignment mechanism samples members from a population and assignes them to conditions.&lt;/p&gt;
+&lt;p&gt;How are units assigned to treatments?&lt;/p&gt;
+&lt;p&gt;Randomized control trials are the ideal, but many issues arise in online experimentation settings.&lt;/p&gt;
+&lt;p&gt;(look up desirable properties form causal inference notes)&lt;/p&gt;
+&lt;div id=&#34;population&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Population&lt;/h3&gt;
+&lt;p&gt;What group is being sampled from?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cohorts&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Cohorts&lt;/h3&gt;
+&lt;p&gt;Random sample, cluster-based, stratified, serial, balanced, …&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;synthetic-control-groups&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Synthetic Control Groups&lt;/h3&gt;
+&lt;p&gt;Propensity matching&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;limitations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Limitations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Non-compliance: Those assicned to treatment may not actually experience the treatment.&lt;/li&gt;
+&lt;li&gt;Crossover: Those assigned to control might gain access to the treatment.&lt;/li&gt;
+&lt;li&gt;Treatment inhomogenaity: Some user segments might respond differently than others.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;implementation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Implementation&lt;/h1&gt;
+&lt;p&gt;Batched, or real-time&lt;/p&gt;
+&lt;div id=&#34;size&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Size&lt;/h2&gt;
+&lt;p&gt;power, sample size&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Duration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;learning effects: initial exploration or novelty seeking&lt;/li&gt;
+&lt;li&gt;learning effects: initial change aversion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Solution: Consider running experiment past any initial observed effect.&lt;/p&gt;
+&lt;div id=&#34;temporal-variation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Temporal variation&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;optional-stopping&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Optional stopping&lt;/h3&gt;
+&lt;p&gt;Why it’s an issue for frequentists&lt;/p&gt;
+&lt;p&gt;Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting&lt;/p&gt;
+&lt;p&gt;Bayesian justifications&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimands&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Estimands&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Average treatment effect&lt;/li&gt;
+&lt;li&gt;Treatment on treated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;effiencicy-or-variance-reduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Effiencicy or Variance Reduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;get table for different tests of means from soc sci 10 notes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;checking-assignment-integrety&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Checking assignment integrety&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;testing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Testing&lt;/h1&gt;
+&lt;div id=&#34;binary-or-proportions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Binary or Proportions&lt;/h2&gt;
+&lt;div id=&#34;fishers-z&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fisher’s Z&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;real-valued&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Real-Valued&lt;/h2&gt;
+&lt;div id=&#34;regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regression&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-models-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Linear Models&lt;/h1&gt;
+&lt;p&gt;regression&lt;/p&gt;
+&lt;p&gt;t-tests&lt;/p&gt;
+&lt;p&gt;ANOVA&lt;/p&gt;
+&lt;p&gt;t-test, ANOVA&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;GLMs&lt;/h1&gt;
+&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
+&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
+&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
+&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
+&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
+&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
+&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;emperical-variance-estimation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Emperical Variance Estimation&lt;/h1&gt;
+&lt;p&gt;bootstrapping&lt;/p&gt;
+&lt;p&gt;A/A testing&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/MacStrelioff/data-science/working-environment/</link>
+      <pubDate>Sun, 04 Aug 2019 17:33:43 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/working-environment/</guid>
+      <description>
+
+
+&lt;!---
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LgYl1ffS_6Y&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+---&gt;
+&lt;div id=&#34;working-environment&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Working Environment&lt;/h1&gt;
+&lt;p&gt;My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.&lt;/p&gt;
+&lt;div id=&#34;working-with-bash-and-git&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Working With Bash and Git&lt;/h2&gt;
+&lt;div id=&#34;useful-bash-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Useful Bash Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;login     # prompts for username and then password to log in
+man       # man (command) returns documentation a command&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;directory-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Directory Commands&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;pwd       # print working directory
+cd        # changes directory to home
+cd \      # changes directory to (/path)
+cd ..     # moves up one folder in the directory
+ls -al    # lists contencts of directory, -a includes hidden items, -l includes details&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;file-operations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;File Operations&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;mkdir    # make a new directory
+touch    # create a file
+open     # open a file
+mv       # move (file) (to), can also be used to rename a file
+cp       # copy (file) (to) 
+rm       # delete a file&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-utilities&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Other Utilities&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;echo    # print commands screen
+date    # print date
+cal     # print calendar (year)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-custom-commands&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Creating Custom Commands&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e&#34;&gt;this Medium blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use the alias command to map an execution of bash commands to a single command. For example, this will create a command ‘hi’ where the Luca voice slowly says ‘hello world’;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias hi=&amp;quot;say -v Luca  -r 100 &amp;#39;hello world&amp;#39;&amp;quot;
+hi # test this alias&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Functions can be created with the following syntax;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function function_name() {
+ &amp;lt;args&amp;gt; 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Inputs are denoted with $1, $2, … . For example, when called from the terminal, this function will print ‘Your Input Was:’ followed by the first argument it receives;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function print_my_input() {
+ echo &amp;#39;Your Input Was:&amp;#39; $1 
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To create a file where custom commands are defined, navigate to the home directory, create, and open the file that will hold function definitions;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd 
+touch .custom_commands
+open .custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define commands you wish to use in future Terminal sessions in the .custom_commands file. The next section describes how to source this file automatically when a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sourcing-files-during-terminal-initialization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sourcing Files During Terminal Initialization&lt;/h2&gt;
+&lt;p&gt;This section is partially based on &lt;a href=&#34;https://stackoverflow.com/questions/19662713/where-do-i-find-the-bashrc-file-on-mac&#34;&gt;this StackOverflow post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bash sources a run control file (~/.bashrc) at initialization. Check if this file exists in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+ls -a&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If there is no .bashrc file listed, then first open the .bash_profile file in a text editor and add the following;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then create and open a .bashrc file in the home directory with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
+touch .bashrc
+open .bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In a text editor add the following lines to the .bashrc file;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This last line will source the .custom_commands file described at the end of the previous section, thereby defining any aliases or functions in the .custom_commands file whenever a Terminal session is initialized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;scheduling-bash-functions-with-crontab&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Scheduling Bash Functions With Crontab&lt;/h2&gt;
+&lt;p&gt;Some basic crontab commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l # lists crontab jobs
+crontab -r # removes all crontab jobs
+crontab -e # edits list of crontab jobs&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The crontab -e command is somewhat hard to navigate, the following code is an easier way to create crontab jobs from ther terminal;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l | { cat; echo &amp;quot;* * * * * some entry&amp;quot;; } | crontab -
+
+# format for string argument for crontab;
+* * * * * &amp;quot;some entry&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I simplify this farther in a custom function called ‘schedule’ that I define in .&lt;/p&gt;
+&lt;p&gt;To execute functions from a user, the user must be specified in /etc/cron.allow – however, this file can only be edited by a superuser. To create and edit this file, use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd /etc
+sudo touch cron.allow
+sudo nano cron.allow&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;nano opens a text editor in ther terminal, and that can be used to edit and save changes to cron.allow.&lt;/p&gt;
+&lt;p&gt;More information on crontab &lt;a href=&#34;https://www.computerhope.com/unix/ucrontab.htm&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Git and GitHub&lt;/h2&gt;
+&lt;div id=&#34;setup&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# create user name and email for tagging contributions later
+git config --global user.name &amp;quot;USERNAME&amp;quot;   
+git config --global user.email &amp;quot;EMAIL&amp;quot; &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Connecting to Git can be done through a username/password or through SSH verification.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;usernamepassword&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Username/Password&lt;/h3&gt;
+&lt;p&gt;This didn’t work for ubdates scheduled through crontab.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ssh&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;SSH&lt;/h3&gt;
+&lt;p&gt;First, &lt;a href=&#34;https://help.github.com/articles/checking-for-existing-ssh-keys/&#34;&gt;check for SSH keys with&lt;/a&gt;;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd ~/.ssh  # navigate to user/.ssh folder
+ls -a      # list all files&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A public SSH key is in id_rsa.pub, which can be opened in a text editor.&lt;/p&gt;
+&lt;p&gt;If no id_rsa file exists, or if you wish to create a new SSH key, you can use the following command to generate a new SSH key;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@example.com&amp;quot; # run this if id_rsa file does not exist&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will prompt you for the file location where the SSH key should be saved – id_rsa is the default file.&lt;/p&gt;
+&lt;p&gt;From here, follow the steps &lt;a href=&#34;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&#34;&gt;to add an SSH key&lt;/a&gt;, summarized below.&lt;/p&gt;
+&lt;p&gt;First, create a config file for the SSH agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;touch ~/.ssh/config&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Open the config file in a text editor and add the the following commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, from Terminal, add the key from the file (e.g. id_rsa) to the ssh agent with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-add -K ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, &lt;a href=&#34;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&#34;&gt;add the ssh key to the GitHub account&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;test the connection&lt;/a&gt; with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh -T git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;working-from-a-repository&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Working From a Repository&lt;/h3&gt;
+&lt;p&gt;Create a repository through GitHub’s user interface (log in and select ‘new repository’).&lt;/p&gt;
+&lt;p&gt;Then create a directory on a local computer, possibly using bash commands; mkdir and cd.&lt;/p&gt;
+&lt;p&gt;The simplest way is to clone the repo from GitHub with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git clone (url)     # this will clone from the url to the current directory&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another way, from inside the directory that is to be the local repo, issue these commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git init   # initialize a repo
+git remote add origin (url or SSH address) # point local repo to remote repo&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;switching-between-ssh-and-https-access&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Switching between SSH and HTTPS Access&lt;/h3&gt;
+&lt;p&gt;In both examples below, replace ‘USERNAME/REPOSITORY’ with the appropriate values. From within the local repo folder,&lt;/p&gt;
+&lt;p&gt;Change from HTTPS to SSH with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with git@github.com&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Change from SSH to HTTPS with;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+git remote -v # list fetch and push destinations, should start with https://github.com/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/changing-a-remote-s-url/&#34;&gt;More detailed guide here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Other methods for addressing ‘Device not configured’ errors &lt;a href=&#34;https://stackoverflow.com/questions/40274484/fatal-could-not-read-username-for-https-github-com-device-not-configured&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;repository-maintanence-and-collaboration&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Repository Maintanence And Collaboration&lt;/h3&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/MacStrelioff/y.jpg&#34; alt=&#34;Git workflow&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Git workflow&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Useful commands;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git pull    # adds files from the configured remote repo to your local repo and workspace
+git add .   # adds all new files to be tracked
+git add -u  # updates all files
+git add -A  # does both &amp;#39;.&amp;#39; and &amp;#39;-u&amp;#39;
+git commit -m &amp;quot;message&amp;quot; # saves changes local repo
+git push    # updates repo on GitHub&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Collaborators can all access the GitHub repo through push/pull commands. In collaborative settings you might need to pull, so that your repository is current, before pushing changes from the local repository to the remote repository on GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;useful-custom-aliases-and-functions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Useful Custom Aliases and Functions&lt;/h2&gt;
+&lt;div id=&#34;gitup-combines-add-commit-and-push-into-one-command&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitup: combines add, commit, and push into one command&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gitupall-updates-all-git-repos-in-my-git-folder&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;gitupall: updates all git repos in my git folder&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function gitupall{
+for filename in /Users/mac/git/*; do
+echo &amp;quot;**************************updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;; 
+gitup
+cd ..
+done
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;schedule-schedules-a-command-to-be-executed-periodically&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;schedule: schedules a command to be executed periodically&lt;/h4&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+
+# format for string argument for crontab;
+* * * * * &amp;quot;command to be executed&amp;quot;
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example use;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# e.g. use: schedule updating of all repos each hour
+schedule &amp;quot;0 0-23 * * * gitupall&amp;quot;
+crontab -l # lists crontab jobs after schedule call&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;my-setup&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;My Setup&lt;/h2&gt;
+&lt;div id=&#34;bash-aliases-functions-scheduled-commands&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bash Aliases, Functions, Scheduled Commands&lt;/h3&gt;
+&lt;p&gt;In my root directory, I have a file called .custom_commands with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# aliases
+
+# goes to my folder of git projects
+alias gitgo=&amp;quot;cd /Users/mac/git; ls&amp;quot;
+echo &amp;#39;sourced alias gitgo&amp;#39;
+
+# pushes updates on a git project
+alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;
+echo &amp;#39;sourced alias gitup&amp;#39;
+
+# functions
+
+# schedule &amp;quot;(m h DoM M DoW command)&amp;quot;
+# schedules command to be executed at 
+# minute m of hour h on DoM days of the month in months M or DoW days of the week.
+function schedule(){
+crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
+}
+echo &amp;#39;sourced function schedule&amp;#39;
+
+# for updating all git projects, schedule this to be done periodically
+function gitupall(){
+for filename in /Users/mac/git/*; do
+echo &amp;quot;************************** updating $filename&amp;quot;
+cd &amp;quot;$filename&amp;quot;;
+git remote -v    # prints the fetch and push destinations
+gitup
+done
+cd # return to home directory
+}
+echo &amp;#39;sourced function gitupall&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a .bashrc file in my root directory, which sources the custom commands. Particularly the contents of the .bashrc file are;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source system-wide definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# source file with function definitions
+source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also have a file in my root directory for scheduling, called .scheduled with contents;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# put all scheduled functions here
+
+# source custom commands
+source ~/.custom_commands
+
+# activate key agent
+eval &amp;quot;$(ssh-agent -s)&amp;quot;
+
+# test SSH key / print username
+ssh -T git@github.com
+
+# update all git repos
+gitupall&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I then scheduled this file to be read hourly by opening a terminal session, which sources .bashrc at initialization thereby sourcing my custom commands, and running;&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;schedule &amp;quot;0 0-23 * * * source ~/.scheduled&amp;quot;
+crontab -l # the scheduled job should be listed as a crontab job&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -892,310 +1506,6 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Company blogs are a great resource: check out how StitchFix, Instacart use data science.&lt;/p&gt;
 &lt;p&gt;More company deep dives!&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sat, 03 Aug 2019 20:26:20 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-foundations&#34;&gt;Probability Foundations&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#odds-and-other-transformations&#34;&gt;Odds and other transformations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#expectation-and-variance&#34;&gt;Expectation and Variance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#central-limit-theorem&#34;&gt;Central limit theorem&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#common-tests&#34;&gt;Common Tests&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#z-test&#34;&gt;Z test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#chi-square&#34;&gt;Chi-Square&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-models&#34;&gt;Linear Models&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#anova&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#t-test&#34;&gt;t-test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#mixed-effects-models&#34;&gt;Mixed Effects Models&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#glms-logistic-regression&#34;&gt;GLMs: Logistic Regression&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#objective-demand-and-value&#34;&gt;Objective, demand, and value&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#constructs-metrics-and-scoping&#34;&gt;Constructs, metrics, and scoping&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#user-flow-and-target-metrics&#34;&gt;User flow and target metrics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#invariants&#34;&gt;Invariants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#confounding-variables&#34;&gt;Confounding variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#precision-variables&#34;&gt;Precision variables&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#metric-validation&#34;&gt;Metric Validation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#conditions&#34;&gt;Conditions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#treatment-units&#34;&gt;Treatment Units&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#population&#34;&gt;Population&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cohorts&#34;&gt;Cohorts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#synthetic-control-groups&#34;&gt;Synthetic Control Groups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#limitations&#34;&gt;Limitations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#implementation&#34;&gt;Implementation&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#size&#34;&gt;Size&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#temporal-variation&#34;&gt;Temporal variation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#optional-stopping&#34;&gt;Optional stopping&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#estimands&#34;&gt;Estimands&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#effiencicy-or-variance-reduction&#34;&gt;Effiencicy or Variance Reduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#checking-assignment-integrety&#34;&gt;Checking assignment integrety&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#testing&#34;&gt;Testing&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#binary-or-proportions&#34;&gt;Binary or Proportions&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#fishers-z&#34;&gt;Fisher’s Z&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#real-valued&#34;&gt;Real-Valued&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#regression&#34;&gt;Regression&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-models-1&#34;&gt;Linear Models&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#emperical-variance-estimation&#34;&gt;Emperical Variance Estimation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Fermi problems (order of magnitude)&lt;/p&gt;
-&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Probability Foundations&lt;/h1&gt;
-&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
-&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Rules&lt;/h2&gt;
-&lt;p&gt;basic probability rules&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;odds-and-other-transformations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Odds and other transformations&lt;/h2&gt;
-&lt;p&gt;odds, log odds, relative risk, … .&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
-&lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;central-limit-theorem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Central limit theorem&lt;/h2&gt;
-&lt;p&gt;Sum of any random variable converges to normal distribution.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;show for binomial case, to justify Z test&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;common-tests&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Common Tests&lt;/h1&gt;
-&lt;div id=&#34;z-test&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Z test&lt;/h2&gt;
-&lt;p&gt;Normal data&lt;/p&gt;
-&lt;p&gt;Binary data&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;chi-square&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Chi-Square&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;linear-models&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Linear Models&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;anova&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;ANOVA&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;t-test&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;t-test&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;different variance formulations.&lt;/li&gt;
-&lt;li&gt;one-sample&lt;/li&gt;
-&lt;li&gt;two independent sampels&lt;/li&gt;
-&lt;li&gt;two dependent samples&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;mixed-effects-models&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mixed Effects Models&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Maime’s consulting project? Other use cases?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms-logistic-regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;GLMs: Logistic Regression&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Experiment Design&lt;/h1&gt;
-&lt;div id=&#34;objective-demand-and-value&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Objective, demand, and value&lt;/h2&gt;
-&lt;p&gt;Objective is based on a metric (increase clickthrough or revenue per user).&lt;/p&gt;
-&lt;p&gt;Demand – if adding a new user feature, how can demand for the feature be assessed?&lt;/p&gt;
-&lt;p&gt;value = benefit - cost.&lt;/p&gt;
-&lt;p&gt;Expected value helps with decisions about the size and duration of an experiment&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;constructs-metrics-and-scoping&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Constructs, metrics, and scoping&lt;/h2&gt;
-&lt;p&gt;Once an objective is clear, the details of what can be measured need to be flushed out.&lt;/p&gt;
-&lt;p&gt;Metrics (fill in from udamy course section on metrics)&lt;/p&gt;
-&lt;p&gt;Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)&lt;/p&gt;
-&lt;div id=&#34;user-flow-and-target-metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;User flow and target metrics&lt;/h3&gt;
-&lt;p&gt;Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;number of clicks&lt;/li&gt;
-&lt;li&gt;time on page&lt;/li&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;invariants&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Invariants&lt;/h3&gt;
-&lt;p&gt;Metrics that shouldn’t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;confounding-variables&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Confounding variables&lt;/h3&gt;
-&lt;p&gt;Mitigated by randomization.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;precision-variables&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Precision variables&lt;/h3&gt;
-&lt;p&gt;Can also highlight features that one would want to match treatment and control on.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;number of posts&lt;/li&gt;
-&lt;li&gt;number of followers&lt;/li&gt;
-&lt;li&gt;visibility / impressions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metric-validation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Metric Validation&lt;/h2&gt;
-&lt;p&gt;User expreience research, retrospective analyses of past data or log files, … .&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;conditions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Conditions&lt;/h2&gt;
-&lt;p&gt;Define the experimental manipulations.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;treatment-units&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Treatment Units&lt;/h2&gt;
-&lt;p&gt;What is the unit at which we assign treatments?&lt;/p&gt;
-&lt;p&gt;Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.&lt;/p&gt;
-&lt;p&gt;Proxies for individuals include;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;User ID or account – most clearly tied to a user, but&lt;/li&gt;
-&lt;li&gt;cookies – device and browser specific, so these could differ across a user’s browsers or devices.&lt;/li&gt;
-&lt;li&gt;IP address (device request return address) – device specific, so a user’s experience might differ across devices.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
-&lt;p&gt;The assignment mechanism samples members from a population and assignes them to conditions.&lt;/p&gt;
-&lt;p&gt;How are units assigned to treatments?&lt;/p&gt;
-&lt;p&gt;Randomized control trials are the ideal, but many issues arise in online experimentation settings.&lt;/p&gt;
-&lt;p&gt;(look up desirable properties form causal inference notes)&lt;/p&gt;
-&lt;div id=&#34;population&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Population&lt;/h3&gt;
-&lt;p&gt;What group is being sampled from?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cohorts&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Cohorts&lt;/h3&gt;
-&lt;p&gt;Random sample, cluster-based, stratified, serial, balanced, …&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;synthetic-control-groups&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Synthetic Control Groups&lt;/h3&gt;
-&lt;p&gt;Propensity matching&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;limitations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Limitations&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Non-compliance: Those assicned to treatment may not actually experience the treatment.&lt;/li&gt;
-&lt;li&gt;Crossover: Those assigned to control might gain access to the treatment.&lt;/li&gt;
-&lt;li&gt;Treatment inhomogenaity: Some user segments might respond differently than others.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;implementation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Implementation&lt;/h1&gt;
-&lt;p&gt;Batched, or real-time&lt;/p&gt;
-&lt;div id=&#34;size&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Size&lt;/h2&gt;
-&lt;p&gt;power, sample size&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Duration&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;learning effects: initial exploration or novelty seeking&lt;/li&gt;
-&lt;li&gt;learning effects: initial change aversion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Solution: Consider running experiment past any initial observed effect.&lt;/p&gt;
-&lt;div id=&#34;temporal-variation&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Temporal variation&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;optional-stopping&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Optional stopping&lt;/h3&gt;
-&lt;p&gt;Why it’s an issue for frequentists&lt;/p&gt;
-&lt;p&gt;Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting&lt;/p&gt;
-&lt;p&gt;Bayesian justifications&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;estimands&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Estimands&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Average treatment effect&lt;/li&gt;
-&lt;li&gt;Treatment on treated&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;effiencicy-or-variance-reduction&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Effiencicy or Variance Reduction&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;get table for different tests of means from soc sci 10 notes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;checking-assignment-integrety&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Checking assignment integrety&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;testing&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Testing&lt;/h1&gt;
-&lt;div id=&#34;binary-or-proportions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Binary or Proportions&lt;/h2&gt;
-&lt;div id=&#34;fishers-z&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Fisher’s Z&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;real-valued&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Real-Valued&lt;/h2&gt;
-&lt;div id=&#34;regression&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Regression&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;linear-models-1&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Linear Models&lt;/h1&gt;
-&lt;p&gt;regression&lt;/p&gt;
-&lt;p&gt;t-tests&lt;/p&gt;
-&lt;p&gt;ANOVA&lt;/p&gt;
-&lt;p&gt;t-test, ANOVA&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;GLMs&lt;/h1&gt;
-&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
-&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
-&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
-&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
-&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
-&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
-&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;emperical-variance-estimation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Emperical Variance Estimation&lt;/h1&gt;
-&lt;p&gt;bootstrapping&lt;/p&gt;
-&lt;p&gt;A/A testing&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -2077,301 +2387,6 @@ else: # if building hasn&amp;#39;t been purchased, store cps as infinity
                     self.log_build_info[building][k].append(self.building_info[building][k])
                 # log epoch, within each building since buildings become available at different times
                 self.log_build_info[building][&amp;#39;epoch&amp;#39;].append(epoch)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/MacStrelioff/data-science/working-environment/</link>
-      <pubDate>Thu, 01 Aug 2019 18:03:35 +0000</pubDate>
-      
-      <guid>/MacStrelioff/data-science/working-environment/</guid>
-      <description>
-
-
-&lt;!---
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/LgYl1ffS_6Y&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
----&gt;
-&lt;div id=&#34;working-environment&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Working Environment&lt;/h1&gt;
-&lt;p&gt;My working environment relies on bash and git. Here I provide some background on these tools and a walkthrough for automatic, scheduled pushes to git.&lt;/p&gt;
-&lt;div id=&#34;working-with-bash-and-git&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Working With Bash and Git&lt;/h2&gt;
-&lt;div id=&#34;useful-bash-commands&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Useful Bash Commands&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;login     # prompts for username and then password to log in
-man       # man (command) returns documentation a command&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;directory-commands&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Directory Commands&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;pwd       # print working directory
-cd        # changes directory to home
-cd \      # changes directory to (/path)
-cd ..     # moves up one folder in the directory
-ls -al    # lists contencts of directory, -a includes hidden items, -l includes details&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;file-operations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;File Operations&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;mkdir    # make a new directory
-touch    # create a file
-open     # open a file
-mv       # move (file) (to), can also be used to rename a file
-cp       # copy (file) (to) 
-rm       # delete a file&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-utilities&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Other Utilities&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;echo    # print commands screen
-date    # print date
-cal     # print calendar (year)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;creating-custom-commands&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Creating Custom Commands&lt;/h2&gt;
-&lt;p&gt;This section is partially based on &lt;a href=&#34;https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e&#34;&gt;this Medium blog post&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Use the alias command to map an execution of bash commands to a single command. For example, this will create a command ‘hi’ where the Luca voice slowly says ‘hello world’;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias hi=&amp;quot;say -v Luca  -r 100 &amp;#39;hello world&amp;#39;&amp;quot;
-hi # test this alias&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Functions can be created with the following syntax;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function function_name() {
- &amp;lt;args&amp;gt; 
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Inputs are denoted with $1, $2, … . For example, when called from the terminal, this function will print ‘Your Input Was:’ followed by the first argument it receives;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function print_my_input() {
- echo &amp;#39;Your Input Was:&amp;#39; $1 
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To create a file where custom commands are defined, navigate to the home directory, create, and open the file that will hold function definitions;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd 
-touch .custom_commands
-open .custom_commands&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Define commands you wish to use in future Terminal sessions in the .custom_commands file. The next section describes how to source this file automatically when a Terminal session is initialized.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sourcing-files-during-terminal-initialization&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Sourcing Files During Terminal Initialization&lt;/h2&gt;
-&lt;p&gt;This section is partially based on &lt;a href=&#34;https://stackoverflow.com/questions/19662713/where-do-i-find-the-bashrc-file-on-mac&#34;&gt;this StackOverflow post&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Bash sources a run control file (~/.bashrc) at initialization. Check if this file exists in the home directory with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
-ls -a&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If there is no .bashrc file listed, then first open the .bash_profile file in a text editor and add the following;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then create and open a .bashrc file in the home directory with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd
-touch .bashrc
-open .bashrc&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In a text editor add the following lines to the .bashrc file;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
-# source file with function definitions
-source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This last line will source the .custom_commands file described at the end of the previous section, thereby defining any aliases or functions in the .custom_commands file whenever a Terminal session is initialized.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;scheduling-bash-functions-with-crontab&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Scheduling Bash Functions With Crontab&lt;/h2&gt;
-&lt;p&gt;Some basic crontab commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l # lists crontab jobs
-crontab -r # removes all crontab jobs
-crontab -e # edits list of crontab jobs&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The crontab -e command is somewhat hard to navigate, the following code is an easier way to create crontab jobs from ther terminal;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;crontab -l | { cat; echo &amp;quot;* * * * * some entry&amp;quot;; } | crontab -
-
-# format for string argument for crontab;
-* * * * * &amp;quot;some entry&amp;quot;
-- - - - -
-| | | | |
-| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
-| | | ------- Month (1 - 12)
-| | --------- Day of month (1 - 31)
-| ----------- Hour (0 - 23)
-------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I simplify this farther in a custom function called ‘schedule’ that I define in .&lt;/p&gt;
-&lt;p&gt;To execute functions from a user, the user must be specified in /etc/cron.allow – however, this file can only be edited by a superuser. To create and edit this file, use;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd /etc
-sudo touch cron.allow
-sudo nano cron.allow&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;nano opens a text editor in ther terminal, and that can be used to edit and save changes to cron.allow.&lt;/p&gt;
-&lt;p&gt;More information on crontab &lt;a href=&#34;https://www.computerhope.com/unix/ucrontab.htm&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Git and GitHub&lt;/h2&gt;
-&lt;div id=&#34;setup&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Setup&lt;/h3&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# create user name and email for tagging contributions later
-git config --global user.name &amp;quot;USERNAME&amp;quot;   
-git config --global user.email &amp;quot;EMAIL&amp;quot; &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Connecting to Git can be done through a username/password or through SSH verification.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;usernamepassword&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Username/Password&lt;/h3&gt;
-&lt;p&gt;This didn’t work for ubdates scheduled through crontab.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ssh&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;SSH&lt;/h3&gt;
-&lt;p&gt;First, &lt;a href=&#34;https://help.github.com/articles/checking-for-existing-ssh-keys/&#34;&gt;check for SSH keys with&lt;/a&gt;;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd ~/.ssh  # navigate to user/.ssh folder
-ls -a      # list all files&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;A public SSH key is in id_rsa.pub, which can be opened in a text editor.&lt;/p&gt;
-&lt;p&gt;If no id_rsa file exists, or if you wish to create a new SSH key, you can use the following command to generate a new SSH key;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096 -C &amp;quot;your_email@example.com&amp;quot; # run this if id_rsa file does not exist&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This will prompt you for the file location where the SSH key should be saved – id_rsa is the default file.&lt;/p&gt;
-&lt;p&gt;From here, follow the steps &lt;a href=&#34;https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&#34;&gt;to add an SSH key&lt;/a&gt;, summarized below.&lt;/p&gt;
-&lt;p&gt;First, create a config file for the SSH agent with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;touch ~/.ssh/config&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Open the config file in a text editor and add the the following commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next, from Terminal, add the key from the file (e.g. id_rsa) to the ssh agent with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh-add -K ~/.ssh/id_rsa&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Finally, &lt;a href=&#34;https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/&#34;&gt;add the ssh key to the GitHub account&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And &lt;a href=&#34;https://help.github.com/articles/testing-your-ssh-connection/&#34;&gt;test the connection&lt;/a&gt; with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;ssh -T git@github.com&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;working-from-a-repository&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Working From a Repository&lt;/h3&gt;
-&lt;p&gt;Create a repository through GitHub’s user interface (log in and select ‘new repository’).&lt;/p&gt;
-&lt;p&gt;Then create a directory on a local computer, possibly using bash commands; mkdir and cd.&lt;/p&gt;
-&lt;p&gt;The simplest way is to clone the repo from GitHub with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git clone (url)     # this will clone from the url to the current directory&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Another way, from inside the directory that is to be the local repo, issue these commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git init   # initialize a repo
-git remote add origin (url or SSH address) # point local repo to remote repo&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;switching-between-ssh-and-https-access&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Switching between SSH and HTTPS Access&lt;/h3&gt;
-&lt;p&gt;In both examples below, replace ‘USERNAME/REPOSITORY’ with the appropriate values. From within the local repo folder,&lt;/p&gt;
-&lt;p&gt;Change from HTTPS to SSH with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
-git remote -v # list fetch and push destinations, should start with git@github.com&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Change from SSH to HTTPS with;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
-git remote -v # list fetch and push destinations, should start with https://github.com/&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/changing-a-remote-s-url/&#34;&gt;More detailed guide here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Other methods for addressing ‘Device not configured’ errors &lt;a href=&#34;https://stackoverflow.com/questions/40274484/fatal-could-not-read-username-for-https-github-com-device-not-configured&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;repository-maintanence-and-collaboration&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Repository Maintanence And Collaboration&lt;/h3&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/MacStrelioff/y.jpg&#34; alt=&#34;Git workflow&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Git workflow&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Useful commands;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git pull    # adds files from the configured remote repo to your local repo and workspace
-git add .   # adds all new files to be tracked
-git add -u  # updates all files
-git add -A  # does both &amp;#39;.&amp;#39; and &amp;#39;-u&amp;#39;
-git commit -m &amp;quot;message&amp;quot; # saves changes local repo
-git push    # updates repo on GitHub&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Collaborators can all access the GitHub repo through push/pull commands. In collaborative settings you might need to pull, so that your repository is current, before pushing changes from the local repository to the remote repository on GitHub.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;useful-custom-aliases-and-functions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Useful Custom Aliases and Functions&lt;/h2&gt;
-&lt;div id=&#34;gitup-combines-add-commit-and-push-into-one-command&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;gitup: combines add, commit, and push into one command&lt;/h4&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;gitupall-updates-all-git-repos-in-my-git-folder&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;gitupall: updates all git repos in my git folder&lt;/h4&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function gitupall{
-for filename in /Users/mac/git/*; do
-echo &amp;quot;**************************updating $filename&amp;quot;
-cd &amp;quot;$filename&amp;quot;; 
-gitup
-cd ..
-done
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;schedule-schedules-a-command-to-be-executed-periodically&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;schedule: schedules a command to be executed periodically&lt;/h4&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;function schedule(){
-crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
-}
-
-# format for string argument for crontab;
-* * * * * &amp;quot;command to be executed&amp;quot;
-- - - - -
-| | | | |
-| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
-| | | ------- Month (1 - 12)
-| | --------- Day of month (1 - 31)
-| ----------- Hour (0 - 23)
-------------- Minute (0 - 59)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Example use;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# e.g. use: schedule updating of all repos each hour
-schedule &amp;quot;0 0-23 * * * gitupall&amp;quot;
-crontab -l # lists crontab jobs after schedule call&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;my-setup&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;My Setup&lt;/h2&gt;
-&lt;div id=&#34;bash-aliases-functions-scheduled-commands&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Bash Aliases, Functions, Scheduled Commands&lt;/h3&gt;
-&lt;p&gt;In my root directory, I have a file called .custom_commands with contents;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# aliases
-
-# goes to my folder of git projects
-alias gitgo=&amp;quot;cd /Users/mac/git; ls&amp;quot;
-echo &amp;#39;sourced alias gitgo&amp;#39;
-
-# pushes updates on a git project
-alias gitup=&amp;quot;git add -A; git commit -m &amp;#39;auto&amp;#39;; git push&amp;quot;
-echo &amp;#39;sourced alias gitup&amp;#39;
-
-# functions
-
-# schedule &amp;quot;(m h DoM M DoW command)&amp;quot;
-# schedules command to be executed at 
-# minute m of hour h on DoM days of the month in months M or DoW days of the week.
-function schedule(){
-crontab -l | { cat; echo &amp;quot;$1&amp;quot;; } | crontab -
-}
-echo &amp;#39;sourced function schedule&amp;#39;
-
-# for updating all git projects, schedule this to be done periodically
-function gitupall(){
-for filename in /Users/mac/git/*; do
-echo &amp;quot;************************** updating $filename&amp;quot;
-cd &amp;quot;$filename&amp;quot;;
-git remote -v    # prints the fetch and push destinations
-gitup
-done
-cd # return to home directory
-}
-echo &amp;#39;sourced function gitupall&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I also have a .bashrc file in my root directory, which sources the custom commands. Particularly the contents of the .bashrc file are;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# Source system-wide definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
-
-# source file with function definitions
-source ~/.custom_commands&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I also have a file in my root directory for scheduling, called .scheduled with contents;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;# put all scheduled functions here
-
-# source custom commands
-source ~/.custom_commands
-
-# activate key agent
-eval &amp;quot;$(ssh-agent -s)&amp;quot;
-
-# test SSH key / print username
-ssh -T git@github.com
-
-# update all git repos
-gitupall&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I then scheduled this file to be read hourly by opening a terminal session, which sources .bashrc at initialization thereby sourcing my custom commands, and running;&lt;/p&gt;
-&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;schedule &amp;quot;0 0-23 * * * source ~/.scheduled&amp;quot;
-crontab -l # the scheduled job should be listed as a crontab job&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
