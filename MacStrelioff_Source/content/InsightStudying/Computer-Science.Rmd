@@ -281,53 +281,9 @@ def _DFS(graph,start,end,visited):
     return False
 ```
 
-- L332: Reconstruct a flight path
-
-```{python}
-
-tickets = [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
-
-# convert to graph implemented in dict:
-import collections
-d = collections.defaultdict(list)
-for flight in tickets:
-    d[flight[0]].append(flight[1]),
-
-# start at JFK
-route = ["JFK"]
-
-# define DFS algo
-def dfs(start = 'JFK'):
-    # success condition -- all tickets have been accounted for
-    if len(route) == len(tickets) + 1: 
-        return route
-    # get destinations (children) from current node
-    myDsts = sorted(d[start])
-    # feedback to show path as it develops
-    print(route)
-    # iterate over children of this node
-    for dst in myDsts:
-        # count child in route
-        d[start].remove(dst)
-        route.append(dst)
-        # call DFS again starting at the child node
-        worked = dfs(dst)
-        if worked:
-            return worked
-        route.pop()
-        d[start].append(dst)
-
-# run the dfs algo
-dfs()
-```
-
-
-
-
 ### DFS vs BFS
 
 ```{python}
-
 
 for example in Examples:
     print('DFS  path: ', DFS(example,1,7))
@@ -336,6 +292,51 @@ for example in Examples:
 ```
 
 
+### Examples: 
+
+- L332: Reconstruct a path from a starting node that hits all nodes once
+
+```{python}
+
+tickets = [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+
+# convert to graph implemented in dict:
+import collections
+tree = collections.defaultdict(list)
+for parent,child in tickets:
+    tree[parent].append(child)
+
+# start at JFK
+path = ["JFK"]
+
+# define DFS algo
+def dfs(parent = 'JFK'):
+    # success condition -- all tickets have been accounted for
+    if len(path) == len(tickets) + 1: 
+        print("Final Path: {}".format(path))
+        return path
+    # get destinations (children) from current node
+    children = sorted(tree[parent])
+    # iterate over children of this node
+    for child in children:
+        # include child in path
+        tree[parent].remove(child)
+        path.append(child)
+        # call DFS again starting at the child node
+        print("Checking: {} -> {}".format(parent,child))
+        sub_route = dfs(child)
+        if sub_route: 
+            return sub_route
+        else: print("No successful sub-route")
+        # implicitely return None if sub_route empty
+        # if no successful sub-route, remove child from path, 
+        path.pop()
+        #  and add child back to parent to be searched later
+        tree[parent].append(child)
+
+# run the dfs algo
+dfs()
+```
 
 <!--
 # Ranking Algorithms
@@ -365,7 +366,9 @@ Optimal way: Start at each letter, move out each
 
 e.g. reverse a linked list
 
+e.g. max price from a single buy and sell?
 
+e.g. swapping values in an array? 
 
 # Algorithms
 

@@ -38,7 +38,7 @@
     <item>
       <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Mon, 05 Aug 2019 13:57:06 +0000</pubDate>
+      <pubDate>Mon, 05 Aug 2019 14:56:53 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -67,6 +67,7 @@
 &lt;li&gt;&lt;a href=&#34;#breadth-first-bfs-and-queues&#34;&gt;Breadth First (BFS) and queues&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#depth-first-dfs&#34;&gt;Depth First (DFS)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#dfs-vs-bfs&#34;&gt;DFS vs BFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#examples&#34;&gt;Examples:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#pointers&#34;&gt;Pointers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -325,57 +326,10 @@ def _DFS(graph,start,end,visited):
         if _DFS(graph,child,end,visited):
             return True
     return False&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;L332: Reconstruct a flight path&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-tickets = [[&amp;quot;JFK&amp;quot;,&amp;quot;KUL&amp;quot;],[&amp;quot;JFK&amp;quot;,&amp;quot;NRT&amp;quot;],[&amp;quot;NRT&amp;quot;,&amp;quot;JFK&amp;quot;]]
-
-# convert to graph implemented in dict:
-import collections
-d = collections.defaultdict(list)
-for flight in tickets:
-    d[flight[0]].append(flight[1]),
-
-# start at JFK&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; (None,)
-&amp;gt;&amp;gt;&amp;gt; (None,)
-&amp;gt;&amp;gt;&amp;gt; (None,)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;route = [&amp;quot;JFK&amp;quot;]
-
-# define DFS algo
-def dfs(start = &amp;#39;JFK&amp;#39;):
-    # success condition -- all tickets have been accounted for
-    if len(route) == len(tickets) + 1: 
-        return route
-    # get destinations (children) from current node
-    myDsts = sorted(d[start])
-    # feedback to show path as it develops
-    print(route)
-    # iterate over children of this node
-    for dst in myDsts:
-        # count child in route
-        d[start].remove(dst)
-        route.append(dst)
-        # call DFS again starting at the child node
-        worked = dfs(dst)
-        if worked:
-            return worked
-        route.pop()
-        d[start].append(dst)
-
-# run the dfs algo
-dfs()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;]
-&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]
-&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;]
-&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;]
-&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;dfs-vs-bfs&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;DFS vs BFS&lt;/h3&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-
 for example in Examples:
     print(&amp;#39;DFS  path: &amp;#39;, DFS(example,1,7))
     print(&amp;#39;BFSq path: &amp;#39;, BFS(example,1,7))
@@ -391,6 +345,58 @@ for example in Examples:
 &amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
 &amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 7})
 &amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 7})&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Examples:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;L332: Reconstruct a path from a starting node that hits all nodes once&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+tickets = [[&amp;quot;JFK&amp;quot;,&amp;quot;KUL&amp;quot;],[&amp;quot;JFK&amp;quot;,&amp;quot;NRT&amp;quot;],[&amp;quot;NRT&amp;quot;,&amp;quot;JFK&amp;quot;]]
+
+# convert to graph implemented in dict:
+import collections
+tree = collections.defaultdict(list)
+for parent,child in tickets:
+    tree[parent].append(child)
+
+# start at JFK
+path = [&amp;quot;JFK&amp;quot;]
+
+# define DFS algo
+def dfs(parent = &amp;#39;JFK&amp;#39;):
+    # success condition -- all tickets have been accounted for
+    if len(path) == len(tickets) + 1: 
+        print(&amp;quot;Final Path: {}&amp;quot;.format(path))
+        return path
+    # get destinations (children) from current node
+    children = sorted(tree[parent])
+    # iterate over children of this node
+    for child in children:
+        # include child in path
+        tree[parent].remove(child)
+        path.append(child)
+        # call DFS again starting at the child node
+        print(&amp;quot;Checking: {} -&amp;gt; {}&amp;quot;.format(parent,child))
+        sub_route = dfs(child)
+        if sub_route: 
+            return sub_route
+        else: print(&amp;quot;No successful sub-route&amp;quot;)
+        # implicitely return None if sub_route empty
+        # if no successful sub-route, remove child from path, 
+        path.pop()
+        #  and add child back to parent to be searched later
+        tree[parent].append(child)
+
+# run the dfs algo
+dfs()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
+&amp;gt;&amp;gt;&amp;gt; No successful sub-route
+&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; NRT
+&amp;gt;&amp;gt;&amp;gt; Checking: NRT -&amp;gt; JFK
+&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
+&amp;gt;&amp;gt;&amp;gt; Final Path: [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]&lt;/code&gt;&lt;/pre&gt;
 &lt;!--
 # Ranking Algorithms
 
@@ -416,6 +422,8 @@ Temporal involves forecasting, which is a topic for another post.
 &lt;p&gt;e.g. Find longest substring that is a pallendrome&lt;/p&gt;
 &lt;p&gt;Optimal way: Start at each letter, move out each&lt;/p&gt;
 &lt;p&gt;e.g. reverse a linked list&lt;/p&gt;
+&lt;p&gt;e.g. max price from a single buy and sell?&lt;/p&gt;
+&lt;p&gt;e.g. swapping values in an array?&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
