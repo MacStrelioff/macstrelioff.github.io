@@ -36,290 +36,9 @@
     </item>
     
     <item>
-      <title>Yelp Notes</title>
-      <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Mon, 05 Aug 2019 09:56:03 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
-      <description>
-
-
-&lt;div id=&#34;yelp&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Yelp&lt;/h1&gt;
-&lt;div id=&#34;company-visit&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Company Visit&lt;/h2&gt;
-&lt;div id=&#34;business-model-culture-and-vision&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Business Model, Culture, and Vision&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Mission: Connect people with great local places&lt;/li&gt;
-&lt;li&gt;Main source of revenue is business ads, &lt;a href=&#34;https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38&#34;&gt;overview of offerings here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://biz.yelp.com/guide_to_success&#34;&gt;More services for businesses&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Want: openness, curiosity, approachable&lt;/li&gt;
-&lt;li&gt;DS team has “Office hours” to facilitate communication&lt;/li&gt;
-&lt;li&gt;Journal clubs and learning groups&lt;/li&gt;
-&lt;li&gt;Can move to PM or ML teams&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;projects-tasks-and-data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Projects, Tasks, and Data&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Working on personalization&lt;/li&gt;
-&lt;li&gt;e.g. project: decrease experiment duration&lt;/li&gt;
-&lt;li&gt;not much collaboration with UX other than maybe getting data from them&lt;/li&gt;
-&lt;li&gt;data: crowd-sourced data on businesses&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ds-role&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;DS Role&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Looking for 2 roles&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;DS&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Job consists of reining in management, helping with experimentation. Common deliverables are a Jupyter notebook and reports.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Deliverables are reports and Jupyter notebooks&lt;/li&gt;
-&lt;li&gt;More confident decisions based on data&lt;/li&gt;
-&lt;li&gt;Investigate and define metrics&lt;/li&gt;
-&lt;li&gt;Design and analyze experiments on centralized platform.&lt;/li&gt;
-&lt;li&gt;Helps with scaling up experiments and interpreting results.&lt;/li&gt;
-&lt;li&gt;Predictive modeling&lt;/li&gt;
-&lt;li&gt;Qualities: Generalist, communication, statistical inference, experimental design, empathy of understanding of other roles in the business&lt;/li&gt;
-&lt;li&gt;Skills: SQL, Python (possibly R for analysis), clean code, reproducible results.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;ML&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Back end of production models&lt;/li&gt;
-&lt;li&gt;Assists DE team with feature engineering&lt;/li&gt;
-&lt;li&gt;Want: ML, DE, Python, Java, CS and mathematics.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recruiter-call&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Recruiter Call&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Q: why did you apply to Yelp? Show enthusiasm for yelp during interview.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Interview topics and evaluation:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Technical skills (analysis, stats, programming)&lt;/li&gt;
-&lt;li&gt;product/bus intuition – impact for business opportunities&lt;/li&gt;
-&lt;li&gt;communication – clarity and insight&lt;/li&gt;
-&lt;li&gt;Can discuss past work with large data or complicated work&lt;/li&gt;
-&lt;li&gt;Might get metrics or experimentation based on questions Yelp is facing at the moment&lt;/li&gt;
-&lt;li&gt;A/B testing, Python&lt;/li&gt;
-&lt;li&gt;Enthusiasm for company – why yelp versus another company&lt;/li&gt;
-&lt;li&gt;Communicate while going along while solving the problems.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Other info:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Team: ~ 600 engs, 70 PMs, 20 DS.&lt;/li&gt;
-&lt;li&gt;DS mostly work with feature team, to create, calculate, and validate metrics for feature work. Modeling user engagement, predicting delivery time,&lt;/li&gt;
-&lt;li&gt;DS works on sub team – Bus, consumer, core&lt;/li&gt;
-&lt;li&gt;DS works with product groups, growth, contributions, ads.&lt;/li&gt;
-&lt;li&gt;PM prioritizes projects based on impact.&lt;/li&gt;
-&lt;li&gt;DS Helps with A/B testing, experimentation.. Looking to solve&lt;/li&gt;
-&lt;li&gt;Can work with 1-3PMs within group. 50-70% of time working on projects for product groups. Most time is getting and giving feedback on approach to specific problems.&lt;/li&gt;
-&lt;li&gt;Expert on knowing the data we can work with to address PM problems.&lt;/li&gt;
-&lt;li&gt;Measure “goodness” of a feature in scientific and principled way.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;What role am I being considered for?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Don’t have anything posted on careers page. This role just opened. Role just opened up. Data scientist rec.&lt;/p&gt;
-&lt;p&gt;can send panel and links to their linkedin – meeting with four folks. &lt;a href=&#34;https://www.linkedin.com/in/sebastiencouvidat/&#34;&gt;Sebastian&lt;/a&gt;, Inhan (maybe &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;?), Nick (maybe &lt;a href=&#34;https://www.linkedin.com/in/nicholasmalecek/&#34;&gt;Nick&lt;/a&gt;), &lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter&lt;/a&gt;.&lt;/p&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;What topics might be covered?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Should I bring anything? Laptop, … ? Could bring laptop, but there are laptops that can be borrowed as well. Whiteboards will be in the room.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Likely Interviewers:&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/sebastiencouvidat/&#34;&gt;Sebastian&lt;/a&gt;,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Lead DS, 4y4m at Yelp&lt;/li&gt;
-&lt;li&gt;10 years in research at Stanford&lt;/li&gt;
-&lt;li&gt;Astrophysics postdoc&lt;/li&gt;
-&lt;li&gt;Coursera courses on finance and computational investing&lt;/li&gt;
-&lt;li&gt;Yelp Job responsibilities:&lt;/li&gt;
-&lt;li&gt;Data scientist in the consumer and mobile products division. Examples of activities include:&lt;/li&gt;
-&lt;li&gt;helping product managers and decision makers to reach fact-based decision&lt;/li&gt;
-&lt;li&gt;providing support to engineering teams for A/B test design and analysis&lt;/li&gt;
-&lt;li&gt;writing Python scripts to perform frequentist and Bayesian analysis of A/B tests&lt;/li&gt;
-&lt;li&gt;using machine-learning algorithms to predict revenue metrics and identify leads for sales force&lt;/li&gt;
-&lt;li&gt;providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.&lt;/li&gt;
-&lt;li&gt;testing the integrity and accuracy of some curated data in the company databases&lt;/li&gt;
-&lt;li&gt;implementing dashboard solutions for product managers for easy access to, and visualization of, relevant metrics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Nick (maybe &lt;a href=&#34;https://www.linkedin.com/in/nicholasmalecek/&#34;&gt;Nick&lt;/a&gt;),&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DS Manager, 3y8m at Yelp&lt;/li&gt;
-&lt;li&gt;Insight&lt;/li&gt;
-&lt;li&gt;Neuroscience UT Austin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Neuroscience at Caltech&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Inhan (maybe &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;?),&lt;/p&gt;
-&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/samuelhansen/&#34;&gt;Samuel Hansen&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Member of Core Data Science team, supporting:&lt;/li&gt;
-&lt;li&gt;Yelp’s Local Economic Outlook (LEO) initiative to derive measures of economic health from Yelp data;&lt;/li&gt;
-&lt;li&gt;Data infrastructure improvements to optimize analysis workflows.&lt;/li&gt;
-&lt;li&gt;Developed pipeline to predict Yelp Transactions Platform user retention by scripting SQL queries, engineering longitudinal features, and implementing machine learning classifiers, lifting AUC 10% over the baseline model.&lt;/li&gt;
-&lt;li&gt;Constructed behavioral segmentation of Yelp Transactions Platform users to understand food-ordering patterns with K-means and factor analysis, primarily identifying user clusters using mealtime, delivery type, and food category.&lt;/li&gt;
-&lt;li&gt;Built RShiny application with interactive geographical map of spatial-temporal changes in Yelp activity.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/wolfe-styke-98108920/&#34;&gt;Wolfe Styke&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;switched from SWE to DS&lt;/li&gt;
-&lt;li&gt;Continuing involvement with new experiment framework at Yelp from a data science perspective.&lt;/li&gt;
-&lt;li&gt;Defining, implementing, and spreading awareness among product managers and engineers of user retention analysis for experiments.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/yang-song-516350b2/&#34;&gt;Yang Song&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I work at the marketplace team, products include Yelp Waitlist, Yelp Reservations, Yelp Request a Quote and Yelp Local Services&lt;/p&gt;
-&lt;p&gt;Projects I have done: - Built ML models on waitlist waiting time estimation - Various of observational causal inferences projects (User Behavior, Biz page features, Quotes qualities) - Geo experiment(For ads fulfillment, CPC, CTR) - Randomized A/B Testing - Sequential A/B Testing (Which allow PMs to peek A/B testing results) - Local services categories recommendation&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Deep Dive&lt;/h2&gt;
-&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Users&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;website visitors who write and read reviews&lt;/li&gt;
-&lt;li&gt;businesses who pay for exposure&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Metrics&lt;/h3&gt;
-&lt;p&gt;Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Monthly unique visitors&lt;/li&gt;
-&lt;li&gt;Web Reservations&lt;/li&gt;
-&lt;li&gt;Pad Reservations&lt;/li&gt;
-&lt;li&gt;Wait times at restaurants&lt;/li&gt;
-&lt;li&gt;Traffic to business pages&lt;/li&gt;
-&lt;li&gt;Engagement (from potential customers)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://biz.yelp.com/&#34;&gt;Some metrics for business partners&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Current issues&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Trust, businesses can game Yelp by &lt;a href=&#34;https://thehustle.co/botto-bistro-1-star-yelp/&#34;&gt;asking for low ratings&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;Trust, Businesses accuse Yelp of &lt;a href=&#34;https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9&#34;&gt;maliciously manipulating reviews&lt;/a&gt;, to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to &lt;a href=&#34;https://www.yelp.com/extortion&#34;&gt;this response&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Influence: “Such ubiquity has consequences. A study from last year found that a measly half-star difference made it 19% more likely that a San Francisco restaurant would be busy at peak times.” - &lt;a href=&#34;https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood&#34;&gt;this post&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Lack of expected growth: “He cited a lack of growth from several of the site’s advertising efforts for his downgrade, as well as a lack of “consequential” new products “to reduce churn or drive revenue.” &lt;a href=&#34;https://www.barrons.com/articles/what-the-democratic-debates-mean-for-health-care-investors-51564665029&#34;&gt;this post&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Balancing review usefulness, reliability, and legitimacy -&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Competitors&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;“On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews.” - &lt;a href=&#34;https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood&#34;&gt;this post&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Full paragraph: “For better and for worse, strangers’ opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews. While more democratic, they’re also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad.”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;I like that they have &lt;a href=&#34;https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data&#34;&gt;data challenges&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I like their openness with data, particularly the &lt;a href=&#34;https://www.kaggle.com/datasets?search=yelp&#34;&gt;datasets on Kaggle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Chek relationship between restaurant response time to critical reviews, and other restaurant demand metrics like reservations or ratings.&lt;/li&gt;
-&lt;li&gt;check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate’s or restaurant’s revenue for that quarter?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Since a restaurant’s revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Onsite&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Expect from company visit: SQL, Python, statistics, experiment design&lt;/li&gt;
-&lt;li&gt;Expect from recruiter call: A/B testing, product sense&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;How to evaluate the features classifying spams and emails.&lt;/li&gt;
-&lt;li&gt;How to swap two elements of a list&lt;/li&gt;
-&lt;li&gt;Whats the difference between decision trees and extreme boosted trees mathematically?&lt;/li&gt;
-&lt;li&gt;List the strings that are anagrams from a set of strings&lt;/li&gt;
-&lt;li&gt;Mid-level coding/algorithm questions; ask you to explain the projects you’ve worked on.&lt;/li&gt;
-&lt;li&gt;about my project on resume.&lt;/li&gt;
-&lt;li&gt;3 Sum&lt;/li&gt;
-&lt;li&gt;What programming language do you use? What are some pros and cons of it?&lt;/li&gt;
-&lt;li&gt;The difference between Bayesian vs frequentist statistics&lt;/li&gt;
-&lt;li&gt;Setting up A/B tests to improve engagement&lt;/li&gt;
-&lt;li&gt;What features would you use to predict the number of likes on a review?&lt;/li&gt;
-&lt;li&gt;questions around product/metrics, A/B Testing, stats, ML&lt;/li&gt;
-&lt;li&gt;If you had to propose a new Yelp feature, what would it be?&lt;/li&gt;
-&lt;li&gt;What is an n-gram?&lt;/li&gt;
-&lt;li&gt;Simple coding and high level ML questions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>LinkedIn Notes</title>
-      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Mon, 05 Aug 2019 09:07:11 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
-      <description>
-
-
-&lt;div id=&#34;linkedin&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;LinkedIn&lt;/h1&gt;
-&lt;div id=&#34;company-visit&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Company Visit&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recruiter-call&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Recruiter Call&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Likely Interviewers:&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Deep Dive&lt;/h2&gt;
-&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Users&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Metrics&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Current issues&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Competitors&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
-&lt;p&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;, &lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;, &lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;), &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Onsite&lt;/h2&gt;
-&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 04 Aug 2019 19:45:02 +0000</pubDate>
+      <pubDate>Mon, 05 Aug 2019 10:52:07 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -737,7 +456,291 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Overview videos: - Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Overview videos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Yelp Notes</title>
+      <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
+      <pubDate>Mon, 05 Aug 2019 09:56:03 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
+      <description>
+
+
+&lt;div id=&#34;yelp&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Yelp&lt;/h1&gt;
+&lt;div id=&#34;company-visit&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Company Visit&lt;/h2&gt;
+&lt;div id=&#34;business-model-culture-and-vision&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Business Model, Culture, and Vision&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Mission: Connect people with great local places&lt;/li&gt;
+&lt;li&gt;Main source of revenue is business ads, &lt;a href=&#34;https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38&#34;&gt;overview of offerings here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://biz.yelp.com/guide_to_success&#34;&gt;More services for businesses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Want: openness, curiosity, approachable&lt;/li&gt;
+&lt;li&gt;DS team has “Office hours” to facilitate communication&lt;/li&gt;
+&lt;li&gt;Journal clubs and learning groups&lt;/li&gt;
+&lt;li&gt;Can move to PM or ML teams&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;projects-tasks-and-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Projects, Tasks, and Data&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Working on personalization&lt;/li&gt;
+&lt;li&gt;e.g. project: decrease experiment duration&lt;/li&gt;
+&lt;li&gt;not much collaboration with UX other than maybe getting data from them&lt;/li&gt;
+&lt;li&gt;data: crowd-sourced data on businesses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ds-role&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;DS Role&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Looking for 2 roles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;DS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Job consists of reining in management, helping with experimentation. Common deliverables are a Jupyter notebook and reports.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deliverables are reports and Jupyter notebooks&lt;/li&gt;
+&lt;li&gt;More confident decisions based on data&lt;/li&gt;
+&lt;li&gt;Investigate and define metrics&lt;/li&gt;
+&lt;li&gt;Design and analyze experiments on centralized platform.&lt;/li&gt;
+&lt;li&gt;Helps with scaling up experiments and interpreting results.&lt;/li&gt;
+&lt;li&gt;Predictive modeling&lt;/li&gt;
+&lt;li&gt;Qualities: Generalist, communication, statistical inference, experimental design, empathy of understanding of other roles in the business&lt;/li&gt;
+&lt;li&gt;Skills: SQL, Python (possibly R for analysis), clean code, reproducible results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;ML&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Back end of production models&lt;/li&gt;
+&lt;li&gt;Assists DE team with feature engineering&lt;/li&gt;
+&lt;li&gt;Want: ML, DE, Python, Java, CS and mathematics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recruiter-call&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recruiter Call&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Q: why did you apply to Yelp? Show enthusiasm for yelp during interview.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interview topics and evaluation:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Technical skills (analysis, stats, programming)&lt;/li&gt;
+&lt;li&gt;product/bus intuition – impact for business opportunities&lt;/li&gt;
+&lt;li&gt;communication – clarity and insight&lt;/li&gt;
+&lt;li&gt;Can discuss past work with large data or complicated work&lt;/li&gt;
+&lt;li&gt;Might get metrics or experimentation based on questions Yelp is facing at the moment&lt;/li&gt;
+&lt;li&gt;A/B testing, Python&lt;/li&gt;
+&lt;li&gt;Enthusiasm for company – why yelp versus another company&lt;/li&gt;
+&lt;li&gt;Communicate while going along while solving the problems.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Other info:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Team: ~ 600 engs, 70 PMs, 20 DS.&lt;/li&gt;
+&lt;li&gt;DS mostly work with feature team, to create, calculate, and validate metrics for feature work. Modeling user engagement, predicting delivery time,&lt;/li&gt;
+&lt;li&gt;DS works on sub team – Bus, consumer, core&lt;/li&gt;
+&lt;li&gt;DS works with product groups, growth, contributions, ads.&lt;/li&gt;
+&lt;li&gt;PM prioritizes projects based on impact.&lt;/li&gt;
+&lt;li&gt;DS Helps with A/B testing, experimentation.. Looking to solve&lt;/li&gt;
+&lt;li&gt;Can work with 1-3PMs within group. 50-70% of time working on projects for product groups. Most time is getting and giving feedback on approach to specific problems.&lt;/li&gt;
+&lt;li&gt;Expert on knowing the data we can work with to address PM problems.&lt;/li&gt;
+&lt;li&gt;Measure “goodness” of a feature in scientific and principled way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;What role am I being considered for?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Don’t have anything posted on careers page. This role just opened. Role just opened up. Data scientist rec.&lt;/p&gt;
+&lt;p&gt;can send panel and links to their linkedin – meeting with four folks. &lt;a href=&#34;https://www.linkedin.com/in/sebastiencouvidat/&#34;&gt;Sebastian&lt;/a&gt;, Inhan (maybe &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;?), Nick (maybe &lt;a href=&#34;https://www.linkedin.com/in/nicholasmalecek/&#34;&gt;Nick&lt;/a&gt;), &lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter&lt;/a&gt;.&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;What topics might be covered?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Should I bring anything? Laptop, … ? Could bring laptop, but there are laptops that can be borrowed as well. Whiteboards will be in the room.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Likely Interviewers:&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/sebastiencouvidat/&#34;&gt;Sebastian&lt;/a&gt;,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lead DS, 4y4m at Yelp&lt;/li&gt;
+&lt;li&gt;10 years in research at Stanford&lt;/li&gt;
+&lt;li&gt;Astrophysics postdoc&lt;/li&gt;
+&lt;li&gt;Coursera courses on finance and computational investing&lt;/li&gt;
+&lt;li&gt;Yelp Job responsibilities:&lt;/li&gt;
+&lt;li&gt;Data scientist in the consumer and mobile products division. Examples of activities include:&lt;/li&gt;
+&lt;li&gt;helping product managers and decision makers to reach fact-based decision&lt;/li&gt;
+&lt;li&gt;providing support to engineering teams for A/B test design and analysis&lt;/li&gt;
+&lt;li&gt;writing Python scripts to perform frequentist and Bayesian analysis of A/B tests&lt;/li&gt;
+&lt;li&gt;using machine-learning algorithms to predict revenue metrics and identify leads for sales force&lt;/li&gt;
+&lt;li&gt;providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.&lt;/li&gt;
+&lt;li&gt;testing the integrity and accuracy of some curated data in the company databases&lt;/li&gt;
+&lt;li&gt;implementing dashboard solutions for product managers for easy access to, and visualization of, relevant metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nick (maybe &lt;a href=&#34;https://www.linkedin.com/in/nicholasmalecek/&#34;&gt;Nick&lt;/a&gt;),&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DS Manager, 3y8m at Yelp&lt;/li&gt;
+&lt;li&gt;Insight&lt;/li&gt;
+&lt;li&gt;Neuroscience UT Austin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neuroscience at Caltech&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inhan (maybe &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;?),&lt;/p&gt;
+&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/samuelhansen/&#34;&gt;Samuel Hansen&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Member of Core Data Science team, supporting:&lt;/li&gt;
+&lt;li&gt;Yelp’s Local Economic Outlook (LEO) initiative to derive measures of economic health from Yelp data;&lt;/li&gt;
+&lt;li&gt;Data infrastructure improvements to optimize analysis workflows.&lt;/li&gt;
+&lt;li&gt;Developed pipeline to predict Yelp Transactions Platform user retention by scripting SQL queries, engineering longitudinal features, and implementing machine learning classifiers, lifting AUC 10% over the baseline model.&lt;/li&gt;
+&lt;li&gt;Constructed behavioral segmentation of Yelp Transactions Platform users to understand food-ordering patterns with K-means and factor analysis, primarily identifying user clusters using mealtime, delivery type, and food category.&lt;/li&gt;
+&lt;li&gt;Built RShiny application with interactive geographical map of spatial-temporal changes in Yelp activity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/wolfe-styke-98108920/&#34;&gt;Wolfe Styke&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;switched from SWE to DS&lt;/li&gt;
+&lt;li&gt;Continuing involvement with new experiment framework at Yelp from a data science perspective.&lt;/li&gt;
+&lt;li&gt;Defining, implementing, and spreading awareness among product managers and engineers of user retention analysis for experiments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another DS person: &lt;a href=&#34;https://www.linkedin.com/in/yang-song-516350b2/&#34;&gt;Yang Song&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I work at the marketplace team, products include Yelp Waitlist, Yelp Reservations, Yelp Request a Quote and Yelp Local Services&lt;/p&gt;
+&lt;p&gt;Projects I have done: - Built ML models on waitlist waiting time estimation - Various of observational causal inferences projects (User Behavior, Biz page features, Quotes qualities) - Geo experiment(For ads fulfillment, CPC, CTR) - Randomized A/B Testing - Sequential A/B Testing (Which allow PMs to peek A/B testing results) - Local services categories recommendation&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Deep Dive&lt;/h2&gt;
+&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Users&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;website visitors who write and read reviews&lt;/li&gt;
+&lt;li&gt;businesses who pay for exposure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Metrics&lt;/h3&gt;
+&lt;p&gt;Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Monthly unique visitors&lt;/li&gt;
+&lt;li&gt;Web Reservations&lt;/li&gt;
+&lt;li&gt;Pad Reservations&lt;/li&gt;
+&lt;li&gt;Wait times at restaurants&lt;/li&gt;
+&lt;li&gt;Traffic to business pages&lt;/li&gt;
+&lt;li&gt;Engagement (from potential customers)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://biz.yelp.com/&#34;&gt;Some metrics for business partners&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Current issues&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Trust, businesses can game Yelp by &lt;a href=&#34;https://thehustle.co/botto-bistro-1-star-yelp/&#34;&gt;asking for low ratings&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;Trust, Businesses accuse Yelp of &lt;a href=&#34;https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9&#34;&gt;maliciously manipulating reviews&lt;/a&gt;, to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to &lt;a href=&#34;https://www.yelp.com/extortion&#34;&gt;this response&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Influence: “Such ubiquity has consequences. A study from last year found that a measly half-star difference made it 19% more likely that a San Francisco restaurant would be busy at peak times.” - &lt;a href=&#34;https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood&#34;&gt;this post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lack of expected growth: “He cited a lack of growth from several of the site’s advertising efforts for his downgrade, as well as a lack of “consequential” new products “to reduce churn or drive revenue.” &lt;a href=&#34;https://www.barrons.com/articles/what-the-democratic-debates-mean-for-health-care-investors-51564665029&#34;&gt;this post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Balancing review usefulness, reliability, and legitimacy -&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Competitors&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;“On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews.” - &lt;a href=&#34;https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood&#34;&gt;this post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Full paragraph: “For better and for worse, strangers’ opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews. While more democratic, they’re also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I like that they have &lt;a href=&#34;https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data&#34;&gt;data challenges&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I like their openness with data, particularly the &lt;a href=&#34;https://www.kaggle.com/datasets?search=yelp&#34;&gt;datasets on Kaggle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Chek relationship between restaurant response time to critical reviews, and other restaurant demand metrics like reservations or ratings.&lt;/li&gt;
+&lt;li&gt;check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate’s or restaurant’s revenue for that quarter?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Since a restaurant’s revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Onsite&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Expect from company visit: SQL, Python, statistics, experiment design&lt;/li&gt;
+&lt;li&gt;Expect from recruiter call: A/B testing, product sense&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;How to evaluate the features classifying spams and emails.&lt;/li&gt;
+&lt;li&gt;How to swap two elements of a list&lt;/li&gt;
+&lt;li&gt;Whats the difference between decision trees and extreme boosted trees mathematically?&lt;/li&gt;
+&lt;li&gt;List the strings that are anagrams from a set of strings&lt;/li&gt;
+&lt;li&gt;Mid-level coding/algorithm questions; ask you to explain the projects you’ve worked on.&lt;/li&gt;
+&lt;li&gt;about my project on resume.&lt;/li&gt;
+&lt;li&gt;3 Sum&lt;/li&gt;
+&lt;li&gt;What programming language do you use? What are some pros and cons of it?&lt;/li&gt;
+&lt;li&gt;The difference between Bayesian vs frequentist statistics&lt;/li&gt;
+&lt;li&gt;Setting up A/B tests to improve engagement&lt;/li&gt;
+&lt;li&gt;What features would you use to predict the number of likes on a review?&lt;/li&gt;
+&lt;li&gt;questions around product/metrics, A/B Testing, stats, ML&lt;/li&gt;
+&lt;li&gt;If you had to propose a new Yelp feature, what would it be?&lt;/li&gt;
+&lt;li&gt;What is an n-gram?&lt;/li&gt;
+&lt;li&gt;Simple coding and high level ML questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LinkedIn Notes</title>
+      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
+      <pubDate>Mon, 05 Aug 2019 09:07:11 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
+      <description>
+
+
+&lt;div id=&#34;linkedin&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;LinkedIn&lt;/h1&gt;
+&lt;div id=&#34;company-visit&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Company Visit&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recruiter-call&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recruiter Call&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Likely Interviewers:&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Deep Dive&lt;/h2&gt;
+&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Users&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Metrics&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Current issues&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Competitors&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
+&lt;p&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;, &lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;, &lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;), &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Onsite&lt;/h2&gt;
+&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

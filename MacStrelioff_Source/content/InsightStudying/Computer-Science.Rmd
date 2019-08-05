@@ -420,6 +420,7 @@ Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arg
 
 
 Overview videos: 
+
 - Top 10 Algorithms for the Coding Interview [Part I](https://www.youtube.com/watch?v=r1MXwyiGi_U), [Part II](https://www.youtube.com/watch?v=zHczhZn-z30)
 
 
