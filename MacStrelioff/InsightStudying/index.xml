@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Aug 2019 17:51:58 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2019 18:30:19 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 04 Aug 2019 17:51:58 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 18:30:19 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Stacks and Queues Trees   Sorting Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS   Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</description>
+      <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS   Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</description>
     </item>
     
     <item>

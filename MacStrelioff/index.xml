@@ -38,7 +38,7 @@
     <item>
       <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 04 Aug 2019 17:51:58 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 18:30:19 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -56,11 +56,11 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#lists-and-dictionaries&#34;&gt;Lists and Dictionaries&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#stacks-and-queues&#34;&gt;Stacks and Queues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#trees&#34;&gt;Trees&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#queues-and-stacks&#34;&gt;Queues and Stacks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graphs-and-trees&#34;&gt;Graphs and Trees&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#graph-search&#34;&gt;Graph Search&lt;/a&gt;&lt;ul&gt;
@@ -90,6 +90,13 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 
+&lt;!--
+basic structures (tuples, list, arrays, dict), list comprehensions, 
+Data structures (hash, stack, queue, tree, linked list);
+sorting (bubble, selection, insertion, merge, quick)
+Sorting and graph algos (depth-first and breadth-first seach)
+sorting (heap, tim)
+--&gt;
 &lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Foundations&lt;/h1&gt;
 &lt;p&gt;Data type manipulation (char, string, numeric, binary, ascii) regular expressions;&lt;/p&gt;
@@ -146,7 +153,6 @@ for n in ns_to_test:
         num_ops +=1     # 1 operation (n*1)
     return num_ops      # 1+n*1 = 1+n operations, O(n)
 
-
 for n in ns_to_test:
     out=linear_example(n)
     print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
@@ -160,7 +166,6 @@ for n in ns_to_test:
         for j in range(n):  # n times (n*n)
             num_ops+=1      # 1 operation (1*n*n)
     return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
-
 
 for n in ns_to_test:
     out=quadratic_example(n)
@@ -200,26 +205,28 @@ for n in ns_to_test:
 &lt;h2&gt;Data Structures&lt;/h2&gt;
 &lt;div id=&#34;lists-and-dictionaries&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Lists and Dictionaries&lt;/h3&gt;
-&lt;p&gt;basic structures (tuples, list, arrays, dict), list comprehensions,&lt;/p&gt;
 &lt;p&gt;Good descriptions of &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html&#34;&gt;lists&lt;/a&gt;, &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html&#34;&gt;dicts&lt;/a&gt;, and &lt;a href=&#34;https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists&#34;&gt;why some operations are much faster in sets or dict keys&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In depth description of &lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc&#34;&gt;hash tables&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Data structures (hash, stack, queue, tree, linked list);&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;stacks-and-queues&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Stacks and Queues&lt;/h3&gt;
+&lt;div id=&#34;queues-and-stacks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Queues and Stacks&lt;/h3&gt;
+&lt;p&gt;Queues and stacks are like lists that are used to prioritize operations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Queues are First-in-last-out structures – meaning that the highest priority is given to the least recently queued thing. Imagine people in a queue for a theme park, those who entered the queue first are prioritized for admission to the park.&lt;/li&gt;
+&lt;li&gt;Stacks are Last-in-First-out structures – meaning that the highest priority is given to the most recently stacked element. Imagine a stack of books, the ones at the top of the stack are read first.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;trees&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Trees&lt;/h3&gt;
+&lt;div id=&#34;graphs-and-trees&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Graphs and Trees&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jenniferbland.com/the-difference-between-a-tree-and-a-graph-data-structure/&#34;&gt;short definition with pictures&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sorting&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sorting&lt;/h1&gt;
-&lt;p&gt;sorting (bubble, selection, insertion, merge, quick)&lt;/p&gt;
-&lt;p&gt;Sorting and graph algos (depth-first and breadth-first seach)&lt;/p&gt;
-&lt;p&gt;sorting (heap, tim)&lt;/p&gt;
+&lt;div id=&#34;sorting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sorting&lt;/h2&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python’s sotred() function uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Timsort&#34;&gt;TimSort&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;e.g. ‘find median in a large dataset’ – sort half of it.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Searching&lt;/h1&gt;

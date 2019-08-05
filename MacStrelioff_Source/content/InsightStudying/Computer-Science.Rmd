@@ -30,6 +30,14 @@ use_python("/anaconda3/bin/python")
 set.seed(10201991)
 ```
 
+<!--
+basic structures (tuples, list, arrays, dict), list comprehensions, 
+Data structures (hash, stack, queue, tree, linked list);
+sorting (bubble, selection, insertion, merge, quick)
+Sorting and graph algos (depth-first and breadth-first seach)
+sorting (heap, tim)
+-->
+
 # Foundations
 
 Data type manipulation (char, string, numeric, binary, ascii) regular expressions; 
@@ -92,7 +100,6 @@ def linear_example(n):
         num_ops +=1     # 1 operation (n*1)
     return num_ops      # 1+n*1 = 1+n operations, O(n)
 
-
 for n in ns_to_test:
     out=linear_example(n)
     print('f({}): {}'.format(n,out))
@@ -103,7 +110,6 @@ def quadratic_example(n):
         for j in range(n):  # n times (n*n)
             num_ops+=1      # 1 operation (1*n*n)
     return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
-
 
 for n in ns_to_test:
     out=quadratic_example(n)
@@ -141,29 +147,26 @@ for n in ns_to_test:
 
 ### Lists and Dictionaries
 
-basic structures (tuples, list, arrays, dict), list comprehensions, 
-
 Good descriptions of [lists](https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html), [dicts](https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html), and [why some operations are much faster in sets or dict keys](https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists).
 
 In depth description of [hash tables](https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc). 
 
-Data structures (hash, stack, queue, tree, linked list); 
+### Queues and Stacks
 
-### Stacks and Queues
+Queues and stacks are like lists that are used to prioritize operations. 
 
+- Queues are First-in-last-out structures -- meaning that the highest priority is given to the least recently queued thing. Imagine people in a queue for a theme park, those who entered the queue first are prioritized for admission to the park.
+- Stacks are Last-in-First-out structures -- meaning that the highest priority is given to the most recently stacked element. Imagine a stack of books, the ones at the top of the stack are read first. 
 
-### Trees
+### Graphs and Trees
 
+[short definition with pictures](https://www.jenniferbland.com/the-difference-between-a-tree-and-a-graph-data-structure/)
 
-# Sorting
-
-sorting (bubble, selection, insertion, merge, quick)
-
-Sorting and graph algos (depth-first and breadth-first seach)
-
-sorting (heap, tim)
+## Sorting
 
 Lots of [sort algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)
+
+Python's sotred() function uses [TimSort](https://en.wikipedia.org/wiki/Timsort). 
 
 e.g. 'find median in a large dataset' -- sort half of it.
 
