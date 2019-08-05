@@ -123,7 +123,6 @@ can send panel and links to their linkedin -- meeting with four folks. [Sebastia
 - implementing dashboard solutions for product managers for easy access to, and visualization of, relevant metrics
 
 
-
 Nick (maybe [Nick](https://www.linkedin.com/in/nicholasmalecek/)), 
 
 - DS Manager, 3y8m at Yelp
@@ -184,7 +183,6 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - Engagement (from potential customers)
 - [Some metrics for business partners](https://biz.yelp.com/)
 
-
 ### Current issues
 
 - Trust, businesses can game Yelp by [asking for low ratings](https://thehustle.co/botto-bistro-1-star-yelp/), 
@@ -199,16 +197,14 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - "On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
 - Full paragraph: "For better and for worse, strangers' opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews. While more democratic, they're also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad."
 
-
 ### Ideas and excitement
 
 - I like that they have [data challenges](https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data)
 - I like their openness with data, particularly the [datasets on Kaggle](https://www.kaggle.com/datasets?search=yelp)
-- 
 
+- Chek relationship between restaurant response time to critical reviews, and other restaurant demand metrics like reservations or ratings. 
 - check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate's or restaurant's revenue for that quarter? 
 - Since a restaurant's revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.
-
 
 ## Onsite
 
@@ -232,17 +228,6 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - If you had to propose a new Yelp feature, what would it be?
 - What is an n-gram?
 - Simple coding and high level ML questions
-
-
-
-
-
-### meeting notes 
-
-
-
-
-
 
 
 

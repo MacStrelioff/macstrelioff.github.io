@@ -6,10 +6,29 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Aug 2019 19:45:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2019 09:56:03 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Yelp Notes</title>
+      <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
+      <pubDate>Mon, 05 Aug 2019 09:56:03 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
+      <description>Yelp Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.g. project: decrease experiment duration not much collaboration with UX other than maybe getting data from them data: crowd-sourced data on businesses   DS Role  Looking for 2 roles  DS  Job consists of reining in management, helping with experimentation.</description>
+    </item>
+    
+    <item>
+      <title>LinkedIn Notes</title>
+      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
+      <pubDate>Mon, 05 Aug 2019 09:07:11 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
+      <description> LinkedIn Company Visit  Recruiter Call  Likely Interviewers:  Deep Dive Users  Metrics  Current issues  Competitors  Ideas and excitement I like their general work on inferring user attributes, economic research, experimentation research (also here, here), latent user research,
+  Onsite Glassdoor interview questions    </description>
+    </item>
     
     <item>
       <title>Basic Computer Science</title>
@@ -27,15 +46,6 @@
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Common Tests Z test Chi-Square Linear Models ANOVA t-test Mixed Effects Models GLMs: Logistic Regression  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy or Variance Reduction Checking assignment integrety  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Probability Foundations combinatorics (permutations and combinations)</description>
-    </item>
-    
-    <item>
-      <title>Yelp Notes</title>
-      <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Sun, 04 Aug 2019 13:58:12 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
-      <description>Yelp Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.g. project: decrease experiment duration not much collaboration with UX other than maybe getting data from them data: crowd-sourced data on businesses   DS Role  Looking for 2 roles  DS  Job consists of reining in management, helping with experimentation.</description>
     </item>
     
     <item>

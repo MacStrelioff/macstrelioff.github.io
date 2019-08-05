@@ -1,0 +1,78 @@
+---
+title: "LinkedIn Notes"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 99
+math: yes
+linktitle: LinkedIn Deep Dive
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+
+# LinkedIn
+
+## Company Visit
+
+
+## Recruiter Call
+
+## Likely Interviewers: 
+
+
+## Deep Dive
+
+### Users
+
+### Metrics
+
+
+### Current issues
+
+### Competitors
+
+
+### Ideas and excitement
+
+I like their general work on [inferring user attributes](https://engineering.linkedin.com/teams/data/projects/jobs), [economic research](https://economicgraph.linkedin.com/research#all), [experimentation research](http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf) (also [here](https://dl.acm.org/citation.cfm?id=2488509&dl=ACM&coll=DL), [here](https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests)), [latent user research](https://dl.acm.org/citation.cfm?id=2741126), 
+
+## Onsite
+
+
+### Glassdoor interview questions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
