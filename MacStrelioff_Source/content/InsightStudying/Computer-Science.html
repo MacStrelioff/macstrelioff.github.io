@@ -1,7 +1,7 @@
 ---
 title: "Computer Science"
 author: "Mac Strelioff"
-date: "2019-08-04 15:46:42"
+date: "2019-08-04 16:44:17"
 output:
   blogdown::html_page:
     toc: true
@@ -33,7 +33,8 @@ math: true
 <li><a href="#linear-search-binary-search">Linear Search: Binary Search</a></li>
 <li><a href="#graph-search">Graph Search</a><ul>
 <li><a href="#breadth-first-bfs-and-queues">Breadth First (BFS) and queues</a></li>
-<li><a href="#depth-first-dfs-and-recursion">Depth First (DFS) and recursion</a></li>
+<li><a href="#depth-first-dfs">Depth First (DFS)</a></li>
+<li><a href="#dfs-vs-bfs">DFS vs BFS</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#ranking-algorithms">Ranking Algorithms</a></li>
@@ -208,7 +209,7 @@ tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
 Examples.append(tmp_graph)</code></pre>
 <div id="breadth-first-bfs-and-queues" class="section level3">
 <h3>Breadth First (BFS) and queues</h3>
-<p>Breadth Frist Search (BFS) queues nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.</p>
+<p>Breadth Frist Search (BFS) queues (FILO) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.</p>
 <pre class="python"><code># breadth first search: just a queue
 def BFS_queue(graph,start,end):
     queue = [start] 
@@ -247,12 +248,49 @@ def BFS(graph,start,end):
     # if end was never found, return False
     return False,visited</code></pre>
 </div>
-<div id="depth-first-dfs-and-recursion" class="section level3">
-<h3>Depth First (DFS) and recursion</h3>
-<p><a href="https://www.youtube.com/watch?v=zaBhtODEL0w">good hackerrank video</a></p>
+<div id="depth-first-dfs" class="section level3">
+<h3>Depth First (DFS)</h3>
+<p>Depth First search can be implemented with recursively (below) or with a stack (LIFO). <a href="https://www.youtube.com/watch?v=zaBhtODEL0w">good hackerrank video</a></p>
 <ul>
 <li>DFS can use a dictionary or set to</li>
 </ul>
+<pre class="python"><code># Depth first search with recursion
+def DFS(graph,start,end):
+    visited = set()
+    return _DFS(graph,start,end,visited),visited
+    
+def _DFS(graph,start,end,visited):
+    # if this was visited already, return False
+    if start in visited: return False
+    # mark node as visited
+    visited.add(start)
+    # if this is the target node, return True
+    if start == end: return True
+    # DFS through the children of this node
+    for child in graph[start]:
+        if _DFS(graph,child,end,visited):
+            return True
+    return False</code></pre>
+</div>
+<div id="dfs-vs-bfs" class="section level3">
+<h3>DFS vs BFS</h3>
+<pre class="python"><code>
+
+for example in Examples:
+    print(&#39;DFS  path: &#39;, DFS(example,1,7))
+    print(&#39;BFSq path: &#39;, BFS(example,1,7))
+    print(&#39;BFS  path: &#39;, BFS(example,1,7),&#39;\n&#39;)</code></pre>
+<pre><code>&gt;&gt;&gt; DFS  path:  (True, {1, 2, 3, 5, 6, 7})
+&gt;&gt;&gt; BFSq path:  (True, {1, 2, 3, 4, 5, 7})
+&gt;&gt;&gt; BFS  path:  (True, {1, 2, 3, 4, 5, 7}) 
+&gt;&gt;&gt; 
+&gt;&gt;&gt; DFS  path:  (True, {1, 2, 6, 7})
+&gt;&gt;&gt; BFSq path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+&gt;&gt;&gt; BFS  path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) 
+&gt;&gt;&gt; 
+&gt;&gt;&gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
+&gt;&gt;&gt; BFSq path:  (True, {1, 2, 7})
+&gt;&gt;&gt; BFS  path:  (True, {1, 2, 7})</code></pre>
 </div>
 </div>
 </div>

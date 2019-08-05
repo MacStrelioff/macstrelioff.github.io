@@ -38,7 +38,7 @@
     <item>
       <title>Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 04 Aug 2019 15:46:42 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 16:44:17 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -61,7 +61,8 @@
 &lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#graph-search&#34;&gt;Graph Search&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#breadth-first-bfs-and-queues&#34;&gt;Breadth First (BFS) and queues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#depth-first-dfs-and-recursion&#34;&gt;Depth First (DFS) and recursion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#depth-first-dfs&#34;&gt;Depth First (DFS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dfs-vs-bfs&#34;&gt;DFS vs BFS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
@@ -236,7 +237,7 @@ tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
 Examples.append(tmp_graph)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;breadth-first-bfs-and-queues&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Breadth First (BFS) and queues&lt;/h3&gt;
-&lt;p&gt;Breadth Frist Search (BFS) queues nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
+&lt;p&gt;Breadth Frist Search (BFS) queues (FILO) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# breadth first search: just a queue
 def BFS_queue(graph,start,end):
     queue = [start] 
@@ -275,12 +276,49 @@ def BFS(graph,start,end):
     # if end was never found, return False
     return False,visited&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;depth-first-dfs-and-recursion&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Depth First (DFS) and recursion&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;depth-first-dfs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Depth First (DFS)&lt;/h3&gt;
+&lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;DFS can use a dictionary or set to&lt;/li&gt;
 &lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Depth first search with recursion
+def DFS(graph,start,end):
+    visited = set()
+    return _DFS(graph,start,end,visited),visited
+    
+def _DFS(graph,start,end,visited):
+    # if this was visited already, return False
+    if start in visited: return False
+    # mark node as visited
+    visited.add(start)
+    # if this is the target node, return True
+    if start == end: return True
+    # DFS through the children of this node
+    for child in graph[start]:
+        if _DFS(graph,child,end,visited):
+            return True
+    return False&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dfs-vs-bfs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;DFS vs BFS&lt;/h3&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+
+for example in Examples:
+    print(&amp;#39;DFS  path: &amp;#39;, DFS(example,1,7))
+    print(&amp;#39;BFSq path: &amp;#39;, BFS(example,1,7))
+    print(&amp;#39;BFS  path: &amp;#39;, BFS(example,1,7),&amp;#39;\n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 5, 6, 7})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 7})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 7}) 
+&amp;gt;&amp;gt;&amp;gt; 
+&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 6, 7})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) 
+&amp;gt;&amp;gt;&amp;gt; 
+&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 7})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 7})&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

@@ -193,7 +193,7 @@ Examples.append(tmp_graph)
 
 ### Breadth First (BFS) and queues
 
-Breadth Frist Search (BFS) queues nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list. 
+Breadth Frist Search (BFS) queues (FILO) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list. 
 
 ```{python}
 # breadth first search: just a queue
@@ -235,12 +235,43 @@ def BFS(graph,start,end):
     return False,visited
 ```
 
-### Depth First (DFS) and recursion
+### Depth First (DFS) 
 
-
+Depth First search can be implemented with recursively (below) or with a stack (LIFO). 
 [good hackerrank video](https://www.youtube.com/watch?v=zaBhtODEL0w)
 
 - DFS can use a dictionary or set to 
+
+```{python}
+# Depth first search with recursion
+def DFS(graph,start,end):
+    visited = set()
+    return _DFS(graph,start,end,visited),visited
+    
+def _DFS(graph,start,end,visited):
+    # if this was visited already, return False
+    if start in visited: return False
+    # mark node as visited
+    visited.add(start)
+    # if this is the target node, return True
+    if start == end: return True
+    # DFS through the children of this node
+    for child in graph[start]:
+        if _DFS(graph,child,end,visited):
+            return True
+    return False
+```
+
+### DFS vs BFS
+
+```{python}
+
+
+for example in Examples:
+    print('DFS  path: ', DFS(example,1,7))
+    print('BFSq path: ', BFS(example,1,7))
+    print('BFS  path: ', BFS(example,1,7),'\n')
+```
 
 
 # Ranking Algorithms
