@@ -404,6 +404,12 @@ The `GROUP BY` clause can contain `GROUPING SETS`, such as a `ROLLUP()` and `CUB
 
 Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arguments, `PARTITION BY` and `ORDER BY`. 
 
+### Tricks: 
+
+- When wanting to loop and compare, one can do a join or add a subquery and compare all columns at once. [Example](https://leetcode.com/problems/department-highest-salary/discuss/53607/Three-accpeted-solutions)
+
+
+
 # Resources
 
 - SQL training resources;

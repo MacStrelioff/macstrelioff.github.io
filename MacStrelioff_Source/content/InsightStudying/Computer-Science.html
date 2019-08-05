@@ -1,7 +1,7 @@
 ---
 title: "Basic Computer Science"
 author: "Mac Strelioff"
-date: "2019-08-05 10:52:07"
+date: "2019-08-05 12:34:45"
 output:
   blogdown::html_page:
     toc: true
@@ -55,6 +55,7 @@ math: true
 <li><a href="#general-structure-of-sql-querys">General Structure of SQL querys</a></li>
 <li><a href="#aggregation-functions">Aggregation functions</a></li>
 <li><a href="#window-functions">Window functions</a></li>
+<li><a href="#tricks">Tricks:</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#resources">Resources</a></li>
@@ -411,6 +412,12 @@ print(count)</code></pre>
 <h3>Window functions</h3>
 <p><a href="https://pgexercises.com/questions/aggregates/countmembers.html">Orver() explained here</a>. Some more detailed information <a href="http://www.sqlservertutorial.net/sql-server-window-functions/">here</a>.</p>
 <p>Window functions include <code>OVER()</code> and <code>ROW_NUMBER()</code>. They take two optional arguments, <code>PARTITION BY</code> and <code>ORDER BY</code>.</p>
+</div>
+<div id="tricks" class="section level3">
+<h3>Tricks:</h3>
+<ul>
+<li>When wanting to loop and compare, one can do a join or add a subquery and compare all columns at once. <a href="https://leetcode.com/problems/department-highest-salary/discuss/53607/Three-accpeted-solutions">Example</a></li>
+</ul>
 </div>
 </div>
 </div>

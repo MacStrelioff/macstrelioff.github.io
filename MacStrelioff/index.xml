@@ -38,7 +38,7 @@
     <item>
       <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Mon, 05 Aug 2019 10:52:07 +0000</pubDate>
+      <pubDate>Mon, 05 Aug 2019 12:34:45 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -83,6 +83,7 @@
 &lt;li&gt;&lt;a href=&#34;#general-structure-of-sql-querys&#34;&gt;General Structure of SQL querys&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#aggregation-functions&#34;&gt;Aggregation functions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tricks&#34;&gt;Tricks:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
@@ -439,6 +440,12 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Window functions&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/countmembers.html&#34;&gt;Orver() explained here&lt;/a&gt;. Some more detailed information &lt;a href=&#34;http://www.sqlservertutorial.net/sql-server-window-functions/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Window functions include &lt;code&gt;OVER()&lt;/code&gt; and &lt;code&gt;ROW_NUMBER()&lt;/code&gt;. They take two optional arguments, &lt;code&gt;PARTITION BY&lt;/code&gt; and &lt;code&gt;ORDER BY&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tricks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tricks:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When wanting to loop and compare, one can do a join or add a subquery and compare all columns at once. &lt;a href=&#34;https://leetcode.com/problems/department-highest-salary/discuss/53607/Three-accpeted-solutions&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
