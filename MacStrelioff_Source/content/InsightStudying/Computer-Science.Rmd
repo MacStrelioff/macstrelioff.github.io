@@ -168,6 +168,12 @@ Lots of [sort algorithms](https://www.geeksforgeeks.org/sorting-algorithms/)
 
 Python's sotred() function uses [TimSort](https://en.wikipedia.org/wiki/Timsort). 
 
+Complexity for common sorts: 
+
+- $O(Nlog(N))$ for quicksort, and merge sort. 
+
+In efficient sorting algorithms, the $N$ part comes from the algorithm being called on up to each element, and the $logN$ part comes from binary sorting in ways that render parts of the array unnecessary later. 
+
 e.g. 'find median in a large dataset' -- sort half of it.
 
 # Searching
@@ -175,6 +181,8 @@ e.g. 'find median in a large dataset' -- sort half of it.
 Lots of [search algorithms](https://en.wikipedia.org/wiki/Category:Search_algorithms)
 
 ## Linear Search: Binary Search
+
+Complexity $O(logN)$. 
 
 [good hackerrank video](https://www.youtube.com/watch?v=P3YID7liBug)
 
@@ -285,6 +293,8 @@ for example in Examples:
 ```
 
 
+
+<!--
 # Ranking Algorithms
 
 Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
@@ -292,7 +302,7 @@ Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_
 # Recommendation
 
 Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
-
+-->
 
 <!---
 Data science methods play a major role in discovering recommendations for users. 
@@ -303,6 +313,16 @@ Types of recommendation; compliments (these go together), competitors (you might
 
 Temporal involves forecasting, which is a topic for another post. 
 --->
+
+## Pointers
+
+e.g. Find longest substring that is a pallendrome
+
+Optimal way: Start at each letter, move out each 
+
+e.g. reverse a linked list
+
+
 
 # Algorithms
 
@@ -326,7 +346,10 @@ print(nums)
 
 # TODO / Other Topics:  
 
-## recursion; 
+# Recursion; 
+
+- Recursive calls 
+- Methods applied within each recursion
 
 ## Dijkstra's algorithm
 
@@ -396,7 +419,8 @@ Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arg
 - [LeetCode](https://leetcode.com/)
 
 
-
+Overview videos: 
+- Top 10 Algorithms for the Coding Interview [Part I](https://www.youtube.com/watch?v=r1MXwyiGi_U), [Part II](https://www.youtube.com/watch?v=zHczhZn-z30)
 
 
 

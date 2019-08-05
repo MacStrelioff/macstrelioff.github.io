@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS   Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;">
+  <meta name="description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS  Pointers  Algorithms TODO / Other Topics: Recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/computer-science/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/computer-science/">
   <meta property="og:title" content="Basic Computer Science | Mac Strelioff">
-  <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS   Ranking Algorithms Recommendation Algorithms TODO / Other Topics: recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS  Pointers  Algorithms TODO / Other Topics: Recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-04T18:30:19&#43;00:00">
+  <meta property="article:published_time" content="2019-08-04T19:45:02&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-04T18:30:19&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-04T19:45:02&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-04 18:30:19 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-04 18:30:19 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-04 19:45:02 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-04 19:45:02 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -483,12 +483,11 @@
 <li><a href="#depth-first-dfs">Depth First (DFS)</a></li>
 <li><a href="#dfs-vs-bfs">DFS vs BFS</a></li>
 </ul></li>
+<li><a href="#pointers">Pointers</a></li>
 </ul></li>
-<li><a href="#ranking-algorithms">Ranking Algorithms</a></li>
-<li><a href="#recommendation">Recommendation</a></li>
 <li><a href="#algorithms">Algorithms</a></li>
-<li><a href="#todo-other-topics">TODO / Other Topics:</a><ul>
-<li><a href="#recursion">recursion;</a></li>
+<li><a href="#todo-other-topics">TODO / Other Topics:</a></li>
+<li><a href="#recursion">Recursion;</a><ul>
 <li><a href="#dijkstras-algorithm">Dijkstra’s algorithm</a></li>
 <li><a href="#dynamic-programming-knapsack-problem-fibonacci-sequence">dynamic programming (knapsack problem, Fibonacci sequence)</a></li>
 <li><a href="#functional-programming">Functional programming</a></li>
@@ -640,6 +639,11 @@ for n in ns_to_test:
 <h2>Sorting</h2>
 <p>Lots of <a href="https://www.geeksforgeeks.org/sorting-algorithms/">sort algorithms</a></p>
 <p>Python’s sotred() function uses <a href="https://en.wikipedia.org/wiki/Timsort">TimSort</a>.</p>
+<p>Complexity for common sorts:</p>
+<ul>
+<li><span class="math inline">\(O(Nlog(N))\)</span> for quicksort, and merge sort.</li>
+</ul>
+<p>In efficient sorting algorithms, the <span class="math inline">\(N\)</span> part comes from the algorithm being called on up to each element, and the <span class="math inline">\(logN\)</span> part comes from binary sorting in ways that render parts of the array unnecessary later.</p>
 <p>e.g. ‘find median in a large dataset’ – sort half of it.</p>
 </div>
 </div>
@@ -648,6 +652,7 @@ for n in ns_to_test:
 <p>Lots of <a href="https://en.wikipedia.org/wiki/Category:Search_algorithms">search algorithms</a></p>
 <div id="linear-search-binary-search" class="section level2">
 <h2>Linear Search: Binary Search</h2>
+<p>Complexity <span class="math inline">\(O(logN)\)</span>.</p>
 <p><a href="https://www.youtube.com/watch?v=P3YID7liBug">good hackerrank video</a></p>
 <ul>
 <li>requires sorting before applying the search</li>
@@ -754,16 +759,15 @@ for example in Examples:
 &gt;&gt;&gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
 &gt;&gt;&gt; BFSq path:  (True, {1, 2, 7})
 &gt;&gt;&gt; BFS  path:  (True, {1, 2, 7})</code></pre>
-</div>
-</div>
-</div>
-<div id="ranking-algorithms" class="section level1">
-<h1>Ranking Algorithms</h1>
-<p>Lots of <a href="https://en.wikipedia.org/wiki/Ranking_(information_retrieval)">ranking algorithms</a></p>
-</div>
-<div id="recommendation" class="section level1">
-<h1>Recommendation</h1>
-<p>Lots of <a href="https://en.wikipedia.org/wiki/Recommender_system">recommendation algorithms</a></p>
+<!--
+# Ranking Algorithms
+
+Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
+
+# Recommendation
+
+Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
+-->
 <!---
 Data science methods play a major role in discovering recommendations for users. 
 
@@ -773,6 +777,14 @@ Types of recommendation; compliments (these go together), competitors (you might
 
 Temporal involves forecasting, which is a topic for another post. 
 --->
+</div>
+</div>
+<div id="pointers" class="section level2">
+<h2>Pointers</h2>
+<p>e.g. Find longest substring that is a pallendrome</p>
+<p>Optimal way: Start at each letter, move out each</p>
+<p>e.g. reverse a linked list</p>
+</div>
 </div>
 <div id="algorithms" class="section level1">
 <h1>Algorithms</h1>
@@ -794,9 +806,13 @@ print(count)</code></pre>
 </div>
 <div id="todo-other-topics" class="section level1">
 <h1>TODO / Other Topics:</h1>
-<div id="recursion" class="section level2">
-<h2>recursion;</h2>
 </div>
+<div id="recursion" class="section level1">
+<h1>Recursion;</h1>
+<ul>
+<li>Recursive calls</li>
+<li>Methods applied within each recursion</li>
+</ul>
 <div id="dijkstras-algorithm" class="section level2">
 <h2>Dijkstra’s algorithm</h2>
 </div>
@@ -855,6 +871,7 @@ print(count)</code></pre>
 <li><a href="https://www.hackerrank.com/dashboard">HackerRank</a></li>
 <li><p><a href="https://leetcode.com/">LeetCode</a></p></li>
 </ul>
+<p>Overview videos: - Top 10 Algorithms for the Coding Interview <a href="https://www.youtube.com/watch?v=r1MXwyiGi_U">Part I</a>, <a href="https://www.youtube.com/watch?v=zHczhZn-z30">Part II</a></p>
 </div>
 
     </div>

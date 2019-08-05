@@ -38,7 +38,7 @@
     <item>
       <title>Basic Computer Science</title>
       <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Sun, 04 Aug 2019 18:30:19 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2019 19:45:02 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>
@@ -68,12 +68,11 @@
 &lt;li&gt;&lt;a href=&#34;#depth-first-dfs&#34;&gt;Depth First (DFS)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#dfs-vs-bfs&#34;&gt;DFS vs BFS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pointers&#34;&gt;Pointers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ranking-algorithms&#34;&gt;Ranking Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#recommendation&#34;&gt;Recommendation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#todo-other-topics&#34;&gt;TODO / Other Topics:&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;recursion;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo-other-topics&#34;&gt;TODO / Other Topics:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;Recursion;&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#dijkstras-algorithm&#34;&gt;Dijkstra’s algorithm&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#dynamic-programming-knapsack-problem-fibonacci-sequence&#34;&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#functional-programming&#34;&gt;Functional programming&lt;/a&gt;&lt;/li&gt;
@@ -225,6 +224,11 @@ for n in ns_to_test:
 &lt;h2&gt;Sorting&lt;/h2&gt;
 &lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python’s sotred() function uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Timsort&#34;&gt;TimSort&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Complexity for common sorts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(Nlog(N))\)&lt;/span&gt; for quicksort, and merge sort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In efficient sorting algorithms, the &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; part comes from the algorithm being called on up to each element, and the &lt;span class=&#34;math inline&#34;&gt;\(logN\)&lt;/span&gt; part comes from binary sorting in ways that render parts of the array unnecessary later.&lt;/p&gt;
 &lt;p&gt;e.g. ‘find median in a large dataset’ – sort half of it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -233,6 +237,7 @@ for n in ns_to_test:
 &lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;linear-search-binary-search&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Linear Search: Binary Search&lt;/h2&gt;
+&lt;p&gt;Complexity &lt;span class=&#34;math inline&#34;&gt;\(O(logN)\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P3YID7liBug&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;requires sorting before applying the search&lt;/li&gt;
@@ -339,16 +344,15 @@ for example in Examples:
 &amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
 &amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 7})
 &amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 7})&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ranking-algorithms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Ranking Algorithms&lt;/h1&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Ranking_(information_retrieval)&#34;&gt;ranking algorithms&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recommendation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Recommendation&lt;/h1&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Recommender_system&#34;&gt;recommendation algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;!--
+# Ranking Algorithms
+
+Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
+
+# Recommendation
+
+Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
+--&gt;
 &lt;!---
 Data science methods play a major role in discovering recommendations for users. 
 
@@ -358,6 +362,14 @@ Types of recommendation; compliments (these go together), competitors (you might
 
 Temporal involves forecasting, which is a topic for another post. 
 ---&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pointers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pointers&lt;/h2&gt;
+&lt;p&gt;e.g. Find longest substring that is a pallendrome&lt;/p&gt;
+&lt;p&gt;Optimal way: Start at each letter, move out each&lt;/p&gt;
+&lt;p&gt;e.g. reverse a linked list&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Algorithms&lt;/h1&gt;
@@ -379,9 +391,13 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;todo-other-topics&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TODO / Other Topics:&lt;/h1&gt;
-&lt;div id=&#34;recursion&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;recursion;&lt;/h2&gt;
 &lt;/div&gt;
+&lt;div id=&#34;recursion&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recursion;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Recursive calls&lt;/li&gt;
+&lt;li&gt;Methods applied within each recursion&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;dijkstras-algorithm&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Dijkstra’s algorithm&lt;/h2&gt;
 &lt;/div&gt;
@@ -440,6 +456,7 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Overview videos: - Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
