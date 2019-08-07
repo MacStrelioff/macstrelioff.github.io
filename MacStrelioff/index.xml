@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Wed, 07 Aug 2019 08:43:17 +0000</pubDate>
+      <pubDate>Wed, 07 Aug 2019 09:10:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -209,13 +209,15 @@
 &lt;li&gt;Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;Monthly unique visitors&lt;/li&gt;
-&lt;li&gt;Web Reservations&lt;/li&gt;
-&lt;li&gt;Pad Reservations&lt;/li&gt;
-&lt;li&gt;Wait times at restaurants&lt;/li&gt;
-&lt;li&gt;Traffic to business pages&lt;/li&gt;
-&lt;li&gt;Engagement (from potential customers)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://biz.yelp.com/&#34;&gt;Some metrics for business partners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Growth: DAU, MAU&lt;/li&gt;
+&lt;li&gt;Growth: monthly new users, monthly unique users&lt;/li&gt;
+&lt;li&gt;Engagement: Reviews per user per month&lt;/li&gt;
+&lt;li&gt;Engagement:&lt;/li&gt;
+&lt;li&gt;Engagement: Traffic to business pages&lt;/li&gt;
+&lt;li&gt;Monetization: Reservations&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Monetization: Waitlist&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Performance: Wait times at restaurants&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://biz.yelp.com/&#34;&gt;Some metrics for business partners&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;on-mobile&#34; class=&#34;section level3&#34;&gt;

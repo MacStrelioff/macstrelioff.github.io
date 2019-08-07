@@ -183,12 +183,15 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 
 1. Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one. 
 
-- Monthly unique visitors
-- Web Reservations
-- Pad Reservations
-- Wait times at restaurants
-- Traffic to business pages
-- Engagement (from potential customers)
+- Growth: DAU, MAU
+- Growth: monthly new users, monthly unique users
+- Engagement: Reviews per user per month
+- Engagement: 
+- Engagement: Traffic to business pages
+- Monetization: Reservations
+- Monetization: Waitlist
+
+- Performance: Wait times at restaurants
 - [Some metrics for business partners](https://biz.yelp.com/)
 
 ### On Mobile

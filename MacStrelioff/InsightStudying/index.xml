@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2019 08:43:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2019 09:10:10 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Wed, 07 Aug 2019 08:43:17 +0000</pubDate>
+      <pubDate>Wed, 07 Aug 2019 09:10:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>TODO:  compute common business metrics from Yelp dataset. Product deep dive   Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.</description>
