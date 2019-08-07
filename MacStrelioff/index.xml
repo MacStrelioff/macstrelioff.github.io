@@ -38,7 +38,7 @@
     <item>
       <title>Product Sense</title>
       <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Tue, 06 Aug 2019 18:49:14 +0000</pubDate>
+      <pubDate>Tue, 06 Aug 2019 19:00:54 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/business-sense/</guid>
       <description>
@@ -95,16 +95,20 @@ DAU = n_{users,day}
 &lt;p&gt;Average daily active users: &lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 ADAU &amp;amp;= \frac{\text{total number of active users in a month}}{\text{days in the average month}}\\
-&amp;amp;= \frac{\sum_{days} DAU_{day}}{n_{days}}
+&amp;amp;= \frac{\sum_{days}^{n_{days}} DAU_{day}}{n_{days}}
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Monthly active users: &lt;span class=&#34;math display&#34;&gt;\[
-MAU = \frac{\text{total number of active users in a year}}{12}
+\begin{aligned}
+MAU &amp;amp;= \frac{\text{total number of active users in a year}}{12} \\
+&amp;amp;= \frac{\sum_{days}^{365} DAU_{day}}{n_{months}}
+\end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Stickiness: &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;Stickiness: Here the numerator is a measure of activity within a month, and the denominator is a measure of activity within a year. &lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 S &amp;amp;= \frac{ADAU}{MAU} \\ 
-  &amp;amp;= 
+  &amp;amp;= \frac{\frac{1}{n_{days}}\sum_{days}^{n_{days}} DAU_{day}}{\frac{1}{n_{months}}\sum_{days}^{365}DAU_{day}}\\
+  &amp;amp;= \frac{n_{months}\sum_{days}^{n_{days}}DAU_{day}}{n_{days}\sum_{days}^{365}DAU_{day}}
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;

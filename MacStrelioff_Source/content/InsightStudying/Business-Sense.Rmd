@@ -72,20 +72,24 @@ Average daily active users:
 $$
 \begin{aligned}
 ADAU &= \frac{\text{total number of active users in a month}}{\text{days in the average month}}\\
-&= \frac{\sum_{days} DAU_{day}}{n_{days}}
+&= \frac{\sum_{days}^{n_{days}} DAU_{day}}{n_{days}}
 \end{aligned}
 $$
 
 Monthly active users: 
 $$
-MAU = \frac{\text{total number of active users in a year}}{12}
+\begin{aligned}
+MAU &= \frac{\text{total number of active users in a year}}{12} \\
+&= \frac{\sum_{days}^{365} DAU_{day}}{n_{months}}
+\end{aligned}
 $$
 
-Stickiness: 
+Stickiness: Here the numerator is a measure of activity within a month, and the denominator is a measure of activity within a year. 
 $$
 \begin{aligned}
 S &= \frac{ADAU}{MAU} \\ 
-  &= 
+  &= \frac{\frac{1}{n_{days}}\sum_{days}^{n_{days}} DAU_{day}}{\frac{1}{n_{months}}\sum_{days}^{365}DAU_{day}}\\
+  &= \frac{n_{months}\sum_{days}^{n_{days}}DAU_{day}}{n_{days}\sum_{days}^{365}DAU_{day}}
 \end{aligned}
 $$
 

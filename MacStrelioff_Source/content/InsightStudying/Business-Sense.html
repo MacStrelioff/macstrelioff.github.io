@@ -1,7 +1,7 @@
 ---
 title: "Product Sense"
 author: "Mac Strelioff"
-date: "2019-08-06 18:49:14"
+date: "2019-08-06 19:00:54"
 math: true
 menu:
   InsightStudying:
@@ -63,16 +63,20 @@ DAU = n_{users,day}
 <p>Average daily active users: <span class="math display">\[
 \begin{aligned}
 ADAU &amp;= \frac{\text{total number of active users in a month}}{\text{days in the average month}}\\
-&amp;= \frac{\sum_{days} DAU_{day}}{n_{days}}
+&amp;= \frac{\sum_{days}^{n_{days}} DAU_{day}}{n_{days}}
 \end{aligned}
 \]</span></p>
 <p>Monthly active users: <span class="math display">\[
-MAU = \frac{\text{total number of active users in a year}}{12}
+\begin{aligned}
+MAU &amp;= \frac{\text{total number of active users in a year}}{12} \\
+&amp;= \frac{\sum_{days}^{365} DAU_{day}}{n_{months}}
+\end{aligned}
 \]</span></p>
-<p>Stickiness: <span class="math display">\[
+<p>Stickiness: Here the numerator is a measure of activity within a month, and the denominator is a measure of activity within a year. <span class="math display">\[
 \begin{aligned}
 S &amp;= \frac{ADAU}{MAU} \\ 
-  &amp;= 
+  &amp;= \frac{\frac{1}{n_{days}}\sum_{days}^{n_{days}} DAU_{day}}{\frac{1}{n_{months}}\sum_{days}^{365}DAU_{day}}\\
+  &amp;= \frac{n_{months}\sum_{days}^{n_{days}}DAU_{day}}{n_{days}\sum_{days}^{365}DAU_{day}}
 \end{aligned}
 \]</span></p>
 <ul>
