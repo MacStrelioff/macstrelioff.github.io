@@ -21,11 +21,9 @@ set.seed(10201991)
 ```
 
 
-# Yelp
+# Company Visit
 
-## Company Visit
-
-### Business Model, Culture, and Vision
+## Business Model, Culture, and Vision
 
 - Mission: Connect people with great local places
 - Main source of revenue is business ads, [overview of offerings here](https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38)
@@ -35,14 +33,14 @@ set.seed(10201991)
 - Journal clubs and learning groups
 - Can move to PM or ML teams
 
-### Projects, Tasks, and Data
+## Projects, Tasks, and Data
 
 - Working on personalization
 - e.g. project: decrease experiment duration
 - not much collaboration with UX other than maybe getting data from them
 - data: crowd-sourced data on businesses 
 
-### DS Role
+## DS Role
 
 - Looking for 2 roles
 
@@ -65,7 +63,7 @@ Job consists of reining in management, helping with experimentation. Common deli
 - Assists DE team with feature engineering
 - Want: ML, DE, Python, Java, CS and mathematics.
 
-## Recruiter Call
+# Recruiter Call
 
 - Q: why did you apply to Yelp? Show enthusiasm for yelp during interview.
 
@@ -164,16 +162,21 @@ Projects I have done:
 - Sequential A/B Testing (Which allow PMs to peek A/B testing results)
 - Local services categories recommendation
 
-## Deep Dive
+# Deep Dive
 
-### Users
+## Stakeholders and Use Cases
 
-- website visitors who write and read reviews
-- businesses who pay for exposure
+- Consumers: Use Yelp as a recommendation engine based on crown-sourced reviews, and as a platform for expression through reviews
+- Businesses: Use Yelp to gain clients
 
-### Metrics
+## User Flows and Metrics
 
+Thinking of the broader user flow can help with identifying measurable events within that flow (metrics).
 Overall, consider units of individuals (accounts, unique visitors, cookies, IPs...), units of time (daily, weekly), and referents (week over week, ...)
+
+### On Web
+
+1. Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one. 
 
 - Monthly unique visitors
 - Web Reservations
@@ -183,7 +186,11 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - Engagement (from potential customers)
 - [Some metrics for business partners](https://biz.yelp.com/)
 
-### Current issues
+### On Mobile
+
+1. 
+
+## Current issues
 
 - Trust, businesses can game Yelp by [asking for low ratings](https://thehustle.co/botto-bistro-1-star-yelp/), 
 - Trust, Businesses accuse Yelp of [maliciously manipulating reviews](https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9), to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to [this response](https://www.yelp.com/extortion).
@@ -192,12 +199,12 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - Balancing review usefulness, reliability, and legitimacy - 
 
 
-### Competitors
+## Competitors
 
 - "On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews." - [this post](https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood)
 - Full paragraph: "For better and for worse, strangers' opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie's List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don't really scrutinize reviewers or reviews. While more democratic, they're also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad."
 
-### Ideas and excitement
+## Ideas and excitement
 
 - I like that they have [data challenges](https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data)
 - I like their openness with data, particularly the [datasets on Kaggle](https://www.kaggle.com/datasets?search=yelp)
@@ -206,12 +213,12 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate's or restaurant's revenue for that quarter? 
 - Since a restaurant's revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.
 
-## Onsite
+# Onsite
 
 - Expect from company visit: SQL, Python, statistics, experiment design
 - Expect from recruiter call: A/B testing, product sense
 
-### Glassdoor interview questions
+## Glassdoor interview questions
 
 - How to evaluate the features classifying spams and emails.
 - How to swap two elements of a list

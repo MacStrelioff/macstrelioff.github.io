@@ -52,8 +52,8 @@ funnel analysis
 - Bounce rate: the percentage of visitors to a particular website who navigate away from the site after viewing only one page.
 - Pages viewed / visit
 - Time on pages
-- 
 - Time on site
+- Conversion (purchase, reservation, end-goal action)
 
 ### Lifetime Value
 

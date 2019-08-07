@@ -1,7 +1,7 @@
 ---
 title: "Yelp Notes"
 author: "Mac Strelioff"
-date: "2019-08-05 09:56:03"
+date: "2019-08-06 17:58:13"
 menu:
   InsightStudying:
     parent: Foundations
@@ -12,12 +12,10 @@ linktitle: Yelp Deep Dive
 
 
 
-<div id="yelp" class="section level1">
-<h1>Yelp</h1>
-<div id="company-visit" class="section level2">
-<h2>Company Visit</h2>
-<div id="business-model-culture-and-vision" class="section level3">
-<h3>Business Model, Culture, and Vision</h3>
+<div id="company-visit" class="section level1">
+<h1>Company Visit</h1>
+<div id="business-model-culture-and-vision" class="section level2">
+<h2>Business Model, Culture, and Vision</h2>
 <ul>
 <li>Mission: Connect people with great local places</li>
 <li>Main source of revenue is business ads, <a href="https://www.thedailybeast.com/yelps-new-ad-products-can-increase-potential-customer-engagement-by-38">overview of offerings here</a></li>
@@ -28,8 +26,8 @@ linktitle: Yelp Deep Dive
 <li>Can move to PM or ML teams</li>
 </ul>
 </div>
-<div id="projects-tasks-and-data" class="section level3">
-<h3>Projects, Tasks, and Data</h3>
+<div id="projects-tasks-and-data" class="section level2">
+<h2>Projects, Tasks, and Data</h2>
 <ul>
 <li>Working on personalization</li>
 <li>e.g. project: decrease experiment duration</li>
@@ -37,8 +35,8 @@ linktitle: Yelp Deep Dive
 <li>data: crowd-sourced data on businesses</li>
 </ul>
 </div>
-<div id="ds-role" class="section level3">
-<h3>DS Role</h3>
+<div id="ds-role" class="section level2">
+<h2>DS Role</h2>
 <ul>
 <li>Looking for 2 roles</li>
 </ul>
@@ -66,8 +64,8 @@ linktitle: Yelp Deep Dive
 </ul>
 </div>
 </div>
-<div id="recruiter-call" class="section level2">
-<h2>Recruiter Call</h2>
+<div id="recruiter-call" class="section level1">
+<h1>Recruiter Call</h1>
 <ul>
 <li>Q: why did you apply to Yelp? Show enthusiasm for yelp during interview.</li>
 </ul>
@@ -105,7 +103,6 @@ linktitle: Yelp Deep Dive
 <ul>
 <li>Should I bring anything? Laptop, … ? Could bring laptop, but there are laptops that can be borrowed as well. Whiteboards will be in the room.</li>
 </ul>
-</div>
 <div id="likely-interviewers" class="section level2">
 <h2>Likely Interviewers:</h2>
 <p><a href="https://www.linkedin.com/in/sebastiencouvidat/">Sebastian</a>,</p>
@@ -154,18 +151,24 @@ linktitle: Yelp Deep Dive
 <p>I work at the marketplace team, products include Yelp Waitlist, Yelp Reservations, Yelp Request a Quote and Yelp Local Services</p>
 <p>Projects I have done: - Built ML models on waitlist waiting time estimation - Various of observational causal inferences projects (User Behavior, Biz page features, Quotes qualities) - Geo experiment(For ads fulfillment, CPC, CTR) - Randomized A/B Testing - Sequential A/B Testing (Which allow PMs to peek A/B testing results) - Local services categories recommendation</p>
 </div>
-<div id="deep-dive" class="section level2">
-<h2>Deep Dive</h2>
-<div id="users" class="section level3">
-<h3>Users</h3>
+</div>
+<div id="deep-dive" class="section level1">
+<h1>Deep Dive</h1>
+<div id="stakeholders-and-use-cases" class="section level2">
+<h2>Stakeholders and Use Cases</h2>
 <ul>
-<li>website visitors who write and read reviews</li>
-<li>businesses who pay for exposure</li>
+<li>Consumers: Use Yelp as a recommendation engine based on crown-sourced reviews, and as a platform for expression through reviews</li>
+<li>Businesses: Use Yelp to gain clients</li>
 </ul>
 </div>
-<div id="metrics" class="section level3">
-<h3>Metrics</h3>
-<p>Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)</p>
+<div id="user-flows-and-metrics" class="section level2">
+<h2>User Flows and Metrics</h2>
+<p>Thinking of the broader user flow can help with identifying measurable events within that flow (metrics). Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)</p>
+<div id="on-web" class="section level3">
+<h3>On Web</h3>
+<ol style="list-style-type: decimal">
+<li>Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one.</li>
+</ol>
 <ul>
 <li>Monthly unique visitors</li>
 <li>Web Reservations</li>
@@ -176,8 +179,15 @@ linktitle: Yelp Deep Dive
 <li><a href="https://biz.yelp.com/">Some metrics for business partners</a></li>
 </ul>
 </div>
-<div id="current-issues" class="section level3">
-<h3>Current issues</h3>
+<div id="on-mobile" class="section level3">
+<h3>On Mobile</h3>
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
+</div>
+</div>
+<div id="current-issues" class="section level2">
+<h2>Current issues</h2>
 <ul>
 <li>Trust, businesses can game Yelp by <a href="https://thehustle.co/botto-bistro-1-star-yelp/">asking for low ratings</a>,</li>
 <li>Trust, Businesses accuse Yelp of <a href="https://www.businessinsider.com/court-rules-yelp-can-manipulate-reviews-2014-9">maliciously manipulating reviews</a>, to such an extent that, in response to a documentary about this, Yelp redirected BillionDollerBully.com to <a href="https://www.yelp.com/extortion">this response</a>.</li>
@@ -186,15 +196,15 @@ linktitle: Yelp Deep Dive
 <li>Balancing review usefulness, reliability, and legitimacy -</li>
 </ul>
 </div>
-<div id="competitors" class="section level3">
-<h3>Competitors</h3>
+<div id="competitors" class="section level2">
+<h2>Competitors</h2>
 <ul>
 <li>“On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews.” - <a href="https://www.buzzfeed.com/sandraeallen/is-yelp-evil-or-just-misunderstood">this post</a></li>
 <li>Full paragraph: “For better and for worse, strangers’ opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews. While more democratic, they’re also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad.”</li>
 </ul>
 </div>
-<div id="ideas-and-excitement" class="section level3">
-<h3>Ideas and excitement</h3>
+<div id="ideas-and-excitement" class="section level2">
+<h2>Ideas and excitement</h2>
 <ul>
 <li>I like that they have <a href="https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data">data challenges</a></li>
 <li><p>I like their openness with data, particularly the <a href="https://www.kaggle.com/datasets?search=yelp">datasets on Kaggle</a></p></li>
@@ -204,14 +214,14 @@ linktitle: Yelp Deep Dive
 </ul>
 </div>
 </div>
-<div id="onsite" class="section level2">
-<h2>Onsite</h2>
+<div id="onsite" class="section level1">
+<h1>Onsite</h1>
 <ul>
 <li>Expect from company visit: SQL, Python, statistics, experiment design</li>
 <li>Expect from recruiter call: A/B testing, product sense</li>
 </ul>
-<div id="glassdoor-interview-questions" class="section level3">
-<h3>Glassdoor interview questions</h3>
+<div id="glassdoor-interview-questions" class="section level2">
+<h2>Glassdoor interview questions</h2>
 <ul>
 <li>How to evaluate the features classifying spams and emails.</li>
 <li>How to swap two elements of a list</li>
@@ -229,6 +239,5 @@ linktitle: Yelp Deep Dive
 <li>What is an n-gram?</li>
 <li>Simple coding and high level ML questions</li>
 </ul>
-</div>
 </div>
 </div>
