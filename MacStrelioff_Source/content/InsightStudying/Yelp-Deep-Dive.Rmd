@@ -21,6 +21,11 @@ set.seed(10201991)
 ```
 
 
+# TODO: 
+
+- compute common business metrics from Yelp dataset. 
+- Product deep dive
+
 # Company Visit
 
 ## Business Model, Culture, and Vision
