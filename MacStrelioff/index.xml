@@ -36,9 +36,87 @@
     </item>
     
     <item>
+      <title>LinkedIn Notes</title>
+      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
+      <pubDate>Wed, 07 Aug 2019 14:49:42 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
+      <description>
+
+
+&lt;div id=&#34;linkedin&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;LinkedIn&lt;/h1&gt;
+&lt;div id=&#34;company-visit&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Company Visit&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recruiter-call&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recruiter Call&lt;/h2&gt;
+&lt;p&gt;Graydon, sr recruiter at linkedin&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;talks about roles, … .&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;product team&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Role?&lt;/li&gt;
+&lt;li&gt;mission: create economic opportunity for members of workforce. Help people, as many as possiblt.&lt;/li&gt;
+&lt;li&gt;inclusivity – economic opportunity, and recommending users to recruiters.&lt;/li&gt;
+&lt;li&gt;How do we deploy products that highlight and empower users to&lt;/li&gt;
+&lt;li&gt;Smart Products: recommend learning products based on career progression&lt;/li&gt;
+&lt;li&gt;Business side: LinkedIn really white collar dominant, need to include blue-collar workers on LinkedIn..&lt;/li&gt;
+&lt;li&gt;Or.. partner with governemnts to address skills gaps..&lt;/li&gt;
+&lt;li&gt;for background and how it relates;;&lt;/li&gt;
+&lt;li&gt;“Take intelligent risk”: intelligent means is there data to support actions..? My job.&lt;/li&gt;
+&lt;li&gt;DS works closely with a product or user group, doing end to end functionality.. An opportunity to identify ways where things can be done better. –&lt;/li&gt;
+&lt;li&gt;END TO END proactive DS work:&lt;/li&gt;
+&lt;li&gt;interview towards a general profile – manipulation, problem solving, stats, … .&lt;/li&gt;
+&lt;li&gt;Allocate after passing onsite.&lt;/li&gt;
+&lt;li&gt;Some teams more ML, causal inference, experimentation.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;40 positions open now.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Expedite process? Onsite Friday..&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;directly to onsite.&lt;/li&gt;
+&lt;li&gt;will send a application for a data scientist. Will probably get application by end of week / later tonight. Make sure core skillset looks good.&lt;/li&gt;
+&lt;li&gt;apply, He’ll be notified, and send an introduction email to Shana for scheduling, onsite, offer.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Then Shana will assist through onsite process.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;can maybe have the onsite on Monday. will be flagged as urgent.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Next steps / interview timeline?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ping if I hear nothing by Friday.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Why linkedin – role sounded awesome when presented at Insight. After looking into LinkedIn more, I came across papers on inferring latent user types, and that kind of work is really interesting to me. Generally though, I’m interested in experimentation roles and sequential testing, efficient experimentation and optional stopping.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Likely Interviewers:&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Deep Dive&lt;/h2&gt;
+&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Users&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Metrics&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Current issues&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Competitors&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
+&lt;p&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;, &lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;, &lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;), &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Onsite&lt;/h2&gt;
+&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Wed, 07 Aug 2019 09:10:10 +0000</pubDate>
+      <pubDate>Wed, 07 Aug 2019 14:24:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -244,14 +322,23 @@
 &lt;li&gt;Full paragraph: “For better and for worse, strangers’ opinions affect our purchasing behavior to an unprecedented degree. Such feedback, of course, is easily corrupted. Websites like Yelp face the problem of whether and how to scrutinize the data they receive to ensure reliability. On one extreme, Angie’s List features reviews of local products and services provided by and visible to its fee-paying members. On the other, Urbanspoon and CitySearch, Tripadvisor, and Amazon don’t really scrutinize reviewers or reviews. While more democratic, they’re also much more susceptible to manipulation and therefore theoretically less useful to consumers. If a business owner or her friend or someone she pays can pose as a happy customer — or sabotage her competition — a review is no more useful than an ad.”&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Ideas and excitement&lt;/h2&gt;
+&lt;div id=&#34;ideas-excitement-questions-to-ask&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ideas, excitement, questions to ask&lt;/h2&gt;
+&lt;p&gt;Ideas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I like that they have &lt;a href=&#34;https://blog.yelp.com/2015/06/data-science-challenge-predict-restaurant-health-scores-with-yelp-data&#34;&gt;data challenges&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I like their openness with data, particularly the &lt;a href=&#34;https://www.kaggle.com/datasets?search=yelp&#34;&gt;datasets on Kaggle&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;I like their openness with data, particularly the &lt;a href=&#34;https://www.kaggle.com/datasets?search=yelp&#34;&gt;datasets on Kaggle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Excitement:&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;Chek relationship between restaurant response time to critical reviews, and other restaurant demand metrics like reservations or ratings.&lt;/li&gt;
 &lt;li&gt;check for predictive relationship between reservations or delivery orders made in a quarter, and a conglomerate’s or restaurant’s revenue for that quarter?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Since a restaurant’s revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Since a restaurant’s revenue is basically customers * customer value, if Yelp reservations is a good proxy for number of customers, then it might also be a good proxy for quarterly revenue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Are product decisions made with p-values? .. What thresholds do you use in practice?&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1037,55 +1124,6 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>LinkedIn Notes</title>
-      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Mon, 05 Aug 2019 09:07:11 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
-      <description>
-
-
-&lt;div id=&#34;linkedin&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;LinkedIn&lt;/h1&gt;
-&lt;div id=&#34;company-visit&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Company Visit&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recruiter-call&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Recruiter Call&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Likely Interviewers:&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Deep Dive&lt;/h2&gt;
-&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Users&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Metrics&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Current issues&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Competitors&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
-&lt;p&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;, &lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;, &lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;), &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Onsite&lt;/h2&gt;
-&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

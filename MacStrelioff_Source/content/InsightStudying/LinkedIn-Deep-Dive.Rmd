@@ -28,6 +28,44 @@ set.seed(10201991)
 
 ## Recruiter Call
 
+Graydon, sr recruiter at linkedin
+
+- talks about roles, ... . 
+- product team
+
+- Role? 
+- mission: create economic opportunity for members of workforce. Help people, as many as possiblt. 
+- inclusivity -- economic opportunity, and recommending users to recruiters. 
+- How do we deploy products that highlight and empower users to 
+- Smart Products: recommend learning products based on career progression
+- Business side: LinkedIn really white collar dominant, need to include blue-collar workers on LinkedIn.. 
+- Or.. partner with governemnts to address skills gaps.. 
+- for background and how it relates;;
+- "Take intelligent risk": intelligent means is there data to support actions..? My job. 
+- DS works closely with a product or user group, doing end to end functionality.. An opportunity to identify ways where things can be done better. --
+- END TO END proactive DS work: 
+- interview towards a general profile -- manipulation, problem solving, stats, ... . 
+- Allocate after passing onsite. 
+- Some teams more ML, causal inference, experimentation. 
+- 40 positions open now.
+
+- Expedite process? Onsite Friday.. 
+
+- directly to onsite. 
+- will send a application for a data scientist. Will probably get application by end of week / later tonight. Make sure core skillset looks good. 
+- apply, He'll be notified, and send an introduction email to Shana for scheduling, onsite, offer. 
+- Then Shana will assist through onsite process. 
+
+- can maybe have the onsite on Monday. will be flagged as urgent.
+
+
+- Next steps / interview timeline? 
+- Ping if I hear nothing by Friday. 
+
+- Why linkedin -- role sounded awesome when presented at Insight. After looking into LinkedIn more, I came across papers on inferring latent user types, and that kind of work is really interesting to me. Generally though, I'm interested in experimentation roles and sequential testing, efficient experimentation and optional stopping. 
+
+
+
 ## Likely Interviewers: 
 
 

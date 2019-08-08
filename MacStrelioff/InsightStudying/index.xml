@@ -6,15 +6,26 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2019 09:10:10 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2019 14:49:42 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>LinkedIn Notes</title>
+      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
+      <pubDate>Wed, 07 Aug 2019 14:49:42 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
+      <description>LinkedIn Company Visit  Recruiter Call Graydon, sr recruiter at linkedin
+ talks about roles, … . product team
+ Role? mission: create economic opportunity for members of workforce. Help people, as many as possiblt. inclusivity – economic opportunity, and recommending users to recruiters. How do we deploy products that highlight and empower users to Smart Products: recommend learning products based on career progression Business side: LinkedIn really white collar dominant, need to include blue-collar workers on LinkedIn.</description>
+    </item>
+    
+    <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Wed, 07 Aug 2019 09:10:10 +0000</pubDate>
+      <pubDate>Wed, 07 Aug 2019 14:24:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>TODO:  compute common business metrics from Yelp dataset. Product deep dive   Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.</description>
@@ -39,16 +50,6 @@ funnel analysis
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS Examples:  Pointers  Algorithms TODO / Other Topics: Recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions Tricks:   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</description>
-    </item>
-    
-    <item>
-      <title>LinkedIn Notes</title>
-      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Mon, 05 Aug 2019 09:07:11 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
-      <description> LinkedIn Company Visit  Recruiter Call  Likely Interviewers:  Deep Dive Users  Metrics  Current issues  Competitors  Ideas and excitement I like their general work on inferring user attributes, economic research, experimentation research (also here, here), latent user research,
-  Onsite Glassdoor interview questions    </description>
     </item>
     
     <item>
