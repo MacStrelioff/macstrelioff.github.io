@@ -95,14 +95,11 @@ $$
 
 [alternatively](https://blog.popcornmetrics.com/5-user-engagement-metrics-for-growth/), stickiness could be measured as $DAU$ over $MAU$
 
-
-
 - Daily active users: number of users in a day
 - Active users: Average Daily Active Users = monthly users / days in average month
 - Active users: Monthly Active Users = users in a year / months in year
 - Stickiness: Average Daily Active Users / Monthly Active Users = 
 
-- Daily active users (DAU)
 - Support ticiets: new tickets + unresolved tickets
 - Time to ticket resolution
 
