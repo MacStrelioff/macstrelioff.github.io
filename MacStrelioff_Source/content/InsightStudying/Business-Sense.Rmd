@@ -21,7 +21,11 @@ set.seed(10201991)
 ```
 
 
-# Problem Solving Strategy
+# Problem Types and Strategies
+
+## New Product
+
+## 
 
 Overall product sense is about what to build and why. 
 
@@ -132,6 +136,7 @@ $$
 
 - User data (ways users use the app)
 - Usage data (ways the app interacts with devices, networks, servers, product versions, ...)
+
 
 # OLD NOTES: 
 

@@ -6,10 +6,22 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2019 14:49:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Aug 2019 10:36:41 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Product Sense</title>
+      <link>/MacStrelioff/insightstudying/business-sense/</link>
+      <pubDate>Thu, 08 Aug 2019 10:36:41 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
+      <description>Problem Types and Strategies New Product   Overall product sense is about what to build and why.
+Overarching goals / stage of the company Contextualize: Draw a user funnel or user flow for the specific product Draw a dashboard, then populate with platform and product metrics    Overall resources  https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA   Platform Concepts and Metrics Users User Funnel Churn,
+funnel analysis
+ User Flow  Traffic source: Where users come from (search, referral, … ) number new visits, percent new visits Page visits: users arriving at page Bounce rate: the percentage of visitors to a particular website who navigate away from the site after viewing only one page.</description>
+    </item>
     
     <item>
       <title>LinkedIn Notes</title>
@@ -29,18 +41,6 @@
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>TODO:  compute common business metrics from Yelp dataset. Product deep dive   Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.</description>
-    </item>
-    
-    <item>
-      <title>Product Sense</title>
-      <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Wed, 07 Aug 2019 08:38:33 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
-      <description>Problem Solving Strategy Overall product sense is about what to build and why.
-Overarching goals / stage of the company Contextualize: Draw a user funnel or user flow for the specific product Draw a dashboard, then populate with platform and product metrics   Overall resources  https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA   Platform Concepts and Metrics Users User Funnel Churn,
-funnel analysis
- User Flow  Traffic source: Where users come from (search, referral, … ) number new visits, percent new visits Page visits: users arriving at page Bounce rate: the percentage of visitors to a particular website who navigate away from the site after viewing only one page.</description>
     </item>
     
     <item>
