@@ -167,6 +167,29 @@ Projects I have done:
 - Sequential A/B Testing (Which allow PMs to peek A/B testing results)
 - Local services categories recommendation
 
+# Recruiter prep info
+
+## Schedule and Interviewers
+
+- 12:45PM- Greet (Fahren)
+- 1:00PM- [Sebastien Couvidat](https://www.linkedin.com/in/sebastiencouvidat/)
+- 1:45PM- [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)
+- 2:30PM- [Nicholas Malecek](https://www.linkedin.com/in/nicholasmalecek/)
+- 3:15PM- [Peter Weir](https://www.linkedin.com/in/peter-weir/)
+- 4:00PM- Goodbye (Fahren)
+
+## Prep Tips
+
+To prepare for your interview, you may want to review some probability, data analysis, SQL, coding, and experimental design. Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project. You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment.
+
+If you have time before the interview, check out Yelp’s [engineering](https://engineeringblog.yelp.com/) and [data](https://blog.yelp.com/section/data) blogs and see if anything’s relevant. Be familiar with A/B testing and brush up on your Python (Yelpers love Python) and/or R abilities to be ready for a live data analysis problem.
+
+And finally, of course, follow the general interview advice: elaborate on related projects from your resume, be enthusiastic, share your thoughts with your interviewer as you’re going through a problem or doing a piece of analysis, and be sure to ask questions for clarification!
+
+
+The team will also focus on why you want to be a part of the Yelp team! -- look into [Metrics Fact sheet](https://www.yelp.com/factsheet) and [Culture](https://www.yelp.com/careers/who-we-are)
+
+
 # Deep Dive
 
 ## Stakeholders and Use Cases
