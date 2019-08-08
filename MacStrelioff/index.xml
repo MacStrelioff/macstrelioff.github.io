@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Thu, 08 Aug 2019 11:21:56 +0000</pubDate>
+      <pubDate>Thu, 08 Aug 2019 12:36:18 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -210,6 +210,21 @@
 &lt;p&gt;If you have time before the interview, check out Yelp’s &lt;a href=&#34;https://engineeringblog.yelp.com/&#34;&gt;engineering&lt;/a&gt; and &lt;a href=&#34;https://blog.yelp.com/section/data&#34;&gt;data&lt;/a&gt; blogs and see if anything’s relevant. Be familiar with A/B testing and brush up on your Python (Yelpers love Python) and/or R abilities to be ready for a live data analysis problem.&lt;/p&gt;
 &lt;p&gt;And finally, of course, follow the general interview advice: elaborate on related projects from your resume, be enthusiastic, share your thoughts with your interviewer as you’re going through a problem or doing a piece of analysis, and be sure to ask questions for clarification!&lt;/p&gt;
 &lt;p&gt;The team will also focus on why you want to be a part of the Yelp team! – look into &lt;a href=&#34;https://www.yelp.com/factsheet&#34;&gt;Metrics Fact sheet&lt;/a&gt; and &lt;a href=&#34;https://www.yelp.com/careers/who-we-are&#34;&gt;Culture&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;discussion-of-past-work&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Discussion of past work&lt;/h3&gt;
+&lt;p&gt;“Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.”&lt;/p&gt;
+&lt;p&gt;“elaborate on related projects from your resume”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;product-metrics-or-experimentation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Product metrics or experimentation&lt;/h3&gt;
+&lt;p&gt;“You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment.”&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;deep-dive&#34; class=&#34;section level1&#34;&gt;

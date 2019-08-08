@@ -186,9 +186,19 @@ If you have time before the interview, check out Yelp’s [engineering](https://
 
 And finally, of course, follow the general interview advice: elaborate on related projects from your resume, be enthusiastic, share your thoughts with your interviewer as you’re going through a problem or doing a piece of analysis, and be sure to ask questions for clarification!
 
-
 The team will also focus on why you want to be a part of the Yelp team! -- look into [Metrics Fact sheet](https://www.yelp.com/factsheet) and [Culture](https://www.yelp.com/careers/who-we-are)
 
+### Discussion of past work
+"Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project."
+
+"elaborate on related projects from your resume"
+
+- 
+
+### Product metrics or experimentation
+"You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment."
+
+### 
 
 # Deep Dive
 
