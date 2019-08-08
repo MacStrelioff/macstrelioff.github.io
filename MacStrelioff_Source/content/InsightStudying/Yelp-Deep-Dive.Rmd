@@ -193,7 +193,12 @@ The team will also focus on why you want to be a part of the Yelp team! -- look 
 
 "elaborate on related projects from your resume"
 
-- 
+PredictIt Project:
+
+
+Strategy Inference Project:
+
+
 
 ### Product metrics or experimentation
 "You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment."

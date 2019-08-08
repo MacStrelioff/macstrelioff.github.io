@@ -21,12 +21,10 @@ set.seed(10201991)
 ```
 
 
-# LinkedIn
-
-## Company Visit
+# Company Visit
 
 
-## Recruiter Call
+# Recruiter Call
 
 Graydon, sr recruiter at linkedin
 
@@ -66,7 +64,51 @@ Graydon, sr recruiter at linkedin
 
 
 
-## Likely Interviewers: 
+# Recruiter email II -- Interviews
+
+Here is the outline of what to expect from your onsite in terms of the structure:
+
+## Host Leader (45 mins):
+
+One of the interviews will be done by a host manager; this person may, or may not, end up being the final hiring manager, but will be able to provide you with information on the different projects, engineering team culture, challenges, etc. He/she will be asking you about: 
+
+- your career history
+- your job search (why you’re looking, why is LinkedIn interesting, what technologies are you interested in)
+- and an overview of interesting projects you worked on, and your involvement in these projects.
+
+## Data Manipulation (45mins):
+
+- Goal: assess ability to manipulate and analyze data for extracting insights
+- Usually at least 1 SQL question + 1 R or Python question
+- Familiarity with SQL AND R or Python is required for Senior Data Scientist.
+- Determine familiarity of advanced analytical functions
+
+## Analytics Case Study (45mins):
+
+- To assess ability to solve a business case with the right analytical approach and reasonable data intuition; and the ability to make relevant product recommendation based on data insights.
+_ Asses your familiarity with the LinkedIn Platform
+- Ability to correctly communicate and present solutions
+
+## Statistical Modeling (45mins):
+
+- Evaluate and asses analytical thinking and familiarity with the LinkedIn Platform.
+- Assess your ability to take business context and translate to an analytical problem
+- Evaluate experience working with statistical modeling techniques
+- Testing/Training/Evaluating models
+- Asses knowledge of model methodologies
+ 
+
+## Statistics & A/B Testing (45mins):
+
+- Design and analyze experimentations, understands basic stats concepts (e.g. hypothesis testing, mean, variance, probability distributions, sample size calculation, power calculation...) and how to apply them in a business setting.
+- For Sr DS, must show an in-depth understanding of A/B testing is needed (e.g. multi-variant testing, sample size calculation, power…)
+- Asses knowledge of probability
+
+
+
+# Likely Interviewers: 
+
+
 
 
 ## Deep Dive
@@ -84,6 +126,13 @@ Graydon, sr recruiter at linkedin
 ### Ideas and excitement
 
 I like their general work on [inferring user attributes](https://engineering.linkedin.com/teams/data/projects/jobs), [economic research](https://economicgraph.linkedin.com/research#all), [experimentation research](http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf) (also [here](https://dl.acm.org/citation.cfm?id=2488509&dl=ACM&coll=DL), [here](https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests)), [latent user research](https://dl.acm.org/citation.cfm?id=2741126), 
+
+### Excitement from Recruiter
+
+
+- [InDay](https://blog.linkedin.com/2015/07/29/inday-investing-in-our-employees-so-they-can-invest-in-themselves) -- LinkedIn officially takes one day a month to allow employees to give back to the community, company, or themselves in some (themed) way.
+- [Economics graph](https://economicgraph.linkedin.com/resources/linkedin-workforce-report-may-2018) project that gives reports on skills gaps and migrations. 
+- I noticed the job ad emails that I get seem based on my job search, possibly more-so than my skills.. Do you think you'd get more retention / engagement by recommending jobs based on skills or degrees and work history, rather than past searches? Or at least exploring this -- randomizing emails to suggest jobs based on search vs based on skills and experience. 
 
 ## Onsite
 
