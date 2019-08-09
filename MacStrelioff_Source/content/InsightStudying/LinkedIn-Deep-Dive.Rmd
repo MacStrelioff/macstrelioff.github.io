@@ -129,7 +129,7 @@ I like their general work on [inferring user attributes](https://engineering.lin
 
 ### Excitement from Recruiter
 
-
+- [Student Future](https://engineering.linkedin.com/blog/2015/11/video--higher-ed-team-seeks-to-predict-collegiate-futures), a product to help high school students choose universities, based on entering a company and a role and seeing statistics about the schools that people with those jobs attended. 
 - [InDay](https://blog.linkedin.com/2015/07/29/inday-investing-in-our-employees-so-they-can-invest-in-themselves) -- LinkedIn officially takes one day a month to allow employees to give back to the community, company, or themselves in some (themed) way.
 - [Economics graph](https://economicgraph.linkedin.com/resources/linkedin-workforce-report-may-2018) project that gives reports on skills gaps and migrations. 
 - I noticed the job ad emails that I get seem based on my job search, possibly more-so than my skills.. Do you think you'd get more retention / engagement by recommending jobs based on skills or degrees and work history, rather than past searches? Or at least exploring this -- randomizing emails to suggest jobs based on search vs based on skills and experience. 
