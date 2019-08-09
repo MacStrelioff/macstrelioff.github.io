@@ -23,6 +23,20 @@ set.seed(10201991)
 
 # Company Visit
 
+## Chris info -- 
+
+
+- DS people generally get interviewed on computer engineering topics -- eg implementing data structures from scratch, ... 
+- Interview centrally for AI organization, then get matched with a team. 
+- Module on CS which is like data structures, 
+- LeetCode medium, but also more of a conversation
+- Binary converter from scratch
+- Being able to describe process
+- ML on fundamentals of ML, basics and some applications
+- Optional product design module
+- lots of coding things on a whiteboard
+- coding style matters / code should be interpratable
+- making sure code would work, eg walk through an example or test cases, think of edge cases
 
 # Recruiter Call
 

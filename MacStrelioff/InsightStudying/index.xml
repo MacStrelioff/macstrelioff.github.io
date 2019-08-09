@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Aug 2019 10:16:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2019 11:54:31 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LinkedIn Notes</title>
+      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
+      <pubDate>Fri, 09 Aug 2019 11:54:31 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
+      <description>Company Visit Chris info –  DS people generally get interviewed on computer engineering topics – eg implementing data structures from scratch, … Interview centrally for AI organization, then get matched with a team. Module on CS which is like data structures, LeetCode medium, but also more of a conversation Binary converter from scratch Being able to describe process ML on fundamentals of ML, basics and some applications Optional product design module lots of coding things on a whiteboard coding style matters / code should be interpratable making sure code would work, eg walk through an example or test cases, think of edge cases    Recruiter Call Graydon, sr recruiter at linkedin</description>
+    </item>
     
     <item>
       <title>Yelp Notes</title>
@@ -18,17 +27,6 @@
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>TODO:  compute common business metrics from Yelp dataset. Product deep dive   Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.</description>
-    </item>
-    
-    <item>
-      <title>LinkedIn Notes</title>
-      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Thu, 08 Aug 2019 17:31:05 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
-      <description>Company Visit  Recruiter Call Graydon, sr recruiter at linkedin
- talks about roles, … . product team
- Role? mission: create economic opportunity for members of workforce. Help people, as many as possiblt. inclusivity – economic opportunity, and recommending users to recruiters. How do we deploy products that highlight and empower users to Smart Products: recommend learning products based on career progression Business side: LinkedIn really white collar dominant, need to include blue-collar workers on LinkedIn.</description>
     </item>
     
     <item>
