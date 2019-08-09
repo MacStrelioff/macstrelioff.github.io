@@ -36,140 +36,9 @@
     </item>
     
     <item>
-      <title>LinkedIn Notes</title>
-      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Thu, 08 Aug 2019 16:29:28 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
-      <description>
-
-
-&lt;div id=&#34;company-visit&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Company Visit&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recruiter-call&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Recruiter Call&lt;/h1&gt;
-&lt;p&gt;Graydon, sr recruiter at linkedin&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;talks about roles, … .&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;product team&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Role?&lt;/li&gt;
-&lt;li&gt;mission: create economic opportunity for members of workforce. Help people, as many as possiblt.&lt;/li&gt;
-&lt;li&gt;inclusivity – economic opportunity, and recommending users to recruiters.&lt;/li&gt;
-&lt;li&gt;How do we deploy products that highlight and empower users to&lt;/li&gt;
-&lt;li&gt;Smart Products: recommend learning products based on career progression&lt;/li&gt;
-&lt;li&gt;Business side: LinkedIn really white collar dominant, need to include blue-collar workers on LinkedIn..&lt;/li&gt;
-&lt;li&gt;Or.. partner with governemnts to address skills gaps..&lt;/li&gt;
-&lt;li&gt;for background and how it relates;;&lt;/li&gt;
-&lt;li&gt;“Take intelligent risk”: intelligent means is there data to support actions..? My job.&lt;/li&gt;
-&lt;li&gt;DS works closely with a product or user group, doing end to end functionality.. An opportunity to identify ways where things can be done better. –&lt;/li&gt;
-&lt;li&gt;END TO END proactive DS work:&lt;/li&gt;
-&lt;li&gt;interview towards a general profile – manipulation, problem solving, stats, … .&lt;/li&gt;
-&lt;li&gt;Allocate after passing onsite.&lt;/li&gt;
-&lt;li&gt;Some teams more ML, causal inference, experimentation.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;40 positions open now.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Expedite process? Onsite Friday..&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;directly to onsite.&lt;/li&gt;
-&lt;li&gt;will send a application for a data scientist. Will probably get application by end of week / later tonight. Make sure core skillset looks good.&lt;/li&gt;
-&lt;li&gt;apply, He’ll be notified, and send an introduction email to Shana for scheduling, onsite, offer.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Then Shana will assist through onsite process.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;can maybe have the onsite on Monday. will be flagged as urgent.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Next steps / interview timeline?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ping if I hear nothing by Friday.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Why linkedin – role sounded awesome when presented at Insight. After looking into LinkedIn more, I came across papers on inferring latent user types, and that kind of work is really interesting to me. Generally though, I’m interested in experimentation roles and sequential testing, efficient experimentation and optional stopping.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recruiter-email-ii-interviews&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Recruiter email II – Interviews&lt;/h1&gt;
-&lt;p&gt;Here is the outline of what to expect from your onsite in terms of the structure:&lt;/p&gt;
-&lt;div id=&#34;host-leader-45-mins&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Host Leader (45 mins):&lt;/h2&gt;
-&lt;p&gt;One of the interviews will be done by a host manager; this person may, or may not, end up being the final hiring manager, but will be able to provide you with information on the different projects, engineering team culture, challenges, etc. He/she will be asking you about:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;your career history&lt;/li&gt;
-&lt;li&gt;your job search (why you’re looking, why is LinkedIn interesting, what technologies are you interested in)&lt;/li&gt;
-&lt;li&gt;and an overview of interesting projects you worked on, and your involvement in these projects.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-manipulation-45mins&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Manipulation (45mins):&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal: assess ability to manipulate and analyze data for extracting insights&lt;/li&gt;
-&lt;li&gt;Usually at least 1 SQL question + 1 R or Python question&lt;/li&gt;
-&lt;li&gt;Familiarity with SQL AND R or Python is required for Senior Data Scientist.&lt;/li&gt;
-&lt;li&gt;Determine familiarity of advanced analytical functions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;analytics-case-study-45mins&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Analytics Case Study (45mins):&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;To assess ability to solve a business case with the right analytical approach and reasonable data intuition; and the ability to make relevant product recommendation based on data insights. _ Asses your familiarity with the LinkedIn Platform&lt;/li&gt;
-&lt;li&gt;Ability to correctly communicate and present solutions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;statistical-modeling-45mins&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Statistical Modeling (45mins):&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Evaluate and asses analytical thinking and familiarity with the LinkedIn Platform.&lt;/li&gt;
-&lt;li&gt;Assess your ability to take business context and translate to an analytical problem&lt;/li&gt;
-&lt;li&gt;Evaluate experience working with statistical modeling techniques&lt;/li&gt;
-&lt;li&gt;Testing/Training/Evaluating models&lt;/li&gt;
-&lt;li&gt;Asses knowledge of model methodologies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;statistics-ab-testing-45mins&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Statistics &amp;amp; A/B Testing (45mins):&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Design and analyze experimentations, understands basic stats concepts (e.g. hypothesis testing, mean, variance, probability distributions, sample size calculation, power calculation…) and how to apply them in a business setting.&lt;/li&gt;
-&lt;li&gt;For Sr DS, must show an in-depth understanding of A/B testing is needed (e.g. multi-variant testing, sample size calculation, power…)&lt;/li&gt;
-&lt;li&gt;Asses knowledge of probability&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Likely Interviewers:&lt;/h1&gt;
-&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Deep Dive&lt;/h2&gt;
-&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Users&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Metrics&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Current issues&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Competitors&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
-&lt;p&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;, &lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;, &lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;), &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;excitement-from-recruiter&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Excitement from Recruiter&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://engineering.linkedin.com/blog/2015/11/video--higher-ed-team-seeks-to-predict-collegiate-futures&#34;&gt;Student Future&lt;/a&gt;, a product to help high school students choose universities, based on entering a company and a role and seeing statistics about the schools that people with those jobs attended.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.linkedin.com/2015/07/29/inday-investing-in-our-employees-so-they-can-invest-in-themselves&#34;&gt;InDay&lt;/a&gt; – LinkedIn officially takes one day a month to allow employees to give back to the community, company, or themselves in some (themed) way.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://economicgraph.linkedin.com/resources/linkedin-workforce-report-may-2018&#34;&gt;Economics graph&lt;/a&gt; project that gives reports on skills gaps and migrations.&lt;/li&gt;
-&lt;li&gt;I noticed the job ad emails that I get seem based on my job search, possibly more-so than my skills.. Do you think you’d get more retention / engagement by recommending jobs based on skills or degrees and work history, rather than past searches? Or at least exploring this – randomizing emails to suggest jobs based on search vs based on skills and experience.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Onsite&lt;/h2&gt;
-&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Thu, 08 Aug 2019 15:00:52 +0000</pubDate>
+      <pubDate>Thu, 08 Aug 2019 17:55:13 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -277,7 +146,7 @@
 &lt;h2&gt;Likely Interviewers:&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/sebastiencouvidat/&#34;&gt;Sebastian&lt;/a&gt;,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Lead DS, 4y4m at Yelp&lt;/li&gt;
+&lt;li&gt;Lead DS, 4y 4m at Yelp&lt;/li&gt;
 &lt;li&gt;10 years in research at Stanford&lt;/li&gt;
 &lt;li&gt;Astrophysics postdoc&lt;/li&gt;
 &lt;li&gt;Coursera courses on finance and computational investing&lt;/li&gt;
@@ -328,12 +197,41 @@
 &lt;h2&gt;Schedule and Interviewers&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;12:45PM- Greet (Fahren)&lt;/li&gt;
-&lt;li&gt;1:00PM- &lt;a href=&#34;https://www.linkedin.com/in/sebastiencouvidat/&#34;&gt;Sebastien Couvidat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;1:45PM- &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2:30PM- &lt;a href=&#34;https://www.linkedin.com/in/nicholasmalecek/&#34;&gt;Nicholas Malecek&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3:15PM- &lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter Weir&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;4:00PM- Goodbye (Fahren)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;pm--sebastien-couvidat&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;1:00PM- &lt;a href=&#34;https://www.linkedin.com/in/sebastiencouvidat/&#34;&gt;Sebastien Couvidat&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lead DS, 4y 4m at Yelp&lt;/li&gt;
+&lt;li&gt;10 years in research at Stanford&lt;/li&gt;
+&lt;li&gt;Astrophysics postdoc&lt;/li&gt;
+&lt;li&gt;Coursera courses on finance and computational investing&lt;/li&gt;
+&lt;li&gt;Yelp Job responsibilities:&lt;/li&gt;
+&lt;li&gt;Data scientist in the consumer and mobile products division. Examples of activities include:&lt;/li&gt;
+&lt;li&gt;helping product managers and decision makers to reach fact-based decision&lt;/li&gt;
+&lt;li&gt;providing support to engineering teams for A/B test design and analysis&lt;/li&gt;
+&lt;li&gt;writing Python scripts to perform frequentist and Bayesian analysis of A/B tests&lt;/li&gt;
+&lt;li&gt;using machine-learning algorithms to predict revenue metrics and identify leads for sales force&lt;/li&gt;
+&lt;li&gt;providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.&lt;/li&gt;
+&lt;li&gt;testing the integrity and accuracy of some curated data in the company databases&lt;/li&gt;
+&lt;li&gt;implementing dashboard solutions for product managers for easy access to, and visualization of, relevant metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pm--yinghan-fu&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;1:45PM- &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pm--nicholas-malecek&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;2:30PM- &lt;a href=&#34;https://www.linkedin.com/in/nicholasmalecek/&#34;&gt;Nicholas Malecek&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pm--peter-weir&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;3:15PM- &lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter Weir&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;“Sell in May” Mode analysis&lt;/li&gt;
+&lt;li&gt;Neuroscience at Caltech&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pm--goodbye-fahren&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;4:00PM- Goodbye (Fahren)&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;prep-tips&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Prep Tips&lt;/h2&gt;
@@ -346,14 +244,42 @@
 &lt;p&gt;“Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.”&lt;/p&gt;
 &lt;p&gt;“elaborate on related projects from your resume”&lt;/p&gt;
 &lt;p&gt;PredictIt Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation:&lt;/li&gt;
+&lt;li&gt;Project:&lt;/li&gt;
+&lt;li&gt;Maybe sketch the fig of price for Trump win versus Republican win&lt;/li&gt;
+&lt;li&gt;I also aggregated data based on days until expiration, and applied a linear in log odds model at each day.&lt;/li&gt;
+&lt;li&gt;Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.&lt;/li&gt;
+&lt;li&gt;Result:&lt;/li&gt;
+&lt;li&gt;Value to Yelp: Relates to the economic patterns maybe?&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Strategy Inference Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation:&lt;/li&gt;
+&lt;li&gt;Project:&lt;/li&gt;
+&lt;li&gt;Children and adults might use different strategies when making decisions.&lt;/li&gt;
+&lt;li&gt;I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time.&lt;/li&gt;
+&lt;li&gt;Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.&lt;/li&gt;
+&lt;li&gt;Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings.&lt;/li&gt;
+&lt;li&gt;More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;General interest in decision making:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, … .&lt;/li&gt;
+&lt;li&gt;Excitement: Yelp is basically a giant experiment in multiattribute decision making.&lt;/li&gt;
+&lt;li&gt;Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Insight Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User funnel and user flow, maybe should have started at these simpler analyses&lt;/li&gt;
+&lt;li&gt;Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy&lt;/li&gt;
+&lt;li&gt;Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant&lt;/li&gt;
+&lt;li&gt;Chose random forests because it does a better job of pulling out important collinear features&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;product-metrics-or-experimentation&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Product metrics or experimentation&lt;/h3&gt;
 &lt;p&gt;“You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment.”&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -455,6 +381,143 @@
 &lt;li&gt;What is an n-gram?&lt;/li&gt;
 &lt;li&gt;Simple coding and high level ML questions&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LinkedIn Notes</title>
+      <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
+      <pubDate>Thu, 08 Aug 2019 17:31:05 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
+      <description>
+
+
+&lt;div id=&#34;company-visit&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Company Visit&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recruiter-call&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recruiter Call&lt;/h1&gt;
+&lt;p&gt;Graydon, sr recruiter at linkedin&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;talks about roles, … .&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;product team&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Role?&lt;/li&gt;
+&lt;li&gt;mission: create economic opportunity for members of workforce. Help people, as many as possiblt.&lt;/li&gt;
+&lt;li&gt;inclusivity – economic opportunity, and recommending users to recruiters.&lt;/li&gt;
+&lt;li&gt;How do we deploy products that highlight and empower users to&lt;/li&gt;
+&lt;li&gt;Smart Products: recommend learning products based on career progression&lt;/li&gt;
+&lt;li&gt;Business side: LinkedIn really white collar dominant, need to include blue-collar workers on LinkedIn..&lt;/li&gt;
+&lt;li&gt;Or.. partner with governemnts to address skills gaps..&lt;/li&gt;
+&lt;li&gt;for background and how it relates;;&lt;/li&gt;
+&lt;li&gt;“Take intelligent risk”: intelligent means is there data to support actions..? My job.&lt;/li&gt;
+&lt;li&gt;DS works closely with a product or user group, doing end to end functionality.. An opportunity to identify ways where things can be done better. –&lt;/li&gt;
+&lt;li&gt;END TO END proactive DS work:&lt;/li&gt;
+&lt;li&gt;interview towards a general profile – manipulation, problem solving, stats, … .&lt;/li&gt;
+&lt;li&gt;Allocate after passing onsite.&lt;/li&gt;
+&lt;li&gt;Some teams more ML, causal inference, experimentation.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;40 positions open now.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Expedite process? Onsite Friday..&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;directly to onsite.&lt;/li&gt;
+&lt;li&gt;will send a application for a data scientist. Will probably get application by end of week / later tonight. Make sure core skillset looks good.&lt;/li&gt;
+&lt;li&gt;apply, He’ll be notified, and send an introduction email to Shana for scheduling, onsite, offer.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Then Shana will assist through onsite process.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;can maybe have the onsite on Monday. will be flagged as urgent.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Next steps / interview timeline?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ping if I hear nothing by Friday.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Why linkedin – role sounded awesome when presented at Insight. After looking into LinkedIn more, I came across papers on inferring latent user types, and that kind of work is really interesting to me. Generally though, I’m interested in experimentation roles and sequential testing, efficient experimentation and optional stopping.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recruiter-email-ii-interviews&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recruiter email II – Interviews&lt;/h1&gt;
+&lt;p&gt;Here is the outline of what to expect from your onsite in terms of the structure:&lt;/p&gt;
+&lt;div id=&#34;host-leader-45-mins&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Host Leader (45 mins):&lt;/h2&gt;
+&lt;p&gt;One of the interviews will be done by a host manager; this person may, or may not, end up being the final hiring manager, but will be able to provide you with information on the different projects, engineering team culture, challenges, etc. He/she will be asking you about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;your career history&lt;/li&gt;
+&lt;li&gt;your job search (why you’re looking, why is LinkedIn interesting, what technologies are you interested in)&lt;/li&gt;
+&lt;li&gt;and an overview of interesting projects you worked on, and your involvement in these projects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-manipulation-45mins&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Manipulation (45mins):&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Goal: assess ability to manipulate and analyze data for extracting insights&lt;/li&gt;
+&lt;li&gt;Usually at least 1 SQL question + 1 R or Python question&lt;/li&gt;
+&lt;li&gt;Familiarity with SQL AND R or Python is required for Senior Data Scientist.&lt;/li&gt;
+&lt;li&gt;Determine familiarity of advanced analytical functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analytics-case-study-45mins&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Analytics Case Study (45mins):&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To assess ability to solve a business case with the right analytical approach and reasonable data intuition; and the ability to make relevant product recommendation based on data insights. _ Asses your familiarity with the LinkedIn Platform&lt;/li&gt;
+&lt;li&gt;Ability to correctly communicate and present solutions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;statistical-modeling-45mins&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Statistical Modeling (45mins):&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Evaluate and asses analytical thinking and familiarity with the LinkedIn Platform.&lt;/li&gt;
+&lt;li&gt;Assess your ability to take business context and translate to an analytical problem&lt;/li&gt;
+&lt;li&gt;Evaluate experience working with statistical modeling techniques&lt;/li&gt;
+&lt;li&gt;Testing/Training/Evaluating models&lt;/li&gt;
+&lt;li&gt;Asses knowledge of model methodologies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;statistics-ab-testing-45mins&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Statistics &amp;amp; A/B Testing (45mins):&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Design and analyze experimentations, understands basic stats concepts (e.g. hypothesis testing, mean, variance, probability distributions, sample size calculation, power calculation…) and how to apply them in a business setting.&lt;/li&gt;
+&lt;li&gt;For Sr DS, must show an in-depth understanding of A/B testing is needed (e.g. multi-variant testing, sample size calculation, power…)&lt;/li&gt;
+&lt;li&gt;Asses knowledge of probability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likely-interviewers&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Likely Interviewers:&lt;/h1&gt;
+&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Deep Dive&lt;/h2&gt;
+&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Users&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Metrics&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Current issues&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Competitors&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ideas and excitement&lt;/h3&gt;
+&lt;p&gt;Ideas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’ve been interested in consulting work. LinkedIn seems to be in an excellent position to become a platform or marketplace for consultants or freelance work.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Excitement:&lt;/p&gt;
+&lt;p&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;, &lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;, &lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;), &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;excitement-from-recruiter&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Excitement from Recruiter&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://engineering.linkedin.com/blog/2015/11/video--higher-ed-team-seeks-to-predict-collegiate-futures&#34;&gt;Student Future&lt;/a&gt;, a product to help high school students choose universities, based on entering a company and a role and seeing statistics about the schools that people with those jobs attended.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.linkedin.com/2015/07/29/inday-investing-in-our-employees-so-they-can-invest-in-themselves&#34;&gt;InDay&lt;/a&gt; – LinkedIn officially takes one day a month to allow employees to give back to the community, company, or themselves in some (themed) way.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://economicgraph.linkedin.com/resources/linkedin-workforce-report-may-2018&#34;&gt;Economics graph&lt;/a&gt; project that gives reports on skills gaps and migrations.&lt;/li&gt;
+&lt;li&gt;I noticed the job ad emails that I get seem based on my job search, possibly more-so than my skills.. Do you think you’d get more retention / engagement by recommending jobs based on skills or degrees and work history, rather than past searches? Or at least exploring this – randomizing emails to suggest jobs based on search vs based on skills and experience.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;onsite&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Onsite&lt;/h2&gt;
+&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Glassdoor interview questions&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

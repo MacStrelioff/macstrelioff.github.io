@@ -108,10 +108,9 @@ can send panel and links to their linkedin -- meeting with four folks. [Sebastia
 
 ## Likely Interviewers: 
 
-
 [Sebastian](https://www.linkedin.com/in/sebastiencouvidat/), 
 
-- Lead DS, 4y4m at Yelp
+- Lead DS, 4y 4m at Yelp
 - 10 years in research at Stanford
 - Astrophysics postdoc
 - Coursera courses on finance and computational investing
@@ -172,11 +171,33 @@ Projects I have done:
 ## Schedule and Interviewers
 
 - 12:45PM- Greet (Fahren)
-- 1:00PM- [Sebastien Couvidat](https://www.linkedin.com/in/sebastiencouvidat/)
-- 1:45PM- [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)
-- 2:30PM- [Nicholas Malecek](https://www.linkedin.com/in/nicholasmalecek/)
-- 3:15PM- [Peter Weir](https://www.linkedin.com/in/peter-weir/)
-- 4:00PM- Goodbye (Fahren)
+
+### 1:00PM- [Sebastien Couvidat](https://www.linkedin.com/in/sebastiencouvidat/)
+
+- Lead DS, 4y 4m at Yelp
+- 10 years in research at Stanford
+- Astrophysics postdoc
+- Coursera courses on finance and computational investing
+- Yelp Job responsibilities: 
+- Data scientist in the consumer and mobile products division. Examples of activities include:
+- helping product managers and decision makers to reach fact-based decision
+- providing support to engineering teams for A/B test design and analysis
+- writing Python scripts to perform frequentist and Bayesian analysis of A/B tests
+- using machine-learning algorithms to predict revenue metrics and identify leads for sales force
+- providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.
+- testing the integrity and accuracy of some curated data in the company databases
+- implementing dashboard solutions for product managers for easy access to, and visualization of, relevant metrics
+
+### 1:45PM- [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)
+
+### 2:30PM- [Nicholas Malecek](https://www.linkedin.com/in/nicholasmalecek/)
+
+### 3:15PM- [Peter Weir](https://www.linkedin.com/in/peter-weir/)
+
+- "Sell in May" Mode analysis
+- Neuroscience at Caltech
+
+### 4:00PM- Goodbye (Fahren)
 
 ## Prep Tips
 
@@ -195,15 +216,40 @@ The team will also focus on why you want to be a part of the Yelp team! -- look 
 
 PredictIt Project:
 
+- Situation: 
+- Project: 
+- Maybe sketch the fig of price for Trump win versus Republican win
+- I also aggregated data based on days until expiration, and applied a linear in log odds model at each day. 
+- Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.
+- Result: 
+- Value to Yelp: Relates to the economic patterns maybe? 
 
 Strategy Inference Project:
 
+- Situation: 
+- Project: 
+- Children and adults might use different strategies when making decisions. 
+- I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time. 
+- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
+- Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user's decisions. This informaiton could then be used to modify search rankings. 
+- More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings. 
 
+General interest in decision making: 
+
+- Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, ... . 
+- Excitement: Yelp is basically a giant experiment in multiattribute decision making. 
+- Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers. 
+
+Insight Project: 
+
+- User funnel and user flow, maybe should have started at these simpler analyses
+- Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy
+- Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant
+- Chose random forests because it does a better job of pulling out important collinear features
 
 ### Product metrics or experimentation
 "You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment."
 
-### 
 
 # Deep Dive
 
