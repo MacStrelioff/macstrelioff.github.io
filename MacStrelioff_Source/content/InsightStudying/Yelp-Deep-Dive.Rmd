@@ -177,12 +177,12 @@ Projects I have done:
 - Lead DS, 4y 4m at Yelp
 - 10 years in research at Stanford
 - Astrophysics postdoc
-- Coursera courses on finance and computational investing
+- *Coursera courses on finance and computational investing
 - Yelp Job responsibilities: 
 - Data scientist in the consumer and mobile products division. Examples of activities include:
 - helping product managers and decision makers to reach fact-based decision
 - providing support to engineering teams for A/B test design and analysis
-- writing Python scripts to perform frequentist and Bayesian analysis of A/B tests
+- ** writing Python scripts to perform frequentist and Bayesian analysis of A/B tests
 - using machine-learning algorithms to predict revenue metrics and identify leads for sales force
 - providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.
 - testing the integrity and accuracy of some curated data in the company databases
@@ -190,7 +190,11 @@ Projects I have done:
 
 ### 1:45PM- [Yinghan Fu](https://www.linkedin.com/in/yinghanfu/)
 
+- Physics and biophysics
+
 ### 2:30PM- [Nicholas Malecek](https://www.linkedin.com/in/nicholasmalecek/)
+
+- Cog sci and Neurosci background!
 
 ### 3:15PM- [Peter Weir](https://www.linkedin.com/in/peter-weir/)
 
@@ -250,6 +254,9 @@ Insight Project:
 ### Product metrics or experimentation
 "You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment."
 
+### General questions: 
+
+- One of Yelp's values is Tenaciousness -- can you give some examples of how that manefists on a data science team? 
 
 # Deep Dive
 

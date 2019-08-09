@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Thu, 08 Aug 2019 17:55:13 +0000</pubDate>
+      <pubDate>Thu, 08 Aug 2019 19:14:49 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -204,12 +204,12 @@
 &lt;li&gt;Lead DS, 4y 4m at Yelp&lt;/li&gt;
 &lt;li&gt;10 years in research at Stanford&lt;/li&gt;
 &lt;li&gt;Astrophysics postdoc&lt;/li&gt;
-&lt;li&gt;Coursera courses on finance and computational investing&lt;/li&gt;
+&lt;li&gt;*Coursera courses on finance and computational investing&lt;/li&gt;
 &lt;li&gt;Yelp Job responsibilities:&lt;/li&gt;
 &lt;li&gt;Data scientist in the consumer and mobile products division. Examples of activities include:&lt;/li&gt;
 &lt;li&gt;helping product managers and decision makers to reach fact-based decision&lt;/li&gt;
 &lt;li&gt;providing support to engineering teams for A/B test design and analysis&lt;/li&gt;
-&lt;li&gt;writing Python scripts to perform frequentist and Bayesian analysis of A/B tests&lt;/li&gt;
+&lt;li&gt;** writing Python scripts to perform frequentist and Bayesian analysis of A/B tests&lt;/li&gt;
 &lt;li&gt;using machine-learning algorithms to predict revenue metrics and identify leads for sales force&lt;/li&gt;
 &lt;li&gt;providing support to PR team for data-driven newspaper articles, blogs, news releases, etc.&lt;/li&gt;
 &lt;li&gt;testing the integrity and accuracy of some curated data in the company databases&lt;/li&gt;
@@ -218,9 +218,15 @@
 &lt;/div&gt;
 &lt;div id=&#34;pm--yinghan-fu&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;1:45PM- &lt;a href=&#34;https://www.linkedin.com/in/yinghanfu/&#34;&gt;Yinghan Fu&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Physics and biophysics&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;pm--nicholas-malecek&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;2:30PM- &lt;a href=&#34;https://www.linkedin.com/in/nicholasmalecek/&#34;&gt;Nicholas Malecek&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cog sci and Neurosci background!&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;pm--peter-weir&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;3:15PM- &lt;a href=&#34;https://www.linkedin.com/in/peter-weir/&#34;&gt;Peter Weir&lt;/a&gt;&lt;/h3&gt;
@@ -280,6 +286,12 @@
 &lt;div id=&#34;product-metrics-or-experimentation&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Product metrics or experimentation&lt;/h3&gt;
 &lt;p&gt;“You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment.”&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;general-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;General questions:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;One of Yelp’s values is Tenaciousness – can you give some examples of how that manefists on a data science team?&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
