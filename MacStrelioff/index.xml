@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/yelp-deep-dive/</link>
-      <pubDate>Fri, 09 Aug 2019 09:47:26 +0000</pubDate>
+      <pubDate>Fri, 09 Aug 2019 10:16:30 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>
@@ -308,6 +308,9 @@
 &lt;div id=&#34;user-flows-and-metrics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;User Flows and Metrics&lt;/h2&gt;
 &lt;p&gt;Thinking of the broader user flow can help with identifying measurable events within that flow (metrics). Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;good source for some key &lt;a href=&#34;https://www.yelp.com/knowledge&#34;&gt;metrics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;on-web&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;On Web&lt;/h3&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;

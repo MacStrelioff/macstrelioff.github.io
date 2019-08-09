@@ -271,6 +271,8 @@ Insight Project:
 Thinking of the broader user flow can help with identifying measurable events within that flow (metrics).
 Overall, consider units of individuals (accounts, unique visitors, cookies, IPs...), units of time (daily, weekly), and referents (week over week, ...)
 
+- good source for some key [metrics](https://www.yelp.com/knowledge)
+
 ### On Web
 
 1. Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one. 
