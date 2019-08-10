@@ -90,6 +90,8 @@ One of the interviews will be done by a host manager; this person may, or may no
 - your job search (why you’re looking, why is LinkedIn interesting, what technologies are you interested in)
 - and an overview of interesting projects you worked on, and your involvement in these projects.
 
+
+
 ## Data Manipulation (45mins):
 
 - Goal: assess ability to manipulate and analyze data for extracting insights
@@ -97,11 +99,15 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Familiarity with SQL AND R or Python is required for Senior Data Scientist.
 - Determine familiarity of advanced analytical functions
 
+
+
 ## Analytics Case Study (45mins):
 
 - To assess ability to solve a business case with the right analytical approach and reasonable data intuition; and the ability to make relevant product recommendation based on data insights.
 _ Asses your familiarity with the LinkedIn Platform
 - Ability to correctly communicate and present solutions
+
+
 
 ## Statistical Modeling (45mins):
 
@@ -111,6 +117,7 @@ _ Asses your familiarity with the LinkedIn Platform
 - Testing/Training/Evaluating models
 - Asses knowledge of model methodologies
  
+
 
 ## Statistics & A/B Testing (45mins):
 
