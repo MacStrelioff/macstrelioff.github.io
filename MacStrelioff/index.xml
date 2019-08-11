@@ -38,7 +38,7 @@
     <item>
       <title>LinkedIn Notes</title>
       <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Sat, 10 Aug 2019 15:34:56 +0000</pubDate>
+      <pubDate>Sun, 11 Aug 2019 09:51:31 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
       <description>
@@ -104,7 +104,14 @@
 &lt;ul&gt;
 &lt;li&gt;your career history&lt;/li&gt;
 &lt;li&gt;your job search (why you’re looking, why is LinkedIn interesting, what technologies are you interested in)&lt;/li&gt;
-&lt;li&gt;and an overview of interesting projects you worked on, and your involvement in these projects.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;and an overview of interesting projects you worked on, and your involvement in these projects.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;History: PredictIt project, strategy inference, decision making&lt;/li&gt;
+&lt;li&gt;Job Search: Generally like experimentation roles. I was first interested in LinkedIn because the anti-abuse team sounded awesome. I also liked the demo experience, there was a big turn out, and people seemed engaged. But overall the most exciting thing to me has been how company culture manifests in things like InDay, where individual across the company take time to give back to the community. I also really like the value that LinkedIn adds, and the direction LinkedIn seems to be going in, in terms of identifying the skills a person can learn to advance their career and advertising helpful resources to them. Thinking about my own journey through academia and now into data science, I spent a lot of time browsing Coursera, YouTube, and various online resources – I can imagine LinkedIn learning becoming a streamlined product for independent lerarning that basically syncs with your professional LinkedIn profile.&lt;/li&gt;
+&lt;li&gt;I like the idea to &lt;a href=&#34;https://engineering.linkedin.com/blog/2015/11/video--higher-ed-team-seeks-to-predict-collegiate-futures&#34;&gt;engage high school students&lt;/a&gt;, and opening access to knowledge of hiring practices, career trajectories, and salary ranges. I come from a family of construction workers, so I was very much a black swan while figuring out how to navigate through community college, undergraduate school, and graduate school, and now into a technical career. I grew up in ‘blue collar’ world, and broke into the academic world, and now I’m jumping into ‘white collar’ technical industry world. This was really hard, and required a lot of self-learning and building professional relationships – so I very much understand the value that LinkedIn can add for people like me.&lt;/li&gt;
+&lt;li&gt;So yeah I can see LinkedIn as something that moderates the education market, and the labor market – and based on my experiences navigating these things mostly on my own, I’d be really interested in contributing to products that democratize education and professional connections.&lt;/li&gt;
+&lt;li&gt;Also really interested in the almost academic work that has come out of LinkedIn – I found papers on inferring user attributes, which is a very similar problem to one of my favorite projects in grad school. For that project I (kid gambling, strategy inference project).&lt;/li&gt;
+&lt;li&gt;Also interested in the economics work (see others in ‘excitement’ section below)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Overall, exciting work and a culture / mission / potential that resonates with me.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-manipulation-45mins&#34; class=&#34;section level2&#34;&gt;
@@ -131,6 +138,11 @@
 &lt;li&gt;Evaluate experience working with statistical modeling techniques&lt;/li&gt;
 &lt;li&gt;Testing/Training/Evaluating models&lt;/li&gt;
 &lt;li&gt;Asses knowledge of model methodologies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TODO:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LOOK UP OVERFITTING, and how to detect it&lt;/li&gt;
+&lt;li&gt;Look up confusion martix&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;statistics-ab-testing-45mins&#34; class=&#34;section level2&#34;&gt;
