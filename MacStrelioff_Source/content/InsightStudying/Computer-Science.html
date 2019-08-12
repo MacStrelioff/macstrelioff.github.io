@@ -1,7 +1,7 @@
 ---
 title: "Basic Computer Science"
 author: "Mac Strelioff"
-date: "2019-08-05 14:56:53"
+date: "2019-08-11 17:19:11"
 output:
   blogdown::html_page:
     toc: true
@@ -447,15 +447,22 @@ print(count)</code></pre>
 <h3>General Structure of SQL querys</h3>
 <p><a href="https://sqlbolt.com/lesson/select_queries_order_of_execution">Order of execution for clauses below</a></p>
 <p>```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]</p>
-<p>FROM (table to select from)</p>
+<p>FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals]</p>
 <p>WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery)</p>
-<p>GROUP BY</p>
-<p>HAVING (constraint on grouped rows)</p>
+<p>GROUP BY (column[,column,…])</p>
+<p>HAVING [AGGREGATION(column) condition]</p>
 <p>LIMIT n [OFFSET m]</p>
 <p>```</p>
-<p>The <code>SELECT</code> clause can contain aggregations, and subqueries.</p>
-<p>The <code>FROM</code> clause can contain joins.</p>
-<p>The <code>WHERE</code> clause can also contain sub queries.</p>
+<ul>
+<li><code>SELECT</code> clause can contain columns, aggregations, window functions, and subqueries.</li>
+<li><code>FROM</code> clause can contain a single table, or joins between tables</li>
+<li><code>JOIN</code>s are useful for appending tables as columns, versus</li>
+<li><code>ON</code> filters the table that is returned from the JOIN – it acts similarly to the WHERE clause.</li>
+<li><code>WHERE</code> clause filters the table retreived by FROM can also contain sub queries, and can perform the same filtering as <code>ON</code></li>
+<li><code>GROUP BY</code> groups by a single column or a set of values if given multiple columns</li>
+<li><code>HAVING</code> can be used to filter groups based on an aggregation function</li>
+<li><code>UNION</code> appends tables as rows</li>
+</ul>
 </div>
 <div id="aggregation-functions" class="section level3">
 <h3>Aggregation functions</h3>
@@ -466,6 +473,11 @@ print(count)</code></pre>
 <h3>Window functions</h3>
 <p><a href="https://pgexercises.com/questions/aggregates/countmembers.html">Orver() explained here</a>. Some more detailed information <a href="http://www.sqlservertutorial.net/sql-server-window-functions/">here</a>.</p>
 <p>Window functions include <code>OVER()</code> and <code>ROW_NUMBER()</code>. They take two optional arguments, <code>PARTITION BY</code> and <code>ORDER BY</code>.</p>
+<ul>
+<li><code>RANK() OVER([partition_by_clause] order_by_clause)</code>: ranks the column specified in the order by clause, ties are assigned the same rank and result in skipped values</li>
+<li><code>DENSE_RANK() OVER([partition_by_clause] order_by_clause)</code>: ranks the column specified in the order by clause, ties are assigned the same rank, but no rank number is skipped</li>
+<li><code>LAG(column,lag) OVER([partition_by_clause] order_by_clause)</code>: Retreives values from a <code>lag</code> rows before, see <a href="http://www.mysqltutorial.org/mysql-window-functions/mysql-lag-function/">example with a partition here</a>.</li>
+</ul>
 </div>
 <div id="tricks" class="section level3">
 <h3>Tricks:</h3>

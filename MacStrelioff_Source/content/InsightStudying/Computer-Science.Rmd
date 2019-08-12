@@ -418,25 +418,30 @@ git for version control (resolving merge conflicts)
 ```{, eval=FALSE, echo=TRUE}
 SELECT (column names to select) [AS (name for selection)]
 
-FROM (table to select from)
+FROM (table to select from) 
+[INNER,LEFT,RIGHT,OUTTER] JOIN table2 
+ON [join keys and conditionals]
 
 WHERE (logical condition on rows)
   column = (value or subquery),
   OR column IN (list or subquery)
   
-GROUP BY 
+GROUP BY (column[,column,...])
 
-HAVING (constraint on grouped rows)
+HAVING [AGGREGATION(column) condition]
   
 LIMIT n [OFFSET m]
 
 ```
 
-The `SELECT` clause can contain aggregations, and subqueries. 
-
-The `FROM` clause can contain joins.
-
-The `WHERE` clause can also contain sub queries.
+- `SELECT` clause can contain columns, aggregations, window functions, and subqueries. 
+- `FROM` clause can contain a single table, or joins between tables
+- `JOIN`s are useful for appending tables as columns, versus 
+- `ON` filters the table that is returned from the JOIN -- it acts similarly to the WHERE clause.
+- `WHERE` clause filters the table retreived by FROM can also contain sub queries, and can perform the same filtering as `ON`
+- `GROUP BY` groups by a single column or a set of values if given multiple columns
+- `HAVING` can be used to filter groups based on an aggregation function
+- `UNION` appends tables as rows
 
 ### Aggregation functions
 
@@ -449,6 +454,10 @@ The `GROUP BY` clause can contain `GROUPING SETS`, such as a `ROLLUP()` and `CUB
 [Orver() explained here](https://pgexercises.com/questions/aggregates/countmembers.html). Some more detailed information [here](http://www.sqlservertutorial.net/sql-server-window-functions/).
 
 Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arguments, `PARTITION BY` and `ORDER BY`. 
+
+- `RANK() OVER([partition_by_clause] order_by_clause)`: ranks the column specified in the order by clause, ties are assigned the same rank and result in skipped values
+- `DENSE_RANK() OVER([partition_by_clause] order_by_clause)`: ranks the column specified in the order by clause, ties are assigned the same rank, but no rank number is skipped
+- `LAG(column,lag) OVER([partition_by_clause] order_by_clause)`: Retreives values from a `lag` rows before, see [example with a partition here](http://www.mysqltutorial.org/mysql-window-functions/mysql-lag-function/).
 
 ### Tricks: 
 
