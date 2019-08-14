@@ -97,7 +97,7 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Also really interested in the almost academic work that has come out of LinkedIn -- I found papers on inferring user attributes, which is a very similar problem to one of my favorite projects in grad school. For that project I (kid gambling, strategy inference project). 
 - Also interested in the economics work (see others in 'excitement' section below)
 - Overall, exciting work and a culture / mission / potential that resonates with me. 
-
+- Online Bayesian Logistic Regression: 
 
 ## Data Manipulation (45mins):
 
@@ -113,6 +113,11 @@ One of the interviews will be done by a host manager; this person may, or may no
 _ Asses your familiarity with the LinkedIn Platform
 - Ability to correctly communicate and present solutions
 
+LinkedIn Metrics: 
+
+- VPI (views per impression) for a job recommendation
+- API (applications per impression) for a job application
+- Job fits: Person-Environment (P-E) -- comprised of Person-Organization (P-O), Person-Vocation (P-V), Person-Group (P-G), and Person-Job (P-J) fits
 
 ## Statistical Modeling (45mins):
 
