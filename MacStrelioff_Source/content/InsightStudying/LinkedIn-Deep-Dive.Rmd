@@ -140,8 +140,20 @@ LinkedIn Metrics:
 - Asses knowledge of probability
 
 
+# Schedule and interviewers:
 
-# Likely Interviewers: 
+
+- 10:00 AM – 10:45 AM | Host Manager | [Joonhyung Lim](https://www.linkedin.com/in/joonlim/)
+- Growth, user acquisition, and user onboarding
+- 10:45 AM – 11:30 AM | Statistical Modeling | Dongping Jing and [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/)
+- [Dongping (sunny) Jing](https://www.linkedin.com/in/sunny-jing-ab530848/)
+- 
+- [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/)
+- 
+- 11:30 AM – 12:30 PM | Lunch | [Nuo Wang](https://www.linkedin.com/in/nuo-w-486b3027/)
+- 12:30 PM – 1:15 PM | Data Manipulation | [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/)
+- 1:15 PM – 2:00 PM | Stats A/B Testing | [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) and [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/)
+- 2:00 PM – 2:45 PM | Product Case Study | [Gigi Zhang](https://www.linkedin.com/in/gigizhezhang/)
 
 
 
@@ -150,10 +162,9 @@ LinkedIn Metrics:
 
 ### Users
 
-### Metrics
-
-
 ### Current issues
+
+GROWTH: LinkedIn is now backed by microsoft, wants to develop new products, and acquire more users -- particularly those in underserved segments like blue collar labor. 
 
 ### Competitors
 
@@ -162,8 +173,10 @@ LinkedIn Metrics:
 
 Ideas: 
 
-- I've been interested in consulting work. LinkedIn seems to be in an excellent position to become a platform or marketplace for consultants or freelance work.
-- 
+- For blue collar workers, again become a marketplace, somewhere where contractors (blue collar) can meet with clients, similar to Yelp's segment for contractors. 
+- Insight, lots of other interview prep that LinkedIn might be able to assist with.. Eg resume review verticals, behavioral interview questions, mock interviewing services, Coding practice like LeetCode (see that this is being worked in with skill quizes).
+- The AirBnb or Uber of consulting / freelance work. I've been interested in consulting work. LinkedIn seems to be in an excellent position to become a platform or marketplace for consultants or freelance work.
+- lower level education, which LinkedIn is already working on with their student future products (students can see what colleges are associated with careers and companies they like).
 
 Excitement:
 
