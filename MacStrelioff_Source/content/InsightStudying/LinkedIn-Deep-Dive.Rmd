@@ -256,47 +256,43 @@ def rand7(num):
 
 b= np.zeros(100000)
 for count in range(100000):
-    b[count] = rand7(11)
-_= plt.hist(b) # not prettified, but this is for test only
+    b[count] = rand7(7)
+_= plt.hist(b) 
 Counter(b)
 ```
 
-design A/B test  
-SQL, Coding (R/Python), Product Case, Machine Learning, Stats  
-How many active members in LinkedIn right now? What is the business model at LinkedIn? Basic SQL as long as you finished most of questions in Hackerrank.  
-Seemed every interviewer asked a variant of an A/B test for the homepage.  
-design recommendation engine for jobs  
-Talk about a product that you wanna build at linkedin  
-generating a sorted vector from two sorted vectors.  
-A few simple SQL queries with joins.  
-Product analytics case study around Linkedin profile  
-Using a set of tables, how would we find out whether users have a certain feature on or off?  
-There is a table of page view data. Two columns: Member ID and time stamp. You can assume this is for a 24 hour period. Members vs. guests/visitors are differentiable via ID's. Have to come up with a method for determining which all activities are crawler related (and not my members) and write a query for the same as well.  
-How can you help to improve sales given a LinkedIn database  
-What is the optimization problem for a SVM?  
-How many lines do you think a users' daily login table has? And a general SQL question about joining two table with some conditions.  
-What product metrics do you construct? How to tell if your experiment is successful?  
-I was asked to come up with some of the factors that could be used to produce certain algorithms ('people you may know,' and an algorithm to discover when a person is starting to search for new job).  
-The Interviewer ask the running up staircase with n steps quesion which need to get how many possible ways to run up the stairs. Each time you can hop either 1 step, 2 steps or 3 steps at a time. In addition, he asks some question about my research such as graph algorithms.
-I had 3 phone interviews with Linkedin data scientists. Everyone I spoke to was very bright, thoughtful and polite and made a great impression. On the first two calls I was asked how I would solve some of the problems Linkedin worked on (ex: people you may know) and on the third call I had a more technical coding interview. However I didn't have a machine learning background at the time, so they did not give me an offer but encouraged me to e-apply after I had taken some of the machine learning classes I was planning to take the next semester. Considering how little machine learning I knew at the time it's a wonder they even gave me a first interview, let alone 3.
 
-I was first contacted by a recruiter. Two phone interviews were arranged. The first interviewer asked some basic questions about my resume and then we went into the technical questions. Two questions were asked, both about searching in sorted arrays of numbers. The second interview was almost identical, except that the question was more about algorithm design, which required general problem solving skill.
+- How many active members in LinkedIn right now? What is the business model at LinkedIn? Basic SQL as long as you finished most of questions in Hackerrank.  
+- design recommendation engine for jobs
+- How can you help to improve sales given a LinkedIn database  
+- Talk about a product that you wanna build at linkedin  
+- Product analytics case study around Linkedin profile  
+- There is a table of page view data. Two columns: Member ID and time stamp. You can assume this is for a 24 hour period. Members vs. guests/visitors are differentiable via ID's. Have to come up with a method for determining which all activities are crawler related (and not my members) and write a query for the same as well.  
+- Using a set of tables, how would we find out whether users have a certain feature on or off?  
+- What is the optimization problem for a SVM?  
+- How many lines do you think a users' daily login table has? And a general SQL question about joining two table with some conditions.  
+- What product metrics do you construct? How to tell if your experiment is successful?  
+- I was asked to come up with some of the factors that could be used to produce certain algorithms ('people you may know,' and an algorithm to discover when a person is starting to search for new job).  
+- The Interviewer ask the running up staircase with n steps quesion which need to get how many possible ways to run up the stairs. Each time you can hop either 1 step, 2 steps or 3 steps at a time. In addition, he asks some question about my research such as graph algorithms.
+- I had 3 phone interviews with Linkedin data scientists. Everyone I spoke to was very bright, thoughtful and polite and made a great impression. On the first two calls I was asked how I would solve some of the problems Linkedin worked on (ex: people you may know) and on the third call I had a more technical coding interview. However I didn't have a machine learning background at the time, so they did not give me an offer but encouraged me to e-apply after I had taken some of the machine learning classes I was planning to take the next semester. Considering how little machine learning I knew at the time it's a wonder they even gave me a first interview, let alone 3.
+- There is a significant increase in linkedin signups in this month. How much of this will you attribute to the changes you made in signup process. What data-points would you look into to confirm/deny this?  
+- Implement pow function. 
+- Segment a long string into a set of valid words using a dictionary. Return false if the string cannot be segmented. What is the complexity of your solution? 
+- find out k most frequent numbers from incoming stream of numbers one the fly.
+- generating a sorted vector from two sorted vectors.  
 
-I don't recall exactly, but they asked about how I would approach several scenarios. This would be very difficult to answer well if you have not worked at a similar company and know what sorts of data are available to answer the question.  
 
-I passed the first phone screen (basic data mining questions, including the concepts of classification and clustering; and a simple dp question which is quite similar to "Climbing Stairs"), and failed the second one right after I came back from another state (basic nlp questions, like named entity extraction, and basic data mining questions, like SVM, naive bayes; and a sampling question which is quite similar to Reservoir sampling).  … 
-
-I had four rounds of interviews in total and all were video. The first interview was to test my SQL/R coding skills. The second interview was around experimenation - A/B testing, metrics etc., The third interview was on a bit of probability, machine learning techniques . The final one was with director of data science on a case study related to some linkedin scenarios and overall career interests. Even though all the interviews were set-up without any delay, what surprised me is that I didn't receive any response from the HR after all the interviews. I followed up for a month or so multiple times, but I received absolutely no response, which I have no clue why.
-
-There is a significant increase in linkedin signups in this month. How much of this will you attribute to the changes you made in signup process. What data-points would you look into to confirm/deny this?  
-
-Questions around current / previous experience and education. Important metrics to think of in relation to LinkedIn data, to be included in dashboards available to executive level. Questions around SQL, R, and Python.  
-
-Implement pow function.  
-
-Segment a long string into a set of valid words using a dictionary. Return false if the string cannot be segmented. What is the complexity of your solution?  
-
-find out k most frequent numbers from incoming stream of numbers one the fly.  
+- Seemed every interviewer asked a variant of an A/B test for the homepage.  
+- design A/B test  
+- SQL, Coding (R/Python), Product Case, Machine Learning, Stats  
+- A few simple SQL queries with joins.  
+- Two questions were asked, both about searching in sorted arrays of numbers. The second interview was almost identical, except that the question was more about algorithm design, which required general problem solving skill.
+- I don't recall exactly, but they asked about how I would approach several scenarios. This would be very difficult to answer well if you have not worked at a similar company and know what sorts of data are available to answer the question.  
+- basic data mining questions, including the concepts of classification and clustering; and a simple dp question which is quite similar to "Climbing Stairs", and failed the second one right after I came back from another state (basic nlp questions, like named entity extraction, and basic data mining questions, like SVM, naive bayes; and a sampling question which is quite similar to Reservoir sampling).  
+- The first interview was to test my SQL/R coding skills. The second interview was around experimenation - A/B testing, metrics etc., The third interview was on a bit of probability, machine learning techniques . The final one was with director of data science on a case study related to some linkedin scenarios and overall career interests. Even though all the interviews were set-up without any delay, what surprised me is that I didn't receive any response from the HR after all the interviews. I followed up for a month or so multiple times, but I received absolutely no response, which I have no clue why.
+- Questions around current / previous experience and education. 
+- Important metrics to think of in relation to LinkedIn data, to be included in dashboards available to executive level. 
+- Questions around SQL, R, and Python.  
 
 
 
