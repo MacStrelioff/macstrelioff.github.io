@@ -128,20 +128,31 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Testing/Training/Evaluating models
 - Asses knowledge of model methodologies
 
-- [Dongping (sunny) Jing](https://www.linkedin.com/in/sunny-jing-ab530848/)
-- 
-
 - [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/)
+- 9yrs
+- Working on Publishing - our news writing and news reading experience. Trying to answer questions like;
+- Can we tell that something is relevant or good before anyone has even seen it? 
+- Are our top writers/ influencers happy when we make changes on the site?
+
+
+- [Dongping (sunny) Jing](https://www.linkedin.com/in/sunny-jing-ab530848/)
+- Market research and product analytics
+- Connection Requests Deepdive for Network PVOM; MoT Drivers Analysis; ABI Funnel Deepdive; Unwanted Invites Analysis
+- proof of concept (POC), another term, not mentioned; proof of value (PoV)
+- Market Research Analytics: Developing product journey data for all product areas (wvmp, abi, jymbii, etc...) and finding important drivers of NPS and MoT Surveys through Machine Learning and Statistical analysis; 
 - 
 
  TODO: 
  
  - LOOK UP OVERFITTING, and how to detect it
  - Look up confusion martix
+ - Look into POC, POV
 
 ## 11:30-12:30 | Lunch | [Nuo Wang](https://www.linkedin.com/in/nuo-w-486b3027/)
 
 - [Nuo Wang](https://www.linkedin.com/in/nuo-w-486b3027/)
+- 4yrs, 3 years in consumer behavior at other companies
+- LinkedIn Pages, Ads - I am hiring experienced DS who is passionate about shaping product roadmap and strategy through data!
 
 
 ## 12:30-1:15 | Data Manipulation | [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/):
@@ -152,7 +163,8 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Determine familiarity of advanced analytical functions
 
 - [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/)
-
+- 1yr, 2.5 yrs previous companies 
+- Behavior modeling and predictive analytics
 
 ## 1:15-2:00 | Statistics & A/B Testing | | [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) and [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/):
 
@@ -161,9 +173,12 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Asses knowledge of probability
 
 - [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) 
+- 2yrs
+- Statistics PhD, worked on fMRI and agent based modeling
 
 - [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/)
-
+- 2yrs, 2 yrs previous analytics
+- Data analyst with extensive experiences on increasing user engagement, improving product & campaign performance, and optimizing ROI with experimental (A/B test, MVT) & exploratory research (classification/clustering/regression).
 
 ## 2:00-2:45 | Analytics Case Study | [Gigi Zhang](https://www.linkedin.com/in/gigizhezhang/):
 
