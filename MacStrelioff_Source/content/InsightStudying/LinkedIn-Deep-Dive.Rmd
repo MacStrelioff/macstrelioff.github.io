@@ -6,6 +6,10 @@ menu:
   InsightStudying:
     parent: Foundations
     weight: 99
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 4
 math: yes
 linktitle: LinkedIn Deep Dive
 ---
@@ -76,19 +80,36 @@ Graydon, sr recruiter at linkedin
 
 - Why linkedin -- role sounded awesome when presented at Insight. After looking into LinkedIn more, I came across papers on inferring latent user types, and that kind of work is really interesting to me. Generally though, I'm interested in experimentation roles and sequential testing, efficient experimentation and optional stopping. 
 
-
-
-# Recruiter email II -- Interviews
+# Recruiter emails II \& III -- Interviews
 
 Here is the outline of what to expect from your onsite in terms of the structure:
 
-## Host Leader (45 mins):
+## Schedule and interviewers:
+
+- 10:00 AM – 10:45 AM | Host Manager | [Joonhyung Lim](https://www.linkedin.com/in/joonlim/)
+- Growth, user acquisition, and user onboarding
+- 10:45 AM – 11:30 AM | Statistical Modeling | Dongping Jing maybe [Dongping (sunny) Jing](https://www.linkedin.com/in/sunny-jing-ab530848/) and [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/)
+- 11:30 AM – 12:30 PM | Lunch | [Nuo Wang](https://www.linkedin.com/in/nuo-w-486b3027/)
+- 12:30 PM – 1:15 PM | Data Manipulation | [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/)
+- 1:15 PM – 2:00 PM | Stats A/B Testing | [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) and [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/)
+- 2:00 PM – 2:45 PM | Product Case Study | [Gigi Zhang](https://www.linkedin.com/in/gigizhezhang/)
+
+
+## 10:00-10:45 | Host Leader | [Joonhyung Lim](https://www.linkedin.com/in/joonlim/)
 
 One of the interviews will be done by a host manager; this person may, or may not, end up being the final hiring manager, but will be able to provide you with information on the different projects, engineering team culture, challenges, etc. He/she will be asking you about: 
 
 - your career history
 - your job search (why you’re looking, why is LinkedIn interesting, what technologies are you interested in)
 - and an overview of interesting projects you worked on, and your involvement in these projects.
+
+- [Joonhyung Lim](https://www.linkedin.com/in/joonlim/)
+- Growth, user acquisition, and user onboarding
+
+- Overall: Excited about their products, their work (experimentation research, psychology in terms of identifying who wants to change jobs and what opportunities would be attractive), and culture (InDay, creating economic opportunity for all).
+
+- Areas for growth: 
+- Services: resume drafting, job description drafting, HR system software for industry (could link it with corporate Office products) and get more data about the probability of an applicant attaining an offer. 
 
 - History: PredictIt project, strategy inference, decision making
 - Job Search: Generally like experimentation roles. I was first interested in LinkedIn because the anti-abuse team sounded awesome. I also liked the demo experience, there was a big turn out, and people seemed engaged. But overall the most exciting thing to me has been how company culture manifests in things like InDay, where individual across the company take time to give back to the community. I also really like the value that LinkedIn adds, and the direction LinkedIn seems to be going in, in terms of identifying the skills a person can learn to advance their career and advertising helpful resources to them. Thinking about my own journey through academia and now into data science, I spent a lot of time browsing Coursera, YouTube, and various online resources -- I can imagine LinkedIn learning becoming a streamlined product for independent lerarning that basically syncs with your professional LinkedIn profile. 
@@ -99,15 +120,52 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Overall, exciting work and a culture / mission / potential that resonates with me. 
 - Online Bayesian Logistic Regression: 
 
-## Data Manipulation (45mins):
+## 10:45-11:30 | Statistical Modeling | [Dongping (sunny) Jing](https://www.linkedin.com/in/sunny-jing-ab530848/) and [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/):
+
+- Evaluate and asses analytical thinking and familiarity with the LinkedIn Platform.
+- Assess your ability to take business context and translate to an analytical problem
+- Evaluate experience working with statistical modeling techniques
+- Testing/Training/Evaluating models
+- Asses knowledge of model methodologies
+
+- [Dongping (sunny) Jing](https://www.linkedin.com/in/sunny-jing-ab530848/)
+- 
+
+- [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/)
+- 
+
+ TODO: 
+ 
+ - LOOK UP OVERFITTING, and how to detect it
+ - Look up confusion martix
+
+## 11:30-12:30 | Lunch | [Nuo Wang](https://www.linkedin.com/in/nuo-w-486b3027/)
+
+- [Nuo Wang](https://www.linkedin.com/in/nuo-w-486b3027/)
+
+
+## 12:30-1:15 | Data Manipulation | [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/):
 
 - Goal: assess ability to manipulate and analyze data for extracting insights
 - Usually at least 1 SQL question + 1 R or Python question
 - Familiarity with SQL AND R or Python is required for Senior Data Scientist.
 - Determine familiarity of advanced analytical functions
 
+- [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/)
 
-## Analytics Case Study (45mins):
+
+## 1:15-2:00 | Statistics & A/B Testing | | [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) and [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/):
+
+- Design and analyze experimentations, understands basic stats concepts (e.g. hypothesis testing, mean, variance, probability distributions, sample size calculation, power calculation...) and how to apply them in a business setting.
+- For Sr DS, must show an in-depth understanding of A/B testing is needed (e.g. multi-variant testing, sample size calculation, power…)
+- Asses knowledge of probability
+
+- [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) 
+
+- [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/)
+
+
+## 2:00-2:45 | Analytics Case Study | [Gigi Zhang](https://www.linkedin.com/in/gigizhezhang/):
 
 - To assess ability to solve a business case with the right analytical approach and reasonable data intuition; and the ability to make relevant product recommendation based on data insights.
 _ Asses your familiarity with the LinkedIn Platform
@@ -119,42 +177,7 @@ LinkedIn Metrics:
 - API (applications per impression) for a job application
 - Job fits: Person-Environment (P-E) -- comprised of Person-Organization (P-O), Person-Vocation (P-V), Person-Group (P-G), and Person-Job (P-J) fits
 
-## Statistical Modeling (45mins):
-
-- Evaluate and asses analytical thinking and familiarity with the LinkedIn Platform.
-- Assess your ability to take business context and translate to an analytical problem
-- Evaluate experience working with statistical modeling techniques
-- Testing/Training/Evaluating models
-- Asses knowledge of model methodologies
- 
- 
- TODO: 
- 
- - LOOK UP OVERFITTING, and how to detect it
- - Look up confusion martix
-
-## Statistics & A/B Testing (45mins):
-
-- Design and analyze experimentations, understands basic stats concepts (e.g. hypothesis testing, mean, variance, probability distributions, sample size calculation, power calculation...) and how to apply them in a business setting.
-- For Sr DS, must show an in-depth understanding of A/B testing is needed (e.g. multi-variant testing, sample size calculation, power…)
-- Asses knowledge of probability
-
-
-# Schedule and interviewers:
-
-
-- 10:00 AM – 10:45 AM | Host Manager | [Joonhyung Lim](https://www.linkedin.com/in/joonlim/)
-- Growth, user acquisition, and user onboarding
-- 10:45 AM – 11:30 AM | Statistical Modeling | Dongping Jing and [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/)
-- [Dongping (sunny) Jing](https://www.linkedin.com/in/sunny-jing-ab530848/)
-- 
-- [Caitlin Crump](https://www.linkedin.com/in/caitlincrump/)
-- 
-- 11:30 AM – 12:30 PM | Lunch | [Nuo Wang](https://www.linkedin.com/in/nuo-w-486b3027/)
-- 12:30 PM – 1:15 PM | Data Manipulation | [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/)
-- 1:15 PM – 2:00 PM | Stats A/B Testing | [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) and [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/)
-- 2:00 PM – 2:45 PM | Product Case Study | [Gigi Zhang](https://www.linkedin.com/in/gigizhezhang/)
-
+- [Gigi Zhang](https://www.linkedin.com/in/gigizhezhang/)
 
 
 
