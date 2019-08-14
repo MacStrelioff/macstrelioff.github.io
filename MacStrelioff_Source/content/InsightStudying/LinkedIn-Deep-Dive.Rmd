@@ -24,11 +24,9 @@ library(entropy)
 set.seed(10201991)
 ```
 
-
 # Company Visit
 
 ## Chris info -- 
-
 
 - DS people generally get interviewed on computer engineering topics -- eg implementing data structures from scratch, ... 
 - Interview centrally for AI organization, then get matched with a team. 
@@ -74,7 +72,6 @@ Graydon, sr recruiter at linkedin
 
 - can maybe have the onsite on Monday. will be flagged as urgent.
 
-
 - Next steps / interview timeline? 
 - Ping if I hear nothing by Friday. 
 
@@ -93,7 +90,6 @@ Here is the outline of what to expect from your onsite in terms of the structure
 - 12:30 PM – 1:15 PM | Data Manipulation | [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/)
 - 1:15 PM – 2:00 PM | Stats A/B Testing | [Qiannan Yin](https://www.linkedin.com/in/qiannan-y-10987ba4/) and [Yuan Chai](https://www.linkedin.com/in/yuan-chai-11127047/)
 - 2:00 PM – 2:45 PM | Product Case Study | [Gigi Zhang](https://www.linkedin.com/in/gigizhezhang/)
-
 
 ## 10:00-10:45 | Host Leader | [Joonhyung Lim](https://www.linkedin.com/in/joonlim/)
 
@@ -139,7 +135,13 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Connection Requests Deepdive for Network PVOM; MoT Drivers Analysis; ABI Funnel Deepdive; Unwanted Invites Analysis
 - proof of concept (POC), another term, not mentioned; proof of value (PoV)
 - Market Research Analytics: Developing product journey data for all product areas (wvmp, abi, jymbii, etc...) and finding important drivers of NPS and MoT Surveys through Machine Learning and Statistical analysis; 
-- 
+
+Mention: 
+
+- Wanting to write a blog, considered Wordpress, Medium, LinkedIn -- Liked that LinkedIn was a platform where what I write would get high quality exposure, but didn't like the interface -- particulatly that I couldn't figure out how to write a post in syntax like R markdown. 
+- Ended up making my own website with blogdown. 
+
+
 
  TODO: 
  

@@ -38,7 +38,7 @@
     <item>
       <title>LinkedIn Notes</title>
       <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Wed, 14 Aug 2019 12:58:59 +0000</pubDate>
+      <pubDate>Wed, 14 Aug 2019 15:34:52 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
       <description>
@@ -176,8 +176,12 @@
 &lt;li&gt;Market research and product analytics&lt;/li&gt;
 &lt;li&gt;Connection Requests Deepdive for Network PVOM; MoT Drivers Analysis; ABI Funnel Deepdive; Unwanted Invites Analysis&lt;/li&gt;
 &lt;li&gt;proof of concept (POC), another term, not mentioned; proof of value (PoV)&lt;/li&gt;
-&lt;li&gt;Market Research Analytics: Developing product journey data for all product areas (wvmp, abi, jymbii, etc…) and finding important drivers of NPS and MoT Surveys through Machine Learning and Statistical analysis;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Market Research Analytics: Developing product journey data for all product areas (wvmp, abi, jymbii, etc…) and finding important drivers of NPS and MoT Surveys through Machine Learning and Statistical analysis;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mention:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wanting to write a blog, considered Wordpress, Medium, LinkedIn – Liked that LinkedIn was a platform where what I write would get high quality exposure, but didn’t like the interface – particulatly that I couldn’t figure out how to write a post in syntax like R markdown.&lt;/li&gt;
+&lt;li&gt;Ended up making my own website with blogdown.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;TODO:&lt;/p&gt;
 &lt;ul&gt;
