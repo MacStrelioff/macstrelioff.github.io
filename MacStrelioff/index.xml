@@ -38,7 +38,7 @@
     <item>
       <title>LinkedIn Notes</title>
       <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Wed, 14 Aug 2019 16:12:11 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 07:55:47 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
       <description>
@@ -59,7 +59,6 @@
 &lt;li&gt;&lt;a href=&#34;#analytics-case-study-gigi-zhang&#34;&gt;2:00-2:45 | Analytics Case Study | &lt;a href=&#34;https://www.linkedin.com/in/gigizhezhang/&#34;&gt;Gigi Zhang&lt;/a&gt;:&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#users&#34;&gt;Users&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#current-issues&#34;&gt;Current issues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#competitors&#34;&gt;Competitors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ideas-and-excitement&#34;&gt;Ideas and excitement&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#excitement-from-recruiter&#34;&gt;Excitement from Recruiter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -145,7 +144,11 @@
 &lt;li&gt;&lt;p&gt;and an overview of interesting projects you worked on, and your involvement in these projects.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/joonlim/&#34;&gt;Joonhyung Lim&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Growth, user acquisition, and user onboarding&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Overall: Excited about their products, their work (experimentation research, psychology in terms of identifying who wants to change jobs and what opportunities would be attractive), and culture (InDay, creating economic opportunity for all).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Overall: Excited about their products, their work (experimentation research, psychology in terms of identifying who wants to change jobs and what opportunities would be attractive), and culture (InDay, creating economic opportunity for all).&lt;/li&gt;
+&lt;li&gt;My family is mainly construction workers and mechanics, which is a demographic that LinkedIn could expand to..&lt;/li&gt;
+&lt;li&gt;Construction – work with unions to find employment for qualified workers, and with contractors to find jobs.&lt;/li&gt;
+&lt;li&gt;More generally, LinkedIn could create a marketplace for union workers and contractors.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Amazon has mturk for very low-skill tasks, LinkedIn could create a marketplace for higher skill gigs, freelance work, temp work, and contract work.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Areas for growth:&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Services: resume drafting, job description drafting, HR system software for industry (could link it with corporate Office products) and get more data about the probability of an applicant attaining an offer.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;History: PredictIt project, strategy inference, decision making&lt;/li&gt;
@@ -242,6 +245,10 @@
 &lt;li&gt;Insight Fellow 2017&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Strong in ML&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;LinkedIn Metrics:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;VPI (views per impression) for a job recommendation&lt;/li&gt;
@@ -263,20 +270,22 @@
 &lt;h3&gt;Current issues&lt;/h3&gt;
 &lt;p&gt;GROWTH: LinkedIn is now backed by microsoft, wants to develop new products, and acquire more users – particularly those in underserved segments like blue collar labor.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;competitors&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Competitors&lt;/h3&gt;
-&lt;/div&gt;
 &lt;div id=&#34;ideas-and-excitement&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Ideas and excitement&lt;/h3&gt;
 &lt;p&gt;Ideas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;For blue collar workers, again become a marketplace, somewhere where contractors (blue collar) can meet with clients, similar to Yelp’s segment for contractors.&lt;/li&gt;
-&lt;li&gt;Insight, lots of other interview prep that LinkedIn might be able to assist with.. Eg resume review verticals, behavioral interview questions, mock interviewing services, Coding practice like LeetCode (see that this is being worked in with skill quizes).&lt;/li&gt;
+&lt;li&gt;For blue collar workers, again become a marketplace, somewhere where contractors (blue collar) can meet with union workers and bid on contracts, similar to Yelp’s segment for contractors.&lt;/li&gt;
 &lt;li&gt;The AirBnb or Uber of consulting / freelance work. I’ve been interested in consulting work. LinkedIn seems to be in an excellent position to become a platform or marketplace for consultants or freelance work.&lt;/li&gt;
-&lt;li&gt;lower level education, which LinkedIn is already working on with their student future products (students can see what colleges are associated with careers and companies they like).&lt;/li&gt;
+&lt;li&gt;market to lower level education, which LinkedIn is already working on with their student future products (students can see what colleges are associated with careers and companies they like).&lt;/li&gt;
+&lt;li&gt;Insight, lots of other interview prep that LinkedIn might be able to assist with.. Eg resume review verticals, behavioral interview questions, mock interviewing services, Coding practice like LeetCode (see that this is being worked in with skill quizes).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Excitement:&lt;/p&gt;
-&lt;p&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;, &lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;, &lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;), &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I like their general work on &lt;a href=&#34;https://engineering.linkedin.com/teams/data/projects/jobs&#34;&gt;inferring user attributes&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://economicgraph.linkedin.com/research#all&#34;&gt;economic research&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf&#34;&gt;experimentation research&lt;/a&gt; (also &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2488509&amp;amp;dl=ACM&amp;amp;coll=DL&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests&#34;&gt;here&lt;/a&gt;),&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2741126&#34;&gt;latent user research&lt;/a&gt;,&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;excitement-from-recruiter&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Excitement from Recruiter&lt;/h3&gt;

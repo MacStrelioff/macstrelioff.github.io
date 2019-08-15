@@ -103,6 +103,10 @@ One of the interviews will be done by a host manager; this person may, or may no
 - Growth, user acquisition, and user onboarding
 
 - Overall: Excited about their products, their work (experimentation research, psychology in terms of identifying who wants to change jobs and what opportunities would be attractive), and culture (InDay, creating economic opportunity for all).
+- My family is mainly construction workers and mechanics, which is a demographic that LinkedIn could expand to.. 
+- Construction -- work with unions to find employment for qualified workers, and with contractors to find jobs.
+- More generally, LinkedIn could create a marketplace for union workers and contractors. 
+- Amazon has mturk for very low-skill tasks, LinkedIn could create a marketplace for higher skill gigs, freelance work, temp work, and contract work.
 
 - Areas for growth: 
 - Services: resume drafting, job description drafting, HR system software for industry (could link it with corporate Office products) and get more data about the probability of an applicant attaining an offer. 
@@ -198,12 +202,15 @@ _ Asses your familiarity with the LinkedIn Platform
 - Insight Fellow 2017
 - Strong in ML
 
+Variables: 
+
+- 
+
 LinkedIn Metrics: 
 
 - VPI (views per impression) for a job recommendation
 - API (applications per impression) for a job application
 - Job fits: Person-Environment (P-E) -- comprised of Person-Organization (P-O), Person-Vocation (P-V), Person-Group (P-G), and Person-Job (P-J) fits
-
 
 ### Users
 
@@ -218,21 +225,21 @@ LinkedIn Metrics:
 
 GROWTH: LinkedIn is now backed by microsoft, wants to develop new products, and acquire more users -- particularly those in underserved segments like blue collar labor. 
 
-### Competitors
-
-
 ### Ideas and excitement
 
 Ideas: 
 
-- For blue collar workers, again become a marketplace, somewhere where contractors (blue collar) can meet with clients, similar to Yelp's segment for contractors. 
-- Insight, lots of other interview prep that LinkedIn might be able to assist with.. Eg resume review verticals, behavioral interview questions, mock interviewing services, Coding practice like LeetCode (see that this is being worked in with skill quizes).
+- For blue collar workers, again become a marketplace, somewhere where contractors (blue collar) can meet with union workers and bid on contracts, similar to Yelp's segment for contractors. 
 - The AirBnb or Uber of consulting / freelance work. I've been interested in consulting work. LinkedIn seems to be in an excellent position to become a platform or marketplace for consultants or freelance work.
-- lower level education, which LinkedIn is already working on with their student future products (students can see what colleges are associated with careers and companies they like).
+- market to lower level education, which LinkedIn is already working on with their student future products (students can see what colleges are associated with careers and companies they like).
+- Insight, lots of other interview prep that LinkedIn might be able to assist with.. Eg resume review verticals, behavioral interview questions, mock interviewing services, Coding practice like LeetCode (see that this is being worked in with skill quizes).
 
 Excitement:
 
-I like their general work on [inferring user attributes](https://engineering.linkedin.com/teams/data/projects/jobs), [economic research](https://economicgraph.linkedin.com/research#all), [experimentation research](http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf) (also [here](https://dl.acm.org/citation.cfm?id=2488509&dl=ACM&coll=DL), [here](https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests)), [latent user research](https://dl.acm.org/citation.cfm?id=2741126), 
+- I like their general work on [inferring user attributes](https://engineering.linkedin.com/teams/data/projects/jobs), 
+- [economic research](https://economicgraph.linkedin.com/research#all), 
+- [experimentation research](http://web.media.mit.edu/~msaveski/assets/publications/2017_detecting_network_effects/paper.pdf) (also [here](https://dl.acm.org/citation.cfm?id=2488509&dl=ACM&coll=DL), [here](https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests)), 
+- [latent user research](https://dl.acm.org/citation.cfm?id=2741126), 
 
 ### Excitement from Recruiter
 
