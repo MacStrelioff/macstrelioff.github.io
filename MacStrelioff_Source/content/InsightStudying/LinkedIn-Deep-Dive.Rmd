@@ -140,8 +140,11 @@ Mention:
 
 - Wanting to write a blog, considered Wordpress, Medium, LinkedIn -- Liked that LinkedIn was a platform where what I write would get high quality exposure, but didn't like the interface -- particulatly that I couldn't figure out how to write a post in syntax like R markdown. 
 - Ended up making my own website with blogdown. 
+- Ask Dongping about her work -- can draw on this later in product analytics interview.
 
+Tips:
 
+- Review variables / metrics in analytics section.
 
  TODO: 
  
@@ -155,6 +158,9 @@ Mention:
 - 4yrs, 3 years in consumer behavior at other companies
 - LinkedIn Pages, Ads - I am hiring experienced DS who is passionate about shaping product roadmap and strategy through data!
 
+Mention:
+
+- 
 
 ## 12:30-1:15 | Data Manipulation | [Xianyun Mao](https://www.linkedin.com/in/xianyun-mao-232ba916/):
 
@@ -199,9 +205,14 @@ LinkedIn Metrics:
 - Job fits: Person-Environment (P-E) -- comprised of Person-Organization (P-O), Person-Vocation (P-V), Person-Group (P-G), and Person-Job (P-J) fits
 
 
-## Deep Dive
-
 ### Users
+
+- Businesses, recruiters
+- Content creators
+- Job seekers
+- Students picking a college
+- College admin seeking alumni networks
+- Networkers, wanting to keep in touch with classmates and coleagues
 
 ### Current issues
 

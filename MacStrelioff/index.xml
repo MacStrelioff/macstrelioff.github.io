@@ -38,7 +38,7 @@
     <item>
       <title>LinkedIn Notes</title>
       <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Wed, 14 Aug 2019 15:34:52 +0000</pubDate>
+      <pubDate>Wed, 14 Aug 2019 16:12:11 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
       <description>
@@ -56,8 +56,7 @@
 &lt;li&gt;&lt;a href=&#34;#lunch-nuo-wang&#34;&gt;11:30-12:30 | Lunch | &lt;a href=&#34;https://www.linkedin.com/in/nuo-w-486b3027/&#34;&gt;Nuo Wang&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-manipulation-xianyun-mao&#34;&gt;12:30-1:15 | Data Manipulation | &lt;a href=&#34;https://www.linkedin.com/in/xianyun-mao-232ba916/&#34;&gt;Xianyun Mao&lt;/a&gt;:&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#statistics-ab-testing-qiannan-yin-and-yuan-chai&#34;&gt;1:15-2:00 | Statistics &amp;amp; A/B Testing | | &lt;a href=&#34;https://www.linkedin.com/in/qiannan-y-10987ba4/&#34;&gt;Qiannan Yin&lt;/a&gt; and &lt;a href=&#34;https://www.linkedin.com/in/yuan-chai-11127047/&#34;&gt;Yuan Chai&lt;/a&gt;:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#analytics-case-study-gigi-zhang&#34;&gt;2:00-2:45 | Analytics Case Study | &lt;a href=&#34;https://www.linkedin.com/in/gigizhezhang/&#34;&gt;Gigi Zhang&lt;/a&gt;:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#deep-dive&#34;&gt;Deep Dive&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#analytics-case-study-gigi-zhang&#34;&gt;2:00-2:45 | Analytics Case Study | &lt;a href=&#34;https://www.linkedin.com/in/gigizhezhang/&#34;&gt;Gigi Zhang&lt;/a&gt;:&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#users&#34;&gt;Users&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#current-issues&#34;&gt;Current issues&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#competitors&#34;&gt;Competitors&lt;/a&gt;&lt;/li&gt;
@@ -182,6 +181,11 @@
 &lt;ul&gt;
 &lt;li&gt;Wanting to write a blog, considered Wordpress, Medium, LinkedIn – Liked that LinkedIn was a platform where what I write would get high quality exposure, but didn’t like the interface – particulatly that I couldn’t figure out how to write a post in syntax like R markdown.&lt;/li&gt;
 &lt;li&gt;Ended up making my own website with blogdown.&lt;/li&gt;
+&lt;li&gt;Ask Dongping about her work – can draw on this later in product analytics interview.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tips:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Review variables / metrics in analytics section.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;TODO:&lt;/p&gt;
 &lt;ul&gt;
@@ -196,6 +200,10 @@
 &lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/nuo-w-486b3027/&#34;&gt;Nuo Wang&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;4yrs, 3 years in consumer behavior at other companies&lt;/li&gt;
 &lt;li&gt;LinkedIn Pages, Ads - I am hiring experienced DS who is passionate about shaping product roadmap and strategy through data!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mention:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-manipulation-xianyun-mao&#34; class=&#34;section level2&#34;&gt;
@@ -240,11 +248,16 @@
 &lt;li&gt;API (applications per impression) for a job application&lt;/li&gt;
 &lt;li&gt;Job fits: Person-Environment (P-E) – comprised of Person-Organization (P-O), Person-Vocation (P-V), Person-Group (P-G), and Person-Job (P-J) fits&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Deep Dive&lt;/h2&gt;
 &lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Users&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Businesses, recruiters&lt;/li&gt;
+&lt;li&gt;Content creators&lt;/li&gt;
+&lt;li&gt;Job seekers&lt;/li&gt;
+&lt;li&gt;Students picking a college&lt;/li&gt;
+&lt;li&gt;College admin seeking alumni networks&lt;/li&gt;
+&lt;li&gt;Networkers, wanting to keep in touch with classmates and coleagues&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;current-issues&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Current issues&lt;/h3&gt;
