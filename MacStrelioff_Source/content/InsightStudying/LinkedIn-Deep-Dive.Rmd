@@ -319,10 +319,13 @@ Counter(b)
 - Lots of questions about the platform
 - Causal inference: how to construct a synthetic control, e.g. for estimating from historical data the impact of a email nudge on different user behaviors
 - Advantages / disadvantages of different ML models (why logistic regression? How would you interpret the coefficients in a logistic regression model?) 
-- 
+- Causal inference: How to identify who would be successfully nudged by an email, ie a decision system for sending an email nudge that doesn't feel like spam.
 - SQL, Python: counting ids with more than 1 null
 
+# Next steps
 
+- LinkedIn message Caitlyn -- her work sounded exciting. Mention finding some research papers from LinkedIn on user modeling, and ask for possibly more papers to look into!
+- Send thank you email to recruiters
 
 
 

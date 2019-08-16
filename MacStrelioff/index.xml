@@ -38,7 +38,7 @@
     <item>
       <title>LinkedIn Notes</title>
       <link>/MacStrelioff/insightstudying/linkedin-deep-dive/</link>
-      <pubDate>Thu, 15 Aug 2019 22:58:15 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 23:52:19 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
       <description>
@@ -67,6 +67,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#knowledge-gaps&#34;&gt;Knowledge gaps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#next-steps&#34;&gt;Next steps&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -382,8 +383,15 @@ Counter(b)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Lots of questions about the platform&lt;/li&gt;
 &lt;li&gt;Causal inference: how to construct a synthetic control, e.g. for estimating from historical data the impact of a email nudge on different user behaviors&lt;/li&gt;
 &lt;li&gt;Advantages / disadvantages of different ML models (why logistic regression? How would you interpret the coefficients in a logistic regression model?)&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Causal inference: How to identify who would be successfully nudged by an email, ie a decision system for sending an email nudge that doesn’t feel like spam.&lt;/li&gt;
 &lt;li&gt;SQL, Python: counting ids with more than 1 null&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;next-steps&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Next steps&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;LinkedIn message Caitlyn – her work sounded exciting. Mention finding some research papers from LinkedIn on user modeling, and ask for possibly more papers to look into!&lt;/li&gt;
+&lt;li&gt;Send thank you email to recruiters&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
