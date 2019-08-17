@@ -25,8 +25,6 @@ set.seed(10201991)
 
 ## New Product
 
-## 
-
 Overall product sense is about what to build and why. 
 
 1. Overarching goals / stage of the company
@@ -36,6 +34,10 @@ Overall product sense is about what to build and why.
 # Overall resources
 
 - [https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA](https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA)
+
+# Deep-Dives
+
+[Deep Dive guide](https://sites.google.com/insightdatascience.com/interviewstrategies/interviews/interview-logistics/deep-dives?authuser=0)
 
 
 # Platform Concepts and Metrics
