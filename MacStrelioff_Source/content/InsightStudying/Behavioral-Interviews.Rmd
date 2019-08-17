@@ -215,6 +215,23 @@ Evaluation:
 
 [Deep Dive guide](https://sites.google.com/insightdatascience.com/interviewstrategies/interviews/interview-logistics/deep-dives?authuser=0)
 
+# Example Recruiter Email
+
+
+Hey Heather,
+
+I know you’re really busy and you get a lot of emails. Found Sample-Company through angellist.  Already applied for the Data Scientist position but wanted to reach out directly! Promise this email will be < 60 seconds.
+ 
+I’m Jeff and I’m a Data Scientist. A few things about me, I built the Data Scientist in Python & R track for dataquest.io, used by hundreds of thousands of students and by companies such as Airbnb, Spotify, Uber etc so I excel in communicating technically complex topics to nontechnical audiences. On the technical side, I built "The Booki Monster" which is a monster that eats books and summarizes them using LDA & Doc2Vec. App here(it takes a sec to load, so just be patient!) and explanation here. I also built the "Date-a Miner”, a convolutional neural network that automates online dating, by predicting the likelihood of me liking a profile and swiping for me. 
+ 
+In addition, I’m obsessed with figuring out how to learn things fast. As a result, I’m also working on an ambitious side-project called Month to Master where I attempt to master one difficult skill each month. Skills such as going from zero to conversational in Spanish in one month, memorizing the order of a 52 deck of cards in 3 minutes, completing 27 consecutive pull-ups etc. 
+ 
+Thanks again! I totally understand if you’re busy so no rush on reply. If you feel like there is a possible fit on your end, would love to further this conversation!
+ 
+Hope you have a great week! Attached resume. 
+ 
+Best,
+Jeff
 
 
 
