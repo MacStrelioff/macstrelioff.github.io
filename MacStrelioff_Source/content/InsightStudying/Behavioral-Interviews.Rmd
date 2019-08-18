@@ -241,6 +241,15 @@ Add 3 projects as part of a deep dive.
 
 ### LinkedIn Thank-You Email
 
+#### Recruiters
+
+#### First Interviewer
+
+#### Caitlyn
+
+- work focus sounded interesting
+- similar to another person's papers
+- [one paper; User Latent Preference Model for Better Downside Management in Recommender Systems](http://www.www2015.it/documents/proceedings/proceedings/p1209.pdf) is conceptually close to the approach I was trying to take for the email question.
 
 
 
