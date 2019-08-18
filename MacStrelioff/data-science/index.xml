@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Aug 2019 17:33:43 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Aug 2019 19:56:03 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/data-science/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Twitter, Poisson Processes, and Conjugacy</title>
+      <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
+      <pubDate>Sat, 17 Aug 2019 19:56:03 +0000</pubDate>
+      
+      <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
+      <description>Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.</description>
+    </item>
     
     <item>
       <title></title>
@@ -37,15 +46,6 @@ Working With Bash and Git Useful Bash Commands login # prompts for username and 
       
       <guid>/MacStrelioff/data-science/cookie_clicker_images/cookie-clicker-bot/</guid>
       <description>Overview Background and Setup Cookie Clicker Game  Agents Naive: Buy all affordable investments MaxROI: Buy best return on investment MinWait: Buy what minimizes the time to the highest revenue purchase  Performance Revenue Building Count Building Prices Return on Investment (Revenue Per Cost)  Conclusions Appendix: MinWait Decision is Independent of Balance Helper Functions Browser and Game Initialization Clicking Cookies Purchasing Upgrades Logging balance and revenue Get building information     Overview Lately I’ve been interested in writing algorithms (agents) that interact with websites.</description>
-    </item>
-    
-    <item>
-      <title>Twitter, Poisson Processes, and Conjugacy</title>
-      <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Sat, 29 Jun 2019 14:37:56 +0000</pubDate>
-      
-      <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
-      <description>Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity.</description>
     </item>
     
     <item>

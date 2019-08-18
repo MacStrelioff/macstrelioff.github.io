@@ -139,9 +139,9 @@
   <meta property="og:description" content="Background and Setup Twitter Data Pulling Data from Twitter’s API Working with Twitter Status objects Embed a Status Convert a Status to a dict Access Status Attributes (How I accessed the data used below)  Poisson Process Assumptions Specification and Properties Checking the Homogeneity Assumption Checking the exponential distribution of intervals  Model of Tweet Fequency Using Conjugacy Inference On Tweet Rate \(\lambda\) Over Time  Predicting Number Of Tweets In Interval \(s\) Summary   Background and Setup In this notebook I focus on explaining Poisson processes and conjugacy applied to my Twitter activity."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-06-29T14:37:56&#43;00:00">
+  <meta property="article:published_time" content="2019-08-17T19:56:03&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-06-29T14:37:56&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-17T19:56:03&#43;00:00">
   
 
   
@@ -518,7 +518,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text</code></pre>
 <pre class="python"><code>disp_tweet(user_name=&#39;macstrelioff&#39;,tweet_id=&#39;981338927419109376&#39;)</code></pre>
-<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a1ec00b00&gt;</code></pre>
+<pre><code>&gt;&gt;&gt; &lt;__main__.disp_tweet object at 0x1a27c4bb00&gt;</code></pre>
 <p>If run from a Jupyter notebook, this should embed a tweet as below;</p>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
@@ -872,7 +872,11 @@ plt.legend();</code></pre>
 </div>
 <div id="predicting-number-of-tweets-in-interval-s" class="section level2">
 <h2>Predicting Number Of Tweets In Interval <span class="math inline">\(s\)</span></h2>
-<p>Now I’ll visually compare predictions for the count of tweets in a week based on estimates of <span class="math inline">\(\lambda\)</span> after the first 20 tweets and using all 200 tweets, using two models; 1. A Poisson using <span class="math inline">\(\theta=s\lambda_{MAP}\)</span> 2. The negative binomial derived in the model section above</p>
+<p>Now I’ll visually compare predictions for the count of tweets in a week based on estimates of <span class="math inline">\(\lambda\)</span> after the first 20 tweets and using all 200 tweets, using two models;</p>
+<ol style="list-style-type: decimal">
+<li>A Poisson using <span class="math inline">\(\theta=s\lambda_{MAP}\)</span></li>
+<li>The negative binomial derived in the model section above</li>
+</ol>
 <p>First, an issue with the parameterization of the negative binomial has to be addressed. In my derivation, I ended with a negative binomial parameterized as;</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -970,7 +974,7 @@ plt.legend();</code></pre>
         </div>
 
         <div class="body-footer">
-          Last updated on Jun 29, 2019
+          Last updated on Aug 17, 2019
         </div>
 
       </article>

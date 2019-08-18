@@ -549,6 +549,7 @@ The posterior seems to tighten dramatically around the mode during the first mon
 ## Predicting Number Of Tweets In Interval $s$
 
 Now I'll visually compare predictions for the count of tweets in a week based on estimates of $\lambda$ after the first 20 tweets and using all 200 tweets, using two models; 
+
 1. A Poisson using $\theta=s\lambda_{MAP}$
 2. The negative binomial derived in the model section above
 
