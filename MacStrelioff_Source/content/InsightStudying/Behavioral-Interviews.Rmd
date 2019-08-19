@@ -252,15 +252,27 @@ Mac
 
 #### First Interviewer
 
+Hi Joonhyung,
 
+Have you heard of [Rimeto](https://www.rimeto.com/#profiles)? It sounds very similar to the product you were describing during my interview on Thursday. 
+
+Best,
+Mac
 
 
 #### Caitlyn
+
+Hi Caitlin,
+
+I thought your description of the work on your team sounded interesting, and I would have liked to hear more about it. 
 
 - work focus sounded interesting
 - similar to another person's papers
 - [one paper; User Latent Preference Model for Better Downside Management in Recommender Systems](http://www.www2015.it/documents/proceedings/proceedings/p1209.pdf) is conceptually close to the approach I was trying to take for the email question.
 
+
+Best,
+Mac
 
 
 
