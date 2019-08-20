@@ -10,6 +10,8 @@ toc:
 type: docs
 ---
 
-Use the links on the left to navigate to articles on particular topics. 
+Use the menu on the left to navigate to articles on particular topics. 
+
+
 
 

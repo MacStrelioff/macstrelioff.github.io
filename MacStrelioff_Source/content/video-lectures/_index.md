@@ -3,32 +3,22 @@ date: "2018-09-09T00:00:00-07:00"
 draft: false
 menu:
   video-lectures:
-    name: Statistics
-    weight: 20
+    name: Landing
+    weight: 1
 title: 
 toc: true
 type: docs 
 ---
 
-Use the menu on the left to change topics, and the menu on the right to find videos within this topic.
 
-# Basic Applied
+# Overview
 
-## Model Comparison: F-test for nested models
-<iframe width="680" height="400" src="https://www.youtube.com/embed/hceIXHjQPdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Use the menu on the left to change topics, and the menu on the right to find videos within topics. A complete list of my videos can be found on my [youtube channel](https://www.youtube.com/channel/UC8KypaF6w6K0SO6KLvyst8w?view_as=subscriber). 
 
-## Model Comparison: F-test, all parameters in a model
-<iframe width="680" height="400" src="https://www.youtube.com/embed/NVf3PGoQpKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+I started making videos while I was a Teaching Assistant at UC Irvine for students who couldn't make my discussion sections. Later I noticed a dearth of materials focused specifically on interview preparation for data scientists. I started making videos again to address this shortfall. 
 
-## Correlation: R-square and correlation
-<iframe width="680" height="400" src="https://www.youtube.com/embed/EIUdQ7v5mtM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Correlation: Partial correlation
-<iframe width="680" height="400" src="https://www.youtube.com/embed/TvyZpw3rUSc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Correlation: Part correlations
-<iframe width="680" height="400" src="https://www.youtube.com/embed/EAnjg7jqEAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!---
-https://macstrelioff.github.io/MacStrelioff/files/CV.pdf
+ADD ABOUT ME VIDEO HERE
 --->
+
