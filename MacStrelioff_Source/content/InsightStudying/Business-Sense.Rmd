@@ -37,7 +37,44 @@ The YouTube recommendation algorithm favors videos with high watchtime.
 
 [series](https://www.youtube.com/watch?v=gTrLniP5tSQ&list=PLpjK416fmKwQK6_REczCaBQ1x1jyHvZAF) on how search and discovery works. 
 
-- 
+Search: 
+
+- videos ranked match between query and title, description
+- tip: can make videos on trending content. 
+- tip: can use google to find common search terms.
+- engagement and watch time
+
+Suggested videos: 
+
+- can be from any channel
+- suggest viewers watch another video
+- playlists, links, cards, boxes, screens to suggest your other videos
+
+Home screen:
+
+- performance of video
+- personalization, video's match for a viewer's previous videos watched, and which videos they've already seen
+
+Trending:
+
+- specific to viewer's country
+- combines popularity with novelty
+- considers rate of growth in views
+- includes creater on the rise
+- favors sharable videos
+
+Subscribers: 
+
+- biggest fans
+- subscriptions tab shows videos from channels that a viewer is subscribed to
+- subscription content also appears in home screen
+- can encourage subscriptions by asking users to subscribe, and convaying the value to them
+
+Notifications:
+
+- sent to subscribers when a new upload is made public
+- stochastic, so it helps to jumpstart viewership but isn't the best in the long run
+
 
 # Problem Types and Strategies
 
