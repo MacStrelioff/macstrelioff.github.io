@@ -21,6 +21,24 @@ set.seed(10201991)
 ```
 
 
+# YouTube Example
+
+The YouTube recommendation algorithm favors videos with high watchtime. 
+
+[video](https://creatoracademy.youtube.com/page/lesson/discovery?cid=get-discovered&hl=en) on the algorithm.
+
+- titles
+- thumbnails
+- descriptions
+- how other viewers seem to enjoy it
+- likes/dislikes
+- comments
+- view duration
+
+[series](https://www.youtube.com/watch?v=gTrLniP5tSQ&list=PLpjK416fmKwQK6_REczCaBQ1x1jyHvZAF) on how search and discovery works. 
+
+- 
+
 # Problem Types and Strategies
 
 ## New Product
@@ -303,10 +321,6 @@ Think of more people on platform moving with searches…
 
 
  # clicks and # searches -- if it’s a bug, then clicks prob wouldn’t also spike.
-
-
-
-
 
 Impressions, clicks, … 
 
