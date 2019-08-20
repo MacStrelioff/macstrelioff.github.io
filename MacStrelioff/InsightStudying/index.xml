@@ -6,15 +6,28 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Aug 2019 11:31:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 12:30:10 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Product Sense</title>
+      <link>/MacStrelioff/insightstudying/business-sense/</link>
+      <pubDate>Tue, 20 Aug 2019 12:30:10 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
+      <description>YouTube Example The YouTube recommendation algorithm favors videos with high watchtime.
+video on the algorithm.
+ titles thumbnails descriptions how other viewers seem to enjoy it likes/dislikes comments view duration  series on how search and discovery works.
+Search:
+ videos ranked match between query and title, description tip: can make videos on trending content. tip: can use google to find common search terms. engagement and watch time  Suggested videos:</description>
+    </item>
+    
+    <item>
       <title>Behavioral Interviewing</title>
       <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Sun, 18 Aug 2019 11:31:40 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 12:30:09 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>Principles Common Behavioral Questions “Tell me a little about your background.” Child bandits:  “Tell me about the project you worked on at Insight.” “Why are you interested in a career as a data scientist?” “Tell me about your research / talk to me about your last role.” “Why are you interested in joining this company?” “Talk about a time you were on a team that struggled with effective communication.</description>
@@ -27,18 +40,6 @@
       
       <guid>/MacStrelioff/insightstudying/linkedin-deep-dive/</guid>
       <description>Company Visit Chris info –  Recruiter Call Recruiter emails II &amp;amp; III – Interviews Schedule and interviewers: 10:00-10:45 | Host Leader | Joonhyung Lim 10:45-11:30 | Statistical Modeling | Dongping (sunny) Jing and Caitlin Crump: 11:30-12:30 | Lunch | Nuo Wang 12:30-1:15 | Data Manipulation | Xianyun Mao: 1:15-2:00 | Statistics &amp;amp; A/B Testing | | Qiannan Yin and Yuan Chai: 2:00-2:45 | Analytics Case Study | Gigi Zhang: Users Current issues Ideas and excitement Excitement from Recruiter  Onsite Glassdoor interview questions   Knowledge gaps Next steps   Company Visit Chris info –  DS people generally get interviewed on computer engineering topics – eg implementing data structures from scratch, … Interview centrally for AI organization, then get matched with a team.</description>
-    </item>
-    
-    <item>
-      <title>Product Sense</title>
-      <link>/MacStrelioff/insightstudying/business-sense/</link>
-      <pubDate>Sat, 17 Aug 2019 18:56:21 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/business-sense/</guid>
-      <description>Problem Types and Strategies New Product Overall product sense is about what to build and why.
-Overarching goals / stage of the company Contextualize: Draw a user funnel or user flow for the specific product Draw a dashboard, then populate with platform and product metrics    Overall resources  https://www.youtube.com/playlist?list=PLOhHNjZItNnM5r2JCX9KzrFH5WYWKrpAA   Deep-Dives Deep Dive guide
- Platform Concepts and Metrics Users User Funnel Churn,
-funnel analysis</description>
     </item>
     
     <item>
