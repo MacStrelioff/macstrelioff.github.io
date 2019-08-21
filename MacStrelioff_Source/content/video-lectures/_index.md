@@ -10,15 +10,26 @@ toc: true
 type: docs 
 ---
 
-
 # Overview
 
 Use the menu on the left to change topics, and the menu on the right to find videos within topics. A complete list of my videos can be found on my [youtube channel](https://www.youtube.com/channel/UC8KypaF6w6K0SO6KLvyst8w?view_as=subscriber). 
 
 I started making videos while I was a Teaching Assistant at UC Irvine for students who couldn't make my discussion sections. Later I noticed a dearth of materials focused specifically on interview preparation for data scientists. I started making videos again to address this shortfall. 
 
-
 <!---
 ADD ABOUT ME VIDEO HERE
+--->
+
+<!---
+todo:
+- Bank teller problem
+- expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
+- random number generator from a uniform random number generator
+- circle question from Google
+- estimate median from Google
+- variances of different experiment designs
+- multinomial and guessers 'favorite color' and a proportion of users who guess randomly
+- bandits vs A/B tests, particularly for lots of conditions
+- LI: android you can randomize, iphone you can't (synthetic control)
 --->
 
