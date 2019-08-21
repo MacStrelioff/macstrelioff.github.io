@@ -25,6 +25,8 @@ todo:
 - Bank teller problem
 - expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 - random number generator from a uniform random number generator
+- Aman's question - sample from a circle using a random number generator
+- solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
 - circle question from Google
 - estimate median from Google
 - variances of different experiment designs
