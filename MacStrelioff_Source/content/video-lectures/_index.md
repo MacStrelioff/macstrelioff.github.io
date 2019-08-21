@@ -35,3 +35,41 @@ todo:
 - LI: android you can randomize, iphone you can't (synthetic control)
 --->
 
+
+<!---
+
+goal: improve system by recommending riders that person will pick
+
+
+
+
+--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
