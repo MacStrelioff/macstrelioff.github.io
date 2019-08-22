@@ -22,6 +22,7 @@ ADD ABOUT ME VIDEO HERE
 
 <!---
 todo:
+- Explain a power analysis
 - Bank teller problem
 - expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 - random number generator from a uniform random number generator
@@ -33,6 +34,8 @@ todo:
 - multinomial and guessers 'favorite color' and a proportion of users who guess randomly
 - bandits vs A/B tests, particularly for lots of conditions
 - LI: android you can randomize, iphone you can't (synthetic control)
+
+- Chris Alborn's 
 --->
 
 
