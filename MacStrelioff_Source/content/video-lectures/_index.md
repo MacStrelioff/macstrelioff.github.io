@@ -21,6 +21,20 @@ ADD ABOUT ME VIDEO HERE
 --->
 
 <!---
+video guidelines for higher ranking: 
+
+- add 5-10s pauses to let users try the problems on their own (and to increase view time)
+- ask users to subscribe
+- sell likes and subscriptions:
+- "As you can imagine, it takes a lot of time and effort to make these videos. If you found this content helpful at all, please click the like button to let me know. Also, if there are interview questions that you've gotten, or concepts you would like an explanation on, feel free to comment below so that I know which videos to prioritize in the future. Finally, if you want to stay up to date on interview walkthroughs for common and recent interview questions, then click subscribe to stay on top of the latest interview topics."
+- "Unfortunately, interviews are largely luck in terms of whether you've seen the question before. 
+- In this series I walk through problems that reflect those that are currently being asked in data scientist interviews at highly competitive companies. 
+- After watching these interview question walkthroughs, you'll be able to confidently brease through your technical interviews.
+- 
+
+--->
+
+<!---
 todo:
 - Explain a power analysis (start complicated, get simple to keep people watching till the end)
 - Bank teller problem 
@@ -83,8 +97,6 @@ Looking for strong DS with solid esperience in DS and ML, and deploying.
 - 1 hr deep dive with engineering
 - lunch learn about culture
 - 1 hr session with founder and CEO
-
-
 
 --->
 
