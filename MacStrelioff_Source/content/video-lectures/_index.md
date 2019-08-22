@@ -22,8 +22,8 @@ ADD ABOUT ME VIDEO HERE
 
 <!---
 todo:
-- Explain a power analysis
-- Bank teller problem
+- Explain a power analysis (start complicated, get simple to keep people watching till the end)
+- Bank teller problem 
 - expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 - random number generator from a uniform random number generator
 - Aman's question - sample from a circle using a random number generator
@@ -34,7 +34,7 @@ todo:
 - multinomial and guessers 'favorite color' and a proportion of users who guess randomly
 - bandits vs A/B tests, particularly for lots of conditions
 - LI: android you can randomize, iphone you can't (synthetic control)
-
+- strengths & weaknesses of different ML algorithms (complex to simple explanations)
 - Chris Alborn's 
 --->
 
