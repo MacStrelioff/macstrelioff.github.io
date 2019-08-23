@@ -36,6 +36,409 @@
     </item>
     
     <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Thu, 22 Aug 2019 18:53:05 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#theoretical-foundations&#34;&gt;Theoretical Foundations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-functions&#34;&gt;Probability Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#maximum-likelihood-and-bayes-theorem&#34;&gt;Maximum Likelihood and Bayes’ Theorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#odds-and-other-transformations&#34;&gt;Odds and other transformations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#expectation-and-variance&#34;&gt;Expectation and Variance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#models-as-conditional-expectations&#34;&gt;Models as conditional expectations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#central-limit-theorem&#34;&gt;Central limit theorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#information-theory-and-entropy&#34;&gt;Information theory and entropy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#concerns&#34;&gt;Concerns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#treatment-units&#34;&gt;Treatment Units&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#generative-model-and-adjustment-variables&#34;&gt;Generative Model and Adjustment Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#common-designs&#34;&gt;Common Designs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#common-tests&#34;&gt;Common Tests&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#t-test&#34;&gt;t-test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#anova&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-model&#34;&gt;Linear Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#z-test-for-proportions&#34;&gt;Z test for proportions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chi-square&#34;&gt;Chi-Square&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logistic-regression&#34;&gt;Logistic Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#likelihood-ratio-and-bayes-factors&#34;&gt;Likelihood Ratio and Bayes Factors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#always-valid-p-values-ck-optimizely-white-paper&#34;&gt;always valid p-values (ck optimizely white paper)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#more-on-variance&#34;&gt;more on variance&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#emperical-variance-estimation&#34;&gt;Emperical Variance Estimation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mixed-effects-models&#34;&gt;Mixed Effects Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-inference-methods&#34;&gt;Causal Inference Methods&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#difference-in-differences&#34;&gt;Difference in Differences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-impact&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#synthetic-controls&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#propensity-score-matching&#34;&gt;Propensity score Matching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#instrumental-variables&#34;&gt;Instrumental variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#regression-discontinuity&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--
+Fermi problems (order of magnitude)
+--&gt;
+&lt;div id=&#34;theoretical-foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Theoretical Foundations&lt;/h1&gt;
+&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
+&lt;div id=&#34;probability-functions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Functions&lt;/h2&gt;
+&lt;p&gt;pdf, cdf&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Rules&lt;/h2&gt;
+&lt;p&gt;basic probability rules&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;law of total probability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;maximum-likelihood-and-bayes-theorem&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Maximum Likelihood and Bayes’ Theorem&lt;/h2&gt;
+&lt;p&gt;likelihood is one term in Bayes’ Theorem&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;odds-and-other-transformations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Odds and other transformations&lt;/h2&gt;
+&lt;p&gt;odds, log odds, relative risk, … .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
+&lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;models-as-conditional-expectations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Models as conditional expectations&lt;/h2&gt;
+&lt;p&gt;Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it’s priors&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;central-limit-theorem&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Central limit theorem&lt;/h2&gt;
+&lt;p&gt;Sum of any random variable converges to normal distribution.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;show for binomial case, to justify Z test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;information-theory-and-entropy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Information theory and entropy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;entropy is minimized by a Bayesian estimator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Experiment Design&lt;/h1&gt;
+&lt;div id=&#34;foundations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Foundations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hypotheses&lt;/li&gt;
+&lt;li&gt;Treatment and control conditions&lt;/li&gt;
+&lt;li&gt;assumptions (including CI assumptions, SUTVA, …?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;concerns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Concerns&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;network effects: front-end, it could be from different interactions, back-end it could be from changes in algorithm behavior for units in C based on different behavior from units in T – e.g. if a new recommender for units in T influences them to watch more of x, then x may also get recommended more to those in C.&lt;/li&gt;
+&lt;li&gt;learning effects (change aversion, novelty seeking)&lt;/li&gt;
+&lt;li&gt;spillover or noncompliance (C gets T)&lt;/li&gt;
+&lt;li&gt;early adopters&lt;/li&gt;
+&lt;li&gt;treatment inhomogenity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;treatment-units&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Treatment Units&lt;/h2&gt;
+&lt;p&gt;What is the unit at which we assign treatments?&lt;/p&gt;
+&lt;p&gt;Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.&lt;/p&gt;
+&lt;p&gt;Proxies for individuals include;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User ID or account – most clearly tied to a user, but&lt;/li&gt;
+&lt;li&gt;cookies – device and browser specific, so these could differ across a user’s browsers or devices.&lt;/li&gt;
+&lt;li&gt;IP address (device request return address) – device specific, so a user’s experience might differ across devices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;a solution to SUTVA violations, but decreases sample size and power dramatically&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cluster-based, stratified, serial, balanced, …&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;propensity scores and matching&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;generative-model-and-adjustment-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Generative Model and Adjustment Variables&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Specify the hypothesized generative process&lt;/li&gt;
+&lt;li&gt;Confounds&lt;/li&gt;
+&lt;li&gt;Precision&lt;/li&gt;
+&lt;li&gt;Neusance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;common-designs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Common Designs&lt;/h2&gt;
+&lt;p&gt;A/B testing&lt;/p&gt;
+&lt;p&gt;A/A testing to estimate variation&lt;/p&gt;
+&lt;p&gt;Variance reduction designs (paired designs, matching, …)&lt;/p&gt;
+&lt;p&gt;Bandits for limited data or maximizing an objective&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;maps samples (xi,yi) into treatment or control conditions.&lt;/li&gt;
+&lt;li&gt;randomized control trials ideal, not always possible&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;other options, …?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;test assignment validity, could use propensity scores or maybe chi square.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Duration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;power analysis for sample size&lt;/li&gt;
+&lt;li&gt;time to run to mitigate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!---
+# Experiment Design
+
+## Objective, demand, and value
+
+Objective is based on a metric (increase clickthrough or revenue per user). 
+
+Demand -- if adding a new user feature, how can demand for the feature be assessed? 
+
+value = benefit - cost. 
+
+Expected value helps with decisions about the size and duration of an experiment
+
+## Constructs, metrics, and scoping
+
+Once an objective is clear, the details of what can be measured need to be flushed out. 
+
+Metrics (fill in from udamy course section on metrics)
+
+Netflix metrics -- streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
+
+### User flow and target metrics
+
+Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states. 
+
+- number of clicks
+- time on page
+- ... 
+
+### Invariants
+
+Metrics that shouldn&#39;t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change. 
+
+### Confounding variables
+
+Mitigated by randomization. 
+
+### Precision variables
+
+Can also highlight features that one would want to match treatment and control on.
+
+Examples: 
+
+- number of posts
+- number of followers
+- visibility / impressions
+
+## Metric Validation
+
+User expreience research, retrospective analyses of past data or log files, ... . 
+
+## Conditions
+
+Define the experimental manipulations. 
+
+## Treatment Units
+
+What is the unit at which we assign treatments? 
+
+Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals. 
+
+Proxies for individuals include;
+
+- User ID or account -- most clearly tied to a user, but 
+- cookies -- device and browser specific, so these could differ across a user&#39;s browsers or devices.
+- IP address (device request return address) -- device specific, so a user&#39;s experience might differ across devices.
+
+In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).
+
+## Assignment Mechanism 
+
+The assignment mechanism samples members from a population and assignes them to conditions. 
+
+How are units assigned to treatments?
+
+Randomized control trials are the ideal, but many issues arise in online experimentation settings. 
+
+(look up desirable properties form causal inference notes)
+
+### Population 
+
+What group is being sampled from?
+
+### Cohorts
+
+Random sample, cluster-based, stratified, serial, balanced, ... 
+
+### Synthetic Control Groups
+
+Propensity matching
+
+### Limitations
+
+- Non-compliance: Those assicned to treatment may not actually experience the treatment. 
+- Crossover: Those assigned to control might gain access to the treatment. 
+- Treatment inhomogenaity: Some user segments might respond differently than others.
+
+# Implementation
+
+Batched, or real-time
+
+## Size
+
+power, sample size
+
+## Duration
+
+- learning effects: initial exploration or novelty seeking
+- learning effects: initial change aversion
+
+Solution: Consider running experiment past any initial observed effect.
+
+### Temporal variation
+
+### Optional stopping
+
+Why it&#39;s an issue for frequentists
+
+Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting
+
+Bayesian justifications
+
+## Estimands
+
+- Average treatment effect
+- Treatment on treated
+
+## Effiencicy or Variance Reduction
+
+- look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser. 
+
+e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = \beta_0 + \beta_1 Y_{t-1}$
+
+- get table for different tests of means from soc sci 10 notes.
+
+## Checking assignment integrety
+
+- Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets. 
+
+---&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;common-tests&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Common Tests&lt;/h1&gt;
+&lt;div id=&#34;t-test&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;t-test&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;different variance formulations.&lt;/li&gt;
+&lt;li&gt;one-sample&lt;/li&gt;
+&lt;li&gt;two independent sampels&lt;/li&gt;
+&lt;li&gt;two dependent samples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;anova&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;ANOVA&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear Model&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;z-test-for-proportions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Z test for proportions&lt;/h2&gt;
+&lt;p&gt;Binary data&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;chi-square&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Chi-Square&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;logistic-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Logistic Regression&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likelihood-ratio-and-bayes-factors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Likelihood Ratio and Bayes Factors&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;always-valid-p-values-ck-optimizely-white-paper&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;always valid p-values (ck optimizely white paper)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;more-on-variance&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;more on variance&lt;/h1&gt;
+&lt;div id=&#34;emperical-variance-estimation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Emperical Variance Estimation&lt;/h2&gt;
+&lt;p&gt;bootstrapping&lt;/p&gt;
+&lt;p&gt;A/A testing&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mixed-effects-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mixed Effects Models&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Maime’s consulting project? Other use cases?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;GLMs&lt;/h2&gt;
+&lt;!--
+models for when the errors aren&#39;t assumed to be normally distributed
+---&gt;
+&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
+&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
+&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
+&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
+&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
+&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
+&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;causal-inference-methods&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Causal Inference Methods&lt;/h1&gt;
+&lt;p&gt;Good medium blog post &lt;a href=&#34;https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For each mention the assumptions and the model.&lt;/p&gt;
+&lt;div id=&#34;difference-in-differences&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Difference in Differences&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;causal-impact&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Causal Impact&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;synthetic-controls&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Synthetic Controls&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;propensity-score-matching&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Propensity score Matching&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fixed-effects-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Fixed Effects Regression&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instrumental-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Instrumental variables&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Regression Discontinuity&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Product Sense</title>
       <link>/MacStrelioff/insightstudying/business-sense/</link>
       <pubDate>Tue, 20 Aug 2019 12:30:10 +0000</pubDate>
@@ -2465,312 +2868,6 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Simple coding and high level ML questions&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 04 Aug 2019 17:40:55 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-foundations&#34;&gt;Probability Foundations&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#odds-and-other-transformations&#34;&gt;Odds and other transformations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#expectation-and-variance&#34;&gt;Expectation and Variance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#central-limit-theorem&#34;&gt;Central limit theorem&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#common-tests&#34;&gt;Common Tests&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#z-test&#34;&gt;Z test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#chi-square&#34;&gt;Chi-Square&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-models&#34;&gt;Linear Models&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#anova&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#t-test&#34;&gt;t-test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#mixed-effects-models&#34;&gt;Mixed Effects Models&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#glms-logistic-regression&#34;&gt;GLMs: Logistic Regression&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#objective-demand-and-value&#34;&gt;Objective, demand, and value&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#constructs-metrics-and-scoping&#34;&gt;Constructs, metrics, and scoping&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#user-flow-and-target-metrics&#34;&gt;User flow and target metrics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#invariants&#34;&gt;Invariants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#confounding-variables&#34;&gt;Confounding variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#precision-variables&#34;&gt;Precision variables&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#metric-validation&#34;&gt;Metric Validation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#conditions&#34;&gt;Conditions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#treatment-units&#34;&gt;Treatment Units&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#population&#34;&gt;Population&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cohorts&#34;&gt;Cohorts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#synthetic-control-groups&#34;&gt;Synthetic Control Groups&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#limitations&#34;&gt;Limitations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#implementation&#34;&gt;Implementation&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#size&#34;&gt;Size&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#temporal-variation&#34;&gt;Temporal variation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#optional-stopping&#34;&gt;Optional stopping&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#estimands&#34;&gt;Estimands&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#effiencicy-or-variance-reduction&#34;&gt;Effiencicy or Variance Reduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#checking-assignment-integrety&#34;&gt;Checking assignment integrety&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#testing&#34;&gt;Testing&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#binary-or-proportions&#34;&gt;Binary or Proportions&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#fishers-z&#34;&gt;Fisher’s Z&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#real-valued&#34;&gt;Real-Valued&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#regression&#34;&gt;Regression&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-models-1&#34;&gt;Linear Models&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#emperical-variance-estimation&#34;&gt;Emperical Variance Estimation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;!--
-Fermi problems (order of magnitude)
---&gt;
-&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Probability Foundations&lt;/h1&gt;
-&lt;p&gt;combinatorics (permutations and combinations)&lt;/p&gt;
-&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Rules&lt;/h2&gt;
-&lt;p&gt;basic probability rules&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;odds-and-other-transformations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Odds and other transformations&lt;/h2&gt;
-&lt;p&gt;odds, log odds, relative risk, … .&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
-&lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;central-limit-theorem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Central limit theorem&lt;/h2&gt;
-&lt;p&gt;Sum of any random variable converges to normal distribution.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;show for binomial case, to justify Z test&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;common-tests&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Common Tests&lt;/h1&gt;
-&lt;div id=&#34;z-test&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Z test&lt;/h2&gt;
-&lt;p&gt;Normal data&lt;/p&gt;
-&lt;p&gt;Binary data&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;chi-square&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Chi-Square&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;linear-models&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Linear Models&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;anova&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;ANOVA&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;t-test&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;t-test&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;different variance formulations.&lt;/li&gt;
-&lt;li&gt;one-sample&lt;/li&gt;
-&lt;li&gt;two independent sampels&lt;/li&gt;
-&lt;li&gt;two dependent samples&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;mixed-effects-models&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mixed Effects Models&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Maime’s consulting project? Other use cases?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms-logistic-regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;GLMs: Logistic Regression&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Experiment Design&lt;/h1&gt;
-&lt;div id=&#34;objective-demand-and-value&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Objective, demand, and value&lt;/h2&gt;
-&lt;p&gt;Objective is based on a metric (increase clickthrough or revenue per user).&lt;/p&gt;
-&lt;p&gt;Demand – if adding a new user feature, how can demand for the feature be assessed?&lt;/p&gt;
-&lt;p&gt;value = benefit - cost.&lt;/p&gt;
-&lt;p&gt;Expected value helps with decisions about the size and duration of an experiment&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;constructs-metrics-and-scoping&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Constructs, metrics, and scoping&lt;/h2&gt;
-&lt;p&gt;Once an objective is clear, the details of what can be measured need to be flushed out.&lt;/p&gt;
-&lt;p&gt;Metrics (fill in from udamy course section on metrics)&lt;/p&gt;
-&lt;p&gt;Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)&lt;/p&gt;
-&lt;div id=&#34;user-flow-and-target-metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;User flow and target metrics&lt;/h3&gt;
-&lt;p&gt;Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;number of clicks&lt;/li&gt;
-&lt;li&gt;time on page&lt;/li&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;invariants&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Invariants&lt;/h3&gt;
-&lt;p&gt;Metrics that shouldn’t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;confounding-variables&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Confounding variables&lt;/h3&gt;
-&lt;p&gt;Mitigated by randomization.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;precision-variables&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Precision variables&lt;/h3&gt;
-&lt;p&gt;Can also highlight features that one would want to match treatment and control on.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;number of posts&lt;/li&gt;
-&lt;li&gt;number of followers&lt;/li&gt;
-&lt;li&gt;visibility / impressions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metric-validation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Metric Validation&lt;/h2&gt;
-&lt;p&gt;User expreience research, retrospective analyses of past data or log files, … .&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;conditions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Conditions&lt;/h2&gt;
-&lt;p&gt;Define the experimental manipulations.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;treatment-units&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Treatment Units&lt;/h2&gt;
-&lt;p&gt;What is the unit at which we assign treatments?&lt;/p&gt;
-&lt;p&gt;Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.&lt;/p&gt;
-&lt;p&gt;Proxies for individuals include;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;User ID or account – most clearly tied to a user, but&lt;/li&gt;
-&lt;li&gt;cookies – device and browser specific, so these could differ across a user’s browsers or devices.&lt;/li&gt;
-&lt;li&gt;IP address (device request return address) – device specific, so a user’s experience might differ across devices.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
-&lt;p&gt;The assignment mechanism samples members from a population and assignes them to conditions.&lt;/p&gt;
-&lt;p&gt;How are units assigned to treatments?&lt;/p&gt;
-&lt;p&gt;Randomized control trials are the ideal, but many issues arise in online experimentation settings.&lt;/p&gt;
-&lt;p&gt;(look up desirable properties form causal inference notes)&lt;/p&gt;
-&lt;div id=&#34;population&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Population&lt;/h3&gt;
-&lt;p&gt;What group is being sampled from?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cohorts&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Cohorts&lt;/h3&gt;
-&lt;p&gt;Random sample, cluster-based, stratified, serial, balanced, …&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;synthetic-control-groups&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Synthetic Control Groups&lt;/h3&gt;
-&lt;p&gt;Propensity matching&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;limitations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Limitations&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Non-compliance: Those assicned to treatment may not actually experience the treatment.&lt;/li&gt;
-&lt;li&gt;Crossover: Those assigned to control might gain access to the treatment.&lt;/li&gt;
-&lt;li&gt;Treatment inhomogenaity: Some user segments might respond differently than others.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;implementation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Implementation&lt;/h1&gt;
-&lt;p&gt;Batched, or real-time&lt;/p&gt;
-&lt;div id=&#34;size&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Size&lt;/h2&gt;
-&lt;p&gt;power, sample size&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Duration&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;learning effects: initial exploration or novelty seeking&lt;/li&gt;
-&lt;li&gt;learning effects: initial change aversion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Solution: Consider running experiment past any initial observed effect.&lt;/p&gt;
-&lt;div id=&#34;temporal-variation&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Temporal variation&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;optional-stopping&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Optional stopping&lt;/h3&gt;
-&lt;p&gt;Why it’s an issue for frequentists&lt;/p&gt;
-&lt;p&gt;Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting&lt;/p&gt;
-&lt;p&gt;Bayesian justifications&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;estimands&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Estimands&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Average treatment effect&lt;/li&gt;
-&lt;li&gt;Treatment on treated&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;effiencicy-or-variance-reduction&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Effiencicy or Variance Reduction&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;get table for different tests of means from soc sci 10 notes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;checking-assignment-integrety&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Checking assignment integrety&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;testing&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Testing&lt;/h1&gt;
-&lt;div id=&#34;binary-or-proportions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Binary or Proportions&lt;/h2&gt;
-&lt;div id=&#34;fishers-z&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Fisher’s Z&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;real-valued&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Real-Valued&lt;/h2&gt;
-&lt;div id=&#34;regression&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Regression&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;linear-models-1&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Linear Models&lt;/h1&gt;
-&lt;p&gt;regression&lt;/p&gt;
-&lt;p&gt;t-tests&lt;/p&gt;
-&lt;p&gt;ANOVA&lt;/p&gt;
-&lt;p&gt;t-test, ANOVA&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;GLMs&lt;/h1&gt;
-&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
-&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
-&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
-&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
-&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
-&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
-&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;emperical-variance-estimation&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Emperical Variance Estimation&lt;/h1&gt;
-&lt;p&gt;bootstrapping&lt;/p&gt;
-&lt;p&gt;A/A testing&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

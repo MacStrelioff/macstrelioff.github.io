@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-04 17:40:55"
+date: "2019-08-22 18:53:05"
 math: true
 output:
   blogdown::html_page:
@@ -17,72 +17,72 @@ linktitle: Probability and Statistics
 
 <div id="TOC">
 <ul>
-<li><a href="#probability-foundations">Probability Foundations</a><ul>
+<li><a href="#theoretical-foundations">Theoretical Foundations</a><ul>
+<li><a href="#probability-functions">Probability Functions</a></li>
 <li><a href="#probability-rules">Probability Rules</a></li>
+<li><a href="#maximum-likelihood-and-bayes-theorem">Maximum Likelihood and Bayes’ Theorem</a></li>
 <li><a href="#odds-and-other-transformations">Odds and other transformations</a></li>
 <li><a href="#expectation-and-variance">Expectation and Variance</a></li>
+<li><a href="#models-as-conditional-expectations">Models as conditional expectations</a></li>
 <li><a href="#central-limit-theorem">Central limit theorem</a></li>
-</ul></li>
-<li><a href="#common-tests">Common Tests</a><ul>
-<li><a href="#z-test">Z test</a></li>
-<li><a href="#chi-square">Chi-Square</a></li>
-<li><a href="#linear-models">Linear Models</a></li>
-<li><a href="#anova">ANOVA</a></li>
-<li><a href="#t-test">t-test</a></li>
-<li><a href="#mixed-effects-models">Mixed Effects Models</a></li>
-<li><a href="#glms-logistic-regression">GLMs: Logistic Regression</a></li>
+<li><a href="#information-theory-and-entropy">Information theory and entropy</a></li>
 </ul></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
-<li><a href="#objective-demand-and-value">Objective, demand, and value</a></li>
-<li><a href="#constructs-metrics-and-scoping">Constructs, metrics, and scoping</a><ul>
-<li><a href="#user-flow-and-target-metrics">User flow and target metrics</a></li>
-<li><a href="#invariants">Invariants</a></li>
-<li><a href="#confounding-variables">Confounding variables</a></li>
-<li><a href="#precision-variables">Precision variables</a></li>
-</ul></li>
-<li><a href="#metric-validation">Metric Validation</a></li>
-<li><a href="#conditions">Conditions</a></li>
+<li><a href="#foundations">Foundations</a></li>
+<li><a href="#concerns">Concerns</a></li>
 <li><a href="#treatment-units">Treatment Units</a></li>
-<li><a href="#assignment-mechanism">Assignment Mechanism</a><ul>
-<li><a href="#population">Population</a></li>
-<li><a href="#cohorts">Cohorts</a></li>
-<li><a href="#synthetic-control-groups">Synthetic Control Groups</a></li>
-<li><a href="#limitations">Limitations</a></li>
+<li><a href="#generative-model-and-adjustment-variables">Generative Model and Adjustment Variables</a></li>
+<li><a href="#common-designs">Common Designs</a></li>
+<li><a href="#assignment-mechanism">Assignment Mechanism</a></li>
+<li><a href="#duration">Duration</a></li>
 </ul></li>
+<li><a href="#common-tests">Common Tests</a><ul>
+<li><a href="#t-test">t-test</a></li>
+<li><a href="#anova">ANOVA</a></li>
+<li><a href="#linear-model">Linear Model</a></li>
+<li><a href="#z-test-for-proportions">Z test for proportions</a></li>
+<li><a href="#chi-square">Chi-Square</a></li>
+<li><a href="#logistic-regression">Logistic Regression</a></li>
+<li><a href="#likelihood-ratio-and-bayes-factors">Likelihood Ratio and Bayes Factors</a></li>
+<li><a href="#always-valid-p-values-ck-optimizely-white-paper">always valid p-values (ck optimizely white paper)</a></li>
 </ul></li>
-<li><a href="#implementation">Implementation</a><ul>
-<li><a href="#size">Size</a></li>
-<li><a href="#duration">Duration</a><ul>
-<li><a href="#temporal-variation">Temporal variation</a></li>
-<li><a href="#optional-stopping">Optional stopping</a></li>
-</ul></li>
-<li><a href="#estimands">Estimands</a></li>
-<li><a href="#effiencicy-or-variance-reduction">Effiencicy or Variance Reduction</a></li>
-<li><a href="#checking-assignment-integrety">Checking assignment integrety</a></li>
-</ul></li>
-<li><a href="#testing">Testing</a><ul>
-<li><a href="#binary-or-proportions">Binary or Proportions</a><ul>
-<li><a href="#fishers-z">Fisher’s Z</a></li>
-</ul></li>
-<li><a href="#real-valued">Real-Valued</a><ul>
-<li><a href="#regression">Regression</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#linear-models-1">Linear Models</a></li>
-<li><a href="#glms">GLMs</a></li>
+<li><a href="#more-on-variance">more on variance</a><ul>
 <li><a href="#emperical-variance-estimation">Emperical Variance Estimation</a></li>
+<li><a href="#mixed-effects-models">Mixed Effects Models</a></li>
+<li><a href="#glms">GLMs</a></li>
+</ul></li>
+<li><a href="#causal-inference-methods">Causal Inference Methods</a><ul>
+<li><a href="#difference-in-differences">Difference in Differences</a></li>
+<li><a href="#causal-impact">Causal Impact</a></li>
+<li><a href="#synthetic-controls">Synthetic Controls</a></li>
+<li><a href="#propensity-score-matching">Propensity score Matching</a></li>
+<li><a href="#fixed-effects-regression">Fixed Effects Regression</a></li>
+<li><a href="#instrumental-variables">Instrumental variables</a></li>
+<li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
+</ul></li>
 </ul>
 </div>
 
 <!--
 Fermi problems (order of magnitude)
 -->
-<div id="probability-foundations" class="section level1">
-<h1>Probability Foundations</h1>
+<div id="theoretical-foundations" class="section level1">
+<h1>Theoretical Foundations</h1>
 <p>combinatorics (permutations and combinations)</p>
+<div id="probability-functions" class="section level2">
+<h2>Probability Functions</h2>
+<p>pdf, cdf</p>
+</div>
 <div id="probability-rules" class="section level2">
 <h2>Probability Rules</h2>
 <p>basic probability rules</p>
+<ul>
+<li>law of total probability</li>
+</ul>
+</div>
+<div id="maximum-likelihood-and-bayes-theorem" class="section level2">
+<h2>Maximum Likelihood and Bayes’ Theorem</h2>
+<p>likelihood is one term in Bayes’ Theorem</p>
 </div>
 <div id="odds-and-other-transformations" class="section level2">
 <h2>Odds and other transformations</h2>
@@ -92,6 +92,10 @@ Fermi problems (order of magnitude)
 <h2>Expectation and Variance</h2>
 <p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
 </div>
+<div id="models-as-conditional-expectations" class="section level2">
+<h2>Models as conditional expectations</h2>
+<p>Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it’s priors</p>
+</div>
 <div id="central-limit-theorem" class="section level2">
 <h2>Central limit theorem</h2>
 <p>Sum of any random variable converges to normal distribution.</p>
@@ -99,91 +103,32 @@ Fermi problems (order of magnitude)
 <li>show for binomial case, to justify Z test</li>
 </ul>
 </div>
-</div>
-<div id="common-tests" class="section level1">
-<h1>Common Tests</h1>
-<div id="z-test" class="section level2">
-<h2>Z test</h2>
-<p>Normal data</p>
-<p>Binary data</p>
-</div>
-<div id="chi-square" class="section level2">
-<h2>Chi-Square</h2>
-</div>
-<div id="linear-models" class="section level2">
-<h2>Linear Models</h2>
-</div>
-<div id="anova" class="section level2">
-<h2>ANOVA</h2>
-</div>
-<div id="t-test" class="section level2">
-<h2>t-test</h2>
+<div id="information-theory-and-entropy" class="section level2">
+<h2>Information theory and entropy</h2>
 <ul>
-<li>different variance formulations.</li>
-<li>one-sample</li>
-<li>two independent sampels</li>
-<li>two dependent samples</li>
+<li>entropy is minimized by a Bayesian estimator</li>
 </ul>
-</div>
-<div id="mixed-effects-models" class="section level2">
-<h2>Mixed Effects Models</h2>
-<ul>
-<li>Maime’s consulting project? Other use cases?</li>
-</ul>
-</div>
-<div id="glms-logistic-regression" class="section level2">
-<h2>GLMs: Logistic Regression</h2>
 </div>
 </div>
 <div id="experiment-design" class="section level1">
 <h1>Experiment Design</h1>
-<div id="objective-demand-and-value" class="section level2">
-<h2>Objective, demand, and value</h2>
-<p>Objective is based on a metric (increase clickthrough or revenue per user).</p>
-<p>Demand – if adding a new user feature, how can demand for the feature be assessed?</p>
-<p>value = benefit - cost.</p>
-<p>Expected value helps with decisions about the size and duration of an experiment</p>
-</div>
-<div id="constructs-metrics-and-scoping" class="section level2">
-<h2>Constructs, metrics, and scoping</h2>
-<p>Once an objective is clear, the details of what can be measured need to be flushed out.</p>
-<p>Metrics (fill in from udamy course section on metrics)</p>
-<p>Netflix metrics – streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork – but may be at the detrement of general viewing?)</p>
-<div id="user-flow-and-target-metrics" class="section level3">
-<h3>User flow and target metrics</h3>
-<p>Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states.</p>
+<div id="foundations" class="section level2">
+<h2>Foundations</h2>
 <ul>
-<li>number of clicks</li>
-<li>time on page</li>
-<li>…</li>
+<li>Hypotheses</li>
+<li>Treatment and control conditions</li>
+<li>assumptions (including CI assumptions, SUTVA, …?)</li>
 </ul>
 </div>
-<div id="invariants" class="section level3">
-<h3>Invariants</h3>
-<p>Metrics that shouldn’t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change.</p>
-</div>
-<div id="confounding-variables" class="section level3">
-<h3>Confounding variables</h3>
-<p>Mitigated by randomization.</p>
-</div>
-<div id="precision-variables" class="section level3">
-<h3>Precision variables</h3>
-<p>Can also highlight features that one would want to match treatment and control on.</p>
-<p>Examples:</p>
+<div id="concerns" class="section level2">
+<h2>Concerns</h2>
 <ul>
-<li>number of posts</li>
-<li>number of followers</li>
-<li>visibility / impressions</li>
+<li>network effects: front-end, it could be from different interactions, back-end it could be from changes in algorithm behavior for units in C based on different behavior from units in T – e.g. if a new recommender for units in T influences them to watch more of x, then x may also get recommended more to those in C.</li>
+<li>learning effects (change aversion, novelty seeking)</li>
+<li>spillover or noncompliance (C gets T)</li>
+<li>early adopters</li>
+<li>treatment inhomogenity</li>
 </ul>
-</div>
-</div>
-<div id="metric-validation" class="section level2">
-<h2>Metric Validation</h2>
-<p>User expreience research, retrospective analyses of past data or log files, … .</p>
-</div>
-<div id="conditions" class="section level2">
-<h2>Conditions</h2>
-<p>Define the experimental manipulations.</p>
 </div>
 <div id="treatment-units" class="section level2">
 <h2>Treatment Units</h2>
@@ -196,107 +141,237 @@ Fermi problems (order of magnitude)
 <li>IP address (device request return address) – device specific, so a user’s experience might differ across devices.</li>
 </ul>
 <p>In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).</p>
+<ul>
+<li><p>a solution to SUTVA violations, but decreases sample size and power dramatically</p></li>
+<li><p>cluster-based, stratified, serial, balanced, …</p></li>
+<li><p>propensity scores and matching</p></li>
+</ul>
+</div>
+<div id="generative-model-and-adjustment-variables" class="section level2">
+<h2>Generative Model and Adjustment Variables</h2>
+<ul>
+<li>Specify the hypothesized generative process</li>
+<li>Confounds</li>
+<li>Precision</li>
+<li>Neusance</li>
+</ul>
+</div>
+<div id="common-designs" class="section level2">
+<h2>Common Designs</h2>
+<p>A/B testing</p>
+<p>A/A testing to estimate variation</p>
+<p>Variance reduction designs (paired designs, matching, …)</p>
+<p>Bandits for limited data or maximizing an objective</p>
 </div>
 <div id="assignment-mechanism" class="section level2">
 <h2>Assignment Mechanism</h2>
-<p>The assignment mechanism samples members from a population and assignes them to conditions.</p>
-<p>How are units assigned to treatments?</p>
-<p>Randomized control trials are the ideal, but many issues arise in online experimentation settings.</p>
-<p>(look up desirable properties form causal inference notes)</p>
-<div id="population" class="section level3">
-<h3>Population</h3>
-<p>What group is being sampled from?</p>
-</div>
-<div id="cohorts" class="section level3">
-<h3>Cohorts</h3>
-<p>Random sample, cluster-based, stratified, serial, balanced, …</p>
-</div>
-<div id="synthetic-control-groups" class="section level3">
-<h3>Synthetic Control Groups</h3>
-<p>Propensity matching</p>
-</div>
-<div id="limitations" class="section level3">
-<h3>Limitations</h3>
 <ul>
-<li>Non-compliance: Those assicned to treatment may not actually experience the treatment.</li>
-<li>Crossover: Those assigned to control might gain access to the treatment.</li>
-<li>Treatment inhomogenaity: Some user segments might respond differently than others.</li>
+<li>maps samples (xi,yi) into treatment or control conditions.</li>
+<li>randomized control trials ideal, not always possible</li>
+<li><p>other options, …?</p></li>
+<li><p>test assignment validity, could use propensity scores or maybe chi square.</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div id="implementation" class="section level1">
-<h1>Implementation</h1>
-<p>Batched, or real-time</p>
-<div id="size" class="section level2">
-<h2>Size</h2>
-<p>power, sample size</p>
 </div>
 <div id="duration" class="section level2">
 <h2>Duration</h2>
 <ul>
-<li>learning effects: initial exploration or novelty seeking</li>
-<li>learning effects: initial change aversion</li>
+<li>power analysis for sample size</li>
+<li>time to run to mitigate</li>
 </ul>
-<p>Solution: Consider running experiment past any initial observed effect.</p>
-<div id="temporal-variation" class="section level3">
-<h3>Temporal variation</h3>
+<!---
+# Experiment Design
+
+## Objective, demand, and value
+
+Objective is based on a metric (increase clickthrough or revenue per user). 
+
+Demand -- if adding a new user feature, how can demand for the feature be assessed? 
+
+value = benefit - cost. 
+
+Expected value helps with decisions about the size and duration of an experiment
+
+## Constructs, metrics, and scoping
+
+Once an objective is clear, the details of what can be measured need to be flushed out. 
+
+Metrics (fill in from udamy course section on metrics)
+
+Netflix metrics -- streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
+
+### User flow and target metrics
+
+Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states. 
+
+- number of clicks
+- time on page
+- ... 
+
+### Invariants
+
+Metrics that shouldn't change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change. 
+
+### Confounding variables
+
+Mitigated by randomization. 
+
+### Precision variables
+
+Can also highlight features that one would want to match treatment and control on.
+
+Examples: 
+
+- number of posts
+- number of followers
+- visibility / impressions
+
+## Metric Validation
+
+User expreience research, retrospective analyses of past data or log files, ... . 
+
+## Conditions
+
+Define the experimental manipulations. 
+
+## Treatment Units
+
+What is the unit at which we assign treatments? 
+
+Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals. 
+
+Proxies for individuals include;
+
+- User ID or account -- most clearly tied to a user, but 
+- cookies -- device and browser specific, so these could differ across a user's browsers or devices.
+- IP address (device request return address) -- device specific, so a user's experience might differ across devices.
+
+In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).
+
+## Assignment Mechanism 
+
+The assignment mechanism samples members from a population and assignes them to conditions. 
+
+How are units assigned to treatments?
+
+Randomized control trials are the ideal, but many issues arise in online experimentation settings. 
+
+(look up desirable properties form causal inference notes)
+
+### Population 
+
+What group is being sampled from?
+
+### Cohorts
+
+Random sample, cluster-based, stratified, serial, balanced, ... 
+
+### Synthetic Control Groups
+
+Propensity matching
+
+### Limitations
+
+- Non-compliance: Those assicned to treatment may not actually experience the treatment. 
+- Crossover: Those assigned to control might gain access to the treatment. 
+- Treatment inhomogenaity: Some user segments might respond differently than others.
+
+# Implementation
+
+Batched, or real-time
+
+## Size
+
+power, sample size
+
+## Duration
+
+- learning effects: initial exploration or novelty seeking
+- learning effects: initial change aversion
+
+Solution: Consider running experiment past any initial observed effect.
+
+### Temporal variation
+
+### Optional stopping
+
+Why it's an issue for frequentists
+
+Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting
+
+Bayesian justifications
+
+## Estimands
+
+- Average treatment effect
+- Treatment on treated
+
+## Effiencicy or Variance Reduction
+
+- look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser. 
+
+e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = \beta_0 + \beta_1 Y_{t-1}$
+
+- get table for different tests of means from soc sci 10 notes.
+
+## Checking assignment integrety
+
+- Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets. 
+
+--->
 </div>
-<div id="optional-stopping" class="section level3">
-<h3>Optional stopping</h3>
-<p>Why it’s an issue for frequentists</p>
-<p>Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting</p>
-<p>Bayesian justifications</p>
 </div>
-</div>
-<div id="estimands" class="section level2">
-<h2>Estimands</h2>
+<div id="common-tests" class="section level1">
+<h1>Common Tests</h1>
+<div id="t-test" class="section level2">
+<h2>t-test</h2>
 <ul>
-<li>Average treatment effect</li>
-<li>Treatment on treated</li>
+<li>different variance formulations.</li>
+<li>one-sample</li>
+<li>two independent sampels</li>
+<li>two dependent samples</li>
 </ul>
 </div>
-<div id="effiencicy-or-variance-reduction" class="section level2">
-<h2>Effiencicy or Variance Reduction</h2>
+<div id="anova" class="section level2">
+<h2>ANOVA</h2>
+</div>
+<div id="linear-model" class="section level2">
+<h2>Linear Model</h2>
+</div>
+<div id="z-test-for-proportions" class="section level2">
+<h2>Z test for proportions</h2>
+<p>Binary data</p>
+</div>
+<div id="chi-square" class="section level2">
+<h2>Chi-Square</h2>
+</div>
+<div id="logistic-regression" class="section level2">
+<h2>Logistic Regression</h2>
+</div>
+<div id="likelihood-ratio-and-bayes-factors" class="section level2">
+<h2>Likelihood Ratio and Bayes Factors</h2>
+</div>
+<div id="always-valid-p-values-ck-optimizely-white-paper" class="section level2">
+<h2>always valid p-values (ck optimizely white paper)</h2>
+</div>
+</div>
+<div id="more-on-variance" class="section level1">
+<h1>more on variance</h1>
+<div id="emperical-variance-estimation" class="section level2">
+<h2>Emperical Variance Estimation</h2>
+<p>bootstrapping</p>
+<p>A/A testing</p>
+</div>
+<div id="mixed-effects-models" class="section level2">
+<h2>Mixed Effects Models</h2>
 <ul>
-<li>look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser.</li>
-</ul>
-<p>e.g. with a two sample t-test, <span class="math inline">\(Y_t - Y_{t-1} = \beta_0\)</span>, versus a model <span class="math inline">\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)</span></p>
-<ul>
-<li>get table for different tests of means from soc sci 10 notes.</li>
+<li>Maime’s consulting project? Other use cases?</li>
 </ul>
 </div>
-<div id="checking-assignment-integrety" class="section level2">
-<h2>Checking assignment integrety</h2>
-<ul>
-<li>Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.</li>
-</ul>
-</div>
-</div>
-<div id="testing" class="section level1">
-<h1>Testing</h1>
-<div id="binary-or-proportions" class="section level2">
-<h2>Binary or Proportions</h2>
-<div id="fishers-z" class="section level3">
-<h3>Fisher’s Z</h3>
-</div>
-</div>
-<div id="real-valued" class="section level2">
-<h2>Real-Valued</h2>
-<div id="regression" class="section level3">
-<h3>Regression</h3>
-</div>
-</div>
-</div>
-<div id="linear-models-1" class="section level1">
-<h1>Linear Models</h1>
-<p>regression</p>
-<p>t-tests</p>
-<p>ANOVA</p>
-<p>t-test, ANOVA</p>
-</div>
-<div id="glms" class="section level1">
-<h1>GLMs</h1>
+<div id="glms" class="section level2">
+<h2>GLMs</h2>
+<!--
+models for when the errors aren't assumed to be normally distributed
+--->
 <p>Stats: descriptive, R-squared, chi-squared;</p>
 <p>Probability: distributions, CLT, sampling distributions, p-value,</p>
 <p>Stats: k-s, Q-Q plot, hypothesis testing, experimentation;</p>
@@ -305,8 +380,30 @@ Fermi problems (order of magnitude)
 <p>Dynamic experimentation (multi-armed bandits)</p>
 <p>Unit testing; EDA visualization (seaborn, Plotly, Bokeh)</p>
 </div>
-<div id="emperical-variance-estimation" class="section level1">
-<h1>Emperical Variance Estimation</h1>
-<p>bootstrapping</p>
-<p>A/A testing</p>
+</div>
+<div id="causal-inference-methods" class="section level1">
+<h1>Causal Inference Methods</h1>
+<p>Good medium blog post <a href="https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268">here</a></p>
+<p>For each mention the assumptions and the model.</p>
+<div id="difference-in-differences" class="section level2">
+<h2>Difference in Differences</h2>
+</div>
+<div id="causal-impact" class="section level2">
+<h2>Causal Impact</h2>
+</div>
+<div id="synthetic-controls" class="section level2">
+<h2>Synthetic Controls</h2>
+</div>
+<div id="propensity-score-matching" class="section level2">
+<h2>Propensity score Matching</h2>
+</div>
+<div id="fixed-effects-regression" class="section level2">
+<h2>Fixed Effects Regression</h2>
+</div>
+<div id="instrumental-variables" class="section level2">
+<h2>Instrumental variables</h2>
+</div>
+<div id="regression-discontinuity" class="section level2">
+<h2>Regression Discontinuity</h2>
+</div>
 </div>

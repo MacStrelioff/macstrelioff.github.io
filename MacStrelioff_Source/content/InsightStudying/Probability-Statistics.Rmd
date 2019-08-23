@@ -29,13 +29,23 @@ set.seed(10201991)
 Fermi problems (order of magnitude)
 --> 
 
-# Probability Foundations 
+# Theoretical Foundations 
 
 combinatorics (permutations and combinations)
+
+## Probability Functions
+
+pdf, cdf
 
 ## Probability Rules
 
 basic probability rules
+
+- law of total probability
+
+## Maximum Likelihood and Bayes' Theorem
+
+likelihood is one term in Bayes' Theorem
 
 ## Odds and other transformations
 
@@ -45,45 +55,88 @@ odds, log odds, relative risk, ... .
 
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
 
+## Models as conditional expectations
+
+Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it's priors
+
 ## Central limit theorem
 
 Sum of any random variable converges to normal distribution. 
 
 - show for binomial case, to justify Z test
 
-# Common Tests
 
-## Z test 
+## Information theory and entropy
 
-Normal data
+- entropy is minimized by a Bayesian estimator
 
-Binary data
+# Experiment Design
 
+## Foundations
 
-## Chi-Square
+- Hypotheses
+- Treatment and control conditions
+- assumptions (including CI assumptions, SUTVA, ...?)
 
+## Concerns
 
-## Linear Models
+- network effects: front-end, it could be from different interactions, back-end it could be from changes in algorithm behavior for units in C based on different behavior from units in T -- e.g. if a new recommender for units in T influences them to watch more of x, then x may also get recommended more to those in C. 
+- learning effects (change aversion, novelty seeking)
+- spillover or noncompliance (C gets T)
+- early adopters
+- treatment inhomogenity
 
+## Treatment Units
 
-## ANOVA
+What is the unit at which we assign treatments? 
 
-## t-test
+Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals. 
 
-- different variance formulations. 
-- one-sample
-- two independent sampels
-- two dependent samples
+Proxies for individuals include;
 
+- User ID or account -- most clearly tied to a user, but 
+- cookies -- device and browser specific, so these could differ across a user's browsers or devices.
+- IP address (device request return address) -- device specific, so a user's experience might differ across devices.
 
-## Mixed Effects Models
+In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).
 
-- Maime's consulting project? Other use cases?
+- a solution to SUTVA violations, but decreases sample size and power dramatically
 
+- cluster-based, stratified, serial, balanced, ... 
 
-## GLMs: Logistic Regression
+- propensity scores and matching
 
+## Generative Model and Adjustment Variables
 
+- Specify the hypothesized generative process
+- Confounds
+- Precision
+- Neusance
+
+## Common Designs
+
+A/B testing
+
+A/A testing to estimate variation
+
+Variance reduction designs (paired designs, matching, ...)
+
+Bandits for limited data or maximizing an objective
+
+## Assignment Mechanism
+
+- maps samples (xi,yi) into treatment or control conditions.
+- randomized control trials ideal, not always possible
+- other options, ...?
+
+- test assignment validity, could use propensity scores or maybe chi square.
+
+## Duration
+
+- power analysis for sample size
+- time to run to mitigate 
+
+<!---
 # Experiment Design
 
 ## Objective, demand, and value
@@ -222,27 +275,51 @@ e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = 
 
 - Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets. 
 
-# Testing
+--->
 
-## Binary or Proportions
+# Common Tests
 
-### Fisher's Z
+## t-test
 
-## Real-Valued
+- different variance formulations. 
+- one-sample
+- two independent sampels
+- two dependent samples
 
-### Regression
+## ANOVA
 
-# Linear Models
+## Linear Model
 
-regression
+## Z test for proportions
 
-t-tests
+Binary data
 
-ANOVA
+## Chi-Square
 
-t-test, ANOVA
+## Logistic Regression
 
-# GLMs
+## Likelihood Ratio and Bayes Factors
+
+## always valid p-values (ck optimizely white paper)
+
+
+# more on variance
+
+## Emperical Variance Estimation
+
+bootstrapping
+
+A/A testing
+
+## Mixed Effects Models
+
+- Maime's consulting project? Other use cases?
+
+
+## GLMs
+<!--
+models for when the errors aren't assumed to be normally distributed
+--->
 
 Stats: descriptive, R-squared, chi-squared;  
 
@@ -258,11 +335,26 @@ Dynamic experimentation (multi-armed bandits)
 
 Unit testing; EDA visualization (seaborn, Plotly, Bokeh)
 
-# Emperical Variance Estimation
+# Causal Inference Methods
 
-bootstrapping
+Good medium blog post [here](https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268)
 
-A/A testing
+For each mention the assumptions and the model.
+
+## Difference in Differences
+
+## Causal Impact
+
+## Synthetic Controls
+
+## Propensity score Matching
+
+## Fixed Effects Regression
+
+## Instrumental variables
+
+## Regression Discontinuity
+
 
 
 

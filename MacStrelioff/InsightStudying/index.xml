@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2019 12:30:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2019 18:53:05 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Thu, 22 Aug 2019 18:53:05 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>Theoretical Foundations Probability Functions Probability Rules Maximum Likelihood and Bayes’ Theorem Odds and other transformations Expectation and Variance Models as conditional expectations Central limit theorem Information theory and entropy  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  more on variance Emperical Variance Estimation Mixed Effects Models GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Theoretical Foundations combinatorics (permutations and combinations)</description>
+    </item>
     
     <item>
       <title>Product Sense</title>
@@ -58,15 +67,6 @@ Search:
       
       <guid>/MacStrelioff/insightstudying/yelp-deep-dive/</guid>
       <description>TODO:  compute common business metrics from Yelp dataset. Product deep dive   Company Visit Business Model, Culture, and Vision  Mission: Connect people with great local places Main source of revenue is business ads, overview of offerings here More services for businesses Want: openness, curiosity, approachable DS team has “Office hours” to facilitate communication Journal clubs and learning groups Can move to PM or ML teams   Projects, Tasks, and Data  Working on personalization e.</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 04 Aug 2019 17:40:55 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>Probability Foundations Probability Rules Odds and other transformations Expectation and Variance Central limit theorem  Common Tests Z test Chi-Square Linear Models ANOVA t-test Mixed Effects Models GLMs: Logistic Regression  Experiment Design Objective, demand, and value Constructs, metrics, and scoping User flow and target metrics Invariants Confounding variables Precision variables  Metric Validation Conditions Treatment Units Assignment Mechanism Population Cohorts Synthetic Control Groups Limitations   Implementation Size Duration Temporal variation Optional stopping  Estimands Effiencicy or Variance Reduction Checking assignment integrety  Testing Binary or Proportions Fisher’s Z  Real-Valued Regression   Linear Models GLMs Emperical Variance Estimation   Probability Foundations combinatorics (permutations and combinations)</description>
     </item>
     
     <item>
