@@ -30,19 +30,35 @@ video guidelines for higher ranking:
 - "Unfortunately, interviews are largely luck in terms of whether you've seen the question before. 
 - In this series I walk through problems that reflect those that are currently being asked in data scientist interviews at highly competitive companies. 
 - After watching these interview question walkthroughs, you'll be able to confidently brease through your technical interviews.
-- 
+- Many resources, can be overwhelming and ultimately a waste of time because much of that material won't ever come up.
+- My goal is to make these videos the highest return on your time by focusing on content that my friends and I have seen in interviews.
 
 --->
 
 <!---
 todo:
+
+- You are trapped in a room with three doors, one adds a day, another adds two days, the third is an escape. How long are you expected to be trapped in this room. 
+- alternatively;
+- You are playing a card game with three cards -- a '1', a '2', and an 'X'. 
+- On each round, you pick one randomly. If you pick a '1', then the game continues. If you pick the 'x' then the game ends. 
+- How many rounds are your expected to play?
+-- Now instead there is a '1', a '2', and an 'X'. If you draw the '1', you win $1, if you draw the '2' you win $2, and if you draw the 'X' then the game ends. How much are you expected to win?
+
+-- Now instead of winnings, the numbers on the card represent how many more rounds you'll need to play. How many rounds are you expected to play now? (version of Aman's question)
+
+-- google question: Now there are cards 1 through 6. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
+
+-- recursive question: 
+-- Now the game ends if you 
+
 - Explain a power analysis (start complicated, get simple to keep people watching till the end)
 - Bank teller problem 
 - expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 - random number generator from a uniform random number generator
 - Aman's question - sample from a circle using a random number generator
-- solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
-- circle question from Google
+  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
+  - circle question from Google
 - estimate median from Google
 - variances of different experiment designs
 - multinomial and guessers 'favorite color' and a proportion of users who guess randomly
