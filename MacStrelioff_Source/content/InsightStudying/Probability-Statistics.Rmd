@@ -43,6 +43,8 @@ basic probability rules
 
 - law of total probability
 
+Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
+
 ## Maximum Likelihood and Bayes' Theorem
 
 likelihood is one term in Bayes' Theorem
