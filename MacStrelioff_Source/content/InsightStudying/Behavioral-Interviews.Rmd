@@ -24,6 +24,14 @@ library(entropy)
 set.seed(10201991)
 ```
 
+<!--
+Try: 
+
+- bring a notebook and use that instead of the whiteboard. -- keeps seeting closer / more engaging, also keeps a log of what was covered in the interview.
+
+
+-->
+
 # Principles
 
 - Interviews are conversations, not tests
