@@ -139,9 +139,9 @@
   <meta property="og:description" content="Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-07-14T11:52:10&#43;00:00">
+  <meta property="article:published_time" content="2019-08-23T08:44:49&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-07-14T11:52:10&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-23T08:44:49&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-07-14 11:52:10 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-14 11:52:10 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-23 08:44:49 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-23 08:44:49 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -368,7 +368,7 @@
     
       
     
-    <time>Jul 14, 2019</time>
+    <time>Aug 23, 2019</time>
   </span>
   
 
@@ -510,6 +510,11 @@
 <li><a href="#performance-metrics-and-how-they-apply">Performance metrics and how they apply</a></li>
 <li><a href="#cautions">Cautions:</a></li>
 <li><a href="#imagine-rolling-the-model-out">Imagine rolling the model out</a></li>
+<li><a href="#model-explainability">Model explainability</a><ul>
+<li><a href="#shapely-additive">Shapely additive</a></li>
+<li><a href="#locally-linear">Locally linear</a></li>
+<li><a href="#limitations">Limitations</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -751,6 +756,25 @@ Imp(X_m)=&amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta 
 <li>What actions do you take in production?</li>
 </ul>
 </div>
+<div id="model-explainability" class="section level2">
+<h2>Model explainability</h2>
+<div id="shapely-additive" class="section level3">
+<h3>Shapely additive</h3>
+</div>
+<div id="locally-linear" class="section level3">
+<h3>Locally linear</h3>
+<ul>
+<li>eg <a href="https://www.oreilly.com/learning/introduction-to-local-interpretable-model-agnostic-explanations-lime">here</a></li>
+</ul>
+</div>
+<div id="limitations" class="section level3">
+<h3>Limitations</h3>
+<p>Limitations described a little in the FLowcast paper <a href="https://flowcast.ai/Flowcast_whitepaper_-_Explainability.pdf">here</a></p>
+<ul>
+<li>biased for collinear features?</li>
+</ul>
+</div>
+</div>
 </div>
 
     </div>
@@ -888,10 +912,9 @@ Imp(X_m)=&amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta 
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/MacStrelioff/insightstudying/yelp-deep-dive/" rel="next">Yelp Notes</a>
+    <div class="meta-nav">Previous</div>
+    <a href="/MacStrelioff/insightstudying/probability-statistics/" rel="prev">Probability and Statistics</a>
   </div>
-  
   
 </div>
 

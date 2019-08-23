@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning"
 author: "Mac Strelioff"
-date: "2019-07-14 11:52:10"
+date: "2019-08-23 08:44:49"
 math: true
 output:
   blogdown::html_page:
@@ -66,6 +66,11 @@ linktitle: Machine Learning
 <li><a href="#performance-metrics-and-how-they-apply">Performance metrics and how they apply</a></li>
 <li><a href="#cautions">Cautions:</a></li>
 <li><a href="#imagine-rolling-the-model-out">Imagine rolling the model out</a></li>
+<li><a href="#model-explainability">Model explainability</a><ul>
+<li><a href="#shapely-additive">Shapely additive</a></li>
+<li><a href="#locally-linear">Locally linear</a></li>
+<li><a href="#limitations">Limitations</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -306,5 +311,24 @@ Imp(X_m)=&amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta 
 <li>What issues might arise?</li>
 <li>What actions do you take in production?</li>
 </ul>
+</div>
+<div id="model-explainability" class="section level2">
+<h2>Model explainability</h2>
+<div id="shapely-additive" class="section level3">
+<h3>Shapely additive</h3>
+</div>
+<div id="locally-linear" class="section level3">
+<h3>Locally linear</h3>
+<ul>
+<li>eg <a href="https://www.oreilly.com/learning/introduction-to-local-interpretable-model-agnostic-explanations-lime">here</a></li>
+</ul>
+</div>
+<div id="limitations" class="section level3">
+<h3>Limitations</h3>
+<p>Limitations described a little in the FLowcast paper <a href="https://flowcast.ai/Flowcast_whitepaper_-_Explainability.pdf">here</a></p>
+<ul>
+<li>biased for collinear features?</li>
+</ul>
+</div>
 </div>
 </div>

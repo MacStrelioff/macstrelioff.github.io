@@ -242,13 +242,19 @@ e.g. Fraud would be if a consumer calls and labels a transaction as fraud.
 - What actions do you take in production? 
 
 
+## Model explainability
 
+### Shapely additive
 
+### Locally linear
 
+- eg [here](https://www.oreilly.com/learning/introduction-to-local-interpretable-model-agnostic-explanations-lime)
 
+### Limitations
 
+Limitations described a little in the FLowcast paper [here](https://flowcast.ai/Flowcast_whitepaper_-_Explainability.pdf)
 
-
+- biased for collinear features?
 
 
 
