@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-22 18:53:05"
+date: "2019-08-22 19:05:02"
 math: true
 output:
   blogdown::html_page:
@@ -35,6 +35,7 @@ linktitle: Probability and Statistics
 <li><a href="#common-designs">Common Designs</a></li>
 <li><a href="#assignment-mechanism">Assignment Mechanism</a></li>
 <li><a href="#duration">Duration</a></li>
+<li><a href="#integrety-checks">Integrety Checks</a></li>
 </ul></li>
 <li><a href="#common-tests">Common Tests</a><ul>
 <li><a href="#t-test">t-test</a></li>
@@ -46,16 +47,18 @@ linktitle: Probability and Statistics
 <li><a href="#likelihood-ratio-and-bayes-factors">Likelihood Ratio and Bayes Factors</a></li>
 <li><a href="#always-valid-p-values-ck-optimizely-white-paper">always valid p-values (ck optimizely white paper)</a></li>
 </ul></li>
+<li><a href="#different-estimands-for-ci">Different Estimands For CI</a></li>
 <li><a href="#more-on-variance">more on variance</a><ul>
 <li><a href="#emperical-variance-estimation">Emperical Variance Estimation</a></li>
 <li><a href="#mixed-effects-models">Mixed Effects Models</a></li>
+<li><a href="#effiencicy-or-variance-reduction">Effiencicy or Variance Reduction</a></li>
 <li><a href="#glms">GLMs</a></li>
 </ul></li>
 <li><a href="#causal-inference-methods">Causal Inference Methods</a><ul>
 <li><a href="#difference-in-differences">Difference in Differences</a></li>
 <li><a href="#causal-impact">Causal Impact</a></li>
 <li><a href="#synthetic-controls">Synthetic Controls</a></li>
-<li><a href="#propensity-score-matching">Propensity score Matching</a></li>
+<li><a href="#propensity-score-matching">Propensity Score Matching</a></li>
 <li><a href="#fixed-effects-regression">Fixed Effects Regression</a></li>
 <li><a href="#instrumental-variables">Instrumental variables</a></li>
 <li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
@@ -125,9 +128,10 @@ Fermi problems (order of magnitude)
 <ul>
 <li>network effects: front-end, it could be from different interactions, back-end it could be from changes in algorithm behavior for units in C based on different behavior from units in T – e.g. if a new recommender for units in T influences them to watch more of x, then x may also get recommended more to those in C.</li>
 <li>learning effects (change aversion, novelty seeking)</li>
-<li>spillover or noncompliance (C gets T)</li>
 <li>early adopters</li>
-<li>treatment inhomogenity</li>
+<li>Non-compliance: Those assicned to treatment may not actually experience the treatment.</li>
+<li>Crossover: Those assigned to control might gain access to the treatment.</li>
+<li>Treatment inhomogenaity: Some user segments might respond differently than others.</li>
 </ul>
 </div>
 <div id="treatment-units" class="section level2">
@@ -175,8 +179,10 @@ Fermi problems (order of magnitude)
 <div id="duration" class="section level2">
 <h2>Duration</h2>
 <ul>
+<li>learning effects: initial exploration or novelty seeking</li>
+<li><p>learning effects: initial change aversion</p></li>
 <li>power analysis for sample size</li>
-<li>time to run to mitigate</li>
+<li><p>time to run to mitigate</p></li>
 </ul>
 <!---
 # Experiment Design
@@ -300,6 +306,8 @@ Optamizely using a threshold on FDR from likelihood ratio tests in frequentist s
 
 Bayesian justifications
 
+p-values versus likelihood ratios
+
 ## Estimands
 
 - Average treatment effect
@@ -318,6 +326,14 @@ e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = 
 - Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets. 
 
 --->
+</div>
+<div id="integrety-checks" class="section level2">
+<h2>Integrety Checks</h2>
+<ul>
+<li>check that those assigned to treatment received it</li>
+<li><p>check that stratifications were implemented correctly</p></li>
+<li><p>Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.</p></li>
+</ul>
 </div>
 </div>
 <div id="common-tests" class="section level1">
@@ -354,6 +370,13 @@ e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = 
 <h2>always valid p-values (ck optimizely white paper)</h2>
 </div>
 </div>
+<div id="different-estimands-for-ci" class="section level1">
+<h1>Different Estimands For CI</h1>
+<ul>
+<li>Average treatment effect</li>
+<li>Treatment on treated</li>
+</ul>
+</div>
 <div id="more-on-variance" class="section level1">
 <h1>more on variance</h1>
 <div id="emperical-variance-estimation" class="section level2">
@@ -365,6 +388,16 @@ e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = 
 <h2>Mixed Effects Models</h2>
 <ul>
 <li>Maime’s consulting project? Other use cases?</li>
+</ul>
+</div>
+<div id="effiencicy-or-variance-reduction" class="section level2">
+<h2>Effiencicy or Variance Reduction</h2>
+<ul>
+<li>look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser.</li>
+</ul>
+<p>e.g. with a two sample t-test, <span class="math inline">\(Y_t - Y_{t-1} = \beta_0\)</span>, versus a model <span class="math inline">\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)</span></p>
+<ul>
+<li>get table for different tests of means from soc sci 10 notes.</li>
 </ul>
 </div>
 <div id="glms" class="section level2">
@@ -395,7 +428,7 @@ models for when the errors aren't assumed to be normally distributed
 <h2>Synthetic Controls</h2>
 </div>
 <div id="propensity-score-matching" class="section level2">
-<h2>Propensity score Matching</h2>
+<h2>Propensity Score Matching</h2>
 </div>
 <div id="fixed-effects-regression" class="section level2">
 <h2>Fixed Effects Regression</h2>
