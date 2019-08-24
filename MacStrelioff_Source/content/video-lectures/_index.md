@@ -73,7 +73,7 @@ Intro video: "Data Scientist Interview Walkthrough: Intro"
 
 - So.. what are these videos? 
 
-- Each video will start with a question. I'd recommend pausing the video and trying the question yourself for a few minutes, and then watching the walkthrough the question. 
+- Each video will start with a question. I'd recommend pausing the video and trying the question yourself for a few minutes, and then watching my walkthrough for the question. 
 
 - As I walk through the questions, I'll mention the concepts that the questions are testing for so that you can note them and dive into those later. 
 
@@ -83,9 +83,9 @@ Intro video: "Data Scientist Interview Walkthrough: Intro"
 
 - So for now, I would recommend watching the videos, trying the problems, and seeing how I walkthrough solutions, and watching through the end so that there aren't any unexpected surprises
 
-- Before I end this video,
 
-- If you find this helpful or interesting, like this video so that I know that the work I put into this series is having a good an impact
+
+- If you find this helpful or interesting, like this video so that I know that the work I put into this series is having a good impact for you and other people
 
 - Also, if there are questions that you have encountered and want answered, comment them below so that I can get you a walkthrough!
 
