@@ -18,6 +18,26 @@ I started making videos while I was a Teaching Assistant at UC Irvine for studen
 
 <!---
 ADD ABOUT ME VIDEO HERE
+
+Behavioral, "Tell me about yourself": 
+
+About Me: 
+
+- PhD.. , masters in statistics (borrow from cover letters?)
+
+- Through grad school I pursued any project that was interesting to me -- It was my time to develop valuable skills and learn what I wanted to do. 
+
+- fast list of projects (decision making, prediction markets, statistics, AI and models of the mind, ... )
+
+- relate to this job at this company
+
+- demonstrate the value that I add here
+
+- decision making, so studying people and the patterns or experiences that shape their behavior
+- Amazed to learn that there's a huge interplay between psychology and computer science -- reinforcement learning Skinner in the 30's, turned into a plethora of models in computer science, which are now being used to explain human behavior, and neural correlates of key values in those models are being discovered. 
+- Overall I was more interested in naturally occurring datasets, and experimental design -- how we structude and verify our beliefs, and then use those beliefs to guide our actions. 
+- So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design. 
+
 --->
 
 
@@ -38,28 +58,40 @@ video guidelines for higher ranking:
 
 
 <!--
-Intro video: "Silicon Valley Data Scientist Interview Walkthrough: Intro"
 
-- Problem I had -- Lots of resources with loads of material that probably won't actually help in an interview or is too vague or theoretical to be useful for interviewing.
-- I also realized that there are plenty of walkthroughs for the problems that come up in software engineering interviews. 
-- So with this series, I'm creating something like that that for data science interviews.
+Intro video: "Data Scientist Interview Walkthrough: Intro"
 
-- In this series, I'll be answering interview questions that have actually come up in my interviews, or the interviews of my friends, or questions that I got from senior data scientists and product managers who administer these interviews. 
+- When I was studying to be a data scientist, I realized that there were lots of resources with loads of material that won't actually help in an interview because they were too vague or too theoretical, or just contained very little material that actually comes up in an interview.
+
+- I also noticed that there are plenty of walkthroughs for the problems that come up in software engineering interviews, but nothing like that for data science interviews. 
+
+- So with this series, I'm creating videos that will walk you through the questions that are currently coming up in silicone valley data scientist interviews.
+
+- To make this the most valuable use of your time, I'll be walking through questions that have come up in my interviews, or in my friends interviews, as well as questions that I gotten from data scientists and product managers who are actively interviewing. 
 
 - This way these videos are going to be the most relevant and helpful resource for you if you want to learn what it takes to excel in a data science interview.
 
-- I'm also focusing on questions and answers that would be difficult to find elsewhere, but very likely to come up in interviews. 
+- So.. what are these videos? 
 
-- Each video will start with a question. I'd recommend pausing the video and trying the question yourself for a few minutes at first, then watching the rest of my walkthrough. Some of the best questions start easy and become progressively harder, so please watch to the end so that you don't miss any surprising turns that an interviewer can throw at you. 
+- Each video will start with a question. I'd recommend pausing the video and trying the question yourself for a few minutes, and then watching the walkthrough the question. 
 
-- Throughout the videos, I'll mention the concepts that the questions are testing for so that you can note them and dive into those later. 
+- As I walk through the questions, I'll mention the concepts that the questions are testing for so that you can note them and dive into those later. 
 
-- For now, I would recommend watching the videos, trying the problems, and seeing my solutions to the original question, and the potential follow-up questions.
+- Now, some of the best questions start easy and become progressively harder, so what that means here is that, if you don't watch to the end then you might miss surprises that an interviewer can throw at you,
 
-- Finally, if there are questions that you have encountered and want an answer to, please comment them below, and I'll do my best to create a walkthrough for you.
+- that the people who aren't watching my videos won't be expecting. 
 
-- Also, if these videos are helpful, please like them so that I know I'm making an impact
-- And finally, please subscribe if you want access to the most recent walkthroughs.
+- So for now, I would recommend watching the videos, trying the problems, and seeing how I walkthrough solutions, and watching through the end so that there aren't any unexpected surprises
+
+- Before I end this video,
+
+- If you find this helpful or interesting, like this video so that I know that the work I put into this series is having a good an impact
+
+- Also, if there are questions that you have encountered and want answered, comment them below so that I can get you a walkthrough!
+
+- And finally be sure to subscribe if you want access to the most recent walkthroughs
+
+- Thank you, and I hope you enjoy these videos! 
 
 --->
 
