@@ -40,6 +40,7 @@ video guidelines for higher ranking:
 - After watching these interview question walkthroughs, you'll be able to confidently brease through your technical interviews.
 - Many resources, can be overwhelming and ultimately a waste of time because much of that material won't ever come up.
 - My goal is to make these videos the highest return on your time by focusing on content that my friends and I have seen in interviews.
+
 --->
 
 <!---

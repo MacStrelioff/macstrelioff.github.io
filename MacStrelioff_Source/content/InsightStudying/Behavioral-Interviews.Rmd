@@ -35,7 +35,6 @@ In my personal life, I manage a YouTube channel. Recently I've pulled my viewer 
 
 -->
 
-
 <!---
 Decent cover letter:
 Wealthfront's vision of automating personal finance is very exciting to me. I have been personally interested in investing since I was 16 years old, actively trading since I was 18 years old, and I've recently been learning about automated trading and portfolio management particularly for income investing. 
@@ -45,7 +44,6 @@ In addition to the vision, the job requirements align with the tasks that I like
 Overall I'm excited by the vision of automating swaths of personal finance to optimize passive income, and have applied many of the relevant skills through my research and in my personal life.
 
 I hope you are interested in the skills and projects outlined in my resume, and I look forward to hearing from you if you think I could add value to the team!
-
 --->
 
 # Principles
