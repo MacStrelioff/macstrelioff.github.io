@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 25 Aug 2019 12:03:06 +0000</pubDate>
+      <pubDate>Sun, 25 Aug 2019 12:10:21 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -49,7 +49,6 @@
 &lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#probability-functions&#34;&gt;Probability Functions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#expectation-and-variance&#34;&gt;Expectation and Variance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#models-as-conditional-expectations&#34;&gt;Models as conditional expectations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#maximum-likelihood-versus-bayes-theorem&#34;&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#central-limit-theorem&#34;&gt;Central limit theorem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#information-theory-and-entropy&#34;&gt;Information theory and entropy&lt;/a&gt;&lt;/li&gt;
@@ -168,6 +167,9 @@ p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2) = p(e_1) + p(e_2) - 0 = p(e_
 &lt;/div&gt;
 &lt;div id=&#34;probability-functions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Probability Functions&lt;/h2&gt;
+&lt;!--
+Many machine learning algorithms are different ways of estimating f(x)
+--&gt;
 &lt;p&gt;Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is used represent a probability function, and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; to represent a cumulative probability function. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is commonly called a probability mass function (pmf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is discrete, and a probability density function (pdf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is continuous. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; are related through integration:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
@@ -202,11 +204,16 @@ Make YouTube videos on each.
 &lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
 &lt;!--
 Expectation and variance are the foundation for decision making
+- value function v(x) that assigns values to the outcomes x
+- If you know the distribution and value function, then you can directly compare choices based on their expected value
 --&gt;
-&lt;/div&gt;
-&lt;div id=&#34;models-as-conditional-expectations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Models as conditional expectations&lt;/h2&gt;
-&lt;p&gt;Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it’s priors&lt;/p&gt;
+&lt;!--
+## Models as conditional expectations
+
+Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it&#39;s priors
+
+## Models as estimators for f(x), \hat{f}(x)
+--&gt;
 &lt;/div&gt;
 &lt;div id=&#34;maximum-likelihood-versus-bayes-theorem&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/h2&gt;

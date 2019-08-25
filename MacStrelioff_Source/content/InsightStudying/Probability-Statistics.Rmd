@@ -135,6 +135,10 @@ $$
 
 ## Probability Functions
 
+<!--
+Many machine learning algorithms are different ways of estimating f(x)
+-->
+
 Here I'll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use $f(x)$ is used represent a probability function, and $F(x)$ to represent a cumulative probability function. $f(x)$ is commonly called a probability mass function (pmf) if $x$ is discrete, and a probability density function (pdf) if $x$ is continuous. $f(x)$ and $F(x)$ are related through integration: 
 
 $$
@@ -178,12 +182,17 @@ expectation, variance, conditional or iterated expectations, law of total varian
 
 <!--
 Expectation and variance are the foundation for decision making
+- value function v(x) that assigns values to the outcomes x
+- If you know the distribution and value function, then you can directly compare choices based on their expected value
 -->
 
+<!--
 ## Models as conditional expectations
 
 Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it's priors
 
+## Models as estimators for f(x), \hat{f}(x)
+-->
 
 ## Maximum Likelihood versus Bayes' Theorem
 

@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-25 12:03:06"
+date: "2019-08-25 12:10:21"
 math: true
 output:
   blogdown::html_page:
@@ -21,7 +21,6 @@ linktitle: Probability and Statistics
 <li><a href="#probability-rules">Probability Rules</a></li>
 <li><a href="#probability-functions">Probability Functions</a></li>
 <li><a href="#expectation-and-variance">Expectation and Variance</a></li>
-<li><a href="#models-as-conditional-expectations">Models as conditional expectations</a></li>
 <li><a href="#maximum-likelihood-versus-bayes-theorem">Maximum Likelihood versus Bayes’ Theorem</a></li>
 <li><a href="#central-limit-theorem">Central limit theorem</a></li>
 <li><a href="#information-theory-and-entropy">Information theory and entropy</a></li>
@@ -140,6 +139,9 @@ p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2) = p(e_1) + p(e_2) - 0 = p(e_
 </div>
 <div id="probability-functions" class="section level2">
 <h2>Probability Functions</h2>
+<!--
+Many machine learning algorithms are different ways of estimating f(x)
+-->
 <p>Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use <span class="math inline">\(f(x)\)</span> is used represent a probability function, and <span class="math inline">\(F(x)\)</span> to represent a cumulative probability function. <span class="math inline">\(f(x)\)</span> is commonly called a probability mass function (pmf) if <span class="math inline">\(x\)</span> is discrete, and a probability density function (pdf) if <span class="math inline">\(x\)</span> is continuous. <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(F(x)\)</span> are related through integration:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -174,11 +176,16 @@ Make YouTube videos on each.
 <p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
 <!--
 Expectation and variance are the foundation for decision making
+- value function v(x) that assigns values to the outcomes x
+- If you know the distribution and value function, then you can directly compare choices based on their expected value
 -->
-</div>
-<div id="models-as-conditional-expectations" class="section level2">
-<h2>Models as conditional expectations</h2>
-<p>Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it’s priors</p>
+<!--
+## Models as conditional expectations
+
+Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it's priors
+
+## Models as estimators for f(x), \hat{f}(x)
+-->
 </div>
 <div id="maximum-likelihood-versus-bayes-theorem" class="section level2">
 <h2>Maximum Likelihood versus Bayes’ Theorem</h2>
