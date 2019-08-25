@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Aug 2019 21:57:19 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Aug 2019 11:01:19 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Sun, 25 Aug 2019 11:01:19 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>Events and Random Variables Probability Rules Probability Functions Expectation and Variance Models as conditional expectations Maximum Likelihood versus Bayes’ Theorem Central limit theorem Information theory and entropy  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,</description>
+    </item>
     
     <item>
       <title>Behavioral Interviewing</title>
@@ -18,15 +27,6 @@
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>Principles Common Behavioral Questions “Tell me a little about your background.” Child bandits:  “Tell me about the project you worked on at Insight.” “Why are you interested in a career as a data scientist?” “Tell me about your research / talk to me about your last role.” “Why are you interested in joining this company?” “Talk about a time you were on a team that struggled with effective communication.</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Fri, 23 Aug 2019 09:55:29 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>Theoretical Foundations Probability Functions Probability Rules Maximum Likelihood and Bayes’ Theorem Odds and other transformations Expectation and Variance Models as conditional expectations Central limit theorem Information theory and entropy  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Theoretical Foundations combinatorics (permutations and combinations)</description>
     </item>
     
     <item>

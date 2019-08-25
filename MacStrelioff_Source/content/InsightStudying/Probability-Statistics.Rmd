@@ -29,29 +29,119 @@ set.seed(10201991)
 Fermi problems (order of magnitude)
 --> 
 
-# Theoretical Foundations 
+<!--
+- Make YouTube videos on each!
+-->
+
+# Events and Random Variables
+
+Events, event spaces, 
 
 combinatorics (permutations and combinations)
 
-## Probability Functions
+A random variable random variable is a variable with an unknown value, but known possible values. An event is an observed value of a random variable. An event space contains all possible values of the random variable. Probabilities are values assigned to the events in an event space (i.e. the possible values of a random variable) and represent how likely each event is relative to other events in the event space.
 
-pdf, cdf
+Here $p(e)$ will be used to represent the probability of an event. Some special probabilities include the probability of any event in the event space, which is 1. And the probability of any event other than $p(e)$, known as the compliment of $p(e)$, denoted with $p(\neg e)$, is found by; 
+
+$$
+p(\neg e) = 1 - p(e)
+$$
 
 ## Probability Rules
 
-basic probability rules
+A joint event refers to two or more events occurring together. They are colloquially talked about as one event 'and' another event occurring together. More formally, joint events are called intersections (represented with the $\cap$ symbol) between events. For events $e_1$ and $e_2$, the probability of their joint event will be represented with $p(e_1 \cap e_2)$. The probability of an intersection of events is the same regardless of which event is considered first; 
 
-- law of total probability
+$$
+p(e_1 \cap e_2) = p(e_2 \cap e_1)
+$$
 
-Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
+For two events, $e_1$ and $e_2$, their intersection is found by;
+$$
+p(e_1 \& e_2) = p(e_1\cap e_2) = p(e_1|e_2)p(e_2)
+$$
+where $p(e_1|e_2)$ is a conditional probability, discussed in the next section. 
 
-## Maximum Likelihood and Bayes' Theorem
 
-likelihood is one term in Bayes' Theorem
+Conditional events refer to one event, $e_1$, after another event, $e_2$, is known. $p(e_1|e_2)$ represents the probability of $e_1$ given, or after knowing, $e_2$. These can be defined by rearranging the multiplication rule as follows; 
+$$
+p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
+$$
 
-## Odds and other transformations
+Noting that, by the reflexively of joint events and the definition of the multiplication rule, $p(e_1 \cap e_2) = p(e_2 \cap e_1)= p(e_2 | e_1) p(e_1)$, and so the above equation becomes; 
+$$
+p(e_1|e_2)=\frac{p(e_2 | e_1) p(e_1)}{p(e_2)}
+$$
+This equation is known as Bayes' Theorem or Bayes' Rule.
 
-odds, log odds, relative risk, ... .
+A union (represented with the $\cup$ symbol) of events refers to at least one of multiple events occurring. For events, $e_1$ and $e_2$, their union would include the probability that $e_1$ occurs, the probability that or $e_2$ occurs, and the probability that both $e_1$ and $e_2$ occur. Colloquially this is talked about the probability of $e_1$ 'or' $e_2$. Formally this is expressed and computed as; 
+$$
+p(e_1\text{ or } e_2) = p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2)
+$$
+
+Where $p(e_1 \cap e_2)$ is a joint probability.
+
+
+Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events $e_1$ and $e_2$ are independent, this would mean that; 
+$$
+p(e_1|e_2) = p(e_1) \text{ and } p(e_2|e_1) = p(e_2)
+$$
+
+If $e_1$ and $e_2$ are independent, then their joint probability simplifies as so; 
+$$
+p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = p(e_1)p(e_2)
+$$
+Where the last equality is only true if $e_1$ and $e_2$ are independent (i.e. $p(e_1|e_2)=p(e_1)$). 
+
+Then the probability of their union simplifies to;
+$$
+p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) = p(e_1) + p(e_2) - p(e_1)p(e_2)
+$$
+Where again, the last part of this equality is only true if $e_1$ and $e_2$ are independent.
+
+Events $e_1$ and $e_2$ are said to be mutually exclusive if the occurrence of either event precludes the occurrence of the other event. Formally mutual exclusivity means that; 
+$$
+p(e_1 | e_2) = 0 \text{ and } p(e_2 | e_1) = 0
+$$
+
+If two events are mutually exclusive, then the probability of their joint event is; 
+$$
+p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = 0*p(e_2) = 0
+$$
+
+And the probability of their union simplifies to;
+$$
+p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2) = p(e_1) + p(e_2) - 0 = p(e_1) + p(e_2)
+$$
+
+## Probability Functions
+
+Here I'll describe the properties and use cases for probability functions and cumulative probability functions. I'll use $f(x)$ to represent a probability function, and $F(x)$ to represent a cumulative probability function. $f(x)$ is commonly called a probability mass function (pmf) if $x$ is discrete, and a probability density function (pdf) if $x$ is continuous. $f(x)$ and $F(x)$ are related through integration: 
+
+$$
+\begin{aligned}
+F(x) &= \int_{-\infty}^{\infty} f(x) dx \\
+f(x) &= \frac{d}{dx}F(x)
+\end{aligned}
+$$
+
+
+
+Probability functions have to satisfy a few conditions: 
+
+1. 
+2. 
+3. 
+
+pdf, cdf
+
+
+<!--
+### Probability Distributions
+
+Make YouTube videos on each. 
+- 1) Walk through properties from Wikipedia!
+- 2) Walk through some simulations in Python!
+-->
 
 ## Expectation and Variance
 
@@ -60,6 +150,28 @@ expectation, variance, conditional or iterated expectations, law of total varian
 ## Models as conditional expectations
 
 Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it's priors
+
+
+## Maximum Likelihood versus Bayes' Theorem
+
+likelihood is one term in Bayes' Theorem
+
+
+<!--
+## Odds and other transformations
+
+odds, log odds, relative risk, ... .
+-->
+
+<!--
+## Practice Problems and Walkthroughs
+
+- link to my YouTube videos on these things
+
+Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
+
+- circle problem
+-->
 
 ## Central limit theorem
 
