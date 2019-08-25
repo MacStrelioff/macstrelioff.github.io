@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 25 Aug 2019 11:01:19 +0000</pubDate>
+      <pubDate>Sun, 25 Aug 2019 12:03:06 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -99,6 +99,26 @@ Fermi problems (order of magnitude)
 &lt;!--
 - Make YouTube videos on each!
 --&gt;
+&lt;!--
+# What is a probability, and how does that relate to statistics? 
+
+- Probabilities are commonly thought of in three ways; 
+
+1. Purely mathematical
+2. Magnitudes of belief
+3. Relative frequencies of infinate events
+
+I use probability theory to quantify beliefs and make decisions. 
+
+Logic, about truths of the universe. 
+By there is uncertainty in what we know, and uncertainty in our measurements and observations. Statistics as a field is concerned with specifying our knowledge of the laws of the universe and the uncertainty around them. They do this by applying probability theory. 
+
+Probability theory generalizes logic to situations where we aren&#39;t certain. And logic emerges from probability theory when we know things with certainty. 
+
+Hypothesis testing
+
+Statisticians use probability theory to decide on what is and isn&#39;t true
+--&gt;
 &lt;div id=&#34;events-and-random-variables&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Events and Random Variables&lt;/h1&gt;
 &lt;p&gt;Events, event spaces,&lt;/p&gt;
@@ -148,11 +168,18 @@ p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2) = p(e_1) + p(e_2) - 0 = p(e_
 &lt;/div&gt;
 &lt;div id=&#34;probability-functions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Probability Functions&lt;/h2&gt;
-&lt;p&gt;Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. I’ll use &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; to represent a probability function, and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; to represent a cumulative probability function. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is commonly called a probability mass function (pmf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is discrete, and a probability density function (pdf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is continuous. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; are related through integration:&lt;/p&gt;
+&lt;p&gt;Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is used represent a probability function, and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; to represent a cumulative probability function. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is commonly called a probability mass function (pmf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is discrete, and a probability density function (pdf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is continuous. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; are related through integration:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
-F(x) &amp;amp;= \int_{-\infty}^{\infty} f(x) dx \\
-f(x) &amp;amp;= \frac{d}{dx}F(x)
+f(x) &amp;amp;= \frac{d}{dx}F(x) \\
+F(x) &amp;amp;= \int_{-\infty}^{\infty} f(x) dx
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For discrete variables, the probability function represents the probability that &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes a specific value &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(f(x) = p(X=x)\)&lt;/span&gt;. For continuous variables, the probability that the variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes any particular value is technically &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(p(X=x)=0\)&lt;/span&gt;. However, &lt;span class=&#34;math inline&#34;&gt;\(p(x)\)&lt;/span&gt; is still related to probability functions &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; through areas. For an arbitrarily small &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt; the probability that &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes a value between &lt;span class=&#34;math inline&#34;&gt;\(x-\epsilon\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(x+\epsilon\)&lt;/span&gt; is the area of the distribution over that range;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p( x - \epsilon&amp;lt; x &amp;lt; x+\epsilon) &amp;amp;= F(x+\epsilon) - F(x-\epsilon) \\
+&amp;amp;= \int_{-\infty}^{(x-+\epsilon)}f(x)dx - \int_{-\infty}^{(x-\epsilon)}f(x)dx
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Probability functions have to satisfy a few conditions:&lt;/p&gt;
@@ -173,6 +200,9 @@ Make YouTube videos on each.
 &lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Expectation and Variance&lt;/h2&gt;
 &lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
+&lt;!--
+Expectation and variance are the foundation for decision making
+--&gt;
 &lt;/div&gt;
 &lt;div id=&#34;models-as-conditional-expectations&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Models as conditional expectations&lt;/h2&gt;

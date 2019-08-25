@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-25 11:01:19"
+date: "2019-08-25 12:03:06"
 math: true
 output:
   blogdown::html_page:
@@ -71,6 +71,26 @@ Fermi problems (order of magnitude)
 <!--
 - Make YouTube videos on each!
 -->
+<!--
+# What is a probability, and how does that relate to statistics? 
+
+- Probabilities are commonly thought of in three ways; 
+
+1. Purely mathematical
+2. Magnitudes of belief
+3. Relative frequencies of infinate events
+
+I use probability theory to quantify beliefs and make decisions. 
+
+Logic, about truths of the universe. 
+By there is uncertainty in what we know, and uncertainty in our measurements and observations. Statistics as a field is concerned with specifying our knowledge of the laws of the universe and the uncertainty around them. They do this by applying probability theory. 
+
+Probability theory generalizes logic to situations where we aren't certain. And logic emerges from probability theory when we know things with certainty. 
+
+Hypothesis testing
+
+Statisticians use probability theory to decide on what is and isn't true
+-->
 <div id="events-and-random-variables" class="section level1">
 <h1>Events and Random Variables</h1>
 <p>Events, event spaces,</p>
@@ -120,11 +140,18 @@ p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2) = p(e_1) + p(e_2) - 0 = p(e_
 </div>
 <div id="probability-functions" class="section level2">
 <h2>Probability Functions</h2>
-<p>Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. I’ll use <span class="math inline">\(f(x)\)</span> to represent a probability function, and <span class="math inline">\(F(x)\)</span> to represent a cumulative probability function. <span class="math inline">\(f(x)\)</span> is commonly called a probability mass function (pmf) if <span class="math inline">\(x\)</span> is discrete, and a probability density function (pdf) if <span class="math inline">\(x\)</span> is continuous. <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(F(x)\)</span> are related through integration:</p>
+<p>Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use <span class="math inline">\(f(x)\)</span> is used represent a probability function, and <span class="math inline">\(F(x)\)</span> to represent a cumulative probability function. <span class="math inline">\(f(x)\)</span> is commonly called a probability mass function (pmf) if <span class="math inline">\(x\)</span> is discrete, and a probability density function (pdf) if <span class="math inline">\(x\)</span> is continuous. <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(F(x)\)</span> are related through integration:</p>
 <p><span class="math display">\[
 \begin{aligned}
-F(x) &amp;= \int_{-\infty}^{\infty} f(x) dx \\
-f(x) &amp;= \frac{d}{dx}F(x)
+f(x) &amp;= \frac{d}{dx}F(x) \\
+F(x) &amp;= \int_{-\infty}^{\infty} f(x) dx
+\end{aligned}
+\]</span></p>
+<p>For discrete variables, the probability function represents the probability that <span class="math inline">\(X\)</span> takes a specific value <span class="math inline">\(x\)</span>: <span class="math inline">\(f(x) = p(X=x)\)</span>. For continuous variables, the probability that the variable <span class="math inline">\(X\)</span> takes any particular value is technically <span class="math inline">\(0\)</span>; <span class="math inline">\(p(X=x)=0\)</span>. However, <span class="math inline">\(p(x)\)</span> is still related to probability functions <span class="math inline">\(f(x)\)</span> through areas. For an arbitrarily small <span class="math inline">\(\epsilon\)</span> the probability that <span class="math inline">\(X\)</span> takes a value between <span class="math inline">\(x-\epsilon\)</span> and <span class="math inline">\(x+\epsilon\)</span> is the area of the distribution over that range;</p>
+<p><span class="math display">\[
+\begin{aligned}
+p( x - \epsilon&lt; x &lt; x+\epsilon) &amp;= F(x+\epsilon) - F(x-\epsilon) \\
+&amp;= \int_{-\infty}^{(x-+\epsilon)}f(x)dx - \int_{-\infty}^{(x-\epsilon)}f(x)dx
 \end{aligned}
 \]</span></p>
 <p>Probability functions have to satisfy a few conditions:</p>
@@ -145,6 +172,9 @@ Make YouTube videos on each.
 <div id="expectation-and-variance" class="section level2">
 <h2>Expectation and Variance</h2>
 <p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
+<!--
+Expectation and variance are the foundation for decision making
+-->
 </div>
 <div id="models-as-conditional-expectations" class="section level2">
 <h2>Models as conditional expectations</h2>

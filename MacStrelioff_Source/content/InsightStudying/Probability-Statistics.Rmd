@@ -33,6 +33,27 @@ Fermi problems (order of magnitude)
 - Make YouTube videos on each!
 -->
 
+<!--
+# What is a probability, and how does that relate to statistics? 
+
+- Probabilities are commonly thought of in three ways; 
+
+1. Purely mathematical
+2. Magnitudes of belief
+3. Relative frequencies of infinate events
+
+I use probability theory to quantify beliefs and make decisions. 
+
+Logic, about truths of the universe. 
+By there is uncertainty in what we know, and uncertainty in our measurements and observations. Statistics as a field is concerned with specifying our knowledge of the laws of the universe and the uncertainty around them. They do this by applying probability theory. 
+
+Probability theory generalizes logic to situations where we aren't certain. And logic emerges from probability theory when we know things with certainty. 
+
+Hypothesis testing
+
+Statisticians use probability theory to decide on what is and isn't true
+-->
+
 # Events and Random Variables
 
 Events, event spaces, 
@@ -80,7 +101,6 @@ $$
 
 Where $p(e_1 \cap e_2)$ is a joint probability.
 
-
 Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events $e_1$ and $e_2$ are independent, this would mean that; 
 $$
 p(e_1|e_2) = p(e_1) \text{ and } p(e_2|e_1) = p(e_2)
@@ -115,12 +135,21 @@ $$
 
 ## Probability Functions
 
-Here I'll describe the properties and use cases for probability functions and cumulative probability functions. I'll use $f(x)$ to represent a probability function, and $F(x)$ to represent a cumulative probability function. $f(x)$ is commonly called a probability mass function (pmf) if $x$ is discrete, and a probability density function (pdf) if $x$ is continuous. $f(x)$ and $F(x)$ are related through integration: 
+Here I'll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use $f(x)$ is used represent a probability function, and $F(x)$ to represent a cumulative probability function. $f(x)$ is commonly called a probability mass function (pmf) if $x$ is discrete, and a probability density function (pdf) if $x$ is continuous. $f(x)$ and $F(x)$ are related through integration: 
 
 $$
 \begin{aligned}
-F(x) &= \int_{-\infty}^{\infty} f(x) dx \\
-f(x) &= \frac{d}{dx}F(x)
+f(x) &= \frac{d}{dx}F(x) \\
+F(x) &= \int_{-\infty}^{\infty} f(x) dx
+\end{aligned}
+$$
+
+For discrete variables, the probability function represents the probability that $X$ takes a specific value $x$: $f(x) = p(X=x)$. For continuous variables, the probability that the variable $X$ takes any particular value is technically $0$; $p(X=x)=0$. However, $p(x)$ is still related to probability functions $f(x)$ through areas. For an arbitrarily small $\epsilon$ the probability that $X$ takes a value between $x-\epsilon$ and $x+\epsilon$ is the area of the distribution over that range; 
+
+$$
+\begin{aligned}
+p( x - \epsilon< x < x+\epsilon) &= F(x+\epsilon) - F(x-\epsilon) \\
+&= \int_{-\infty}^{(x-+\epsilon)}f(x)dx - \int_{-\infty}^{(x-\epsilon)}f(x)dx
 \end{aligned}
 $$
 
@@ -146,6 +175,10 @@ Make YouTube videos on each.
 ## Expectation and Variance
 
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
+
+<!--
+Expectation and variance are the foundation for decision making
+-->
 
 ## Models as conditional expectations
 
