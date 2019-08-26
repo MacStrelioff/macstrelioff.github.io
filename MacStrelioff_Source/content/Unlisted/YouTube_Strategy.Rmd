@@ -1,0 +1,163 @@
+---
+title: "YouTube Strategy"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+math: true
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview
+
+Here I outline ideas and strategies for growing my YouTube channel.
+
+
+# General Strategies and Guides
+
+## Within Videos
+
+### Intro
+
+
+
+### Content
+
+- Mention emotions and feelings through a video "At this point you feel like you're doing well, then ... "
+- Speak in a desirable way -- engaging or calm.
+- Emphasize value of the content at every step. 
+
+### Outro and Call To Act
+
+## Meta
+
+### Higher Ranking
+
+Good advice from [joma here](https://www.youtube.com/watch?v=xdcG1M6dy58)
+
+video guidelines for higher ranking: 
+
+- add 5-10s pauses to let users try the problems on their own (and to increase view time)
+- ask users to subscribe
+- sell likes and subscriptions:
+- "As you can imagine, it takes a lot of time and effort to make these videos. If you found this content helpful at all, please click the like button to let me know. Also, if there are interview questions that you've gotten, or concepts you would like an explanation on, feel free to comment below so that I know which videos to prioritize in the future. Finally, if you want to stay up to date on interview walkthroughs for common and recent interview questions, then click subscribe to stay on top of the latest interview topics."
+- "Unfortunately, interviews are largely luck in terms of whether you've seen the question before. 
+- In this series I walk through problems that reflect those that are currently being asked in data scientist interviews at highly competitive companies. 
+- After watching these interview question walkthroughs, you'll be able to confidently brease through your technical interviews.
+- Many resources, can be overwhelming and ultimately a waste of time because much of that material won't ever come up.
+- My goal is to make these videos the highest return on your time by focusing on content that my friends and I have seen in interviews.
+
+### Thumbnails 
+
+[guide here](https://www.tubefilter.com/2014/06/19/youtube-thumbnails-definitive-guide/)
+
+# Planned Videos
+
+## "About Me" Channel Video
+
+Behavioral, "Tell me about yourself": 
+
+About Me: 
+
+- PhD.. , masters in statistics (borrow from cover letters?)
+- Through grad school I pursued any project that was interesting to me -- It was my time to develop valuable skills and learn what I wanted to do.
+- fast list of projects (decision making, prediction markets, statistics, AI and models of the mind, ... )
+- relate to this job at this company
+- talk about YouTube channel and growth strategy
+- demonstrate the value that I add to produce positions
+- decision making, so studying people and the patterns or experiences that shape their behavior
+- Amazed to learn that there's a huge interplay between psychology and computer science -- reinforcement learning Skinner in the 30's, turned into a plethora of models in computer science, which are now being used to explain human behavior, and neural correlates of key values in those models are being discovered. 
+- Overall I was more interested in naturally occurring datasets, and experimental design -- how we structude and verify our beliefs, and then use those beliefs to guide our actions. 
+- So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design. 
+
+## Data Science Interview Walkthrough Series
+
+I realized there was a lot of material to help prepare for software engineering videos, but very little for data scientist interviews. So I'm compiling videos of interview questions my firends and I have been asked in data sicence interviews, and questions that I've gotten from data scientists who are currently interviewing.
+
+- Target Audience: People who want to know more about data scientist interviews
+- Marketing: Post on Facebook, LinkedIn data science interest groups
+
+- Value: My authority: Do an 'about me' video where I talk about my work at UCI, masters degree in statistics.
+- Value: To make these videos the mose valuable use of your time, I'm focusing exclusively on questions and content that have come up during interviews.
+
+### "Data Scientist Interview Walkthrough: Intro"
+
+- When I was studying to be a data scientist, I realized that there were lots of resources with loads of material that won't actually help in an interview because they were too vague or too theoretical, or just contained very little material that actually comes up in an interview.
+- I also noticed that there are plenty of walkthroughs for the problems that come up in software engineering interviews, but nothing like that for data science interviews. 
+- So with this series, I'm creating videos that will walk you through the questions that are currently coming up in silicone valley data scientist interviews
+- To make this the most valuable use of your time, I'll be walking through questions that have come up in my interviews, or in my friends interviews, as well as questions that I gotten from data scientists and product managers who are actively interviewing. 
+- This way these videos are going to be the most relevant and helpful resource for you if you want to learn what it takes to excel in a data science interview.
+- So.. what are these videos? 
+- Each video will start with a question. I'd recommend pausing the video and trying the question yourself for a few minutes, and then watching my walkthrough for the question. 
+- As I walk through the questions, I'll mention the concepts that the questions are testing for so that you can note them and dive into those later. 
+- Now, some of the best questions start easy and become progressively harder, so what that means here is that, if you don't watch to the end then you might miss surprises that an interviewer can throw at you,
+- that the people who aren't watching my videos won't be expecting. 
+- So for now, I would recommend watching the videos, trying the problems, and seeing how I walkthrough solutions, and watching through the end so that there aren't any unexpected surprises
+- If you find this helpful or interesting, like this video so that I know that the work I put into this series is having a good impact for you and other people
+- Also, if there are questions that you have encountered and want answered, comment them below so that I can get you a walkthrough!
+- And finally be sure to subscribe if you want access to the most recent walkthroughs
+- Thank you, and I hope you enjoy these videos! 
+
+
+### Data Scientist Interview Walkthrough: Probability, Part 1
+
+- Coins in a bag
+- Probability rules
+- Bayes' Theorem, Bayes Factor
+- Frequentist Hypothesis Testing
+- Likelihood Ratio
+
+
+### Data Scientist Interview Walkthrough: Probability, Part 2
+
+Geometric distribution problem.
+
+- One thing I admire a lot, is that good interview questions get progressively more difficult. So when there is a progression, I'll include it in these videos. 
+- This problem starts out relatively easy but ultimately can transform into something that would be challenging to people who don't watch my videos. 
+- Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to. 
+
+
+<!---
+todo:
+
+- You are trapped in a room with three doors, one adds a day, another adds two days, the third is an escape. How long are you expected to be trapped in this room. 
+- alternatively;
+- You are playing a card game with three cards -- a '1', a '2', and an 'X'. 
+- On each round, you pick one randomly. If you pick a '1', then the game continues. If you pick the 'x' then the game ends. 
+- How many rounds are your expected to play?
+-- Now instead there is a '1', a '2', and an 'X'. If you draw the '1', you win $1, if you draw the '2' you win $2, and if you draw the 'X' then the game ends. How much are you expected to win?
+
+-- Now instead of winnings, the numbers on the card represent how many more rounds you'll need to play. How many rounds are you expected to play now? (version of Aman's question)
+
+-- google question: Now there are cards 1 through 6. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
+
+-- recursive question: 
+-- Now the game ends if you 
+
+- Explain a power analysis (start complicated, get simple to keep people watching till the end)
+- Bank teller problem 
+- expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
+- random number generator from a uniform random number generator
+- Aman's question - sample from a circle using a random number generator
+  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
+  - circle question from Google
+- estimate median from Google
+- variances of different experiment designs
+- multinomial and guessers 'favorite color' and a proportion of users who guess randomly
+- bandits vs A/B tests, particularly for lots of conditions
+- LI: android you can randomize, iphone you can't (synthetic control)
+- strengths & weaknesses of different ML algorithms (complex to simple explanations)
+- Chris Alborn's 
+--->
+
+
+
+
+
+
+
