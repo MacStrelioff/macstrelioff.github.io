@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-25 12:10:21"
+date: "2019-08-26 12:56:46"
 math: true
 output:
   blogdown::html_page:
@@ -109,7 +109,7 @@ p(e_1 \cap e_2) = p(e_2 \cap e_1)
 p(e_1 \&amp; e_2) = p(e_1\cap e_2) = p(e_1|e_2)p(e_2)
 \]</span> where <span class="math inline">\(p(e_1|e_2)\)</span> is a conditional probability, discussed in the next section.</p>
 <p>Conditional events refer to one event, <span class="math inline">\(e_1\)</span>, after another event, <span class="math inline">\(e_2\)</span>, is known. <span class="math inline">\(p(e_1|e_2)\)</span> represents the probability of <span class="math inline">\(e_1\)</span> given, or after knowing, <span class="math inline">\(e_2\)</span>. These can be defined by rearranging the multiplication rule as follows; <span class="math display">\[
-p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
+p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \Rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
 \]</span></p>
 <p>Noting that, by the reflexively of joint events and the definition of the multiplication rule, <span class="math inline">\(p(e_1 \cap e_2) = p(e_2 \cap e_1)= p(e_2 | e_1) p(e_1)\)</span>, and so the above equation becomes; <span class="math display">\[
 p(e_1|e_2)=\frac{p(e_2 | e_1) p(e_1)}{p(e_2)}
@@ -125,16 +125,27 @@ p(e_1|e_2) = p(e_1) \text{ and } p(e_2|e_1) = p(e_2)
 p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = p(e_1)p(e_2)
 \]</span> Where the last equality is only true if <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent (i.e. <span class="math inline">\(p(e_1|e_2)=p(e_1)\)</span>).</p>
 <p>Then the probability of their union simplifies to; <span class="math display">\[
-p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) = p(e_1) + p(e_2) - p(e_1)p(e_2)
+\begin{aligned}
+p(e_1 \cup e_2) &amp;= p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) \\
+&amp;= p(e_1) + p(e_2) - p(e_1)p(e_2)
+\end{aligned}
 \]</span> Where again, the last part of this equality is only true if <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent.</p>
 <p>Events <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are said to be mutually exclusive if the occurrence of either event precludes the occurrence of the other event. Formally mutual exclusivity means that; <span class="math display">\[
 p(e_1 | e_2) = 0 \text{ and } p(e_2 | e_1) = 0
 \]</span></p>
 <p>If two events are mutually exclusive, then the probability of their joint event is; <span class="math display">\[
-p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = 0*p(e_2) = 0
+\begin{aligned}
+p(e_1 \cap e_2) &amp;= p(e_1|e_2)p(e_2) \\
+&amp;= 0*p(e_2) \\
+&amp;= 0
+\end{aligned}
 \]</span></p>
 <p>And the probability of their union simplifies to; <span class="math display">\[
-p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2) = p(e_1) + p(e_2) - 0 = p(e_1) + p(e_2)
+\begin{aligned}
+p(e_1 \cup e_2) &amp;= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
+&amp;= p(e_1) + p(e_2) - 0 \\
+&amp;=p(e_1) + p(e_2)
+\end{aligned}
 \]</span></p>
 </div>
 <div id="probability-functions" class="section level2">
@@ -162,10 +173,8 @@ p( x - \epsilon&lt; x &lt; x+\epsilon) &amp;= F(x+\epsilon) - F(x-\epsilon) \\
 <li></li>
 <li></li>
 </ol>
-<p>pdf, cdf</p>
 <!--
 ### Probability Distributions
-
 Make YouTube videos on each. 
 - 1) Walk through properties from Wikipedia!
 - 2) Walk through some simulations in Python!
@@ -174,6 +183,18 @@ Make YouTube videos on each.
 <div id="expectation-and-variance" class="section level2">
 <h2>Expectation and Variance</h2>
 <p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
+<p>For any functions of a randome variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
+<p><span class="math display">\[
+E(g(x))=\int_{-\infty}^{\infty}p(x)g(x)dx
+\]</span></p>
+<!--
+Linear regression as a conditional expectation
+Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
+--->
+<p>And the Taylor Series approximation to the variance is;</p>
+<p><span class="math display">\[
+Var(g(x)) \approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\]</span></p>
 <!--
 Expectation and variance are the foundation for decision making
 - value function v(x) that assigns values to the outcomes x

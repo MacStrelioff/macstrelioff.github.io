@@ -85,7 +85,7 @@ where $p(e_1|e_2)$ is a conditional probability, discussed in the next section.
 
 Conditional events refer to one event, $e_1$, after another event, $e_2$, is known. $p(e_1|e_2)$ represents the probability of $e_1$ given, or after knowing, $e_2$. These can be defined by rearranging the multiplication rule as follows; 
 $$
-p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
+p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \Rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
 $$
 
 Noting that, by the reflexively of joint events and the definition of the multiplication rule, $p(e_1 \cap e_2) = p(e_2 \cap e_1)= p(e_2 | e_1) p(e_1)$, and so the above equation becomes; 
@@ -114,7 +114,10 @@ Where the last equality is only true if $e_1$ and $e_2$ are independent (i.e. $p
 
 Then the probability of their union simplifies to;
 $$
-p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) = p(e_1) + p(e_2) - p(e_1)p(e_2)
+\begin{aligned}
+p(e_1 \cup e_2) &= p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) \\
+&= p(e_1) + p(e_2) - p(e_1)p(e_2)
+\end{aligned}
 $$
 Where again, the last part of this equality is only true if $e_1$ and $e_2$ are independent.
 
@@ -125,12 +128,20 @@ $$
 
 If two events are mutually exclusive, then the probability of their joint event is; 
 $$
-p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = 0*p(e_2) = 0
+\begin{aligned}
+p(e_1 \cap e_2) &= p(e_1|e_2)p(e_2) \\
+&= 0*p(e_2) \\
+&= 0
+\end{aligned}
 $$
 
 And the probability of their union simplifies to;
 $$
-p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2) = p(e_1) + p(e_2) - 0 = p(e_1) + p(e_2)
+\begin{aligned}
+p(e_1 \cup e_2) &= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
+&= p(e_1) + p(e_2) - 0 \\
+&=p(e_1) + p(e_2)
+\end{aligned}
 $$
 
 ## Probability Functions
@@ -165,12 +176,8 @@ Probability functions have to satisfy a few conditions:
 2. 
 3. 
 
-pdf, cdf
-
-
 <!--
 ### Probability Distributions
-
 Make YouTube videos on each. 
 - 1) Walk through properties from Wikipedia!
 - 2) Walk through some simulations in Python!
@@ -179,6 +186,29 @@ Make YouTube videos on each.
 ## Expectation and Variance
 
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
+
+For any functions of a randome variable, $g(x)$, the expectation of that function is; 
+
+$$
+E(g(x))=\int_{-\infty}^{\infty}p(x)g(x)dx
+$$
+
+<!--
+Linear regression as a conditional expectation
+Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
+--->
+
+
+
+
+
+And the Taylor Series approximation to the variance is; 
+
+$$
+Var(g(x)) \approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+$$
+
+
 
 <!--
 Expectation and variance are the foundation for decision making
