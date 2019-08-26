@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Mon, 26 Aug 2019 12:56:46 +0000</pubDate>
+      <pubDate>Mon, 26 Aug 2019 13:39:40 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -48,10 +48,10 @@
 &lt;li&gt;&lt;a href=&#34;#events-and-random-variables&#34;&gt;Events and Random Variables&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#probability-functions&#34;&gt;Probability Functions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#expectation-and-variance&#34;&gt;Expectation and Variance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#maximum-likelihood-versus-bayes-theorem&#34;&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#central-limit-theorem&#34;&gt;Central limit theorem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#expectation&#34;&gt;Expectation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#variance&#34;&gt;Variance&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#information-theory-and-entropy&#34;&gt;Information theory and entropy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#maximum-likelihood-versus-bayes-theorem&#34;&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
@@ -147,7 +147,10 @@ p(e_1\text{ or } e_2) = p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2)
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(p(e_1 \cap e_2)\)&lt;/span&gt; is a joint probability.&lt;/p&gt;
 &lt;p&gt;Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent, this would mean that; &lt;span class=&#34;math display&#34;&gt;\[
-p(e_1|e_2) = p(e_1) \text{ and } p(e_2|e_1) = p(e_2)
+\begin{aligned}
+p(e_1|e_2) &amp;amp;= p(e_1) \\
+p(e_2|e_1) &amp;amp;= p(e_2)
+\end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent, then their joint probability simplifies as so; &lt;span class=&#34;math display&#34;&gt;\[
 p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = p(e_1)p(e_2)
@@ -207,21 +210,62 @@ Make YouTube videos on each.
 - 1) Walk through properties from Wikipedia!
 - 2) Walk through some simulations in Python!
 --&gt;
+&lt;!--
+## Central limit theorem
+
+Sum of any random variable converges to normal distribution. 
+- show for binomial case, to justify Z test
+--&gt;
 &lt;/div&gt;
-&lt;div id=&#34;expectation-and-variance&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Expectation and Variance&lt;/h2&gt;
+&lt;div id=&#34;expectation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Expectation&lt;/h2&gt;
 &lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
 &lt;p&gt;For any functions of a randome variable, &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt;, the expectation of that function is;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-E(g(x))=\int_{-\infty}^{\infty}p(x)g(x)dx
+E(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
 \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Expectation is a linear operator, so for constants &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; and random variables &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(E(ax+by+c) = aE(x)+bE(y)+c\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Expectation for joint random variables&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+E(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;!--
+iterated expectations
+--&gt;
 &lt;!--
 Linear regression as a conditional expectation
 Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
+
+Conditional expectation 
+$$
+E(g(x)|Z)=\int_{-\infty}^{\infty}p(x|Z)g(x)dx
+$$
+
+in linear regression, the expectation of Y is the linear combination of X and B, since those are deterministic, and the only non-deterministic part, epsilon, has expectation 0. 
+
+- So the property that expectation propogates through sums leads to this result..
 ---&gt;
-&lt;p&gt;And the Taylor Series approximation to the variance is;&lt;/p&gt;
+&lt;p&gt;Marginalizing a joint distribution&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Variance&lt;/h2&gt;
+&lt;p&gt;Covariance and variance&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-Var(g(x)) \approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\begin{aligned}
+Cov(X,Y)&amp;amp;=E((X-E(X))(Y-E(Y)))\\
+Var(X)&amp;amp;=Cov(X,X)=E((X-E(X))^2)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Constants and multiple random variables:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Variance of a function:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Var(g(x)) &amp;amp;= E((g(x)-E(g(x)))^2)\\
+&amp;amp;\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;!--
 Expectation and variance are the foundation for decision making
@@ -235,10 +279,6 @@ Models output an expectation that depends on the model, its structure, its featu
 
 ## Models as estimators for f(x), \hat{f}(x)
 --&gt;
-&lt;/div&gt;
-&lt;div id=&#34;maximum-likelihood-versus-bayes-theorem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/h2&gt;
-&lt;p&gt;likelihood is one term in Bayes’ Theorem&lt;/p&gt;
 &lt;!--
 ## Odds and other transformations
 
@@ -254,18 +294,15 @@ Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has
 - circle problem
 --&gt;
 &lt;/div&gt;
-&lt;div id=&#34;central-limit-theorem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Central limit theorem&lt;/h2&gt;
-&lt;p&gt;Sum of any random variable converges to normal distribution.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;show for binomial case, to justify Z test&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 &lt;div id=&#34;information-theory-and-entropy&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Information theory and entropy&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;entropy is minimized by a Bayesian estimator&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;maximum-likelihood-versus-bayes-theorem&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/h2&gt;
+&lt;p&gt;likelihood is one term in Bayes’ Theorem&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;

@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Events and Random Variables Probability Rules Probability Functions Expectation and Variance Maximum Likelihood versus Bayes’ Theorem Central limit theorem Information theory and entropy  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,">
+  <meta name="description" content="Events and Random Variables Probability Rules Probability Functions Expectation Variance Information theory and entropy Maximum Likelihood versus Bayes’ Theorem  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/probability-statistics/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/probability-statistics/">
   <meta property="og:title" content="Probability and Statistics | Mac Strelioff">
-  <meta property="og:description" content="Events and Random Variables Probability Rules Probability Functions Expectation and Variance Maximum Likelihood versus Bayes’ Theorem Central limit theorem Information theory and entropy  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Events and Random Variables Probability Rules Probability Functions Expectation Variance Information theory and entropy Maximum Likelihood versus Bayes’ Theorem  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-26T12:56:46&#43;00:00">
+  <meta property="article:published_time" content="2019-08-26T13:39:40&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-26T12:56:46&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-26T13:39:40&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-26 12:56:46 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-26 12:56:46 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-26 13:39:40 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-26 13:39:40 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -463,10 +463,10 @@
 <li><a href="#events-and-random-variables">Events and Random Variables</a><ul>
 <li><a href="#probability-rules">Probability Rules</a></li>
 <li><a href="#probability-functions">Probability Functions</a></li>
-<li><a href="#expectation-and-variance">Expectation and Variance</a></li>
-<li><a href="#maximum-likelihood-versus-bayes-theorem">Maximum Likelihood versus Bayes’ Theorem</a></li>
-<li><a href="#central-limit-theorem">Central limit theorem</a></li>
+<li><a href="#expectation">Expectation</a></li>
+<li><a href="#variance">Variance</a></li>
 <li><a href="#information-theory-and-entropy">Information theory and entropy</a></li>
+<li><a href="#maximum-likelihood-versus-bayes-theorem">Maximum Likelihood versus Bayes’ Theorem</a></li>
 </ul></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
 <li><a href="#foundations">Foundations</a></li>
@@ -562,7 +562,10 @@ p(e_1\text{ or } e_2) = p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2)
 \]</span></p>
 <p>Where <span class="math inline">\(p(e_1 \cap e_2)\)</span> is a joint probability.</p>
 <p>Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent, this would mean that; <span class="math display">\[
-p(e_1|e_2) = p(e_1) \text{ and } p(e_2|e_1) = p(e_2)
+\begin{aligned}
+p(e_1|e_2) &amp;= p(e_1) \\
+p(e_2|e_1) &amp;= p(e_2)
+\end{aligned}
 \]</span></p>
 <p>If <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent, then their joint probability simplifies as so; <span class="math display">\[
 p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = p(e_1)p(e_2)
@@ -622,21 +625,62 @@ Make YouTube videos on each.
 - 1) Walk through properties from Wikipedia!
 - 2) Walk through some simulations in Python!
 -->
+<!--
+## Central limit theorem
+
+Sum of any random variable converges to normal distribution. 
+- show for binomial case, to justify Z test
+-->
 </div>
-<div id="expectation-and-variance" class="section level2">
-<h2>Expectation and Variance</h2>
+<div id="expectation" class="section level2">
+<h2>Expectation</h2>
 <p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
 <p>For any functions of a randome variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
 <p><span class="math display">\[
-E(g(x))=\int_{-\infty}^{\infty}p(x)g(x)dx
+E(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
 \]</span></p>
+<p>Expectation is a linear operator, so for constants <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> and random variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>; <span class="math inline">\(E(ax+by+c) = aE(x)+bE(y)+c\)</span>.</p>
+<p>Expectation for joint random variables</p>
+<p><span class="math display">\[
+E(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+\]</span></p>
+<!--
+iterated expectations
+-->
 <!--
 Linear regression as a conditional expectation
 Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
+
+Conditional expectation 
+$$
+E(g(x)|Z)=\int_{-\infty}^{\infty}p(x|Z)g(x)dx
+$$
+
+in linear regression, the expectation of Y is the linear combination of X and B, since those are deterministic, and the only non-deterministic part, epsilon, has expectation 0. 
+
+- So the property that expectation propogates through sums leads to this result..
 --->
-<p>And the Taylor Series approximation to the variance is;</p>
+<p>Marginalizing a joint distribution</p>
+</div>
+<div id="variance" class="section level2">
+<h2>Variance</h2>
+<p>Covariance and variance</p>
 <p><span class="math display">\[
-Var(g(x)) \approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\begin{aligned}
+Cov(X,Y)&amp;=E((X-E(X))(Y-E(Y)))\\
+Var(X)&amp;=Cov(X,X)=E((X-E(X))^2)
+\end{aligned}
+\]</span></p>
+<p>Constants and multiple random variables:</p>
+<p><span class="math display">\[
+Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
+\]</span></p>
+<p>Variance of a function:</p>
+<p><span class="math display">\[
+\begin{aligned}
+Var(g(x)) &amp;= E((g(x)-E(g(x)))^2)\\
+&amp;\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\end{aligned}
 \]</span></p>
 <!--
 Expectation and variance are the foundation for decision making
@@ -650,10 +694,6 @@ Models output an expectation that depends on the model, its structure, its featu
 
 ## Models as estimators for f(x), \hat{f}(x)
 -->
-</div>
-<div id="maximum-likelihood-versus-bayes-theorem" class="section level2">
-<h2>Maximum Likelihood versus Bayes’ Theorem</h2>
-<p>likelihood is one term in Bayes’ Theorem</p>
 <!--
 ## Odds and other transformations
 
@@ -669,18 +709,15 @@ Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has
 - circle problem
 -->
 </div>
-<div id="central-limit-theorem" class="section level2">
-<h2>Central limit theorem</h2>
-<p>Sum of any random variable converges to normal distribution.</p>
-<ul>
-<li>show for binomial case, to justify Z test</li>
-</ul>
-</div>
 <div id="information-theory-and-entropy" class="section level2">
 <h2>Information theory and entropy</h2>
 <ul>
 <li>entropy is minimized by a Bayesian estimator</li>
 </ul>
+</div>
+<div id="maximum-likelihood-versus-bayes-theorem" class="section level2">
+<h2>Maximum Likelihood versus Bayes’ Theorem</h2>
+<p>likelihood is one term in Bayes’ Theorem</p>
 </div>
 </div>
 <div id="experiment-design" class="section level1">

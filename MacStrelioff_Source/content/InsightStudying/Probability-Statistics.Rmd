@@ -103,7 +103,10 @@ Where $p(e_1 \cap e_2)$ is a joint probability.
 
 Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events $e_1$ and $e_2$ are independent, this would mean that; 
 $$
-p(e_1|e_2) = p(e_1) \text{ and } p(e_2|e_1) = p(e_2)
+\begin{aligned}
+p(e_1|e_2) &= p(e_1) \\
+p(e_2|e_1) &= p(e_2)
+\end{aligned}
 $$
 
 If $e_1$ and $e_2$ are independent, then their joint probability simplifies as so; 
@@ -168,8 +171,6 @@ p( x - \epsilon< x < x+\epsilon) &= F(x+\epsilon) - F(x-\epsilon) \\
 \end{aligned}
 $$
 
-
-
 Probability functions have to satisfy a few conditions: 
 
 1. 
@@ -183,29 +184,77 @@ Make YouTube videos on each.
 - 2) Walk through some simulations in Python!
 -->
 
-## Expectation and Variance
+<!--
+## Central limit theorem
+
+Sum of any random variable converges to normal distribution. 
+- show for binomial case, to justify Z test
+-->
+
+
+## Expectation
 
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
 
 For any functions of a randome variable, $g(x)$, the expectation of that function is; 
 
 $$
-E(g(x))=\int_{-\infty}^{\infty}p(x)g(x)dx
+E(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
 $$
+
+Expectation is a linear operator, so for constants $a$, $b$, and $c$ and random variables $x$ and $y$; $E(ax+by+c) = aE(x)+bE(y)+c$.
+
+Expectation for joint random variables
+
+$$
+E(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+$$
+
+<!--
+iterated expectations
+-->
 
 <!--
 Linear regression as a conditional expectation
 Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
+
+Conditional expectation 
+$$
+E(g(x)|Z)=\int_{-\infty}^{\infty}p(x|Z)g(x)dx
+$$
+
+in linear regression, the expectation of Y is the linear combination of X and B, since those are deterministic, and the only non-deterministic part, epsilon, has expectation 0. 
+
+- So the property that expectation propogates through sums leads to this result..
 --->
 
+Marginalizing a joint distribution
 
+## Variance
 
-
-
-And the Taylor Series approximation to the variance is; 
+Covariance and variance
 
 $$
-Var(g(x)) \approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\begin{aligned}
+Cov(X,Y)&=E((X-E(X))(Y-E(Y)))\\
+Var(X)&=Cov(X,X)=E((X-E(X))^2)
+\end{aligned}
+$$
+
+Constants and multiple random variables: 
+
+$$
+Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
+$$
+
+
+Variance of a function:
+
+$$
+\begin{aligned}
+Var(g(x)) &= E((g(x)-E(g(x)))^2)\\
+&\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\end{aligned}
 $$
 
 
@@ -224,11 +273,6 @@ Models output an expectation that depends on the model, its structure, its featu
 ## Models as estimators for f(x), \hat{f}(x)
 -->
 
-## Maximum Likelihood versus Bayes' Theorem
-
-likelihood is one term in Bayes' Theorem
-
-
 <!--
 ## Odds and other transformations
 
@@ -245,16 +289,15 @@ Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has
 - circle problem
 -->
 
-## Central limit theorem
-
-Sum of any random variable converges to normal distribution. 
-
-- show for binomial case, to justify Z test
-
-
 ## Information theory and entropy
 
 - entropy is minimized by a Bayesian estimator
+
+
+## Maximum Likelihood versus Bayes' Theorem
+
+likelihood is one term in Bayes' Theorem
+
 
 # Experiment Design
 
