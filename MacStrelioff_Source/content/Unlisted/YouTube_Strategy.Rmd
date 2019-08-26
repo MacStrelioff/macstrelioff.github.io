@@ -120,9 +120,16 @@ I realized there was a lot of material to help prepare for software engineering 
 
 Geometric distribution problem.
 
-- One thing I admire a lot, is that good interview questions get progressively more difficult. So when there is a progression, I'll include it in these videos. 
-- This problem starts out relatively easy but ultimately can transform into something that would be challenging to people who don't watch my videos. 
+- This question was adapted from a question that a friend was asked during a data science interview at a large company. It's a great question because it starts out not too difficult. 
+- Depending on how quickly and confidently you answer it, you get to unlock more and more challenging follow up questions.
+- This question has some good follow ups that I'll reveal in this video, and at least two really great follow ups that I'll show in future videos.
+- So, here it is...
+
+- This problem starts out relatively easy but can transform into something that would be challenging to people who don't watch my videos. 
+
 - Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to. 
+
+
 
 
 <!---
