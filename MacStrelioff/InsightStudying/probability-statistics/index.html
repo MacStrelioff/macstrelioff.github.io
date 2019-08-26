@@ -139,9 +139,9 @@
   <meta property="og:description" content="Events and Random Variables Probability Rules Probability Functions Expectation Variance Information theory and entropy Maximum Likelihood versus Bayes’ Theorem  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-26T13:39:40&#43;00:00">
+  <meta property="article:published_time" content="2019-08-26T14:53:24&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-26T13:39:40&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-26T14:53:24&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-26 13:39:40 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-26 13:39:40 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-26 14:53:24 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-26 14:53:24 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -620,6 +620,12 @@ p( x - \epsilon&lt; x &lt; x+\epsilon) &amp;= F(x+\epsilon) - F(x-\epsilon) \\
 <li></li>
 </ol>
 <!--
+Transformations of variables!
+-->
+<!--
+CDF transformation to convert from uniform into any random variable with a CDF
+-->
+<!--
 ### Probability Distributions
 Make YouTube videos on each. 
 - 1) Walk through properties from Wikipedia!
@@ -637,16 +643,24 @@ Sum of any random variable converges to normal distribution.
 <p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
 <p>For any functions of a randome variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
 <p><span class="math display">\[
-E(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
+E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
 \]</span></p>
 <p>Expectation is a linear operator, so for constants <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> and random variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>; <span class="math inline">\(E(ax+by+c) = aE(x)+bE(y)+c\)</span>.</p>
 <p>Expectation for joint random variables</p>
 <p><span class="math display">\[
-E(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
 \]</span></p>
-<!--
-iterated expectations
--->
+<p>Marginalizing a joint probability function: Marginalizing a distribution from a joint probability function (<span class="math inline">\(f(x,y)\)</span>) or a conditional probability function (<span class="math inline">\(f(x|y)\)</span>): <span class="math display">\[
+\begin{aligned}
+f_x(x)&amp;=\int_yf_{x,y}(x,y)dy\\
+&amp;=\int_y f_{x|y}(x|y)f_y(y)dy\\
+&amp;=E_y(f(x|y))
+\end{aligned}
+\]</span></p>
+<p><a href="https://en.wikipedia.org/wiki/Law_of_total_expectation">Law of total expectation</a></p>
+<p><span class="math display">\[
+E(x)=E(E(x|y))
+\]</span></p>
 <!--
 Linear regression as a conditional expectation
 Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
@@ -667,20 +681,24 @@ in linear regression, the expectation of Y is the linear combination of X and B,
 <p>Covariance and variance</p>
 <p><span class="math display">\[
 \begin{aligned}
-Cov(X,Y)&amp;=E((X-E(X))(Y-E(Y)))\\
-Var(X)&amp;=Cov(X,X)=E((X-E(X))^2)
+Cov(X,Y)&amp;=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
+Var(X)&amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
 \end{aligned}
 \]</span></p>
 <p>Constants and multiple random variables:</p>
 <p><span class="math display">\[
 Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
 \]</span></p>
+<p>Note, if <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> have different signs and <span class="math inline">\(Cov(X,Y)&gt;0\)</span>, then the variance between is reduced because the covariance is subtracted off.</p>
 <p>Variance of a function:</p>
 <p><span class="math display">\[
 \begin{aligned}
 Var(g(x)) &amp;= E((g(x)-E(g(x)))^2)\\
 &amp;\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
 \end{aligned}
+\]</span></p>
+<p><a href="https://en.wikipedia.org/wiki/Law_of_total_variance">Law of total variance</a> <span class="math display">\[
+Var(X)=E(Var(X|Y))+Var(E(X|Y))
 \]</span></p>
 <!--
 Expectation and variance are the foundation for decision making

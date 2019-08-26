@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Mon, 26 Aug 2019 13:39:40 +0000</pubDate>
+      <pubDate>Mon, 26 Aug 2019 14:53:24 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -205,6 +205,12 @@ p( x - \epsilon&amp;lt; x &amp;lt; x+\epsilon) &amp;amp;= F(x+\epsilon) - F(x-\e
 &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;!--
+Transformations of variables!
+--&gt;
+&lt;!--
+CDF transformation to convert from uniform into any random variable with a CDF
+--&gt;
+&lt;!--
 ### Probability Distributions
 Make YouTube videos on each. 
 - 1) Walk through properties from Wikipedia!
@@ -222,16 +228,24 @@ Sum of any random variable converges to normal distribution.
 &lt;p&gt;expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables&lt;/p&gt;
 &lt;p&gt;For any functions of a randome variable, &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt;, the expectation of that function is;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-E(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
+E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Expectation is a linear operator, so for constants &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; and random variables &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(E(ax+by+c) = aE(x)+bE(y)+c\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Expectation for joint random variables&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-E(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;!--
-iterated expectations
---&gt;
+&lt;p&gt;Marginalizing a joint probability function: Marginalizing a distribution from a joint probability function (&lt;span class=&#34;math inline&#34;&gt;\(f(x,y)\)&lt;/span&gt;) or a conditional probability function (&lt;span class=&#34;math inline&#34;&gt;\(f(x|y)\)&lt;/span&gt;): &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f_x(x)&amp;amp;=\int_yf_{x,y}(x,y)dy\\
+&amp;amp;=\int_y f_{x|y}(x|y)f_y(y)dy\\
+&amp;amp;=E_y(f(x|y))
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_total_expectation&#34;&gt;Law of total expectation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+E(x)=E(E(x|y))
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;!--
 Linear regression as a conditional expectation
 Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
@@ -252,20 +266,24 @@ in linear regression, the expectation of Y is the linear combination of X and B,
 &lt;p&gt;Covariance and variance&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
-Cov(X,Y)&amp;amp;=E((X-E(X))(Y-E(Y)))\\
-Var(X)&amp;amp;=Cov(X,X)=E((X-E(X))^2)
+Cov(X,Y)&amp;amp;=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
+Var(X)&amp;amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Constants and multiple random variables:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
 \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Note, if &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; have different signs and &lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;, then the variance between is reduced because the covariance is subtracted off.&lt;/p&gt;
 &lt;p&gt;Variance of a function:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 Var(g(x)) &amp;amp;= E((g(x)-E(g(x)))^2)\\
 &amp;amp;\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
 \end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_total_variance&#34;&gt;Law of total variance&lt;/a&gt; &lt;span class=&#34;math display&#34;&gt;\[
+Var(X)=E(Var(X|Y))+Var(E(X|Y))
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;!--
 Expectation and variance are the foundation for decision making

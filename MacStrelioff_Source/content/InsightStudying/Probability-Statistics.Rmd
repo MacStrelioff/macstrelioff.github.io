@@ -178,6 +178,15 @@ Probability functions have to satisfy a few conditions:
 3. 
 
 <!--
+Transformations of variables!
+-->
+
+<!--
+CDF transformation to convert from uniform into any random variable with a CDF
+-->
+
+
+<!--
 ### Probability Distributions
 Make YouTube videos on each. 
 - 1) Walk through properties from Wikipedia!
@@ -191,7 +200,6 @@ Sum of any random variable converges to normal distribution.
 - show for binomial case, to justify Z test
 -->
 
-
 ## Expectation
 
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
@@ -199,7 +207,7 @@ expectation, variance, conditional or iterated expectations, law of total varian
 For any functions of a randome variable, $g(x)$, the expectation of that function is; 
 
 $$
-E(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
+E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
 $$
 
 Expectation is a linear operator, so for constants $a$, $b$, and $c$ and random variables $x$ and $y$; $E(ax+by+c) = aE(x)+bE(y)+c$.
@@ -207,12 +215,24 @@ Expectation is a linear operator, so for constants $a$, $b$, and $c$ and random 
 Expectation for joint random variables
 
 $$
-E(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
 $$
 
-<!--
-iterated expectations
--->
+Marginalizing a joint probability function: 
+Marginalizing a distribution from a joint probability function ($f(x,y)$) or a conditional probability function ($f(x|y)$):
+$$
+\begin{aligned}
+f_x(x)&=\int_yf_{x,y}(x,y)dy\\
+&=\int_y f_{x|y}(x|y)f_y(y)dy\\
+&=E_y(f(x|y))
+\end{aligned}
+$$
+
+[Law of total expectation](https://en.wikipedia.org/wiki/Law_of_total_expectation)
+
+$$
+E(x)=E(E(x|y))
+$$
 
 <!--
 Linear regression as a conditional expectation
@@ -236,8 +256,8 @@ Covariance and variance
 
 $$
 \begin{aligned}
-Cov(X,Y)&=E((X-E(X))(Y-E(Y)))\\
-Var(X)&=Cov(X,X)=E((X-E(X))^2)
+Cov(X,Y)&=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
+Var(X)&=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
 \end{aligned}
 $$
 
@@ -247,6 +267,7 @@ $$
 Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
 $$
 
+Note, if $a$ or $b$ have different signs and $Cov(X,Y)>0$, then the variance between is reduced because the covariance is subtracted off. 
 
 Variance of a function:
 
@@ -258,6 +279,10 @@ Var(g(x)) &= E((g(x)-E(g(x)))^2)\\
 $$
 
 
+[Law of total variance](https://en.wikipedia.org/wiki/Law_of_total_variance)
+$$
+Var(X)=E(Var(X|Y))+Var(E(X|Y))
+$$
 
 <!--
 Expectation and variance are the foundation for decision making
