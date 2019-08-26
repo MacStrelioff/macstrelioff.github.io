@@ -18,26 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Here I outline ideas and strategies for growing my YouTube channel.
 
 # General Strategies and Guides
-
-## Within Videos
-
-### Intro
-
-"This video is part of a series where I work though common and current Data Science interview questions. If you'd like to see more, feel free to like so that I know the these videos are having an impact, and to subscribe if you want to see the latest videos."
-
-- Build value: "This is a question that a friend of mine was asked during a interview". 
-- + add in a pause for later videos
-
-### Content
-
-- Mention emotions and feelings through a video "At this point you feel like you're doing well, then ... "
-- Speak in a desirable way -- engaging or calm.
-- Emphasize value of the content at every step. 
-
-### Outro and Call To Act
-
 ## Meta
-
 ### Higher Ranking
 
 Good advice from [joma here](https://www.youtube.com/watch?v=xdcG1M6dy58)
@@ -57,6 +38,32 @@ video guidelines for higher ranking:
 ### Thumbnails 
 
 [guide here](https://www.tubefilter.com/2014/06/19/youtube-thumbnails-definitive-guide/)
+
+### Brand Consistency
+
+### Description
+
+- Add summary with timecodes in the description [timecodes](https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&hl=en#strategies-zippy-link-2)
+
+
+## Within Videos
+
+### Intro
+
+1. Context: "This video is part of a series where I work though common and current Data Science interview questions. If you'd like to see more, feel free to like so that I know the these videos are having an impact, and to subscribe if you want to see the latest videos."
+2. [Credibility](https://creatoracademy.youtube.com/page/lesson/edu-video-formats?cid=educational-channel&hl=en#strategies-zippy-link-2) "I have a PhD in Cognitive Science and a Masters in Statistics, currently a fellow in a sillicon valley data science bootcamp, where I'm actively interviewing, and networking with data scientists who conduct interviews."
+3. Need / Value: "I realized other content sucks, and this is the best use of your time."
+4. Legitimacy: "This is a question that I got from an interview" 
+
+### Content
+
+- Mention emotions and feelings through a video "At this point you feel like you're doing well, then ... "
+- Speak in a desirable way -- engaging or calm.
+- Emphasize value of the content at every step. 
+- Pause for them to try and also to increase view time metric
+
+### Outro and Call To Act
+
 
 # Planned Videos
 

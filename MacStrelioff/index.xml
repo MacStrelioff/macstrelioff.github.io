@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Mon, 26 Aug 2019 00:20:38 +0000</pubDate>
+      <pubDate>Mon, 26 Aug 2019 10:40:05 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -47,14 +47,16 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#general-strategies-and-guides&#34;&gt;General Strategies and Guides&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meta&#34;&gt;Meta&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#higher-ranking&#34;&gt;Higher Ranking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#thumbnails&#34;&gt;Thumbnails&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#brand-consistency&#34;&gt;Brand Consistency&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#within-videos&#34;&gt;Within Videos&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#outro-and-call-to-act&#34;&gt;Outro and Call To Act&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#meta&#34;&gt;Meta&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#higher-ranking&#34;&gt;Higher Ranking&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#thumbnails&#34;&gt;Thumbnails&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#planned-videos&#34;&gt;Planned Videos&lt;/a&gt;&lt;ul&gt;
@@ -75,30 +77,6 @@
 &lt;/div&gt;
 &lt;div id=&#34;general-strategies-and-guides&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;General Strategies and Guides&lt;/h1&gt;
-&lt;div id=&#34;within-videos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Within Videos&lt;/h2&gt;
-&lt;div id=&#34;intro&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Intro&lt;/h3&gt;
-&lt;p&gt;“This video is part of a series where I work though common and current Data Science interview questions. If you’d like to see more, feel free to like so that I know the these videos are having an impact, and to subscribe if you want to see the latest videos.”&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Build value: “This is a question that a friend of mine was asked during a interview”.&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;add in a pause for later videos&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;content&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Content&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Mention emotions and feelings through a video “At this point you feel like you’re doing well, then …”&lt;/li&gt;
-&lt;li&gt;Speak in a desirable way – engaging or calm.&lt;/li&gt;
-&lt;li&gt;Emphasize value of the content at every step.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outro-and-call-to-act&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Outro and Call To Act&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;div id=&#34;meta&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Meta&lt;/h2&gt;
 &lt;div id=&#34;higher-ranking&#34; class=&#34;section level3&#34;&gt;
@@ -120,6 +98,39 @@
 &lt;div id=&#34;thumbnails&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Thumbnails&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tubefilter.com/2014/06/19/youtube-thumbnails-definitive-guide/&#34;&gt;guide here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;brand-consistency&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Brand Consistency&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;description&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Description&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add summary with timecodes in the description &lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;timecodes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;within-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Within Videos&lt;/h2&gt;
+&lt;div id=&#34;intro&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Intro&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Context: “This video is part of a series where I work though common and current Data Science interview questions. If you’d like to see more, feel free to like so that I know the these videos are having an impact, and to subscribe if you want to see the latest videos.”&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-video-formats?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;Credibility&lt;/a&gt; “I have a PhD in Cognitive Science and a Masters in Statistics, currently a fellow in a sillicon valley data science bootcamp, where I’m actively interviewing, and networking with data scientists who conduct interviews.”&lt;/li&gt;
+&lt;li&gt;Need / Value: “I realized other content sucks, and this is the best use of your time.”&lt;/li&gt;
+&lt;li&gt;Legitimacy: “This is a question that I got from an interview”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;content&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Content&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Mention emotions and feelings through a video “At this point you feel like you’re doing well, then …”&lt;/li&gt;
+&lt;li&gt;Speak in a desirable way – engaging or calm.&lt;/li&gt;
+&lt;li&gt;Emphasize value of the content at every step.&lt;/li&gt;
+&lt;li&gt;Pause for them to try and also to increase view time metric&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outro-and-call-to-act&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Outro and Call To Act&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
