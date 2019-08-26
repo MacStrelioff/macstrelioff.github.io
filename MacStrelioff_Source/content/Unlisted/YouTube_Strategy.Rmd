@@ -24,7 +24,10 @@ Here I outline ideas and strategies for growing my YouTube channel.
 
 ### Intro
 
+"This video is part of a series where I work though common and current Data Science interview questions. If you'd like to see more, feel free to like so that I know the these videos are having an impact, and to subscribe if you want to see the latest videos."
 
+- Build value: "This is a question that a friend of mine was asked during a interview". 
+- + add in a pause for later videos
 
 ### Content
 
