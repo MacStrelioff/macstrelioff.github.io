@@ -237,17 +237,104 @@ Gina:
 
 
 
+Magna: 
+- what if you wanted the best of both worlds
+
+
+Misha:
+- did you try adding avg cost on amazon as a feature?
+- did you try other algos for class imbalance? 
+- how did you handle key words? 
+
+
+Pam:
+
+- houw would you incorporate time?
+- did you account for bias in strave -- so runs in french quarter might be marathons when it is safe
+- how would you correct for that in your model?
+
+
+Sam: 
+- your approach versus collaborative filtering? 
+
+
+Vy:
+- what were the recommended for you?
+- if you had more time, what would you add?
+- how did you validate?
+- 
+
+Xuntao;
+
+- on validation slide, what exactly do you mean by good?
+- 
+
+upcoming projects; 
+- scounting algorithm to find upcoming artists and signs them!
+
+
+- agency over YT recommendations? 
+- lots of experimentation on optimizing end screens -- Work that Laura dows.
+- - 
+- greenfield: 
+- brownfield: work in confounds of existing product
+- DS projects combination of personal interest / quick return for work. 
+- couple of projects in the pipeline, what's your interest? 
+- timeline on projects, bc DS with too much time goes outside realm of value to a business
+- Timeline of project negotiated with lead. 
+- 
+
+
+- agency in the artists / videos you promote? 
 
 
 
+- has a data engineer.. 
+- most of data coming from youtube reporting or analytics APIs? 
+- also datasets with financial records
+- softer measures coming out of external clients.. 
 
 
+- what was your career path / background? 
 
 
+- other offices in NY, LM, .. LA office focused on talent acquisition. 
+- Expect to be at NY office. 
+- Eng team in Portland.
+- supports personal growth, sends DS to conferences, .. 
 
 
+- lots of promotion done manually from content team
+- future work to put measurements on it and optimize
 
 
+- company mission: increase monetization of all music. Work with artist to monetize their work. 
+
+- big 5 -- suck oxygen out of other social platforms. 
+- instead, partnet with google.. 
+- how do we build the tools to succeed on whatever platform we are in? 
+- focus on understanding what makes an artist successful. 
+- 
+
+
+- DS head, started as an engineer
+- 10 years in aerospace
+- sr DS at playstation, focusing on gameplay
+- switched to cybersecurity
+- came to Vevo
+
+- later in process: why do you want to work for us? 
+- what does it mean to optimize processes for the artist? For the label? For vevo? 
+
+
+- next step: onsite, 4-5 people
+- one technical, python or SQL
+- one softe DS making sure you understand taking a business outline and turn it into a DS problem and solution
+- bus opps
+- product
+- other business units asking questions about the mission of the company, working through a hypothetical problem.
+
+5 people, half hour each, plus lunch. 
 
 
 
