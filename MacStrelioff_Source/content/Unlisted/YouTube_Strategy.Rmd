@@ -218,3 +218,67 @@ todo:
 
 
 
+
+Vevo
+
+Chris:
+- how would you interpret / recommend changes to a photo for eg nike?
+- slide on nike example: most of their images are low ... ? So you're saying some of these could be
+- What about the photos that are closer to the center? 
+
+
+Gina:
+
+- how do you normalize what one teacher considerd yellow versus another teacher?
+- - so there's a possibility that the K means diagram would be different if this was accounrted for?
+- talk more about predictions? .. About teacher alerts?
+- did you try other clustering algorithms?
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
