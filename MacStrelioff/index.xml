@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Mon, 26 Aug 2019 20:35:01 +0000</pubDate>
+      <pubDate>Tue, 27 Aug 2019 09:36:29 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -68,6 +68,7 @@
 &lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-2&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34;&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34;&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -99,6 +100,10 @@
 &lt;div id=&#34;thumbnails&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Thumbnails&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tubefilter.com/2014/06/19/youtube-thumbnails-definitive-guide/&#34;&gt;guide here&lt;/a&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Face in a small frame over written math&lt;/li&gt;
+&lt;li&gt;Face large, with text formulas around it&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 &lt;div id=&#34;brand-consistency&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Brand Consistency&lt;/h3&gt;
@@ -258,6 +263,15 @@ todo:
 &lt;li&gt;Advertising:&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;“Sharing this video is like giving your friends free money!”&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;an analysis done to find a sample size&lt;/li&gt;
+&lt;li&gt;formula based on t-distribution example&lt;/li&gt;
+&lt;li&gt;formula based on P(..)&lt;/li&gt;
+&lt;li&gt;General definition and power functions&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

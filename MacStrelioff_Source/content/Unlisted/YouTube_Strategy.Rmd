@@ -39,6 +39,9 @@ video guidelines for higher ranking:
 
 [guide here](https://www.tubefilter.com/2014/06/19/youtube-thumbnails-definitive-guide/)
 
+1. Face in a small frame over written math
+2. Face large, with text formulas around it
+
 ### Brand Consistency
 
 ### Description
@@ -194,6 +197,22 @@ todo:
 
 - Advertising: 
 - "Sharing this video is like giving your friends free money!"
+
+
+
+## What is a Power Analysis? (Explained at 3 levels of difficulty)
+
+1. an analysis done to find a sample size
+2. formula based on t-distribution example
+3. formula based on P(..)
+4. General definition and power functions
+
+
+
+
+
+
+
 
 
 
