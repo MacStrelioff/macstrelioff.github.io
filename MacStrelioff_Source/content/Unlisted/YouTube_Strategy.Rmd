@@ -184,9 +184,7 @@ todo:
 
 
 
-## How I Get Free Bitcoin, And You Can Too!
-
-
+## How I Get Free Bitcoin With This Simple Python Script (And you can too!)
 
 - Video on my script for clicking the roll button on freebitco.com
 - Simplify the script to be a python script that can be run from the terminal with one command. 
