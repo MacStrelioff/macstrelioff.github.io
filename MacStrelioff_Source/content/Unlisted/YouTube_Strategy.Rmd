@@ -63,6 +63,11 @@ video guidelines for higher ranking:
 
 ### Outro and Call To Act
 
+### General tips
+
+- Crop out the time that I spend writing -- From analytics, long periods of writing seem to hurt user retention. 
+- Instead, write everything out (maybe in a slightly vague way), and then spend time explaining the terms. 
+
 
 # Planned Videos
 
