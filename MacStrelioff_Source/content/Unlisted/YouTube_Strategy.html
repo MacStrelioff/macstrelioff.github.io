@@ -1,7 +1,7 @@
 ---
 title: "YouTube Strategy"
 author: "Mac Strelioff"
-date: "2019-08-28 12:58:10"
+date: "2019-08-28 13:24:02"
 math: true
 output:
   blogdown::html_page:
@@ -36,6 +36,7 @@ output:
 </ul></li>
 <li><a href="#planned-videos">Planned Videos</a><ul>
 <li><a href="#about-me-channel-video">“About Me” Channel Video</a></li>
+<li><a href="#behavioral-question-series">Behavioral question series</a></li>
 <li><a href="#data-science-interview-walkthrough-series">Data Science Interview Walkthrough Series</a><ul>
 <li><a href="#data-scientist-interview-walkthrough-intro">“Data Scientist Interview Walkthrough: Intro”</a></li>
 <li><a href="#data-scientist-interview-walkthrough-probability-part-1">Data Scientist Interview Walkthrough: Probability, Part 1</a></li>
@@ -43,8 +44,10 @@ output:
 </ul></li>
 <li><a href="#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too">How I Get Free Bitcoin With This Simple Python Script (And you can too!)</a></li>
 <li><a href="#what-is-a-power-analysis-explained-at-3-levels-of-difficulty">What is a Power Analysis? (Explained at 3 levels of difficulty)</a></li>
-<li><a href="#probability-distributions-series">Probability Distributions Series</a></li>
+<li><a href="#ab-testing-versus-bandits">A/B testing versus bandits</a></li>
 </ul></li>
+<li><a href="#probability-distributions-series">Probability Distributions Series</a></li>
+<li><a href="#ml-algorithm-series">ML algorithm series</a></li>
 </ul>
 </div>
 
@@ -60,7 +63,7 @@ output:
 <li>schema.. an html code snippit that gives google info about a video?</li>
 <li><p>go to html code, ask dennis to do it for you… or google it lol</p></li>
 <li>playlists good for watch time – this might be in place of a long video..</li>
-<li>videos with individual titles to funnel people in, then</li>
+<li>videos with individual titles to funnel people in</li>
 <li>keyword is the the search query, er the target search query</li>
 <li>pick a target keyword for each video</li>
 <li><p>Youtube algo inferring search intent</p></li>
@@ -82,7 +85,7 @@ output:
 <div id="title" class="section level3">
 <h3>Title:</h3>
 <ul>
-<li>instead of ‘part 1, ..’ find seperate videos that can rank on their own.</li>
+<li>instead of ‘part 1, ..’ find seperate videos that can rank on their own, maybe try ‘question 1’ so they sound self-contained</li>
 <li>title case – capitalize first letter of all words in title</li>
 <li>Video is shorter than 60 characters so it isn’t cut off in the SERP</li>
 <li>Video contains your target keyword</li>
@@ -247,8 +250,15 @@ output:
 <li>decision making, so studying people and the patterns or experiences that shape their behavior</li>
 <li>Amazed to learn that there’s a huge interplay between psychology and computer science – reinforcement learning Skinner in the 30’s, turned into a plethora of models in computer science, which are now being used to explain human behavior, and neural correlates of key values in those models are being discovered.</li>
 <li>Overall I was more interested in naturally occurring datasets, and experimental design – how we structude and verify our beliefs, and then use those beliefs to guide our actions.</li>
-<li>So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design.</li>
+<li><p>So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design.</p></li>
+<li>My mission is to break down barriers, mainly by democratizing education.</li>
+<li>About me: UCI, recorded lectures for students, stats masters, data scientist, …</li>
+<li><p>About this channel: I’ll primarily use this channel to publish educational resources on statistics and programming, mainly for aspiring data scientists. I’ll also use this channel as a platform to discuss hobby projects related to data science.</p></li>
 </ul>
+</div>
+<div id="behavioral-question-series" class="section level2">
+<h2>Behavioral question series</h2>
+<p>Make videos based on the questions / resources from Lacy ..</p>
 </div>
 <div id="data-science-interview-walkthrough-series" class="section level2">
 <h2>Data Science Interview Walkthrough Series</h2>
@@ -313,27 +323,26 @@ todo:
 - How many rounds are your expected to play?
 -- Now instead there is a '1', a '2', and an 'X'. If you draw the '1', you win $1, if you draw the '2' you win $2, and if you draw the 'X' then the game ends. How much are you expected to win?
 
--- Now instead of winnings, the numbers on the card represent how many more rounds you'll need to play. How many rounds are you expected to play now? (version of Aman's question)
+-- Now instead of winnings, the numbers on the card represent how many more rounds you'll need to play. What is the probability of the game ending? (version of Aman's question)
+- Aman's question - sample from a circle using a random number generator
+  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
+  - circle question from Google
 
 -- google question: Now there are cards 1 through 6. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
+- expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 
 -- recursive question: 
 -- Now the game ends if you 
 
-- Explain a power analysis (start complicated, get simple to keep people watching till the end)
 - Bank teller problem 
-- expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 - random number generator from a uniform random number generator
-- Aman's question - sample from a circle using a random number generator
-  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
-  - circle question from Google
 - estimate median from Google
 - variances of different experiment designs
 - multinomial and guessers 'favorite color' and a proportion of users who guess randomly
 - bandits vs A/B tests, particularly for lots of conditions
 - LI: android you can randomize, iphone you can't (synthetic control)
 - strengths & weaknesses of different ML algorithms (complex to simple explanations)
-- Chris Alborn's 
+- Chris Alborn's demos?
 --->
 </div>
 </div>
@@ -346,11 +355,18 @@ todo:
 <li>In the video, show people how to download the script from my GitHub and run the script from terminal :D</li>
 <li><p>Add referral code so that I get a cut of the coins generated by anyone watching my video</p></li>
 <li>Advertising:</li>
-<li><p>“Sharing this video is like giving your friends free money!”</p></li>
+<li>“Sharing this video is like giving your friends free money!”</li>
+<li>Incentivize: The more people who consistently do this, the more of the referral bonous I’ll give back.</li>
+<li>Show an example of how much I could give back if they run this consistently.</li>
+<li>My goal is to make a certain amount each week, so I’ll modify the referral bonus kickbacks based on that.</li>
+<li><p>So share this video to increase your kickback.</p></li>
 </ul>
 </div>
 <div id="what-is-a-power-analysis-explained-at-3-levels-of-difficulty" class="section level2">
 <h2>What is a Power Analysis? (Explained at 3 levels of difficulty)</h2>
+<ul>
+<li>Explain a power analysis (start complicated, get simple to keep people watching till the end)</li>
+</ul>
 <ol style="list-style-type: decimal">
 <li>an analysis done to find a sample size</li>
 <li>formula based on t-distribution example</li>
@@ -358,14 +374,26 @@ todo:
 <li>General definition and power functions</li>
 </ol>
 </div>
-<div id="probability-distributions-series" class="section level2">
-<h2>Probability Distributions Series</h2>
+<div id="ab-testing-versus-bandits" class="section level2">
+<h2>A/B testing versus bandits</h2>
+</div>
+</div>
+<div id="probability-distributions-series" class="section level1">
+<h1>Probability Distributions Series</h1>
 <ul>
 <li>Pick common distributions, describe them from the Wikipedia page</li>
 <li>Show their probability functions</li>
 <li>Show (derive?) their CDF</li>
 <li>Derive their MGFs</li>
+<li>Derive score and Fisher Information</li>
 <li>Describe / show conjugacy properties?</li>
+</ul>
+</div>
+<div id="ml-algorithm-series" class="section level1">
+<h1>ML algorithm series</h1>
+<ul>
+<li>Explanations, intuitions of different ML algorithms</li>
+<li>Strengths and weaknesses of different ML algorithms</li>
 </ul>
 <!--
 
@@ -488,5 +516,4 @@ upcoming projects;
 
 
 -->
-</div>
 </div>

@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Wed, 28 Aug 2019 12:58:10 +0000</pubDate>
+      <pubDate>Wed, 28 Aug 2019 13:24:02 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -69,6 +69,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#planned-videos&#34;&gt;Planned Videos&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#about-me-channel-video&#34;&gt;“About Me” Channel Video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#behavioral-question-series&#34;&gt;Behavioral question series&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-science-interview-walkthrough-series&#34;&gt;Data Science Interview Walkthrough Series&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-intro&#34;&gt;“Data Scientist Interview Walkthrough: Intro”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-1&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 1&lt;/a&gt;&lt;/li&gt;
@@ -76,8 +77,10 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34;&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34;&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-distributions-series&#34;&gt;Probability Distributions Series&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ab-testing-versus-bandits&#34;&gt;A/B testing versus bandits&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-distributions-series&#34;&gt;Probability Distributions Series&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ml-algorithm-series&#34;&gt;ML algorithm series&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -93,7 +96,7 @@
 &lt;li&gt;schema.. an html code snippit that gives google info about a video?&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;go to html code, ask dennis to do it for you… or google it lol&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;playlists good for watch time – this might be in place of a long video..&lt;/li&gt;
-&lt;li&gt;videos with individual titles to funnel people in, then&lt;/li&gt;
+&lt;li&gt;videos with individual titles to funnel people in&lt;/li&gt;
 &lt;li&gt;keyword is the the search query, er the target search query&lt;/li&gt;
 &lt;li&gt;pick a target keyword for each video&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Youtube algo inferring search intent&lt;/p&gt;&lt;/li&gt;
@@ -115,7 +118,7 @@
 &lt;div id=&#34;title&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Title:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;instead of ‘part 1, ..’ find seperate videos that can rank on their own.&lt;/li&gt;
+&lt;li&gt;instead of ‘part 1, ..’ find seperate videos that can rank on their own, maybe try ‘question 1’ so they sound self-contained&lt;/li&gt;
 &lt;li&gt;title case – capitalize first letter of all words in title&lt;/li&gt;
 &lt;li&gt;Video is shorter than 60 characters so it isn’t cut off in the SERP&lt;/li&gt;
 &lt;li&gt;Video contains your target keyword&lt;/li&gt;
@@ -280,8 +283,15 @@
 &lt;li&gt;decision making, so studying people and the patterns or experiences that shape their behavior&lt;/li&gt;
 &lt;li&gt;Amazed to learn that there’s a huge interplay between psychology and computer science – reinforcement learning Skinner in the 30’s, turned into a plethora of models in computer science, which are now being used to explain human behavior, and neural correlates of key values in those models are being discovered.&lt;/li&gt;
 &lt;li&gt;Overall I was more interested in naturally occurring datasets, and experimental design – how we structude and verify our beliefs, and then use those beliefs to guide our actions.&lt;/li&gt;
-&lt;li&gt;So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;My mission is to break down barriers, mainly by democratizing education.&lt;/li&gt;
+&lt;li&gt;About me: UCI, recorded lectures for students, stats masters, data scientist, …&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;About this channel: I’ll primarily use this channel to publish educational resources on statistics and programming, mainly for aspiring data scientists. I’ll also use this channel as a platform to discuss hobby projects related to data science.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;behavioral-question-series&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Behavioral question series&lt;/h2&gt;
+&lt;p&gt;Make videos based on the questions / resources from Lacy ..&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-science-interview-walkthrough-series&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Science Interview Walkthrough Series&lt;/h2&gt;
@@ -346,27 +356,26 @@ todo:
 - How many rounds are your expected to play?
 -- Now instead there is a &#39;1&#39;, a &#39;2&#39;, and an &#39;X&#39;. If you draw the &#39;1&#39;, you win $1, if you draw the &#39;2&#39; you win $2, and if you draw the &#39;X&#39; then the game ends. How much are you expected to win?
 
--- Now instead of winnings, the numbers on the card represent how many more rounds you&#39;ll need to play. How many rounds are you expected to play now? (version of Aman&#39;s question)
+-- Now instead of winnings, the numbers on the card represent how many more rounds you&#39;ll need to play. What is the probability of the game ending? (version of Aman&#39;s question)
+- Aman&#39;s question - sample from a circle using a random number generator
+  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
+  - circle question from Google
 
 -- google question: Now there are cards 1 through 6. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
+- expected value of the dice game process (get what you roll, expected value of game when you&#39;re alowed to roll n times)
 
 -- recursive question: 
 -- Now the game ends if you 
 
-- Explain a power analysis (start complicated, get simple to keep people watching till the end)
 - Bank teller problem 
-- expected value of the dice game process (get what you roll, expected value of game when you&#39;re alowed to roll n times)
 - random number generator from a uniform random number generator
-- Aman&#39;s question - sample from a circle using a random number generator
-  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
-  - circle question from Google
 - estimate median from Google
 - variances of different experiment designs
 - multinomial and guessers &#39;favorite color&#39; and a proportion of users who guess randomly
 - bandits vs A/B tests, particularly for lots of conditions
 - LI: android you can randomize, iphone you can&#39;t (synthetic control)
 - strengths &amp; weaknesses of different ML algorithms (complex to simple explanations)
-- Chris Alborn&#39;s 
+- Chris Alborn&#39;s demos?
 ---&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -379,11 +388,18 @@ todo:
 &lt;li&gt;In the video, show people how to download the script from my GitHub and run the script from terminal :D&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Add referral code so that I get a cut of the coins generated by anyone watching my video&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Advertising:&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;“Sharing this video is like giving your friends free money!”&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;“Sharing this video is like giving your friends free money!”&lt;/li&gt;
+&lt;li&gt;Incentivize: The more people who consistently do this, the more of the referral bonous I’ll give back.&lt;/li&gt;
+&lt;li&gt;Show an example of how much I could give back if they run this consistently.&lt;/li&gt;
+&lt;li&gt;My goal is to make a certain amount each week, so I’ll modify the referral bonus kickbacks based on that.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;So share this video to increase your kickback.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Explain a power analysis (start complicated, get simple to keep people watching till the end)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;an analysis done to find a sample size&lt;/li&gt;
 &lt;li&gt;formula based on t-distribution example&lt;/li&gt;
@@ -391,14 +407,26 @@ todo:
 &lt;li&gt;General definition and power functions&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div id=&#34;probability-distributions-series&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Distributions Series&lt;/h2&gt;
+&lt;div id=&#34;ab-testing-versus-bandits&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A/B testing versus bandits&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;probability-distributions-series&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Probability Distributions Series&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Pick common distributions, describe them from the Wikipedia page&lt;/li&gt;
 &lt;li&gt;Show their probability functions&lt;/li&gt;
 &lt;li&gt;Show (derive?) their CDF&lt;/li&gt;
 &lt;li&gt;Derive their MGFs&lt;/li&gt;
+&lt;li&gt;Derive score and Fisher Information&lt;/li&gt;
 &lt;li&gt;Describe / show conjugacy properties?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ml-algorithm-series&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;ML algorithm series&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Explanations, intuitions of different ML algorithms&lt;/li&gt;
+&lt;li&gt;Strengths and weaknesses of different ML algorithms&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!--
 
@@ -521,7 +549,6 @@ upcoming projects;
 
 
 --&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

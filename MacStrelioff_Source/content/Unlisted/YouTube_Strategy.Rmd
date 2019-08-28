@@ -25,7 +25,7 @@ Here I outline ideas and strategies for growing my YouTube channel.
 - go to html code, ask dennis to do it for you... or google it lol
 
 - playlists good for watch time -- this might be in place of a long video.. 
-- videos with individual titles to funnel people in, then 
+- videos with individual titles to funnel people in
 - keyword is the the search query, er the target search query
 - pick a target keyword for each video
 - Youtube algo inferring search intent
@@ -43,7 +43,7 @@ Here I outline ideas and strategies for growing my YouTube channel.
 
 ### Title:
 
-- instead of 'part 1, ..' find seperate videos that can rank on their own.
+- instead of 'part 1, ..' find seperate videos that can rank on their own, maybe try 'question 1' so they sound self-contained
 - title case -- capitalize first letter of all words in title 
 - Video is shorter than 60 characters so it isn’t cut off in the SERP
 - Video contains your target keyword
@@ -202,6 +202,15 @@ About Me:
 - Overall I was more interested in naturally occurring datasets, and experimental design -- how we structude and verify our beliefs, and then use those beliefs to guide our actions. 
 - So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design. 
 
+- My mission is to break down barriers, mainly by democratizing education. 
+- About me: UCI, recorded lectures for students, stats masters, data scientist, ... 
+- About this channel: I'll primarily use this channel to publish educational resources on statistics and programming, mainly for aspiring data scientists. I'll also use this channel as a platform to discuss hobby projects related to data science. 
+
+## Behavioral question series
+
+Make videos based on the questions / resources from Lacy
+..
+
 ## Data Science Interview Walkthrough Series
 
 I realized there was a lot of material to help prepare for software engineering videos, but very little for data scientist interviews. So I'm compiling videos of interview questions my firends and I have been asked in data sicence interviews, and questions that I've gotten from data scientists who are currently interviewing.
@@ -230,7 +239,6 @@ I realized there was a lot of material to help prepare for software engineering 
 - And finally be sure to subscribe if you want access to the most recent walkthroughs
 - Thank you, and I hope you enjoy these videos! 
 
-
 ### Data Scientist Interview Walkthrough: Probability, Part 1
 
 - Coins in a bag
@@ -238,7 +246,6 @@ I realized there was a lot of material to help prepare for software engineering 
 - Bayes' Theorem, Bayes Factor
 - Frequentist Hypothesis Testing
 - Likelihood Ratio
-
 
 ### Data Scientist Interview Walkthrough: Probability, Part 2
 
@@ -253,15 +260,8 @@ Geometric distribution problem.
 - This question has some good follow ups that I'll reveal in this video, and at least two really great follow ups that I'll show in future videos.
 - So, here it is...
 
-
-
-
-
 - This problem starts out relatively easy but can transform into something that would be challenging to people who don't watch my videos. 
 - Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to. 
-
-
-
 
 <!---
 todo:
@@ -273,30 +273,27 @@ todo:
 - How many rounds are your expected to play?
 -- Now instead there is a '1', a '2', and an 'X'. If you draw the '1', you win $1, if you draw the '2' you win $2, and if you draw the 'X' then the game ends. How much are you expected to win?
 
--- Now instead of winnings, the numbers on the card represent how many more rounds you'll need to play. How many rounds are you expected to play now? (version of Aman's question)
+-- Now instead of winnings, the numbers on the card represent how many more rounds you'll need to play. What is the probability of the game ending? (version of Aman's question)
+- Aman's question - sample from a circle using a random number generator
+  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
+  - circle question from Google
 
 -- google question: Now there are cards 1 through 6. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
+- expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 
 -- recursive question: 
 -- Now the game ends if you 
 
-- Explain a power analysis (start complicated, get simple to keep people watching till the end)
 - Bank teller problem 
-- expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 - random number generator from a uniform random number generator
-- Aman's question - sample from a circle using a random number generator
-  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
-  - circle question from Google
 - estimate median from Google
 - variances of different experiment designs
 - multinomial and guessers 'favorite color' and a proportion of users who guess randomly
 - bandits vs A/B tests, particularly for lots of conditions
 - LI: android you can randomize, iphone you can't (synthetic control)
 - strengths & weaknesses of different ML algorithms (complex to simple explanations)
-- Chris Alborn's 
+- Chris Alborn's demos?
 --->
-
-
 
 ## How I Get Free Bitcoin With This Simple Python Script (And you can too!)
 
@@ -307,13 +304,16 @@ todo:
 - In the video, show people how to download the script from my GitHub and run the script from terminal :D
 - Add referral code so that I get a cut of the coins generated by anyone watching my video
 
-
 - Advertising: 
 - "Sharing this video is like giving your friends free money!"
-
-
+- Incentivize: The more people who consistently do this, the more of the referral bonous I'll give back. 
+- Show an example of how much I could give back if they run this consistently. 
+- My goal is to make a certain amount each week, so I'll modify the referral bonus kickbacks based on that. 
+- So share this video to increase your kickback. 
 
 ## What is a Power Analysis? (Explained at 3 levels of difficulty)
+
+- Explain a power analysis (start complicated, get simple to keep people watching till the end)
 
 1. an analysis done to find a sample size
 2. formula based on t-distribution example
@@ -321,15 +321,22 @@ todo:
 4. General definition and power functions
 
 
-## Probability Distributions Series
+## A/B testing versus bandits
+
+
+# Probability Distributions Series
 
 - Pick common distributions, describe them from the Wikipedia page
 - Show their probability functions
 - Show (derive?) their CDF 
 - Derive their MGFs
+- Derive score and Fisher Information
 - Describe / show conjugacy properties?
 
+# ML algorithm series
 
+- Explanations, intuitions of different ML algorithms
+- Strengths and weaknesses of different ML algorithms
 
 <!--
 
