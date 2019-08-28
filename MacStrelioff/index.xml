@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Tue, 27 Aug 2019 21:58:54 +0000</pubDate>
+      <pubDate>Tue, 27 Aug 2019 22:35:37 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -93,7 +93,16 @@
 &lt;li&gt;title case – capitalize first letter of all words in title&lt;/li&gt;
 &lt;li&gt;longer descriptions better for ranking bc youtube, sweet spot ~350 words.&lt;/li&gt;
 &lt;li&gt;in description, overview of everything, links of anything you want to push people to, timestamps for parts of the video.&lt;/li&gt;
-&lt;li&gt;playlists good for watch time – this&lt;/li&gt;
+&lt;li&gt;playlists good for watch time – this might be in place of a long video..&lt;/li&gt;
+&lt;li&gt;instead of ‘part 1, ..’ find seperate videos that can rank on their own.&lt;/li&gt;
+&lt;li&gt;videos with individual titles to funnel people in, then&lt;/li&gt;
+&lt;li&gt;have one keyword (different from tags).&lt;/li&gt;
+&lt;li&gt;keyword is the the search query, er the target search query&lt;/li&gt;
+&lt;li&gt;pick a target keyword for each video&lt;/li&gt;
+&lt;li&gt;Youtube algo inferring search intent&lt;/li&gt;
+&lt;li&gt;6-8 tags – target keyword should be first tag, next 4 tags should be long tailed versions&lt;/li&gt;
+&lt;li&gt;most important for keyword is title.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;higher-ranking&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Higher Ranking&lt;/h3&gt;
@@ -285,6 +294,7 @@ todo:
 &lt;div id=&#34;how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;can make video, then make it public later.. (after job searching ends)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Video on my script for clicking the roll button on freebitco.com&lt;/li&gt;
 &lt;li&gt;Simplify the script to be a python script that can be run from the terminal with one command.&lt;/li&gt;
 &lt;li&gt;In the video, show people how to download the script from my GitHub and run the script from terminal :D&lt;/li&gt;
@@ -301,80 +311,127 @@ todo:
 &lt;li&gt;formula based on P(..)&lt;/li&gt;
 &lt;li&gt;General definition and power functions&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Vevo&lt;/p&gt;
-&lt;p&gt;Chris: - how would you interpret / recommend changes to a photo for eg nike? - slide on nike example: most of their images are low … ? So you’re saying some of these could be - What about the photos that are closer to the center?&lt;/p&gt;
-&lt;p&gt;Gina:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;how do you normalize what one teacher considerd yellow versus another teacher?&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;so there’s a possibility that the K means diagram would be different if this was accounrted for?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;talk more about predictions? .. About teacher alerts?&lt;/li&gt;
-&lt;li&gt;did you try other clustering algorithms?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Magna: - what if you wanted the best of both worlds&lt;/p&gt;
-&lt;p&gt;Misha: - did you try adding avg cost on amazon as a feature? - did you try other algos for class imbalance? - how did you handle key words?&lt;/p&gt;
-&lt;p&gt;Pam:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;houw would you incorporate time?&lt;/li&gt;
-&lt;li&gt;did you account for bias in strave – so runs in french quarter might be marathons when it is safe&lt;/li&gt;
-&lt;li&gt;how would you correct for that in your model?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Sam: - your approach versus collaborative filtering?&lt;/p&gt;
-&lt;p&gt;Vy: - what were the recommended for you? - if you had more time, what would you add? - how did you validate? -&lt;/p&gt;
-&lt;p&gt;Xuntao;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;on validation slide, what exactly do you mean by good?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;upcoming projects; - scounting algorithm to find upcoming artists and signs them!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;agency over YT recommendations?&lt;/li&gt;
-&lt;li&gt;lots of experimentation on optimizing end screens – Work that Laura dows.&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;greenfield:&lt;/li&gt;
-&lt;li&gt;brownfield: work in confounds of existing product&lt;/li&gt;
-&lt;li&gt;DS projects combination of personal interest / quick return for work.&lt;/li&gt;
-&lt;li&gt;couple of projects in the pipeline, what’s your interest?&lt;/li&gt;
-&lt;li&gt;timeline on projects, bc DS with too much time goes outside realm of value to a business&lt;/li&gt;
-&lt;li&gt;Timeline of project negotiated with lead.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;agency in the artists / videos you promote?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;has a data engineer..&lt;/li&gt;
-&lt;li&gt;most of data coming from youtube reporting or analytics APIs?&lt;/li&gt;
-&lt;li&gt;also datasets with financial records&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;softer measures coming out of external clients..&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;what was your career path / background?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;other offices in NY, LM, .. LA office focused on talent acquisition.&lt;/li&gt;
-&lt;li&gt;Expect to be at NY office.&lt;/li&gt;
-&lt;li&gt;Eng team in Portland.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;supports personal growth, sends DS to conferences, ..&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;lots of promotion done manually from content team&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;future work to put measurements on it and optimize&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;company mission: increase monetization of all music. Work with artist to monetize their work.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;big 5 – suck oxygen out of other social platforms.&lt;/li&gt;
-&lt;li&gt;instead, partnet with google..&lt;/li&gt;
-&lt;li&gt;how do we build the tools to succeed on whatever platform we are in?&lt;/li&gt;
-&lt;li&gt;focus on understanding what makes an artist successful.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;DS head, started as an engineer&lt;/li&gt;
-&lt;li&gt;10 years in aerospace&lt;/li&gt;
-&lt;li&gt;sr DS at playstation, focusing on gameplay&lt;/li&gt;
-&lt;li&gt;switched to cybersecurity&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;came to Vevo&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;later in process: why do you want to work for us?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;what does it mean to optimize processes for the artist? For the label? For vevo?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;next step: onsite, 4-5 people&lt;/li&gt;
-&lt;li&gt;one technical, python or SQL&lt;/li&gt;
-&lt;li&gt;one softe DS making sure you understand taking a business outline and turn it into a DS problem and solution&lt;/li&gt;
-&lt;li&gt;bus opps&lt;/li&gt;
-&lt;li&gt;product&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;other business units asking questions about the mission of the company, working through a hypothetical problem.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;5 people, half hour each, plus lunch.&lt;/p&gt;
+&lt;!--
+
+Vevo
+
+Chris:
+- how would you interpret / recommend changes to a photo for eg nike?
+- slide on nike example: most of their images are low ... ? So you&#39;re saying some of these could be
+- What about the photos that are closer to the center? 
+
+
+Gina:
+
+- how do you normalize what one teacher considerd yellow versus another teacher?
+- - so there&#39;s a possibility that the K means diagram would be different if this was accounrted for?
+- talk more about predictions? .. About teacher alerts?
+- did you try other clustering algorithms?
+- 
+
+
+
+Magna: 
+- what if you wanted the best of both worlds
+
+
+Misha:
+- did you try adding avg cost on amazon as a feature?
+- did you try other algos for class imbalance? 
+- how did you handle key words? 
+
+
+Pam:
+
+- houw would you incorporate time?
+- did you account for bias in strave -- so runs in french quarter might be marathons when it is safe
+- how would you correct for that in your model?
+
+
+Sam: 
+- your approach versus collaborative filtering? 
+
+
+Vy:
+- what were the recommended for you?
+- if you had more time, what would you add?
+- how did you validate?
+- 
+
+Xuntao;
+
+- on validation slide, what exactly do you mean by good?
+- 
+
+upcoming projects; 
+- scounting algorithm to find upcoming artists and signs them!
+
+
+- agency over YT recommendations? 
+- lots of experimentation on optimizing end screens -- Work that Laura dows.
+- - 
+- greenfield: 
+- brownfield: work in confounds of existing product
+- DS projects combination of personal interest / quick return for work. 
+- couple of projects in the pipeline, what&#39;s your interest? 
+- timeline on projects, bc DS with too much time goes outside realm of value to a business
+- Timeline of project negotiated with lead. 
+- 
+
+
+- agency in the artists / videos you promote? 
+
+
+
+- has a data engineer.. 
+- most of data coming from youtube reporting or analytics APIs? 
+- also datasets with financial records
+- softer measures coming out of external clients.. 
+
+
+- what was your career path / background? 
+
+
+- other offices in NY, LM, .. LA office focused on talent acquisition. 
+- Expect to be at NY office. 
+- Eng team in Portland.
+- supports personal growth, sends DS to conferences, .. 
+
+
+- lots of promotion done manually from content team
+- future work to put measurements on it and optimize
+
+
+- company mission: increase monetization of all music. Work with artist to monetize their work. 
+
+- big 5 -- suck oxygen out of other social platforms. 
+- instead, partnet with google.. 
+- how do we build the tools to succeed on whatever platform we are in? 
+- focus on understanding what makes an artist successful. 
+- 
+
+
+- DS head, started as an engineer
+- 10 years in aerospace
+- sr DS at playstation, focusing on gameplay
+- switched to cybersecurity
+- came to Vevo
+
+- later in process: why do you want to work for us? 
+- what does it mean to optimize processes for the artist? For the label? For vevo? 
+
+
+- next step: onsite, 4-5 people
+- one technical, python or SQL
+- one softe DS making sure you understand taking a business outline and turn it into a DS problem and solution
+- bus opps
+- product
+- other business units asking questions about the mission of the company, working through a hypothetical problem.
+
+5 people, half hour each, plus lunch. 
+
+
+--&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

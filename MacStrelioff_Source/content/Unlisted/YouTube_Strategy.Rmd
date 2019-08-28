@@ -30,7 +30,18 @@ Here I outline ideas and strategies for growing my YouTube channel.
 - title case -- capitalize first letter of all words in title 
 - longer descriptions better for ranking bc youtube, sweet spot ~350 words. 
 - in description, overview of everything, links of anything you want to push people to, timestamps for parts of the video. 
-- playlists good for watch time -- this 
+- playlists good for watch time -- this might be in place of a long video.. 
+- instead of 'part 1, ..' find seperate videos that can rank on their own.
+- videos with individual titles to funnel people in, then 
+- have one keyword (different from tags).
+- keyword is the the search query, er the target search query
+- pick a target keyword for each video
+- Youtube algo inferring search intent
+- 6-8 tags -- target keyword should be first tag, next 4 tags should be long tailed versions
+- most important for keyword is title. 
+- 
+
+
 
 ### Higher Ranking
 
@@ -212,6 +223,8 @@ todo:
 
 ## How I Get Free Bitcoin With This Simple Python Script (And you can too!)
 
+- can make video, then make it public later.. (after job searching ends)
+
 - Video on my script for clicking the roll button on freebitco.com
 - Simplify the script to be a python script that can be run from the terminal with one command. 
 - In the video, show people how to download the script from my GitHub and run the script from terminal :D
@@ -232,15 +245,7 @@ todo:
 
 
 
-
-
-
-
-
-
-
-
-
+<!--
 
 Vevo
 
@@ -360,7 +365,7 @@ upcoming projects;
 5 people, half hour each, plus lunch. 
 
 
-
+-->
 
 
 
