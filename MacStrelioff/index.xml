@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Tue, 27 Aug 2019 22:35:37 +0000</pubDate>
+      <pubDate>Wed, 28 Aug 2019 10:46:44 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -47,13 +47,17 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#general-strategies-and-guides&#34;&gt;General Strategies and Guides&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#meta&#34;&gt;Meta&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meta&#34;&gt;Meta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seo&#34;&gt;SEO&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#title&#34;&gt;Title:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tags&#34;&gt;Tags&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hook&#34;&gt;Hook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#higher-ranking&#34;&gt;Higher Ranking&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#thumbnails&#34;&gt;Thumbnails&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#brand-consistency&#34;&gt;Brand Consistency&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tags&#34;&gt;Tags&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#within-videos&#34;&gt;Within Videos&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
@@ -102,8 +106,52 @@
 &lt;li&gt;Youtube algo inferring search intent&lt;/li&gt;
 &lt;li&gt;6-8 tags – target keyword should be first tag, next 4 tags should be long tailed versions&lt;/li&gt;
 &lt;li&gt;most important for keyword is title.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seo&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SEO&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.briggsby.com/reverse-engineering-youtube-search&#34;&gt;good overview article&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;title&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Title:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Video is shorter than 60 characters so it isn’t cut off in the SERP&lt;/li&gt;
+&lt;li&gt;Video contains your target keyword&lt;/li&gt;
+&lt;li&gt;Remove excess jargon&lt;/li&gt;
+&lt;li&gt;See SEO Framework/YouTube Distribution section - in the expanded section in middle of page - for examples.&lt;/li&gt;
+&lt;li&gt;Do not include episode numbers for your videos that are in playlists. CTR and views might go down as episode numbers go up and the playlist is already directing the order in which your audience views so there’s no need to really include the numbers&lt;/li&gt;
+&lt;li&gt;Briggsby found that titles with 47-48 characters perform best. This has not been reflected in our own videos so far but this is still a good target range to adhere to as a best practices.&lt;/li&gt;
+&lt;li&gt;Front-load your keyword in your title if possible. Youtube gives more weight to words that come at the beginning of the title. Don’t do this if it comes at the expense of the flow of your title or users’ understanding of your title.&lt;/li&gt;
+&lt;li&gt;Note that your title in the video description can be different than what appears in the thumbnail (to make the title visually more succinct)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tags&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tags&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Look at “view page source” and find their keywords.&lt;/li&gt;
+&lt;li&gt;type key words in youtube search, and add the things that it suggests.&lt;/li&gt;
+&lt;li&gt;&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;keyword&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;long tail keywords&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;2-3 broadest category ones&lt;/li&gt;
+&lt;li&gt;focus on 6-7 keywords&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hook&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hook&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;duration&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Duration&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do an incognito tab search in Youtube for your target keyword and note the average duration of the top three videos. This should give you a good idea of an appropriate duration for the type of content you’re creating&lt;/li&gt;
+&lt;li&gt;Videos should be at least 4:30 long&lt;/li&gt;
+&lt;li&gt;According to Briggsby: The average duration of videos that rank in the top 5 is 11 minutes and 44 seconds, and there appears to be a positive relationship between video length and rank performance.&lt;/li&gt;
+&lt;li&gt;Audiences also tend to “like” videos more that are in the 10-16 minute range&lt;/li&gt;
+&lt;li&gt;However, keep in mind that you should tailor your video duration to be appropriate for the type of content you are creating and that’s why you should always be sure to note how long the videos are that are ranking for your target keyword&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&#34;higher-ranking&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Higher Ranking&lt;/h3&gt;
 &lt;p&gt;Good advice from &lt;a href=&#34;https://www.youtube.com/watch?v=xdcG1M6dy58&#34;&gt;joma here&lt;/a&gt;&lt;/p&gt;
@@ -137,21 +185,6 @@
 &lt;li&gt;Add summary with timecodes in the description &lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;timecodes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tags&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tags&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Look at “view page source” and find their keywords.&lt;/li&gt;
-&lt;li&gt;type key words in youtube search, and add the things that it suggests.&lt;/li&gt;
-&lt;li&gt;&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;keyword&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;long tail keywords&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;2-3 broadest category ones&lt;/li&gt;
-&lt;li&gt;focus on 6-7 keywords&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;within-videos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Within Videos&lt;/h2&gt;

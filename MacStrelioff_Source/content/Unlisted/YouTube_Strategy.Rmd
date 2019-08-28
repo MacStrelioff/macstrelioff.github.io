@@ -39,7 +39,41 @@ Here I outline ideas and strategies for growing my YouTube channel.
 - Youtube algo inferring search intent
 - 6-8 tags -- target keyword should be first tag, next 4 tags should be long tailed versions
 - most important for keyword is title. 
-- 
+
+## SEO
+[good overview article](https://www.briggsby.com/reverse-engineering-youtube-search)
+
+### Title:
+
+- Video is shorter than 60 characters so it isn’t cut off in the SERP
+- Video contains your target keyword
+- Remove excess jargon
+- See SEO Framework/YouTube Distribution section - in the expanded section in middle of page - for examples.
+- Do not include episode numbers for your videos that are in playlists. CTR and views might go down as episode numbers go up and the playlist is already directing the order in which your audience views so there’s no need to really include the numbers
+- Briggsby found that titles with 47-48 characters perform best. This has not been reflected in our own videos so far but this is still a good target range to adhere to as a best practices.
+- Front-load your keyword in your title if possible. Youtube gives more weight to words that come at the beginning of the title. Don’t do this if it comes at the expense of the flow of your title or users' understanding of your title.
+- Note that your title in the video description can be different than what appears in the thumbnail (to make the title visually more succinct)
+
+
+
+### Tags
+
+- Look at "view page source" and find their keywords. 
+- type key words in youtube search, and add the things that it suggests.
+- 1) keyword
+- 2) long tail keywords
+- 2-3 broadest category ones
+- focus on 6-7 keywords
+
+### Hook
+
+### Duration
+
+- Do an incognito tab search in Youtube for your target keyword and note the average duration of the top three videos. This should give you a good idea of an appropriate duration for the type of content you’re creating
+- Videos should be at least 4:30 long
+- According to Briggsby: The average duration of videos that rank in the top 5 is 11 minutes and 44 seconds, and there appears to be a positive relationship between video length and rank performance. 
+- Audiences also tend to “like” videos more that are in the 10-16 minute range
+- However, keep in mind that you should tailor your video duration to be appropriate for the type of content you are creating and that’s why you should always be sure to note how long the videos are that are ranking for your target keyword
 
 
 
@@ -71,15 +105,6 @@ video guidelines for higher ranking:
 ### Description
 
 - Add summary with timecodes in the description [timecodes](https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&hl=en#strategies-zippy-link-2)
-
-## Tags
-
-- Look at "view page source" and find their keywords. 
-- type key words in youtube search, and add the things that it suggests.
-- 1) keyword
-- 2) long tail keywords
-- 2-3 broadest category ones
-- focus on 6-7 keywords
 
 
 ## Within Videos
