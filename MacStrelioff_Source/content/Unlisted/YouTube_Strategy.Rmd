@@ -19,6 +19,19 @@ Here I outline ideas and strategies for growing my YouTube channel.
 
 # General Strategies and Guides
 ## Meta
+
+- start with an overview of the video. 
+- start with what they want for the hook -- then ask to like/subscribe at the end for the people that obviously like. 
+- biggest spikes are when there's new visual information.. 
+- schema.. an html code snippit that gives google info about a video?
+- go to html code, ask dennis to do it for you....... 
+- or google it lol
+- green or blue because they contrast both the notmal youtube and the darkmode youtube
+- title case -- capitalize first letter of all words in title 
+- longer descriptions better for ranking bc youtube, sweet spot ~350 words. 
+- in description, overview of everything, links of anything you want to push people to, timestamps for parts of the video. 
+- playlists good for watch time -- this 
+
 ### Higher Ranking
 
 Good advice from [joma here](https://www.youtube.com/watch?v=xdcG1M6dy58)
@@ -47,6 +60,16 @@ video guidelines for higher ranking:
 ### Description
 
 - Add summary with timecodes in the description [timecodes](https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&hl=en#strategies-zippy-link-2)
+
+## Tags
+
+- Look at "view page source" and find their keywords. 
+- type key words in youtube search, and add the things that it suggests.
+- 1) keyword
+- 2) long tail keywords
+- 2-3 broadest category ones
+- focus on 6-7 keywords
+
 
 ## Within Videos
 

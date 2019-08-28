@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Tue, 27 Aug 2019 15:41:34 +0000</pubDate>
+      <pubDate>Tue, 27 Aug 2019 21:58:54 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -53,6 +53,7 @@
 &lt;li&gt;&lt;a href=&#34;#brand-consistency&#34;&gt;Brand Consistency&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tags&#34;&gt;Tags&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#within-videos&#34;&gt;Within Videos&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#intro&#34;&gt;Intro&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
@@ -81,6 +82,19 @@
 &lt;h1&gt;General Strategies and Guides&lt;/h1&gt;
 &lt;div id=&#34;meta&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Meta&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;start with an overview of the video.&lt;/li&gt;
+&lt;li&gt;start with what they want for the hook – then ask to like/subscribe at the end for the people that obviously like.&lt;/li&gt;
+&lt;li&gt;biggest spikes are when there’s new visual information..&lt;/li&gt;
+&lt;li&gt;schema.. an html code snippit that gives google info about a video?&lt;/li&gt;
+&lt;li&gt;go to html code, ask dennis to do it for you…….&lt;/li&gt;
+&lt;li&gt;or google it lol&lt;/li&gt;
+&lt;li&gt;green or blue because they contrast both the notmal youtube and the darkmode youtube&lt;/li&gt;
+&lt;li&gt;title case – capitalize first letter of all words in title&lt;/li&gt;
+&lt;li&gt;longer descriptions better for ranking bc youtube, sweet spot ~350 words.&lt;/li&gt;
+&lt;li&gt;in description, overview of everything, links of anything you want to push people to, timestamps for parts of the video.&lt;/li&gt;
+&lt;li&gt;playlists good for watch time – this&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;higher-ranking&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Higher Ranking&lt;/h3&gt;
 &lt;p&gt;Good advice from &lt;a href=&#34;https://www.youtube.com/watch?v=xdcG1M6dy58&#34;&gt;joma here&lt;/a&gt;&lt;/p&gt;
@@ -114,6 +128,21 @@
 &lt;li&gt;Add summary with timecodes in the description &lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;timecodes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tags&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tags&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Look at “view page source” and find their keywords.&lt;/li&gt;
+&lt;li&gt;type key words in youtube search, and add the things that it suggests.&lt;/li&gt;
+&lt;li&gt;&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;keyword&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;long tail keywords&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;2-3 broadest category ones&lt;/li&gt;
+&lt;li&gt;focus on 6-7 keywords&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;within-videos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Within Videos&lt;/h2&gt;
