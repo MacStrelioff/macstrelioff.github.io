@@ -66,6 +66,14 @@ Here I outline ideas and strategies for growing my YouTube channel.
 
 - Add summary with timecodes in the description [timecodes](https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&hl=en#strategies-zippy-link-2)
 
+From [this blog](https://www.briggsby.com/reverse-engineering-youtube-search)
+- Brief CTA for a relevant next video to drive session length and related videos.
+- Subscribe CTA to help build your distribution power.
+- 50 to 150 words in the description to summarize and describe your video, mentioning a broad match variation of your keyword 1 to 3 times, depending on length.
+- List additional videos to watch, focused on your best content about the same or a similar subject matter as this video, creating recommendation clusters.
+- A brief bio and/or list of social accounts, which can help build your distribution power.
+- Avoid exceeding 400 words without a good reason to do so, because stuffing or going broadly off topic can harm performance.
+
 ### Tags
 
 - Look at "view page source" and find their keywords. 
@@ -140,6 +148,15 @@ For a background photo, choose something with blues, greens, and high contrast, 
 - start with an overview of the video. 
 - start with what they want for the hook -- then ask to like/subscribe at the end for the people that obviously like. 
 
+- Hook your audience in the first 10 seconds but don’t give away the answer to the central question of the video  that early or your audience will bounce
+- You shouldn’t string them along for too long because you want your video to get to the point, but you don’t want to lose them within the first 10 seconds
+
+- Playlists can help increase the amount of time that your viewers stay on Youtube and, in turn, improve your rankings
+- However, be sure that you keep your playlists focused around one highly-specific topic. If you switch up the topic too much, we see high drop-off and videos end up looking ineffective to the Youtube algorithm.
+- Additionally, if you’re creating a playlist, make sure that videos can stand alone as well within the context of the playlist.
+- If they’re ranking for a standalone keyword, they won’t always appear within the context of your video and you don’t want people to bounce because they feel like they need to have watched 4 or 5 previous videos in order to understand the one that they landed on
+- Writing a script is highly recommended.
+- By sharing your script and refining your opening, you avoid the risk of shooting footage without a clear, strong opening
 
 ### Content
 
@@ -302,6 +319,15 @@ todo:
 2. formula based on t-distribution example
 3. formula based on P(..)
 4. General definition and power functions
+
+
+## Probability Distributions Series
+
+- Pick common distributions, describe them from the Wikipedia page
+- Show their probability functions
+- Show (derive?) their CDF 
+- Derive their MGFs
+- Describe / show conjugacy properties?
 
 
 

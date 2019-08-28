@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Wed, 28 Aug 2019 11:42:29 +0000</pubDate>
+      <pubDate>Wed, 28 Aug 2019 12:58:10 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -76,6 +76,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34;&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34;&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-distributions-series&#34;&gt;Probability Distributions Series&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -138,6 +139,7 @@
 &lt;li&gt;&lt;p&gt;Including time stamps in your video can help prevent people who just want to understand one topic from your video from bouncing off the page when they don’t get the answers they want immediately (this is good for longer videos)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Add summary with timecodes in the description &lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;timecodes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;From &lt;a href=&#34;https://www.briggsby.com/reverse-engineering-youtube-search&#34;&gt;this blog&lt;/a&gt; - Brief CTA for a relevant next video to drive session length and related videos. - Subscribe CTA to help build your distribution power. - 50 to 150 words in the description to summarize and describe your video, mentioning a broad match variation of your keyword 1 to 3 times, depending on length. - List additional videos to watch, focused on your best content about the same or a similar subject matter as this video, creating recommendation clusters. - A brief bio and/or list of social accounts, which can help build your distribution power. - Avoid exceeding 400 words without a good reason to do so, because stuffing or going broadly off topic can harm performance.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tags&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Tags&lt;/h3&gt;
@@ -221,7 +223,15 @@
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;start with an overview of the video.&lt;/li&gt;
-&lt;li&gt;start with what they want for the hook – then ask to like/subscribe at the end for the people that obviously like.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;start with what they want for the hook – then ask to like/subscribe at the end for the people that obviously like.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Hook your audience in the first 10 seconds but don’t give away the answer to the central question of the video that early or your audience will bounce&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You shouldn’t string them along for too long because you want your video to get to the point, but you don’t want to lose them within the first 10 seconds&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Playlists can help increase the amount of time that your viewers stay on Youtube and, in turn, improve your rankings&lt;/li&gt;
+&lt;li&gt;However, be sure that you keep your playlists focused around one highly-specific topic. If you switch up the topic too much, we see high drop-off and videos end up looking ineffective to the Youtube algorithm.&lt;/li&gt;
+&lt;li&gt;Additionally, if you’re creating a playlist, make sure that videos can stand alone as well within the context of the playlist.&lt;/li&gt;
+&lt;li&gt;If they’re ranking for a standalone keyword, they won’t always appear within the context of your video and you don’t want people to bounce because they feel like they need to have watched 4 or 5 previous videos in order to understand the one that they landed on&lt;/li&gt;
+&lt;li&gt;Writing a script is highly recommended.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;By sharing your script and refining your opening, you avoid the risk of shooting footage without a clear, strong opening&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;content&#34; class=&#34;section level3&#34;&gt;
@@ -380,6 +390,16 @@ todo:
 &lt;li&gt;formula based on P(..)&lt;/li&gt;
 &lt;li&gt;General definition and power functions&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;probability-distributions-series&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Distributions Series&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pick common distributions, describe them from the Wikipedia page&lt;/li&gt;
+&lt;li&gt;Show their probability functions&lt;/li&gt;
+&lt;li&gt;Show (derive?) their CDF&lt;/li&gt;
+&lt;li&gt;Derive their MGFs&lt;/li&gt;
+&lt;li&gt;Describe / show conjugacy properties?&lt;/li&gt;
+&lt;/ul&gt;
 &lt;!--
 
 Vevo
