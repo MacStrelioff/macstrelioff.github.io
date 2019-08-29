@@ -60,6 +60,8 @@ TODO:
 - 1 DS video every 3 days
 - Cracking the Coding Interview, put solutions on GitHub
 - DS Projects for my GitHub
+- Kaggle tutorials (https://www.kaggle.com/learn/overview)
+
 
 -->
 
