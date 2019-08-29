@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Thu, 29 Aug 2019 13:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Aug 2019 13:52:00 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -50,11 +50,9 @@
 &lt;li&gt;&lt;a href=&#34;#probability-functions&#34;&gt;Probability Functions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#expectation&#34;&gt;Expectation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#variance&#34;&gt;Variance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#information-theory-and-entropy&#34;&gt;Information theory and entropy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#maximum-likelihood-versus-bayes-theorem&#34;&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#information-theory&#34;&gt;Information Theory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-inference&#34;&gt;Causal Inference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#concerns&#34;&gt;Concerns&lt;/a&gt;&lt;/li&gt;
@@ -64,7 +62,9 @@
 &lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#integrety-checks&#34;&gt;Integrety Checks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#maximum-likelihood-versus-bayes-estimators&#34;&gt;Maximum Likelihood versus Bayes’ Estimators&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#common-tests&#34;&gt;Common Tests&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#t-test&#34;&gt;t-test&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#anova&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
@@ -334,21 +334,18 @@ Var(X)&amp;amp;=E(Var(X|Y))+Var(E(X|Y))
 &lt;p&gt;This arises in hierarchical models and prediction intervals.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
-x               &amp;amp;\sim N(\mu,\sigma) \\
+x               &amp;amp;\sim N(\mu,\sigma)\\
 E(x)            &amp;amp;=\mu\\
 Var(x)          &amp;amp;=\sigma^2\\
 \hat{\mu}_n     &amp;amp;\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)\\
 E(\hat{\mu}_n)  &amp;amp;=\mu\\
 Var(\hat{\mu}_n)&amp;amp;=\frac{\sigma^2}{n}\\
-E(x_{n+1}|\hat{\mu}_n)&amp;amp;= \hat{\mu}_n \\
+E(x_{n+1})      &amp;amp;= E(E(x_{n+1}|\hat{\mu}_n))= E(\hat{\mu}_n)=\mu \\
 Var(x_{n+1})    &amp;amp;=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
-&amp;amp;=\sigma^2+\frac{\sigma^2}{n}\\
-\mu             &amp;amp;\pm Z_\alpha \sqrt{Var(x)}\\
+                &amp;amp;=\sigma^2+\frac{\sigma^2}{n}\\
+(100-\alpha)PI: &amp;amp; E(x_{n+1}|\hat{\mu}_n) \pm T_\alpha \sqrt{Var(x_{n+1})}\\
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;!--
-Bias-variance tradeoff?
---&gt;
 &lt;!--
 Expectation and variance are the foundation for decision making
 - value function v(x) that assigns values to the outcomes x
@@ -358,32 +355,38 @@ Expectation and variance are the foundation for decision making
 ## Models as conditional expectations
 
 Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it&#39;s priors
-
-## Models as estimators for f(x), \hat{f}(x)
---&gt;
-&lt;!--
-## Odds and other transformations
-
-odds, log odds, relative risk, ... .
 --&gt;
 &lt;/div&gt;
-&lt;div id=&#34;information-theory-and-entropy&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Information theory and entropy&lt;/h2&gt;
+&lt;div id=&#34;information-theory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Information Theory&lt;/h2&gt;
+&lt;p&gt;Information or Surprise is a measure of how unexpected an event was: &lt;span class=&#34;math display&#34;&gt;\[
+I(x)=-log(f(x))=log\left(\frac{1}{f(x)} \right)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Entropy is the expected surprise – higher entropy relates to more uncertainty: &lt;span class=&#34;math display&#34;&gt;\[
+H(X)=E(I(x)) = E(-log(f(x)))  = \int_E f(x)I(x) = -\int_E f(x)log(f(x))
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;entropy is minimized by a Bayesian estimator&lt;/li&gt;
+&lt;li&gt;Joint Entropy&lt;/li&gt;
+&lt;li&gt;Conditional Entropy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;K-L Divergance, or relative entropy, is a measure of the expected distance between distributions, assuming one of them is true: &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+D_{KL}(f_{x}(x);f_{y}(x)) &amp;amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)\\
+&amp;amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x)) \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Divergance is an important concept in machine learning, when we are estimating a distribution &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; with a model &lt;span class=&#34;math inline&#34;&gt;\(\hat{f}(x)\)&lt;/span&gt;. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data what would maximize divergance.&lt;/p&gt;
+&lt;p&gt;Mutual Information is the divergance from the joint distribution &lt;span class=&#34;math inline&#34;&gt;\(f_{x,y}(x,y)\)&lt;/span&gt; to the joint when independence is assumed &lt;span class=&#34;math inline&#34;&gt;\(f_x(x)f_y(y)\)&lt;/span&gt;; &lt;span class=&#34;math display&#34;&gt;\[
+I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Divergance&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;entropy is minimized by a Bayesian estimator&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;maximum-likelihood-versus-bayes-theorem&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Maximum Likelihood versus Bayes’ Theorem&lt;/h2&gt;
-&lt;p&gt;likelihood is one term in Bayes’ Theorem&lt;/p&gt;
+&lt;div id=&#34;causal-inference&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Causal Inference&lt;/h2&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;GLMs&lt;/h1&gt;
-&lt;p&gt;likelihood, score, fisher information, robust veriance, …?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;causal-inference&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Causal Inference&lt;/h1&gt;
 &lt;/div&gt;
 &lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Experiment Design&lt;/h1&gt;
@@ -418,9 +421,9 @@ odds, log odds, relative risk, ... .
 &lt;/ul&gt;
 &lt;p&gt;In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;a solution to SUTVA violations, but decreases sample size and power dramatically&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cluster-based, stratified, serial, balanced, …&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;propensity scores and matching&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;a solution to SUTVA violations, but decreases sample size and power dramatically&lt;/li&gt;
+&lt;li&gt;cluster-based, stratified, serial, balanced, …&lt;/li&gt;
+&lt;li&gt;propensity scores and matching&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;generative-model-and-adjustment-variables&#34; class=&#34;section level2&#34;&gt;
@@ -444,17 +447,17 @@ odds, log odds, relative risk, ... .
 &lt;ul&gt;
 &lt;li&gt;maps samples (xi,yi) into treatment or control conditions.&lt;/li&gt;
 &lt;li&gt;randomized control trials ideal, not always possible&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;other options, …?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;test assignment validity, could use propensity scores or maybe chi square.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;other options, …?&lt;/li&gt;
+&lt;li&gt;test assignment validity, could use propensity scores or maybe chi square.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Duration&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;learning effects: initial exploration or novelty seeking&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;learning effects: initial change aversion&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;learning effects: initial change aversion&lt;/li&gt;
 &lt;li&gt;power analysis for sample size&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;time to run to mitigate&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;time to run to mitigate&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!---
 # Experiment Design
@@ -603,10 +606,19 @@ e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = 
 &lt;h2&gt;Integrety Checks&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;check that those assigned to treatment received it&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;check that stratifications were implemented correctly&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;check that stratifications were implemented correctly&lt;/li&gt;
+&lt;li&gt;Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div id=&#34;maximum-likelihood-versus-bayes-estimators&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Maximum Likelihood versus Bayes’ Estimators&lt;/h2&gt;
+&lt;p&gt;likelihood is one term in Bayes’ Theorem&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;GLMs&lt;/h1&gt;
+&lt;p&gt;Again about the variance – this time it takes a form other than normal.&lt;/p&gt;
+&lt;p&gt;likelihood, score, fisher information, robust veriance, …?&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;common-tests&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Common Tests&lt;/h1&gt;

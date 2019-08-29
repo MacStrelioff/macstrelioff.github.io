@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-29 13:00:00"
+date: "2019-08-29 13:52:00"
 math: true
 output:
   blogdown::html_page:
@@ -22,11 +22,9 @@ linktitle: Probability and Statistics
 <li><a href="#probability-functions">Probability Functions</a></li>
 <li><a href="#expectation">Expectation</a></li>
 <li><a href="#variance">Variance</a></li>
-<li><a href="#information-theory-and-entropy">Information theory and entropy</a></li>
-<li><a href="#maximum-likelihood-versus-bayes-theorem">Maximum Likelihood versus Bayes’ Theorem</a></li>
-</ul></li>
-<li><a href="#glms">GLMs</a></li>
+<li><a href="#information-theory">Information Theory</a></li>
 <li><a href="#causal-inference">Causal Inference</a></li>
+</ul></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
 <li><a href="#foundations">Foundations</a></li>
 <li><a href="#concerns">Concerns</a></li>
@@ -36,7 +34,9 @@ linktitle: Probability and Statistics
 <li><a href="#assignment-mechanism">Assignment Mechanism</a></li>
 <li><a href="#duration">Duration</a></li>
 <li><a href="#integrety-checks">Integrety Checks</a></li>
+<li><a href="#maximum-likelihood-versus-bayes-estimators">Maximum Likelihood versus Bayes’ Estimators</a></li>
 </ul></li>
+<li><a href="#glms">GLMs</a></li>
 <li><a href="#common-tests">Common Tests</a><ul>
 <li><a href="#t-test">t-test</a></li>
 <li><a href="#anova">ANOVA</a></li>
@@ -306,21 +306,18 @@ Var(X)&amp;=E(Var(X|Y))+Var(E(X|Y))
 <p>This arises in hierarchical models and prediction intervals.</p>
 <p><span class="math display">\[
 \begin{aligned}
-x               &amp;\sim N(\mu,\sigma) \\
+x               &amp;\sim N(\mu,\sigma)\\
 E(x)            &amp;=\mu\\
 Var(x)          &amp;=\sigma^2\\
 \hat{\mu}_n     &amp;\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)\\
 E(\hat{\mu}_n)  &amp;=\mu\\
 Var(\hat{\mu}_n)&amp;=\frac{\sigma^2}{n}\\
-E(x_{n+1}|\hat{\mu}_n)&amp;= \hat{\mu}_n \\
+E(x_{n+1})      &amp;= E(E(x_{n+1}|\hat{\mu}_n))= E(\hat{\mu}_n)=\mu \\
 Var(x_{n+1})    &amp;=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
-&amp;=\sigma^2+\frac{\sigma^2}{n}\\
-\mu             &amp;\pm Z_\alpha \sqrt{Var(x)}\\
+                &amp;=\sigma^2+\frac{\sigma^2}{n}\\
+(100-\alpha)PI: &amp; E(x_{n+1}|\hat{\mu}_n) \pm T_\alpha \sqrt{Var(x_{n+1})}\\
 \end{aligned}
 \]</span></p>
-<!--
-Bias-variance tradeoff?
--->
 <!--
 Expectation and variance are the foundation for decision making
 - value function v(x) that assigns values to the outcomes x
@@ -330,32 +327,38 @@ Expectation and variance are the foundation for decision making
 ## Models as conditional expectations
 
 Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it's priors
-
-## Models as estimators for f(x), \hat{f}(x)
--->
-<!--
-## Odds and other transformations
-
-odds, log odds, relative risk, ... .
 -->
 </div>
-<div id="information-theory-and-entropy" class="section level2">
-<h2>Information theory and entropy</h2>
+<div id="information-theory" class="section level2">
+<h2>Information Theory</h2>
+<p>Information or Surprise is a measure of how unexpected an event was: <span class="math display">\[
+I(x)=-log(f(x))=log\left(\frac{1}{f(x)} \right)
+\]</span></p>
+<p>Entropy is the expected surprise – higher entropy relates to more uncertainty: <span class="math display">\[
+H(X)=E(I(x)) = E(-log(f(x)))  = \int_E f(x)I(x) = -\int_E f(x)log(f(x))
+\]</span></p>
 <ul>
-<li>entropy is minimized by a Bayesian estimator</li>
+<li>Joint Entropy</li>
+<li>Conditional Entropy</li>
+</ul>
+<p>K-L Divergance, or relative entropy, is a measure of the expected distance between distributions, assuming one of them is true: <span class="math display">\[
+\begin{aligned}
+D_{KL}(f_{x}(x);f_{y}(x)) &amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)\\
+&amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x)) \\
+\end{aligned}
+\]</span></p>
+<p>Divergance is an important concept in machine learning, when we are estimating a distribution <span class="math inline">\(f(x)\)</span> with a model <span class="math inline">\(\hat{f}(x)\)</span>. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data what would maximize divergance.</p>
+<p>Mutual Information is the divergance from the joint distribution <span class="math inline">\(f_{x,y}(x,y)\)</span> to the joint when independence is assumed <span class="math inline">\(f_x(x)f_y(y)\)</span>; <span class="math display">\[
+I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)
+\]</span></p>
+<ul>
+<li><p>Divergance</p></li>
+<li><p>entropy is minimized by a Bayesian estimator</p></li>
 </ul>
 </div>
-<div id="maximum-likelihood-versus-bayes-theorem" class="section level2">
-<h2>Maximum Likelihood versus Bayes’ Theorem</h2>
-<p>likelihood is one term in Bayes’ Theorem</p>
+<div id="causal-inference" class="section level2">
+<h2>Causal Inference</h2>
 </div>
-</div>
-<div id="glms" class="section level1">
-<h1>GLMs</h1>
-<p>likelihood, score, fisher information, robust veriance, …?</p>
-</div>
-<div id="causal-inference" class="section level1">
-<h1>Causal Inference</h1>
 </div>
 <div id="experiment-design" class="section level1">
 <h1>Experiment Design</h1>
@@ -390,9 +393,9 @@ odds, log odds, relative risk, ... .
 </ul>
 <p>In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).</p>
 <ul>
-<li><p>a solution to SUTVA violations, but decreases sample size and power dramatically</p></li>
-<li><p>cluster-based, stratified, serial, balanced, …</p></li>
-<li><p>propensity scores and matching</p></li>
+<li>a solution to SUTVA violations, but decreases sample size and power dramatically</li>
+<li>cluster-based, stratified, serial, balanced, …</li>
+<li>propensity scores and matching</li>
 </ul>
 </div>
 <div id="generative-model-and-adjustment-variables" class="section level2">
@@ -416,17 +419,17 @@ odds, log odds, relative risk, ... .
 <ul>
 <li>maps samples (xi,yi) into treatment or control conditions.</li>
 <li>randomized control trials ideal, not always possible</li>
-<li><p>other options, …?</p></li>
-<li><p>test assignment validity, could use propensity scores or maybe chi square.</p></li>
+<li>other options, …?</li>
+<li>test assignment validity, could use propensity scores or maybe chi square.</li>
 </ul>
 </div>
 <div id="duration" class="section level2">
 <h2>Duration</h2>
 <ul>
 <li>learning effects: initial exploration or novelty seeking</li>
-<li><p>learning effects: initial change aversion</p></li>
+<li>learning effects: initial change aversion</li>
 <li>power analysis for sample size</li>
-<li><p>time to run to mitigate</p></li>
+<li>time to run to mitigate</li>
 </ul>
 <!---
 # Experiment Design
@@ -575,10 +578,19 @@ e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = 
 <h2>Integrety Checks</h2>
 <ul>
 <li>check that those assigned to treatment received it</li>
-<li><p>check that stratifications were implemented correctly</p></li>
-<li><p>Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.</p></li>
+<li>check that stratifications were implemented correctly</li>
+<li>Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.</li>
 </ul>
 </div>
+<div id="maximum-likelihood-versus-bayes-estimators" class="section level2">
+<h2>Maximum Likelihood versus Bayes’ Estimators</h2>
+<p>likelihood is one term in Bayes’ Theorem</p>
+</div>
+</div>
+<div id="glms" class="section level1">
+<h1>GLMs</h1>
+<p>Again about the variance – this time it takes a form other than normal.</p>
+<p>likelihood, score, fisher information, robust veriance, …?</p>
 </div>
 <div id="common-tests" class="section level1">
 <h1>Common Tests</h1>
