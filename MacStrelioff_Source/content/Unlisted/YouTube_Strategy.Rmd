@@ -263,6 +263,7 @@ Geometric distribution problem.
 - This problem starts out relatively easy but can transform into something that would be challenging to people who don't watch my videos. 
 - Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to. 
 
+
 <!---
 todo:
 
