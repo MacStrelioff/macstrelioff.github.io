@@ -267,7 +267,8 @@ Covariance and variance
 $$
 \begin{aligned}
 Cov(X,Y)&=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
-Var(X)&=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
+Var(X)&=Cov(X,X)=E_{x}((X-E_{x}(X))^2) \\
+&= E(X^2)-E(X)^2
 \end{aligned}
 $$
 
@@ -279,20 +280,54 @@ $$
 
 If $a$ or $b$ have different signs and $Cov(X,Y)>0$, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where $X$ represents the first measurement, $Y$ represents a future measurement, $a=-1$ and $b=1$ to reflect a difference comparing the second and first measurements ($Y-X$), and since the measurements come from the same person here, it is reasonable to assume they are correlated ($Cov(X,Y)>0$). In this case, $Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)$, which is not larger than the variance that would be obtained if the measurements were from independent samples. 
 
-Variance of a function:
+A crucial concept in machine learning is the [Bias-Variance tradeoff](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff). The Bias-Variance tradeoff is a decomposition of the expected prediction error when estimating a function $g(x)$ with a model $\hat{g}(x)$; $g(x)-\hat{g}(x)$. To see it's relation to variance, first rearrange the variance equation above:
 
+$$
+\begin{aligned}
+Var(X)= E(X^2)-E(X)^2 \\
+\Rightarrow E(X^2) = Var(X)+E(X)^2 \\
+\end{aligned}
+$$
+
+Then defined the random variable $X$ to be the errors of the model; 
+
+$$
+\begin{aligned}
+E((g(x)-\hat{g}(x))^2) &= Var((g(x)-\hat{g}(x))^2)+E((g(x)-\hat{g}(x)))^2 \\
+&= (g(x)-E(\hat{g}(x)))^2 + (E(E(\hat{g}(x))-\hat{g}(x))) + Var(g(x))\\
+&= Bias(\hat{g}(x))^2 + Var(\hat{g}(x)) + Var(g(x))
+\end{aligned}
+$$
+
+<!--
+Variance of a function:
 $$
 \begin{aligned}
 Var(g(x)) &= E((g(x)-E(g(x)))^2)\\
 &\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
 \end{aligned}
 $$
+-->
 
 
-[Law of total variance](https://en.wikipedia.org/wiki/Law_of_total_variance)
+[Law of total variance](https://en.wikipedia.org/wiki/Law_of_total_variance): The variance of a variable $X$ can be decomposed into the variation in the variable that remains when $Y$ is known or irreducible error ($E(Var(X|Y))$), and the variation that carries through from the uncertainty in the model estimation $Y$ ($Var(E(X|Y)$).
 $$
-Var(X)=E(Var(X|Y))+Var(E(X|Y))
+\begin{aligned}
+Var(X)&=E(Var(X|Y))+Var(E(X|Y)) \\
+&= SSE + SSR
+\end{aligned}
 $$
+
+This arises in hierarchical models. 
+
+<!--
+Bias-variance tradeoff?
+-->
+
+<!--
+Confidence intervals, prediction intervals
+-->
+
 
 <!--
 Expectation and variance are the foundation for decision making
@@ -332,6 +367,12 @@ Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has
 ## Maximum Likelihood versus Bayes' Theorem
 
 likelihood is one term in Bayes' Theorem
+
+# GLMs
+
+likelihood, score, fisher information, robust veriance, ...?
+
+# Causal Inference
 
 
 # Experiment Design

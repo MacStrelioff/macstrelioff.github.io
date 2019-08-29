@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Events and Random Variables Probability Rules Probability Functions Expectation Variance Information theory and entropy Maximum Likelihood versus Bayes’ Theorem  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,">
+  <meta name="description" content="Events and Random Variables Probability Rules Probability Functions Expectation Variance Information theory and entropy Maximum Likelihood versus Bayes’ Theorem  GLMs Causal Inference Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/probability-statistics/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/probability-statistics/">
   <meta property="og:title" content="Probability and Statistics | Mac Strelioff">
-  <meta property="og:description" content="Events and Random Variables Probability Rules Probability Functions Expectation Variance Information theory and entropy Maximum Likelihood versus Bayes’ Theorem  Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Events and Random Variables Probability Rules Probability Functions Expectation Variance Information theory and entropy Maximum Likelihood versus Bayes’ Theorem  GLMs Causal Inference Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks  Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Events and Random Variables Events, event spaces,"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-29T10:50:24&#43;00:00">
+  <meta property="article:published_time" content="2019-08-29T11:57:54&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-29T10:50:24&#43;00:00">
+  <meta property="article:modified_time" content="2019-08-29T11:57:54&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-08-29 10:50:24 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-29 10:50:24 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-08-29 11:57:54 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-29 11:57:54 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -468,6 +468,8 @@
 <li><a href="#information-theory-and-entropy">Information theory and entropy</a></li>
 <li><a href="#maximum-likelihood-versus-bayes-theorem">Maximum Likelihood versus Bayes’ Theorem</a></li>
 </ul></li>
+<li><a href="#glms">GLMs</a></li>
+<li><a href="#causal-inference">Causal Inference</a></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
 <li><a href="#foundations">Foundations</a></li>
 <li><a href="#concerns">Concerns</a></li>
@@ -493,7 +495,7 @@
 <li><a href="#emperical-variance-estimation">Emperical Variance Estimation</a></li>
 <li><a href="#mixed-effects-models">Mixed Effects Models</a></li>
 <li><a href="#effiencicy-or-variance-reduction">Effiencicy or Variance Reduction</a></li>
-<li><a href="#glms">GLMs</a></li>
+<li><a href="#glms-1">GLMs</a></li>
 </ul></li>
 <li><a href="#causal-inference-methods">Causal Inference Methods</a><ul>
 <li><a href="#difference-in-differences">Difference in Differences</a></li>
@@ -691,7 +693,8 @@ in linear regression, the expectation of Y is the linear combination of X and B,
 <p><span class="math display">\[
 \begin{aligned}
 Cov(X,Y)&amp;=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
-Var(X)&amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
+Var(X)&amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2) \\
+&amp;= E(X^2)-E(X)^2
 \end{aligned}
 \]</span></p>
 <p>Variance of linear combinations of random variables:</p>
@@ -699,16 +702,43 @@ Var(X)&amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
 Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
 \]</span></p>
 <p>If <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> have different signs and <span class="math inline">\(Cov(X,Y)&gt;0\)</span>, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where <span class="math inline">\(X\)</span> represents the first measurement, <span class="math inline">\(Y\)</span> represents a future measurement, <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(b=1\)</span> to reflect a difference comparing the second and first measurements (<span class="math inline">\(Y-X\)</span>), and since the measurements come from the same person here, it is reasonable to assume they are correlated (<span class="math inline">\(Cov(X,Y)&gt;0\)</span>). In this case, <span class="math inline">\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)</span>, which is not larger than the variance that would be obtained if the measurements were from independent samples.</p>
-<p>Variance of a function:</p>
+<p>A crucial concept in machine learning is the <a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">Bias-Variance tradeoff</a>. The Bias-Variance tradeoff is a decomposition of the expected prediction error when estimating a function <span class="math inline">\(g(x)\)</span> with a model <span class="math inline">\(\hat{g}(x)\)</span>; <span class="math inline">\(g(x)-\hat{g}(x)\)</span>. To see it’s relation to variance, first rearrange the variance equation above:</p>
 <p><span class="math display">\[
 \begin{aligned}
-Var(g(x)) &amp;= E((g(x)-E(g(x)))^2)\\
-&amp;\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+Var(X)= E(X^2)-E(X)^2 \\
+\Rightarrow E(X^2) = Var(X)+E(X)^2 \\
 \end{aligned}
 \]</span></p>
-<p><a href="https://en.wikipedia.org/wiki/Law_of_total_variance">Law of total variance</a> <span class="math display">\[
-Var(X)=E(Var(X|Y))+Var(E(X|Y))
+<p>Then defined the random variable <span class="math inline">\(X\)</span> to be the errors of the model;</p>
+<p><span class="math display">\[
+\begin{aligned}
+E((g(x)-\hat{g}(x))^2) &amp;= Var((g(x)-\hat{g}(x))^2)+E((g(x)-\hat{g}(x)))^2 \\
+&amp;= (g(x)-E(\hat{g}(x)))^2 + (E(E(\hat{g}(x))-\hat{g}(x))) + Var(g(x))\\
+&amp;= Bias(\hat{g}(x))^2 + Var(\hat{g}(x)) + Var(g(x))
+\end{aligned}
 \]</span></p>
+<!--
+Variance of a function:
+$$
+\begin{aligned}
+Var(g(x)) &= E((g(x)-E(g(x)))^2)\\
+&\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\end{aligned}
+$$
+-->
+<p><a href="https://en.wikipedia.org/wiki/Law_of_total_variance">Law of total variance</a>: The variance of a variable <span class="math inline">\(X\)</span> can be decomposed into the variation in the variable that remains when <span class="math inline">\(Y\)</span> is known or irreducible error (<span class="math inline">\(E(Var(X|Y))\)</span>), and the variation that carries through from the uncertainty in the model estimation <span class="math inline">\(Y\)</span> (<span class="math inline">\(Var(E(X|Y)\)</span>). <span class="math display">\[
+\begin{aligned}
+Var(X)&amp;=E(Var(X|Y))+Var(E(X|Y)) \\
+&amp;= SSE + SSR
+\end{aligned}
+\]</span></p>
+<p>This arises in hierarchical models.</p>
+<!--
+Bias-variance tradeoff?
+-->
+<!--
+Confidence intervals, prediction intervals
+-->
 <!--
 Expectation and variance are the foundation for decision making
 - value function v(x) that assigns values to the outcomes x
@@ -746,6 +776,13 @@ Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has
 <h2>Maximum Likelihood versus Bayes’ Theorem</h2>
 <p>likelihood is one term in Bayes’ Theorem</p>
 </div>
+</div>
+<div id="glms" class="section level1">
+<h1>GLMs</h1>
+<p>likelihood, score, fisher information, robust veriance, …?</p>
+</div>
+<div id="causal-inference" class="section level1">
+<h1>Causal Inference</h1>
 </div>
 <div id="experiment-design" class="section level1">
 <h1>Experiment Design</h1>
@@ -1034,7 +1071,7 @@ e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = 
 <li>get table for different tests of means from soc sci 10 notes.</li>
 </ul>
 </div>
-<div id="glms" class="section level2">
+<div id="glms-1" class="section level2">
 <h2>GLMs</h2>
 <!--
 models for when the errors aren't assumed to be normally distributed
