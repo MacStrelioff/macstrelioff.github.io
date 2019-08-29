@@ -158,7 +158,7 @@ Here I'll describe the properties and use cases for probability functions and cu
 $$
 \begin{aligned}
 f(x) &= \frac{d}{dx}F(x) \\
-F(x) &= \int_{-\infty}^{\infty} f(x) dx
+F(x) &= \int_{-\infty}^{\infty} f(x) d_{x}
 \end{aligned}
 $$
 
@@ -167,9 +167,10 @@ For discrete variables, the probability function represents the probability that
 $$
 \begin{aligned}
 p( x - \epsilon< x < x+\epsilon) &= F(x+\epsilon) - F(x-\epsilon) \\
-&= \int_{-\infty}^{(x-+\epsilon)}f(x)dx - \int_{-\infty}^{(x-\epsilon)}f(x)dx
+&= \int_{-\infty}^{(x-+\epsilon)}f(x)d_{x} - \int_{-\infty}^{(x-\epsilon)}f(x)d_{x}
 \end{aligned}
 $$
+
 
 Probability functions have to satisfy a few conditions: 
 
@@ -184,7 +185,6 @@ Transformations of variables!
 <!--
 CDF transformation to convert from uniform into any random variable with a CDF
 -->
-
 
 <!--
 ### Probability Distributions
@@ -202,27 +202,31 @@ Sum of any random variable converges to normal distribution.
 
 ## Expectation
 
+<!--
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
+-->
 
 For any functions of a randome variable, $g(x)$, the expectation of that function is; 
 
 $$
-E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
+E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
 $$
+
+For discrete random variables, $E(x)=\sum_xxp(x)$. For continuous random variables, $f(x)dx$ is conceptually $p(x)$ since it is the area under an infinately small segment of the probability function if $f(x)$ represents the height and $dx$ represents an infinately small width. 
 
 Expectation is a linear operator, so for constants $a$, $b$, and $c$ and random variables $x$ and $y$; $E(ax+by+c) = aE(x)+bE(y)+c$.
 
 Expectation for joint random variables
 
 $$
-E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)d_{s}d_{t}
 $$
 
 Marginalizing a distribution from a joint probability function ($f(x,y)$) or a conditional probability function ($f(x|y)$):
 $$
 \begin{aligned}
-f_x(x)&=\int_yf_{x,y}(x,y)dy\\
-&=\int_y f_{x|y}(x|y)f_y(y)dy\\
+f_x(x)&=\int_yf_{x,y}(x,y)d_{y}\\
+&=\int_y f_{x|y}(x|y)f_y(y)d_{y}\\
 &=E_y(f(x|y))
 \end{aligned}
 $$
@@ -232,11 +236,14 @@ $$
 $$
 \begin{aligned}
 E_{x}(x)&=E_{y}(E_{x|y}(x|y))\\
-&=\int_y\int_{x|y}xp(x|y)d_{x|y}p(y)d_{y} \\
-&=\int_{x}x\int_{y}p(x|y)p(y)d_{y}d_{x} \\
-&=\int_{x}xp(x)
+&=\int_y\int_{x}xf_{x|y}(x|y)d_{x}f(y)d_{y} \\
+&=\int_{x}x\int_{y}f_{x|y}(x|y)f(y)d_{y}d_{x} \\
+&=\int_{x}xf(x)d_{x}\\
+&=E_{x}(x)
 \end{aligned}
 $$
+
+The last steps reflect that the internal integral is just marginalizing across y; $f_x(x)=\int_y f_{x|y}(x|y)f_y(y)d_{y}$.
 
 <!--
 Linear regression as a conditional expectation
@@ -264,13 +271,13 @@ Var(X)&=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
 \end{aligned}
 $$
 
-Constants and multiple random variables: 
+Variance of linear combinations of random variables: 
 
 $$
 Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
 $$
 
-Note, if $a$ or $b$ have different signs and $Cov(X,Y)>0$, then the variance between is reduced because the covariance is subtracted off. 
+If $a$ or $b$ have different signs and $Cov(X,Y)>0$, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where $X$ represents the first measurement, $Y$ represents a future measurement, $a=-1$ and $b=1$ to reflect a difference comparing the second and first measurements ($Y-X$), and since the measurements come from the same person here, it is reasonable to assume they are correlated ($Cov(X,Y)>0$). In this case, $Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)$, which is not larger than the variance that would be obtained if the measurements were from independent samples. 
 
 Variance of a function:
 

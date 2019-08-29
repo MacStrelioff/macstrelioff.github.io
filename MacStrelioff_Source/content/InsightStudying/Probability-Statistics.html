@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-29 09:59:16"
+date: "2019-08-29 10:50:24"
 math: true
 output:
   blogdown::html_page:
@@ -160,14 +160,14 @@ Many machine learning algorithms are different ways of estimating f(x)
 <p><span class="math display">\[
 \begin{aligned}
 f(x) &amp;= \frac{d}{dx}F(x) \\
-F(x) &amp;= \int_{-\infty}^{\infty} f(x) dx
+F(x) &amp;= \int_{-\infty}^{\infty} f(x) d_{x}
 \end{aligned}
 \]</span></p>
 <p>For discrete variables, the probability function represents the probability that <span class="math inline">\(X\)</span> takes a specific value <span class="math inline">\(x\)</span>: <span class="math inline">\(f(x) = p(X=x)\)</span>. For continuous variables, the probability that the variable <span class="math inline">\(X\)</span> takes any particular value is technically <span class="math inline">\(0\)</span>; <span class="math inline">\(p(X=x)=0\)</span>. However, <span class="math inline">\(p(x)\)</span> is still related to probability functions <span class="math inline">\(f(x)\)</span> through areas. For an arbitrarily small <span class="math inline">\(\epsilon\)</span> the probability that <span class="math inline">\(X\)</span> takes a value between <span class="math inline">\(x-\epsilon\)</span> and <span class="math inline">\(x+\epsilon\)</span> is the area of the distribution over that range;</p>
 <p><span class="math display">\[
 \begin{aligned}
 p( x - \epsilon&lt; x &lt; x+\epsilon) &amp;= F(x+\epsilon) - F(x-\epsilon) \\
-&amp;= \int_{-\infty}^{(x-+\epsilon)}f(x)dx - \int_{-\infty}^{(x-\epsilon)}f(x)dx
+&amp;= \int_{-\infty}^{(x-+\epsilon)}f(x)d_{x} - \int_{-\infty}^{(x-\epsilon)}f(x)d_{x}
 \end{aligned}
 \]</span></p>
 <p>Probability functions have to satisfy a few conditions:</p>
@@ -197,20 +197,23 @@ Sum of any random variable converges to normal distribution.
 </div>
 <div id="expectation" class="section level2">
 <h2>Expectation</h2>
-<p>expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables</p>
+<!--
+expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
+-->
 <p>For any functions of a randome variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
 <p><span class="math display">\[
-E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
+E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
 \]</span></p>
+<p>For discrete random variables, <span class="math inline">\(E(x)=\sum_xxp(x)\)</span>. For continuous random variables, <span class="math inline">\(f(x)dx\)</span> is conceptually <span class="math inline">\(p(x)\)</span> since it is the area under an infinately small segment of the probability function if <span class="math inline">\(f(x)\)</span> represents the height and <span class="math inline">\(dx\)</span> represents an infinately small width.</p>
 <p>Expectation is a linear operator, so for constants <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> and random variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>; <span class="math inline">\(E(ax+by+c) = aE(x)+bE(y)+c\)</span>.</p>
 <p>Expectation for joint random variables</p>
 <p><span class="math display">\[
-E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
+E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)d_{s}d_{t}
 \]</span></p>
 <p>Marginalizing a distribution from a joint probability function (<span class="math inline">\(f(x,y)\)</span>) or a conditional probability function (<span class="math inline">\(f(x|y)\)</span>): <span class="math display">\[
 \begin{aligned}
-f_x(x)&amp;=\int_yf_{x,y}(x,y)dy\\
-&amp;=\int_y f_{x|y}(x|y)f_y(y)dy\\
+f_x(x)&amp;=\int_yf_{x,y}(x,y)d_{y}\\
+&amp;=\int_y f_{x|y}(x|y)f_y(y)d_{y}\\
 &amp;=E_y(f(x|y))
 \end{aligned}
 \]</span></p>
@@ -218,11 +221,13 @@ f_x(x)&amp;=\int_yf_{x,y}(x,y)dy\\
 <p><span class="math display">\[
 \begin{aligned}
 E_{x}(x)&amp;=E_{y}(E_{x|y}(x|y))\\
-&amp;=\int_y\int_{x|y}xp(x|y)d_{x|y}p(y)d_{y} \\
-&amp;=\int_{x}x\int_{y}p(x|y)p(y)d_{y}d_{x} \\
-&amp;=\int_{x}xp(x)
+&amp;=\int_y\int_{x}xf_{x|y}(x|y)d_{x}f(y)d_{y} \\
+&amp;=\int_{x}x\int_{y}f_{x|y}(x|y)f(y)d_{y}d_{x} \\
+&amp;=\int_{x}xf(x)d_{x}\\
+&amp;=E_{x}(x)
 \end{aligned}
 \]</span></p>
+<p>The last steps reflect that the internal integral is just marginalizing across y; <span class="math inline">\(f_x(x)=\int_y f_{x|y}(x|y)f_y(y)d_{y}\)</span>.</p>
 <!--
 Linear regression as a conditional expectation
 Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
@@ -246,11 +251,11 @@ Cov(X,Y)&amp;=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
 Var(X)&amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2)
 \end{aligned}
 \]</span></p>
-<p>Constants and multiple random variables:</p>
+<p>Variance of linear combinations of random variables:</p>
 <p><span class="math display">\[
 Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
 \]</span></p>
-<p>Note, if <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> have different signs and <span class="math inline">\(Cov(X,Y)&gt;0\)</span>, then the variance between is reduced because the covariance is subtracted off.</p>
+<p>If <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> have different signs and <span class="math inline">\(Cov(X,Y)&gt;0\)</span>, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where <span class="math inline">\(X\)</span> represents the first measurement, <span class="math inline">\(Y\)</span> represents a future measurement, <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(b=1\)</span> to reflect a difference comparing the second and first measurements (<span class="math inline">\(Y-X\)</span>), and since the measurements come from the same person here, it is reasonable to assume they are correlated (<span class="math inline">\(Cov(X,Y)&gt;0\)</span>). In this case, <span class="math inline">\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)</span>, which is not larger than the variance that would be obtained if the measurements were from independent samples.</p>
 <p>Variance of a function:</p>
 <p><span class="math display">\[
 \begin{aligned}
