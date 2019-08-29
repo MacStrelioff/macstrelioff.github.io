@@ -59,9 +59,7 @@ TODO:
 - 1 job application a day
 - 1 DS video every 3 days
 - Cracking the Coding Interview, put solutions on GitHub
-- spark Coursera course projects, put on Git
 - DS Projects for my GitHub
-- 
 
 -->
 
