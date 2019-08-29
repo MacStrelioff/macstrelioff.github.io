@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Thu, 29 Aug 2019 11:57:54 +0000</pubDate>
+      <pubDate>Thu, 29 Aug 2019 13:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -180,6 +180,13 @@ p(e_1 \cup e_2) &amp;amp;= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
 &amp;amp;=p(e_1) + p(e_2)
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
+&lt;!--
+## Practice Problems and Walkthroughs
+
+- link to my YouTube videos on these things
+
+Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
+--&gt;
 &lt;/div&gt;
 &lt;div id=&#34;probability-functions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Probability Functions&lt;/h2&gt;
@@ -211,6 +218,10 @@ Transformations of variables!
 --&gt;
 &lt;!--
 CDF transformation to convert from uniform into any random variable with a CDF
+--&gt;
+&lt;!--
+Link to YouTube video on the circle problem
+- circle problem
 --&gt;
 &lt;!--
 ### Probability Distributions
@@ -282,26 +293,30 @@ Var(X)&amp;amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2) \\
 &amp;amp;= E(X^2)-E(X)^2
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Variance of linear combinations of random variables:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; have different signs and &lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; represents the first measurement, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; represents a future measurement, &lt;span class=&#34;math inline&#34;&gt;\(a=-1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(b=1\)&lt;/span&gt; to reflect a difference comparing the second and first measurements (&lt;span class=&#34;math inline&#34;&gt;\(Y-X\)&lt;/span&gt;), and since the measurements come from the same person here, it is reasonable to assume they are correlated (&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;). In this case, &lt;span class=&#34;math inline&#34;&gt;\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)&lt;/span&gt;, which is not larger than the variance that would be obtained if the measurements were from independent samples.&lt;/p&gt;
-&lt;p&gt;A crucial concept in machine learning is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff&#34;&gt;Bias-Variance tradeoff&lt;/a&gt;. The Bias-Variance tradeoff is a decomposition of the expected prediction error when estimating a function &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt; with a model &lt;span class=&#34;math inline&#34;&gt;\(\hat{g}(x)\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(g(x)-\hat{g}(x)\)&lt;/span&gt;. To see it’s relation to variance, first rearrange the variance equation above:&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff&#34;&gt;Bias-Variance tradeoff&lt;/a&gt; decomposes the theoretical variance obtained when estimating a function &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt; with a model &lt;span class=&#34;math inline&#34;&gt;\(\hat{g}(x)\)&lt;/span&gt; into three components that can be used to motivated changes to the model. Specifically, the Bias-Variance tradeoff is a decomposition of the expected prediction error; &lt;span class=&#34;math inline&#34;&gt;\(g(x)-\hat{g}(x)\)&lt;/span&gt;. To see it’s relation to variance, first rearrange the variance equation above:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 Var(X)= E(X^2)-E(X)^2 \\
 \Rightarrow E(X^2) = Var(X)+E(X)^2 \\
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Then defined the random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to be the errors of the model;&lt;/p&gt;
+&lt;p&gt;Then define the random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to be the errors of the model;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 E((g(x)-\hat{g}(x))^2) &amp;amp;= Var((g(x)-\hat{g}(x))^2)+E((g(x)-\hat{g}(x)))^2 \\
-&amp;amp;= (g(x)-E(\hat{g}(x)))^2 + (E(E(\hat{g}(x))-\hat{g}(x))) + Var(g(x))\\
+&amp;amp;= (g(x)-E(\hat{g}(x)))^2 + E((E(\hat{g}(x))-\hat{g}(x))^2) + Var(g(x))\\
 &amp;amp;= Bias(\hat{g}(x))^2 + Var(\hat{g}(x)) + Var(g(x))
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here bias represents the squared error between the true function &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt; and the expected model &lt;span class=&#34;math inline&#34;&gt;\(E(\hat{g}(x))\)&lt;/span&gt;. Variance represents the squared error between the expected model and the obtained model. And &lt;span class=&#34;math inline&#34;&gt;\(Var(g(x))\)&lt;/span&gt; represents the true noise or irreducible error in the process &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Variance of linear combinations of random variables:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Variance is also crucial for designing experiments, for example if &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; have different signs and &lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; represents the first measurement, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; represents a future measurement, &lt;span class=&#34;math inline&#34;&gt;\(a=-1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(b=1\)&lt;/span&gt; to reflect a difference comparing the second and first measurements (&lt;span class=&#34;math inline&#34;&gt;\(Y-X\)&lt;/span&gt;), and since the measurements come from the same person here, it is reasonable to assume they are correlated (&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;). In this case, &lt;span class=&#34;math inline&#34;&gt;\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)&lt;/span&gt;, which is not larger than the variance that would be obtained if the measurements were from independent samples.&lt;/p&gt;
+&lt;!--
+Confidence intervals, prediction intervals
+--&gt;
 &lt;!--
 Variance of a function:
 $$
@@ -313,16 +328,26 @@ $$
 --&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_total_variance&#34;&gt;Law of total variance&lt;/a&gt;: The variance of a variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; can be decomposed into the variation in the variable that remains when &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; is known or irreducible error (&lt;span class=&#34;math inline&#34;&gt;\(E(Var(X|Y))\)&lt;/span&gt;), and the variation that carries through from the uncertainty in the model estimation &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(Var(E(X|Y)\)&lt;/span&gt;). &lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
-Var(X)&amp;amp;=E(Var(X|Y))+Var(E(X|Y)) \\
-&amp;amp;= SSE + SSR
+Var(X)&amp;amp;=E(Var(X|Y))+Var(E(X|Y))
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This arises in hierarchical models.&lt;/p&gt;
+&lt;p&gt;This arises in hierarchical models and prediction intervals.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+x               &amp;amp;\sim N(\mu,\sigma) \\
+E(x)            &amp;amp;=\mu\\
+Var(x)          &amp;amp;=\sigma^2\\
+\hat{\mu}_n     &amp;amp;\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)\\
+E(\hat{\mu}_n)  &amp;amp;=\mu\\
+Var(\hat{\mu}_n)&amp;amp;=\frac{\sigma^2}{n}\\
+E(x_{n+1}|\hat{\mu}_n)&amp;amp;= \hat{\mu}_n \\
+Var(x_{n+1})    &amp;amp;=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
+&amp;amp;=\sigma^2+\frac{\sigma^2}{n}\\
+\mu             &amp;amp;\pm Z_\alpha \sqrt{Var(x)}\\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;!--
 Bias-variance tradeoff?
---&gt;
-&lt;!--
-Confidence intervals, prediction intervals
 --&gt;
 &lt;!--
 Expectation and variance are the foundation for decision making
@@ -340,15 +365,6 @@ Models output an expectation that depends on the model, its structure, its featu
 ## Odds and other transformations
 
 odds, log odds, relative risk, ... .
---&gt;
-&lt;!--
-## Practice Problems and Walkthroughs
-
-- link to my YouTube videos on these things
-
-Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
-
-- circle problem
 --&gt;
 &lt;/div&gt;
 &lt;div id=&#34;information-theory-and-entropy&#34; class=&#34;section level2&#34;&gt;

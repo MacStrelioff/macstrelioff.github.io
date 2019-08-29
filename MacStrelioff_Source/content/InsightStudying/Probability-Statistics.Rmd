@@ -147,6 +147,14 @@ p(e_1 \cup e_2) &= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
 \end{aligned}
 $$
 
+<!--
+## Practice Problems and Walkthroughs
+
+- link to my YouTube videos on these things
+
+Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
+-->
+
 ## Probability Functions
 
 <!--
@@ -184,6 +192,11 @@ Transformations of variables!
 
 <!--
 CDF transformation to convert from uniform into any random variable with a CDF
+-->
+
+<!--
+Link to YouTube video on the circle problem
+- circle problem
 -->
 
 <!--
@@ -272,15 +285,7 @@ Var(X)&=Cov(X,X)=E_{x}((X-E_{x}(X))^2) \\
 \end{aligned}
 $$
 
-Variance of linear combinations of random variables: 
-
-$$
-Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
-$$
-
-If $a$ or $b$ have different signs and $Cov(X,Y)>0$, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where $X$ represents the first measurement, $Y$ represents a future measurement, $a=-1$ and $b=1$ to reflect a difference comparing the second and first measurements ($Y-X$), and since the measurements come from the same person here, it is reasonable to assume they are correlated ($Cov(X,Y)>0$). In this case, $Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)$, which is not larger than the variance that would be obtained if the measurements were from independent samples. 
-
-A crucial concept in machine learning is the [Bias-Variance tradeoff](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff). The Bias-Variance tradeoff is a decomposition of the expected prediction error when estimating a function $g(x)$ with a model $\hat{g}(x)$; $g(x)-\hat{g}(x)$. To see it's relation to variance, first rearrange the variance equation above:
+The [Bias-Variance tradeoff](https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff) decomposes the theoretical variance obtained when estimating a function $g(x)$ with a model $\hat{g}(x)$ into three components that can be used to motivated changes to the model. Specifically, the Bias-Variance tradeoff is a decomposition of the expected prediction error; $g(x)-\hat{g}(x)$. To see it's relation to variance, first rearrange the variance equation above:
 
 $$
 \begin{aligned}
@@ -289,15 +294,29 @@ Var(X)= E(X^2)-E(X)^2 \\
 \end{aligned}
 $$
 
-Then defined the random variable $X$ to be the errors of the model; 
+Then define the random variable $X$ to be the errors of the model; 
 
 $$
 \begin{aligned}
 E((g(x)-\hat{g}(x))^2) &= Var((g(x)-\hat{g}(x))^2)+E((g(x)-\hat{g}(x)))^2 \\
-&= (g(x)-E(\hat{g}(x)))^2 + (E(E(\hat{g}(x))-\hat{g}(x))) + Var(g(x))\\
+&= (g(x)-E(\hat{g}(x)))^2 + E((E(\hat{g}(x))-\hat{g}(x))^2) + Var(g(x))\\
 &= Bias(\hat{g}(x))^2 + Var(\hat{g}(x)) + Var(g(x))
 \end{aligned}
 $$
+
+Here bias represents the squared error between the true function $g(x)$ and the expected model $E(\hat{g}(x))$. Variance represents the squared error between the expected model and the obtained model. And $Var(g(x))$ represents the true noise or irreducible error in the process $g(x)$. 
+
+Variance of linear combinations of random variables: 
+
+$$
+Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
+$$
+
+Variance is also crucial for designing experiments, for example if $a$ or $b$ have different signs and $Cov(X,Y)>0$, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where $X$ represents the first measurement, $Y$ represents a future measurement, $a=-1$ and $b=1$ to reflect a difference comparing the second and first measurements ($Y-X$), and since the measurements come from the same person here, it is reasonable to assume they are correlated ($Cov(X,Y)>0$). In this case, $Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)$, which is not larger than the variance that would be obtained if the measurements were from independent samples. 
+
+<!--
+Confidence intervals, prediction intervals
+-->
 
 <!--
 Variance of a function:
@@ -309,25 +328,33 @@ Var(g(x)) &= E((g(x)-E(g(x)))^2)\\
 $$
 -->
 
-
 [Law of total variance](https://en.wikipedia.org/wiki/Law_of_total_variance): The variance of a variable $X$ can be decomposed into the variation in the variable that remains when $Y$ is known or irreducible error ($E(Var(X|Y))$), and the variation that carries through from the uncertainty in the model estimation $Y$ ($Var(E(X|Y)$).
 $$
 \begin{aligned}
-Var(X)&=E(Var(X|Y))+Var(E(X|Y)) \\
-&= SSE + SSR
+Var(X)&=E(Var(X|Y))+Var(E(X|Y))
 \end{aligned}
 $$
 
-This arises in hierarchical models. 
+This arises in hierarchical models and prediction intervals. 
+
+$$
+\begin{aligned}
+x               &\sim N(\mu,\sigma) \\
+E(x)            &=\mu\\
+Var(x)          &=\sigma^2\\
+\hat{\mu}_n     &\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)\\
+E(\hat{\mu}_n)  &=\mu\\
+Var(\hat{\mu}_n)&=\frac{\sigma^2}{n}\\
+E(x_{n+1}|\hat{\mu}_n)&= \hat{\mu}_n \\
+Var(x_{n+1})    &=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
+&=\sigma^2+\frac{\sigma^2}{n}\\
+\mu             &\pm Z_\alpha \sqrt{Var(x)}\\
+\end{aligned}
+$$
 
 <!--
 Bias-variance tradeoff?
 -->
-
-<!--
-Confidence intervals, prediction intervals
--->
-
 
 <!--
 Expectation and variance are the foundation for decision making
@@ -347,16 +374,6 @@ Models output an expectation that depends on the model, its structure, its featu
 ## Odds and other transformations
 
 odds, log odds, relative risk, ... .
--->
-
-<!--
-## Practice Problems and Walkthroughs
-
-- link to my YouTube videos on these things
-
-Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
-
-- circle problem
 -->
 
 ## Information theory and entropy

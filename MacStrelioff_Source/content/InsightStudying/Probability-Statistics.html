@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-29 11:57:54"
+date: "2019-08-29 13:00:00"
 math: true
 output:
   blogdown::html_page:
@@ -152,6 +152,13 @@ p(e_1 \cup e_2) &amp;= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
 &amp;=p(e_1) + p(e_2)
 \end{aligned}
 \]</span></p>
+<!--
+## Practice Problems and Walkthroughs
+
+- link to my YouTube videos on these things
+
+Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
+-->
 </div>
 <div id="probability-functions" class="section level2">
 <h2>Probability Functions</h2>
@@ -183,6 +190,10 @@ Transformations of variables!
 -->
 <!--
 CDF transformation to convert from uniform into any random variable with a CDF
+-->
+<!--
+Link to YouTube video on the circle problem
+- circle problem
 -->
 <!--
 ### Probability Distributions
@@ -254,26 +265,30 @@ Var(X)&amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2) \\
 &amp;= E(X^2)-E(X)^2
 \end{aligned}
 \]</span></p>
-<p>Variance of linear combinations of random variables:</p>
-<p><span class="math display">\[
-Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
-\]</span></p>
-<p>If <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> have different signs and <span class="math inline">\(Cov(X,Y)&gt;0\)</span>, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where <span class="math inline">\(X\)</span> represents the first measurement, <span class="math inline">\(Y\)</span> represents a future measurement, <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(b=1\)</span> to reflect a difference comparing the second and first measurements (<span class="math inline">\(Y-X\)</span>), and since the measurements come from the same person here, it is reasonable to assume they are correlated (<span class="math inline">\(Cov(X,Y)&gt;0\)</span>). In this case, <span class="math inline">\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)</span>, which is not larger than the variance that would be obtained if the measurements were from independent samples.</p>
-<p>A crucial concept in machine learning is the <a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">Bias-Variance tradeoff</a>. The Bias-Variance tradeoff is a decomposition of the expected prediction error when estimating a function <span class="math inline">\(g(x)\)</span> with a model <span class="math inline">\(\hat{g}(x)\)</span>; <span class="math inline">\(g(x)-\hat{g}(x)\)</span>. To see it’s relation to variance, first rearrange the variance equation above:</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">Bias-Variance tradeoff</a> decomposes the theoretical variance obtained when estimating a function <span class="math inline">\(g(x)\)</span> with a model <span class="math inline">\(\hat{g}(x)\)</span> into three components that can be used to motivated changes to the model. Specifically, the Bias-Variance tradeoff is a decomposition of the expected prediction error; <span class="math inline">\(g(x)-\hat{g}(x)\)</span>. To see it’s relation to variance, first rearrange the variance equation above:</p>
 <p><span class="math display">\[
 \begin{aligned}
 Var(X)= E(X^2)-E(X)^2 \\
 \Rightarrow E(X^2) = Var(X)+E(X)^2 \\
 \end{aligned}
 \]</span></p>
-<p>Then defined the random variable <span class="math inline">\(X\)</span> to be the errors of the model;</p>
+<p>Then define the random variable <span class="math inline">\(X\)</span> to be the errors of the model;</p>
 <p><span class="math display">\[
 \begin{aligned}
 E((g(x)-\hat{g}(x))^2) &amp;= Var((g(x)-\hat{g}(x))^2)+E((g(x)-\hat{g}(x)))^2 \\
-&amp;= (g(x)-E(\hat{g}(x)))^2 + (E(E(\hat{g}(x))-\hat{g}(x))) + Var(g(x))\\
+&amp;= (g(x)-E(\hat{g}(x)))^2 + E((E(\hat{g}(x))-\hat{g}(x))^2) + Var(g(x))\\
 &amp;= Bias(\hat{g}(x))^2 + Var(\hat{g}(x)) + Var(g(x))
 \end{aligned}
 \]</span></p>
+<p>Here bias represents the squared error between the true function <span class="math inline">\(g(x)\)</span> and the expected model <span class="math inline">\(E(\hat{g}(x))\)</span>. Variance represents the squared error between the expected model and the obtained model. And <span class="math inline">\(Var(g(x))\)</span> represents the true noise or irreducible error in the process <span class="math inline">\(g(x)\)</span>.</p>
+<p>Variance of linear combinations of random variables:</p>
+<p><span class="math display">\[
+Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
+\]</span></p>
+<p>Variance is also crucial for designing experiments, for example if <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> have different signs and <span class="math inline">\(Cov(X,Y)&gt;0\)</span>, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where <span class="math inline">\(X\)</span> represents the first measurement, <span class="math inline">\(Y\)</span> represents a future measurement, <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(b=1\)</span> to reflect a difference comparing the second and first measurements (<span class="math inline">\(Y-X\)</span>), and since the measurements come from the same person here, it is reasonable to assume they are correlated (<span class="math inline">\(Cov(X,Y)&gt;0\)</span>). In this case, <span class="math inline">\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)</span>, which is not larger than the variance that would be obtained if the measurements were from independent samples.</p>
+<!--
+Confidence intervals, prediction intervals
+-->
 <!--
 Variance of a function:
 $$
@@ -285,16 +300,26 @@ $$
 -->
 <p><a href="https://en.wikipedia.org/wiki/Law_of_total_variance">Law of total variance</a>: The variance of a variable <span class="math inline">\(X\)</span> can be decomposed into the variation in the variable that remains when <span class="math inline">\(Y\)</span> is known or irreducible error (<span class="math inline">\(E(Var(X|Y))\)</span>), and the variation that carries through from the uncertainty in the model estimation <span class="math inline">\(Y\)</span> (<span class="math inline">\(Var(E(X|Y)\)</span>). <span class="math display">\[
 \begin{aligned}
-Var(X)&amp;=E(Var(X|Y))+Var(E(X|Y)) \\
-&amp;= SSE + SSR
+Var(X)&amp;=E(Var(X|Y))+Var(E(X|Y))
 \end{aligned}
 \]</span></p>
-<p>This arises in hierarchical models.</p>
+<p>This arises in hierarchical models and prediction intervals.</p>
+<p><span class="math display">\[
+\begin{aligned}
+x               &amp;\sim N(\mu,\sigma) \\
+E(x)            &amp;=\mu\\
+Var(x)          &amp;=\sigma^2\\
+\hat{\mu}_n     &amp;\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)\\
+E(\hat{\mu}_n)  &amp;=\mu\\
+Var(\hat{\mu}_n)&amp;=\frac{\sigma^2}{n}\\
+E(x_{n+1}|\hat{\mu}_n)&amp;= \hat{\mu}_n \\
+Var(x_{n+1})    &amp;=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
+&amp;=\sigma^2+\frac{\sigma^2}{n}\\
+\mu             &amp;\pm Z_\alpha \sqrt{Var(x)}\\
+\end{aligned}
+\]</span></p>
 <!--
 Bias-variance tradeoff?
--->
-<!--
-Confidence intervals, prediction intervals
 -->
 <!--
 Expectation and variance are the foundation for decision making
@@ -312,15 +337,6 @@ Models output an expectation that depends on the model, its structure, its featu
 ## Odds and other transformations
 
 odds, log odds, relative risk, ... .
--->
-<!--
-## Practice Problems and Walkthroughs
-
-- link to my YouTube videos on these things
-
-Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
-
-- circle problem
 -->
 </div>
 <div id="information-theory-and-entropy" class="section level2">
