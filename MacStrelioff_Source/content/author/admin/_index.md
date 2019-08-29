@@ -54,10 +54,13 @@ I’ve always been curious about people’s decision making processes and person
 <!--
 TODO:
 
+- sit upstairs from now on for more focus
 - 1 LI message a day
 - 1 application a day
 - 1 DS video every 3 days
-- Cracking the Coding Interview
+- Cracking the Coding Interview, put solutions on GitHub
+- DS Projects for my GitHub
+- 
 
 -->
 
