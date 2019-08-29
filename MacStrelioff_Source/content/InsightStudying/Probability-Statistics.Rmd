@@ -218,7 +218,6 @@ $$
 E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
 $$
 
-Marginalizing a joint probability function: 
 Marginalizing a distribution from a joint probability function ($f(x,y)$) or a conditional probability function ($f(x|y)$):
 $$
 \begin{aligned}
@@ -228,10 +227,15 @@ f_x(x)&=\int_yf_{x,y}(x,y)dy\\
 \end{aligned}
 $$
 
-[Law of total expectation](https://en.wikipedia.org/wiki/Law_of_total_expectation)
+[Law of total expectation, and rough proof](https://en.wikipedia.org/wiki/Law_of_total_expectation)
 
 $$
-E(x)=E(E(x|y))
+\begin{aligned}
+E_{x}(x)&=E_{y}(E_{x|y}(x|y))\\
+&=\int_y\int_{x|y}xp(x|y)d_{x|y}p(y)d_{y} \\
+&=\int_{x}x\int_{y}p(x|y)p(y)d_{y}d_{x} \\
+&=\int_{x}xp(x)
+\end{aligned}
 $$
 
 <!--
@@ -248,7 +252,6 @@ in linear regression, the expectation of Y is the linear combination of X and B,
 - So the property that expectation propogates through sums leads to this result..
 --->
 
-Marginalizing a joint distribution
 
 ## Variance
 

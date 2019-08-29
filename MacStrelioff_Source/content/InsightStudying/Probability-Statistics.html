@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-26 14:53:24"
+date: "2019-08-29 09:59:16"
 math: true
 output:
   blogdown::html_page:
@@ -207,16 +207,21 @@ E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)p(x)dx
 <p><span class="math display">\[
 E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)dsdt
 \]</span></p>
-<p>Marginalizing a joint probability function: Marginalizing a distribution from a joint probability function (<span class="math inline">\(f(x,y)\)</span>) or a conditional probability function (<span class="math inline">\(f(x|y)\)</span>): <span class="math display">\[
+<p>Marginalizing a distribution from a joint probability function (<span class="math inline">\(f(x,y)\)</span>) or a conditional probability function (<span class="math inline">\(f(x|y)\)</span>): <span class="math display">\[
 \begin{aligned}
 f_x(x)&amp;=\int_yf_{x,y}(x,y)dy\\
 &amp;=\int_y f_{x|y}(x|y)f_y(y)dy\\
 &amp;=E_y(f(x|y))
 \end{aligned}
 \]</span></p>
-<p><a href="https://en.wikipedia.org/wiki/Law_of_total_expectation">Law of total expectation</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Law_of_total_expectation">Law of total expectation, and rough proof</a></p>
 <p><span class="math display">\[
-E(x)=E(E(x|y))
+\begin{aligned}
+E_{x}(x)&amp;=E_{y}(E_{x|y}(x|y))\\
+&amp;=\int_y\int_{x|y}xp(x|y)d_{x|y}p(y)d_{y} \\
+&amp;=\int_{x}x\int_{y}p(x|y)p(y)d_{y}d_{x} \\
+&amp;=\int_{x}xp(x)
+\end{aligned}
 \]</span></p>
 <!--
 Linear regression as a conditional expectation
@@ -231,7 +236,6 @@ in linear regression, the expectation of Y is the linear combination of X and B,
 
 - So the property that expectation propogates through sums leads to this result..
 --->
-<p>Marginalizing a joint distribution</p>
 </div>
 <div id="variance" class="section level2">
 <h2>Variance</h2>

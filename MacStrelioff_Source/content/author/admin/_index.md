@@ -54,14 +54,32 @@ I’ve always been curious about people’s decision making processes and person
 <!--
 TODO:
 
-- sit upstairs from now on for more focus
 - 1 LI message a day
 - 1 job application a day
-- 1 DS video every 3 days
-- Cracking the Coding Interview, put solutions on GitHub
-- DS Projects for my GitHub
-- Kaggle tutorials (https://www.kaggle.com/learn/overview)
 
+- Update website:
+- - Change bio page to be product focused
+- - refine DS fundamentals pages
+
+- 1 DS video every 3 days
+- - Interview questions part 2b
+- - What is probability, really??
+- - What is a probability mass function?
+- - Behavioral questions (use general titles for these to attract a large audience)
+- - About me (landing page on my channel)
+- - How I Get Free Bitcoin With This Simple Python Script (And You Can Too!)
+
+- DS Projects for my GitHub:
+- - maybe intent modeling for the airbnb dataset?
+
+- Causal Inference:
+- - illness treatment, symptom, condition: https://www.kaggle.com/flaredown/flaredown-autoimmune-symptom-tracker/kernels
+- - RTB paper collection: https://github.com/wnzhang/rtb-papers
+
+- Programming:
+- - Kaggle tutorials (https://www.kaggle.com/learn/overview)
+- - Cracking the Coding Interview, put solutions on GitHub, walkthrough on YouTube
+- - something on quantopian? Work through their python tutorials?
 
 -->
 
