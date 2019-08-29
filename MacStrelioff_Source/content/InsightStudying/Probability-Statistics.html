@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-29 13:52:00"
+date: "2019-08-29 14:22:15"
 math: true
 output:
   blogdown::html_page:
@@ -17,7 +17,7 @@ linktitle: Probability and Statistics
 
 <div id="TOC">
 <ul>
-<li><a href="#events-and-random-variables">Events and Random Variables</a><ul>
+<li><a href="#probability-foundations">Probability Foundations</a><ul>
 <li><a href="#probability-rules">Probability Rules</a></li>
 <li><a href="#probability-functions">Probability Functions</a></li>
 <li><a href="#expectation">Expectation</a></li>
@@ -92,8 +92,8 @@ Hypothesis testing
 
 Statisticians use probability theory to decide on what is and isn't true
 -->
-<div id="events-and-random-variables" class="section level1">
-<h1>Events and Random Variables</h1>
+<div id="probability-foundations" class="section level1">
+<h1>Probability Foundations</h1>
 <p>Events, event spaces,</p>
 <p>combinatorics (permutations and combinations)</p>
 <p>A random variable random variable is a variable with an unknown value, but known possible values. An event is an observed value of a random variable. An event space contains all possible values of the random variable. Probabilities are values assigned to the events in an event space (i.e. the possible values of a random variable) and represent how likely each event is relative to other events in the event space.</p>
@@ -337,27 +337,20 @@ I(x)=-log(f(x))=log\left(\frac{1}{f(x)} \right)
 <p>Entropy is the expected surprise – higher entropy relates to more uncertainty: <span class="math display">\[
 H(X)=E(I(x)) = E(-log(f(x)))  = \int_E f(x)I(x) = -\int_E f(x)log(f(x))
 \]</span></p>
-<ul>
-<li>Joint Entropy</li>
-<li>Conditional Entropy</li>
-</ul>
 <p>K-L Divergance, or relative entropy, is a measure of the expected distance between distributions, assuming one of them is true: <span class="math display">\[
 \begin{aligned}
 D_{KL}(f_{x}(x);f_{y}(x)) &amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)\\
 &amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x)) \\
 \end{aligned}
 \]</span></p>
-<p>Divergance is an important concept in machine learning, when we are estimating a distribution <span class="math inline">\(f(x)\)</span> with a model <span class="math inline">\(\hat{f}(x)\)</span>. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data what would maximize divergance.</p>
-<p>Mutual Information is the divergance from the joint distribution <span class="math inline">\(f_{x,y}(x,y)\)</span> to the joint when independence is assumed <span class="math inline">\(f_x(x)f_y(y)\)</span>; <span class="math display">\[
+<p>Divergance is an important concept in machine learning, because it can be a loss function when we are estimating a distribution <span class="math inline">\(f(x)\)</span> with a model <span class="math inline">\(\hat{f}(x)\)</span>. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data that maximizes the divergance between the posterior and prior, i.e. the most informative data.</p>
+<p>Mutual Information is the divergance from the joint distribution <span class="math inline">\(f_{x,y}(x,y)\)</span> to the joint when independence is assumed <span class="math inline">\(f_x(x)f_y(y)\)</span> – i.e. a measure of non-independence; <span class="math display">\[
 I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)
 \]</span></p>
-<ul>
-<li><p>Divergance</p></li>
-<li><p>entropy is minimized by a Bayesian estimator</p></li>
-</ul>
 </div>
 <div id="causal-inference" class="section level2">
 <h2>Causal Inference</h2>
+<p>The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.</p>
 </div>
 </div>
 <div id="experiment-design" class="section level1">
