@@ -1,7 +1,7 @@
 ---
 title: "YouTube Strategy"
 author: "Mac Strelioff"
-date: "2019-08-30 14:59:43"
+date: "2019-08-30 15:44:54"
 math: true
 output:
   blogdown::html_page:
@@ -16,10 +16,10 @@ output:
 <li><a href="#about-me-channel-video">“About Me” Channel Video</a></li>
 <li><a href="#data-science-interview-walkthrough-series">Data Science Interview Walkthrough Series</a><ul>
 <li><a href="#data-scientist-interview-walkthrough-intro">“Data Scientist Interview Walkthrough: Intro”</a></li>
-<li><a href="#data-scientist-interview-walkthrough-probability-part-1">Data Scientist Interview Walkthrough: Probability, Part 1</a></li>
-<li><a href="#data-scientist-interview-walkthrough-probability-part-2">Data Scientist Interview Walkthrough: Probability, Part 2</a></li>
-</ul></li>
+<li><a href="#data-scientist-interview-walkthrough-probability-question-set-3">Data Scientist Interview Walkthrough: Probability Question Set 3</a></li>
+<li><a href="#what-is-probability-and-what-is-a-probability-function">What is Probability and What is a Probability Function?</a></li>
 <li><a href="#what-is-a-power-analysis-explained-at-3-levels-of-difficulty">What is a Power Analysis? (Explained at 3 levels of difficulty)</a></li>
+</ul></li>
 <li><a href="#ab-testing-versus-bandits">A/B testing versus bandits</a></li>
 <li><a href="#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too">How I Get Free Bitcoin With This Simple Python Script (And you can too!)</a></li>
 <li><a href="#behavioral-question-series">Behavioral question series</a></li>
@@ -47,11 +47,18 @@ output:
 <li><a href="#general-tips">General tips</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#finished">Finished:</a><ul>
+<li><a href="#data-scientist-interview-walkthrough-probability-part-1">Data Scientist Interview Walkthrough: Probability, Part 1</a></li>
+<li><a href="#data-scientist-interview-walkthrough-probability-part-2">Data Scientist Interview Walkthrough: Probability, Part 2</a></li>
+</ul></li>
 </ul>
 </div>
 
 <div id="planned-videos" class="section level1">
 <h1>Planned Videos</h1>
+<!--
+- Post the finished videos on my website under the video tab
+-->
 <div id="about-me-channel-video" class="section level2">
 <h2>“About Me” Channel Video</h2>
 <p>Why?</p>
@@ -112,39 +119,22 @@ output:
 <li>Thank you, and I hope you enjoy these videos!</li>
 </ul>
 </div>
-<div id="data-scientist-interview-walkthrough-probability-part-1" class="section level3">
-<h3>Data Scientist Interview Walkthrough: Probability, Part 1</h3>
-<ul>
-<li>Coins in a bag</li>
-<li>Probability rules</li>
-<li>Bayes’ Theorem, Bayes Factor</li>
-<li>Frequentist Hypothesis Testing</li>
-<li>Likelihood Ratio</li>
-</ul>
-</div>
-<div id="data-scientist-interview-walkthrough-probability-part-2" class="section level3">
-<h3>Data Scientist Interview Walkthrough: Probability, Part 2</h3>
-<p>Geometric distribution problem:</p>
-<ul>
-<li>This video is part of a series where I work though common and current Data Science interview questions.</li>
-<li>Subscribe if you want to see the latest videos.</li>
-<li>And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact,</li>
-</ul>
-<p>Recursion problem:</p>
-<ul>
-<li>This video has two problems that two different friends of mine received during an interview.</li>
-<li>The first was from an onsite interview at a late stage startup.</li>
-<li>The second was from</li>
-</ul>
+<div id="data-scientist-interview-walkthrough-probability-question-set-3" class="section level3">
+<h3>Data Scientist Interview Walkthrough: Probability Question Set 3</h3>
 <p>Expected value problem:</p>
 <ul>
 <li><p>I was asked this question during a technical phone screen for a large, popular tech company that you know.</p></li>
 <li><p>… Feel free to comment a better solution if you can come up with one!</p></li>
 </ul>
 </div>
+<div id="what-is-probability-and-what-is-a-probability-function" class="section level3">
+<h3>What is Probability and What is a Probability Function?</h3>
+<ul>
+<li>notes from prob and stats page</li>
+</ul>
 </div>
-<div id="what-is-a-power-analysis-explained-at-3-levels-of-difficulty" class="section level2">
-<h2>What is a Power Analysis? (Explained at 3 levels of difficulty)</h2>
+<div id="what-is-a-power-analysis-explained-at-3-levels-of-difficulty" class="section level3">
+<h3>What is a Power Analysis? (Explained at 3 levels of difficulty)</h3>
 <ul>
 <li>Explain a power analysis (start complicated, get simple to keep people watching till the end)</li>
 </ul>
@@ -154,26 +144,15 @@ output:
 <li>formula based on P(..)</li>
 <li>General definition and power functions</li>
 </ol>
+<ul>
+<li>mix Peter’s github repo / simulations with an explanation</li>
+</ul>
+</div>
 </div>
 <div id="ab-testing-versus-bandits" class="section level2">
 <h2>A/B testing versus bandits</h2>
 <!---
 todo:
-
-- You are trapped in a room with three doors, one adds a day, another adds two days, the third is an escape. How long are you expected to be trapped in this room. 
-- alternatively;
-- You are playing a card game with three cards -- a '1', a '2', and an 'X'. 
-- On each round, you pick one randomly. If you pick a '1', then the game continues. If you pick the 'x' then the game ends. 
-- How many rounds are your expected to play?
--- Now instead there is a '1', a '2', and an 'X'. If you draw the '1', you win $1, if you draw the '2' you win $2, and if you draw the 'X' then the game ends. How much are you expected to win?
-
--- Now instead of winnings, the numbers on the card represent how many more rounds you'll need to play. What is the probability of the game ending? (version of Aman's question)
-- Aman's question - sample from a circle using a random number generator
-  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
-  - circle question from Google
-
--- google question: Now there are cards 1 through 9. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
-- expected value of the dice game process (get what you roll, expected value of game when you're alowed to roll n times)
 
 - Bank teller problem 
 - random number generator from a uniform random number generator
@@ -182,7 +161,6 @@ todo:
 - multinomial and guessers 'favorite color' and a proportion of users who guess randomly
 - bandits vs A/B tests, particularly for lots of conditions
 - LI: android you can randomize, iphone you can't (synthetic control)
-- strengths & weaknesses of different ML algorithms (complex to simple explanations)
 - Chris Alborn's demos?
 --->
 </div>
@@ -407,5 +385,33 @@ todo:
 <li>Write everything out (maybe in a slightly vague way), and then spend time explaining the terms. From analytics, long periods of writing seem to hurt user retention.</li>
 </ul>
 </div>
+</div>
+</div>
+<div id="finished" class="section level1">
+<h1>Finished:</h1>
+<div id="data-scientist-interview-walkthrough-probability-part-1" class="section level3">
+<h3>Data Scientist Interview Walkthrough: Probability, Part 1</h3>
+<ul>
+<li>Coins in a bag</li>
+<li>Probability rules</li>
+<li>Bayes’ Theorem, Bayes Factor</li>
+<li>Frequentist Hypothesis Testing</li>
+<li>Likelihood Ratio</li>
+</ul>
+</div>
+<div id="data-scientist-interview-walkthrough-probability-part-2" class="section level3">
+<h3>Data Scientist Interview Walkthrough: Probability, Part 2</h3>
+<p>Geometric distribution problem:</p>
+<ul>
+<li>This video is part of a series where I work though common and current Data Science interview questions.</li>
+<li>Subscribe if you want to see the latest videos.</li>
+<li>And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact,</li>
+</ul>
+<p>Recursion problem:</p>
+<ul>
+<li>This video has two problems that two different friends of mine received during an interview.</li>
+<li>The first was from an onsite interview at a late stage startup.</li>
+<li>The second was from</li>
+</ul>
 </div>
 </div>

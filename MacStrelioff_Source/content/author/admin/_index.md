@@ -49,6 +49,15 @@ interests:
 - Bandit tasks
 ---
 
+
+<!--
+Who?
+I recently finished a PhD
+
+-->
+
+
+
 I’ve always been curious about people’s decision making processes and personally interested in making the best decisions possible. This lead me to pursue a PhD in a computational neuroscience lab where I used bandit tasks and reinforcement learning models to understand human decision making and infer strategies from observed choices.
 
 <!--
@@ -62,7 +71,7 @@ TODO:
 - - refine DS fundamentals pages
 
 - 1 DS video every 3 days
-- - Interview questions part 2b
+
 - - What is probability, really??
 - - What is a probability mass function?
 - - Behavioral questions (use general titles for these to attract a large audience)

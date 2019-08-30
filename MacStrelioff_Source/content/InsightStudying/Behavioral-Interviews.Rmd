@@ -49,7 +49,6 @@ I hope you are interested in the skills and projects outlined in my resume, and 
 - Interviews are conversations, not tests
 - Use stories to establish a connection and demonstrate fit for a role and company
 
-
 Tell me about yourself, your academic research, why data science?; 30 second elevator pitch vs. 2 minute phone screen/on-site
 
 Why this company? what value can you add? Tell me about a time when… 
