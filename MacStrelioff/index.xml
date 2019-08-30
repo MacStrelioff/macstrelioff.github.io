@@ -36,6 +36,511 @@
     </item>
     
     <item>
+      <title>YouTube Strategy</title>
+      <link>/MacStrelioff/unlisted/youtube_strategy/</link>
+      <pubDate>Thu, 29 Aug 2019 18:44:08 +0000</pubDate>
+      
+      <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#general-strategies-and-guides&#34;&gt;General Strategies and Guides&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#meta&#34;&gt;Meta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seo&#34;&gt;SEO&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#keywords&#34;&gt;Keywords&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#title&#34;&gt;Title:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tags&#34;&gt;Tags&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#higher-ranking&#34;&gt;Higher Ranking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ctr&#34;&gt;CTR&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#thumbnails&#34;&gt;Thumbnails&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#brand-consistency&#34;&gt;Brand Consistency&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#within-videos&#34;&gt;Within Videos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hook-and-intro&#34;&gt;Hook and Intro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#end-screen&#34;&gt;End Screen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#general-tips&#34;&gt;General tips&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#planned-videos&#34;&gt;Planned Videos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#about-me-channel-video&#34;&gt;“About Me” Channel Video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#behavioral-question-series&#34;&gt;Behavioral question series&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-science-interview-walkthrough-series&#34;&gt;Data Science Interview Walkthrough Series&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-intro&#34;&gt;“Data Scientist Interview Walkthrough: Intro”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-1&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-2&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34;&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34;&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ab-testing-versus-bandits&#34;&gt;A/B testing versus bandits&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-distributions-series&#34;&gt;Probability Distributions Series&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ml-algorithm-series&#34;&gt;ML algorithm series&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Here I outline ideas and strategies for growing my YouTube channel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;general-strategies-and-guides&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;General Strategies and Guides&lt;/h1&gt;
+&lt;div id=&#34;meta&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Meta&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;schema.. an html code snippit that gives google info about a video?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;go to html code, ask dennis to do it for you… or google it lol&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;playlists good for watch time – this might be in place of a long video..&lt;/li&gt;
+&lt;li&gt;videos with individual titles to funnel people in&lt;/li&gt;
+&lt;li&gt;keyword is the the search query, er the target search query&lt;/li&gt;
+&lt;li&gt;pick a target keyword for each video&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Youtube algo inferring search intent&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seo&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SEO&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.briggsby.com/reverse-engineering-youtube-search&#34;&gt;good overview article&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;keywords&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Keywords&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;keyword is the the search query, er the target search query&lt;/li&gt;
+&lt;li&gt;Use vidiq to determine search volume potential on video keywords&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Google search volume is not always indicative of interest in a topic on Youtube so it’s not a good idea to rely on it for choosing video keywords&lt;/li&gt;
+&lt;li&gt;Keywords that have video carousels in the Google SERPS can increase CTR of a video and pull in more views&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;title&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Title:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;instead of ‘part 1, ..’ find seperate videos that can rank on their own, maybe try ‘question 1’ so they sound self-contained&lt;/li&gt;
+&lt;li&gt;title case – capitalize first letter of all words in title&lt;/li&gt;
+&lt;li&gt;Video is shorter than 60 characters so it isn’t cut off in the SERP&lt;/li&gt;
+&lt;li&gt;Video contains your target keyword&lt;/li&gt;
+&lt;li&gt;Remove excess jargon&lt;/li&gt;
+&lt;li&gt;See SEO Framework/YouTube Distribution section - in the expanded section in middle of page - for examples.&lt;/li&gt;
+&lt;li&gt;Do not include episode numbers for your videos that are in playlists. CTR and views might go down as episode numbers go up and the playlist is already directing the order in which your audience views so there’s no need to really include the numbers&lt;/li&gt;
+&lt;li&gt;Briggsby found that titles with 47-48 characters perform best. This has not been reflected in our own videos so far but this is still a good target range to adhere to as a best practices.&lt;/li&gt;
+&lt;li&gt;Front-load your keyword in your title if possible. Youtube gives more weight to words that come at the beginning of the title. Don’t do this if it comes at the expense of the flow of your title or users’ understanding of your title.&lt;/li&gt;
+&lt;li&gt;Note that your title in the video description can be different than what appears in the thumbnail (to make the title visually more succinct)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;description&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Description&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;in description, overview of everything, links of anything you want to push people to, timestamps for parts of the video.&lt;/li&gt;
+&lt;li&gt;longer descriptions better for ranking bc youtube, sweet spot ~350 words.&lt;/li&gt;
+&lt;li&gt;Include your target keyword in first line and give an overview of what topics your video will cover&lt;/li&gt;
+&lt;li&gt;Descriptions that consist of 200-350 may to improve rankings&lt;/li&gt;
+&lt;li&gt;Your description should not give away so much of the content of your video that people no longer need to watch to get the bulk of the information&lt;/li&gt;
+&lt;li&gt;Link at the front, so that it isn’t cut off&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Including time stamps in your video can help prevent people who just want to understand one topic from your video from bouncing off the page when they don’t get the answers they want immediately (this is good for longer videos)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add summary with timecodes in the description &lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;timecodes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From &lt;a href=&#34;https://www.briggsby.com/reverse-engineering-youtube-search&#34;&gt;this blog&lt;/a&gt; - Brief CTA for a relevant next video to drive session length and related videos. - Subscribe CTA to help build your distribution power. - 50 to 150 words in the description to summarize and describe your video, mentioning a broad match variation of your keyword 1 to 3 times, depending on length. - List additional videos to watch, focused on your best content about the same or a similar subject matter as this video, creating recommendation clusters. - A brief bio and/or list of social accounts, which can help build your distribution power. - Avoid exceeding 400 words without a good reason to do so, because stuffing or going broadly off topic can harm performance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tags&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tags&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Look at “view page source” and find their keywords.&lt;/li&gt;
+&lt;li&gt;type key words in youtube search, and add the things that it suggests.&lt;/li&gt;
+&lt;li&gt;&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;keyword&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;long tail keywords&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;2-3 broadest category ones&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;focus on 6-8 tags&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Include 6-8 tags&lt;/li&gt;
+&lt;li&gt;Use this formula: 1st tag - target keyword, 2nd + 3rd tags - synonyms for your target keyword, 4th + 5th tags - related long tail keywords, 6th + 7th keywords - broad categories that your video fits into&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use ‘page inspector’ option in Chrome to look up keywords used in high traffic videos on related topics! This increases your chances of being placed as a suggested video for that video&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;higher-ranking&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Higher Ranking&lt;/h3&gt;
+&lt;p&gt;Good advice from &lt;a href=&#34;https://www.youtube.com/watch?v=xdcG1M6dy58&#34;&gt;joma here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;video guidelines for higher ranking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add 5-10s pauses to let users try the problems on their own (and to increase view time)&lt;/li&gt;
+&lt;li&gt;ask users to subscribe&lt;/li&gt;
+&lt;li&gt;sell likes and subscriptions:&lt;/li&gt;
+&lt;li&gt;“As you can imagine, it takes a lot of time and effort to make these videos. If you found this content helpful at all, please click the like button to let me know. Also, if there are interview questions that you’ve gotten, or concepts you would like an explanation on, feel free to comment below so that I know which videos to prioritize in the future. Finally, if you want to stay up to date on interview walkthroughs for common and recent interview questions, then click subscribe to stay on top of the latest interview topics.”&lt;/li&gt;
+&lt;li&gt;“Unfortunately, interviews are largely luck in terms of whether you’ve seen the question before.&lt;/li&gt;
+&lt;li&gt;In this series I walk through problems that reflect those that are currently being asked in data scientist interviews at highly competitive companies.&lt;/li&gt;
+&lt;li&gt;After watching these interview question walkthroughs, you’ll be able to confidently brease through your technical interviews.&lt;/li&gt;
+&lt;li&gt;Many resources, can be overwhelming and ultimately a waste of time because much of that material won’t ever come up.&lt;/li&gt;
+&lt;li&gt;My goal is to make these videos the highest return on your time by focusing on content that my friends and I have seen in interviews.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ctr&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;CTR&lt;/h2&gt;
+&lt;div id=&#34;thumbnails&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Thumbnails&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tubefilter.com/2014/06/19/youtube-thumbnails-definitive-guide/&#34;&gt;guide here&lt;/a&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Face in a small frame over written math&lt;/li&gt;
+&lt;li&gt;Face large, with text formulas around it&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For a background photo, choose something with blues, greens, and high contrast, and maybe face shapes e.g. search: blue green smoke black background face&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;From Jessica:&lt;/li&gt;
+&lt;li&gt;Use bold text that can be read in a variety of different sizes&lt;/li&gt;
+&lt;li&gt;Use high resolution pictures&lt;/li&gt;
+&lt;li&gt;Use colors that contrast against the Youtube website color scheme of red and white&lt;/li&gt;
+&lt;li&gt;Yellow, green, orange, purple pink and blue&lt;/li&gt;
+&lt;li&gt;Use high contrast photos&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Many experts recommend including people/faces in thumbnails to increase CTR. However, we tried this with the Kanban series and did not see CTR increase so the jury is out.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find a high contrast background, and maybe in ppt, put a title in white font on a black box in the center?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;brand-consistency&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Brand Consistency&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;within-videos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Within Videos&lt;/h2&gt;
+&lt;div id=&#34;duration&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Duration&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Do an incognito tab search in Youtube for your target keyword and note the average duration of the top three videos. This should give you a good idea of an appropriate duration for the type of content you’re creating&lt;/li&gt;
+&lt;li&gt;Videos should be at least 4:30 long&lt;/li&gt;
+&lt;li&gt;According to Briggsby: The average duration of videos that rank in the top 5 is 11 minutes and 44 seconds, and there appears to be a positive relationship between video length and rank performance.&lt;/li&gt;
+&lt;li&gt;Audiences also tend to “like” videos more that are in the 10-16 minute range&lt;/li&gt;
+&lt;li&gt;However, keep in mind that you should tailor your video duration to be appropriate for the type of content you are creating and that’s why you should always be sure to note how long the videos are that are ranking for your target keyword&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hook-and-intro&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hook and Intro&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Context: “This video is part of a series where I work though common and current Data Science interview questions. If you’d like to see more, feel free to like so that I know the these videos are having an impact, and to subscribe if you want to see the latest videos.”&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-video-formats?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;Credibility&lt;/a&gt; “I have a PhD in Cognitive Science and a Masters in Statistics, currently a fellow in a sillicon valley data science bootcamp, where I’m actively interviewing, and networking with data scientists who conduct interviews.”&lt;/li&gt;
+&lt;li&gt;Need / Value: “I realized other content sucks, and this is the best use of your time.”&lt;/li&gt;
+&lt;li&gt;Legitimacy: “This is a question that I got from an interview”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;start with an overview of the video.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;start with what they want for the hook – then ask to like/subscribe at the end for the people that obviously like.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Hook your audience in the first 10 seconds but don’t give away the answer to the central question of the video that early or your audience will bounce&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You shouldn’t string them along for too long because you want your video to get to the point, but you don’t want to lose them within the first 10 seconds&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Playlists can help increase the amount of time that your viewers stay on Youtube and, in turn, improve your rankings&lt;/li&gt;
+&lt;li&gt;However, be sure that you keep your playlists focused around one highly-specific topic. If you switch up the topic too much, we see high drop-off and videos end up looking ineffective to the Youtube algorithm.&lt;/li&gt;
+&lt;li&gt;Additionally, if you’re creating a playlist, make sure that videos can stand alone as well within the context of the playlist.&lt;/li&gt;
+&lt;li&gt;If they’re ranking for a standalone keyword, they won’t always appear within the context of your video and you don’t want people to bounce because they feel like they need to have watched 4 or 5 previous videos in order to understand the one that they landed on&lt;/li&gt;
+&lt;li&gt;Writing a script is highly recommended.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;By sharing your script and refining your opening, you avoid the risk of shooting footage without a clear, strong opening&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;content&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Content&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;biggest spikes are when there’s new visual information..&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Mention emotions and feelings through a video “At this point you feel like you’re doing well, then …”&lt;/li&gt;
+&lt;li&gt;Speak in a desirable way – engaging or calm.&lt;/li&gt;
+&lt;li&gt;Emphasize value of the content at every step.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pause for them to try and also to increase view time metric&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;end-screen&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;End Screen&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://support.google.com/youtube/answer/6388789?hl=en&#34;&gt;Some advice from YouTube&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a custom end screen with bold text to clearly indicate your calls to action&lt;/li&gt;
+&lt;li&gt;Next video to watch and subscriber buttons are good ones&lt;/li&gt;
+&lt;li&gt;If possible have your end screen pop up on the side while your video is still going on, instead of coming on against a static screen. According to Youtube expert Tim Schmoyer, this can increase engagement and prevent people from clicking away from your video&lt;/li&gt;
+&lt;li&gt;Focus on your two most important call to actions instead of bombarding your viewers with too many options&lt;/li&gt;
+&lt;li&gt;Make sure to hold your “subscribe” element in your end screen (see end screen example here) for at least 5 seconds before cutting away.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;general-tips&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;General tips&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Crop out the time that I spend writing – From analytics, long periods of writing seem to hurt user retention.&lt;/li&gt;
+&lt;li&gt;Instead, write everything out (maybe in a slightly vague way), and then spend time explaining the terms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;planned-videos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Planned Videos&lt;/h1&gt;
+&lt;div id=&#34;about-me-channel-video&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;“About Me” Channel Video&lt;/h2&gt;
+&lt;p&gt;Behavioral, “Tell me about yourself”:&lt;/p&gt;
+&lt;p&gt;About Me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD.. , masters in statistics (borrow from cover letters?)&lt;/li&gt;
+&lt;li&gt;Through grad school I pursued any project that was interesting to me – It was my time to develop valuable skills and learn what I wanted to do.&lt;/li&gt;
+&lt;li&gt;fast list of projects (decision making, prediction markets, statistics, AI and models of the mind, … )&lt;/li&gt;
+&lt;li&gt;relate to this job at this company&lt;/li&gt;
+&lt;li&gt;talk about YouTube channel and growth strategy&lt;/li&gt;
+&lt;li&gt;demonstrate the value that I add to produce positions&lt;/li&gt;
+&lt;li&gt;decision making, so studying people and the patterns or experiences that shape their behavior&lt;/li&gt;
+&lt;li&gt;Amazed to learn that there’s a huge interplay between psychology and computer science – reinforcement learning Skinner in the 30’s, turned into a plethora of models in computer science, which are now being used to explain human behavior, and neural correlates of key values in those models are being discovered.&lt;/li&gt;
+&lt;li&gt;Overall I was more interested in naturally occurring datasets, and experimental design – how we structude and verify our beliefs, and then use those beliefs to guide our actions.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;My mission is to break down barriers, mainly by democratizing education.&lt;/li&gt;
+&lt;li&gt;About me: UCI, recorded lectures for students, stats masters, data scientist, …&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;About this channel: I’ll primarily use this channel to publish educational resources on statistics and programming, mainly for aspiring data scientists. I’ll also use this channel as a platform to discuss hobby projects related to data science.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;behavioral-question-series&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Behavioral question series&lt;/h2&gt;
+&lt;p&gt;Make videos based on the questions / resources from Lacy ..&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-science-interview-walkthrough-series&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Science Interview Walkthrough Series&lt;/h2&gt;
+&lt;p&gt;I realized there was a lot of material to help prepare for software engineering videos, but very little for data scientist interviews. So I’m compiling videos of interview questions my firends and I have been asked in data sicence interviews, and questions that I’ve gotten from data scientists who are currently interviewing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Target Audience: People who want to know more about data scientist interviews&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Marketing: Post on Facebook, LinkedIn data science interest groups&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Value: My authority: Do an ‘about me’ video where I talk about my work at UCI, masters degree in statistics.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Value: To make these videos the mose valuable use of your time, I’m focusing exclusively on questions and content that have come up during interviews.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;data-scientist-interview-walkthrough-intro&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;“Data Scientist Interview Walkthrough: Intro”&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When I was studying to be a data scientist, I realized that there were lots of resources with loads of material that won’t actually help in an interview because they were too vague or too theoretical, or just contained very little material that actually comes up in an interview.&lt;/li&gt;
+&lt;li&gt;I also noticed that there are plenty of walkthroughs for the problems that come up in software engineering interviews, but nothing like that for data science interviews.&lt;/li&gt;
+&lt;li&gt;So with this series, I’m creating videos that will walk you through the questions that are currently coming up in silicone valley data scientist interviews&lt;/li&gt;
+&lt;li&gt;To make this the most valuable use of your time, I’ll be walking through questions that have come up in my interviews, or in my friends interviews, as well as questions that I gotten from data scientists and product managers who are actively interviewing.&lt;/li&gt;
+&lt;li&gt;This way these videos are going to be the most relevant and helpful resource for you if you want to learn what it takes to excel in a data science interview.&lt;/li&gt;
+&lt;li&gt;So.. what are these videos?&lt;/li&gt;
+&lt;li&gt;Each video will start with a question. I’d recommend pausing the video and trying the question yourself for a few minutes, and then watching my walkthrough for the question.&lt;/li&gt;
+&lt;li&gt;As I walk through the questions, I’ll mention the concepts that the questions are testing for so that you can note them and dive into those later.&lt;/li&gt;
+&lt;li&gt;Now, some of the best questions start easy and become progressively harder, so what that means here is that, if you don’t watch to the end then you might miss surprises that an interviewer can throw at you,&lt;/li&gt;
+&lt;li&gt;that the people who aren’t watching my videos won’t be expecting.&lt;/li&gt;
+&lt;li&gt;So for now, I would recommend watching the videos, trying the problems, and seeing how I walkthrough solutions, and watching through the end so that there aren’t any unexpected surprises&lt;/li&gt;
+&lt;li&gt;If you find this helpful or interesting, like this video so that I know that the work I put into this series is having a good impact for you and other people&lt;/li&gt;
+&lt;li&gt;Also, if there are questions that you have encountered and want answered, comment them below so that I can get you a walkthrough!&lt;/li&gt;
+&lt;li&gt;And finally be sure to subscribe if you want access to the most recent walkthroughs&lt;/li&gt;
+&lt;li&gt;Thank you, and I hope you enjoy these videos!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-scientist-interview-walkthrough-probability-part-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Scientist Interview Walkthrough: Probability, Part 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Coins in a bag&lt;/li&gt;
+&lt;li&gt;Probability rules&lt;/li&gt;
+&lt;li&gt;Bayes’ Theorem, Bayes Factor&lt;/li&gt;
+&lt;li&gt;Frequentist Hypothesis Testing&lt;/li&gt;
+&lt;li&gt;Likelihood Ratio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-scientist-interview-walkthrough-probability-part-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Scientist Interview Walkthrough: Probability, Part 2&lt;/h3&gt;
+&lt;p&gt;Geometric distribution problem.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This video is part of a series where I work though common and current Data Science interview questions.&lt;/li&gt;
+&lt;li&gt;Subscribe if you want to see the latest videos.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact,&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;This question was adapted from a question that a friend was asked during a data science interview at a large company. It’s a great question because it starts out not too difficult.&lt;/li&gt;
+&lt;li&gt;Depending on how quickly and confidently you answer it, you get to unlock more and more challenging follow up questions.&lt;/li&gt;
+&lt;li&gt;This question has some good follow ups that I’ll reveal in this video, and at least two really great follow ups that I’ll show in future videos.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;So, here it is…&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;This problem starts out relatively easy but can transform into something that would be challenging to people who don’t watch my videos.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!---
+todo:
+
+- You are trapped in a room with three doors, one adds a day, another adds two days, the third is an escape. How long are you expected to be trapped in this room. 
+- alternatively;
+- You are playing a card game with three cards -- a &#39;1&#39;, a &#39;2&#39;, and an &#39;X&#39;. 
+- On each round, you pick one randomly. If you pick a &#39;1&#39;, then the game continues. If you pick the &#39;x&#39; then the game ends. 
+- How many rounds are your expected to play?
+-- Now instead there is a &#39;1&#39;, a &#39;2&#39;, and an &#39;X&#39;. If you draw the &#39;1&#39;, you win $1, if you draw the &#39;2&#39; you win $2, and if you draw the &#39;X&#39; then the game ends. How much are you expected to win?
+
+-- Now instead of winnings, the numbers on the card represent how many more rounds you&#39;ll need to play. What is the probability of the game ending? (version of Aman&#39;s question)
+- Aman&#39;s question - sample from a circle using a random number generator
+  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
+  - circle question from Google
+
+-- google question: Now there are cards 1 through 9. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
+- expected value of the dice game process (get what you roll, expected value of game when you&#39;re alowed to roll n times)
+
+
+- Bank teller problem 
+- random number generator from a uniform random number generator
+- estimate median from Google
+- variances of different experiment designs
+- multinomial and guessers &#39;favorite color&#39; and a proportion of users who guess randomly
+- bandits vs A/B tests, particularly for lots of conditions
+- LI: android you can randomize, iphone you can&#39;t (synthetic control)
+- strengths &amp; weaknesses of different ML algorithms (complex to simple explanations)
+- Chris Alborn&#39;s demos?
+---&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;can make video, then make it public later.. (after job searching ends)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Video on my script for clicking the roll button on freebitco.com&lt;/li&gt;
+&lt;li&gt;Simplify the script to be a python script that can be run from the terminal with one command.&lt;/li&gt;
+&lt;li&gt;In the video, show people how to download the script from my GitHub and run the script from terminal :D&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add referral code so that I get a cut of the coins generated by anyone watching my video&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;CTR:&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Thumbnail: Colorful background, with me looking and pointing at a screenshot of the python scrip &amp;amp; maybe text that says free on it?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Advertising:&lt;/li&gt;
+&lt;li&gt;“Sharing this video is like giving your friends free money!”&lt;/li&gt;
+&lt;li&gt;Incentivize: The more people who consistently do this, the more of the referral bonous I’ll give back.&lt;/li&gt;
+&lt;li&gt;Show an example of how much I could give back if they run this consistently.&lt;/li&gt;
+&lt;li&gt;My goal is to make a certain amount each week, so I’ll modify the referral bonus kickbacks based on that.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;So share this video to increase your kickback.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Explain a power analysis (start complicated, get simple to keep people watching till the end)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;an analysis done to find a sample size&lt;/li&gt;
+&lt;li&gt;formula based on t-distribution example&lt;/li&gt;
+&lt;li&gt;formula based on P(..)&lt;/li&gt;
+&lt;li&gt;General definition and power functions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ab-testing-versus-bandits&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A/B testing versus bandits&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;probability-distributions-series&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Probability Distributions Series&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Pick common distributions, describe them from the Wikipedia page&lt;/li&gt;
+&lt;li&gt;Show their probability functions&lt;/li&gt;
+&lt;li&gt;Show (derive?) their CDF&lt;/li&gt;
+&lt;li&gt;Derive their MGFs&lt;/li&gt;
+&lt;li&gt;Derive score and Fisher Information&lt;/li&gt;
+&lt;li&gt;Describe / show conjugacy properties?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ml-algorithm-series&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;ML algorithm series&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Explanations, intuitions of different ML algorithms&lt;/li&gt;
+&lt;li&gt;Strengths and weaknesses of different ML algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+
+Vevo
+
+Chris:
+- how would you interpret / recommend changes to a photo for eg nike?
+- slide on nike example: most of their images are low ... ? So you&#39;re saying some of these could be
+- What about the photos that are closer to the center? 
+
+
+Gina:
+- how do you normalize what one teacher considerd yellow versus another teacher?
+- - so there&#39;s a possibility that the K means diagram would be different if this was accounrted for?
+- talk more about predictions? .. About teacher alerts?
+- did you try other clustering algorithms?
+
+Magna: 
+- what if you wanted the best of both worlds
+
+
+Misha:
+- did you try adding avg cost on amazon as a feature?
+- did you try other algos for class imbalance? 
+- how did you handle key words? 
+
+Pam:
+- houw would you incorporate time?
+- did you account for bias in strave -- so runs in french quarter might be marathons when it is safe
+- how would you correct for that in your model?
+
+
+Sam: 
+- your approach versus collaborative filtering? 
+
+
+Vy:
+- what were the recommended for you?
+- if you had more time, what would you add?
+- how did you validate?
+- 
+
+Xuntao;
+- on validation slide, what exactly do you mean by good?
+
+upcoming projects; 
+- scounting algorithm to find upcoming artists and signs them!
+
+
+- agency over YT recommendations? 
+- lots of experimentation on optimizing end screens -- Work that Laura dows.
+- - 
+- greenfield: 
+- brownfield: work in confounds of existing product
+- DS projects combination of personal interest / quick return for work. 
+- couple of projects in the pipeline, what&#39;s your interest? 
+- timeline on projects, bc DS with too much time goes outside realm of value to a business
+- Timeline of project negotiated with lead. 
+
+- agency in the artists / videos you promote? 
+
+- has a data engineer.. 
+- most of data coming from youtube reporting or analytics APIs? 
+- also datasets with financial records
+- softer measures coming out of external clients.. 
+
+
+- what was your career path / background? 
+
+
+- other offices in NY, LM, .. LA office focused on talent acquisition. 
+- Expect to be at NY office. 
+- Eng team in Portland.
+- supports personal growth, sends DS to conferences, .. 
+
+
+- lots of promotion done manually from content team
+- future work to put measurements on it and optimize
+
+
+- company mission: increase monetization of all music. Work with artist to monetize their work. 
+
+- big 5 -- suck oxygen out of other social platforms. 
+- instead, partnet with google.. 
+- how do we build the tools to succeed on whatever platform we are in? 
+- focus on understanding what makes an artist successful. 
+
+
+- DS head, started as an engineer
+- 10 years in aerospace
+- sr DS at playstation, focusing on gameplay
+- switched to cybersecurity
+- came to Vevo
+
+- later in process: why do you want to work for us? 
+- what does it mean to optimize processes for the artist? For the label? For vevo? 
+
+
+- next step: onsite, 4-5 people
+- one technical, python or SQL
+- one softe DS making sure you understand taking a business outline and turn it into a DS problem and solution
+- bus opps
+- product
+- other business units asking questions about the mission of the company, working through a hypothetical problem.
+
+5 people, half hour each, plus lunch. 
+
+
+--&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
       <pubDate>Thu, 29 Aug 2019 14:22:15 +0000</pubDate>
@@ -716,526 +1221,6 @@ models for when the errors aren&#39;t assumed to be normally distributed
 &lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Regression Discontinuity&lt;/h2&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>YouTube Strategy</title>
-      <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Thu, 29 Aug 2019 09:46:55 +0000</pubDate>
-      
-      <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#general-strategies-and-guides&#34;&gt;General Strategies and Guides&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#meta&#34;&gt;Meta&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seo&#34;&gt;SEO&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#keywords&#34;&gt;Keywords&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#title&#34;&gt;Title:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tags&#34;&gt;Tags&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#higher-ranking&#34;&gt;Higher Ranking&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ctr&#34;&gt;CTR&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#thumbnails&#34;&gt;Thumbnails&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#brand-consistency&#34;&gt;Brand Consistency&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#within-videos&#34;&gt;Within Videos&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#hook-and-intro&#34;&gt;Hook and Intro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#end-screen&#34;&gt;End Screen&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#general-tips&#34;&gt;General tips&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#planned-videos&#34;&gt;Planned Videos&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#about-me-channel-video&#34;&gt;“About Me” Channel Video&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#behavioral-question-series&#34;&gt;Behavioral question series&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-science-interview-walkthrough-series&#34;&gt;Data Science Interview Walkthrough Series&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-intro&#34;&gt;“Data Scientist Interview Walkthrough: Intro”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-1&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-2&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34;&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34;&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ab-testing-versus-bandits&#34;&gt;A/B testing versus bandits&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-distributions-series&#34;&gt;Probability Distributions Series&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ml-algorithm-series&#34;&gt;ML algorithm series&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Overview&lt;/h1&gt;
-&lt;p&gt;Here I outline ideas and strategies for growing my YouTube channel.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;general-strategies-and-guides&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;General Strategies and Guides&lt;/h1&gt;
-&lt;div id=&#34;meta&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Meta&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;schema.. an html code snippit that gives google info about a video?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;go to html code, ask dennis to do it for you… or google it lol&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;playlists good for watch time – this might be in place of a long video..&lt;/li&gt;
-&lt;li&gt;videos with individual titles to funnel people in&lt;/li&gt;
-&lt;li&gt;keyword is the the search query, er the target search query&lt;/li&gt;
-&lt;li&gt;pick a target keyword for each video&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Youtube algo inferring search intent&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seo&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SEO&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.briggsby.com/reverse-engineering-youtube-search&#34;&gt;good overview article&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;keywords&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Keywords&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;keyword is the the search query, er the target search query&lt;/li&gt;
-&lt;li&gt;Use vidiq to determine search volume potential on video keywords&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Google search volume is not always indicative of interest in a topic on Youtube so it’s not a good idea to rely on it for choosing video keywords&lt;/li&gt;
-&lt;li&gt;Keywords that have video carousels in the Google SERPS can increase CTR of a video and pull in more views&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;title&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Title:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;instead of ‘part 1, ..’ find seperate videos that can rank on their own, maybe try ‘question 1’ so they sound self-contained&lt;/li&gt;
-&lt;li&gt;title case – capitalize first letter of all words in title&lt;/li&gt;
-&lt;li&gt;Video is shorter than 60 characters so it isn’t cut off in the SERP&lt;/li&gt;
-&lt;li&gt;Video contains your target keyword&lt;/li&gt;
-&lt;li&gt;Remove excess jargon&lt;/li&gt;
-&lt;li&gt;See SEO Framework/YouTube Distribution section - in the expanded section in middle of page - for examples.&lt;/li&gt;
-&lt;li&gt;Do not include episode numbers for your videos that are in playlists. CTR and views might go down as episode numbers go up and the playlist is already directing the order in which your audience views so there’s no need to really include the numbers&lt;/li&gt;
-&lt;li&gt;Briggsby found that titles with 47-48 characters perform best. This has not been reflected in our own videos so far but this is still a good target range to adhere to as a best practices.&lt;/li&gt;
-&lt;li&gt;Front-load your keyword in your title if possible. Youtube gives more weight to words that come at the beginning of the title. Don’t do this if it comes at the expense of the flow of your title or users’ understanding of your title.&lt;/li&gt;
-&lt;li&gt;Note that your title in the video description can be different than what appears in the thumbnail (to make the title visually more succinct)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;description&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Description&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;in description, overview of everything, links of anything you want to push people to, timestamps for parts of the video.&lt;/li&gt;
-&lt;li&gt;longer descriptions better for ranking bc youtube, sweet spot ~350 words.&lt;/li&gt;
-&lt;li&gt;Include your target keyword in first line and give an overview of what topics your video will cover&lt;/li&gt;
-&lt;li&gt;Descriptions that consist of 200-350 may to improve rankings&lt;/li&gt;
-&lt;li&gt;Your description should not give away so much of the content of your video that people no longer need to watch to get the bulk of the information&lt;/li&gt;
-&lt;li&gt;Link at the front, so that it isn’t cut off&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Including time stamps in your video can help prevent people who just want to understand one topic from your video from bouncing off the page when they don’t get the answers they want immediately (this is good for longer videos)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Add summary with timecodes in the description &lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-discovery?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;timecodes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;From &lt;a href=&#34;https://www.briggsby.com/reverse-engineering-youtube-search&#34;&gt;this blog&lt;/a&gt; - Brief CTA for a relevant next video to drive session length and related videos. - Subscribe CTA to help build your distribution power. - 50 to 150 words in the description to summarize and describe your video, mentioning a broad match variation of your keyword 1 to 3 times, depending on length. - List additional videos to watch, focused on your best content about the same or a similar subject matter as this video, creating recommendation clusters. - A brief bio and/or list of social accounts, which can help build your distribution power. - Avoid exceeding 400 words without a good reason to do so, because stuffing or going broadly off topic can harm performance.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tags&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tags&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Look at “view page source” and find their keywords.&lt;/li&gt;
-&lt;li&gt;type key words in youtube search, and add the things that it suggests.&lt;/li&gt;
-&lt;li&gt;&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;keyword&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;long tail keywords&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;2-3 broadest category ones&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;focus on 6-8 tags&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Include 6-8 tags&lt;/li&gt;
-&lt;li&gt;Use this formula: 1st tag - target keyword, 2nd + 3rd tags - synonyms for your target keyword, 4th + 5th tags - related long tail keywords, 6th + 7th keywords - broad categories that your video fits into&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use ‘page inspector’ option in Chrome to look up keywords used in high traffic videos on related topics! This increases your chances of being placed as a suggested video for that video&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;higher-ranking&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Higher Ranking&lt;/h3&gt;
-&lt;p&gt;Good advice from &lt;a href=&#34;https://www.youtube.com/watch?v=xdcG1M6dy58&#34;&gt;joma here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;video guidelines for higher ranking:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;add 5-10s pauses to let users try the problems on their own (and to increase view time)&lt;/li&gt;
-&lt;li&gt;ask users to subscribe&lt;/li&gt;
-&lt;li&gt;sell likes and subscriptions:&lt;/li&gt;
-&lt;li&gt;“As you can imagine, it takes a lot of time and effort to make these videos. If you found this content helpful at all, please click the like button to let me know. Also, if there are interview questions that you’ve gotten, or concepts you would like an explanation on, feel free to comment below so that I know which videos to prioritize in the future. Finally, if you want to stay up to date on interview walkthroughs for common and recent interview questions, then click subscribe to stay on top of the latest interview topics.”&lt;/li&gt;
-&lt;li&gt;“Unfortunately, interviews are largely luck in terms of whether you’ve seen the question before.&lt;/li&gt;
-&lt;li&gt;In this series I walk through problems that reflect those that are currently being asked in data scientist interviews at highly competitive companies.&lt;/li&gt;
-&lt;li&gt;After watching these interview question walkthroughs, you’ll be able to confidently brease through your technical interviews.&lt;/li&gt;
-&lt;li&gt;Many resources, can be overwhelming and ultimately a waste of time because much of that material won’t ever come up.&lt;/li&gt;
-&lt;li&gt;My goal is to make these videos the highest return on your time by focusing on content that my friends and I have seen in interviews.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ctr&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;CTR&lt;/h2&gt;
-&lt;div id=&#34;thumbnails&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Thumbnails&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.tubefilter.com/2014/06/19/youtube-thumbnails-definitive-guide/&#34;&gt;guide here&lt;/a&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Face in a small frame over written math&lt;/li&gt;
-&lt;li&gt;Face large, with text formulas around it&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;For a background photo, choose something with blues, greens, and high contrast, and maybe face shapes e.g. search: blue green smoke black background face&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;From Jessica:&lt;/li&gt;
-&lt;li&gt;Use bold text that can be read in a variety of different sizes&lt;/li&gt;
-&lt;li&gt;Use high resolution pictures&lt;/li&gt;
-&lt;li&gt;Use colors that contrast against the Youtube website color scheme of red and white&lt;/li&gt;
-&lt;li&gt;Yellow, green, orange, purple pink and blue&lt;/li&gt;
-&lt;li&gt;Use high contrast photos&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Many experts recommend including people/faces in thumbnails to increase CTR. However, we tried this with the Kanban series and did not see CTR increase so the jury is out.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find a high contrast background, and maybe in ppt, put a title in white font on a black box in the center?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;brand-consistency&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Brand Consistency&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;within-videos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Within Videos&lt;/h2&gt;
-&lt;div id=&#34;duration&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Duration&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Do an incognito tab search in Youtube for your target keyword and note the average duration of the top three videos. This should give you a good idea of an appropriate duration for the type of content you’re creating&lt;/li&gt;
-&lt;li&gt;Videos should be at least 4:30 long&lt;/li&gt;
-&lt;li&gt;According to Briggsby: The average duration of videos that rank in the top 5 is 11 minutes and 44 seconds, and there appears to be a positive relationship between video length and rank performance.&lt;/li&gt;
-&lt;li&gt;Audiences also tend to “like” videos more that are in the 10-16 minute range&lt;/li&gt;
-&lt;li&gt;However, keep in mind that you should tailor your video duration to be appropriate for the type of content you are creating and that’s why you should always be sure to note how long the videos are that are ranking for your target keyword&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;hook-and-intro&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Hook and Intro&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Context: “This video is part of a series where I work though common and current Data Science interview questions. If you’d like to see more, feel free to like so that I know the these videos are having an impact, and to subscribe if you want to see the latest videos.”&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://creatoracademy.youtube.com/page/lesson/edu-video-formats?cid=educational-channel&amp;amp;hl=en#strategies-zippy-link-2&#34;&gt;Credibility&lt;/a&gt; “I have a PhD in Cognitive Science and a Masters in Statistics, currently a fellow in a sillicon valley data science bootcamp, where I’m actively interviewing, and networking with data scientists who conduct interviews.”&lt;/li&gt;
-&lt;li&gt;Need / Value: “I realized other content sucks, and this is the best use of your time.”&lt;/li&gt;
-&lt;li&gt;Legitimacy: “This is a question that I got from an interview”&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;start with an overview of the video.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;start with what they want for the hook – then ask to like/subscribe at the end for the people that obviously like.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Hook your audience in the first 10 seconds but don’t give away the answer to the central question of the video that early or your audience will bounce&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;You shouldn’t string them along for too long because you want your video to get to the point, but you don’t want to lose them within the first 10 seconds&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Playlists can help increase the amount of time that your viewers stay on Youtube and, in turn, improve your rankings&lt;/li&gt;
-&lt;li&gt;However, be sure that you keep your playlists focused around one highly-specific topic. If you switch up the topic too much, we see high drop-off and videos end up looking ineffective to the Youtube algorithm.&lt;/li&gt;
-&lt;li&gt;Additionally, if you’re creating a playlist, make sure that videos can stand alone as well within the context of the playlist.&lt;/li&gt;
-&lt;li&gt;If they’re ranking for a standalone keyword, they won’t always appear within the context of your video and you don’t want people to bounce because they feel like they need to have watched 4 or 5 previous videos in order to understand the one that they landed on&lt;/li&gt;
-&lt;li&gt;Writing a script is highly recommended.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;By sharing your script and refining your opening, you avoid the risk of shooting footage without a clear, strong opening&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;content&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Content&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;biggest spikes are when there’s new visual information..&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Mention emotions and feelings through a video “At this point you feel like you’re doing well, then …”&lt;/li&gt;
-&lt;li&gt;Speak in a desirable way – engaging or calm.&lt;/li&gt;
-&lt;li&gt;Emphasize value of the content at every step.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Pause for them to try and also to increase view time metric&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;end-screen&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;End Screen&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://support.google.com/youtube/answer/6388789?hl=en&#34;&gt;Some advice from YouTube&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a custom end screen with bold text to clearly indicate your calls to action&lt;/li&gt;
-&lt;li&gt;Next video to watch and subscriber buttons are good ones&lt;/li&gt;
-&lt;li&gt;If possible have your end screen pop up on the side while your video is still going on, instead of coming on against a static screen. According to Youtube expert Tim Schmoyer, this can increase engagement and prevent people from clicking away from your video&lt;/li&gt;
-&lt;li&gt;Focus on your two most important call to actions instead of bombarding your viewers with too many options&lt;/li&gt;
-&lt;li&gt;Make sure to hold your “subscribe” element in your end screen (see end screen example here) for at least 5 seconds before cutting away.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;general-tips&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;General tips&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Crop out the time that I spend writing – From analytics, long periods of writing seem to hurt user retention.&lt;/li&gt;
-&lt;li&gt;Instead, write everything out (maybe in a slightly vague way), and then spend time explaining the terms.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;planned-videos&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Planned Videos&lt;/h1&gt;
-&lt;div id=&#34;about-me-channel-video&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;“About Me” Channel Video&lt;/h2&gt;
-&lt;p&gt;Behavioral, “Tell me about yourself”:&lt;/p&gt;
-&lt;p&gt;About Me:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PhD.. , masters in statistics (borrow from cover letters?)&lt;/li&gt;
-&lt;li&gt;Through grad school I pursued any project that was interesting to me – It was my time to develop valuable skills and learn what I wanted to do.&lt;/li&gt;
-&lt;li&gt;fast list of projects (decision making, prediction markets, statistics, AI and models of the mind, … )&lt;/li&gt;
-&lt;li&gt;relate to this job at this company&lt;/li&gt;
-&lt;li&gt;talk about YouTube channel and growth strategy&lt;/li&gt;
-&lt;li&gt;demonstrate the value that I add to produce positions&lt;/li&gt;
-&lt;li&gt;decision making, so studying people and the patterns or experiences that shape their behavior&lt;/li&gt;
-&lt;li&gt;Amazed to learn that there’s a huge interplay between psychology and computer science – reinforcement learning Skinner in the 30’s, turned into a plethora of models in computer science, which are now being used to explain human behavior, and neural correlates of key values in those models are being discovered.&lt;/li&gt;
-&lt;li&gt;Overall I was more interested in naturally occurring datasets, and experimental design – how we structude and verify our beliefs, and then use those beliefs to guide our actions.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;My mission is to break down barriers, mainly by democratizing education.&lt;/li&gt;
-&lt;li&gt;About me: UCI, recorded lectures for students, stats masters, data scientist, …&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;About this channel: I’ll primarily use this channel to publish educational resources on statistics and programming, mainly for aspiring data scientists. I’ll also use this channel as a platform to discuss hobby projects related to data science.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;behavioral-question-series&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Behavioral question series&lt;/h2&gt;
-&lt;p&gt;Make videos based on the questions / resources from Lacy ..&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-science-interview-walkthrough-series&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Science Interview Walkthrough Series&lt;/h2&gt;
-&lt;p&gt;I realized there was a lot of material to help prepare for software engineering videos, but very little for data scientist interviews. So I’m compiling videos of interview questions my firends and I have been asked in data sicence interviews, and questions that I’ve gotten from data scientists who are currently interviewing.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Target Audience: People who want to know more about data scientist interviews&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Marketing: Post on Facebook, LinkedIn data science interest groups&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Value: My authority: Do an ‘about me’ video where I talk about my work at UCI, masters degree in statistics.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Value: To make these videos the mose valuable use of your time, I’m focusing exclusively on questions and content that have come up during interviews.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;data-scientist-interview-walkthrough-intro&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;“Data Scientist Interview Walkthrough: Intro”&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;When I was studying to be a data scientist, I realized that there were lots of resources with loads of material that won’t actually help in an interview because they were too vague or too theoretical, or just contained very little material that actually comes up in an interview.&lt;/li&gt;
-&lt;li&gt;I also noticed that there are plenty of walkthroughs for the problems that come up in software engineering interviews, but nothing like that for data science interviews.&lt;/li&gt;
-&lt;li&gt;So with this series, I’m creating videos that will walk you through the questions that are currently coming up in silicone valley data scientist interviews&lt;/li&gt;
-&lt;li&gt;To make this the most valuable use of your time, I’ll be walking through questions that have come up in my interviews, or in my friends interviews, as well as questions that I gotten from data scientists and product managers who are actively interviewing.&lt;/li&gt;
-&lt;li&gt;This way these videos are going to be the most relevant and helpful resource for you if you want to learn what it takes to excel in a data science interview.&lt;/li&gt;
-&lt;li&gt;So.. what are these videos?&lt;/li&gt;
-&lt;li&gt;Each video will start with a question. I’d recommend pausing the video and trying the question yourself for a few minutes, and then watching my walkthrough for the question.&lt;/li&gt;
-&lt;li&gt;As I walk through the questions, I’ll mention the concepts that the questions are testing for so that you can note them and dive into those later.&lt;/li&gt;
-&lt;li&gt;Now, some of the best questions start easy and become progressively harder, so what that means here is that, if you don’t watch to the end then you might miss surprises that an interviewer can throw at you,&lt;/li&gt;
-&lt;li&gt;that the people who aren’t watching my videos won’t be expecting.&lt;/li&gt;
-&lt;li&gt;So for now, I would recommend watching the videos, trying the problems, and seeing how I walkthrough solutions, and watching through the end so that there aren’t any unexpected surprises&lt;/li&gt;
-&lt;li&gt;If you find this helpful or interesting, like this video so that I know that the work I put into this series is having a good impact for you and other people&lt;/li&gt;
-&lt;li&gt;Also, if there are questions that you have encountered and want answered, comment them below so that I can get you a walkthrough!&lt;/li&gt;
-&lt;li&gt;And finally be sure to subscribe if you want access to the most recent walkthroughs&lt;/li&gt;
-&lt;li&gt;Thank you, and I hope you enjoy these videos!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-scientist-interview-walkthrough-probability-part-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Data Scientist Interview Walkthrough: Probability, Part 1&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Coins in a bag&lt;/li&gt;
-&lt;li&gt;Probability rules&lt;/li&gt;
-&lt;li&gt;Bayes’ Theorem, Bayes Factor&lt;/li&gt;
-&lt;li&gt;Frequentist Hypothesis Testing&lt;/li&gt;
-&lt;li&gt;Likelihood Ratio&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-scientist-interview-walkthrough-probability-part-2&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Data Scientist Interview Walkthrough: Probability, Part 2&lt;/h3&gt;
-&lt;p&gt;Geometric distribution problem.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;This video is part of a series where I work though common and current Data Science interview questions.&lt;/li&gt;
-&lt;li&gt;Subscribe if you want to see the latest videos.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact,&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;This question was adapted from a question that a friend was asked during a data science interview at a large company. It’s a great question because it starts out not too difficult.&lt;/li&gt;
-&lt;li&gt;Depending on how quickly and confidently you answer it, you get to unlock more and more challenging follow up questions.&lt;/li&gt;
-&lt;li&gt;This question has some good follow ups that I’ll reveal in this video, and at least two really great follow ups that I’ll show in future videos.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;So, here it is…&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;This problem starts out relatively easy but can transform into something that would be challenging to people who don’t watch my videos.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!---
-todo:
-
-- You are trapped in a room with three doors, one adds a day, another adds two days, the third is an escape. How long are you expected to be trapped in this room. 
-- alternatively;
-- You are playing a card game with three cards -- a &#39;1&#39;, a &#39;2&#39;, and an &#39;X&#39;. 
-- On each round, you pick one randomly. If you pick a &#39;1&#39;, then the game continues. If you pick the &#39;x&#39; then the game ends. 
-- How many rounds are your expected to play?
--- Now instead there is a &#39;1&#39;, a &#39;2&#39;, and an &#39;X&#39;. If you draw the &#39;1&#39;, you win $1, if you draw the &#39;2&#39; you win $2, and if you draw the &#39;X&#39; then the game ends. How much are you expected to win?
-
--- Now instead of winnings, the numbers on the card represent how many more rounds you&#39;ll need to play. What is the probability of the game ending? (version of Aman&#39;s question)
-- Aman&#39;s question - sample from a circle using a random number generator
-  - solution 1, ineffective is rejection sampling, sample from a square, then only accept samples within the circle
-  - circle question from Google
-
--- google question: Now there are cards 1 through 6. If the number of rounds is limited, and you only win the amount you received on the most recent round, what is your expected payoff as a function of the number of total rounds allowed?
-- expected value of the dice game process (get what you roll, expected value of game when you&#39;re alowed to roll n times)
-
--- recursive question: 
--- Now the game ends if you 
-
-- Bank teller problem 
-- random number generator from a uniform random number generator
-- estimate median from Google
-- variances of different experiment designs
-- multinomial and guessers &#39;favorite color&#39; and a proportion of users who guess randomly
-- bandits vs A/B tests, particularly for lots of conditions
-- LI: android you can randomize, iphone you can&#39;t (synthetic control)
-- strengths &amp; weaknesses of different ML algorithms (complex to simple explanations)
-- Chris Alborn&#39;s demos?
----&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;can make video, then make it public later.. (after job searching ends)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Video on my script for clicking the roll button on freebitco.com&lt;/li&gt;
-&lt;li&gt;Simplify the script to be a python script that can be run from the terminal with one command.&lt;/li&gt;
-&lt;li&gt;In the video, show people how to download the script from my GitHub and run the script from terminal :D&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Add referral code so that I get a cut of the coins generated by anyone watching my video&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;CTR:&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Thumbnail: Colorful background, with me looking and pointing at a screenshot of the python scrip &amp;amp; maybe text that says free on it?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Advertising:&lt;/li&gt;
-&lt;li&gt;“Sharing this video is like giving your friends free money!”&lt;/li&gt;
-&lt;li&gt;Incentivize: The more people who consistently do this, the more of the referral bonous I’ll give back.&lt;/li&gt;
-&lt;li&gt;Show an example of how much I could give back if they run this consistently.&lt;/li&gt;
-&lt;li&gt;My goal is to make a certain amount each week, so I’ll modify the referral bonus kickbacks based on that.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;So share this video to increase your kickback.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Explain a power analysis (start complicated, get simple to keep people watching till the end)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;an analysis done to find a sample size&lt;/li&gt;
-&lt;li&gt;formula based on t-distribution example&lt;/li&gt;
-&lt;li&gt;formula based on P(..)&lt;/li&gt;
-&lt;li&gt;General definition and power functions&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ab-testing-versus-bandits&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;A/B testing versus bandits&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;probability-distributions-series&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Probability Distributions Series&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Pick common distributions, describe them from the Wikipedia page&lt;/li&gt;
-&lt;li&gt;Show their probability functions&lt;/li&gt;
-&lt;li&gt;Show (derive?) their CDF&lt;/li&gt;
-&lt;li&gt;Derive their MGFs&lt;/li&gt;
-&lt;li&gt;Derive score and Fisher Information&lt;/li&gt;
-&lt;li&gt;Describe / show conjugacy properties?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ml-algorithm-series&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;ML algorithm series&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Explanations, intuitions of different ML algorithms&lt;/li&gt;
-&lt;li&gt;Strengths and weaknesses of different ML algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--
-
-Vevo
-
-Chris:
-- how would you interpret / recommend changes to a photo for eg nike?
-- slide on nike example: most of their images are low ... ? So you&#39;re saying some of these could be
-- What about the photos that are closer to the center? 
-
-
-Gina:
-
-- how do you normalize what one teacher considerd yellow versus another teacher?
-- - so there&#39;s a possibility that the K means diagram would be different if this was accounrted for?
-- talk more about predictions? .. About teacher alerts?
-- did you try other clustering algorithms?
-- 
-
-
-
-Magna: 
-- what if you wanted the best of both worlds
-
-
-Misha:
-- did you try adding avg cost on amazon as a feature?
-- did you try other algos for class imbalance? 
-- how did you handle key words? 
-
-
-Pam:
-
-- houw would you incorporate time?
-- did you account for bias in strave -- so runs in french quarter might be marathons when it is safe
-- how would you correct for that in your model?
-
-
-Sam: 
-- your approach versus collaborative filtering? 
-
-
-Vy:
-- what were the recommended for you?
-- if you had more time, what would you add?
-- how did you validate?
-- 
-
-Xuntao;
-
-- on validation slide, what exactly do you mean by good?
-- 
-
-upcoming projects; 
-- scounting algorithm to find upcoming artists and signs them!
-
-
-- agency over YT recommendations? 
-- lots of experimentation on optimizing end screens -- Work that Laura dows.
-- - 
-- greenfield: 
-- brownfield: work in confounds of existing product
-- DS projects combination of personal interest / quick return for work. 
-- couple of projects in the pipeline, what&#39;s your interest? 
-- timeline on projects, bc DS with too much time goes outside realm of value to a business
-- Timeline of project negotiated with lead. 
-- 
-
-
-- agency in the artists / videos you promote? 
-
-
-
-- has a data engineer.. 
-- most of data coming from youtube reporting or analytics APIs? 
-- also datasets with financial records
-- softer measures coming out of external clients.. 
-
-
-- what was your career path / background? 
-
-
-- other offices in NY, LM, .. LA office focused on talent acquisition. 
-- Expect to be at NY office. 
-- Eng team in Portland.
-- supports personal growth, sends DS to conferences, .. 
-
-
-- lots of promotion done manually from content team
-- future work to put measurements on it and optimize
-
-
-- company mission: increase monetization of all music. Work with artist to monetize their work. 
-
-- big 5 -- suck oxygen out of other social platforms. 
-- instead, partnet with google.. 
-- how do we build the tools to succeed on whatever platform we are in? 
-- focus on understanding what makes an artist successful. 
-- 
-
-
-- DS head, started as an engineer
-- 10 years in aerospace
-- sr DS at playstation, focusing on gameplay
-- switched to cybersecurity
-- came to Vevo
-
-- later in process: why do you want to work for us? 
-- what does it mean to optimize processes for the artist? For the label? For vevo? 
-
-
-- next step: onsite, 4-5 people
-- one technical, python or SQL
-- one softe DS making sure you understand taking a business outline and turn it into a DS problem and solution
-- bus opps
-- product
-- other business units asking questions about the mission of the company, working through a hypothetical problem.
-
-5 people, half hour each, plus lunch. 
-
-
---&gt;
 &lt;/div&gt;
 </description>
     </item>
