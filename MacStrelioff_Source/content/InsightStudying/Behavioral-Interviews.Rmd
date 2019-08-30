@@ -29,8 +29,6 @@ Try:
 
 - bring a notebook and use that instead of the whiteboard. -- keeps seeting closer / more engaging, also keeps a log of what was covered in the interview.
 
-
-
 In my personal life, I manage a YouTube channel. Recently I've pulled my viewer data from the YouTube API and found that my viewers are most engaged Sunday-Tuesday. I'm acting on this insight by scheduling my videos for release on Sundays.
 
 -->

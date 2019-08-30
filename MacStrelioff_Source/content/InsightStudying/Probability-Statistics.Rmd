@@ -56,9 +56,10 @@ Statisticians use probability theory to decide on what is and isn't true
 
 # Probability Foundations
 
+<!--
 Events, event spaces, 
-
 combinatorics (permutations and combinations)
+-->
 
 A random variable random variable is a variable with an unknown value, but known possible values. An event is an observed value of a random variable. An event space contains all possible values of the random variable. Probabilities are values assigned to the events in an event space (i.e. the possible values of a random variable) and represent how likely each event is relative to other events in the event space.
 
