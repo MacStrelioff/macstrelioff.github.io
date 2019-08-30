@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Thu, 29 Aug 2019 18:44:08 +0000</pubDate>
+      <pubDate>Thu, 29 Aug 2019 22:41:33 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -334,17 +334,22 @@
 &lt;/div&gt;
 &lt;div id=&#34;data-scientist-interview-walkthrough-probability-part-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Scientist Interview Walkthrough: Probability, Part 2&lt;/h3&gt;
-&lt;p&gt;Geometric distribution problem.&lt;/p&gt;
+&lt;p&gt;Geometric distribution problem:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;This video is part of a series where I work though common and current Data Science interview questions.&lt;/li&gt;
 &lt;li&gt;Subscribe if you want to see the latest videos.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact,&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;This question was adapted from a question that a friend was asked during a data science interview at a large company. It’s a great question because it starts out not too difficult.&lt;/li&gt;
-&lt;li&gt;Depending on how quickly and confidently you answer it, you get to unlock more and more challenging follow up questions.&lt;/li&gt;
-&lt;li&gt;This question has some good follow ups that I’ll reveal in this video, and at least two really great follow ups that I’ll show in future videos.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;So, here it is…&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;This problem starts out relatively easy but can transform into something that would be challenging to people who don’t watch my videos.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Recursion problem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This video has two problems that two different friends of mine received during an interview.&lt;/li&gt;
+&lt;li&gt;The first was from an onsite interview at a late stage startup.&lt;/li&gt;
+&lt;li&gt;The second was from&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Expected value problem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I was asked this question during a technical phone screen for a large, popular tech company that you know.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;… Feel free to comment a better solution if you can come up with one!&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!---
 todo:

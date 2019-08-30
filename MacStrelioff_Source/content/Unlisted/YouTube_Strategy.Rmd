@@ -249,20 +249,23 @@ I realized there was a lot of material to help prepare for software engineering 
 
 ### Data Scientist Interview Walkthrough: Probability, Part 2
 
-Geometric distribution problem.
+Geometric distribution problem:
 
 - This video is part of a series where I work though common and current Data Science interview questions. 
 - Subscribe if you want to see the latest videos.
 - And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact, 
 
-- This question was adapted from a question that a friend was asked during a data science interview at a large company. It's a great question because it starts out not too difficult. 
-- Depending on how quickly and confidently you answer it, you get to unlock more and more challenging follow up questions.
-- This question has some good follow ups that I'll reveal in this video, and at least two really great follow ups that I'll show in future videos.
-- So, here it is...
+Recursion problem: 
 
-- This problem starts out relatively easy but can transform into something that would be challenging to people who don't watch my videos. 
-- Some people might answer a question incorrectly, and feel like it was an easy question only to know that there were 2-3 progressively harder questions that the interviewer never got to. 
+- This video has two problems that two different friends of mine received during an interview. 
+- The first was from an onsite interview at a late stage startup. 
+- The second was from 
 
+Expected value problem: 
+
+- I was asked this question during a technical phone screen for a large, popular tech company that you know.
+
+- ... Feel free to comment a better solution if you can come up with one!
 
 <!---
 todo:
