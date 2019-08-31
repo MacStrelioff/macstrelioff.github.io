@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Sat, 31 Aug 2019 12:53:46 +0000</pubDate>
+      <pubDate>Sat, 31 Aug 2019 14:42:16 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -53,6 +53,7 @@
 &lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-question-set-4&#34;&gt;Data Scientist Interview Walkthrough: Probability Question Set 4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-probability-and-what-is-a-probability-function&#34;&gt;What is Probability and What is a Probability Function?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-a-power-analysis-explained-at-3-levels-of-difficulty&#34;&gt;What is a Power Analysis? (Explained at 3 levels of difficulty)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-a-sampling-distribution&#34;&gt;What is a sampling distribution?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ab-testing-versus-bandits&#34;&gt;A/B testing versus bandits&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#how-i-get-free-bitcoin-with-this-simple-python-script-and-you-can-too&#34;&gt;How I Get Free Bitcoin With This Simple Python Script (And you can too!)&lt;/a&gt;&lt;/li&gt;
@@ -212,6 +213,9 @@
 &lt;ul&gt;
 &lt;li&gt;mix Peter’s github repo / simulations with an explanation&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-is-a-sampling-distribution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What is a sampling distribution?&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ab-testing-versus-bandits&#34; class=&#34;section level2&#34;&gt;

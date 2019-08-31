@@ -132,6 +132,9 @@ Outro:
 
 - mix Peter's github repo / simulations with an explanation
 
+### What is a sampling distribution?
+
+
 ## A/B testing versus bandits
 
 <!---
