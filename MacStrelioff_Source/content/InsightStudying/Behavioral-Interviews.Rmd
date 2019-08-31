@@ -114,6 +114,15 @@ Goal:
 15. nervous
 16. impressiveness / leadership
 17. communication, language
+18. tell a professional work story
+19. engaging
+20. compelling
+21. clear
+22. complete
+23. create connection
+24. create conversation
+25. relate to job description -- issue: often times the job description is vague or unaligned with the job..
+
 
 Content: 
 
@@ -129,12 +138,24 @@ Content:
 10. accomplishments, competencies
 11. what you want: this position really excites me
 12. powerpoint presentation with background and results
-13. 
+13. company name
+14. title
+15. number of years
+16. job responsibilities
+17. mini work snapshots for every position
+18. achievement oriented
+19. accomplishment: anything that saved time, money, profitibility, quantifyable results
+20. what you know about the role. 
+21. why you are right fit: "overall ... I am confident I'd be able to succeed because..."
+
 
 My Perspective: 
 
-What is an interviewer thinking when they ask this? 
-They are imagining themselves working with you. Do you do cool things? Do you do relevant things? 
+- What is an interviewer thinking when they ask this? 
+- They are imagining themselves working with you. Do you do cool things? Do you do relevant things? 
+- The behavioral and technical questions help to get a complete picture of what it would be like to work with you. 
+- Will you make life easier or harder, ... ?
+- Instead of making it relevant to the particular job description, make it relevnat to qualities you'd like in a colleague, and mention that explicately: "I like to dive into new things and figure them out. So during my PhD I worked on a variety of projects ... ."
 
 Example Answer; 
 

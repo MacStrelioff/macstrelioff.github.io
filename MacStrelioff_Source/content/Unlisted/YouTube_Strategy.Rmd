@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 - Post the finished videos on my website under the video tab
 -->
 
+
+
+
 ## "About Me" Channel Video
 
 Why?
@@ -78,7 +81,16 @@ Value:
 - And finally be sure to subscribe if you want access to the most recent walkthroughs
 - Thank you, and I hope you enjoy these videos! 
 
+
 ### Data Scientist Interview Walkthrough: Probability Question Set 3
+
+Recursion problem: 
+
+- This video has two problems that two different friends of mine received during an interview. 
+- The first was from an onsite interview at a late stage startup. 
+- The second was from 
+
+### Data Scientist Interview Walkthrough: Probability Question Set 4
 
 Expected value problem: 
 
@@ -342,11 +354,6 @@ Geometric distribution problem:
 - Subscribe if you want to see the latest videos.
 - And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact, 
 
-Recursion problem: 
-
-- This video has two problems that two different friends of mine received during an interview. 
-- The first was from an onsite interview at a late stage startup. 
-- The second was from 
 
 
 
