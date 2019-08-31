@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Fri, 30 Aug 2019 19:38:38 +0000</pubDate>
+      <pubDate>Fri, 30 Aug 2019 21:12:32 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -59,6 +59,7 @@
 &lt;li&gt;&lt;a href=&#34;#behavioral-question-series&#34;&gt;Behavioral question series&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#probability-distributions-series&#34;&gt;Probability Distributions Series&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ml-algorithm-series&#34;&gt;ML algorithm series&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-data-scientists-do&#34;&gt;What Data Scientists Do&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#general-strategies-and-guides&#34;&gt;General Strategies and Guides&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#meta&#34;&gt;Meta&lt;/a&gt;&lt;/li&gt;
@@ -155,19 +156,44 @@
 &lt;/div&gt;
 &lt;div id=&#34;data-scientist-interview-walkthrough-probability-question-set-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Scientist Interview Walkthrough: Probability Question Set 3&lt;/h3&gt;
-&lt;p&gt;Recursion problem:&lt;/p&gt;
+&lt;p&gt;Thumbnail:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;This video has two problems that two different friends of mine received during an interview.&lt;/li&gt;
+&lt;li&gt;Me centered, looking perplexed in a direction of the title, with the problem full screen?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Intro:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There’s two questions in this video.&lt;/li&gt;
 &lt;li&gt;The first was from an onsite interview at a late stage startup.&lt;/li&gt;
-&lt;li&gt;The second was from&lt;/li&gt;
+&lt;li&gt;The second was from an actual test that a company gave as a screen.&lt;/li&gt;
+&lt;li&gt;Here they are:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outro:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;So I have a few things to say before I end this video.&lt;/li&gt;
+&lt;li&gt;First, if you have any questions, feel free to leave them in the comment section so that I or someone else can address them.&lt;/li&gt;
+&lt;li&gt;Second, these videos actually take time to make, time that I could spend doing things that are more fun like drinking coffee.&lt;/li&gt;
+&lt;li&gt;I’m deciding whether I should make more videos like this, so if you liked it, please “make it official” and click the like button on YouTube.&lt;/li&gt;
+&lt;li&gt;Finally, try subscribing if you want more videos like this&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-scientist-interview-walkthrough-probability-question-set-4&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Scientist Interview Walkthrough: Probability Question Set 4&lt;/h3&gt;
+&lt;p&gt;Thumbnail:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Me centered, looking perplexed in a direction of the title, with a green/blue background?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Intro:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Expected value problem:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;I was asked this question during a technical phone screen for a large, popular tech company that you know.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;… Feel free to comment a better solution if you can come up with one!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outro:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-is-probability-and-what-is-a-probability-function&#34; class=&#34;section level3&#34;&gt;
@@ -243,8 +269,15 @@ todo:
 &lt;div id=&#34;ml-algorithm-series&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ML algorithm series&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;include scripts, and put the scripts on my GitHub for download (then I can cite GH DLs on my CV)&lt;/li&gt;
 &lt;li&gt;Explanations, intuitions of different ML algorithms&lt;/li&gt;
 &lt;li&gt;Strengths and weaknesses of different ML algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-data-scientists-do&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What Data Scientists Do&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Break down some blog posts from big companies (Google, Netflix, Instacart, …)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -458,7 +491,7 @@ todo:
     <item>
       <title>Behavioral Interviewing</title>
       <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Fri, 30 Aug 2019 19:21:18 +0000</pubDate>
+      <pubDate>Fri, 30 Aug 2019 20:28:15 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>
@@ -609,6 +642,10 @@ I hope you are interested in the skills and projects outlined in my resume, and 
 &lt;li&gt;accomplishment: anything that saved time, money, profitibility, quantifyable results&lt;/li&gt;
 &lt;li&gt;what you know about the role.&lt;/li&gt;
 &lt;li&gt;why you are right fit: “overall … I am confident I’d be able to succeed because…”&lt;/li&gt;
+&lt;li&gt;self-aware&lt;/li&gt;
+&lt;li&gt;transparent (trustworthy)&lt;/li&gt;
+&lt;li&gt;potential leader&lt;/li&gt;
+&lt;li&gt;tell your story, one that leads clearly to their offer&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;My Perspective:&lt;/p&gt;
 &lt;ul&gt;
@@ -617,6 +654,13 @@ I hope you are interested in the skills and projects outlined in my resume, and 
 &lt;li&gt;The behavioral and technical questions help to get a complete picture of what it would be like to work with you.&lt;/li&gt;
 &lt;li&gt;Will you make life easier or harder, … ?&lt;/li&gt;
 &lt;li&gt;Instead of making it relevant to the particular job description, make it relevnat to qualities you’d like in a colleague, and mention that explicately: “I like to dive into new things and figure them out. So during my PhD I worked on a variety of projects … .”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example answer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open: I recently graduated from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in prediction markets and arbitrage.&lt;/li&gt;
+&lt;li&gt;Problem: So prediction markets are a platform where people can buy and sell contracts on events that pay a dollar if the event occurs and nothing if it doesn’t occur. So for example, one market might be Who will win the 2020 election, and contracts might be ‘Bernie Sanders’, ‘Andrew Yang’, ‘Donnald Trump’, … . Since the contracts pay out $1, the theory is that the price should estimate the underlying probability of the event occuring. And since the market is aggregating information across individuals, it should be a pretty good estimate. However, individuals have shown a number of biases in probabilistic reasoning in lab studies, so I was wondering if these same biases would exist in prediction market prices. If they did, then I could make profitable trading algorithms.&lt;/li&gt;
+&lt;li&gt;So I partnered with a large online prediction market to get access to their data, and found evidence of some biases consistent with those observed in lab studies.&lt;/li&gt;
+&lt;li&gt;Trajectory: Overall, I realized that I enjoy these kinds of impactful analyses of real-world data, moreso than theory building through laboratory studies, so I decided to bridge into a career in data science, and joined Insight to become part of a network of data scientists.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Example Answer;&lt;/p&gt;
 &lt;ul&gt;
