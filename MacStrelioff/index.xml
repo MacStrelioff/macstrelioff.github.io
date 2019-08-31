@@ -38,7 +38,7 @@
     <item>
       <title>Behavioral Interviewing</title>
       <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Fri, 30 Aug 2019 15:59:30 +0000</pubDate>
+      <pubDate>Fri, 30 Aug 2019 16:32:03 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>
@@ -109,6 +109,29 @@ I hope you are interested in the skills and projects outlined in my resume, and 
 &lt;div id=&#34;tell-me-a-little-about-your-background.&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;“Tell me a little about your background.”&lt;/h2&gt;
 &lt;p&gt;This question gives an opportunity to demonstrate clear communication, curiosity, enthusiasm, transferrable skills, and value adds. This is also an opportunity to align past experience with the current job opportunity.&lt;/p&gt;
+&lt;p&gt;Why is it asked?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To assess presentation skills; clear, professional, charismatic, likable, impressive&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Goals of this:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Impress them&lt;/li&gt;
+&lt;li&gt;Highlight what you can contribute (stories related to what they want)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note – As you answer, they are imagining working with you.&lt;/p&gt;
+&lt;p&gt;Templates;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Current role, background, ambitions and fit&lt;/li&gt;
+&lt;li&gt;Relevant experience, methodologies, and results&lt;/li&gt;
+&lt;li&gt;Problem, curiosity, value, project&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Example Answer;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current role: “I’m currently a Fellow at Insight Data Science. During this, I worked on a consulting project Overall my client was really happy with my work.”&lt;/li&gt;
+&lt;li&gt;Background: “Prior to Insight, I … . I hold a PhD in Cognitive Science from an experimental psychology lab, and a masters in statistics.”&lt;/li&gt;
+&lt;li&gt;Ambitions:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Template:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Problem: Concepts and context&lt;/li&gt;
@@ -118,7 +141,7 @@ I hope you are interested in the skills and projects outlined in my resume, and 
 &lt;/ul&gt;
 &lt;p&gt;Example answer:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Open: I recently graduates from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in prediction markets and arbitrage.&lt;/li&gt;
+&lt;li&gt;Open: I recently graduated from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in prediction markets and arbitrage.&lt;/li&gt;
 &lt;li&gt;Problem: So prediction markets are a platform where people can buy and sell contracts on events that pay a dollar if the event occurs and nothing if it doesn’t occur. So for example, one market might be Who will win the 2020 election, and contracts might be ‘Bernie Sanders’, ‘Andrew Yang’, ‘Donnald Trump’, … . Since the contracts pay out $1, the theory is that the price should estimate the underlying probability of the event occuring. And since the market is aggregating information across individuals, it should be a pretty good estimate. However, individuals have shown a number of biases in probabilistic reasoning in lab studies, so I was wondering if these same biases would exist in prediction market prices. If they did, then I could make profitable trading algorithms.&lt;/li&gt;
 &lt;li&gt;So I partnered with a large online prediction market to get access to their data, and found evidence of some biases consistent with those observed in lab studies.&lt;/li&gt;
 &lt;li&gt;Trajectory: Overall, I realized that I enjoy these kinds of impactful analyses of real-world data, moreso than theory building through laboratory studies, so I decided to bridge into a career in data science, and joined Insight to become part of a network of data scientists.&lt;/li&gt;

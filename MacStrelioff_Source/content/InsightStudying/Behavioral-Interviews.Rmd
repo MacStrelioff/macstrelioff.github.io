@@ -63,6 +63,33 @@ Mock interviews: Practice, practice, practice
 
 This question gives an opportunity to demonstrate clear communication, curiosity, enthusiasm, transferrable skills, and value adds. This is also an opportunity to align past experience with the current job opportunity.
 
+Why is it asked?
+
+- To assess presentation skills; clear, professional, charismatic, likable, impressive
+- 
+
+Goals of this: 
+
+1. Impress them
+2. Highlight what you can contribute (stories related to what they want)
+
+Note -- As you answer, they are imagining working with you. 
+
+Templates; 
+
+1. Current role, background, ambitions and fit
+2. Relevant experience, methodologies, and results
+2. Problem, curiosity, value, project
+
+
+Example Answer; 
+
+- Current role: "I'm currently a Fellow at Insight Data Science. During this, I worked on a consulting project 
+Overall my client was really happy with my work."
+- Background: "Prior to Insight, I ... . I hold a PhD in Cognitive Science from an experimental psychology lab, and a masters in statistics. "
+- Ambitions: 
+
+
 Template: 
 
 - Problem: Concepts and context
@@ -72,7 +99,7 @@ Template:
 
 Example answer: 
 
-- Open: I recently graduates from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in prediction markets and arbitrage.
+- Open: I recently graduated from UC Irvine, where I studied statistics and cognitive science. I worked on a few lines of research, the one that was most interesting to me came out of an interest in prediction markets and arbitrage.
 - Problem: So prediction markets are a platform where people can buy and sell contracts on events that pay a dollar if the event occurs and nothing if it doesn't occur. So for example, one market might be Who will win the 2020 election, and contracts might be 'Bernie Sanders', 'Andrew Yang', 'Donnald Trump', ... . Since the contracts pay out $1, the theory is that the price should estimate the underlying probability of the event occuring. And since the market is aggregating information across individuals, it should be a pretty good estimate. However, individuals have shown a number of biases in probabilistic reasoning in lab studies, so I was wondering if these same biases would exist in prediction market prices. If they did, then I could make profitable trading algorithms. 
 - So I partnered with a large online prediction market to get access to their data, and found evidence of some biases consistent with those observed in lab studies. 
 - Trajectory: Overall, I realized that I enjoy these kinds of impactful analyses of real-world data, moreso than theory building through laboratory studies, so I decided to bridge into a career in data science, and joined Insight to become part of a network of data scientists. 
