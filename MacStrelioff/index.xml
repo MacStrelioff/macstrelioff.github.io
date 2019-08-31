@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Fri, 30 Aug 2019 23:18:53 +0000</pubDate>
+      <pubDate>Sat, 31 Aug 2019 12:53:46 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -85,6 +85,7 @@
 &lt;li&gt;&lt;a href=&#34;#finished&#34;&gt;Finished:&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-1&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-part-2&#34;&gt;Data Scientist Interview Walkthrough: Probability, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-scientist-interview-walkthrough-probability-question-set-3-1&#34;&gt;Data Scientist Interview Walkthrough: Probability Question Set 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -186,7 +187,6 @@
 &lt;ul&gt;
 &lt;li&gt;I was asked this question during a technical phone screen for a large, popular tech company that you know.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Expected value problem:&lt;/p&gt;
 &lt;p&gt;Outro:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;/li&gt;
@@ -478,6 +478,28 @@ todo:
 &lt;li&gt;This video is part of a series where I work though common and current Data Science interview questions.&lt;/li&gt;
 &lt;li&gt;Subscribe if you want to see the latest videos.&lt;/li&gt;
 &lt;li&gt;And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-scientist-interview-walkthrough-probability-question-set-3-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Scientist Interview Walkthrough: Probability Question Set 3&lt;/h3&gt;
+&lt;p&gt;Thumbnail:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Me centered, looking perplexed in a direction of the title, with the problem full screen?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Intro:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There’s two questions in this video.&lt;/li&gt;
+&lt;li&gt;The first was from an onsite interview at a late stage startup.&lt;/li&gt;
+&lt;li&gt;The second was from an actual test that a company gave as a screen.&lt;/li&gt;
+&lt;li&gt;Here they are:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outro:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;So I have a few things to say before I end this video.&lt;/li&gt;
+&lt;li&gt;First, if you have any questions, feel free to leave them in the comment section so that they can be addressed.&lt;/li&gt;
+&lt;li&gt;Second, these videos actually take time to make, time that I could spend doing things that are more fun like drinking coffee.&lt;/li&gt;
+&lt;li&gt;I’m deciding whether I should make more videos like this, so if you liked it, please “make it official” and click the like button on YouTube.&lt;/li&gt;
+&lt;li&gt;Finally, try subscribing if you want to see the latest videos like this&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;

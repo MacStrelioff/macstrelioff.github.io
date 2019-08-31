@@ -94,14 +94,13 @@ Intro:
 - The second was from an actual test that a company gave as a screen.
 - Here they are:
 
-Outro:
+Outro: 
 
 - So I have a few things to say before I end this video. 
 - First, if you have any questions, feel free to leave them in the comment section so that they can be addressed.
 - Second, these videos actually take time to make, time that I could spend doing things that are more fun like drinking coffee. 
 - I'm deciding whether I should make more videos like this, so if you liked it, please "make it official" and click the like button on YouTube. 
 - Finally, try subscribing if you want to see the latest videos like this
-
 
 ### Data Scientist Interview Walkthrough: Probability Question Set 4
 
@@ -112,9 +111,6 @@ Thumbnail:
 Intro:
 
 - I was asked this question during a technical phone screen for a large, popular tech company that you know.
-
-Expected value problem: 
-
 
 Outro:
 
@@ -381,6 +377,26 @@ Geometric distribution problem:
 - And if this sounds interesting or helpful, give this video a like so that I know the these videos are having an impact, 
 
 
+### Data Scientist Interview Walkthrough: Probability Question Set 3
+
+Thumbnail: 
+
+- Me centered, looking perplexed in a direction of the title, with the problem full screen?
+
+Intro:
+
+- There's two questions in this video.
+- The first was from an onsite interview at a late stage startup. 
+- The second was from an actual test that a company gave as a screen.
+- Here they are:
+
+Outro: 
+
+- So I have a few things to say before I end this video. 
+- First, if you have any questions, feel free to leave them in the comment section so that they can be addressed.
+- Second, these videos actually take time to make, time that I could spend doing things that are more fun like drinking coffee. 
+- I'm deciding whether I should make more videos like this, so if you liked it, please "make it official" and click the like button on YouTube. 
+- Finally, try subscribing if you want to see the latest videos like this
 
 
 
