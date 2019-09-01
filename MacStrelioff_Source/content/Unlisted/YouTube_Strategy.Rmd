@@ -46,6 +46,10 @@ About Me:
 - Amazed to learn that there's a huge interplay between psychology and computer science -- reinforcement learning Skinner in the 30's, turned into a plethora of models in computer science, which are now being used to explain human behavior, and neural correlates of key values in those models are being discovered. 
 - Overall I was more interested in naturally occurring datasets, and experimental design -- how we structude and verify our beliefs, and then use those beliefs to guide our actions. 
 - So here at X that might look like using naturally occurring user data to develop and validate models that inform choices about product design. 
+- I really like diving into a new theory or model and gaining an redicovering the intuition from some first principles. 
+- I also love finding connections between seemingly desparate fields or ideas. This is one of the reasons I was drawn to math and statistics -- the same formal patterns and expressions are manifested in so many diverse applications. 
+- During graduate school I contributed to a number of projects (behavioral econ, strategy inference, RL, ... ) and learned about theories that have real applications -- how people make decisions with tradeoffs, how specific ways of delivering reward can influence behavior. 
+- I'm also deeply interested in the right way to justify a decision or belief -- this is something that propelled my interest in experimentation, Bayesian statistics, and causal inference. 
 
 - My mission is to break down barriers, mainly by democratizing education. 
 - About me: UCI, recorded lectures for students, stats masters, data scientist, ... 
