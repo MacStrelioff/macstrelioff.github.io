@@ -105,8 +105,11 @@ Outro:
 
 See: 
 
-- [Predicting Intent Using Activity Logs](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf)
-- [Understanding behaviors that lead to purchasing](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf)
+1. [Predicting Intent Using Activity Logs](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf)
+
+- 
+
+2. [Understanding behaviors that lead to purchasing](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf)
 
 
 

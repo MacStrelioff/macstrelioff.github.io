@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Sat, 31 Aug 2019 16:34:27 +0000</pubDate>
+      <pubDate>Sun, 01 Sep 2019 10:14:01 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -185,10 +185,15 @@
 &lt;div id=&#34;explain-some-research-at-pintrest&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Explain some research at Pintrest&lt;/h3&gt;
 &lt;p&gt;See:&lt;/p&gt;
-&lt;ul&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf&#34;&gt;Predicting Intent Using Activity Logs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf&#34;&gt;Understanding behaviors that lead to purchasing&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf&#34;&gt;Understanding behaviors that lead to purchasing&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-science-topics-and-concepts&#34; class=&#34;section level2&#34;&gt;
