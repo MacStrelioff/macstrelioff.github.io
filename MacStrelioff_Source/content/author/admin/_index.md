@@ -68,17 +68,21 @@ TODO:
 
 - Update website:
 - - Change bio page to be product focused
-- - refine DS fundamentals pages
+- - Refine DS fundamentals pages
+- - Add video presentations of my work, and a video 'about me'
 
 - 1 DS video every 3 days
 
+
+- - About me (landing page on my channel)
+- - Project descriptions
 - - What is probability, really??
 - - What is a probability mass function?
 - - Behavioral questions (use general titles for these to attract a large audience)
-- - About me (landing page on my channel)
 - - How I Get Free Bitcoin With This Simple Python Script (And You Can Too!)
 
 - DS Projects for my GitHub:
+- - Intent modeling of AirBnb users, based on Pintrest intent modeling paper, but using an online model that updates the probability that a user is planning to book or not book, and infers where they are planning to book :D
 - - Instacart, a item utility over time model applied to instacart data!
 - - - so, model an increasing preference from a user for an item, based on 
 - - - could help improve recommendations or target ads
