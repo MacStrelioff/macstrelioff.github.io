@@ -87,7 +87,7 @@ Value:
 
 ### Data Scientist Interview Walkthrough: Probability Question Set 4
 
-Thumbnail: 
+Thumbnail:
 
 - Me centered, looking perplexed in a direction of the title, with a green/blue background?
 
@@ -95,7 +95,7 @@ Intro:
 
 - I was asked this question during a technical phone screen for a large, popular tech company that you know.
 
-Outro: 
+Outro:
 
 - So I have a few things to say before I end this video. 
 - First, if you have any questions, feel free to leave them in the comment section so that they can be addressed.
@@ -111,7 +111,31 @@ See:
 
 1. [Predicting Intent Using Activity Logs](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf)
 
+Pintrest: 
+
+- Content sharing platform, and image based search engine
 - 
+
+Problem and volue of a solution: 
+
+- Users can use a product with different intents, and the material that a user finds valuable may depend on their intent.
+- Being able to infer a user's intent from their behavior during a session would enable a personalized experience aligned with a user's goals. 
+- Example: Someone looking for dinner recepies might want something they can quickly make with common ingredients, while someone looking for potluck ideas might want more unique dishes, and someone who is just browsing food might prefer a variety of exotic food images. 
+
+Current paper: 
+
+- Goals: Understand how intent informs behavior, and whether intent can be inferred from behavior.
+- Two dimensions of intent: 
+- Goal specificity: whether the intent is stimulus specific (glutin free chocolate chip recepies) or vague (just browsing to pass time).
+- and temporal range: Time horizon for goal completion (tonight, next week, next month, ...).
+- In psych, motivation is defined as a directing and activating or invigorating force. The directional component maps onto what Pintrest is calling goal specificity, and the invigorating component might map onto the inverse of what Pintrest refers to as temporal range.
+- In psych, there's a notion of goal-directed and habitual behavior. The former is driven by a specific desired outcome (similar to goal specificity here) while the later is a less mindful response to stimuli (eg boredom triggers a passive arousal seeking).
+
+Findings: 
+
+- Goal-specific users are: 
+more focused
+
 
 2. [Understanding behaviors that lead to purchasing](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf)
 
