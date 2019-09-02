@@ -139,9 +139,9 @@
   <meta property="og:description" content="Planned Videos “About Me” Channel Video Data Science Interview Walkthrough Series “Data Scientist Interview Walkthrough: Intro” Data Scientist Interview Walkthrough: Probability Question Set 4  Current Topics in Data Science Explain some research at Pintrest  Data Science Topics and Concepts What is Probability and What is a Probability Function? What is a Power Analysis? (Explained at 3 levels of difficulty) What is a sampling distribution?  A/B testing versus bandits How I Get Free Bitcoin With This Simple Python Script (And you can too!"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-01T18:51:21&#43;00:00">
+  <meta property="article:published_time" content="2019-09-01T19:43:23&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-01T18:51:21&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-01T19:43:23&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-01 18:51:21 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-01 18:51:21 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-01 19:43:23 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-01 19:43:23 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -610,13 +610,15 @@
 <p>Pintrest:</p>
 <ul>
 <li>Content sharing platform, and image based search engine</li>
-<li></li>
+<li>Prior research found user types; 1) casual browsers, 2) responding to a specific goals</li>
+<li>Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.</li>
 </ul>
 <p>Problem and volue of a solution:</p>
 <ul>
 <li>Users can use a product with different intents, and the material that a user finds valuable may depend on their intent.</li>
 <li>Being able to infer a user’s intent from their behavior during a session would enable a personalized experience aligned with a user’s goals.</li>
 <li>Example: Someone looking for dinner recepies might want something they can quickly make with common ingredients, while someone looking for potluck ideas might want more unique dishes, and someone who is just browsing food might prefer a variety of exotic food images.</li>
+<li>User intent can vary with each session, so quickly identifying intent within a session can help with changing the interface and content shown to the user in real time based on their inferred intent</li>
 </ul>
 <p>Current paper:</p>
 <ul>
@@ -626,10 +628,17 @@
 <li>and temporal range: Time horizon for goal completion (tonight, next week, next month, …).</li>
 <li>In psych, motivation is defined as a directing and activating or invigorating force. The directional component maps onto what Pintrest is calling goal specificity, and the invigorating component might map onto the inverse of what Pintrest refers to as temporal range.</li>
 <li>In psych, there’s a notion of goal-directed and habitual behavior. The former is driven by a specific desired outcome (similar to goal specificity here) while the later is a less mindful response to stimuli (eg boredom triggers a passive arousal seeking).</li>
+<li>In social psych, attitudes have been thought about along a gradient of specificity – so maybe things like time-related words in a query can be used to identify goal-directed users.</li>
+<li>Shopping websites can be used for a specific purchase (goal-directed) or in an experiential way (habitual).</li>
 </ul>
 <p>Findings:</p>
 <ul>
-<li>Goal-specific users are: more focused</li>
+<li>Goal-specific users are: more focused, engage more in task-oriented activities like searching, spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days</li>
+<li>users with short term goals: specific categories of content, likely to reference saved content, less likely to save new content, goal-specific users more likely to act in short term, habitual users more unsure of taking actions</li>
+<li>Demographic differences: females more likely to be goal-specific, males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save</li>
+<li>Model can predict goal specificity and temporal range.</li>
+<li>Current session data is most informative, historical activity data also helpful</li>
+<li></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li><a href="https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf">Understanding behaviors that lead to purchasing</a></li>

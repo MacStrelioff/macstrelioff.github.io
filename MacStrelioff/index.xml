@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Sun, 01 Sep 2019 18:51:21 +0000</pubDate>
+      <pubDate>Sun, 01 Sep 2019 19:43:23 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -195,13 +195,15 @@
 &lt;p&gt;Pintrest:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Content sharing platform, and image based search engine&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Prior research found user types; 1) casual browsers, 2) responding to a specific goals&lt;/li&gt;
+&lt;li&gt;Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Problem and volue of a solution:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Users can use a product with different intents, and the material that a user finds valuable may depend on their intent.&lt;/li&gt;
 &lt;li&gt;Being able to infer a user’s intent from their behavior during a session would enable a personalized experience aligned with a user’s goals.&lt;/li&gt;
 &lt;li&gt;Example: Someone looking for dinner recepies might want something they can quickly make with common ingredients, while someone looking for potluck ideas might want more unique dishes, and someone who is just browsing food might prefer a variety of exotic food images.&lt;/li&gt;
+&lt;li&gt;User intent can vary with each session, so quickly identifying intent within a session can help with changing the interface and content shown to the user in real time based on their inferred intent&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Current paper:&lt;/p&gt;
 &lt;ul&gt;
@@ -211,10 +213,17 @@
 &lt;li&gt;and temporal range: Time horizon for goal completion (tonight, next week, next month, …).&lt;/li&gt;
 &lt;li&gt;In psych, motivation is defined as a directing and activating or invigorating force. The directional component maps onto what Pintrest is calling goal specificity, and the invigorating component might map onto the inverse of what Pintrest refers to as temporal range.&lt;/li&gt;
 &lt;li&gt;In psych, there’s a notion of goal-directed and habitual behavior. The former is driven by a specific desired outcome (similar to goal specificity here) while the later is a less mindful response to stimuli (eg boredom triggers a passive arousal seeking).&lt;/li&gt;
+&lt;li&gt;In social psych, attitudes have been thought about along a gradient of specificity – so maybe things like time-related words in a query can be used to identify goal-directed users.&lt;/li&gt;
+&lt;li&gt;Shopping websites can be used for a specific purchase (goal-directed) or in an experiential way (habitual).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Findings:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Goal-specific users are: more focused&lt;/li&gt;
+&lt;li&gt;Goal-specific users are: more focused, engage more in task-oriented activities like searching, spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days&lt;/li&gt;
+&lt;li&gt;users with short term goals: specific categories of content, likely to reference saved content, less likely to save new content, goal-specific users more likely to act in short term, habitual users more unsure of taking actions&lt;/li&gt;
+&lt;li&gt;Demographic differences: females more likely to be goal-specific, males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save&lt;/li&gt;
+&lt;li&gt;Model can predict goal specificity and temporal range.&lt;/li&gt;
+&lt;li&gt;Current session data is most informative, historical activity data also helpful&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf&#34;&gt;Understanding behaviors that lead to purchasing&lt;/a&gt;&lt;/li&gt;
