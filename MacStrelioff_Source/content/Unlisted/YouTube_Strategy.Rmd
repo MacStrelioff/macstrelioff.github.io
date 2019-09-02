@@ -135,6 +135,11 @@ Current paper:
 - In social psych, attitudes have been thought about along a gradient of specificity -- so maybe things like time-related words in a query can be used to identify goal-directed users.
 - Shopping websites can be used for a specific purchase (goal-directed) or in an experiential way (habitual).
 
+Methods: 
+
+- 
+
+
 Findings: 
 
 - Goal-specific users are: 
