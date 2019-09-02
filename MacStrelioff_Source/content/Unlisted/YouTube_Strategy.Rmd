@@ -116,6 +116,10 @@ Pintrest:
 - Content sharing platform, and image based search engine
 - Prior research found user types; 1) casual browsers, 2) responding to a specific goals
 - Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.
+- On Pintrest users view pins (content) to boards (collections). 
+- Pins have 33 categories (DIY, food and drink, ...)
+- Users can look at closeups of Pins, which provides additional information
+- Users can click through to visit a site affiliated with a pin
 
 Problem and volue of a solution: 
 
@@ -137,8 +141,24 @@ Current paper:
 
 Methods: 
 
-- 
+- Sample: 5369 females mean age 33.5, 564 males mean age 38.6, all from US and on Pintrest during July 2016
+- Survey asking; 
+- 7 point likert scale: "Are you visiting Pintrest with a goal in mind?"
+- "When are you planning to act on what you're looking for today"
+- Question about Pintrest specific motivations (eg finding DIY ideas)
+- "What are you looking for on Pintrest today?" Response options were based on Pintrest categories
+- Focused on data in the session immediately following the survey
+- primarily analyzed first 10 minutes because this window had peak performance, around 27% of sessions had fewer than 10 minutes
+- Over 850,000 behavioral events (views, closeups, searches) across 5933 users within 10 minutes.
+- Also analyzed behavior from when the user first created account until a week after survey completion
+- used Holm-corrected p-values, a method that is more powerful than a the conservative Bonferroni correction.
 
+
+Mitigating limitations: 
+
+- coverage bias: mitigated by uniformly sampling from users for inclusion
+- participation bias: compared activity of users who completed the survey (addigned survey, took survey) to those who saw the survey popup but did not complete the survey (assigned survey, did not take survey). 
+- Survey takers had been using Pintrest longer, and had more saved pins. Inferred from this that engaged users were 
 
 Findings: 
 
@@ -147,14 +167,16 @@ more focused,
 engage more in task-oriented activities like searching, 
 spend more time browsing specific categories of content in detail, 
 more likely to reference saved content, 
-less likely to return in next 7 days
+less likely to return in next 7 days,
+less likely to attribute their visit to boredom (2% vs 25% for habitual),
+more likely to attribute visit to making something (26% vs 5% for habitual)
 - users with short term goals:
 specific categories of content, 
 likely to reference saved content, 
 less likely to save new content, 
 goal-specific users more likely to act in short term, habitual users more unsure of taking actions
 - Demographic differences:
-females more likely to be goal-specific, 
+females more likely to be goal-specific (49% vs 40%), 
 males unsure of taking action, 
 older users more short-term goals, 
 younger users more unsure of taking action, 

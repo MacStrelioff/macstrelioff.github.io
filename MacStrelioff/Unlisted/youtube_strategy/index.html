@@ -139,9 +139,9 @@
   <meta property="og:description" content="Planned Videos “About Me” Channel Video Data Science Interview Walkthrough Series “Data Scientist Interview Walkthrough: Intro” Data Scientist Interview Walkthrough: Probability Question Set 4  Current Topics in Data Science Explain some research at Pintrest  Data Science Topics and Concepts What is Probability and What is a Probability Function? What is a Power Analysis? (Explained at 3 levels of difficulty) What is a sampling distribution?  A/B testing versus bandits How I Get Free Bitcoin With This Simple Python Script (And you can too!"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-01T20:41:28&#43;00:00">
+  <meta property="article:published_time" content="2019-09-01T21:47:54&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-01T20:41:28&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-01T21:47:54&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-01 20:41:28 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-01 20:41:28 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-01 21:47:54 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-01 21:47:54 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -612,6 +612,10 @@
 <li>Content sharing platform, and image based search engine</li>
 <li>Prior research found user types; 1) casual browsers, 2) responding to a specific goals</li>
 <li>Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.</li>
+<li>On Pintrest users view pins (content) to boards (collections).</li>
+<li>Pins have 33 categories (DIY, food and drink, …)</li>
+<li>Users can look at closeups of Pins, which provides additional information</li>
+<li>Users can click through to visit a site affiliated with a pin</li>
 </ul>
 <p>Problem and volue of a solution:</p>
 <ul>
@@ -633,13 +637,29 @@
 </ul>
 <p>Methods:</p>
 <ul>
-<li></li>
+<li>Sample: 5369 females mean age 33.5, 564 males mean age 38.6, all from US and on Pintrest during July 2016</li>
+<li>Survey asking;</li>
+<li>7 point likert scale: “Are you visiting Pintrest with a goal in mind?”</li>
+<li>“When are you planning to act on what you’re looking for today”</li>
+<li>Question about Pintrest specific motivations (eg finding DIY ideas)</li>
+<li>“What are you looking for on Pintrest today?” Response options were based on Pintrest categories</li>
+<li>Focused on data in the session immediately following the survey</li>
+<li>primarily analyzed first 10 minutes because this window had peak performance, around 27% of sessions had fewer than 10 minutes</li>
+<li>Over 850,000 behavioral events (views, closeups, searches) across 5933 users within 10 minutes.</li>
+<li>Also analyzed behavior from when the user first created account until a week after survey completion</li>
+<li>used Holm-corrected p-values, a method that is more powerful than a the conservative Bonferroni correction.</li>
+</ul>
+<p>Mitigating limitations:</p>
+<ul>
+<li>coverage bias: mitigated by uniformly sampling from users for inclusion</li>
+<li>participation bias: compared activity of users who completed the survey (addigned survey, took survey) to those who saw the survey popup but did not complete the survey (assigned survey, did not take survey).</li>
+<li>Survey takers had been using Pintrest longer, and had more saved pins. Inferred from this that engaged users were</li>
 </ul>
 <p>Findings:</p>
 <ul>
-<li>Goal-specific users are: more focused, engage more in task-oriented activities like searching, spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days</li>
+<li>Goal-specific users are: more focused, engage more in task-oriented activities like searching, spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days, less likely to attribute their visit to boredom (2% vs 25% for habitual), more likely to attribute visit to making something (26% vs 5% for habitual)</li>
 <li>users with short term goals: specific categories of content, likely to reference saved content, less likely to save new content, goal-specific users more likely to act in short term, habitual users more unsure of taking actions</li>
-<li>Demographic differences: females more likely to be goal-specific, males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save</li>
+<li>Demographic differences: females more likely to be goal-specific (49% vs 40%), males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save</li>
 <li>Model can predict goal specificity and temporal range.</li>
 <li>Current session data is most informative, historical activity data also helpful</li>
 <li></li>

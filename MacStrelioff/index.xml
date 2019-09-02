@@ -38,7 +38,7 @@
     <item>
       <title>YouTube Strategy</title>
       <link>/MacStrelioff/unlisted/youtube_strategy/</link>
-      <pubDate>Sun, 01 Sep 2019 20:41:28 +0000</pubDate>
+      <pubDate>Sun, 01 Sep 2019 21:47:54 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/youtube_strategy/</guid>
       <description>
@@ -197,6 +197,10 @@
 &lt;li&gt;Content sharing platform, and image based search engine&lt;/li&gt;
 &lt;li&gt;Prior research found user types; 1) casual browsers, 2) responding to a specific goals&lt;/li&gt;
 &lt;li&gt;Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.&lt;/li&gt;
+&lt;li&gt;On Pintrest users view pins (content) to boards (collections).&lt;/li&gt;
+&lt;li&gt;Pins have 33 categories (DIY, food and drink, …)&lt;/li&gt;
+&lt;li&gt;Users can look at closeups of Pins, which provides additional information&lt;/li&gt;
+&lt;li&gt;Users can click through to visit a site affiliated with a pin&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Problem and volue of a solution:&lt;/p&gt;
 &lt;ul&gt;
@@ -218,13 +222,29 @@
 &lt;/ul&gt;
 &lt;p&gt;Methods:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Sample: 5369 females mean age 33.5, 564 males mean age 38.6, all from US and on Pintrest during July 2016&lt;/li&gt;
+&lt;li&gt;Survey asking;&lt;/li&gt;
+&lt;li&gt;7 point likert scale: “Are you visiting Pintrest with a goal in mind?”&lt;/li&gt;
+&lt;li&gt;“When are you planning to act on what you’re looking for today”&lt;/li&gt;
+&lt;li&gt;Question about Pintrest specific motivations (eg finding DIY ideas)&lt;/li&gt;
+&lt;li&gt;“What are you looking for on Pintrest today?” Response options were based on Pintrest categories&lt;/li&gt;
+&lt;li&gt;Focused on data in the session immediately following the survey&lt;/li&gt;
+&lt;li&gt;primarily analyzed first 10 minutes because this window had peak performance, around 27% of sessions had fewer than 10 minutes&lt;/li&gt;
+&lt;li&gt;Over 850,000 behavioral events (views, closeups, searches) across 5933 users within 10 minutes.&lt;/li&gt;
+&lt;li&gt;Also analyzed behavior from when the user first created account until a week after survey completion&lt;/li&gt;
+&lt;li&gt;used Holm-corrected p-values, a method that is more powerful than a the conservative Bonferroni correction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mitigating limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;coverage bias: mitigated by uniformly sampling from users for inclusion&lt;/li&gt;
+&lt;li&gt;participation bias: compared activity of users who completed the survey (addigned survey, took survey) to those who saw the survey popup but did not complete the survey (assigned survey, did not take survey).&lt;/li&gt;
+&lt;li&gt;Survey takers had been using Pintrest longer, and had more saved pins. Inferred from this that engaged users were&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Findings:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Goal-specific users are: more focused, engage more in task-oriented activities like searching, spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days&lt;/li&gt;
+&lt;li&gt;Goal-specific users are: more focused, engage more in task-oriented activities like searching, spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days, less likely to attribute their visit to boredom (2% vs 25% for habitual), more likely to attribute visit to making something (26% vs 5% for habitual)&lt;/li&gt;
 &lt;li&gt;users with short term goals: specific categories of content, likely to reference saved content, less likely to save new content, goal-specific users more likely to act in short term, habitual users more unsure of taking actions&lt;/li&gt;
-&lt;li&gt;Demographic differences: females more likely to be goal-specific, males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save&lt;/li&gt;
+&lt;li&gt;Demographic differences: females more likely to be goal-specific (49% vs 40%), males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save&lt;/li&gt;
 &lt;li&gt;Model can predict goal specificity and temporal range.&lt;/li&gt;
 &lt;li&gt;Current session data is most informative, historical activity data also helpful&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
