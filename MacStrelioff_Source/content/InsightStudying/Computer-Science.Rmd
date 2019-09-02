@@ -468,6 +468,7 @@ Window functions include `OVER()` and `ROW_NUMBER()`. They take two optional arg
 # Resources
 
 - SQL training resources;
+- [vertabelo](https://academy.vertabelo.com/#courses_list_section)
 - [pgexercises](https://pgexercises.com/)
 - [Udacity course](https://classroom.udacity.com/courses/ud198)
 - [sqlbolt](https://sqlbolt.com/lesson/select_queries_introduction)

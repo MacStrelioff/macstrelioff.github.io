@@ -103,6 +103,20 @@ Outro:
 - I'm deciding whether I should make more videos like this, so if you liked it, please "make it official" and click the like button on YouTube. 
 - Finally, try subscribing if you want to see the latest videos like this
 
+### Why do you want this role? 
+
+- see [https://www.youtube.com/watch?v=taHSZEhTzPc](https://www.youtube.com/watch?v=taHSZEhTzPc)
+- Tip #1: Understand their PAIN and how to solve it.
+- Tip #2: Show the right demeanour.
+- Tip #3: Tell stories.
+- Tip #4: Sell yourself.
+- Tip #5: Be confidently YOU.
+- and this [https://www.youtube.com/watch?v=RiKXKYNlwFQ](https://www.youtube.com/watch?v=RiKXKYNlwFQ)
+- Also maybe a professional development workshop on this topic?
+-[general on behavioral interviews](https://www.youtube.com/watch?v=URs2vLAPNT0)
+- [general on rapport](https://www.youtube.com/watch?v=dENi7K2lX4U) 
+- [general on being liked](https://www.youtube.com/watch?v=OyV8LELM_HM)
+
 ## Current Topics in Data Science
 
 ### Explain some research at Pintrest
@@ -164,7 +178,7 @@ Findings:
 
 - Goal-specific users are: 
 more focused, 
-engage more in task-oriented activities like searching, 
+search more (1.1 vs 0.4 searches),
 spend more time browsing specific categories of content in detail, 
 more likely to reference saved content, 
 less likely to return in next 7 days,
