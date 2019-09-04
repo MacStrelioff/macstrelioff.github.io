@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Sep 2019 19:54:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 11:14:55 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Mon, 02 Sep 2019 19:54:18 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2019 11:14:55 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?</description>

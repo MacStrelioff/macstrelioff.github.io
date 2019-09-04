@@ -38,7 +38,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Mon, 02 Sep 2019 19:54:18 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2019 11:14:55 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>
@@ -118,6 +118,15 @@
 &lt;h2&gt;Cost Functions and Metrics&lt;/h2&gt;
 &lt;p&gt;Modeling: Validation metrics,&lt;/p&gt;
 &lt;p&gt;metrics (precision, recall, F1)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Precision_and_recall&#34;&gt;metrics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+acc  &amp;amp;= \frac{tp+tn}{tp+tn+fp+fn} \\
+prec &amp;amp;= \frac{tp}{tp+fp}\\
+rec  &amp;amp;= \frac{tp}{tp+fn}\\
+F1   &amp;amp;= 2\frac{prec*rec}{prec+rec}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;R squared, RMSE&lt;/p&gt;
 &lt;p&gt;Likelihood&lt;/p&gt;
 &lt;p&gt;regularisation (ridge, lasso),&lt;/p&gt;
