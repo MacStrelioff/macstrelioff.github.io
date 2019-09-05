@@ -144,7 +144,6 @@ Goal:
 24. create conversation
 25. relate to job description -- issue: often times the job description is vague or unaligned with the job..
 
-
 Content: 
 
 1. Current role
@@ -173,7 +172,6 @@ Content:
 24. potential leader
 25. tell your story, one that leads clearly to their offer
 
-
 My Perspective: 
 
 - What is an interviewer thinking when they ask this? 
@@ -181,7 +179,6 @@ My Perspective:
 - The behavioral and technical questions help to get a complete picture of what it would be like to work with you. 
 - Will you make life easier or harder, ... ?
 - Instead of making it relevant to the particular job description, make it relevnat to qualities you'd like in a colleague, and mention that explicately: "I like to dive into new things and figure them out. So during my PhD I worked on a variety of projects ... ."
-
 
 Example answer: 
 
@@ -196,7 +193,7 @@ Example Answer;
 
 - Current role: "I'm currently a Fellow at Insight Data Science. During this, I worked on a consulting project 
 Overall my client was really happy with my work."
-- Background: "Prior to Insight, I ... . I hold a PhD in Cognitive Science from an experimental psychology lab, and a masters in statistics. "
+- Background: "Prior to Insight, I ... . I hold a PhD in Cognitive Science from an experimental psychology lab, and a masters in statistics."
 - Ambitions: 
 
 Template: 
