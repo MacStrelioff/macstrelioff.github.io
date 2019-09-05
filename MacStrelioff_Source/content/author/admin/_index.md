@@ -45,8 +45,8 @@ email: "macstrelioff@gmail.com"
 
 interests:
 - Applied Decision Theory
+- Causal Inference
 - Experimentation
-- Bandit tasks
 ---
 
 
@@ -56,8 +56,49 @@ I recently finished a PhD
 
 -->
 
+I’m personally interested optimizing knowledge generation and decision making processes. This lead me to study psychology and statistics, where I designed experiments and developed statistical methods to model human decision making and infer a person's decision making strategy from their choices.
 
+I am also passionate about breaking down barriers by democratizing education. Along these lines, I maintain a [YouTube channel](https://www.youtube.com/channel/UC8KypaF6w6K0SO6KLvyst8w) that began as videos of my lessons that I recorded for students who couldn't attend lectures. 
+
+Finally, I enjoy diving into new areas and learning new tools through consulting work and [hobby projects](https://macstrelioff.github.io/MacStrelioff/data-science/).
+
+<!--
+This is exemplified through two recent experiences. First, through a consulting project with a startup where I developed a model to predict which trial users would fail to convert to paying customers so that my client could intervene with these users. Second, through a current freelance project with a startup where I am using \textbf{Google Analytics} and Facebook Ad Analytics to devise ads and experiments that will facilitate growth.
+-->
+
+<!--
+These themes pervaded my graduate work in experimental psychology, where I studied the strategies that people use when converting information from their environments into reward-maximizing actions. 
+-->
+
+<!--
+This lead me to pursue a PhD in an Experimental Psychology lab and a concurrent MS in Statistics. I conducted severl lines of research during graduate school around themes of decision making, strategy inference, and effects of individual biases on aggregate metrics.
+-->
+
+<!--
+I also love ... new tools through consulting and freelance work
+-->
+
+<!--
+about people’s decision making processes and personally interested in making the best decisions possible. This lead me to pursue a PhD in a computational neuroscience lab where I used bandit tasks and reinforcement learning models to understand human decision making and infer decision strategies from observed choices.
+-->
+
+<!--
+I recently graduated with a PhD from an Experimental Psychology Lab with a concurrent MS in Statistics. 
+-->
+
+<!--
 I’ve always been curious about people’s decision making processes and personally interested in making the best decisions possible. This lead me to pursue a PhD in a computational neuroscience lab where I used bandit tasks and reinforcement learning models to understand human decision making and infer strategies from observed choices.
+-->
+
+<!--
+LinkedIn summary: 
+
+Experienced researcher with graduate degrees in cognitive science and statistics, and deep experience with: Bayesian modeling, decision theory, experimentation, machine learning. I'm primarily interested in experimentation and developing machine learning methods to automate real time decision making.
+
+I am constantly searching for new ways to apply my skills. Feel free to email me with any opportunities (contact info on my resume and website)! 
+-->
+
+
 
 <!--
 % Introduction
