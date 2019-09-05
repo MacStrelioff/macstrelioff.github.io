@@ -64,6 +64,8 @@ I’ve always been curious about people’s decision making processes and person
 TODO:
 
 - 1 LI message a day
+- - Elena Grewal, Ph.D., Head of Data Science at Airbnb (We're hiring!)
+
 - 1 job application a day
 
 - Update website:
