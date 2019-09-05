@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Sep 2019 11:14:55 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Sep 2019 09:08:42 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Behavioral Interviewing</title>
+      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
+      <pubDate>Thu, 05 Sep 2019 09:08:42 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
+      <description>Principles Evaluation  Common Behavioral Questions “Tell me a little about your background.” Child bandits:  “Tell me about the project you worked on at Insight.” “Why are you interested in a career as a data scientist?” “Tell me about your research / talk to me about your last role.” “Why are you interested in joining this company?” “Talk about a time you were on a team that struggled with effective communication.</description>
+    </item>
     
     <item>
       <title>Machine Learning</title>
@@ -27,15 +36,6 @@
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS Examples:  Pointers  Algorithms TODO / Other Topics: Recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions Tricks:   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</description>
-    </item>
-    
-    <item>
-      <title>Behavioral Interviewing</title>
-      <link>/MacStrelioff/insightstudying/behavioral-interviews/</link>
-      <pubDate>Fri, 30 Aug 2019 20:28:15 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
-      <description>Principles Common Behavioral Questions “Tell me a little about your background.” Child bandits:  “Tell me about the project you worked on at Insight.” “Why are you interested in a career as a data scientist?” “Tell me about your research / talk to me about your last role.” “Why are you interested in joining this company?” “Talk about a time you were on a team that struggled with effective communication.</description>
     </item>
     
     <item>

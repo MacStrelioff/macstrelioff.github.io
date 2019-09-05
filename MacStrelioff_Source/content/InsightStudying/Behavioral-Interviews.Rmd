@@ -57,6 +57,27 @@ STAR chart (Situation, Task, Action, Result)
 
 Mock interviews: Practice, practice, practice 
 
+
+## Evaluation
+
+(from Cracking the Coding Interview, pp. 16-17 on Product Manager interviews)
+
+PM Areas:
+
+- Handeling ambiguity: When faced with an ambigious problem, they evaluate you on seeking information, prioritizing the most important parts, solving the problem in a structured way
+- Customer focused attitide: Identifying user segments or intents, understanding who the customer is and how they use the product.
+- Customer focus technical: some understanding of the technical aspects of the product
+- Communication: Particularly able to explain concepts to broad audiences
+- Passion for technology: enthusiasm in describing prior work, excited and passionate about the company and role
+- Leadership: handle conflicts well, take initiative, understand people, people like working with you. 
+
+Dev Lead areas: 
+
+- Teamwork / Leadership: filtering people who are too arrogant or passive. 
+- Prioritization: understanding what parts of a project are critical, and what timelines are possible with limited resources
+- Communication: You can be friendly and engaging when communicating to senior, junior, and people outside your team.
+- "Getting Things Done": Balance between preparing for a project and implementing it. Ability to structure a problem and motivate people to accomplish goals. 
+
 # Common Behavioral Questions
 
 ## "Tell me a little about your background."
