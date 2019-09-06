@@ -64,6 +64,7 @@ I am constantly looking for new ways to apply my skills -- Feel free to [reach o
 TODO:
 
 - Update website:
+- - "Cracking the coding interview" Ch V to update project bios on webpage
 - - Change bio as to not pidgeonhole myself? 
 - - Change project descriptions to answer common interview questions 'tell me about X project'
 - - Change bio page to be product focused
