@@ -1,0 +1,145 @@
+---
+title: "Yelp Notes"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 99
+math: yes
+linktitle: Instacart Deep Dive
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+
+# TODO: 
+
+- Check out info from [blog](https://medium.com/acing-ai/instacart-data-science-interview-questions-e8d89bea1a34)
+- Read articles on their [DS blog](https://tech.instacart.com/tagged/data-science)
+
+
+# Company Visit
+
+
+## Business Model, Culture, and Vision
+
+
+## Projects, Tasks, and Data
+
+
+## DS Role
+
+
+### Discussion of past work
+"Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project."
+
+"elaborate on related projects from your resume"
+
+PredictIt Project:
+
+- Situation: 
+- Project: 
+- Maybe sketch the fig of price for Trump win versus Republican win
+- I also aggregated data based on days until expiration, and applied a linear in log odds model at each day. 
+- Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.
+- Result: 
+- Value to Yelp: Relates to the economic patterns maybe? 
+
+Strategy Inference Project:
+
+- Situation: 
+- Project: 
+- Children and adults might use different strategies when making decisions. 
+- I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time. 
+- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
+- Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user's decisions. This informaiton could then be used to modify search rankings. 
+- More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings. 
+
+General interest in decision making: 
+
+- Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, ... . 
+- Excitement: Yelp is basically a giant experiment in multiattribute decision making. 
+- Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers. 
+
+Insight Project: 
+
+- User funnel and user flow, maybe should have started at these simpler analyses
+- Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy
+- Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant
+- Chose random forests because it does a better job of pulling out important collinear features
+
+### Product metrics or experimentation
+"You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment."
+
+### General questions: 
+
+
+# Deep Dive
+
+## Stakeholders and Use Cases
+
+- Consumers: 
+- Delivery:
+- Stores: 
+
+## User Flows and Metrics
+
+Thinking of the broader user flow can help with identifying measurable events within that flow (metrics).
+Overall, consider units of individuals (accounts, unique visitors, cookies, IPs...), units of time (daily, weekly), and referents (week over week, ...)
+
+- good source for some key [metrics](https://www.yelp.com/knowledge)
+
+### On Web
+
+1. Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one. 
+
+- Growth: DAU, MAU
+- Growth: monthly new users, monthly unique users
+- Engagement: Reviews per user per month
+- Engagement: 
+- Engagement: Traffic to business pages
+- Monetization: Reservations
+- Monetization: Waitlist
+
+- Performance: Wait times at restaurants
+- [Some metrics for business partners](https://biz.yelp.com/)
+
+### On Mobile
+
+
+## Current issues
+
+- Supply/Demand balancing?
+
+## Competitors
+
+- Amazon
+- Other food delivery -- Grubhub, Uber Eats, ... 
+
+## Ideas, excitement, questions to ask
+
+## Glassdoor interview questions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
