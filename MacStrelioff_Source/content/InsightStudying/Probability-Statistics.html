@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-09-07 10:31:03"
+date: "2019-09-07 13:18:29"
 math: true
 output:
   blogdown::html_page:
@@ -27,8 +27,9 @@ linktitle: Probability and Statistics
 <li><a href="#causal-inference">Causal Inference</a><ul>
 <li><a href="#common-methods">Common Methods</a><ul>
 <li><a href="#diff-in-diff">Diff in Diff</a></li>
-<li><a href="#iv-analysis">IV Analysis</a></li>
+<li><a href="#causal-impact">Causal Impact</a></li>
 <li><a href="#synthetic-controls">Synthetic Controls</a></li>
+<li><a href="#iv-analysis">IV Analysis</a></li>
 <li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
 </ul></li>
 </ul></li>
@@ -63,7 +64,7 @@ linktitle: Probability and Statistics
 </ul></li>
 <li><a href="#causal-inference-methods">Causal Inference Methods</a><ul>
 <li><a href="#difference-in-differences">Difference in Differences</a></li>
-<li><a href="#causal-impact">Causal Impact</a></li>
+<li><a href="#causal-impact-1">Causal Impact</a></li>
 <li><a href="#synthetic-controls-1">Synthetic Controls</a></li>
 <li><a href="#propensity-score-matching">Propensity Score Matching</a></li>
 <li><a href="#fixed-effects-regression">Fixed Effects Regression</a></li>
@@ -364,19 +365,23 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y(T=1)-Y(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
 <div id="common-methods" class="section level2">
 <h2>Common Methods</h2>
+<p>Some summarized in this <a href="https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268">Medium Post</a></p>
 <div id="diff-in-diff" class="section level3">
 <h3>Diff in Diff</h3>
 <p>Contexts and example .. A new law is apssed,</p>
 <p>Assumptions ..</p>
 <p>Model ..</p>
 </div>
-<div id="iv-analysis" class="section level3">
-<h3>IV Analysis</h3>
-<p>particular way of interpreting a regression? - maybe the analysis Day talked about at Pintrest?</p>
+<div id="causal-impact" class="section level3">
+<h3>Causal Impact</h3>
 </div>
 <div id="synthetic-controls" class="section level3">
 <h3>Synthetic Controls</h3>
 <p>advertising and exposure to an ad?</p>
+</div>
+<div id="iv-analysis" class="section level3">
+<h3>IV Analysis</h3>
+<p>particular way of interpreting a regression? - maybe the analysis Day talked about at Pintrest?</p>
 </div>
 <div id="regression-discontinuity" class="section level3">
 <h3>Regression Discontinuity</h3>
@@ -701,7 +706,7 @@ models for when the errors aren't assumed to be normally distributed
 <div id="difference-in-differences" class="section level2">
 <h2>Difference in Differences</h2>
 </div>
-<div id="causal-impact" class="section level2">
+<div id="causal-impact-1" class="section level2">
 <h2>Causal Impact</h2>
 </div>
 <div id="synthetic-controls-1" class="section level2">

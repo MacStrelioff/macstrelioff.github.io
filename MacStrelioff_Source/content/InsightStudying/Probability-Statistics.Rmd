@@ -400,6 +400,8 @@ From this perspective, there is a treatment assignment $T$ and an outcome of int
 
 ## Common Methods
 
+Some summarized in this [Medium Post](https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268)
+
 ### Diff in Diff
 
 Contexts and example ..
@@ -409,14 +411,17 @@ Assumptions ..
 
 Model ..
 
+### Causal Impact
+
+### Synthetic Controls
+
+advertising and exposure to an ad?
+
 ### IV Analysis
 
 particular way of interpreting a regression?
 - maybe the analysis Day talked about at Pintrest?
 
-### Synthetic Controls
-
-advertising and exposure to an ad?
 
 ### Regression Discontinuity
 
