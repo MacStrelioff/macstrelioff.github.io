@@ -1,7 +1,7 @@
 ---
 title: "Basic Computer Science"
 author: "Mac Strelioff"
-date: "2019-09-01 22:37:06"
+date: "2019-09-06 16:39:36"
 output:
   blogdown::html_page:
     toc: true
@@ -155,6 +155,7 @@ for n in ns_to_test:
 <p><span class="math display">\[ \sum_{i=1}^N ar^{i-1} = \frac{a(1-r^{N})}{1-r} \]</span></p>
 <p>Where <span class="math inline">\(r=2\)</span>, <span class="math inline">\(a=2\)</span>, <span class="math inline">\(n\)</span> is looped over, and we start the index at 0 (<span class="math inline">\(i-1\)</span>) instead of 1, so:</p>
 <p><span class="math display">\[ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 \]</span></p>
+<p>Recursive calls generally have time complexity of <span class="math inline">\(O(branches^{depth})\)</span>.</p>
 <pre class="python"><code>def exponential_example(n,num_ops=0):
     num_ops += 1 # 1 operation per call
     # recursively called twice for each n&gt;0 (2**n times)    

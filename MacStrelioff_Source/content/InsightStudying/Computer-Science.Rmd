@@ -128,6 +128,8 @@ Where $r=2$, $a=2$, $n$ is looped over, and we start the index at 0 ($i-1$) inst
 
 $$ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 $$
 
+Recursive calls generally have time complexity of $O(branches^{depth})$.
+
 ```{python}
 def exponential_example(n,num_ops=0):
     num_ops += 1 # 1 operation per call
