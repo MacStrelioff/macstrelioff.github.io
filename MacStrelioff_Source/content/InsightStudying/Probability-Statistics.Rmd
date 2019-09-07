@@ -374,14 +374,14 @@ $$
 
 Entropy is the expected surprise -- higher entropy relates to more uncertainty: 
 $$
-H(X)=E(I(x)) = E(-log(f(x)))  = \int_E f(x)I(x) = -\int_E f(x)log(f(x))
+H(X)=E(I(x)) = E(-log(f(x)))  = \int_X f(x)I(x)dx = -\int_X f(x)log(f(x))d_x
 $$
 
-K-L Divergance, or relative entropy, is a measure of the expected distance between distributions, assuming one of them is true: 
+K-L Divergance, or relative entropy, is the expected distance between distributions with respect to one of the distributions: 
 $$
 \begin{aligned}
-D_{KL}(f_{x}(x);f_{y}(x)) &= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)\\
-&= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x)) \\
+D_{KL}(f_{x}(x);f_{y}(x)) &= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)d_x\\
+&= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x))d_x \\
 \end{aligned}
 $$
 
@@ -389,17 +389,38 @@ Divergance is an important concept in machine learning, because it can be a loss
 
 Mutual Information is the divergance from the joint distribution $f_{x,y}(x,y)$ to the joint when independence is assumed $f_x(x)f_y(y)$ -- i.e. a measure of non-independence;
 $$
-I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)
+I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
 $$
 
-## Causal Inference
+# Causal Inference
 
 The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred. 
 
+From this perspective, there is a treatment assignment $T$ and an outcome of interest that depends on the treatment $Y(T)$. Ideally, we would be able to compute the expected treatment effeoct for any individual $E(Y(T=1)-Y(T=0))$, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions -- e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements. 
 
+## Common Methods
 
+### Diff in Diff
 
+Contexts and example ..
+A new law is apssed, 
 
+Assumptions .. 
+
+Model ..
+
+### IV Analysis
+
+particular way of interpreting a regression?
+- maybe the analysis Day talked about at Pintrest?
+
+### Synthetic Controls
+
+advertising and exposure to an ad?
+
+### Regression Discontinuity
+
+Yelp example
 
 
 # Experiment Design

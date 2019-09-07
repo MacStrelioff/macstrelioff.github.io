@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-08-30 14:53:13"
+date: "2019-09-07 10:31:03"
 math: true
 output:
   blogdown::html_page:
@@ -23,7 +23,14 @@ linktitle: Probability and Statistics
 <li><a href="#expectation">Expectation</a></li>
 <li><a href="#variance">Variance</a></li>
 <li><a href="#information-theory">Information Theory</a></li>
-<li><a href="#causal-inference">Causal Inference</a></li>
+</ul></li>
+<li><a href="#causal-inference">Causal Inference</a><ul>
+<li><a href="#common-methods">Common Methods</a><ul>
+<li><a href="#diff-in-diff">Diff in Diff</a></li>
+<li><a href="#iv-analysis">IV Analysis</a></li>
+<li><a href="#synthetic-controls">Synthetic Controls</a></li>
+<li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
 <li><a href="#foundations">Foundations</a></li>
@@ -57,11 +64,11 @@ linktitle: Probability and Statistics
 <li><a href="#causal-inference-methods">Causal Inference Methods</a><ul>
 <li><a href="#difference-in-differences">Difference in Differences</a></li>
 <li><a href="#causal-impact">Causal Impact</a></li>
-<li><a href="#synthetic-controls">Synthetic Controls</a></li>
+<li><a href="#synthetic-controls-1">Synthetic Controls</a></li>
 <li><a href="#propensity-score-matching">Propensity Score Matching</a></li>
 <li><a href="#fixed-effects-regression">Fixed Effects Regression</a></li>
 <li><a href="#instrumental-variables">Instrumental variables</a></li>
-<li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
+<li><a href="#regression-discontinuity-1">Regression Discontinuity</a></li>
 </ul></li>
 </ul>
 </div>
@@ -337,22 +344,44 @@ Models output an expectation that depends on the model, its structure, its featu
 I(x)=-log(f(x))=log\left(\frac{1}{f(x)} \right)
 \]</span></p>
 <p>Entropy is the expected surprise – higher entropy relates to more uncertainty: <span class="math display">\[
-H(X)=E(I(x)) = E(-log(f(x)))  = \int_E f(x)I(x) = -\int_E f(x)log(f(x))
+H(X)=E(I(x)) = E(-log(f(x)))  = \int_X f(x)I(x)dx = -\int_X f(x)log(f(x))d_x
 \]</span></p>
-<p>K-L Divergance, or relative entropy, is a measure of the expected distance between distributions, assuming one of them is true: <span class="math display">\[
+<p>K-L Divergance, or relative entropy, is the expected distance between distributions with respect to one of the distributions: <span class="math display">\[
 \begin{aligned}
-D_{KL}(f_{x}(x);f_{y}(x)) &amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)\\
-&amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x)) \\
+D_{KL}(f_{x}(x);f_{y}(x)) &amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)d_x\\
+&amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x))d_x \\
 \end{aligned}
 \]</span></p>
 <p>Divergance is an important concept in machine learning, because it can be a loss function when we are estimating a distribution <span class="math inline">\(f(x)\)</span> with a model <span class="math inline">\(\hat{f}(x)\)</span>. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data that maximizes the divergance between the posterior and prior, i.e. the most informative data.</p>
 <p>Mutual Information is the divergance from the joint distribution <span class="math inline">\(f_{x,y}(x,y)\)</span> to the joint when independence is assumed <span class="math inline">\(f_x(x)f_y(y)\)</span> – i.e. a measure of non-independence; <span class="math display">\[
-I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)
+I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
 \]</span></p>
 </div>
-<div id="causal-inference" class="section level2">
-<h2>Causal Inference</h2>
+</div>
+<div id="causal-inference" class="section level1">
+<h1>Causal Inference</h1>
 <p>The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.</p>
+<p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y(T=1)-Y(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
+<div id="common-methods" class="section level2">
+<h2>Common Methods</h2>
+<div id="diff-in-diff" class="section level3">
+<h3>Diff in Diff</h3>
+<p>Contexts and example .. A new law is apssed,</p>
+<p>Assumptions ..</p>
+<p>Model ..</p>
+</div>
+<div id="iv-analysis" class="section level3">
+<h3>IV Analysis</h3>
+<p>particular way of interpreting a regression? - maybe the analysis Day talked about at Pintrest?</p>
+</div>
+<div id="synthetic-controls" class="section level3">
+<h3>Synthetic Controls</h3>
+<p>advertising and exposure to an ad?</p>
+</div>
+<div id="regression-discontinuity" class="section level3">
+<h3>Regression Discontinuity</h3>
+<p>Yelp example</p>
+</div>
 </div>
 </div>
 <div id="experiment-design" class="section level1">
@@ -675,7 +704,7 @@ models for when the errors aren't assumed to be normally distributed
 <div id="causal-impact" class="section level2">
 <h2>Causal Impact</h2>
 </div>
-<div id="synthetic-controls" class="section level2">
+<div id="synthetic-controls-1" class="section level2">
 <h2>Synthetic Controls</h2>
 </div>
 <div id="propensity-score-matching" class="section level2">
@@ -687,7 +716,7 @@ models for when the errors aren't assumed to be normally distributed
 <div id="instrumental-variables" class="section level2">
 <h2>Instrumental variables</h2>
 </div>
-<div id="regression-discontinuity" class="section level2">
+<div id="regression-discontinuity-1" class="section level2">
 <h2>Regression Discontinuity</h2>
 </div>
 </div>
