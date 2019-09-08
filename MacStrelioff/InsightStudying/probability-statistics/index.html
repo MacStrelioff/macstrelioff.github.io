@@ -139,9 +139,9 @@
   <meta property="og:description" content="Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-08T10:54:20&#43;00:00">
+  <meta property="article:published_time" content="2019-09-08T11:43:10&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-08T10:54:20&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-08T11:43:10&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-08 10:54:20 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-08 10:54:20 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-08 11:43:10 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-08 11:43:10 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -806,6 +806,7 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <h1>Causal Inference</h1>
 <p>The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.</p>
 <p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y(T=1)-Y(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
+<p>Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">CI video</a> at 10:00.</p>
 <div id="common-methods" class="section level2">
 <h2>Common Methods</h2>
 <p>Some summarized in this <a href="https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268">Medium Post</a></p>
@@ -829,11 +830,20 @@ Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 <h3>Causal Impact</h3>
 <p>Causal impact was developed by Google, docs <a href="https://google.github.io/CausalImpact/CausalImpact.html">here</a>.</p>
 <p>Context:</p>
-<p>Assumptions:</p>
+<ul>
+<li>Want to estimate the counterfactual for an observed timeseries, pre and post treatment.</li>
+</ul>
+<p>Assumptions and requirements:</p>
+<ul>
+<li>Requires other time series related to the target time series</li>
+<li>Assumes the other time series are not influenced by the treatment, generally good candidates include; google trends time series, the weather, other countries or markets where no action was taken, unemployment indecies, stock prices, … .</li>
+</ul>
 <p>Model:</p>
 <ul>
-<li>Uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">this video</a>.</li>
-<li></li>
+<li>In pre period, train any kind of model to estimate the target time series as a function of the other time series. The model used in the Causal Impact package is a Bayesian structural time series model.</li>
+<li>Google’s Causal Impact method uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">this video</a>. The method estimates a counterfactual using other related time series that were not influenced by the treatment.</li>
+<li>BSTS uses spike and slab prior for feature selection.</li>
+<li>In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).</li>
 </ul>
 </div>
 <div id="synthetic-controls" class="section level3">

@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 08 Sep 2019 10:54:20 +0000</pubDate>
+      <pubDate>Sun, 08 Sep 2019 11:43:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -391,6 +391,7 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 &lt;h1&gt;Causal Inference&lt;/h1&gt;
 &lt;p&gt;The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.&lt;/p&gt;
 &lt;p&gt;From this perspective, there is a treatment assignment &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; and an outcome of interest that depends on the treatment &lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;. Ideally, we would be able to compute the expected treatment effeoct for any individual &lt;span class=&#34;math inline&#34;&gt;\(E(Y(T=1)-Y(T=0))\)&lt;/span&gt;, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.&lt;/p&gt;
+&lt;p&gt;Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;CI video&lt;/a&gt; at 10:00.&lt;/p&gt;
 &lt;div id=&#34;common-methods&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Common Methods&lt;/h2&gt;
 &lt;p&gt;Some summarized in this &lt;a href=&#34;https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268&#34;&gt;Medium Post&lt;/a&gt;&lt;/p&gt;
@@ -414,11 +415,20 @@ Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 &lt;h3&gt;Causal Impact&lt;/h3&gt;
 &lt;p&gt;Causal impact was developed by Google, docs &lt;a href=&#34;https://google.github.io/CausalImpact/CausalImpact.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Context:&lt;/p&gt;
-&lt;p&gt;Assumptions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Want to estimate the counterfactual for an observed timeseries, pre and post treatment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires other time series related to the target time series&lt;/li&gt;
+&lt;li&gt;Assumes the other time series are not influenced by the treatment, generally good candidates include; google trends time series, the weather, other countries or markets where no action was taken, unemployment indecies, stock prices, … .&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Model:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;this video&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;In pre period, train any kind of model to estimate the target time series as a function of the other time series. The model used in the Causal Impact package is a Bayesian structural time series model.&lt;/li&gt;
+&lt;li&gt;Google’s Causal Impact method uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;this video&lt;/a&gt;. The method estimates a counterfactual using other related time series that were not influenced by the treatment.&lt;/li&gt;
+&lt;li&gt;BSTS uses spike and slab prior for feature selection.&lt;/li&gt;
+&lt;li&gt;In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;synthetic-controls&#34; class=&#34;section level3&#34;&gt;

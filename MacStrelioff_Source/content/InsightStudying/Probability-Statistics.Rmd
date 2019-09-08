@@ -398,6 +398,8 @@ The ultimate goal of most statistical work is to discover the causes of some out
 
 From this perspective, there is a treatment assignment $T$ and an outcome of interest that depends on the treatment $Y(T)$. Ideally, we would be able to compute the expected treatment effeoct for any individual $E(Y(T=1)-Y(T=0))$, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions -- e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements. 
 
+Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes [CI video](https://www.youtube.com/watch?v=GTgZfCltMm8) at 10:00. 
+
 ## Common Methods
 
 Some summarized in this [Medium Post](https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268)
@@ -429,13 +431,19 @@ Causal impact was developed by Google, docs [here](https://google.github.io/Caus
 
 Context: 
 
-Assumptions: 
+- Want to estimate the counterfactual for an observed timeseries, pre and post treatment. 
+
+Assumptions and requirements: 
+
+- Requires other time series related to the target time series
+- Assumes the other time series are not influenced by the treatment, generally good candidates include; google trends time series, the weather, other countries or markets where no action was taken, unemployment indecies, stock prices, ... .
 
 Model: 
 
-- Uses Bayesian structural time series to construct a counterfactual group -- an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in [this video](https://www.youtube.com/watch?v=GTgZfCltMm8).
-- 
-
+- In pre period, train any kind of model to estimate the target time series as a function of the other time series. The model used in the Causal Impact package is a Bayesian structural time series model.
+- Google's Causal Impact method uses Bayesian structural time series to construct a counterfactual group -- an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in [this video](https://www.youtube.com/watch?v=GTgZfCltMm8). The method estimates a counterfactual using other related time series that were not influenced by the treatment.
+- BSTS uses spike and slab prior for feature selection.
+- In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).
 
 
 
