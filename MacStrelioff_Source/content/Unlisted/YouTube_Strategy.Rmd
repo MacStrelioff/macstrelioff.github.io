@@ -20,8 +20,6 @@ knitr::opts_chunk$set(echo = TRUE)
 -->
 
 
-
-
 ## "About Me" Channel Video
 
 Why?
@@ -284,6 +282,14 @@ Make videos based on the questions / resources from Lacy
 ## What Data Scientists Do
 
 - Break down some blog posts from big companies (Google, Netflix, Instacart, ...)
+
+
+## 100-Rejection challenge
+
+- [TED Talk on this](https://www.youtube.com/watch?v=-vZXgApsPCQ)
+- [self confidence](https://www.youtube.com/watch?v=w-HYZv6HzAs): repetition, managing self-talk, .... 
+
+
 
 # General Strategies and Guides
 
