@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 08 Sep 2019 11:43:10 +0000</pubDate>
+      <pubDate>Sun, 08 Sep 2019 12:38:58 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -59,6 +59,8 @@
 &lt;li&gt;&lt;a href=&#34;#synthetic-controls&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#iv-analysis&#34;&gt;IV Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#regression-discontinuity&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#propensity-score-matching&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
@@ -94,8 +96,8 @@
 &lt;li&gt;&lt;a href=&#34;#difference-in-differences&#34;&gt;Difference in Differences&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-impact-1&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#synthetic-controls-1&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#propensity-score-matching&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#propensity-score-matching-1&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression-1&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#instrumental-variables&#34;&gt;Instrumental variables&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#regression-discontinuity-1&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -398,9 +400,11 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 &lt;div id=&#34;diff-in-diff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Diff in Diff&lt;/h3&gt;
 &lt;p&gt;Contexts and example ..&lt;/p&gt;
-&lt;p&gt;Assumptions:&lt;/p&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred.&lt;/li&gt;
+&lt;li&gt;Requires observed data on a control group pre and post treatment&lt;/li&gt;
+&lt;li&gt;Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.&lt;/li&gt;
+&lt;li&gt;Assumes the temporal dimension isn’t informative.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Model:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
@@ -429,11 +433,32 @@ Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 &lt;li&gt;Google’s Causal Impact method uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;this video&lt;/a&gt;. The method estimates a counterfactual using other related time series that were not influenced by the treatment.&lt;/li&gt;
 &lt;li&gt;BSTS uses spike and slab prior for feature selection.&lt;/li&gt;
 &lt;li&gt;In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).&lt;/li&gt;
+&lt;li&gt;Independent Python implementation &lt;a href=&#34;https://github.com/tcassou/causal_impact&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provides pointwise estimates of the causal effect over time, as well as a cumulative estimate (summing up the pointwise estimates)&lt;/li&gt;
+&lt;li&gt;Bayesian approach, provides credible intervals&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;synthetic-controls&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Synthetic Controls&lt;/h3&gt;
-&lt;p&gt;advertising and exposure to an ad?&lt;/p&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires multiple related time series&lt;/li&gt;
+&lt;li&gt;Assumes a linear combination of the related time sereis is a good proxy for the counterfactual&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Regress target time series on related time series&lt;/li&gt;
+&lt;li&gt;Use estimates from this model as the counterfactual&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When to use vs causal impact:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The other time series are more conceptually identical - e.g. observed outcomes in untreated market segments subject to the same plausiable confounds – e.g. different nearby counties in a state.&lt;/li&gt;
+&lt;li&gt;Causal impact might be better if the time series are thought to be components of the target – stock price, unemployment, page impressions, google trends, … .&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;iv-analysis&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;IV Analysis&lt;/h3&gt;
@@ -442,6 +467,12 @@ Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 &lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Regression Discontinuity&lt;/h3&gt;
 &lt;p&gt;Yelp example&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fixed-effects-regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fixed Effects Regression&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;propensity-score-matching&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Propensity Score Matching&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -768,10 +799,10 @@ models for when the errors aren&#39;t assumed to be normally distributed
 &lt;div id=&#34;synthetic-controls-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Synthetic Controls&lt;/h2&gt;
 &lt;/div&gt;
-&lt;div id=&#34;propensity-score-matching&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;propensity-score-matching-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Propensity Score Matching&lt;/h2&gt;
 &lt;/div&gt;
-&lt;div id=&#34;fixed-effects-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;fixed-effects-regression-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Fixed Effects Regression&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div id=&#34;instrumental-variables&#34; class=&#34;section level2&#34;&gt;

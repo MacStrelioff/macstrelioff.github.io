@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values.">
+  <meta name="description" content="Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity Fixed Effects Regression Propensity Score Matching   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/probability-statistics/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/probability-statistics/">
   <meta property="og:title" content="Probability and Statistics | Mac Strelioff">
-  <meta property="og:description" content="Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity Fixed Effects Regression Propensity Score Matching   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-08T11:43:10&#43;00:00">
+  <meta property="article:published_time" content="2019-09-08T12:38:58&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-08T11:43:10&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-08T12:38:58&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-08 11:43:10 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-08 11:43:10 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-08 12:38:58 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-08 12:38:58 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -474,6 +474,8 @@
 <li><a href="#synthetic-controls">Synthetic Controls</a></li>
 <li><a href="#iv-analysis">IV Analysis</a></li>
 <li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
+<li><a href="#fixed-effects-regression">Fixed Effects Regression</a></li>
+<li><a href="#propensity-score-matching">Propensity Score Matching</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
@@ -509,8 +511,8 @@
 <li><a href="#difference-in-differences">Difference in Differences</a></li>
 <li><a href="#causal-impact-1">Causal Impact</a></li>
 <li><a href="#synthetic-controls-1">Synthetic Controls</a></li>
-<li><a href="#propensity-score-matching">Propensity Score Matching</a></li>
-<li><a href="#fixed-effects-regression">Fixed Effects Regression</a></li>
+<li><a href="#propensity-score-matching-1">Propensity Score Matching</a></li>
+<li><a href="#fixed-effects-regression-1">Fixed Effects Regression</a></li>
 <li><a href="#instrumental-variables">Instrumental variables</a></li>
 <li><a href="#regression-discontinuity-1">Regression Discontinuity</a></li>
 </ul></li>
@@ -813,9 +815,11 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <div id="diff-in-diff" class="section level3">
 <h3>Diff in Diff</h3>
 <p>Contexts and example ..</p>
-<p>Assumptions:</p>
+<p>Assumptions and requirements:</p>
 <ul>
-<li>The trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred.</li>
+<li>Requires observed data on a control group pre and post treatment</li>
+<li>Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.</li>
+<li>Assumes the temporal dimension isn’t informative.</li>
 </ul>
 <p>Model:</p>
 <p><span class="math display">\[
@@ -844,11 +848,32 @@ Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 <li>Google’s Causal Impact method uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">this video</a>. The method estimates a counterfactual using other related time series that were not influenced by the treatment.</li>
 <li>BSTS uses spike and slab prior for feature selection.</li>
 <li>In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).</li>
+<li>Independent Python implementation <a href="https://github.com/tcassou/causal_impact">here</a>.</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>Provides pointwise estimates of the causal effect over time, as well as a cumulative estimate (summing up the pointwise estimates)</li>
+<li>Bayesian approach, provides credible intervals</li>
 </ul>
 </div>
 <div id="synthetic-controls" class="section level3">
 <h3>Synthetic Controls</h3>
-<p>advertising and exposure to an ad?</p>
+<p>Context:</p>
+<p>Assumptions and requirements:</p>
+<ul>
+<li>Requires multiple related time series</li>
+<li>Assumes a linear combination of the related time sereis is a good proxy for the counterfactual</li>
+</ul>
+<p>Model:</p>
+<ul>
+<li>Regress target time series on related time series</li>
+<li>Use estimates from this model as the counterfactual</li>
+</ul>
+<p>When to use vs causal impact:</p>
+<ul>
+<li>The other time series are more conceptually identical - e.g. observed outcomes in untreated market segments subject to the same plausiable confounds – e.g. different nearby counties in a state.</li>
+<li>Causal impact might be better if the time series are thought to be components of the target – stock price, unemployment, page impressions, google trends, … .</li>
+</ul>
 </div>
 <div id="iv-analysis" class="section level3">
 <h3>IV Analysis</h3>
@@ -857,6 +882,12 @@ Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 <div id="regression-discontinuity" class="section level3">
 <h3>Regression Discontinuity</h3>
 <p>Yelp example</p>
+</div>
+<div id="fixed-effects-regression" class="section level3">
+<h3>Fixed Effects Regression</h3>
+</div>
+<div id="propensity-score-matching" class="section level3">
+<h3>Propensity Score Matching</h3>
 </div>
 </div>
 </div>
@@ -1183,10 +1214,10 @@ models for when the errors aren't assumed to be normally distributed
 <div id="synthetic-controls-1" class="section level2">
 <h2>Synthetic Controls</h2>
 </div>
-<div id="propensity-score-matching" class="section level2">
+<div id="propensity-score-matching-1" class="section level2">
 <h2>Propensity Score Matching</h2>
 </div>
-<div id="fixed-effects-regression" class="section level2">
+<div id="fixed-effects-regression-1" class="section level2">
 <h2>Fixed Effects Regression</h2>
 </div>
 <div id="instrumental-variables" class="section level2">

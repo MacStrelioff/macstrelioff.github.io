@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2019 11:43:10 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2019 12:38:58 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 08 Sep 2019 11:43:10 +0000</pubDate>
+      <pubDate>Sun, 08 Sep 2019 12:38:58 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values.</description>
+      <description>Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity Fixed Effects Regression Propensity Score Matching   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values.</description>
     </item>
     
     <item>

@@ -410,9 +410,11 @@ Contexts and example ..
 
 
 
-Assumptions: 
+Assumptions and requirements: 
 
-- The trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred.
+- Requires observed data on a control group pre and post treatment
+- Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.
+- Assumes the temporal dimension isn't informative. 
 
 Model:
 
@@ -444,12 +446,32 @@ Model:
 - Google's Causal Impact method uses Bayesian structural time series to construct a counterfactual group -- an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in [this video](https://www.youtube.com/watch?v=GTgZfCltMm8). The method estimates a counterfactual using other related time series that were not influenced by the treatment.
 - BSTS uses spike and slab prior for feature selection.
 - In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).
+- Independent Python implementation [here](https://github.com/tcassou/causal_impact).
 
+Benefits: 
 
+- Provides pointwise estimates of the causal effect over time, as well as a cumulative estimate (summing up the pointwise estimates)
+- Bayesian approach, provides credible intervals
 
 ### Synthetic Controls
 
-advertising and exposure to an ad?
+Context: 
+
+
+Assumptions and requirements:
+
+- Requires multiple related time series
+- Assumes a linear combination of the related time sereis is a good proxy for the counterfactual
+
+Model:
+
+- Regress target time series on related time series
+- Use estimates from this model as the counterfactual
+
+When to use vs causal impact: 
+
+- The other time series are more conceptually identical - e.g. observed outcomes in untreated market segments subject to the same plausiable confounds -- e.g. different nearby counties in a state.
+- Causal impact might be better if the time series are thought to be components of the target -- stock price, unemployment, page impressions, google trends, ... .
 
 ### IV Analysis
 
@@ -460,6 +482,11 @@ particular way of interpreting a regression?
 ### Regression Discontinuity
 
 Yelp example
+
+### Fixed Effects Regression
+
+
+### Propensity Score Matching
 
 
 # Experiment Design
