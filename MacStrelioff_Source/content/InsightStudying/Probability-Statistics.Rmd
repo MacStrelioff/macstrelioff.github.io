@@ -405,13 +405,39 @@ Some summarized in this [Medium Post](https://towardsdatascience.com/causal-infe
 ### Diff in Diff
 
 Contexts and example ..
-A new law is apssed, 
 
-Assumptions .. 
 
-Model ..
+
+Assumptions: 
+
+- The trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred.
+
+Model:
+
+$$
+\begin{aligned}
+I_{T}&:\text{Indicator for treatment group} \\
+I_{Post}&:\text{Indicator for post treatment} \\
+Y &= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
+\end{aligned}
+$$
+
 
 ### Causal Impact
+
+Causal impact was developed by Google, docs [here](https://google.github.io/CausalImpact/CausalImpact.html).
+
+Context: 
+
+Assumptions: 
+
+Model: 
+
+- Uses Bayesian structural time series to construct a counterfactual group -- an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in [this video](https://www.youtube.com/watch?v=GTgZfCltMm8).
+- 
+
+
+
 
 ### Synthetic Controls
 

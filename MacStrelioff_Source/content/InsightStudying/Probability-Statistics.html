@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-09-07 13:18:29"
+date: "2019-09-08 10:54:20"
 math: true
 output:
   blogdown::html_page:
@@ -368,12 +368,30 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <p>Some summarized in this <a href="https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268">Medium Post</a></p>
 <div id="diff-in-diff" class="section level3">
 <h3>Diff in Diff</h3>
-<p>Contexts and example .. A new law is apssed,</p>
-<p>Assumptions ..</p>
-<p>Model ..</p>
+<p>Contexts and example ..</p>
+<p>Assumptions:</p>
+<ul>
+<li>The trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred.</li>
+</ul>
+<p>Model:</p>
+<p><span class="math display">\[
+\begin{aligned}
+I_{T}&amp;:\text{Indicator for treatment group} \\
+I_{Post}&amp;:\text{Indicator for post treatment} \\
+Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
+\end{aligned}
+\]</span></p>
 </div>
 <div id="causal-impact" class="section level3">
 <h3>Causal Impact</h3>
+<p>Causal impact was developed by Google, docs <a href="https://google.github.io/CausalImpact/CausalImpact.html">here</a>.</p>
+<p>Context:</p>
+<p>Assumptions:</p>
+<p>Model:</p>
+<ul>
+<li>Uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">this video</a>.</li>
+<li></li>
+</ul>
 </div>
 <div id="synthetic-controls" class="section level3">
 <h3>Synthetic Controls</h3>
