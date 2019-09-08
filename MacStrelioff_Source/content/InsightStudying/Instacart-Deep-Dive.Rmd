@@ -25,7 +25,8 @@ set.seed(10201991)
 
 - Check out info from [blog](https://medium.com/acing-ai/instacart-data-science-interview-questions-e8d89bea1a34)
 - Read articles on their [DS blog](https://tech.instacart.com/tagged/data-science)
-
+- [LinkedIn application for data scientist](https://www.linkedin.com/jobs/view/748128414/?refId=aa6b5d2c-8b03-4c2d-9643-1171a9fca283&trk=d_flagship3_company)
+- [LinkedIn app for analyst](https://www.linkedin.com/jobs/view/1331659318/?refId=aa6b5d2c-8b03-4c2d-9643-1171a9fca283&trk=d_flagship3_company)
 
 # Company Visit
 
