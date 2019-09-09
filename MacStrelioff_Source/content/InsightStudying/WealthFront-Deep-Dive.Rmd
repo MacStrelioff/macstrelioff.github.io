@@ -26,10 +26,9 @@ set.seed(10201991)
 - Looking for: "You enjoy mentoring others on subjects such as causal inference, experimental design, data visualization or behavioral psychology"
 - - Make a few videos on experimentation and causal inference
 
-
 - Work on: "You subscribe to Wealthfront’s values and mission and can articulate the reasons why, and have an understanding of our product, business model and key metrics"
 
-## Signup process: 
+## Signup process:
 
 - One page for all "Legal Stuff" questions, instead of a page for each question.. 
 - - Is there any dropoff on each question? I'm expecting the dropoff for Legal stuff to be lower if it were one page than compared to it being a page for each question.
@@ -155,19 +154,98 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 - Performance: Wait times at restaurants
 - [Some metrics for business partners](https://biz.yelp.com/)
 
-### On Mobile
+
+# Phone call with Wealthfront Chief Data Officer
+
+- [VINEET SINGH](https://www.linkedin.com/in/vineet-singh-8ba416/) - PhD in AI from Stanford in 1988. 
+- Extensive experience with marketing and statistics
+
+## ".. will want to chat more about your current and prior work"
+
+<!-- PROJECT DESCRIPTIONS -->
 
 
-## Current issues
+### HaaS freelance work
 
-- Supply/Demand balancing?
+Situation: 
 
-## Competitors
+- Haas stands for housing as a service, it's a membership-based coliving startup.
 
-- Amazon
-- Other food delivery -- Grubhub, Uber Eats, ... 
+Task: 
+
+- Want to increase memberships through facebook and google ads. 
+- I am using Google Analytics and Facebook Ad Analytics to devise ads and experiments that will facilitate growth.
+- Working in Facebook ad analytics and Google analytics
+
+Action: 
+
+- To increase CTR, I'm recommending ads with brighter lighting, faces, or colors that contrast FB's theme of white and blue, as these kinds of thumbnails are associated with higher CTR for YouTube videos. 
+
+### Insight Project
+
+Situation: 
+
+- Startup focused on digital workspaces (e.g. google docs)
+
+Task: 
+
+- Wanted to be able to predict who would convert from a free trial to a paying customer
+- Wanted to associate product features with conversion
+
+Action: 
+
+- I used a random forest model to predict who would convert. 
+
+Result: 
+
+- First, through a consulting project with a startup where I developed a model to predict which trial users would fail to convert to paying customers so that my client could intervene with these users. 
+
+### PredictIt project
+
+Situation: 
+
+- Prediction markets aggregate information and incentivize rational behavior, so one would expect the prices to be accurate. 
+- At an individual level, lots of fallacies have been established in lab settings.
+- I wanted to know if any fallacies would manifest in market prices. 
+
+Results: 
+
+- Conjunction fallacy: "Trump" traded higher hand "Republican" for extended period of time.
+- Disjunction fallacy: Most market prices add up to something greater than $1, but because of fees it's often not profitable to take advantage of this. 
+- CPT subjective probability function: Overpricing of low probability events and Underpricing of high probability events
+- -- notably this was highest as expiration approached, a context that is more similar to lab studies that don't have delayed rewards. 
+
+### Quantopian: 
+
+- recreated XIV, fund that trades VIX futures weighted so that the effective days to expiration is approximately 30.
+- mean revision
+- moving average crossover
+
+### Child bandit modeling
+
+Situation: 
+
+- Kids we repeatedly choosing between gambles
+- Wanted to know what strategies they followed, and if their strategy changed over time
+
+Action: 
+
+- I developed a model that inferred the probability of following each strategy on each trial
+- Used Bayes' Rule to smooth out these inferences / accumulate information over trials 
+
+Result: 
+
+- Kids do seem to switch strategies, probably don't act optimally, and have different strategies depending on age (switchy vs sticky)
+
+<!-- QUESTIONS -->
 
 ## Ideas, excitement, questions to ask
+
+- More informaiton about the role?
+- Open projects or current directions?
+- How big is the team? 
+- 
+
 
 ## Glassdoor interview questions
 
