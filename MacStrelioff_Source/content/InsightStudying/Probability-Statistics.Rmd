@@ -504,7 +504,7 @@ $$
 
 Limitation: 
 
-- $\beta_{IV}$ can still be biased, but is at least consistent ($\beta_{IV}\overset{p}{\rightarrow}\beta$).
+- $\beta_{IV}$ can still be biased, but is at least consistent ($\beta_{IV}\overset{p}{\rightarrow} \beta$).
 
 This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided $Z$, but the effect of actually being treated $X$ may not be known or estimated.
 
