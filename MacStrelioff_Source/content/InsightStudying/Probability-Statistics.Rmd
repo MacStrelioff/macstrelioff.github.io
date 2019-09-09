@@ -494,7 +494,7 @@ Model, 2 stage least squares:
 $$
 \begin{aligned}
 \hat{x}&=\gamma z + u \\
-\hat{y} &= \beta \hat{x} + e
+\hat{y}&=\beta \hat{x} + e
 \end{aligned}
 $$
 
@@ -507,8 +507,58 @@ Yelp example
 
 ### Fixed Effects Regression
 
+Context: 
+
+- Unobserved heterogineity $\alpha_i$ that is related to features, $Cov(\alpha_i,x_{i,t})\neq 0$
+- Issue: $Cov(\alpha_i,x_{i,t})\neq 0$, this implies that $\hat{\beta}$ isn't consistent for $\beta$, i.e. the sampling distribution of $\hat{\beta}$ doesn't converge to $\beta$.
+
+Assumptions and Requirements: 
+
+- $Cov(x_{i,t},u_[i,t])=0$, i.e. weak exogeniety
+- No perfect correlation between $x$. 
+- These assumptions imply the fixed effects estimates ($\beta_{FE}$) are consistent.
+
+Model, from [here](https://www.youtube.com/watch?v=sFvV9b1cGFc): 
+
+The procedure is to average over time to get $\bar{y}_i$, and subtract this off, taking advantage of $\alpha_i=\bar{\alpha}_i$ where the later is averaged across time.
+
+$$
+\begin{aligned}
+\alpha_i &: \text{unobserved hetergenity} \\
+Cov(\alpha_i,x_{i,t}) &\neq 0 \\
+u_{i,t} &: \text{error} \\
+y_{i,t}&=\beta x_{i,t} + \alpha_i + u_{i,t}\\
+\bar{y}_{t}&=\beta \bar{x}_{i} + \bar{\alpha}_i + \bar{u}_{i} \\
+y_{i,t}-\bar{y}_{t}&=\beta_{FE} (x_{i,t}-\bar{x}_{i}) + (\alpha_i - \bar{\alpha}_i)+ u_{i,t} - \bar{u}_{i} \\
+&= \beta_{FE} (x_{i,t}-\bar{x}_{i}) + u_{i,t} - \bar{u}_{i} \\
+\end{aligned}
+$$
+
+Limitations: 
+
+- removes anything that is constant over time, meaning effects of any time-constant variables can't be estimated
+
+### First differences
+
+Context: 
+
+- similar to fixed effects, but less asymptotically efficient if there are serially uncorrelated errors [see this vid](https://www.youtube.com/watch?v=G7WqK2o474Y)
+
+### Random Effects
+
+[description in this video](https://www.youtube.com/watch?v=bQampZBzU9Q).
+
+Context: 
+
+Assumptions and requirements: 
+
+Model:
+
+
+
 
 ### Propensity Score Matching
+
 
 
 # Experiment Design

@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-09-08 20:54:59"
+date: "2019-09-08 21:54:10"
 math: true
 output:
   blogdown::html_page:
@@ -32,6 +32,8 @@ linktitle: Probability and Statistics
 <li><a href="#iv-analysis">IV Analysis</a></li>
 <li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
 <li><a href="#fixed-effects-regression">Fixed Effects Regression</a></li>
+<li><a href="#first-differences">First differences</a></li>
+<li><a href="#random-effects">Random Effects</a></li>
 <li><a href="#propensity-score-matching">Propensity Score Matching</a></li>
 </ul></li>
 </ul></li>
@@ -450,7 +452,7 @@ Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 <p><span class="math display">\[
 \begin{aligned}
 \hat{x}&amp;=\gamma z + u \\
-\hat{y} &amp;= \beta \hat{x} + e
+\hat{y}&amp;=\beta \hat{x} + e
 \end{aligned}
 \]</span></p>
 <p>This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided <span class="math inline">\(Z\)</span>, but the effect of actually being treated <span class="math inline">\(X\)</span> may not be known or estimated.</p>
@@ -461,6 +463,48 @@ Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 </div>
 <div id="fixed-effects-regression" class="section level3">
 <h3>Fixed Effects Regression</h3>
+<p>Context:</p>
+<ul>
+<li>Unobserved heterogineity <span class="math inline">\(\alpha_i\)</span> that is related to features, <span class="math inline">\(Cov(\alpha_i,x_{i,t})\neq 0\)</span></li>
+<li>Issue: <span class="math inline">\(Cov(\alpha_i,x_{i,t})\neq 0\)</span>, this implies that <span class="math inline">\(\hat{\beta}\)</span> isn’t consistent for <span class="math inline">\(\beta\)</span>, i.e. the sampling distribution of <span class="math inline">\(\hat{\beta}\)</span> doesn’t converge to <span class="math inline">\(\beta\)</span>.</li>
+</ul>
+<p>Assumptions and Requirements:</p>
+<ul>
+<li><span class="math inline">\(Cov(x_{i,t},u_[i,t])=0\)</span>, i.e. weak exogeniety</li>
+<li>No perfect correlation between <span class="math inline">\(x\)</span>.</li>
+<li>These assumptions imply the fixed effects estimates (<span class="math inline">\(\beta_{FE}\)</span>) are consistent.</li>
+</ul>
+<p>Model, from <a href="https://www.youtube.com/watch?v=sFvV9b1cGFc">here</a>:</p>
+<p>The procedure is to average over time to get <span class="math inline">\(\bar{y}_i\)</span>, and subtract this off, taking advantage of <span class="math inline">\(\alpha_i=\bar{\alpha}_i\)</span> where the later is averaged across time.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\alpha_i &amp;: \text{unobserved hetergenity} \\
+Cov(\alpha_i,x_{i,t}) &amp;\neq 0 \\
+u_{i,t} &amp;: \text{error} \\
+y_{i,t}&amp;=\beta x_{i,t} + \alpha_i + u_{i,t}\\
+\bar{y}_{t}&amp;=\beta \bar{x}_{i} + \bar{\alpha}_i + \bar{u}_{i} \\
+y_{i,t}-\bar{y}_{t}&amp;=\beta_{FE} (x_{i,t}-\bar{x}_{i}) + (\alpha_i - \bar{\alpha}_i)+ u_{i,t} - \bar{u}_{i} \\
+&amp;= \beta_{FE} (x_{i,t}-\bar{x}_{i}) + u_{i,t} - \bar{u}_{i} \\
+\end{aligned}
+\]</span></p>
+<p>Limitations:</p>
+<ul>
+<li>removes anything that is constant over time, meaning effects of any time-constant variables can’t be estimated</li>
+</ul>
+</div>
+<div id="first-differences" class="section level3">
+<h3>First differences</h3>
+<p>Context:</p>
+<ul>
+<li>similar to fixed effects, but less asymptotically efficient if there are serially uncorrelated errors <a href="https://www.youtube.com/watch?v=G7WqK2o474Y">see this vid</a></li>
+</ul>
+</div>
+<div id="random-effects" class="section level3">
+<h3>Random Effects</h3>
+<p><a href="https://www.youtube.com/watch?v=bQampZBzU9Q">description in this video</a>.</p>
+<p>Context:</p>
+<p>Assumptions and requirements:</p>
+<p>Model:</p>
 </div>
 <div id="propensity-score-matching" class="section level3">
 <h3>Propensity Score Matching</h3>

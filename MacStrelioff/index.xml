@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 08 Sep 2019 20:54:59 +0000</pubDate>
+      <pubDate>Sun, 08 Sep 2019 21:54:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -60,6 +60,8 @@
 &lt;li&gt;&lt;a href=&#34;#iv-analysis&#34;&gt;IV Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#regression-discontinuity&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#fixed-effects-regression&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#first-differences&#34;&gt;First differences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#random-effects&#34;&gt;Random Effects&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#propensity-score-matching&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -478,7 +480,7 @@ Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 \hat{x}&amp;amp;=\gamma z + u \\
-\hat{y} &amp;amp;= \beta \hat{x} + e
+\hat{y}&amp;amp;=\beta \hat{x} + e
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, but the effect of actually being treated &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; may not be known or estimated.&lt;/p&gt;
@@ -489,6 +491,48 @@ Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 &lt;/div&gt;
 &lt;div id=&#34;fixed-effects-regression&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Fixed Effects Regression&lt;/h3&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unobserved heterogineity &lt;span class=&#34;math inline&#34;&gt;\(\alpha_i\)&lt;/span&gt; that is related to features, &lt;span class=&#34;math inline&#34;&gt;\(Cov(\alpha_i,x_{i,t})\neq 0\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Issue: &lt;span class=&#34;math inline&#34;&gt;\(Cov(\alpha_i,x_{i,t})\neq 0\)&lt;/span&gt;, this implies that &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; isn’t consistent for &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;, i.e. the sampling distribution of &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; doesn’t converge to &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assumptions and Requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(x_{i,t},u_[i,t])=0\)&lt;/span&gt;, i.e. weak exogeniety&lt;/li&gt;
+&lt;li&gt;No perfect correlation between &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;These assumptions imply the fixed effects estimates (&lt;span class=&#34;math inline&#34;&gt;\(\beta_{FE}\)&lt;/span&gt;) are consistent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model, from &lt;a href=&#34;https://www.youtube.com/watch?v=sFvV9b1cGFc&#34;&gt;here&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;The procedure is to average over time to get &lt;span class=&#34;math inline&#34;&gt;\(\bar{y}_i\)&lt;/span&gt;, and subtract this off, taking advantage of &lt;span class=&#34;math inline&#34;&gt;\(\alpha_i=\bar{\alpha}_i\)&lt;/span&gt; where the later is averaged across time.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\alpha_i &amp;amp;: \text{unobserved hetergenity} \\
+Cov(\alpha_i,x_{i,t}) &amp;amp;\neq 0 \\
+u_{i,t} &amp;amp;: \text{error} \\
+y_{i,t}&amp;amp;=\beta x_{i,t} + \alpha_i + u_{i,t}\\
+\bar{y}_{t}&amp;amp;=\beta \bar{x}_{i} + \bar{\alpha}_i + \bar{u}_{i} \\
+y_{i,t}-\bar{y}_{t}&amp;amp;=\beta_{FE} (x_{i,t}-\bar{x}_{i}) + (\alpha_i - \bar{\alpha}_i)+ u_{i,t} - \bar{u}_{i} \\
+&amp;amp;= \beta_{FE} (x_{i,t}-\bar{x}_{i}) + u_{i,t} - \bar{u}_{i} \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;removes anything that is constant over time, meaning effects of any time-constant variables can’t be estimated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;first-differences&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;First differences&lt;/h3&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;similar to fixed effects, but less asymptotically efficient if there are serially uncorrelated errors &lt;a href=&#34;https://www.youtube.com/watch?v=G7WqK2o474Y&#34;&gt;see this vid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-effects&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Random Effects&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=bQampZBzU9Q&#34;&gt;description in this video&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
+&lt;p&gt;Model:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;propensity-score-matching&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Propensity Score Matching&lt;/h3&gt;
