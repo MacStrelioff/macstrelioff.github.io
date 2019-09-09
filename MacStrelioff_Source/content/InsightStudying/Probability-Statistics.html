@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-09-08 22:59:31"
+date: "2019-09-08 23:05:42"
 math: true
 output:
   blogdown::html_page:
@@ -442,29 +442,25 @@ Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 <ul>
 <li>Goal is to find the causal effect of <span class="math inline">\(x\rightarrow y\)</span>.</li>
 <li>Issue: <span class="math inline">\(Cov(x,\epsilon)\neq 0\)</span>, a feature is correlated to unobserved confounds, so <span class="math inline">\(\hat{\beta}_{OLS}\)</span> is unbiased and inconsistent.</li>
-<li>A variable <span class="math inline">\(Z\)</span> influences the treatment <span class="math inline">\(X\)</span>, and is also correlated with the error terms <span class="math inline">\(e\)</span>.</li>
-<li>This introduces bias in <span class="math inline">\(\hat{\beta}_{OLS}\)</span>.</li>
-<li></li>
 </ul>
 <p>Assumptions and Requirements:</p>
 <ul>
+<li>An instrument <span class="math inline">\(z\)</span> is measured so it can be included in the model.</li>
 <li><span class="math inline">\(Cov(z,x)\neq 0\)</span>, the instrumental variable is related to <span class="math inline">\(x\)</span>.</li>
 <li><span class="math inline">\(Cov(z,\epsilon)=0\)</span>, the instrument is not correlated with unobserved confounds.</li>
-<li><span class="math inline">\(z\)</span> is measured so that it can be included in the model.</li>
-<li>particular way of interpreting a regression?</li>
-<li>maybe the analysis Day talked about at Pintrest?</li>
 </ul>
 <p>Model, 2 stage least squares:</p>
 <p>Done to address bias in <span class="math inline">\(\hat{\beta}_{OLS}\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 \hat{x}&amp;=\gamma z + u \\
-\hat{y}&amp;=\beta \hat{x} + e
+\hat{y}&amp;=\beta_{IV} \hat{x} + \epsilon \\
+\beta_{IV} &amp;= (Z^TX)^{-1}Z^TY = \frac{Cov(Z,Y)}{Cov(Z,X)}
 \end{aligned}
 \]</span></p>
 <p>Limitation:</p>
 <ul>
-<li><span class="math inline">\(\beta_{IV}\)</span> can still be biased</li>
+<li><span class="math inline">\(\beta_{IV}\)</span> can still be biased, but is at least consistent (<span class="math inline">\(\beta_{IV}\overset{p}{\rightarrow}\beta\)</span>).</li>
 </ul>
 <p>This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided <span class="math inline">\(Z\)</span>, but the effect of actually being treated <span class="math inline">\(X\)</span> may not be known or estimated.</p>
 </div>

@@ -483,17 +483,12 @@ Context:
 
 - Goal is to find the causal effect of $x\rightarrow y$. 
 - Issue: $Cov(x,\epsilon)\neq 0$, a feature is correlated to unobserved confounds, so $\hat{\beta}_{OLS}$ is unbiased and inconsistent. 
-- A variable $Z$ influences the treatment $X$, and is also correlated with the error terms $e$.
-- This introduces bias in $\hat{\beta}_{OLS}$.
-- 
 
 Assumptions and Requirements:
 
+- An instrument $z$ is measured so it can be included in the model.
 - $Cov(z,x)\neq 0$, the instrumental variable is related to $x$. 
 - $Cov(z,\epsilon)=0$, the instrument is not correlated with unobserved confounds.
-- $z$ is measured so that it can be included in the model. 
-- particular way of interpreting a regression?
-- maybe the analysis Day talked about at Pintrest?
 
 Model, 2 stage least squares:
 
@@ -502,13 +497,14 @@ Done to address bias in $\hat{\beta}_{OLS}$
 $$
 \begin{aligned}
 \hat{x}&=\gamma z + u \\
-\hat{y}&=\beta \hat{x} + e
+\hat{y}&=\beta_{IV} \hat{x} + \epsilon \\
+\beta_{IV} &= (Z^TX)^{-1}Z^TY = \frac{Cov(Z,Y)}{Cov(Z,X)}
 \end{aligned}
 $$
 
 Limitation: 
 
-- $\beta_{IV}$ can still be biased
+- $\beta_{IV}$ can still be biased, but is at least consistent ($\beta_{IV}\overset{p}{\rightarrow}\beta$).
 
 This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided $Z$, but the effect of actually being treated $X$ may not be known or estimated.
 
