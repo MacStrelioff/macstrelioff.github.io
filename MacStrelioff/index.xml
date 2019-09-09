@@ -38,12 +38,16 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Mon, 09 Sep 2019 13:00:13 +0000</pubDate>
+      <pubDate>Mon, 09 Sep 2019 13:59:30 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
 
 
+&lt;!--
+LinkedIn summary to consider, form a DS at Wealthfront; 
+Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. Applications in Regression Analysis, Machine Learning, and Causal Inference. Experience formulating, solving, and communicating the results of impactful business questions. 
+--&gt;
 &lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TODO:&lt;/h1&gt;
 &lt;ul&gt;
@@ -257,7 +261,8 @@
 &lt;li&gt;Conjunction fallacy: “Trump” traded higher hand “Republican” for extended period of time.&lt;/li&gt;
 &lt;li&gt;Disjunction fallacy: Most market prices add up to something greater than $1, but because of fees it’s often not profitable to take advantage of this.&lt;/li&gt;
 &lt;li&gt;CPT subjective probability function: Overpricing of low probability events and Underpricing of high probability events&lt;/li&gt;
-&lt;li&gt;– notably this was highest as expiration approached, a context that is more similar to lab studies that don’t have delayed rewards.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;– notably this was highest as expiration approached, a context that is more similar to lab studies that don’t have delayed rewards.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Now we’re working on automating trades based on these and other indights.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;quantopian&#34; class=&#34;section level3&#34;&gt;
@@ -272,8 +277,8 @@
 &lt;h3&gt;Child bandit modeling&lt;/h3&gt;
 &lt;p&gt;Situation:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Wanted to know what strategies they followed, and if their strategy changed over time.&lt;/li&gt;
 &lt;li&gt;Kids we repeatedly choosing between gambles&lt;/li&gt;
-&lt;li&gt;Wanted to know what strategies they followed, and if their strategy changed over time&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Action:&lt;/p&gt;
 &lt;ul&gt;
@@ -293,7 +298,6 @@
 &lt;li&gt;More informaiton about the role?&lt;/li&gt;
 &lt;li&gt;Open projects or current directions?&lt;/li&gt;
 &lt;li&gt;How big is the team?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level2&#34;&gt;

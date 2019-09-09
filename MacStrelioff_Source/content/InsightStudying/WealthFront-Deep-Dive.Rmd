@@ -21,6 +21,11 @@ set.seed(10201991)
 ```
 
 
+<!--
+LinkedIn summary to consider, form a DS at Wealthfront; 
+Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. Applications in Regression Analysis, Machine Learning, and Causal Inference. Experience formulating, solving, and communicating the results of impactful business questions. 
+-->
+
 # TODO: 
 
 - Looking for: "You enjoy mentoring others on subjects such as causal inference, experimental design, data visualization or behavioral psychology"
@@ -215,6 +220,8 @@ Results:
 - CPT subjective probability function: Overpricing of low probability events and Underpricing of high probability events
 - -- notably this was highest as expiration approached, a context that is more similar to lab studies that don't have delayed rewards. 
 
+- Now we're working on automating trades based on these and other indights. 
+
 ### Quantopian: 
 
 - recreated XIV, fund that trades VIX futures weighted so that the effective days to expiration is approximately 30.
@@ -225,8 +232,8 @@ Results:
 
 Situation: 
 
+- Wanted to know what strategies they followed, and if their strategy changed over time.
 - Kids we repeatedly choosing between gambles
-- Wanted to know what strategies they followed, and if their strategy changed over time
 
 Action: 
 
@@ -243,9 +250,7 @@ Result:
 
 - More informaiton about the role?
 - Open projects or current directions?
-- How big is the team? 
-- 
-
+- How big is the team?
 
 ## Glassdoor interview questions
 
