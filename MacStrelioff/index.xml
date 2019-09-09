@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 08 Sep 2019 21:54:10 +0000</pubDate>
+      <pubDate>Sun, 08 Sep 2019 22:59:31 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -464,25 +464,36 @@ Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 &lt;/div&gt;
 &lt;div id=&#34;iv-analysis&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;IV Analysis&lt;/h3&gt;
+&lt;p&gt;More from &lt;a href=&#34;https://www.youtube.com/watch?v=NLgB2WGGKUw&#34;&gt;Ben Lambert&lt;/a&gt;, good explanation &lt;a href=&#34;https://www.youtube.com/watch?v=OWHCbEP56ms&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=cX5q_dKt6iU&#34;&gt;part II&lt;/a&gt;. Case study using quarter and years of education as &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; in place of education as the instrument [here](&lt;a href=&#34;https://www.youtube.com/watch?v=pI9YGSJ2qPk&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=pI9YGSJ2qPk&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=WjcoHAJ4_Mc&#34;&gt;relation to 2SLS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Mostly from Gelman chapter “Causal inference with more complicated observational designs” chapter from Gina.&lt;/p&gt;
 &lt;p&gt;Context:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Goal is to find the causal effect of &lt;span class=&#34;math inline&#34;&gt;\(x\rightarrow y\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Issue: &lt;span class=&#34;math inline&#34;&gt;\(Cov(x,\epsilon)\neq 0\)&lt;/span&gt;, a feature is correlated to unobserved confounds, so &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}_{OLS}\)&lt;/span&gt; is unbiased and inconsistent.&lt;/li&gt;
 &lt;li&gt;A variable &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; influences the treatment &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;, and is also correlated with the error terms &lt;span class=&#34;math inline&#34;&gt;\(e\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;This introduces bias in &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}_{OLS}\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Assumptions and Requirements:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The IV is correlated with X but not with the error term&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; is measured, and can be included in the model.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(z,x)\neq 0\)&lt;/span&gt;, the instrumental variable is related to &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(z,\epsilon)=0\)&lt;/span&gt;, the instrument is not correlated with unobserved confounds.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is measured so that it can be included in the model.&lt;/li&gt;
 &lt;li&gt;particular way of interpreting a regression?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;maybe the analysis Day talked about at Pintrest?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;maybe the analysis Day talked about at Pintrest?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Model, 2 stage least squares:&lt;/p&gt;
+&lt;p&gt;Done to address bias in &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}_{OLS}\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 \hat{x}&amp;amp;=\gamma z + u \\
 \hat{y}&amp;amp;=\beta \hat{x} + e
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Limitation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\beta_{IV}\)&lt;/span&gt; can still be biased&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, but the effect of actually being treated &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; may not be known or estimated.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level3&#34;&gt;
