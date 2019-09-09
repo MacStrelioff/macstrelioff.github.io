@@ -40,12 +40,12 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 
 ## Important Metrics: 
 
-Growth: 
+Growth:
 
 - Weekly new users
 - Month over month active account growth
 
-Engagement or value: 
+Engagement or value:
 
 - Total deposits
 - Total assets tracked
@@ -169,7 +169,6 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 
 <!-- PROJECT DESCRIPTIONS -->
 
-
 ### HaaS freelance work
 
 Situation: 
@@ -230,27 +229,42 @@ Results:
 
 ### Child bandit modeling
 
-Situation: 
+Situation:
 
 - Wanted to know what strategies they followed, and if their strategy changed over time.
 - Kids we repeatedly choosing between gambles
 
-Action: 
+Action:
 
 - I developed a model that inferred the probability of following each strategy on each trial
 - Used Bayes' Rule to smooth out these inferences / accumulate information over trials 
 
-Result: 
+Result:
 
 - Kids do seem to switch strategies, probably don't act optimally, and have different strategies depending on age (switchy vs sticky)
+- Implications for user intent modeling
 
 <!-- QUESTIONS -->
 
 ## Ideas, excitement, questions to ask
 
+- What do project pipelines look like -- who is involved, how are tasks ideated and delegated?
+- What does success for this role look like?
+
 - More informaiton about the role?
 - Open projects or current directions?
-- How big is the team?
+- How big is the DS team?
+- Could you tell me a little about your team specifically? 
+
+<!-- JUST IN CASE -->
+
+## CI methods
+
+- diff in diff
+- causal impact
+- synthetic control
+- IV analysis
+
 
 ## Glassdoor interview questions
 

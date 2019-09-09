@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Mon, 09 Sep 2019 13:59:30 +0000</pubDate>
+      <pubDate>Mon, 09 Sep 2019 14:43:47 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -288,6 +288,7 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;p&gt;Result:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Kids do seem to switch strategies, probably don’t act optimally, and have different strategies depending on age (switchy vs sticky)&lt;/li&gt;
+&lt;li&gt;Implications for user intent modeling&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- QUESTIONS --&gt;
 &lt;/div&gt;
@@ -295,9 +296,22 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;div id=&#34;ideas-excitement-questions-to-ask&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ideas, excitement, questions to ask&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;What do project pipelines look like – who is involved, how are tasks ideated and delegated?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What does success for this role look like?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;More informaiton about the role?&lt;/li&gt;
 &lt;li&gt;Open projects or current directions?&lt;/li&gt;
-&lt;li&gt;How big is the team?&lt;/li&gt;
+&lt;li&gt;How big is the DS team?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Could you tell me a little about your team specifically?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- JUST IN CASE --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ci-methods&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;CI methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;diff in diff&lt;/li&gt;
+&lt;li&gt;causal impact&lt;/li&gt;
+&lt;li&gt;synthetic control&lt;/li&gt;
+&lt;li&gt;IV analysis&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level2&#34;&gt;
