@@ -178,31 +178,44 @@ Situation:
 Task: 
 
 - Want to increase memberships through facebook and google ads. 
-- I am using Google Analytics and Facebook Ad Analytics to devise ads and experiments that will facilitate growth.
-- Working in Facebook ad analytics and Google analytics
+- I'm leveraging a little SEO experience to help with designing ads; 
+-     Brighter photos, photos with faces, and color schemes that contrast FB's color scheme of white and blue, 
+-     thse features are associated with higher CTR for YouTube thumbnails. 
+- Becoming familiar with Google Analytics and Facebook Ad Analytics to run A/B tests with these ads
 
 Action: 
 
-- To increase CTR, I'm recommending ads with brighter lighting, faces, or colors that contrast FB's theme of white and blue, as these kinds of thumbnails are associated with higher CTR for YouTube videos. 
+- See which drive more interest in CTR, and more conversions in applications for membership, and which attract the demographics that my client wants to attract.
 
 ### Insight Project
 
 Situation: 
 
+- 2 week consulting project
 - Startup focused on digital workspaces (e.g. google docs)
+- Wanted to understand user base.
+- Wanted to be able to predict who would convert from a free trial to a paying customer.
+- (skip) Wanted to attribute conversion to product features with conversion.
 
 Task: 
 
-- Wanted to be able to predict who would convert from a free trial to a paying customer
-- Wanted to associate product features with conversion
+- Data: 
+- Company demographic information, company size and revenue. 
+-     Used this to communicate conversion rates by demographic to heads of different teams using tables and figures.
+- Account activity data which was a sum of actions taken within an account each day. 
+-     I transformed this into cumulative sum instead of daily sum to increase interpretability and modeling ease. 
 
-Action: 
-
-- I used a random forest model to predict who would convert. 
+(skip) Action: 
+(skip) 
+(skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. 
+(skip) - Cast as classification problem, used SMOTE to address class imbalance,
+(skip) - used 5-fold CV to evaluate models on AUC, 
+(skip) - ended with a RF algorithm for these predictions. 
 
 Result: 
 
-- First, through a consulting project with a startup where I developed a model to predict which trial users would fail to convert to paying customers so that my client could intervene with these users. 
+- Delivered presentation and slide deck with tables and figures to a group of team leaders. 
+- Delivered a Python script to implement the model, and a slide deck describing the modeling procedure and performance. 
 
 ### PredictIt project
 
@@ -248,8 +261,14 @@ Result:
 
 ## Ideas, excitement, questions to ask
 
+
+<!-- Increase savings! -->
+- Considering Nudges, e.g. maybe showing counterfactuals like how much interest a person would have gotten if they spent X less. 
+- I like the figure showing wealth accumulation -- add credible intervals around it if it's based on uncertain investments? 
+- Add oldified images of a user later on the timeline, maked that future self more concrete and increases saving behavior?
+
+<!-- work life -->
 - What do project pipelines look like -- who is involved, how are tasks ideated and delegated?
-- What does success for this role look like?
 
 - More informaiton about the role?
 - Open projects or current directions?

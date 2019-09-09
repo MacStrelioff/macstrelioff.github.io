@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Mon, 09 Sep 2019 14:43:47 +0000</pubDate>
+      <pubDate>Mon, 09 Sep 2019 15:59:36 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -220,32 +220,39 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;p&gt;Task:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Want to increase memberships through facebook and google ads.&lt;/li&gt;
-&lt;li&gt;I am using Google Analytics and Facebook Ad Analytics to devise ads and experiments that will facilitate growth.&lt;/li&gt;
-&lt;li&gt;Working in Facebook ad analytics and Google analytics&lt;/li&gt;
+&lt;li&gt;I’m leveraging a little SEO experience to help with designing ads;&lt;/li&gt;
+&lt;li&gt;Brighter photos, photos with faces, and color schemes that contrast FB’s color scheme of white and blue,&lt;/li&gt;
+&lt;li&gt;thse features are associated with higher CTR for YouTube thumbnails.&lt;/li&gt;
+&lt;li&gt;Becoming familiar with Google Analytics and Facebook Ad Analytics to run A/B tests with these ads&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Action:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;To increase CTR, I’m recommending ads with brighter lighting, faces, or colors that contrast FB’s theme of white and blue, as these kinds of thumbnails are associated with higher CTR for YouTube videos.&lt;/li&gt;
+&lt;li&gt;See which drive more interest in CTR, and more conversions in applications for membership, and which attract the demographics that my client wants to attract.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;insight-project&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Insight Project&lt;/h3&gt;
 &lt;p&gt;Situation:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;2 week consulting project&lt;/li&gt;
 &lt;li&gt;Startup focused on digital workspaces (e.g. google docs)&lt;/li&gt;
+&lt;li&gt;Wanted to understand user base.&lt;/li&gt;
+&lt;li&gt;Wanted to be able to predict who would convert from a free trial to a paying customer.&lt;/li&gt;
+&lt;li&gt;(skip) Wanted to attribute conversion to product features with conversion.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Task:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Wanted to be able to predict who would convert from a free trial to a paying customer&lt;/li&gt;
-&lt;li&gt;Wanted to associate product features with conversion&lt;/li&gt;
+&lt;li&gt;Data:&lt;/li&gt;
+&lt;li&gt;Company demographic information, company size and revenue.&lt;/li&gt;
+&lt;li&gt;Used this to communicate conversion rates by demographic to heads of different teams using tables and figures.&lt;/li&gt;
+&lt;li&gt;Account activity data which was a sum of actions taken within an account each day.&lt;/li&gt;
+&lt;li&gt;I transformed this into cumulative sum instead of daily sum to increase interpretability and modeling ease.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Action:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I used a random forest model to predict who would convert.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;(skip) Action: (skip) (skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. (skip) - Cast as classification problem, used SMOTE to address class imbalance, (skip) - used 5-fold CV to evaluate models on AUC, (skip) - ended with a RF algorithm for these predictions.&lt;/p&gt;
 &lt;p&gt;Result:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;First, through a consulting project with a startup where I developed a model to predict which trial users would fail to convert to paying customers so that my client could intervene with these users.&lt;/li&gt;
+&lt;li&gt;Delivered presentation and slide deck with tables and figures to a group of team leaders.&lt;/li&gt;
+&lt;li&gt;Delivered a Python script to implement the model, and a slide deck describing the modeling procedure and performance.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;predictit-project&#34; class=&#34;section level3&#34;&gt;
@@ -295,9 +302,15 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;/div&gt;
 &lt;div id=&#34;ideas-excitement-questions-to-ask&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ideas, excitement, questions to ask&lt;/h2&gt;
+&lt;!-- Increase savings! --&gt;
 &lt;ul&gt;
-&lt;li&gt;What do project pipelines look like – who is involved, how are tasks ideated and delegated?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;What does success for this role look like?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Considering Nudges, e.g. maybe showing counterfactuals like how much interest a person would have gotten if they spent X less.&lt;/li&gt;
+&lt;li&gt;I like the figure showing wealth accumulation – add credible intervals around it if it’s based on uncertain investments?&lt;/li&gt;
+&lt;li&gt;Add oldified images of a user later on the timeline, maked that future self more concrete and increases saving behavior?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- work life --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;What do project pipelines look like – who is involved, how are tasks ideated and delegated?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;More informaiton about the role?&lt;/li&gt;
 &lt;li&gt;Open projects or current directions?&lt;/li&gt;
 &lt;li&gt;How big is the DS team?&lt;/li&gt;
