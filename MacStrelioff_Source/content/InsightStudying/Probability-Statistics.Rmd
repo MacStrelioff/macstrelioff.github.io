@@ -479,17 +479,26 @@ Mostly from Gelman chapter "Causal inference with more complicated observational
 
 Context: 
 
-- A variable $Z$ influences the treatment $X$, but does not have a direct effect on the outcome $Y$. 
-- e.g. Treatment assignemnt $Z$ can influence the actual treatment $X$, and $Z$ might be influenced by variables that are associated with $Y$ such as comorbidities. 
-- 
-
+- A variable $Z$ influences the treatment $X$, and is also correlated with the error terms $e$.
 
 Assumptions and Requirements:
 
 - The IV is correlated with X but not with the error term
+- $Z$ is measured, and can be included in the model.
 
-particular way of interpreting a regression?
+- particular way of interpreting a regression?
 - maybe the analysis Day talked about at Pintrest?
+
+Model, 2 stage least squares:
+
+$$
+\begin{aligned}
+\hat{x}&=\gamma z + u \\
+\hat{y} &= \beta \hat{x} + e
+\end{aligned}
+$$
+
+This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided $Z$, but the effect of actually being treated $X$ may not be known or estimated.
 
 
 ### Regression Discontinuity
