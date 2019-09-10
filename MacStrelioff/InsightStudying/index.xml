@@ -6,15 +6,24 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Sep 2019 16:35:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Sep 2019 15:49:43 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Yelp Notes</title>
+      <title>Instacart Notes</title>
+      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
+      <pubDate>Tue, 10 Sep 2019 15:49:43 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
+      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Company Visit Business Model, Culture, and Vision  Projects, Tasks, and Data  DS Role Discussion of past work “Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.</description>
+    </item>
+    
+    <item>
+      <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Mon, 09 Sep 2019 16:35:11 +0000</pubDate>
+      <pubDate>Tue, 10 Sep 2019 15:46:54 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>TODO:  Looking for: “You enjoy mentoring others on subjects such as causal inference, experimental design, data visualization or behavioral psychology”  Make a few videos on experimentation and causal inference  Work on: “You subscribe to Wealthfront’s values and mission and can articulate the reasons why, and have an understanding of our product, business model and key metrics”  Signup process:  One page for all “Legal Stuff” questions, instead of a page for each question.</description>
@@ -27,16 +36,6 @@
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity Fixed Effects Regression First differences Random Effects Propensity Score Matching   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values.</description>
-    </item>
-    
-    <item>
-      <title>Yelp Notes</title>
-      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sat, 07 Sep 2019 16:38:24 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
-      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist LinkedIn app for analyst   Company Visit Business Model, Culture, and Vision  Projects, Tasks, and Data  DS Role Discussion of past work “Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.”
-“elaborate on related projects from your resume”</description>
     </item>
     
     <item>

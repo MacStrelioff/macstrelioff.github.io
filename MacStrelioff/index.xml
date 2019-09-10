@@ -36,9 +36,145 @@
     </item>
     
     <item>
-      <title>Yelp Notes</title>
+      <title>Instacart Notes</title>
+      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
+      <pubDate>Tue, 10 Sep 2019 15:49:43 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
+      <description>
+
+
+&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Check out info from &lt;a href=&#34;https://medium.com/acing-ai/instacart-data-science-interview-questions-e8d89bea1a34&#34;&gt;blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Read articles on their &lt;a href=&#34;https://tech.instacart.com/tagged/data-science&#34;&gt;DS blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/jobs/view/748128414/?refId=aa6b5d2c-8b03-4c2d-9643-1171a9fca283&amp;amp;trk=d_flagship3_company&#34;&gt;LinkedIn application for data scientist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://boards.greenhouse.io/instacart/jobs/1863911&#34;&gt;Instacart posting for data scientist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/jobs/view/1331659318/?refId=aa6b5d2c-8b03-4c2d-9643-1171a9fca283&amp;amp;trk=d_flagship3_company&#34;&gt;LinkedIn app for analyst&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;company-visit&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Company Visit&lt;/h1&gt;
+&lt;div id=&#34;business-model-culture-and-vision&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Business Model, Culture, and Vision&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;projects-tasks-and-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Projects, Tasks, and Data&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ds-role&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;DS Role&lt;/h2&gt;
+&lt;div id=&#34;discussion-of-past-work&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Discussion of past work&lt;/h3&gt;
+&lt;p&gt;“Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.”&lt;/p&gt;
+&lt;p&gt;“elaborate on related projects from your resume”&lt;/p&gt;
+&lt;p&gt;PredictIt Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation:&lt;/li&gt;
+&lt;li&gt;Project:&lt;/li&gt;
+&lt;li&gt;Maybe sketch the fig of price for Trump win versus Republican win&lt;/li&gt;
+&lt;li&gt;I also aggregated data based on days until expiration, and applied a linear in log odds model at each day.&lt;/li&gt;
+&lt;li&gt;Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.&lt;/li&gt;
+&lt;li&gt;Result:&lt;/li&gt;
+&lt;li&gt;Value to Yelp: Relates to the economic patterns maybe?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Strategy Inference Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation:&lt;/li&gt;
+&lt;li&gt;Project:&lt;/li&gt;
+&lt;li&gt;Children and adults might use different strategies when making decisions.&lt;/li&gt;
+&lt;li&gt;I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time.&lt;/li&gt;
+&lt;li&gt;Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.&lt;/li&gt;
+&lt;li&gt;Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings.&lt;/li&gt;
+&lt;li&gt;More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;General interest in decision making:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, … .&lt;/li&gt;
+&lt;li&gt;Excitement: Yelp is basically a giant experiment in multiattribute decision making.&lt;/li&gt;
+&lt;li&gt;Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Insight Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User funnel and user flow, maybe should have started at these simpler analyses&lt;/li&gt;
+&lt;li&gt;Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy&lt;/li&gt;
+&lt;li&gt;Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant&lt;/li&gt;
+&lt;li&gt;Chose random forests because it does a better job of pulling out important collinear features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;product-metrics-or-experimentation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Product metrics or experimentation&lt;/h3&gt;
+&lt;p&gt;“You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment.”&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;general-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;General questions:&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deep-dive&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Deep Dive&lt;/h1&gt;
+&lt;div id=&#34;stakeholders-and-use-cases&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Stakeholders and Use Cases&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Consumers:&lt;/li&gt;
+&lt;li&gt;Delivery:&lt;/li&gt;
+&lt;li&gt;Stores:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;user-flows-and-metrics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;User Flows and Metrics&lt;/h2&gt;
+&lt;p&gt;Thinking of the broader user flow can help with identifying measurable events within that flow (metrics). Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;good source for some key &lt;a href=&#34;https://www.yelp.com/knowledge&#34;&gt;metrics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;on-web&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;On Web&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Growth: DAU, MAU&lt;/li&gt;
+&lt;li&gt;Growth: monthly new users, monthly unique users&lt;/li&gt;
+&lt;li&gt;Engagement: Reviews per user per month&lt;/li&gt;
+&lt;li&gt;Engagement:&lt;/li&gt;
+&lt;li&gt;Engagement: Traffic to business pages&lt;/li&gt;
+&lt;li&gt;Monetization: Reservations&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Monetization: Waitlist&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Performance: Wait times at restaurants&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://biz.yelp.com/&#34;&gt;Some metrics for business partners&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;on-mobile&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;On Mobile&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;current-issues&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Current issues&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Supply/Demand balancing?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;competitors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Competitors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon&lt;/li&gt;
+&lt;li&gt;Other food delivery – Grubhub, Uber Eats, …&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ideas-excitement-questions-to-ask&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ideas, excitement, questions to ask&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Glassdoor interview questions&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Mon, 09 Sep 2019 16:35:11 +0000</pubDate>
+      <pubDate>Tue, 10 Sep 2019 15:46:54 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -1783,141 +1919,6 @@ todo:
 &lt;li&gt;I’m deciding whether I should make more videos like this, so if you liked it, please “make it official” and click the like button on YouTube.&lt;/li&gt;
 &lt;li&gt;Finally, try subscribing if you want to see the latest videos like this&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Yelp Notes</title>
-      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sat, 07 Sep 2019 16:38:24 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
-      <description>
-
-
-&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;TODO:&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Check out info from &lt;a href=&#34;https://medium.com/acing-ai/instacart-data-science-interview-questions-e8d89bea1a34&#34;&gt;blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Read articles on their &lt;a href=&#34;https://tech.instacart.com/tagged/data-science&#34;&gt;DS blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/jobs/view/748128414/?refId=aa6b5d2c-8b03-4c2d-9643-1171a9fca283&amp;amp;trk=d_flagship3_company&#34;&gt;LinkedIn application for data scientist&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/jobs/view/1331659318/?refId=aa6b5d2c-8b03-4c2d-9643-1171a9fca283&amp;amp;trk=d_flagship3_company&#34;&gt;LinkedIn app for analyst&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;company-visit&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Company Visit&lt;/h1&gt;
-&lt;div id=&#34;business-model-culture-and-vision&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Business Model, Culture, and Vision&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;projects-tasks-and-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Projects, Tasks, and Data&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ds-role&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;DS Role&lt;/h2&gt;
-&lt;div id=&#34;discussion-of-past-work&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Discussion of past work&lt;/h3&gt;
-&lt;p&gt;“Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.”&lt;/p&gt;
-&lt;p&gt;“elaborate on related projects from your resume”&lt;/p&gt;
-&lt;p&gt;PredictIt Project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Situation:&lt;/li&gt;
-&lt;li&gt;Project:&lt;/li&gt;
-&lt;li&gt;Maybe sketch the fig of price for Trump win versus Republican win&lt;/li&gt;
-&lt;li&gt;I also aggregated data based on days until expiration, and applied a linear in log odds model at each day.&lt;/li&gt;
-&lt;li&gt;Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.&lt;/li&gt;
-&lt;li&gt;Result:&lt;/li&gt;
-&lt;li&gt;Value to Yelp: Relates to the economic patterns maybe?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Strategy Inference Project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Situation:&lt;/li&gt;
-&lt;li&gt;Project:&lt;/li&gt;
-&lt;li&gt;Children and adults might use different strategies when making decisions.&lt;/li&gt;
-&lt;li&gt;I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time.&lt;/li&gt;
-&lt;li&gt;Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.&lt;/li&gt;
-&lt;li&gt;Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings.&lt;/li&gt;
-&lt;li&gt;More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;General interest in decision making:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, … .&lt;/li&gt;
-&lt;li&gt;Excitement: Yelp is basically a giant experiment in multiattribute decision making.&lt;/li&gt;
-&lt;li&gt;Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Insight Project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;User funnel and user flow, maybe should have started at these simpler analyses&lt;/li&gt;
-&lt;li&gt;Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy&lt;/li&gt;
-&lt;li&gt;Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant&lt;/li&gt;
-&lt;li&gt;Chose random forests because it does a better job of pulling out important collinear features&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;product-metrics-or-experimentation&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Product metrics or experimentation&lt;/h3&gt;
-&lt;p&gt;“You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment.”&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;general-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;General questions:&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;deep-dive&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Deep Dive&lt;/h1&gt;
-&lt;div id=&#34;stakeholders-and-use-cases&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Stakeholders and Use Cases&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Consumers:&lt;/li&gt;
-&lt;li&gt;Delivery:&lt;/li&gt;
-&lt;li&gt;Stores:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;user-flows-and-metrics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;User Flows and Metrics&lt;/h2&gt;
-&lt;p&gt;Thinking of the broader user flow can help with identifying measurable events within that flow (metrics). Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;good source for some key &lt;a href=&#34;https://www.yelp.com/knowledge&#34;&gt;metrics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;on-web&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;On Web&lt;/h3&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;Growth: DAU, MAU&lt;/li&gt;
-&lt;li&gt;Growth: monthly new users, monthly unique users&lt;/li&gt;
-&lt;li&gt;Engagement: Reviews per user per month&lt;/li&gt;
-&lt;li&gt;Engagement:&lt;/li&gt;
-&lt;li&gt;Engagement: Traffic to business pages&lt;/li&gt;
-&lt;li&gt;Monetization: Reservations&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Monetization: Waitlist&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Performance: Wait times at restaurants&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://biz.yelp.com/&#34;&gt;Some metrics for business partners&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;on-mobile&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;On Mobile&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;current-issues&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Current issues&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Supply/Demand balancing?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;competitors&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Competitors&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Amazon&lt;/li&gt;
-&lt;li&gt;Other food delivery – Grubhub, Uber Eats, …&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ideas-excitement-questions-to-ask&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Ideas, excitement, questions to ask&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Glassdoor interview questions&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

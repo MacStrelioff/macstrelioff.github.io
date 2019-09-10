@@ -1,5 +1,5 @@
 ---
-title: "Yelp Notes"
+title: "Wealthfront Notes"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 menu:
