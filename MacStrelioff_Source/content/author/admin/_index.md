@@ -63,6 +63,15 @@ I am constantly looking for new ways to apply my skills -- Feel free to [reach o
 <!--
 TODO:
 
+- Work for HaaS / Peter
+- Apply to Stripe (https://www.linkedin.com/jobs/view/1404767563/)
+- Apply to Instacart
+- Prepare for Wealthfront
+- - Brush up on hypothesis testing / things for technical phone screen
+- - Learn about attribution models for Stripe and Wealthfront
+- - maybe start here: https://agencyanalytics.com/blog/marketing-attribution-models
+
+
 - Update website:
 - - "Cracking the coding interview" Ch V to update project bios on webpage
 - - Change bio as to not pidgeonhole myself? 

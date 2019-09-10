@@ -38,7 +38,7 @@
     <item>
       <title>Yelp Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Mon, 09 Sep 2019 15:59:36 +0000</pubDate>
+      <pubDate>Mon, 09 Sep 2019 16:35:11 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -302,6 +302,38 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;/div&gt;
 &lt;div id=&#34;ideas-excitement-questions-to-ask&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ideas, excitement, questions to ask&lt;/h2&gt;
+&lt;p&gt;notes from call&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;started as wealth management product&lt;/li&gt;
+&lt;li&gt;financial planning product, now made avilable to everyone, can specify goals for retirement, college saving, home buying, … .&lt;/li&gt;
+&lt;li&gt;have all data on this, and can project future wealth.&lt;/li&gt;
+&lt;li&gt;high yield cash account product, beginning of a banking services product&lt;/li&gt;
+&lt;li&gt;CD, debit, credit card, etc.&lt;/li&gt;
+&lt;li&gt;self-driving money: idea that they can automate finances for people. to meet short term and long terms savings needs.&lt;/li&gt;
+&lt;li&gt;system can optimize how money from a paycheck or other accounts should flow between cash, investments, savings, based on these goals.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;accounts for all tax rules, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;170 people in company&lt;/li&gt;
+&lt;li&gt;DS team more diverse (9 people (should be doubling lately))&lt;/li&gt;
+&lt;li&gt;economists, statisticians, ML, data science, financial, … .&lt;/li&gt;
+&lt;li&gt;Teams;&lt;/li&gt;
+&lt;li&gt;investment algorithms&lt;/li&gt;
+&lt;li&gt;financial planning optimization&lt;/li&gt;
+&lt;li&gt;analytics (product, market, risk), (~ 4 people)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;data products, production ready systems&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Investing in growth: paid marketing, messaging within product to “cross sell”, referrals.&lt;/li&gt;
+&lt;li&gt;Almost no paid marketing at all, have had some since introducing the cash account.&lt;/li&gt;
+&lt;li&gt;Still want to apply a science to making it more effective.&lt;/li&gt;
+&lt;li&gt;looking for ideas on growing cash account via a referral program.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;hiring one growth DS for across those areas&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Process:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this initial meeting&lt;/li&gt;
+&lt;li&gt;technical phone screen: more of a filter, statistics and analytics Hypothesis testing, experimental design (first few items I have listed on methods), nothing like RL and contextual bandits, 1 hour long&lt;/li&gt;
+&lt;li&gt;homework assignment: programming, 24 hours – can use Python or R, some analytic questions and need to provide some recommendations&lt;/li&gt;
+&lt;li&gt;longer 5 hour interview&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Me: - finance as a hobby – Quantopian - HaaS freelance work&lt;/p&gt;
 &lt;!-- Increase savings! --&gt;
 &lt;ul&gt;
 &lt;li&gt;Considering Nudges, e.g. maybe showing counterfactuals like how much interest a person would have gotten if they spent X less.&lt;/li&gt;
@@ -310,7 +342,17 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;/ul&gt;
 &lt;!-- work life --&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;What do project pipelines look like – who is involved, how are tasks ideated and delegated?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;What do project pipelines look like – who is involved, how are tasks ideated and delegated?&lt;/li&gt;
+&lt;li&gt;steakholders: marketing team, paid marketing team, ‘growth team’&lt;/li&gt;
+&lt;li&gt;growth team: a product manager, designer, engineers, and another person, it’s just been formed.&lt;/li&gt;
+&lt;li&gt;** First work on conversion from cash client to investment client.&lt;/li&gt;
+&lt;li&gt;** and on paid marketing side, optimizing marketing on facebook, and Google ad words, and working on attribution to allocate marketing budget.&lt;/li&gt;
+&lt;li&gt;** Lower customer acquisition costs.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Identify cash clients who would have biggest beenfit from opening investment account.&lt;/li&gt;
+&lt;li&gt;regular check in with head of marketing every couple weeks&lt;/li&gt;
+&lt;li&gt;Growth DS can look at all of these options (come up with ideas)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Don’t want relationship to be where DS just does what marketing team asks. So DS idn’t expected to be marketing expert, but should come up with their own ideas and refine in collaboration with the other teams/partners.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;More informaiton about the role?&lt;/li&gt;
 &lt;li&gt;Open projects or current directions?&lt;/li&gt;
 &lt;li&gt;How big is the DS team?&lt;/li&gt;
