@@ -64,8 +64,11 @@ I am constantly looking for new ways to apply my skills -- Feel free to [reach o
 TODO:
 
 - Work for HaaS / Peter
-- Apply to Stripe (https://www.linkedin.com/jobs/view/1404767563/)
 - Apply to Instacart
+- Causal inference blog on the effect of debates on market prices in PI
+- - diff in diff doesn't make sense
+- - can't use synthetic control because there aren't other groups (could maybe use polls?)
+- - Google's CI package (in R). 
 - Prepare for Wealthfront
 - - Brush up on hypothesis testing / things for technical phone screen
 - - Learn about attribution models for Stripe and Wealthfront
