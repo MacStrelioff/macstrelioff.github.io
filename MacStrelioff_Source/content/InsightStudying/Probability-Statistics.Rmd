@@ -569,6 +569,10 @@ Model:
 ### Propensity Score Matching
 
 
+### Microsoft DoWhy 
+
+- see [docs](https://github.com/microsoft/dowhy)
+
 
 # Experiment Design
 
