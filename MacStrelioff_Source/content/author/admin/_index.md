@@ -63,6 +63,8 @@ I am constantly looking for new ways to apply my skills -- Feel free to [reach o
 <!--
 TODO:
 
+- follow up with Wealthfront
+
 - Work for HaaS / Peter
 - Apply to Instacart
 - Causal inference blog on the effect of debates on market prices in PI
