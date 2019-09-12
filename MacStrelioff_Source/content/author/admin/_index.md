@@ -64,6 +64,7 @@ I am constantly looking for new ways to apply my skills -- Feel free to [reach o
 TODO:
 
 - follow up with Wealthfront
+- update LinkedIn to match my personal website bio
 
 - Work for HaaS / Peter
 - Apply to Instacart
