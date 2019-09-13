@@ -104,8 +104,6 @@ Questions:
 <!--
 TODO:
 
-- update LinkedIn to match my personal website bio
-
 - Work for HaaS / Peter
 - Apply to Instacart
 - Causal inference blog on the effect of debates on market prices in PI
