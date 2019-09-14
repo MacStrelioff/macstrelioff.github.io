@@ -104,8 +104,12 @@ Questions:
 <!--
 TODO:
 
-- Work for HaaS / Peter
 - Apply to Instacart
+- Work for HaaS / Peter
+- AWS or other cloud platform for scraping, storing data?
+- PredictIt trading dashboard
+
+- Blog
 - Causal inference blog on the effect of debates on market prices in PI
 - - diff in diff doesn't make sense
 - - can't use synthetic control because there aren't other groups (could maybe use polls?)
