@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Sep 2019 16:58:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2019 00:31:57 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wealthfront Notes</title>
+      <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
+      <pubDate>Mon, 16 Sep 2019 00:31:57 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
+      <description>TODO:  Looking for: “You enjoy mentoring others on subjects such as causal inference, experimental design, data visualization or behavioral psychology”  Make a few videos on experimentation and causal inference  Work on: “You subscribe to Wealthfront’s values and mission and can articulate the reasons why, and have an understanding of our product, business model and key metrics”  Signup process:  One page for all “Legal Stuff” questions, instead of a page for each question.</description>
+    </item>
     
     <item>
       <title>Probability and Statistics</title>
@@ -27,15 +36,6 @@
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Company Visit Business Model, Culture, and Vision  Projects, Tasks, and Data  DS Role Discussion of past work “Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.</description>
-    </item>
-    
-    <item>
-      <title>Wealthfront Notes</title>
-      <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Tue, 10 Sep 2019 15:46:54 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
-      <description>TODO:  Looking for: “You enjoy mentoring others on subjects such as causal inference, experimental design, data visualization or behavioral psychology”  Make a few videos on experimentation and causal inference  Work on: “You subscribe to Wealthfront’s values and mission and can articulate the reasons why, and have an understanding of our product, business model and key metrics”  Signup process:  One page for all “Legal Stuff” questions, instead of a page for each question.</description>
     </item>
     
     <item>
