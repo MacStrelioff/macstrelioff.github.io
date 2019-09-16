@@ -33,34 +33,7 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 
 - Work on: "You subscribe to Wealthfront’s values and mission and can articulate the reasons why, and have an understanding of our product, business model and key metrics"
 
-## Signup process:
-
-- One page for all "Legal Stuff" questions, instead of a page for each question.. 
-- - Is there any dropoff on each question? I'm expecting the dropoff for Legal stuff to be lower if it were one page than compared to it being a page for each question.
-
-## Important Metrics: 
-
-Growth:
-
-- Weekly new users
-- Month over month active account growth
-
-Engagement or value:
-
-- Total deposits
-- Total assets tracked
-
-## Culture and Vision
-
-- "We’re here because more people across the economic spectrum deserve to live secure and rewarding lives."
-- 
-
-## Business Model
-
-- Offer a high yield savings account 
-- Offer funds managed by the author of 'A Random Walk Down Wall Street'
-- Use Modern Portfolio Theory, smart beta and tax-loss harvesting for larger accounts. 
-- Collect a 0.25% fee on managed funds
+# Job Description
 
 ## Projects, Tasks, and Data
 
@@ -85,8 +58,140 @@ Engagement or value:
 - BS, MS, or PhD in computer science, mathematics, economics or related field
 
 
-### Discussion of past work
+# Process:
 
+## Phone call with Wealthfront Chief Data Officer
+
+- [VINEET SINGH](https://www.linkedin.com/in/vineet-singh-8ba416/) - PhD in AI from Stanford in 1988. 
+- Extensive experience with marketing and statistics
+
+notes from call 
+
+- started as wealth management product
+- financial planning product, now made avilable to everyone, can specify goals for retirement, college saving, home buying, ... .
+- have all data on this, and can project future wealth. 
+- high yield cash account product, beginning of a banking services product 
+- CD, debit, credit card, etc. 
+- self-driving money: idea that they can automate finances for people. to meet short term and long terms savings needs. 
+- system can optimize how money from a paycheck or other accounts should flow between cash, investments, savings, based on these goals. 
+- accounts for all tax rules, etc. 
+
+- 170 people in company
+- DS team more diverse (9 people (should be doubling lately))
+- economists, statisticians, ML, data science, financial, ... .
+- Teams;
+- investment algorithms
+- financial planning optimization
+- analytics (product, market, risk), (~ 4 people)
+- data products, production ready systems
+
+- Investing in growth: paid marketing, messaging within product to "cross sell", referrals. 
+- Almost no paid marketing at all, have had some since introducing the cash account. 
+- Still want to apply a science to making it more effective. 
+- looking for ideas on growing cash account via a referral program.
+- hiring one growth DS for across those areas
+
+Process:
+
+- this initial meeting
+- technical phone screen: more of a filter, statistics and analytics Hypothesis testing, experimental design (first few items I have listed on methods), nothing like RL and contextual bandits, 1 hour long
+- homework assignment: programming, 24 hours -- can use Python or R, some analytic questions and need to provide some recommendations
+- longer 5 hour interview
+
+Me: 
+- finance as a hobby -- Quantopian
+- HaaS freelance work 
+
+<!-- Increase savings! -->
+- Considering Nudges, e.g. maybe showing counterfactuals like how much interest a person would have gotten if they spent X less. 
+- I like the figure showing wealth accumulation -- add credible intervals around it if it's based on uncertain investments? 
+- Add oldified images of a user later on the timeline, maked that future self more concrete and increases saving behavior?
+
+<!-- work life -->
+- What do project pipelines look like -- who is involved, how are tasks ideated and delegated?
+- steakholders: marketing team, paid marketing team, 'growth team'
+- growth team: a product manager, designer, engineers, and another person, it's just been formed. 
+- ** First work on conversion from cash client to investment client.
+- ** and on paid marketing side, optimizing marketing on facebook, and Google ad words, and working on attribution to allocate marketing budget. 
+- ** Lower customer acquisition costs.
+- 
+- Identify cash clients who would have biggest beenfit from opening investment account. 
+- regular check in with head of marketing every couple weeks
+- Growth DS can look at all of these options (come up with ideas)
+- Don't want relationship to be where DS just does what marketing team asks. So DS idn't expected to be marketing expert, but should come up with their own ideas and refine in collaboration with the other teams/partners. 
+
+- More informaiton about the role?
+- Open projects or current directions?
+- How big is the DS team?
+- Could you tell me a little about your team specifically? 
+
+# Technical phone screen
+
+Interviewer: [Allen Sirolly](https://www.linkedin.com/in/allen-sirolly-89b0b639/)
+
+From recruiter: "Our technical phone interview is meant to get a sense of the types of research or data problems that excite you. We will inquire about projects you have completed in the past; specifically, we want to hear about your personal contributions to the project and gauge your ability to give background on and extensions to your previous work. You are not permitted to use Google or other reference materials during the interview."
+
+- Sense of problems that excite you
+- Inquire about contributions to past projects, understanding of past projects
+
+# Preparation
+
+## Deep Dive
+
+### Products
+
+### Users
+
+### Use cases
+
+### Monetization
+
+### Dynamics (network, marketplace, ... )
+
+
+
+
+### Signup process:
+
+- One page for all "Legal Stuff" questions, instead of a page for each question.. 
+- - Is there any dropoff on each question? I'm expecting the dropoff for Legal stuff to be lower if it were one page than compared to it being a page for each question.
+
+### Important Metrics:
+
+Growth:
+
+- Weekly new users
+- Month over month active account growth
+
+Engagement or value:
+
+- Total deposits
+- Total assets tracked
+
+### Culture and Vision
+
+- "We’re here because more people across the economic spectrum deserve to live secure and rewarding lives."
+
+### Business Model
+
+- Offer a high yield savings account 
+- Offer funds managed by the author of 'A Random Walk Down Wall Street'
+- Use Modern Portfolio Theory, smart beta and tax-loss harvesting for larger accounts. 
+- Collect a 0.25% fee on managed funds
+
+
+
+
+
+## Glassdoor interview questions
+
+
+<!-- PROJECT DESCRIPTIONS -->
+
+## Project Descriptions: 
+
+
+### Discussion of past work
 
 PredictIt Project:
 
@@ -123,51 +228,7 @@ Insight Project:
 - Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant
 - Chose random forests because it does a better job of pulling out important collinear features
 
-### Product metrics or experimentation
-"You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment."
 
-### General questions: 
-
-
-# Deep Dive
-
-## Stakeholders and Use Cases
-
-- Consumers: 
-- Delivery:
-- Stores: 
-
-## User Flows and Metrics
-
-Thinking of the broader user flow can help with identifying measurable events within that flow (metrics).
-Overall, consider units of individuals (accounts, unique visitors, cookies, IPs...), units of time (daily, weekly), and referents (week over week, ...)
-
-- good source for some key [metrics](https://www.yelp.com/knowledge)
-
-### On Web
-
-1. Users (IPs) arrive on Yelp, can be assigned a cookie, or associated with an account if the user creates one. 
-
-- Growth: DAU, MAU
-- Growth: monthly new users, monthly unique users
-- Engagement: Reviews per user per month
-- Engagement: 
-- Engagement: Traffic to business pages
-- Monetization: Reservations
-- Monetization: Waitlist
-
-- Performance: Wait times at restaurants
-- [Some metrics for business partners](https://biz.yelp.com/)
-
-
-# Phone call with Wealthfront Chief Data Officer
-
-- [VINEET SINGH](https://www.linkedin.com/in/vineet-singh-8ba416/) - PhD in AI from Stanford in 1988. 
-- Extensive experience with marketing and statistics
-
-## ".. will want to chat more about your current and prior work"
-
-<!-- PROJECT DESCRIPTIONS -->
 
 ### HaaS freelance work
 
@@ -257,71 +318,6 @@ Result:
 - Kids do seem to switch strategies, probably don't act optimally, and have different strategies depending on age (switchy vs sticky)
 - Implications for user intent modeling
 
-<!-- QUESTIONS -->
-
-## Ideas, excitement, questions to ask
-
-notes from call 
-
-- started as wealth management product
-- financial planning product, now made avilable to everyone, can specify goals for retirement, college saving, home buying, ... .
-- have all data on this, and can project future wealth. 
-- high yield cash account product, beginning of a banking services product 
-- CD, debit, credit card, etc. 
-- self-driving money: idea that they can automate finances for people. to meet short term and long terms savings needs. 
-- system can optimize how money from a paycheck or other accounts should flow between cash, investments, savings, based on these goals. 
-- accounts for all tax rules, etc. 
-
-- 170 people in company
-- DS team more diverse (9 people (should be doubling lately))
-- economists, statisticians, ML, data science, financial, ... .
-- Teams;
-- investment algorithms
-- financial planning optimization
-- analytics (product, market, risk), (~ 4 people)
-- data products, production ready systems
-
-- Investing in growth: paid marketing, messaging within product to "cross sell", referrals. 
-- Almost no paid marketing at all, have had some since introducing the cash account. 
-- Still want to apply a science to making it more effective. 
-- looking for ideas on growing cash account via a referral program.
-- hiring one growth DS for across those areas
-
-
-Process:
-
-- this initial meeting
-- technical phone screen: more of a filter, statistics and analytics Hypothesis testing, experimental design (first few items I have listed on methods), nothing like RL and contextual bandits, 1 hour long
-- homework assignment: programming, 24 hours -- can use Python or R, some analytic questions and need to provide some recommendations
-- longer 5 hour interview
-
-Me: 
-- finance as a hobby -- Quantopian
-- HaaS freelance work 
-
-<!-- Increase savings! -->
-- Considering Nudges, e.g. maybe showing counterfactuals like how much interest a person would have gotten if they spent X less. 
-- I like the figure showing wealth accumulation -- add credible intervals around it if it's based on uncertain investments? 
-- Add oldified images of a user later on the timeline, maked that future self more concrete and increases saving behavior?
-
-<!-- work life -->
-- What do project pipelines look like -- who is involved, how are tasks ideated and delegated?
-- steakholders: marketing team, paid marketing team, 'growth team'
-- growth team: a product manager, designer, engineers, and another person, it's just been formed. 
-- ** First work on conversion from cash client to investment client.
-- ** and on paid marketing side, optimizing marketing on facebook, and Google ad words, and working on attribution to allocate marketing budget. 
-- ** Lower customer acquisition costs.
-- 
-- Identify cash clients who would have biggest beenfit from opening investment account. 
-- regular check in with head of marketing every couple weeks
-- Growth DS can look at all of these options (come up with ideas)
-- Don't want relationship to be where DS just does what marketing team asks. So DS idn't expected to be marketing expert, but should come up with their own ideas and refine in collaboration with the other teams/partners. 
-
-- More informaiton about the role?
-- Open projects or current directions?
-- How big is the DS team?
-- Could you tell me a little about your team specifically? 
-
 <!-- JUST IN CASE -->
 
 ## CI methods
@@ -330,9 +326,6 @@ Me:
 - causal impact
 - synthetic control
 - IV analysis
-
-
-## Glassdoor interview questions
 
 
 ## Competition

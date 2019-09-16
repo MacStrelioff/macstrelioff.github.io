@@ -60,46 +60,10 @@ I also enjoy diving into new areas and learning new tools through consulting wor
 <!-- call to action -->
 I am constantly looking for new ways to apply my skills -- Feel free to [reach out](https://www.linkedin.com/in/macstrelioff/) if you have any opportunities!
 
-
 <!--
 old LI blurb
 Experienced researcher with graduate degrees in cognitive science and statistics, and deep experience with: Bayesian modeling, decision theory, experimentation, machine learning. I'm primarily interested in experimentation and developing machine learning methods to automate real time decision making. 
 -->
-
-<!--
-Lambda call:
-
-Anaka. 
-
-Role: 
-- use zoom and slack
-- outgrown airtable
-
-Questions: 
-- Broad carriculum or specific topics?
-- - one instructor could do whole carriculum for a cohort. Could teach one or two areas. 
-- already have carriculum developed, but do encourae instructors to work with program managers to create material or improvements as needed.
-- DS anywhere from 20-50
-
-- what would a class look like?
-- all come in and do breakout rooms. 
-- team leads like TAs -- 8 students per TL, 
-- HW? 
-- projects, probem sets, first part students being taught
-- middle part, students work on projects
-- last part they work on getting a job
-- Job placement services? 
-- - director of instructor
-- - - program managers for each program (Ben Bulkie)
-- - - 
-
-- job placement -- two approaches, lambda lab team to work on capstones. 
-- 
-
-- next steps: probably early next week should hear back.
-
--->
-
 
 <!--
 TODO:
