@@ -337,6 +337,8 @@ Me:
 
 ## Competition
 
+Wealthfront predacessor was [KaChing](https://venturebeat.com/2019/09/16/google-schedules-pixel-4-hardware-event-for-october-15/), a social network and platform for users to pick a fantasy stock portfolio, and investors to allocate funds acording to the picks of high skill users. KaChing had software that would evaluate the skill of it's users. 
+
 [Betterment](https://www.betterment.com/)
 
 [Wealthfront vs Betterment](https://www.investopedia.com/wealthfront-vs-betterment-4587963)

@@ -105,6 +105,8 @@ Questions:
 TODO:
 
 - Apply to Instacart
+- Follow up with Mike's cousin
+- Prep for Wealthfront
 - Work for HaaS / Peter
 - AWS or other cloud platform for scraping, storing data?
 - PredictIt trading dashboard
