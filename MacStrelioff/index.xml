@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Tue, 17 Sep 2019 09:36:03 +0000</pubDate>
+      <pubDate>Tue, 17 Sep 2019 10:56:39 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -104,7 +104,10 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;CD, debit, credit card, etc.&lt;/li&gt;
 &lt;li&gt;self-driving money: idea that they can automate finances for people. to meet short term and long terms savings needs.&lt;/li&gt;
 &lt;li&gt;system can optimize how money from a paycheck or other accounts should flow between cash, investments, savings, based on these goals.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;accounts for all tax rules, etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;accounts for all tax rules, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Team:&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;170 people in company&lt;/li&gt;
 &lt;li&gt;DS team more diverse (9 people (should be doubling lately))&lt;/li&gt;
 &lt;li&gt;economists, statisticians, ML, data science, financial, … .&lt;/li&gt;
@@ -160,6 +163,11 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;ul&gt;
 &lt;li&gt;Sense of problems that excite you&lt;/li&gt;
 &lt;li&gt;Inquire about contributions to past projects, understanding of past projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- Questions / Interest --&gt;
+&lt;ul&gt;
+&lt;li&gt;Which team are you on?&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;preparation&#34; class=&#34;section level1&#34;&gt;
@@ -238,30 +246,6 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;/div&gt;
 &lt;div id=&#34;project-descriptions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Project Descriptions:&lt;/h2&gt;
-&lt;div id=&#34;discussion-of-past-work&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Discussion of past work&lt;/h3&gt;
-&lt;p&gt;PredictIt Project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Situation:&lt;/li&gt;
-&lt;li&gt;Action:&lt;/li&gt;
-&lt;li&gt;Result:&lt;/li&gt;
-&lt;li&gt;Project:&lt;/li&gt;
-&lt;li&gt;Maybe sketch the fig of price for Trump win versus Republican win&lt;/li&gt;
-&lt;li&gt;I also aggregated data based on days until expiration, and applied a linear in log odds model at each day.&lt;/li&gt;
-&lt;li&gt;Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.&lt;/li&gt;
-&lt;li&gt;Result:&lt;/li&gt;
-&lt;li&gt;Value to Yelp: Relates to the economic patterns maybe?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Strategy Inference Project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Situation:&lt;/li&gt;
-&lt;li&gt;Project:&lt;/li&gt;
-&lt;li&gt;Children and adults might use different strategies when making decisions.&lt;/li&gt;
-&lt;li&gt;I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time.&lt;/li&gt;
-&lt;li&gt;Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.&lt;/li&gt;
-&lt;li&gt;Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings.&lt;/li&gt;
-&lt;li&gt;More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;General interest in decision making:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, … .&lt;/li&gt;
@@ -275,7 +259,6 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant&lt;/li&gt;
 &lt;li&gt;Chose random forests because it does a better job of pulling out important collinear features&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
 &lt;div id=&#34;haas-freelance-work&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;HaaS freelance work&lt;/h3&gt;
 &lt;p&gt;Situation:&lt;/p&gt;
@@ -347,10 +330,17 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;/div&gt;
 &lt;div id=&#34;child-bandit-modeling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Child bandit modeling&lt;/h3&gt;
+&lt;p&gt;Strategy Inference Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time.&lt;/li&gt;
+&lt;li&gt;Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.&lt;/li&gt;
+&lt;li&gt;Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings.&lt;/li&gt;
+&lt;li&gt;More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Situation:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Wanted to know what strategies they followed, and if their strategy changed over time.&lt;/li&gt;
-&lt;li&gt;Kids we repeatedly choosing between gambles&lt;/li&gt;
+&lt;li&gt;Kids repeatedly chose between two gambling machines&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Action:&lt;/p&gt;
 &lt;ul&gt;
