@@ -215,6 +215,12 @@ Engagement or value:
 ## Glassdoor interview questions
 
 
+
+probably puzzle questions.
+behavior : go through the resume.  
+
+
+
 <!-- PROJECT DESCRIPTIONS -->
 
 ## Project Descriptions: 
