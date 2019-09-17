@@ -220,13 +220,10 @@ Engagement or value:
 - Use Modern Portfolio Theory, smart beta and tax-loss harvesting for larger accounts. 
 - Collect a 0.25% fee on managed funds
 
-
 ## Glassdoor interview questions
-
 
 probably puzzle questions.
 behavior : go through the resume.  
-
 
 <!-- PROJECT DESCRIPTIONS -->
 
@@ -318,14 +315,6 @@ Results:
 
 ### Child bandit modeling
 
-Strategy Inference Project:
-
-- I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time. 
-- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
-- Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user's decisions. This informaiton could then be used to modify search rankings. 
-- More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings. 
-
-
 Situation:
 
 - Wanted to know what strategies they followed, and if their strategy changed over time.
@@ -339,6 +328,10 @@ Action:
 Result:
 
 - Kids do seem to switch strategies, probably don't act optimally, and have different strategies depending on age (switchy vs sticky)
+- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
+
+Value:
+
 - Implications for user intent modeling
 
 <!-- JUST IN CASE -->
