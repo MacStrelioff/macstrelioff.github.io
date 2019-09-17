@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Mon, 16 Sep 2019 14:58:28 +0000</pubDate>
+      <pubDate>Mon, 16 Sep 2019 15:48:33 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -166,20 +166,32 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;h1&gt;Preparation&lt;/h1&gt;
 &lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Deep Dive&lt;/h2&gt;
-&lt;div id=&#34;products&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Products&lt;/h3&gt;
+&lt;div id=&#34;overview&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;Summary (2-3 sentences):&lt;/p&gt;
+&lt;p&gt;Products&lt;/p&gt;
+&lt;p&gt;Users&lt;/p&gt;
+&lt;p&gt;Use cases&lt;/p&gt;
+&lt;p&gt;Monetization&lt;/p&gt;
+&lt;p&gt;Dynamics (network, marketplace, … )&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;users&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Users&lt;/h3&gt;
+&lt;div id=&#34;user-journey-and-user-flows&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;User Journey and User Flows&lt;/h3&gt;
 &lt;/div&gt;
-&lt;div id=&#34;use-cases&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Use cases&lt;/h3&gt;
+&lt;div id=&#34;major-metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Major metrics&lt;/h3&gt;
+&lt;p&gt;Growth / retention&lt;/p&gt;
+&lt;p&gt;Engagement&lt;/p&gt;
+&lt;p&gt;Monetization&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;monetization&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Monetization&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dynamics-network-marketplace&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Dynamics (network, marketplace, … )&lt;/h3&gt;
+&lt;div id=&#34;possible-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Possible Questions&lt;/h3&gt;
+&lt;p&gt;How can you help drive key metrics?&lt;/p&gt;
+&lt;p&gt;What behaviors should the UI drive and how can you make product recommendations?&lt;/p&gt;
+&lt;p&gt;What data/features would you potentially have access to?&lt;/p&gt;
+&lt;p&gt;How are certain data products built (recommenders, content feeds)?&lt;/p&gt;
+&lt;p&gt;How would a site/app reduce fraud?&lt;/p&gt;
+&lt;p&gt;Based on team you are interviewing for&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;signup-process&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Signup process:&lt;/h3&gt;

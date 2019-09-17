@@ -138,16 +138,48 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 
 ## Deep Dive
 
-### Products
+### Overview
 
-### Users
+Summary (2-3 sentences):
 
-### Use cases
+Products
 
-### Monetization
+Users
 
-### Dynamics (network, marketplace, ... )
+Use cases
 
+Monetization
+
+Dynamics (network, marketplace, ... )
+
+### User Journey and User Flows
+
+### Major metrics
+
+Growth / retention
+
+Engagement
+
+Monetization
+
+### Possible Questions
+
+How can you help drive key metrics?
+
+
+What behaviors should the UI drive and how can you make product recommendations?
+
+
+What data/features would you potentially have access to?
+
+
+How are certain data products built (recommenders, content feeds)?
+
+
+How would a site/app reduce fraud?
+
+
+Based on team you are interviewing for
 
 
 
@@ -178,9 +210,6 @@ Engagement or value:
 - Offer funds managed by the author of 'A Random Walk Down Wall Street'
 - Use Modern Portfolio Theory, smart beta and tax-loss harvesting for larger accounts. 
 - Collect a 0.25% fee on managed funds
-
-
-
 
 
 ## Glassdoor interview questions
