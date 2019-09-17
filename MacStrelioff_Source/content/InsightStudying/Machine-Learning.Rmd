@@ -41,6 +41,8 @@ metrics (precision, recall, F1)
 
 [metrics](https://en.wikipedia.org/wiki/Precision_and_recall)
 
+Comparison of prec, rec, F1, [here](https://stackoverflow.com/questions/44172162/f1-score-vs-roc-auc)
+
 $$
 \begin{aligned}
 acc  &= \frac{tp+tn}{tp+tn+fp+fn} \\

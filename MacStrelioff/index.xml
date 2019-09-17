@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Tue, 17 Sep 2019 11:22:06 +0000</pubDate>
+      <pubDate>Tue, 17 Sep 2019 14:45:07 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -122,6 +122,7 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;looking for ideas on growing cash account via a referral program.&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;hiring one growth DS for across those areas&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- PROCESS --&gt;
 &lt;p&gt;Process:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;this initial meeting&lt;/li&gt;
@@ -144,15 +145,17 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;** First work on conversion from cash client to investment client.&lt;/li&gt;
 &lt;li&gt;** and on paid marketing side, optimizing marketing on facebook, and Google ad words, and working on attribution to allocate marketing budget.&lt;/li&gt;
 &lt;li&gt;** Lower customer acquisition costs.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;Identify cash clients who would have biggest beenfit from opening investment account.&lt;/li&gt;
+&lt;li&gt;Identify cash clients who would have biggest benefit from opening investment account.&lt;/li&gt;
 &lt;li&gt;regular check in with head of marketing every couple weeks&lt;/li&gt;
 &lt;li&gt;Growth DS can look at all of these options (come up with ideas)&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Don’t want relationship to be where DS just does what marketing team asks. So DS idn’t expected to be marketing expert, but should come up with their own ideas and refine in collaboration with the other teams/partners.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Don’t want relationship to be where DS just does what marketing team asks. So DS isn’t expected to be marketing expert, but should come up with their own ideas and refine in collaboration with the other teams/partners.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;questions;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;More informaiton about the role?&lt;/li&gt;
 &lt;li&gt;Open projects or current directions?&lt;/li&gt;
 &lt;li&gt;How big is the DS team?&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Could you tell me a little about your team specifically?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Could you tell me a little about your team specifically?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -164,94 +167,36 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;Sense of problems that excite you&lt;/li&gt;
 &lt;li&gt;Inquire about contributions to past projects, understanding of past projects&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- fit for Wealthfront --&gt;
+&lt;ul&gt;
+&lt;li&gt;Quantopian; wanted to create self-driving money for myself&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Primarily an income investor&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;replicated XIV&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Quantopian had a bug in dividends paid, so I submitted a ticket showing this with AAPL stock, and stopped using that platform..&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Passion for automated financial decision making: PredictIt formula for guarenteed profits that accounted for relationships between prices, probability theory, and PredictIt fees. This is similar to finding an arbitrage relationship (relations between prices and probability theory) and accounting for taxes (fees).&lt;/li&gt;
+&lt;/ul&gt;
 &lt;!-- Questions / Interest --&gt;
 &lt;ul&gt;
 &lt;li&gt;Which team are you on?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Interested in the financial problems addressed;&lt;/li&gt;
+&lt;li&gt;e.g. &lt;a href=&#34;https://www.wealthfront.com/home-guide#buy-versus-rent&#34;&gt;right considerations for buying vs renting&lt;/a&gt;, plus tax implications&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;preparation&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Preparation&lt;/h1&gt;
-&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Deep Dive&lt;/h2&gt;
-&lt;div id=&#34;overview&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Overview&lt;/h3&gt;
-&lt;p&gt;Summary (2-3 sentences):&lt;/p&gt;
-&lt;p&gt;Products&lt;/p&gt;
-&lt;p&gt;Users&lt;/p&gt;
-&lt;p&gt;Use cases&lt;/p&gt;
-&lt;p&gt;Monetization&lt;/p&gt;
-&lt;p&gt;Dynamics (network, marketplace, … )&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;user-journey-and-user-flows&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;User Journey and User Flows&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;major-metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Major metrics&lt;/h3&gt;
-&lt;p&gt;Growth / retention&lt;/p&gt;
-&lt;p&gt;Engagement&lt;/p&gt;
-&lt;p&gt;Monetization&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;possible-questions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Possible Questions&lt;/h3&gt;
-&lt;p&gt;How can you help drive key metrics?&lt;/p&gt;
-&lt;p&gt;What behaviors should the UI drive and how can you make product recommendations?&lt;/p&gt;
-&lt;p&gt;What data/features would you potentially have access to?&lt;/p&gt;
-&lt;p&gt;How are certain data products built (recommenders, content feeds)?&lt;/p&gt;
-&lt;p&gt;How would a site/app reduce fraud?&lt;/p&gt;
-&lt;p&gt;Based on team you are interviewing for&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;signup-process&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Signup process:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;One page for all “Legal Stuff” questions, instead of a page for each question..&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;Is there any dropoff on each question? I’m expecting the dropoff for Legal stuff to be lower if it were one page than compared to it being a page for each question.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;important-metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Important Metrics:&lt;/h3&gt;
-&lt;p&gt;Growth:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Weekly new users&lt;/li&gt;
-&lt;li&gt;Month over month active account growth&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Engagement or value:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Total deposits&lt;/li&gt;
-&lt;li&gt;Total assets tracked&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;culture-and-vision&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Culture and Vision&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;“We’re here because more people across the economic spectrum deserve to live secure and rewarding lives.”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;business-model&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Business Model&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Offer a high yield savings account&lt;/li&gt;
-&lt;li&gt;Offer funds managed by the author of ‘A Random Walk Down Wall Street’&lt;/li&gt;
-&lt;li&gt;Use Modern Portfolio Theory, smart beta and tax-loss harvesting for larger accounts.&lt;/li&gt;
-&lt;li&gt;Collect a 0.25% fee on managed funds&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Glassdoor interview questions&lt;/h2&gt;
-&lt;p&gt;probably puzzle questions. behavior : go through the resume.&lt;/p&gt;
+&lt;!-- Followup from PM phone call --&gt;
+&lt;div id=&#34;ideas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Ideas&lt;/h2&gt;
 &lt;!-- PROJECT DESCRIPTIONS --&gt;
 &lt;/div&gt;
 &lt;div id=&#34;project-descriptions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Project Descriptions:&lt;/h2&gt;
-&lt;p&gt;General interest in decision making:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, … .&lt;/li&gt;
-&lt;li&gt;Excitement: Yelp is basically a giant experiment in multiattribute decision making.&lt;/li&gt;
-&lt;li&gt;Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers.&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;Insight Project:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User funnel and user flow, maybe should have started at these simpler analyses&lt;/li&gt;
@@ -361,14 +306,427 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;IV analysis&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;competition&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Competition&lt;/h2&gt;
+&lt;div id=&#34;deep-dive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Deep Dive&lt;/h2&gt;
+&lt;div id=&#34;overview&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;Summary (2-3 sentences):&lt;/p&gt;
+&lt;p&gt;Products&lt;/p&gt;
+&lt;p&gt;Users&lt;/p&gt;
+&lt;p&gt;Use cases&lt;/p&gt;
+&lt;p&gt;Monetization&lt;/p&gt;
+&lt;p&gt;Dynamics (network, marketplace, … )&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;user-journey-and-user-flows&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;User Journey and User Flows&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;major-metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Major metrics&lt;/h3&gt;
+&lt;p&gt;Growth / retention&lt;/p&gt;
+&lt;p&gt;Engagement&lt;/p&gt;
+&lt;p&gt;Monetization&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;possible-questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Possible Questions&lt;/h3&gt;
+&lt;p&gt;How can you help drive key metrics?&lt;/p&gt;
+&lt;p&gt;What behaviors should the UI drive and how can you make product recommendations?&lt;/p&gt;
+&lt;p&gt;What data/features would you potentially have access to?&lt;/p&gt;
+&lt;p&gt;How are certain data products built (recommenders, content feeds)?&lt;/p&gt;
+&lt;p&gt;How would a site/app reduce fraud?&lt;/p&gt;
+&lt;p&gt;Based on team you are interviewing for&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;signup-process&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Signup process:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;One page for all “Legal Stuff” questions, instead of a page for each question..&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Is there any dropoff on each question? I’m expecting the dropoff for Legal stuff to be lower if it were one page than compared to it being a page for each question.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;important-metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Important Metrics:&lt;/h3&gt;
+&lt;p&gt;Growth:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Weekly new users&lt;/li&gt;
+&lt;li&gt;Month over month active account growth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Engagement or value:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Total deposits&lt;/li&gt;
+&lt;li&gt;Total assets tracked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;culture-and-vision&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Culture and Vision&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;“We’re here because more people across the economic spectrum deserve to live secure and rewarding lives.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;business-model&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Business Model&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Offer a high yield savings account&lt;/li&gt;
+&lt;li&gt;Offer funds managed by the author of ‘A Random Walk Down Wall Street’&lt;/li&gt;
+&lt;li&gt;Use Modern Portfolio Theory, smart beta and tax-loss harvesting for larger accounts.&lt;/li&gt;
+&lt;li&gt;Collect a 0.25% fee on managed funds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glassdoor-interview-questions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Glassdoor interview questions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;probably puzzle questions.&lt;/li&gt;
+&lt;li&gt;behavior : go through the resume.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;competition&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Competition&lt;/h3&gt;
 &lt;p&gt;Wealthfront predacessor was &lt;a href=&#34;https://venturebeat.com/2019/09/16/google-schedules-pixel-4-hardware-event-for-october-15/&#34;&gt;KaChing&lt;/a&gt;, a social network and platform for users to pick a fantasy stock portfolio, and investors to allocate funds acording to the picks of high skill users. KaChing had software that would evaluate the skill of it’s users.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.betterment.com/&#34;&gt;Betterment&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.investopedia.com/wealthfront-vs-betterment-4587963&#34;&gt;Wealthfront vs Betterment&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/MacStrelioff/insightstudying/machine-learning/</link>
+      <pubDate>Tue, 17 Sep 2019 14:21:49 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#considerations&#34;&gt;Considerations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#bias-variance-trade-off&#34;&gt;Bias-variance trade-off&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#overfitting-and-underfitting&#34;&gt;Overfitting and Underfitting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cost-functions-and-metrics&#34;&gt;Cost Functions and Metrics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#feature-engineering&#34;&gt;Feature Engineering&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#seperability&#34;&gt;Seperability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assumptions-about-form-of-relationship&#34;&gt;Assumptions about form of relationship&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#unsupervised&#34;&gt;Unsupervised&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#clustering&#34;&gt;Clustering&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#k-means&#34;&gt;k-means&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#agglomerative&#34;&gt;Agglomerative&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#devisive&#34;&gt;Devisive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#matrix-decomposition&#34;&gt;Matrix Decomposition&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pca-principle-components-analysis&#34;&gt;PCA Principle Components Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#svd-singular-value-decomposition&#34;&gt;SVD Singular Value Decomposition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#text-based&#34;&gt;Text-based&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#lda-latent-direchilote-analysis&#34;&gt;LDA Latent Direchilote Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lsa-latent-semantic-analysis&#34;&gt;LSA Latent Semantic Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#supervised&#34;&gt;Supervised&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#regression&#34;&gt;Regression&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#linear&#34;&gt;Linear&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#support-vector-machine-svm&#34;&gt;Support Vector Machine (SVM)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#classification&#34;&gt;Classification&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#naive-bayes&#34;&gt;Naive Bayes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#discriminant-analysis&#34;&gt;Discriminant Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#knn&#34;&gt;KNN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logistic-regression&#34;&gt;Logistic Regression&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ensemble-methods&#34;&gt;Ensemble Methods&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#trees-and-forests&#34;&gt;Trees and Forests&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#regression-1&#34;&gt;Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#classification-1&#34;&gt;Classification&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#open-ended-template&#34;&gt;Open ended Template&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#raw-data-structure&#34;&gt;Raw data structure?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#define-target-variable&#34;&gt;Define target variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#preprocession&#34;&gt;Preprocession,&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#feature-engineering-1&#34;&gt;Feature engineering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#performance-metrics-and-how-they-apply&#34;&gt;Performance metrics and how they apply&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cautions&#34;&gt;Cautions:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#imagine-rolling-the-model-out&#34;&gt;Imagine rolling the model out&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#model-explainability&#34;&gt;Model explainability&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#shapely-additive&#34;&gt;Shapely additive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#locally-linear&#34;&gt;Locally linear&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#limitations&#34;&gt;Limitations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;considerations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Considerations&lt;/h1&gt;
+&lt;div id=&#34;bias-variance-trade-off&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Bias-variance trade-off&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;overfitting-and-underfitting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Overfitting and Underfitting&lt;/h2&gt;
+&lt;p&gt;Cross Validation; Classification&lt;/p&gt;
+&lt;p&gt;Assess by comparing a performance metric on training and testing data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cost-functions-and-metrics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cost Functions and Metrics&lt;/h2&gt;
+&lt;p&gt;Modeling: Validation metrics,&lt;/p&gt;
+&lt;p&gt;metrics (precision, recall, F1)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Precision_and_recall&#34;&gt;metrics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Comparison of prec, rec, F1, &lt;a href=&#34;https://stackoverflow.com/questions/44172162/f1-score-vs-roc-auc&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+acc  &amp;amp;= \frac{tp+tn}{tp+tn+fp+fn} \\
+prec &amp;amp;= \frac{tp}{tp+fp}\\
+rec  &amp;amp;= \frac{tp}{tp+fn}\\
+F1   &amp;amp;= 2\frac{prec*rec}{prec+rec}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;R squared, RMSE&lt;/p&gt;
+&lt;p&gt;Likelihood&lt;/p&gt;
+&lt;p&gt;regularisation (ridge, lasso),&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feature-engineering&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Feature Engineering&lt;/h2&gt;
+&lt;div id=&#34;seperability&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Seperability&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assumptions-about-form-of-relationship&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Assumptions about form of relationship&lt;/h3&gt;
+&lt;p&gt;Process: feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;unsupervised&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Unsupervised&lt;/h1&gt;
+&lt;div id=&#34;clustering&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clustering&lt;/h2&gt;
+&lt;div id=&#34;k-means&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;k-means&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;agglomerative&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Agglomerative&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;devisive&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Devisive&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;matrix-decomposition&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Matrix Decomposition&lt;/h2&gt;
+&lt;div id=&#34;pca-principle-components-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;PCA Principle Components Analysis&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;svd-singular-value-decomposition&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;SVD Singular Value Decomposition&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;text-based&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Text-based&lt;/h2&gt;
+&lt;div id=&#34;lda-latent-direchilote-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;LDA Latent Direchilote Analysis&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lsa-latent-semantic-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;LSA Latent Semantic Analysis&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;supervised&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Supervised&lt;/h1&gt;
+&lt;div id=&#34;regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Regression&lt;/h2&gt;
+&lt;div id=&#34;linear&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Linear&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;support-vector-machine-svm&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Support Vector Machine (SVM)&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;classification&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Classification&lt;/h2&gt;
+&lt;div id=&#34;naive-bayes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Naive Bayes&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;discriminant-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Discriminant Analysis&lt;/h3&gt;
+&lt;div id=&#34;lda&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;LDA&lt;/h4&gt;
+&lt;p&gt;When to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;qda&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;QDA&lt;/h4&gt;
+&lt;p&gt;When to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;knn&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;KNN&lt;/h3&gt;
+&lt;p&gt;When to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;logistic-regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Logistic Regression&lt;/h3&gt;
+&lt;p&gt;When to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ensemble-methods&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Ensemble Methods&lt;/h1&gt;
+&lt;p&gt;boosting, bagging&lt;/p&gt;
+&lt;p&gt;XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost&lt;/p&gt;
+&lt;div id=&#34;trees-and-forests&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Trees and Forests&lt;/h2&gt;
+&lt;p&gt;Gini Impurity: &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+m:&amp;amp;\text{ Region} \\
+k:&amp;amp; \text{ Class} \\
+G =&amp;amp; \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
+\\=&amp;amp; 1 - \Sigma_k \hat{p}_{m,k}^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Decrease in Impurity &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+t:&amp;amp;\text{ Node} \\
+N_t:&amp;amp;\text{ Samples at node }t \\
+s_t:&amp;amp;\text{ Split }t \text{ into } t_L,t_R\\
+\Delta i(s_t,t)=&amp;amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Mean Decrease in Impurity: &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+T:&amp;amp; \text{Trees} \\
+N_T:&amp;amp; \text{Number of trees} \\
+t:&amp;amp;\text{ Nodes} \\
+s_t:&amp;amp;\text{ Split }t \text{ into } t_L,t_R\\
+v(s_t):&amp;amp;\text{Variable split on at } s_t \\
+p(t):&amp;amp; \text{Proportion of total samples at node } t \\
+Imp(X_m)=&amp;amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta i(s_t,t)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e&#34;&gt;Good blog on analysis of feature importance&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Also see &lt;a href=&#34;https://github.com/slundberg/shap&#34;&gt;SHAP&lt;/a&gt; for interpreting predictions from tree models!&lt;/p&gt;
+&lt;p&gt;Benefits of trees over OLS&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables&#34; class=&#34;uri&#34;&gt;https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;regression-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regression&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;classification-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Classification&lt;/h3&gt;
+&lt;p&gt;Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming&lt;/p&gt;
+&lt;div id=&#34;assessment&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Assessment&lt;/h4&gt;
+&lt;p&gt;Confusion matrix, F1, precision-recall curve&lt;/p&gt;
+&lt;p&gt;ROC, AUC&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;open-ended-template&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Open ended Template&lt;/h1&gt;
+&lt;div id=&#34;raw-data-structure&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Raw data structure?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Table of information about consumer&lt;/li&gt;
+&lt;li&gt;Table of transaction history&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;define-target-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Define target variable&lt;/h2&gt;
+&lt;p&gt;e.g. Fraud would be if a consumer calls and labels a transaction as fraud.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;preprocession&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Preprocession,&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;EDA - distributions, correlations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feature-engineering-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Feature engineering&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;performance-metrics-and-how-they-apply&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Performance metrics and how they apply&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Precision&lt;/li&gt;
+&lt;li&gt;Recall&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cautions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cautions:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Don’t mention models you aren’t familiar with&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;imagine-rolling-the-model-out&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Imagine rolling the model out&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What issues might arise?&lt;/li&gt;
+&lt;li&gt;What actions do you take in production?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-explainability&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Model explainability&lt;/h2&gt;
+&lt;div id=&#34;shapely-additive&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Shapely additive&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;locally-linear&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Locally linear&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;eg &lt;a href=&#34;https://www.oreilly.com/learning/introduction-to-local-interpretable-model-agnostic-explanations-lime&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;limitations&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Limitations&lt;/h3&gt;
+&lt;p&gt;Limitations described a little in the FLowcast paper &lt;a href=&#34;https://flowcast.ai/Flowcast_whitepaper_-_Explainability.pdf&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;biased for collinear features?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -2877,344 +3235,6 @@ I hope you are interested in the skills and projects outlined in my resume, and 
 &lt;p&gt;Thanks again! If you feel like there is a possible fit on your end, I would love to further this conversation!&lt;/p&gt;
 &lt;p&gt;Hope you have a great week! And feel free to reach out if you have any questions about my experience or interests.&lt;/p&gt;
 &lt;p&gt;Best, Mac&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Wed, 04 Sep 2019 11:14:55 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#considerations&#34;&gt;Considerations&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#bias-variance-trade-off&#34;&gt;Bias-variance trade-off&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#overfitting-and-underfitting&#34;&gt;Overfitting and Underfitting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cost-functions-and-metrics&#34;&gt;Cost Functions and Metrics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#feature-engineering&#34;&gt;Feature Engineering&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#seperability&#34;&gt;Seperability&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#assumptions-about-form-of-relationship&#34;&gt;Assumptions about form of relationship&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#unsupervised&#34;&gt;Unsupervised&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#clustering&#34;&gt;Clustering&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#k-means&#34;&gt;k-means&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#agglomerative&#34;&gt;Agglomerative&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#devisive&#34;&gt;Devisive&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#matrix-decomposition&#34;&gt;Matrix Decomposition&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pca-principle-components-analysis&#34;&gt;PCA Principle Components Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#svd-singular-value-decomposition&#34;&gt;SVD Singular Value Decomposition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#text-based&#34;&gt;Text-based&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#lda-latent-direchilote-analysis&#34;&gt;LDA Latent Direchilote Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#lsa-latent-semantic-analysis&#34;&gt;LSA Latent Semantic Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#supervised&#34;&gt;Supervised&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#regression&#34;&gt;Regression&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#linear&#34;&gt;Linear&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#support-vector-machine-svm&#34;&gt;Support Vector Machine (SVM)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#classification&#34;&gt;Classification&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#naive-bayes&#34;&gt;Naive Bayes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#discriminant-analysis&#34;&gt;Discriminant Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#knn&#34;&gt;KNN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#logistic-regression&#34;&gt;Logistic Regression&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ensemble-methods&#34;&gt;Ensemble Methods&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#trees-and-forests&#34;&gt;Trees and Forests&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#regression-1&#34;&gt;Regression&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#classification-1&#34;&gt;Classification&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#open-ended-template&#34;&gt;Open ended Template&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#raw-data-structure&#34;&gt;Raw data structure?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#define-target-variable&#34;&gt;Define target variable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#preprocession&#34;&gt;Preprocession,&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#feature-engineering-1&#34;&gt;Feature engineering&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#performance-metrics-and-how-they-apply&#34;&gt;Performance metrics and how they apply&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cautions&#34;&gt;Cautions:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#imagine-rolling-the-model-out&#34;&gt;Imagine rolling the model out&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#model-explainability&#34;&gt;Model explainability&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#shapely-additive&#34;&gt;Shapely additive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#locally-linear&#34;&gt;Locally linear&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#limitations&#34;&gt;Limitations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;considerations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Considerations&lt;/h1&gt;
-&lt;div id=&#34;bias-variance-trade-off&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Bias-variance trade-off&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;overfitting-and-underfitting&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Overfitting and Underfitting&lt;/h2&gt;
-&lt;p&gt;Cross Validation; Classification&lt;/p&gt;
-&lt;p&gt;Assess by comparing a performance metric on training and testing data.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cost-functions-and-metrics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Cost Functions and Metrics&lt;/h2&gt;
-&lt;p&gt;Modeling: Validation metrics,&lt;/p&gt;
-&lt;p&gt;metrics (precision, recall, F1)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Precision_and_recall&#34;&gt;metrics&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-acc  &amp;amp;= \frac{tp+tn}{tp+tn+fp+fn} \\
-prec &amp;amp;= \frac{tp}{tp+fp}\\
-rec  &amp;amp;= \frac{tp}{tp+fn}\\
-F1   &amp;amp;= 2\frac{prec*rec}{prec+rec}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;R squared, RMSE&lt;/p&gt;
-&lt;p&gt;Likelihood&lt;/p&gt;
-&lt;p&gt;regularisation (ridge, lasso),&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;feature-engineering&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Feature Engineering&lt;/h2&gt;
-&lt;div id=&#34;seperability&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Seperability&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;assumptions-about-form-of-relationship&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Assumptions about form of relationship&lt;/h3&gt;
-&lt;p&gt;Process: feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;unsupervised&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Unsupervised&lt;/h1&gt;
-&lt;div id=&#34;clustering&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Clustering&lt;/h2&gt;
-&lt;div id=&#34;k-means&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;k-means&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;agglomerative&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Agglomerative&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;devisive&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Devisive&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;matrix-decomposition&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Matrix Decomposition&lt;/h2&gt;
-&lt;div id=&#34;pca-principle-components-analysis&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;PCA Principle Components Analysis&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;svd-singular-value-decomposition&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;SVD Singular Value Decomposition&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;text-based&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Text-based&lt;/h2&gt;
-&lt;div id=&#34;lda-latent-direchilote-analysis&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;LDA Latent Direchilote Analysis&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lsa-latent-semantic-analysis&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;LSA Latent Semantic Analysis&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;supervised&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Supervised&lt;/h1&gt;
-&lt;div id=&#34;regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Regression&lt;/h2&gt;
-&lt;div id=&#34;linear&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Linear&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;support-vector-machine-svm&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Support Vector Machine (SVM)&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;classification&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Classification&lt;/h2&gt;
-&lt;div id=&#34;naive-bayes&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Naive Bayes&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;discriminant-analysis&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Discriminant Analysis&lt;/h3&gt;
-&lt;div id=&#34;lda&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;LDA&lt;/h4&gt;
-&lt;p&gt;When to use:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pros:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cons:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;qda&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;QDA&lt;/h4&gt;
-&lt;p&gt;When to use:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pros:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cons:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;knn&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;KNN&lt;/h3&gt;
-&lt;p&gt;When to use:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pros:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cons:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;logistic-regression&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Logistic Regression&lt;/h3&gt;
-&lt;p&gt;When to use:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pros:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cons:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ensemble-methods&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Ensemble Methods&lt;/h1&gt;
-&lt;p&gt;boosting, bagging&lt;/p&gt;
-&lt;p&gt;XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost&lt;/p&gt;
-&lt;div id=&#34;trees-and-forests&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Trees and Forests&lt;/h2&gt;
-&lt;p&gt;Gini Impurity: &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-m:&amp;amp;\text{ Region} \\
-k:&amp;amp; \text{ Class} \\
-G =&amp;amp; \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
-\\=&amp;amp; 1 - \Sigma_k \hat{p}_{m,k}^2
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Decrease in Impurity &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-t:&amp;amp;\text{ Node} \\
-N_t:&amp;amp;\text{ Samples at node }t \\
-s_t:&amp;amp;\text{ Split }t \text{ into } t_L,t_R\\
-\Delta i(s_t,t)=&amp;amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Mean Decrease in Impurity: &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-T:&amp;amp; \text{Trees} \\
-N_T:&amp;amp; \text{Number of trees} \\
-t:&amp;amp;\text{ Nodes} \\
-s_t:&amp;amp;\text{ Split }t \text{ into } t_L,t_R\\
-v(s_t):&amp;amp;\text{Variable split on at } s_t \\
-p(t):&amp;amp; \text{Proportion of total samples at node } t \\
-Imp(X_m)=&amp;amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta i(s_t,t)
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e&#34;&gt;Good blog on analysis of feature importance&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Also see &lt;a href=&#34;https://github.com/slundberg/shap&#34;&gt;SHAP&lt;/a&gt; for interpreting predictions from tree models!&lt;/p&gt;
-&lt;p&gt;Benefits of trees over OLS&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables&#34; class=&#34;uri&#34;&gt;https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;regression-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Regression&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;classification-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Classification&lt;/h3&gt;
-&lt;p&gt;Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming&lt;/p&gt;
-&lt;div id=&#34;assessment&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Assessment&lt;/h4&gt;
-&lt;p&gt;Confusion matrix, F1, precision-recall curve&lt;/p&gt;
-&lt;p&gt;ROC, AUC&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;open-ended-template&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Open ended Template&lt;/h1&gt;
-&lt;div id=&#34;raw-data-structure&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Raw data structure?&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Table of information about consumer&lt;/li&gt;
-&lt;li&gt;Table of transaction history&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;define-target-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Define target variable&lt;/h2&gt;
-&lt;p&gt;e.g. Fraud would be if a consumer calls and labels a transaction as fraud.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;preprocession&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Preprocession,&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;EDA - distributions, correlations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;feature-engineering-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Feature engineering&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;performance-metrics-and-how-they-apply&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Performance metrics and how they apply&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Precision&lt;/li&gt;
-&lt;li&gt;Recall&lt;/li&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cautions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Cautions:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Don’t mention models you aren’t familiar with&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;imagine-rolling-the-model-out&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Imagine rolling the model out&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;What issues might arise?&lt;/li&gt;
-&lt;li&gt;What actions do you take in production?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;model-explainability&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Model explainability&lt;/h2&gt;
-&lt;div id=&#34;shapely-additive&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Shapely additive&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div id=&#34;locally-linear&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Locally linear&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;eg &lt;a href=&#34;https://www.oreilly.com/learning/introduction-to-local-interpretable-model-agnostic-explanations-lime&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;limitations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Limitations&lt;/h3&gt;
-&lt;p&gt;Limitations described a little in the FLowcast paper &lt;a href=&#34;https://flowcast.ai/Flowcast_whitepaper_-_Explainability.pdf&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;biased for collinear features?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

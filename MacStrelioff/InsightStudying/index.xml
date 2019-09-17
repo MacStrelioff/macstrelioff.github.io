@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Sep 2019 11:22:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2019 14:45:07 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,19 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Tue, 17 Sep 2019 11:22:06 +0000</pubDate>
+      <pubDate>Tue, 17 Sep 2019 14:45:07 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>TODO:  Looking for: “You enjoy mentoring others on subjects such as causal inference, experimental design, data visualization or behavioral psychology”  Make a few videos on experimentation and causal inference  Work on: “You subscribe to Wealthfront’s values and mission and can articulate the reasons why, and have an understanding of our product, business model and key metrics”   Job Description Projects, Tasks, and Data  Work closely with a cross-functional growth team of marketers, product managers, and engineers to generate new ideas for growth especially top of funnel, translating open-ended business issues into data questions, identifying practical analytic and A/B testing approaches to validate the ideas, and defining ongoing checks post-implementation to ensure that the growth mechanisms are working as planned.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/MacStrelioff/insightstudying/machine-learning/</link>
+      <pubDate>Tue, 17 Sep 2019 14:21:49 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
+      <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?</description>
     </item>
     
     <item>
@@ -54,15 +63,6 @@
       
       <guid>/MacStrelioff/insightstudying/behavioral-interviews/</guid>
       <description>Principles Evaluation  Common Behavioral Questions “Tell me a little about your background.” Child bandits:  “Tell me about the project you worked on at Insight.” “Why are you interested in a career as a data scientist?” “Tell me about your research / talk to me about your last role.” “Why are you interested in joining this company?” “Talk about a time you were on a team that struggled with effective communication.</description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>/MacStrelioff/insightstudying/machine-learning/</link>
-      <pubDate>Wed, 04 Sep 2019 11:14:55 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
-      <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?</description>
     </item>
     
     <item>
