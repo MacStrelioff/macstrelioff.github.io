@@ -145,7 +145,20 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - - replicated XIV
 - - Quantopian had a bug in dividends paid, so I submitted a ticket showing this with AAPL stock, and stopped using that platform..
 - Passion for automated financial decision making: PredictIt formula for guarenteed profits that accounted for relationships between prices, probability theory, and PredictIt fees. This is similar to finding an arbitrage relationship (relations between prices and probability theory) and accounting for taxes (fees). 
+- Debated friends about whether buying or renting is better, I liked WealthFront's analysis on this topic (though it leaves out the tax benefits of buying?)
+- I also like the principled investment philosophy (Modern protfolio theory, accounting for taxes, ... )
 
+<!-- Quantopian investment philosophy -->
+
+- I'm proimarily an income investor
+- Dividends reflect the risk in a stock, so I wanted to make a portfolio of dividend paying stocks weighted invesely proportional to the dividend yield.
+- Quantopian dividend data had a bug, so I gave up on this for now..
+
+<!-- fit for growth team -->
+
+- YT channel, casually testing thumbnails
+- HaaS work on fb ads and google analytics (talk about these tools)
+- Insight work on modeling uswe conversion for a free-trial to subscriber
 
 <!-- Questions / Interest -->
 
@@ -153,8 +166,29 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - Interested in the financial problems addressed; 
 - e.g. [right considerations for buying vs renting](https://www.wealthfront.com/home-guide#buy-versus-rent), plus tax implications
 
+<!-- Value adds / ideas-->
+
+- Why would I use Wealthfront? 
+- Why would I switch from savings to their portfolio management?
+- Why switch from self-management to their portfolio management? 
+- - Maybe a tool to compare a person's portfolio to Wealthfront's portfolio? Then a person should switch if switching is easy and their portfolio 
+- - - underperforms or 
+- - - has higher uncertainty or 
+- - - a lower SHARPE? 
+- Which blog articles motivate investing? 
+- - Exploratory: See which users viewed a blog post
+- - Experimental: Suggest blog posts to users (Treatment)
+- - focus on Treatment on Treated vs. users who were suggested other posts and viewed them 
+- - controls for engagement (viewing suggestion)? 
+- - controls for financial motivation (crossover effects i.e. viewing the blog post when it is ont suggestsd (assigned C experienced T))?
 
 
+TODO: think of a causal inference example related to an experiment here, to duscuss intelligently in the phone interview!!
+
+<!-- generic questions -->
+
+- Next steps? 
+- ... 
 
 # Preparation
 

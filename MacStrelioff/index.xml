@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Tue, 17 Sep 2019 14:45:07 +0000</pubDate>
+      <pubDate>Tue, 17 Sep 2019 15:38:23 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -180,12 +180,72 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;Quantopian had a bug in dividends paid, so I submitted a ticket showing this with AAPL stock, and stopped using that platform..&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Passion for automated financial decision making: PredictIt formula for guarenteed profits that accounted for relationships between prices, probability theory, and PredictIt fees. This is similar to finding an arbitrage relationship (relations between prices and probability theory) and accounting for taxes (fees).&lt;/li&gt;
+&lt;li&gt;Debated friends about whether buying or renting is better, I liked WealthFront’s analysis on this topic (though it leaves out the tax benefits of buying?)&lt;/li&gt;
+&lt;li&gt;I also like the principled investment philosophy (Modern protfolio theory, accounting for taxes, … )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- Quantopian investment philosophy --&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m proimarily an income investor&lt;/li&gt;
+&lt;li&gt;Dividends reflect the risk in a stock, so I wanted to make a portfolio of dividend paying stocks weighted invesely proportional to the dividend yield.&lt;/li&gt;
+&lt;li&gt;Quantopian dividend data had a bug, so I gave up on this for now..&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- fit for growth team --&gt;
+&lt;ul&gt;
+&lt;li&gt;YT channel, casually testing thumbnails&lt;/li&gt;
+&lt;li&gt;HaaS work on fb ads and google analytics (talk about these tools)&lt;/li&gt;
+&lt;li&gt;Insight work on modeling uswe conversion for a free-trial to subscriber&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- Questions / Interest --&gt;
 &lt;ul&gt;
 &lt;li&gt;Which team are you on?&lt;/li&gt;
 &lt;li&gt;Interested in the financial problems addressed;&lt;/li&gt;
 &lt;li&gt;e.g. &lt;a href=&#34;https://www.wealthfront.com/home-guide#buy-versus-rent&#34;&gt;right considerations for buying vs renting&lt;/a&gt;, plus tax implications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- Value adds / ideas--&gt;
+&lt;ul&gt;
+&lt;li&gt;Why would I use Wealthfront?&lt;/li&gt;
+&lt;li&gt;Why would I switch from savings to their portfolio management?&lt;/li&gt;
+&lt;li&gt;Why switch from self-management to their portfolio management?&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Maybe a tool to compare a person’s portfolio to Wealthfront’s portfolio? Then a person should switch if switching is easy and their portfolio&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;underperforms or&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;has higher uncertainty or&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;a lower SHARPE?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Which blog articles motivate investing?&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Exploratory: See which users viewed a blog post&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Experimental: Suggest blog posts to users (Treatment)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;focus on Treatment on Treated vs. users who were suggested other posts and viewed them&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;controls for engagement (viewing suggestion)?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;controls for financial motivation (crossover effects i.e. viewing the blog post when it is ont suggestsd (assigned C experienced T))?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TODO: think of a causal inference example related to an experiment here, to duscuss intelligently in the phone interview!!&lt;/p&gt;
+&lt;!-- generic questions --&gt;
+&lt;ul&gt;
+&lt;li&gt;Next steps?&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;preparation&#34; class=&#34;section level1&#34;&gt;

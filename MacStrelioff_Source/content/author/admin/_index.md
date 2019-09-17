@@ -66,6 +66,30 @@ Experienced researcher with graduate degrees in cognitive science and statistics
 -->
 
 <!--
+
+Moody's / Margaux call:
+
+- info about Moody's
+- provide ratings for countries, banks, ... 
+- analytics started in 2007, for packaging and selling data to clients
+- clients primarily insurance, banks, real estate
+- commercial real estate
+- has built AI to see how profitable abranch would be if opened in a location
+- AI that reads financial docs and creates balance sheets in seconds
+- couple positions that only fill internally
+- some DS roles
+- skills: more programming heavy. 
+- trying to productize ML models that moody's has. 
+- can send JD online
+- for 
+- Moody's not micromanaging, need self starters, problem solvers, freedom to direct career
+- product deployed in AWS
+- some Python, some Scala
+- 
+
+-->
+
+<!--
 TODO:
 
 - Prep for Wealthfront
