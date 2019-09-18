@@ -233,9 +233,6 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - Inquire about contributions to past projects, understanding of past projects
 
 <!-- my Projects -->
-<!-- my Projects -->
-<!-- my Projects -->
-<!-- my Projects -->
 
 - Insight 
 - HaaS
@@ -281,17 +278,43 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 <!-- Questions / Interest -->
 
 - Which team are you on?
+- analytics, 
+- working on?
+- building out ab testing, 
+- support product team for cash product
+- interesting ad hoc project -- would like to know what portion of are 
+- so that if a competitor comes out with anotehr high level savings account, what fraction would they expect to lose.. 
+- - difference between savings features, product offerings, .. 
+- know where clients deposit money from.
+- know if money is deposited from a high yield account
+- also have detailed client banking data from a 3rd partner, so can see what accounts they transfer from
+- want to see how elastic demand is
+- discrete choice models
+- random utility might be a first implementation
 
 - What is your tech stack?
+- R for ad hoc and exploration, pipelines in Scala and Spart run on AWS, looking to transition to Python. 
 
 - What is your like 'methods stack', so what are the statistical tools that you use frequently?
+- in house libraries to do survival analysis for client churn
+- haven't done much ML in past, haven't used sk learn much
+- CRAN packages/libraries?
+- can't randomize on price (eg discount)
+- don't have any network effects.. Other than close friends, family (not a great question on my part)
 - Frequentist, Bayesian, Causal inference (methods for addressing violations of true randomization e.g. early adopters, noncompliance or contamination, no possible control group (counterfactuals, synthetic controls, causal impact from Google))
-- if you make an update available and someoen doesn't upgrade, then the difference you detect might be a different between early adopters and late adopters, rather than between treatment (new app) and control (old app) conditions. 
+- if you make an update available and someone doesn't upgrade, then the difference you detect might be a different between early adopters and late adopters, rather than between treatment (new app) and control (old app) conditions. 
 
 - Vineet had mentioned working on converting from cash account users to investment management users -- Are there currently attempts at doing this?
 
 - Next steps?
+- if we decide to move forward, a HW, SQL modeling.
+- invite to onsite.
 
+- growth DS to provide useful data input to growth team
+- grow users
+- margine fraction of clients wealth they give
+
+- in past DS hasn't taken leading role, might change, work in close collaboration with product team
 
 <!-- Value adds / ideas-->
 
@@ -308,6 +331,11 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - - controls for engagement (viewing suggestion)? 
 - - controls for financial motivation (crossover effects i.e. viewing the blog post when it is ont suggestsd (assigned C experienced T))?
 
+### Reflection
+
+- Talked about predictit project, quantopian a little (didn't mention the dividend risk parity strategy), and he asked about the dynamic bayesian logistic regression model from ARL. I fumbled a bit explaining the context of the dblr. 
+- He mentioned discrete choice models, so I mentioned a background in it and asked if he was using random utility models, he said he was just learning about them.
+- Overall could work on running the conversation more, talking about my projects and accomplishments. 
 
 # Preparation
 

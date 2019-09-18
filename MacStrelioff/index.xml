@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Wed, 18 Sep 2019 13:50:23 +0000</pubDate>
+      <pubDate>Wed, 18 Sep 2019 14:34:54 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -247,9 +247,6 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;Inquire about contributions to past projects, understanding of past projects&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- my Projects --&gt;
-&lt;!-- my Projects --&gt;
-&lt;!-- my Projects --&gt;
-&lt;!-- my Projects --&gt;
 &lt;ul&gt;
 &lt;li&gt;Insight&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;HaaS&lt;/p&gt;&lt;/li&gt;
@@ -293,13 +290,40 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;/ul&gt;
 &lt;!-- Questions / Interest --&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Which team are you on?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;What is your tech stack?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Which team are you on?&lt;/li&gt;
+&lt;li&gt;analytics,&lt;/li&gt;
+&lt;li&gt;working on?&lt;/li&gt;
+&lt;li&gt;building out ab testing,&lt;/li&gt;
+&lt;li&gt;support product team for cash product&lt;/li&gt;
+&lt;li&gt;interesting ad hoc project – would like to know what portion of are&lt;/li&gt;
+&lt;li&gt;so that if a competitor comes out with anotehr high level savings account, what fraction would they expect to lose..&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;difference between savings features, product offerings, ..&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;know where clients deposit money from.&lt;/li&gt;
+&lt;li&gt;know if money is deposited from a high yield account&lt;/li&gt;
+&lt;li&gt;also have detailed client banking data from a 3rd partner, so can see what accounts they transfer from&lt;/li&gt;
+&lt;li&gt;want to see how elastic demand is&lt;/li&gt;
+&lt;li&gt;discrete choice models&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;random utility might be a first implementation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;What is your tech stack?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R for ad hoc and exploration, pipelines in Scala and Spart run on AWS, looking to transition to Python.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;What is your like ‘methods stack’, so what are the statistical tools that you use frequently?&lt;/li&gt;
+&lt;li&gt;in house libraries to do survival analysis for client churn&lt;/li&gt;
+&lt;li&gt;haven’t done much ML in past, haven’t used sk learn much&lt;/li&gt;
+&lt;li&gt;CRAN packages/libraries?&lt;/li&gt;
+&lt;li&gt;can’t randomize on price (eg discount)&lt;/li&gt;
+&lt;li&gt;don’t have any network effects.. Other than close friends, family (not a great question on my part)&lt;/li&gt;
 &lt;li&gt;Frequentist, Bayesian, Causal inference (methods for addressing violations of true randomization e.g. early adopters, noncompliance or contamination, no possible control group (counterfactuals, synthetic controls, causal impact from Google))&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;if you make an update available and someoen doesn’t upgrade, then the difference you detect might be a different between early adopters and late adopters, rather than between treatment (new app) and control (old app) conditions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;if you make an update available and someone doesn’t upgrade, then the difference you detect might be a different between early adopters and late adopters, rather than between treatment (new app) and control (old app) conditions.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Vineet had mentioned working on converting from cash account users to investment management users – Are there currently attempts at doing this?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Next steps?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Next steps?&lt;/li&gt;
+&lt;li&gt;if we decide to move forward, a HW, SQL modeling.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;invite to onsite.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;growth DS to provide useful data input to growth team&lt;/li&gt;
+&lt;li&gt;grow users&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;margine fraction of clients wealth they give&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;in past DS hasn’t taken leading role, might change, work in close collaboration with product team&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- Value adds / ideas--&gt;
 &lt;ul&gt;
@@ -339,6 +363,14 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;controls for financial motivation (crossover effects i.e. viewing the blog post when it is ont suggestsd (assigned C experienced T))?&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;reflection&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reflection&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Talked about predictit project, quantopian a little (didn’t mention the dividend risk parity strategy), and he asked about the dynamic bayesian logistic regression model from ARL. I fumbled a bit explaining the context of the dblr.&lt;/li&gt;
+&lt;li&gt;He mentioned discrete choice models, so I mentioned a background in it and asked if he was using random utility models, he said he was just learning about them.&lt;/li&gt;
+&lt;li&gt;Overall could work on running the conversation more, talking about my projects and accomplishments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;preparation&#34; class=&#34;section level1&#34;&gt;
