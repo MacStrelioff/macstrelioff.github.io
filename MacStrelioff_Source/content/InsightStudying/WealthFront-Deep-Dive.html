@@ -1,7 +1,7 @@
 ---
 title: "Wealthfront Notes"
 author: "Mac Strelioff"
-date: "2019-09-18 11:06:41"
+date: "2019-09-18 11:59:15"
 menu:
   InsightStudying:
     parent: Foundations
@@ -230,23 +230,11 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 <li>Debated friends about whether buying or renting is better, I liked WealthFront’s analysis on this topic (though it leaves out the tax benefits of buying?)</li>
 <li>I also like the principled investment philosophy (Modern protfolio theory, accounting for taxes, … )</li>
 </ul>
-<!-- Quantopian investment philosophy -->
-<ul>
-<li>I’m proimarily an income investor</li>
-<li>Dividends reflect the risk in a stock, so I wanted to make a portfolio of dividend paying stocks weighted invesely proportional to the dividend yield.</li>
-<li>Quantopian dividend data had a bug, so I gave up on this for now..</li>
-</ul>
 <!-- fit for growth team -->
 <ul>
-<li>YT channel, casually testing thumbnails</li>
 <li>HaaS work on fb ads and google analytics (talk about these tools)</li>
-<li>Insight work on modeling uswe conversion for a free-trial to subscriber</li>
-</ul>
-<!-- Questions / Interest -->
-<ul>
-<li>Which team are you on?</li>
-<li>Interested in the financial problems addressed;</li>
-<li>e.g. <a href="https://www.wealthfront.com/home-guide#buy-versus-rent">right considerations for buying vs renting</a>, plus tax implications</li>
+<li>Insight work on modeling user conversion from a free-trial to subscriber</li>
+<li>YT channel, casually testing thumbnails</li>
 </ul>
 <!-- Value adds / ideas-->
 <ul>
@@ -289,10 +277,34 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 </ul></li>
 </ul>
 <p>TODO: think of a causal inference example related to an experiment here, to duscuss intelligently in the phone interview!!</p>
-<!-- generic questions -->
+<!-- I like the Products -->
 <ul>
-<li>Next steps?</li>
-<li>…</li>
+<li>Path: Financial planning service that shows a projection of wealth and goals (homebuying, retirement, …)</li>
+<li>Free financial advice in blogs</li>
+<li>Investment management</li>
+<li>Portfolio line of credit (Margin Lending)</li>
+<li>Rolling out direct deposit, debit cards</li>
+<li>Plans to roll out credit cards?</li>
+</ul>
+<!-- Other excitement-->
+<ul>
+<li>** excitement: One of my Quantopian ideas was conceptually similar to a wisk parity strategy – Dividends are a proxy for risk, so I weighted stocks proportional to the reciprocal of their dividend; (<span class="math inline">\(w_i = \frac{1/d_i}{\sum_i 1/d_i}\)</span>).</li>
+<li><a href="https://www.prnewswire.com/news-releases/wealthfront-cuts-risk-parity-expense-ratio-in-half-to-0-25-300631933.html">Cheap risk parity fund has /$500 mil assets under management</a>, the risk parity method equalizes the risk contributions of asset classes within a portfolio</li>
+<li>** I love the vision of self-driving money, this kind of automation is something I’s want to build for myself if I had the time.</li>
+<li><a href="https://blog.wealthfront.com/introducing-free-financial-planning/">Democratizing quality financial advice</a>; I liked the <a href="https://www.wealthfront.com/home-guide">home guide</a>, I’ve been thinking about renting vs buying for a while now. My BaC card gives 3/% cash back on travel, and airbnb counts for that – so it’s like a 3/% discount on rent.</li>
+</ul>
+<!-- Vs Bettermint -->
+<ul>
+<li>Wealthfront has better automation, Bettermint pivoted to human advisors</li>
+<li>Self driving money is something I’ve been working on making for myself through Quantopian and PredictIt.</li>
+</ul>
+<!-- Questions / Interest -->
+<ul>
+<li><p>Which team are you on?</p></li>
+<li><p>What is your tech stack?</p></li>
+<li>What is your like ‘methods stack’, so what kind of statistical methods or frameworks do you use often?</li>
+<li><p>Frequentist, Bayesian, Causal inference (methods for addressing violations of true randomization e.g. early adopters, )</p></li>
+<li><p>Next steps?</p></li>
 </ul>
 </div>
 </div>
@@ -305,13 +317,6 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 </div>
 <div id="project-descriptions" class="section level2">
 <h2>Project Descriptions:</h2>
-<p>Insight Project:</p>
-<ul>
-<li>User funnel and user flow, maybe should have started at these simpler analyses</li>
-<li>Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy</li>
-<li>Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant</li>
-<li>Chose random forests because it does a better job of pulling out important collinear features</li>
-</ul>
 <div id="haas-freelance-work" class="section level3">
 <h3>HaaS freelance work</h3>
 <p>Situation:</p>
