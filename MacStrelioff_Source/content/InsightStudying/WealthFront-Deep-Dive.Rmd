@@ -423,6 +423,14 @@ Summary (2-3 sentences):
 - [Democratizing quality financial advice](https://blog.wealthfront.com/introducing-free-financial-planning/); I liked the [home guide](https://www.wealthfront.com/home-guide), I've been thinking about renting vs buying for a while now. My BaC card gives 3/% cash back on travel, and airbnb counts for that -- so it's like a 3/% discount on rent.
 - ** Like the vision of self-driving money, this kind of automation is something I's want to build for myself if I had the time. 
 
+Vs Bettermint
+
+- Wealthfront has better automation, Bettermint double backed to human advisors
+- 
+
+- Self driving money is something I've been working on making for myself through Quantopian and PredictIt.
+- 
+
 ### Users
 
 ### Use cases
