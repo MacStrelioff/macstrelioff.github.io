@@ -129,7 +129,16 @@ questions;
 - How big is the DS team?
 - Could you tell me a little about your team specifically? 
 
-# Technical phone screen
+## Phone call with Ben
+
+<!-- Questions -->
+
+- Which team are you on? 
+- What are some of your projects?
+- What are some upcoming projects? 
+- 
+
+## Technical phone screen
 
 Interviewer: [Allen Sirolly](https://www.linkedin.com/in/allen-sirolly-89b0b639/)
 
