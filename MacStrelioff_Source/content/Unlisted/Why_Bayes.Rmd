@@ -11,10 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Overview
 
-Madean autoclicker to play cookie clicker... 
-
-
-
 
 ## Coherent
 
@@ -28,6 +24,7 @@ Examples where frequentist stats is incoherent?
 ## Integration with decision theory
 
 Thompson sampling example
+
 
 
 

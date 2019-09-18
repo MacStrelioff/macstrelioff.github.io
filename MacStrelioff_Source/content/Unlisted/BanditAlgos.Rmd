@@ -15,7 +15,6 @@ library(entropy)
 set.seed(10201991)
 ```
 
-
 # Sources / Alternatives
 
 - [Netflix Experimentation and Sequential Testing](https://medium.com/netflix-techblog/improving-experimentation-efficiency-at-netflix-with-meta-analysis-and-optimal-stopping-d8ec290ae5be)

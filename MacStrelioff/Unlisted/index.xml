@@ -63,55 +63,6 @@ Adaptability, identify weakenesses and adapt
     </item>
     
     <item>
-      <title>Introduction to Metrics Through YouTube Creator</title>
-      <link>/MacStrelioff/unlisted/metricsthroughyoutubecreator/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/unlisted/metricsthroughyoutubecreator/</guid>
-      <description> What are Metrics? Metrics are how the data scientist communicates with project managers.
-Two categories; success and tracking.
-Goals are defined in terms of metrics, and user experience is understood through metrics.
-Success Metrics  Tracking Metrics   Metrics for Goals  Metrics for Insights  Communicating Metrics Idea from:
- Add metrics from google analytics, and youtube creator.
- </description>
-    </item>
-    
-    <item>
-      <title>Online Autoclicker</title>
-      <link>/MacStrelioff/unlisted/autoclicker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/unlisted/autoclicker/</guid>
-      <description> Overview Madean autoclicker to play cookie clicker…
-Cookie clicker game.. talk through code..
-  </description>
-    </item>
-    
-    <item>
-      <title>Probability and Information</title>
-      <link>/MacStrelioff/unlisted/its-a-null-world-after-all/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/unlisted/its-a-null-world-after-all/</guid>
-      <description>Here’s a series of questions about hypothesis testing, parils of p-hacking, and an argument against a publication requirement for graduation..
-What is a p-value?
-What is power?
-Assume all hypotheses in a field are false. Using z-tests or t-tests, testing at the \(\alpha=.05\) level, …
-How many experiments, on average, would a graduate student have to run in order to find three significant effects?
-What kind of distribution is this?</description>
-    </item>
-    
-    <item>
-      <title>Probability and Information</title>
-      <link>/MacStrelioff/unlisted/probabilityandinformation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/MacStrelioff/unlisted/probabilityandinformation/</guid>
-      <description>Probability Theory and Information Theory Types of Probabilities and Their Computations motivation? Many important variables (future income, GDP, who I’ll marry, whether I’ll get sick, what disease I have given some symptoms, …)
- Randomness, Event Spaces, and Probability motivating example.. Imagine that a vaccine against a dangerous disease recently becomes available. However, there is a small risk that the vaccine will produce a condition just as bad as the disease itself.</description>
-    </item>
-    
-    <item>
       <title>Recommending: Searching, Sorting, Ranking</title>
       <link>/MacStrelioff/unlisted/searchsortrank/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -132,8 +83,7 @@ Temporal involves forecasting, which is a topic for another post.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/MacStrelioff/unlisted/why_bayes/</guid>
-      <description> Overview Madean autoclicker to play cookie clicker…
-Coherent Examples where frequentist stats is incoherent?
+      <description> Overview Coherent Examples where frequentist stats is incoherent?
  Flexible  easy to model complex processes easy to test non-standard hypotheses, e.g. “does every”, or “two groups higher, one group lower”   Integration with decision theory Thompson sampling example
   </description>
     </item>
