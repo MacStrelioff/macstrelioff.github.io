@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Wed, 18 Sep 2019 12:26:21 +0000</pubDate>
+      <pubDate>Wed, 18 Sep 2019 13:50:23 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -247,7 +247,12 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;Inquire about contributions to past projects, understanding of past projects&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- my Projects --&gt;
+&lt;!-- my Projects --&gt;
+&lt;!-- my Projects --&gt;
+&lt;!-- my Projects --&gt;
 &lt;ul&gt;
+&lt;li&gt;Insight&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;HaaS&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Quantopian; wanted to create self-driving money for myself&lt;/li&gt;
 &lt;li&gt;&lt;ul&gt;
 &lt;li&gt;replicated XIV&lt;/li&gt;
@@ -255,7 +260,7 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;&lt;ul&gt;
 &lt;li&gt;Primarily an income investor. Created a strategy conceptually similar to risk parity – I treated dividends as a measure of risk and weighted stocks inversely to their dividend yields. Quantopian had a bug in dividends paid, so I submitted a ticket showing this with AAPL stock, and stopped using that platform.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Passion for automated financial decision making: PredictIt formula for guarenteed profits that accounted for relationships between prices, probability theory, and PredictIt fees. This is similar to finding an arbitrage relationship (relations between prices and probability theory) and accounting for taxes (fees).&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Passion for automated financial decision making: PredictIt formula for guarenteed profits that accounted for relationships between prices, probability theory, and PredictIt fees. This is similar to finding an arbitrage relationship (relations between prices and probability theory) and accounting for taxes (fees).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- fit for growth team --&gt;
 &lt;ul&gt;
@@ -266,13 +271,12 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;!-- I like the Products --&gt;
 &lt;ul&gt;
 &lt;li&gt;Path: Financial planning service that shows a projection of wealth and goals (homebuying, retirement, …)&lt;/li&gt;
-&lt;li&gt;Free financial advice in blogs&lt;/li&gt;
-&lt;li&gt;Investment management&lt;/li&gt;
+&lt;li&gt;Free financial advice in blogs (read buy vs rent, played with ourse purchase planning tool)&lt;/li&gt;
+&lt;li&gt;Investment management and automating established methods (risk parity, modern portfolio theory, .. )&lt;/li&gt;
 &lt;li&gt;Portfolio line of credit (Margin Lending)&lt;/li&gt;
 &lt;li&gt;Rolling out direct deposit, debit cards&lt;/li&gt;
-&lt;li&gt;Plans to roll out credit cards?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- Other excitement--&gt;
+&lt;!-- Other excitement --&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;I also like the principled investment philosophy (Modern protfolio theory, accounting for taxes, … )&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Personal finance is something that I think about a lot, and a theme in my hobby projects (Quantopian) and research (PredictIt).&lt;/p&gt;&lt;/li&gt;
@@ -294,8 +298,7 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;What is your like ‘methods stack’, so what are the statistical tools that you use frequently?&lt;/li&gt;
 &lt;li&gt;Frequentist, Bayesian, Causal inference (methods for addressing violations of true randomization e.g. early adopters, noncompliance or contamination, no possible control group (counterfactuals, synthetic controls, causal impact from Google))&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;if you make an update available and someoen doesn’t upgrade, then the difference you detect might be a different between early adopters and late adopters, rather than between treatment (new app) and control (old app) conditions.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Vineet had mentioned working on converting from cash account users to investment management users – Are there currently attempts at doing this?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Vineet had mentioned working on converting from cash account users to investment management users – Are there currently attempts at doing this?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Next steps?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- Value adds / ideas--&gt;
@@ -384,7 +387,7 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;li&gt;Account activity data which was a sum of actions taken within an account each day.&lt;/li&gt;
 &lt;li&gt;I transformed this into cumulative sum instead of daily sum to increase interpretability and modeling ease.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(skip) Action: (skip) (skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. (skip) - Cast as classification problem, used SMOTE to address class imbalance, (skip) - used 5-fold CV to evaluate models on AUC, (skip) - ended with a RF algorithm for these predictions.&lt;/p&gt;
+&lt;p&gt;(skip) Action: (skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. (skip) - Cast as classification problem, used SMOTE to address class imbalance, (skip) - used 5-fold CV to evaluate models on AUC, (skip) - ended with a RF algorithm for these predictions.&lt;/p&gt;
 &lt;p&gt;Result:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Delivered presentation and slide deck with tables and figures to a group of team leaders.&lt;/li&gt;

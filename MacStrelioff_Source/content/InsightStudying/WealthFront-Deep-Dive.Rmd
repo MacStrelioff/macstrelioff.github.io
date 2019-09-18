@@ -233,6 +233,12 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - Inquire about contributions to past projects, understanding of past projects
 
 <!-- my Projects -->
+<!-- my Projects -->
+<!-- my Projects -->
+<!-- my Projects -->
+
+- Insight 
+- HaaS
 
 - Quantopian; wanted to create self-driving money for myself
 - - replicated XIV
@@ -249,13 +255,12 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 <!-- I like the Products --> 
 
 - Path: Financial planning service that shows a projection of wealth and goals (homebuying, retirement, ...)
-- Free financial advice in blogs
-- Investment management
+- Free financial advice in blogs (read buy vs rent, played with ourse purchase planning tool)
+- Investment management and automating established methods (risk parity, modern portfolio theory, .. )
 - Portfolio line of credit (Margin Lending)
 - Rolling out direct deposit, debit cards
-- Plans to roll out credit cards? 
 
-<!-- Other excitement-->
+<!-- Other excitement -->
 
 - I also like the principled investment philosophy (Modern protfolio theory, accounting for taxes, ... )
 
@@ -283,8 +288,7 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - Frequentist, Bayesian, Causal inference (methods for addressing violations of true randomization e.g. early adopters, noncompliance or contamination, no possible control group (counterfactuals, synthetic controls, causal impact from Google))
 - if you make an update available and someoen doesn't upgrade, then the difference you detect might be a different between early adopters and late adopters, rather than between treatment (new app) and control (old app) conditions. 
 
-- Vineet had mentioned working on converting from cash account users to investment management users -- Are there currently attempts at doing this? 
-- 
+- Vineet had mentioned working on converting from cash account users to investment management users -- Are there currently attempts at doing this?
 
 - Next steps?
 
@@ -352,7 +356,6 @@ Task:
 -     I transformed this into cumulative sum instead of daily sum to increase interpretability and modeling ease. 
 
 (skip) Action: 
-(skip) 
 (skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. 
 (skip) - Cast as classification problem, used SMOTE to address class imbalance,
 (skip) - used 5-fold CV to evaluate models on AUC, 
