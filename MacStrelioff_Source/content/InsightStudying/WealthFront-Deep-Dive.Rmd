@@ -232,41 +232,19 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - Sense of problems that excite you
 - Inquire about contributions to past projects, understanding of past projects
 
-<!-- fit for Wealthfront -->
+<!-- my Projects -->
 
 - Quantopian; wanted to create self-driving money for myself
-- - Primarily an income investor
 - - replicated XIV
-- - Quantopian had a bug in dividends paid, so I submitted a ticket showing this with AAPL stock, and stopped using that platform..
+- - Primarily an income investor. Created a strategy conceptually similar to risk parity -- I treated dividends as a measure of risk and weighted stocks inversely to their dividend yields. Quantopian had a bug in dividends paid, so I submitted a ticket showing this with AAPL stock, and stopped using that platform.
+
 - Passion for automated financial decision making: PredictIt formula for guarenteed profits that accounted for relationships between prices, probability theory, and PredictIt fees. This is similar to finding an arbitrage relationship (relations between prices and probability theory) and accounting for taxes (fees). 
-- Debated friends about whether buying or renting is better, I liked WealthFront's analysis on this topic (though it leaves out the tax benefits of buying?)
-- I also like the principled investment philosophy (Modern protfolio theory, accounting for taxes, ... )
 
 <!-- fit for growth team -->
 
 - HaaS work on fb ads and google analytics (talk about these tools)
 - Insight work on modeling user conversion from a free-trial to subscriber
 - YT channel, casually testing thumbnails
-
-
-<!-- Value adds / ideas-->
-
-- Why would I use Wealthfront? 
-- Why would I switch from savings to their portfolio management?
-- Why switch from self-management to their portfolio management? 
-- - Maybe a tool to compare a person's portfolio to Wealthfront's portfolio? Then a person should switch if switching is easy and their portfolio 
-- - - underperforms or 
-- - - has higher uncertainty or 
-- - - a lower SHARPE? 
-- Which blog articles motivate investing? 
-- - Exploratory: See which users viewed a blog post
-- - Experimental: Suggest blog posts to users (Treatment)
-- - focus on Treatment on Treated vs. users who were suggested other posts and viewed them 
-- - controls for engagement (viewing suggestion)? 
-- - controls for financial motivation (crossover effects i.e. viewing the blog post when it is ont suggestsd (assigned C experienced T))?
-
-
-TODO: think of a causal inference example related to an experiment here, to duscuss intelligently in the phone interview!!
 
 <!-- I like the Products --> 
 
@@ -279,10 +257,16 @@ TODO: think of a causal inference example related to an experiment here, to dusc
 
 <!-- Other excitement-->
 
+- I also like the principled investment philosophy (Modern protfolio theory, accounting for taxes, ... )
+
+- Personal finance is something that I think about a lot, and a theme in my hobby projects (Quantopian) and research (PredictIt).
+
 - ** excitement: One of my Quantopian ideas was conceptually similar to a wisk parity strategy -- Dividends are a proxy for risk, so I weighted stocks proportional to the reciprocal of their dividend; ($w_i = \frac{1/d_i}{\sum_i 1/d_i}$).
 - [Cheap risk parity fund has /$500 mil assets under management](https://www.prnewswire.com/news-releases/wealthfront-cuts-risk-parity-expense-ratio-in-half-to-0-25-300631933.html), the risk parity method equalizes the risk contributions of asset classes within a portfolio
-- ** I love the vision of self-driving money, this kind of automation is something I's want to build for myself if I had the time. 
+- ** I love the vision of self-driving money, this kind of automation is something I'd want to build for myself if I had the time. 
 - [Democratizing quality financial advice](https://blog.wealthfront.com/introducing-free-financial-planning/); I liked the [home guide](https://www.wealthfront.com/home-guide), I've been thinking about renting vs buying for a while now. My BaC card gives 3/% cash back on travel, and airbnb counts for that -- so it's like a 3/% discount on rent.
+
+- Personal finance is something that I think about a lot, and a theme in my hobby projects (Quantopian) and research (PredictIt).
 
 <!-- Vs Bettermint -->
 
@@ -293,12 +277,32 @@ TODO: think of a causal inference example related to an experiment here, to dusc
 
 - Which team are you on?
 
-- What is your tech stack? 
+- What is your tech stack?
 
-- What is your like 'methods stack', so what kind of statistical methods or frameworks do you use often? 
-- Frequentist, Bayesian, Causal inference (methods for addressing violations of true randomization e.g. early adopters, )
+- What is your like 'methods stack', so what are the statistical tools that you use frequently?
+- Frequentist, Bayesian, Causal inference (methods for addressing violations of true randomization e.g. early adopters, noncompliance or contamination, no possible control group (counterfactuals, synthetic controls, causal impact from Google))
+- if you make an update available and someoen doesn't upgrade, then the difference you detect might be a different between early adopters and late adopters, rather than between treatment (new app) and control (old app) conditions. 
+
+- Vineet had mentioned working on converting from cash account users to investment management users -- Are there currently attempts at doing this? 
+- 
 
 - Next steps?
+
+
+<!-- Value adds / ideas-->
+
+- Why switch from self-management to their portfolio management? 
+- - Maybe a tool to compare a person's portfolio to Wealthfront's portfolio? Then a person should switch if switching is easy and their portfolio 
+- - - underperforms or 
+- - - has higher uncertainty or 
+- - - a lower SHARPE? 
+
+- Which blog articles motivate investing? 
+- - Exploratory: See which users viewed a blog post
+- - Experimental: Suggest blog posts to users (Treatment)
+- - focus on Treatment on Treated vs. users who were suggested other posts and viewed them 
+- - controls for engagement (viewing suggestion)? 
+- - controls for financial motivation (crossover effects i.e. viewing the blog post when it is ont suggestsd (assigned C experienced T))?
 
 
 # Preparation
