@@ -131,12 +131,20 @@ questions;
 
 ## Phone call with Ben
 
+<!-- about me -->
+
+- PredictIt, finding arbitrage opportunities, programming them
+- Strategy inference, JAGS model to get probability of a strategy being followed on each trial
+- Using conjugacy to makde models update fast with streams of data -- Tweet model, RL model for dissertation work
+- RL model - an agent is learning a function to plan actions, for this function I uses gaussian basis functions and Bayesian logistic regression
+
 <!-- Questions -->
 
 - Which team are you on? 
 - What are some of your projects?
 - What are some upcoming projects? 
-- 
+- Your research sounds really cool -- do you do similar work (i.e. develop samplers) at Wealthfront? 
+
 
 ## Technical phone screen
 

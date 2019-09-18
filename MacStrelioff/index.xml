@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Tue, 17 Sep 2019 17:56:14 +0000</pubDate>
+      <pubDate>Tue, 17 Sep 2019 18:41:57 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -160,12 +160,19 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;/div&gt;
 &lt;div id=&#34;phone-call-with-ben&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Phone call with Ben&lt;/h2&gt;
+&lt;!-- about me --&gt;
+&lt;ul&gt;
+&lt;li&gt;PredictIt, finding arbitrage opportunities, programming them&lt;/li&gt;
+&lt;li&gt;Strategy inference, JAGS model to get probability of a strategy being followed on each trial&lt;/li&gt;
+&lt;li&gt;Using conjugacy to makde models update fast with streams of data – Tweet model, RL model for dissertation work&lt;/li&gt;
+&lt;li&gt;RL model - an agent is learning a function to plan actions, for this function I uses gaussian basis functions and Bayesian logistic regression&lt;/li&gt;
+&lt;/ul&gt;
 &lt;!-- Questions --&gt;
 &lt;ul&gt;
 &lt;li&gt;Which team are you on?&lt;/li&gt;
 &lt;li&gt;What are some of your projects?&lt;/li&gt;
 &lt;li&gt;What are some upcoming projects?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Your research sounds really cool – do you do similar work (i.e. develop samplers) at Wealthfront?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;technical-phone-screen&#34; class=&#34;section level2&#34;&gt;
