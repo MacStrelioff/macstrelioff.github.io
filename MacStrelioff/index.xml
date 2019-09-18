@@ -38,7 +38,7 @@
     <item>
       <title>Wealthfront Notes</title>
       <link>/MacStrelioff/insightstudying/wealthfront-deep-dive/</link>
-      <pubDate>Tue, 17 Sep 2019 18:41:57 +0000</pubDate>
+      <pubDate>Tue, 17 Sep 2019 19:56:47 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>
@@ -170,9 +170,72 @@ Skilled in Statistics, Linear Algebra, Data Munging, and Data Visualization. App
 &lt;!-- Questions --&gt;
 &lt;ul&gt;
 &lt;li&gt;Which team are you on?&lt;/li&gt;
+&lt;li&gt;General DS team, each DS owned a specific area. Ben owned financial planning team (path model, projection on dashboard).&lt;/li&gt;
+&lt;li&gt;A/B experimentation and user demographics, trying to figure out what properties of clients lead to an outcome they like.&lt;/li&gt;
+&lt;li&gt;A/B encouraged to come up with own experiments – Company has a path they want to follow, quarterly objectives for products or things they want to deploy. Those are tested, e.g. predicting off actions if they’re going to do X or Y… .&lt;/li&gt;
+&lt;li&gt;Have a lot of client data. DS extract insights from this data&lt;/li&gt;
+&lt;li&gt;Have some DE responsibilities, Spark pipelines, Shiny.&lt;/li&gt;
+&lt;li&gt;Scala, production level code.&lt;/li&gt;
+&lt;li&gt;Hadoop, use AWS, often writing ETLs done on .. ?.&lt;/li&gt;
+&lt;li&gt;doubling down on paid marketing bc it had a great response on the cash app.&lt;/li&gt;
+&lt;li&gt;Frequentist much easier even if interpretation harder..&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Company founded by economists&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Econ - causal inference?&lt;/li&gt;
+&lt;li&gt;Ad attribution?&lt;/li&gt;
+&lt;li&gt;have 3rd party aps for ad attribution&lt;/li&gt;
+&lt;li&gt;has been attribution issues when people come through multiple referral pages.&lt;/li&gt;
+&lt;li&gt;working with impact radious to detect when a user clicks on multiple ads&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;different ways to weigh the ads&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;What are some of your projects?&lt;/li&gt;
+&lt;li&gt;first Spark pipeline took a month&lt;/li&gt;
+&lt;li&gt;other weeks when running an experiment to make sure data quality issues have been addressed.&lt;/li&gt;
+&lt;li&gt;have inferastructure to run A/B experiment&lt;/li&gt;
+&lt;li&gt;Do analyses that A/B platform can’t account for&lt;/li&gt;
+&lt;li&gt;Do it in R markdown, present in HTML to various teams.&lt;/li&gt;
+&lt;li&gt;lot of marketing requests in terms of data quality and impact of marketing experiments&lt;/li&gt;
+&lt;li&gt;running queries, in redshift.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Monday roadmap meeting makes plan for week. Venieet helps prioritize.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Work culture? Is the workload managable?&lt;/li&gt;
+&lt;li&gt;Once a week with manager, weekly lunch where one DS gives a presentation, and financial meetings.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;growth will have a DS, someone from marketing, someone from DE, … .&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;What are some upcoming projects?&lt;/li&gt;
-&lt;li&gt;Your research sounds really cool – do you do similar work (i.e. develop samplers) at Wealthfront?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Your research sounds really cool – do you do similar work (i.e. develop samplers) at Wealthfront?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Been really picky with decisions&lt;/li&gt;
+&lt;li&gt;been looking for people with a few years of industry experience&lt;/li&gt;
+&lt;li&gt;DS has been growing, so maybe opps for general DS roles&lt;/li&gt;
+&lt;li&gt;Ben had phone interviews with&lt;/li&gt;
+&lt;li&gt;Technical phone screens have a component to show interest / what you can bring to table&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Educated enthusasiasm, showing you’re not shopping around, show you dug deep and understand product and why it’s exciting&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;use rmd for HW interview&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;want to use data to grow the company&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;definitely a need for generalists&lt;/li&gt;
+&lt;li&gt;but ads now seem to have a qualifier at the end, require T shaped candidate&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;had interns this year – one for research one for DS&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;quantity vs quality?&lt;/li&gt;
+&lt;li&gt;PhD stands out – not just someone who did a Kaggle project or a sentiment analyses.&lt;/li&gt;
+&lt;li&gt;Have owned actual research&lt;/li&gt;
+&lt;li&gt;Not just a toy dataset, …&lt;/li&gt;
+&lt;li&gt;Get data understand biases&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For Sr. need ownership.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Kinda flexible in terms of what the role is&lt;/li&gt;
+&lt;li&gt;Have been some highly qualified people who did presentations&lt;/li&gt;
+&lt;li&gt;Might be asked growth related questions&lt;/li&gt;
+&lt;li&gt;Could be a general DS role too&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;People can get Sr roles out of academia if qualifications fit well..&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Wealthfront came in through Insight.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;First time didn’t take anyone, took Ben, then didn’t take anyone.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;educated enthusasiasm, good answers for why I’m interested in product/company, answer that differs for them vs other investing firms&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;SQL or deplyr,&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;joins, etc in deplyr.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Used STAN in postdoc for sampling from ~500 params&lt;/li&gt;
+&lt;li&gt;Lots of tasks are in prediction realm rather than inference realm..&lt;/li&gt;
+&lt;li&gt;Predict good outcome based on user behavior&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If opportunity arose to talk about RL work, that’d be good!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;went on 3 onsites, Wealthfront was only offer&lt;/li&gt;
+&lt;li&gt;Bosh, Uber, were other onsites&lt;/li&gt;
+&lt;li&gt;Uber one part was desasterous.. Didn’t undertand what was being asked&lt;/li&gt;
+&lt;li&gt;Speaking from experience is what gets Sr roles.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Slipping up ok if they’re able to catch themselves / adjust quickly.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;technical-phone-screen&#34; class=&#34;section level2&#34;&gt;

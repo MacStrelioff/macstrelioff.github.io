@@ -141,9 +141,86 @@ questions;
 <!-- Questions -->
 
 - Which team are you on? 
+- General DS team, each DS owned a specific area. Ben owned financial planning team (path model, projection on dashboard). 
+- A/B experimentation and user demographics, trying to figure out what properties of clients lead to an outcome they like. 
+- A/B encouraged to come up with own experiments -- Company has a path they want to follow, quarterly objectives for products or things they want to deploy. Those are tested, e.g. predicting off actions if they're going to do X or Y... . 
+- Have a lot of client data. DS extract insights from this data
+- Have some DE responsibilities, Spark pipelines, Shiny. 
+- Scala, production level code. 
+- Hadoop, use AWS, often writing ETLs done on .. ?. 
+- doubling down on paid marketing bc it had a great response on the cash app. 
+- Frequentist much easier even if interpretation harder.. 
+- Company founded by economists
+
+- Econ - causal inference?
+- Ad attribution?
+- have 3rd party aps for ad attribution
+- has been attribution issues when people come through multiple referral pages.
+- working with impact radious to detect when a user clicks on multiple ads
+- different ways to weigh the ads
+
 - What are some of your projects?
-- What are some upcoming projects? 
-- Your research sounds really cool -- do you do similar work (i.e. develop samplers) at Wealthfront? 
+- first Spark pipeline took a month
+- other weeks when running an experiment to make sure data quality issues have been addressed.
+- have inferastructure to run A/B experiment
+- Do analyses that A/B platform can't account for
+- Do it in R markdown, present in HTML to various teams.
+- lot of marketing requests in terms of data quality and impact of marketing experiments
+- running queries, in redshift.
+- Monday roadmap meeting makes plan for week. Venieet helps prioritize.
+
+- Work culture? Is the workload managable? 
+- Once a week with manager, weekly lunch where one DS gives a presentation, and financial meetings.
+- growth will have a DS, someone from marketing, someone from DE, ... .
+
+- What are some upcoming projects?
+- Your research sounds really cool -- do you do similar work (i.e. develop samplers) at Wealthfront?
+
+- Been really picky with decisions
+- been looking for people with a few years of industry experience
+- DS has been growing, so maybe opps for general DS roles
+- Ben had phone interviews with 
+- Technical phone screens have a component to show interest / what you can bring to table
+- Educated enthusasiasm, showing you're not shopping around, show you dug deep and understand product and why it's exciting
+
+- use rmd for HW interview
+- want to use data to grow the company
+
+- definitely a need for generalists
+- but ads now seem to have a qualifier at the end, require T shaped candidate
+- had interns this year -- one for research one for DS
+
+- quantity vs quality?
+- PhD stands out -- not just someone who did a Kaggle project or a sentiment analyses. 
+- Have owned actual research
+- Not just a toy dataset, ... 
+- Get data understand biases
+- For Sr. need ownership. 
+
+- Kinda flexible in terms of what the role is
+- Have been some highly qualified people who did presentations
+- Might be asked growth related questions
+- Could be a general DS role too
+- People can get Sr roles out of academia if qualifications fit well.. 
+
+- Wealthfront came in through Insight.
+- First time didn't take anyone, took Ben, then didn't take anyone.
+
+- educated enthusasiasm, good answers for why I'm interested in product/company, answer that differs for them vs other investing firms
+
+- SQL or deplyr, 
+- joins, etc in deplyr. 
+
+- Used STAN in postdoc for sampling from ~500 params
+- Lots of tasks are in prediction realm rather than inference realm.. 
+- Predict good outcome based on user behavior
+- If opportunity arose to talk about RL work, that'd be good!
+
+- went on 3 onsites, Wealthfront was only offer
+- Bosh, Uber, were other onsites
+- Uber one part was desasterous.. Didn't undertand what was being asked
+- Speaking from experience is what gets Sr roles. 
+- Slipping up ok if they're able to catch themselves / adjust quickly. 
 
 
 ## Technical phone screen
