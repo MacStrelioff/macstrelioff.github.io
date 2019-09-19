@@ -42,11 +42,58 @@ set.seed(10201991)
 
 ## Business Model, Culture, and Vision
 
+Business model:
+
+- Instacart brings groceries online, through stores rather than through fulfillment centers (e.g. how Amazon does it).
+- Recently showed their model was profitable and sustainable
+- Became economical by batching orders, taking advantage of economies of scale, ...
+- Gross margin positive, implying growth will be profitable
+- Tips can only go to the last person that touched order (delivery) even if they didn't put together the order (pickers). 
+- Brings incremental volume to grocery retailers
+- Around 50/% of grocers have same price on app as in store, others have markups
+- Seen as a antidote to Amazon by supporting local business
+- There's a grocerie store within 10-15min from every household
+- Most valuable ads because they influence behavior right before the purchase
+- Want to build AdWords for groceries
+- 
+
+Revenue
+
+- Subscription or delivery fee from cusomter
+- Service fee partially goes towards balancing tips for delivery and picking. 
+- fee from retailer
+- revenue from advertisers (talked about around 29:00)
+- coupons 
+
+costs
+
+- delivery costs, pickers and delivery (can be different people)
+- credit card transaction fees
+
+I like the impact that data scientists can have:
+
+- Minutes saved in deliveries is /$0.25 in gross margin, which can be passed to savings for the customer
+
+I like the enturpneural spirit: 
+
+- 6 months after Amazon bought Wholefoods, Instacart signed partnerships with nearly every large retailer 
 
 ## Projects, Tasks, and Data
 
 
+Open problems:
+
+- Improve predictability for shopper experience
+- Inventory prediction or modeling
+- Model for item substitutes (crowd source this so that orderers can specify acceptable substitutes?)
+- Labor models in local areas, accounting for unions and labor laws
+- Trust with person delivering produce
+
 ## DS Role
+
+<!-- From recruiter -->
+
+
 
 
 ### Discussion of past work
