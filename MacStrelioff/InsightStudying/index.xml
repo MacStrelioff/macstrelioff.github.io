@@ -6,10 +6,20 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2019 20:34:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2019 12:37:47 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Instacart Notes</title>
+      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
+      <pubDate>Thu, 19 Sep 2019 12:37:47 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
+      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Recruiter call “Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc”
+    Company Visit Business Model, Culture, and Vision  Projects, Tasks, and Data  DS Role Discussion of past work “Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.</description>
+    </item>
     
     <item>
       <title>Wealthfront Notes</title>
@@ -36,15 +46,6 @@
       
       <guid>/MacStrelioff/insightstudying/machine-learning/</guid>
       <description>Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?</description>
-    </item>
-    
-    <item>
-      <title>Instacart Notes</title>
-      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Tue, 10 Sep 2019 15:49:43 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
-      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Company Visit Business Model, Culture, and Vision  Projects, Tasks, and Data  DS Role Discussion of past work “Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project.</description>
     </item>
     
     <item>

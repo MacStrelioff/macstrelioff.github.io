@@ -29,6 +29,14 @@ set.seed(10201991)
 - [Instacart posting for data scientist](https://boards.greenhouse.io/instacart/jobs/1863911)
 - [LinkedIn app for analyst](https://www.linkedin.com/jobs/view/1331659318/?refId=aa6b5d2c-8b03-4c2d-9643-1171a9fca283&trk=d_flagship3_company)
 
+# Recruiter call
+
+"Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc"
+
+<!-- questions -->
+
+- 
+
 # Company Visit
 
 
