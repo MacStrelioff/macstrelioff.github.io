@@ -336,6 +336,16 @@ From recruiter: "Our technical phone interview is meant to get a sense of the ty
 - Talked about predictit project, quantopian a little (didn't mention the dividend risk parity strategy), and he asked about the dynamic bayesian logistic regression model from ARL. I fumbled a bit explaining the context of the dblr. 
 - He mentioned discrete choice models, so I mentioned a background in it and asked if he was using random utility models, he said he was just learning about them.
 - Overall could work on running the conversation more, talking about my projects and accomplishments. 
+- Allen mentioned estimation of demand elasticity to see how many users might move assets if a better interest rate account hit the market, and random utility models to study the choices that users make in the app. 
+
+### Thank-You email
+
+Hi Allen, 
+
+Thank you for your call yesterday! I enjoyed hearing a little more about the projects at Wealthfront, and particularly your work with discrete choice models sounded like an interesting direction that would be fun to discuss further. 
+
+Best,
+Mac
 
 # Preparation
 
