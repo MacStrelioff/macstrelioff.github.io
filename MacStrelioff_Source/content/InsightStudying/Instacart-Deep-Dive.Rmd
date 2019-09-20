@@ -37,7 +37,6 @@ set.seed(10201991)
 
 - Groceries have been hard for internet companies to get right -- it's exciting to see Instacart managing this well, and I'd be excited to be a part of this technological revolution of grocery delivery
 
-
 <!-- questions -->
 
 - More about role?
