@@ -563,7 +563,6 @@ Assumptions and requirements:
 
 Model:
 
-
 ### Propensity Score Matching
 
 

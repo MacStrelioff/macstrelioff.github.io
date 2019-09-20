@@ -91,6 +91,17 @@ Next steps
 - DS, Sr DS, Staff DS -- depends on interviews, and determines pay range. Will get cash based and equity in RSUs and then benefits. 
 - Sr range between 170-190k on cash. Look at technical contributions, level of inititive, thought leadership, 400-600k over 4 years of equity. 
 
+# Problem solving phone interview (45min)
+
+- business case problem from a Sr DS, high level instacart related problem. 
+- E.g. how would we gain more customers, retain more customers. 
+- Something you'd think of as a DS. ask insightful questions, setup framework correctly, back up analysis and solution over phone. 
+- Looking how you organize thoughts and pivot thinking, might have a wrench thrown. 
+
+- 'How do we get more customers?'
+- referral bonuses, ads, ads + discount codes
+
+
 
 # Company Visit
 

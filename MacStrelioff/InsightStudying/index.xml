@@ -6,15 +6,24 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Sep 2019 12:43:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 15:50:21 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Fri, 20 Sep 2019 15:50:21 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity Fixed Effects Regression First differences Random Effects Propensity Score Matching Microsoft DoWhy   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values.</description>
+    </item>
+    
+    <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Fri, 20 Sep 2019 12:43:33 +0000</pubDate>
+      <pubDate>Fri, 20 Sep 2019 15:46:42 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Recruiter call “Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc”
@@ -28,15 +37,6 @@
       
       <guid>/MacStrelioff/insightstudying/wealthfront-deep-dive/</guid>
       <description>TODO:  Looking for: “You enjoy mentoring others on subjects such as causal inference, experimental design, data visualization or behavioral psychology”  Make a few videos on experimentation and causal inference  Work on: “You subscribe to Wealthfront’s values and mission and can articulate the reasons why, and have an understanding of our product, business model and key metrics”   Job Description Projects, Tasks, and Data  Work closely with a cross-functional growth team of marketers, product managers, and engineers to generate new ideas for growth especially top of funnel, translating open-ended business issues into data questions, identifying practical analytic and A/B testing approaches to validate the ideas, and defining ongoing checks post-implementation to ensure that the growth mechanisms are working as planned.</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Wed, 18 Sep 2019 18:52:40 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>Probability Foundations Probability Rules Probability Functions Expectation Variance Information Theory  Causal Inference Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity Fixed Effects Regression First differences Random Effects Propensity Score Matching Microsoft DoWhy   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values.</description>
     </item>
     
     <item>
