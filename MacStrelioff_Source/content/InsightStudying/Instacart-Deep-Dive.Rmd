@@ -33,7 +33,16 @@ set.seed(10201991)
 
 "Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc"
 
+<!-- excitement -->
+
+- Groceries have been hard for internet companies to get right -- it's exciting to see Instacart managing this well, and I'd be excited to be a part of this technological revolution of grocery delivery
+
+
 <!-- questions -->
+
+- More about role?
+
+- Specific needs or challenges?
 
 - 
 
