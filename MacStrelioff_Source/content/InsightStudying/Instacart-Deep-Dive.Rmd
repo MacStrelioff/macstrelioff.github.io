@@ -80,7 +80,6 @@ I like the enturpneural spirit:
 
 ## Projects, Tasks, and Data
 
-
 Open problems:
 
 - Improve predictability for shopper experience
