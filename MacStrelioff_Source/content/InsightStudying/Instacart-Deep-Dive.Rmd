@@ -41,10 +41,57 @@ set.seed(10201991)
 <!-- questions -->
 
 - More about role?
+- general interview at this point, then team placement later? 
+- to see what product team is best, then match that with their priorities
+- data cleaning, kpis, models
+- experimentation heavy
+- DS vs ml; DS models increase understanding and guide decisions
+- hiring in customer - growth, retention and engagement, marketing, core product
+- and in performance - delivery logistics and operations for shoppers, fulfillment, shoppers and delivery
+- - surrounding shopper model incentivized by flexibility in hours, and pay structure. 
+- - competitive - they could be in postmates, doordash, ...
+- - incitives, earnings, ... 
+- - focused on incentivizing quality rather and balancing with speed.
+- - experiment with different incentive structures.. 
+- and in ads platform - cupons, product promotions (buy 1 get 1 free), ... 
+- - all from brand partners
+- - sales drive brand partners into business
+- - DS around 10 individuals
+- currently have 5 products in ads now, some tools help partners decide how to spend dollars
 
 - Specific needs or challenges?
 
-- 
+- Instacart growing at a pace faster than others in the bay area
+- DS only 25 individuals, still one head of DS
+- DS highly valuable and high ownership
+
+- Sr contributor, prioritization important. 
+- Each product team is cross functional, 1DS, 1 designer, 1-8 SWE, and a product manager. Desks are organized around these. 
+- Owning metrics with the product teams. 
+- E.g. earnings model might be partnering with growth team and delivery logistics side
+- Report into a DS leader for mentorship, collaboration, ... .
+- Still have autonomy and collaboration in day to day
+
+- variety of team members in interview to chat about different projects
+- feel free to ask about their day to day
+
+Next steps
+
+- problem solving phone interview (45min) - business case problem from a Sr DS, high level instacart related problem. E.g. how would we gain more customers, retain more customers. Something you'd think of as a DS. ask insightful questions, setup framework correctly, back up analysis and solution over phone. Looking how you organize thoughts and pivot thinking, might have a wrench thrown. 
+- statistics SQL phone interview (45min). Stats 101, SQL is a necessity so quick 15 min exercise should be straightforward. 
+-- coding over shared doc? 
+-- first 30min over phone, next 30min online through a link 
+- Onsite interview with a lot of topics. Experimental design, live DS project with clean data. Want to see how I solve it and present answers. Multiple ways of answering prompt. 
+- project in three sessions; 
+- 1 framework and metrics, 2 doing the work, 3 presentation to team of DS, strengths and weaknesses and justification of choices
+- experimental design, problem solving/product sense
+
+- hiring leader on customers will be out of office starting October 7th 
+
+- will be asked about compensition at onsite.
+- DS, Sr DS, Staff DS -- depends on interviews, and determines pay range. Will get cash based and equity in RSUs and then benefits. 
+- Sr range between 170-190k on cash. Look at technical contributions, level of inititive, thought leadership, 400-600k over 4 years of equity. 
+
 
 # Company Visit
 

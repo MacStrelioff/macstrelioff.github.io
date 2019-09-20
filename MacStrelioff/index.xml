@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Fri, 20 Sep 2019 10:58:34 +0000</pubDate>
+      <pubDate>Fri, 20 Sep 2019 11:35:02 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -63,9 +63,65 @@
 &lt;/ul&gt;
 &lt;!-- questions --&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;More about role?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;More about role?&lt;/li&gt;
+&lt;li&gt;general interview at this point, then team placement later?&lt;/li&gt;
+&lt;li&gt;to see what product team is best, then match that with their priorities&lt;/li&gt;
+&lt;li&gt;data cleaning, kpis, models&lt;/li&gt;
+&lt;li&gt;experimentation heavy&lt;/li&gt;
+&lt;li&gt;DS vs ml; DS models increase understanding and guide decisions&lt;/li&gt;
+&lt;li&gt;hiring in customer - growth, retention and engagement, marketing, core product&lt;/li&gt;
+&lt;li&gt;and in performance - delivery logistics and operations for shoppers, fulfillment, shoppers and delivery&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;surrounding shopper model incentivized by flexibility in hours, and pay structure.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;competitive - they could be in postmates, doordash, …&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;incitives, earnings, …&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;focused on incentivizing quality rather and balancing with speed.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;experiment with different incentive structures..&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;and in ads platform - cupons, product promotions (buy 1 get 1 free), …&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;all from brand partners&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;sales drive brand partners into business&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;DS around 10 individuals&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;currently have 5 products in ads now, some tools help partners decide how to spend dollars&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Specific needs or challenges?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Instacart growing at a pace faster than others in the bay area&lt;/li&gt;
+&lt;li&gt;DS only 25 individuals, still one head of DS&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DS highly valuable and high ownership&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Sr contributor, prioritization important.&lt;/li&gt;
+&lt;li&gt;Each product team is cross functional, 1DS, 1 designer, 1-8 SWE, and a product manager. Desks are organized around these.&lt;/li&gt;
+&lt;li&gt;Owning metrics with the product teams.&lt;/li&gt;
+&lt;li&gt;E.g. earnings model might be partnering with growth team and delivery logistics side&lt;/li&gt;
+&lt;li&gt;Report into a DS leader for mentorship, collaboration, … .&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Still have autonomy and collaboration in day to day&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;variety of team members in interview to chat about different projects&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;feel free to ask about their day to day&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next steps&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;problem solving phone interview (45min) - business case problem from a Sr DS, high level instacart related problem. E.g. how would we gain more customers, retain more customers. Something you’d think of as a DS. ask insightful questions, setup framework correctly, back up analysis and solution over phone. Looking how you organize thoughts and pivot thinking, might have a wrench thrown.&lt;/li&gt;
+&lt;li&gt;statistics SQL phone interview (45min). Stats 101, SQL is a necessity so quick 15 min exercise should be straightforward. – coding over shared doc? – first 30min over phone, next 30min online through a link&lt;/li&gt;
+&lt;li&gt;Onsite interview with a lot of topics. Experimental design, live DS project with clean data. Want to see how I solve it and present answers. Multiple ways of answering prompt.&lt;/li&gt;
+&lt;li&gt;project in three sessions;&lt;/li&gt;
+&lt;li&gt;1 framework and metrics, 2 doing the work, 3 presentation to team of DS, strengths and weaknesses and justification of choices&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;experimental design, problem solving/product sense&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;hiring leader on customers will be out of office starting October 7th&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;will be asked about compensition at onsite.&lt;/li&gt;
+&lt;li&gt;DS, Sr DS, Staff DS – depends on interviews, and determines pay range. Will get cash based and equity in RSUs and then benefits.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sr range between 170-190k on cash. Look at technical contributions, level of inititive, thought leadership, 400-600k over 4 years of equity.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;company-visit&#34; class=&#34;section level1&#34;&gt;
