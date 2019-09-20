@@ -55,7 +55,6 @@ Business model:
 - There's a grocerie store within 10-15min from every household
 - Most valuable ads because they influence behavior right before the purchase
 - Want to build AdWords for groceries
-- 
 
 Revenue
 
