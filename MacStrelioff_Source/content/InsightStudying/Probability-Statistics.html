@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-09-21 10:00:13"
+date: "2019-09-21 10:55:04"
 math: true
 output:
   blogdown::html_page:
@@ -25,7 +25,7 @@ linktitle: Probability and Statistics
 <li><a href="#information-theory">Information Theory</a></li>
 </ul></li>
 <li><a href="#causal-inference">Causal Inference</a><ul>
-<li><a href="#assumptions">Assumptions</a></li>
+<li><a href="#assumptions-and-key-terms">Assumptions and key terms</a></li>
 <li><a href="#common-methods">Common Methods</a><ul>
 <li><a href="#diff-in-diff">Diff in Diff</a></li>
 <li><a href="#causal-impact">Causal Impact</a></li>
@@ -370,11 +370,11 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <p>The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.</p>
 <p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y(T=1)-Y(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
 <p>Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">CI video</a> at 10:00.</p>
-<div id="assumptions" class="section level2">
-<h2>Assumptions</h2>
+<div id="assumptions-and-key-terms" class="section level2">
+<h2>Assumptions and key terms</h2>
 <ul>
 <li><span class="math inline">\(Y_i(0),Y_i(1) \perp T_i | X_i\)</span> Unconfoundedness: conditional on observations (<span class="math inline">\(X\)</span>), treatment (<span class="math inline">\(T\)</span>) and potential outcomes (<span class="math inline">\(Y(T)\)</span>) are independent.</li>
-<li></li>
+<li>Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.</li>
 </ul>
 </div>
 <div id="common-methods" class="section level2">
@@ -475,7 +475,12 @@ Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 </div>
 <div id="regression-discontinuity" class="section level3">
 <h3>Regression Discontinuity</h3>
-<p>Yelp example</p>
+<p>Context:</p>
+<p>Some systematic mechanism forces a discontinuity in what would be expected to be a regression line.</p>
+<ul>
+<li>E.g. 1: Yelp rounds star ratings so that businesses close in underlying rating (4.49 and 4.5 stars) are assigned to different conditions (4 and 4.5 starts).</li>
+<li>E.g. 2: Schools might filter on exam scores, so that students who are very similar in underlying ability or test score (1 point below the threshold vs at the threshold) might be assigned to different universities.</li>
+</ul>
 </div>
 <div id="fixed-effects-regression" class="section level3">
 <h3>Fixed Effects Regression</h3>

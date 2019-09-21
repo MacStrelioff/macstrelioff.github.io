@@ -400,10 +400,10 @@ From this perspective, there is a treatment assignment $T$ and an outcome of int
 
 Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes [CI video](https://www.youtube.com/watch?v=GTgZfCltMm8) at 10:00. 
 
-## Assumptions
+## Assumptions and key terms
 
-- $Y_i(0),Y_i(1) \perp T_i | X_i$ Unconfoundedness: conditional on observations ($X$), treatment ($T$) and potential outcomes ($Y(T)$) are independent.
-- 
+- $Y_i(0),Y_i(1) \perp T_i | X_i$ Unconfoundedness: conditional on observations ($X$), treatment ($T$) and potential outcomes ($Y(T)$) are independent. 
+- Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds. 
 
 ## Common Methods
 
@@ -513,11 +513,14 @@ Limitation:
 
 This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided $Z$, but the effect of actually being treated $X$ may not be known or estimated.
 
-
-
 ### Regression Discontinuity
 
-Yelp example
+Context: 
+
+Some systematic mechanism forces a discontinuity in what would be expected to be a regression line. 
+
+- E.g. 1: Yelp rounds star ratings so that businesses close in underlying rating (4.49 and 4.5 stars) are assigned to different conditions (4 and 4.5 starts). 
+- E.g. 2: Schools might filter on exam scores, so that students who are very similar in underlying ability or test score (1 point below the threshold vs at the threshold) might be assigned to different universities.
 
 ### Fixed Effects Regression
 

@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sat, 21 Sep 2019 10:00:13 +0000</pubDate>
+      <pubDate>Sat, 21 Sep 2019 10:55:04 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -53,7 +53,7 @@
 &lt;li&gt;&lt;a href=&#34;#information-theory&#34;&gt;Information Theory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-inference&#34;&gt;Causal Inference&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#assumptions&#34;&gt;Assumptions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assumptions-and-key-terms&#34;&gt;Assumptions and key terms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#common-methods&#34;&gt;Common Methods&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#diff-in-diff&#34;&gt;Diff in Diff&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-impact&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
@@ -398,11 +398,11 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 &lt;p&gt;The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.&lt;/p&gt;
 &lt;p&gt;From this perspective, there is a treatment assignment &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; and an outcome of interest that depends on the treatment &lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;. Ideally, we would be able to compute the expected treatment effeoct for any individual &lt;span class=&#34;math inline&#34;&gt;\(E(Y(T=1)-Y(T=0))\)&lt;/span&gt;, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.&lt;/p&gt;
 &lt;p&gt;Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;CI video&lt;/a&gt; at 10:00.&lt;/p&gt;
-&lt;div id=&#34;assumptions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Assumptions&lt;/h2&gt;
+&lt;div id=&#34;assumptions-and-key-terms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assumptions and key terms&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp T_i | X_i\)&lt;/span&gt; Unconfoundedness: conditional on observations (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;), treatment (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;) are independent.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;common-methods&#34; class=&#34;section level2&#34;&gt;
@@ -503,7 +503,12 @@ Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 &lt;/div&gt;
 &lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Regression Discontinuity&lt;/h3&gt;
-&lt;p&gt;Yelp example&lt;/p&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;p&gt;Some systematic mechanism forces a discontinuity in what would be expected to be a regression line.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;E.g. 1: Yelp rounds star ratings so that businesses close in underlying rating (4.49 and 4.5 stars) are assigned to different conditions (4 and 4.5 starts).&lt;/li&gt;
+&lt;li&gt;E.g. 2: Schools might filter on exam scores, so that students who are very similar in underlying ability or test score (1 point below the threshold vs at the threshold) might be assigned to different universities.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;fixed-effects-regression&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Fixed Effects Regression&lt;/h3&gt;
