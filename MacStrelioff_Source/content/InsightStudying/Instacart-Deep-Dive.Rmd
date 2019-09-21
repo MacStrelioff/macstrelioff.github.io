@@ -221,6 +221,8 @@ Insight Project:
 
 ## Stakeholders and Use Cases
 
+User experiences covered in the beginning of [this video](https://blog.dominodatalab.com/data-science-instacart/).
+
 - Consumers: Want 
 - Pickers:
 - Delivery: 
@@ -277,6 +279,12 @@ It very much depends upon the application. If we have a rigorous way of measurin
 In some cases, we cannot A/B test. This can arise because of marketplace dynamics (groups of shoppers or customers are not independent) or because we are seeking to estimate something for measurement rather than for action. In these cases we prefer more structured models, as they can be interrogated and validated and their failings are more easily understood.
 
 We also have applications where we expect the model to be used frequently outside of the domain it was trained in. This can happen when first introducing machine learning models. You begin a product with a simple set of heuristics that preclude you from ever observing a large part of the potential data space. In these cases, simpler models may generalize better to these unobserved spaces, and we can slowly build up exposure through explore / exploit approaches.
+
+## Some exciting things about Instacart
+
+From [why VP of DS joined](https://medium.com/@instacart/our-new-vp-of-data-science-answers-why-i-joined-instacart-2034f467577d)
+
+- Instacart has a very unique business model, and that is why data science is so important for our success. Instacart is in part an ecommerce marketplace, and so we have all of the same fascinating catalog, search, recommendation and community opportunities that eBay and Etsy have. But Instacart is also a real-time logistics platform. So we also have all of the same fascinating forecasting, scheduling, operations and fulfillment opportunities that Uber or Lyft have.
 
 ## Ideas, excitement, questions to ask
 

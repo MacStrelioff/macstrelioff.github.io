@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Fri, 20 Sep 2019 19:39:23 +0000</pubDate>
+      <pubDate>Fri, 20 Sep 2019 20:32:43 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -253,6 +253,7 @@
 &lt;h1&gt;Deep Dive&lt;/h1&gt;
 &lt;div id=&#34;stakeholders-and-use-cases&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Stakeholders and Use Cases&lt;/h2&gt;
+&lt;p&gt;User experiences covered in the beginning of &lt;a href=&#34;https://blog.dominodatalab.com/data-science-instacart/&#34;&gt;this video&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Consumers: Want&lt;/li&gt;
 &lt;li&gt;Pickers:&lt;/li&gt;
@@ -316,6 +317,13 @@
 &lt;p&gt;It very much depends upon the application. If we have a rigorous way of measuring the desired impact when deployed (usually an A/B test), then black-box models that maximize predictive power are often preferred. Even then, we often seek to understand those models in order to improve them, and in order to understand where they may fail in edge cases. At times, this means building a more structured model as well purely to aid understanding.&lt;/p&gt;
 &lt;p&gt;In some cases, we cannot A/B test. This can arise because of marketplace dynamics (groups of shoppers or customers are not independent) or because we are seeking to estimate something for measurement rather than for action. In these cases we prefer more structured models, as they can be interrogated and validated and their failings are more easily understood.&lt;/p&gt;
 &lt;p&gt;We also have applications where we expect the model to be used frequently outside of the domain it was trained in. This can happen when first introducing machine learning models. You begin a product with a simple set of heuristics that preclude you from ever observing a large part of the potential data space. In these cases, simpler models may generalize better to these unobserved spaces, and we can slowly build up exposure through explore / exploit approaches.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-exciting-things-about-instacart&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Some exciting things about Instacart&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&#34;https://medium.com/@instacart/our-new-vp-of-data-science-answers-why-i-joined-instacart-2034f467577d&#34;&gt;why VP of DS joined&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instacart has a very unique business model, and that is why data science is so important for our success. Instacart is in part an ecommerce marketplace, and so we have all of the same fascinating catalog, search, recommendation and community opportunities that eBay and Etsy have. But Instacart is also a real-time logistics platform. So we also have all of the same fascinating forecasting, scheduling, operations and fulfillment opportunities that Uber or Lyft have.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ideas-excitement-questions-to-ask&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Ideas, excitement, questions to ask&lt;/h2&gt;
