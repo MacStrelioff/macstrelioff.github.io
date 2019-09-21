@@ -264,6 +264,15 @@ Overall, consider units of individuals (accounts, unique visitors, cookies, IPs.
 
 ## Glassdoor interview questions
 
+- How to do power analysis for an A/B test.
+- SQL timed exam
+- Questions about efficiency curves in the supply demand distribution of Instacart's logistics.
+- 1. Applied online, got a HackerRank link with SQL question. It is supposed to be completed within 2 hours, but it usually takes 30-40 minutes to solve. 
+- 2. Phone screen with recruiter. It was a bit different since the recruiter didn't ask me any of my background or job fit, but rather asked me to drive the interview with my questions. She did ask some logistical questions like location, visa status, etc. 
+- 3. Got a data analytics takehome assignment. Was given 2 days to accomplish it. The assignment was related to A/B tests, and exploratory data analysis. Had to prepare presentation. 
+- 4. Phone Screen with Hiring Manager. Asked me about my background, ideal job and couple of open-ended questions regarding Shoppers in Instacart. 
+- 5. Onsite Round 6 interviews, which constituted analytics take home presentation, analytical problem solving, statistics, culture fit interview during lunch, engineering partnership, product partnership, and with hiring manager. I liked the rigorousness of the process but was really disappointed when no feedback was given after I was rejected after the onsite.
+
 
 
 
