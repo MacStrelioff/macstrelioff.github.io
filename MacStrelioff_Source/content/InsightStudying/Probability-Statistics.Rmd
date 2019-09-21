@@ -573,6 +573,10 @@ Model:
 
 ### Propensity Score Matching
 
+Context: 
+
+Treatment assignment is non-random and might be related to the relationship between treatment and outcome. So you match people on their propensity to be assigned to treatment. 
+
 
 ### Microsoft DoWhy 
 
