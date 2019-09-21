@@ -79,7 +79,7 @@ Next steps
 - problem solving phone interview (45min) - business case problem from a Sr DS, high level instacart related problem. E.g. how would we gain more customers, retain more customers. Something you'd think of as a DS. ask insightful questions, setup framework correctly, back up analysis and solution over phone. Looking how you organize thoughts and pivot thinking, might have a wrench thrown. 
 - statistics SQL phone interview (45min). Stats 101, SQL is a necessity so quick 15 min exercise should be straightforward. 
 -- coding over shared doc? 
--- first 30min over phone, next 30min online through a link 
+- - no, first 30min over phone, next 30min online through a link 
 - Onsite interview with a lot of topics. Experimental design, live DS project with clean data. Want to see how I solve it and present answers. Multiple ways of answering prompt. 
 - project in three sessions; 
 - 1 framework and metrics, 2 doing the work, 3 presentation to team of DS, strengths and weaknesses and justification of choices
@@ -104,11 +104,43 @@ Next steps
 - increase customers
 - retain customers
 
+<!-- Possible topics -->
+
 - Improve predictability for shopper experience
 - Inventory prediction or modeling
 - Model for item substitutes (crowd source this so that orderers can specify acceptable substitutes?)
 - Labor models in local areas, accounting for unions and labor laws
 - Trust with person delivering produce
+
+
+<!-- Insight Mock Qs -->
+
+- Instacart (a grocery delivery app) implemented a pickup option at a subset of grocery stores that partner with the company. The subset of grocery stores that got the pickup option was not randomly assigned. How would you figure out whether the revenue from pickup is incremental to delivery? In other words, is pickup cannibalizing delivery?
+
+- At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?
+
+- Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program. 
+
+<!-- Framework -->
+
+### Framework
+
+(copy from ipad after fb article...)
+
+Metrics:
+
+..
+
+Other things ...
+
+
+
+
+
+
+
+
+
 
 ## My Value ads
 
@@ -116,7 +148,6 @@ Next steps
 - My research on utility-based decision making, and on RL and learning about environments to optimize decision making could both contribute here? 
 - My work on inferring what strategy a person is following could relate to inferring their utility functions?
 - My work on dynamic logistic bayesian regression could offer a fast way to approximate utility functions for different users, since random utility models are similar in functional form to logistic regressions
-
 
 Ads: 
 
@@ -134,10 +165,46 @@ Ads:
 - Ads should target people who would buy if they see the ad, and wouldn't if they don't.
 - Showing ads to people who will buy anyway confounds the effectiveness of the ad experiments. 
 
+### Discussion of past work
+"Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project."
+
+"elaborate on related projects from your resume"
+
+PredictIt Project:
+
+- Situation: 
+- Project: 
+- Maybe sketch the fig of price for Trump win versus Republican win
+- I also aggregated data based on days until expiration, and applied a linear in log odds model at each day. 
+- Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.
+- Result: 
+- Value to Yelp: Relates to the economic patterns maybe? 
+
+Strategy Inference Project:
+
+- Situation: 
+- Project: 
+- Children and adults might use different strategies when making decisions. 
+- I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time. 
+- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
+- Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user's decisions. This informaiton could then be used to modify search rankings. 
+- More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings. 
+
+General interest in decision making: 
+
+- Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, ... . 
+- Excitement: Yelp is basically a giant experiment in multiattribute decision making. 
+- Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers. 
+
+Insight Project: 
+
+- User funnel and user flow, maybe should have started at these simpler analyses
+- Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy
+- Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant
+- Chose random forests because it does a better job of pulling out important collinear features
 
 
-# Company Visit
-
+# Deep Dive
 
 ## Business Model, Culture, and Vision
 
@@ -185,62 +252,6 @@ Open problems:
 - Model for item substitutes (crowd source this so that orderers can specify acceptable substitutes?)
 - Labor models in local areas, accounting for unions and labor laws
 - Trust with person delivering produce
-
-## DS Role
-
-Teams that are hiring: 
-
-<!-- From recruiter -->
-
-- ads
-- customer
-- performance, or incentivizing shoppers
-
-
-
-### Discussion of past work
-"Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project."
-
-"elaborate on related projects from your resume"
-
-PredictIt Project:
-
-- Situation: 
-- Project: 
-- Maybe sketch the fig of price for Trump win versus Republican win
-- I also aggregated data based on days until expiration, and applied a linear in log odds model at each day. 
-- Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.
-- Result: 
-- Value to Yelp: Relates to the economic patterns maybe? 
-
-Strategy Inference Project:
-
-- Situation: 
-- Project: 
-- Children and adults might use different strategies when making decisions. 
-- I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time. 
-- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
-- Value to Yelp: At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user's decisions. This informaiton could then be used to modify search rankings. 
-- More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings. 
-
-General interest in decision making: 
-
-- Situation: Models of multi-alternative decision making are often applied to food preferences to see how people integrate information about price, healthyness, flavor, ... . 
-- Excitement: Yelp is basically a giant experiment in multiattribute decision making. 
-- Value to Yelp: Theoretical insights might help in guiding how restaurant informaiton is displayed to consumers. 
-
-Insight Project: 
-
-- User funnel and user flow, maybe should have started at these simpler analyses
-- Learned lots about decision trees, random forests versus gradient boosting and gini impurity versus mean decreas in accuracy
-- Chose gini impurity because mean decrease in accuracy labels collinear features as unimportant
-- Chose random forests because it does a better job of pulling out important collinear features
-
-### Product metrics or experimentation
-"You have a good chance of getting a product metrics or experimentation question based on some actual questions Yelp is tackling at the moment."
-
-### General questions: 
-
 
 # Deep Dive
 
