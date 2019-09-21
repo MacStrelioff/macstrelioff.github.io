@@ -1,7 +1,7 @@
 ---
 title: "Instacart Notes"
 author: "Mac Strelioff"
-date: "2019-09-20 18:07:09"
+date: "2019-09-20 19:39:23"
 menu:
   InsightStudying:
     parent: Foundations
@@ -268,6 +268,23 @@ linktitle: Instacart Deep Dive
 <li>Other food delivery – Grubhub, Uber Eats, …</li>
 </ul>
 </div>
+<div id="areas-where-ml-is-impactful" class="section level2">
+<h2>Areas where ML is impactful:</h2>
+<ul>
+<li>Machine learning is critical for our logistics teams, where we balance supply &amp; demand and optimize the vehicle routing problem we have to fulfill grocery deliveries. We use machine learning (and operations research) to forecast distributions of outcomes, optimize control problems, predict grocery shopping and driving times, and solve routing optimization problems. We also use machine learning to assist our shoppers in stores by sorting their shopping lists.</li>
+<li>Another area machine learning has had a significant impact is in our catalog. We use machine learning to predict the probability any given item will be found at a given store location, and to suggest replacements for items that might not be found. There are many applications for using machine learning to improve the catalog (remove duplicates, tag products, enrich metadata, etc.), and so we are just beginning there.</li>
+<li>Last, but not least, we use machine learning extensively for search &amp; discovery. I’ll let Sharath follow-on there.</li>
+<li>We haven’t used machine learning to affect growth (user acquisition) much. In part that’s because we have been growing so fast, we haven’t needed to optimize our growth strategies. In part it’s because we are still rapidly iterating our growth products, and so simpler solutions have been preferable.</li>
+<li>On the Search and Discovery side, there is search matching and ranking, merchandising across the site and several contextual recommendations including ads targeting and repurchase modeling (this competition!), which have benefitted from machine learning techniques.</li>
+<li>There are others such as query understanding - query expansion, spell-correction and autocomplete - where simpler data mining style approaches (aggregation, domain knowledge etc.) have been effective. This would be one of those areas where strict latency and engineering complexity raises the bar on how much more complex models must help to justify the investment (personalized query autocompletion for eg.)</li>
+</ul>
+</div>
+<div id="notes-on-ab-testing-from-jeremy" class="section level2">
+<h2>Notes on A/B testing from Jeremy</h2>
+<p>It very much depends upon the application. If we have a rigorous way of measuring the desired impact when deployed (usually an A/B test), then black-box models that maximize predictive power are often preferred. Even then, we often seek to understand those models in order to improve them, and in order to understand where they may fail in edge cases. At times, this means building a more structured model as well purely to aid understanding.</p>
+<p>In some cases, we cannot A/B test. This can arise because of marketplace dynamics (groups of shoppers or customers are not independent) or because we are seeking to estimate something for measurement rather than for action. In these cases we prefer more structured models, as they can be interrogated and validated and their failings are more easily understood.</p>
+<p>We also have applications where we expect the model to be used frequently outside of the domain it was trained in. This can happen when first introducing machine learning models. You begin a product with a simple set of heuristics that preclude you from ever observing a large part of the potential data space. In these cases, simpler models may generalize better to these unobserved spaces, and we can slowly build up exposure through explore / exploit approaches.</p>
+</div>
 <div id="ideas-excitement-questions-to-ask" class="section level2">
 <h2>Ideas, excitement, questions to ask</h2>
 </div>
@@ -292,6 +309,32 @@ linktitle: Instacart Deep Dive
 <li><ol start="5" style="list-style-type: decimal">
 <li>Onsite Round 6 interviews, which constituted analytics take home presentation, analytical problem solving, statistics, culture fit interview during lunch, engineering partnership, product partnership, and with hiring manager. I liked the rigorousness of the process but was really disappointed when no feedback was given after I was rejected after the onsite.</li>
 </ol></li>
+<li>Without giving away the challenge I can say that I assume they were looking for more of a linear programming algorithm then the simple arithmetic I used to solve the problem.</li>
+<li>SQL query and then an employee optimization dataset.</li>
+<li>The most interesting part of the process was the take-home which consists of 1 ambiguous at best question with a data set of 1 month of order data, which is less data than they open-sources.</li>
+<li>The HR representative said that for the 48 hour take home most people put in 4-6 hours to complete it, but because they want a visualization board, powerpoint, or presentation medium which can take a lot of work, it can feel like just another Silicon Valley rush assignment to do a full project.</li>
+<li>How would you staff the team based on delivery data?</li>
+<li>Estimate the demand and supply</li>
+<li>Code challenge, hiring manager scan and then onsite. The HRs are very professional, but the interviewers are expecting you to know their business very well and they give very vague questions without enough explanation, without any guidance. There would be three technical white boarding rounds, each rounds you will deal with two data scientists. They ask questions about the business is dealing with, but no guidance, and they explain things really poorly, even one of them didn’t say a word during the whole 45 min session.??????? Excuse me???? And they will tell you the result immediately, if you don’t pass, all the following interviews will be cancelled.</li>
+<li>All HackerRank tests. An algorithm question about a kind of thing you will NEVER do at a job, and a SQL question that was reasonable and not the usual trivial thing. Phase II if you get past that or aren’t age screened out yet, is analyzing a simple data set and make a presentation about your findings.</li>
+<li><ol style="list-style-type: decimal">
+<li>SQL test 2.Recruiter screen 3. Data take home challenge 4. Phone screen with a data scientist 5. On site Overall it was a smooth interview process. The recruiter was very helpful. The data scientists and PM’s I met seemed smart but also very serious (could sense some stress). The on site has a behavioral competent (freebie if you can communicate decently) as well as several technical interviews. They will ask about statistical techniques you would use to solve a specific scenario (monte carlo simulation, decision tree, etc.). The interview was pretty rigorous and they will gauge how advanced you are with statistical knowledge and ability to apply it to business problems. Overall I thought I did well in all interviews other than a portion of one of them (didn’t know what statistical method to use to solve specific case question), and ended up getting rejected.</li>
+</ol></li>
+<li><ol style="list-style-type: decimal">
+<li>We are observing this trend, what are possible explanations for why? 2. Behavioral (talk about a time when…) 3. SQL. Did not have live coding, only in the initial problem and take home portion</li>
+</ol></li>
+<li>The first interview was to send me a data set. Given a set of training cases, you need to extract the features and train a model, to predict for the test set.</li>
+<li>I can’t reveal them but mostly around problems in Logistics that Instacart solves on a day to day basis.</li>
+<li>The coding challenge was a timed test mainly on predictive modeling.</li>
+<li>During the phone interview it was clear the interviewer had spent time looking at my past work and asked highly detailed questions about my work, and how I may have gone about certain tasks differently.</li>
+<li>How might you have optimized parameters for this model differently?</li>
+<li>You just have to create a predictive model from a couple csv files they send you.</li>
+<li>How would you tune a random forest?</li>
+<li>He was kind enough to answer a lot of questions, and asked an open-ended yet very specific question about the shopping process they’re trying to optimize. Despite the ambiguity of the problem it felt like he was looking for some particular answers he may have been familiar with. In the end he proposed to send over detailed descriptions of the problem and some actual data, and asked for the solution to be coded up and sent back.</li>
+<li>The problem he asked to be solved is one of their most immediate business challenges, full-blown, not a coding test or even a restricted example at all. So it was odd they’d expect you to work on something for a week that an actual employee would spend several weeks refining. I thought it was to demonstrate coding and analytics skills, and provided a succint, well-commented solution, but didn’t try to overdo it.</li>
+<li>Then I had an analytical case where I had to build and explain a mode. Next I had an in-person interview which was another analytical challenge, but more whiteboarding. It included a data scientist and the hiring manager, who seemed great to work with. Lastly I chatted with the CEO who was friendly and down-to-earth.</li>
+<li>Explored various ways of monitoring user growth and retention.</li>
+<li></li>
 </ul>
 </div>
 </div>
