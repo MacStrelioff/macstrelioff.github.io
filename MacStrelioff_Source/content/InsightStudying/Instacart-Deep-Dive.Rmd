@@ -41,7 +41,7 @@ set.seed(10201991)
 
 - More about role?
 - general interview at this point, then team placement later? 
-- to see what product team is best, then match that with their priorities
+- to see what product team is best fit, then match that with their priorities
 - data cleaning, kpis, models
 - experimentation heavy
 - DS vs ml; DS models increase understanding and guide decisions
@@ -101,6 +101,14 @@ Next steps
 - 'How do we get more customers?'
 - referral bonuses, ads, ads + discount codes
 
+- increase customers
+- retain customers
+
+- Improve predictability for shopper experience
+- Inventory prediction or modeling
+- Model for item substitutes (crowd source this so that orderers can specify acceptable substitutes?)
+- Labor models in local areas, accounting for unions and labor laws
+- Trust with person delivering produce
 
 
 # Company Visit
@@ -155,8 +163,13 @@ Open problems:
 
 ## DS Role
 
+Teams that are hiring: 
+
 <!-- From recruiter -->
 
+- ads
+- customer
+- performance, or incentivizing shoppers
 
 
 
@@ -208,8 +221,9 @@ Insight Project:
 
 ## Stakeholders and Use Cases
 
-- Consumers: 
-- Delivery:
+- Consumers: Want 
+- Pickers:
+- Delivery: 
 - Stores: 
 
 ## User Flows and Metrics
