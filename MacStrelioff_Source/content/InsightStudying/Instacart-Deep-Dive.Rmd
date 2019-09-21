@@ -110,13 +110,29 @@ Next steps
 - Labor models in local areas, accounting for unions and labor laws
 - Trust with person delivering produce
 
-
 ## My Value ads
 
 - [personalization](https://blog.dominodatalab.com/data-science-instacart/) mentioned at 31:00 in this video. 
 - My research on utility-based decision making, and on RL and learning about environments to optimize decision making could both contribute here? 
 - My work on inferring what strategy a person is following could relate to inferring their utility functions?
 - My work on dynamic logistic bayesian regression could offer a fast way to approximate utility functions for different users, since random utility models are similar in functional form to logistic regressions
+
+
+Ads: 
+
+- Motivation has two components: activation and direction. 
+- Activation: I'm not really hungry, then I see sizzling bacon and that makes me hungry. 
+- Directing: I want bacon, then I see a nice omlette and decide to get that instead. Changes the action that manifests out of the latent state. 
+
+- From YouTube, you can advertize to viewers who watch competing channels, e.g. I'd advertize on Ben Lambert since he also has educational stats videos. 
+- At Instacart, this means advertizing to customers who are searching for a substitute product.. 
+
+- Using substitutes and complements
+- Advertize to users who are searching for a substiture item (eggs from a different farm)
+- Advertize to users who are searching for a complement item (eggs for someone searching bacon)
+- Bigger issue -- an ad to someone who is going to buy the product anyway is wasted money.. 
+- Ads should target people who would buy if they see the ad, and wouldn't if they don't.
+- Showing ads to people who will buy anyway confounds the effectiveness of the ad experiments. 
 
 
 

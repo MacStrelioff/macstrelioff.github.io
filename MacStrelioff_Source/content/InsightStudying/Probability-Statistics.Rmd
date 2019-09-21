@@ -400,6 +400,11 @@ From this perspective, there is a treatment assignment $T$ and an outcome of int
 
 Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes [CI video](https://www.youtube.com/watch?v=GTgZfCltMm8) at 10:00. 
 
+## Assumptions
+
+- $Y_i(0),Y_i(1) \perp T_i | X_i$ Unconfoundedness: conditional on observations ($X$), treatment ($T$) and potential outcomes ($Y(T)$) are independent.
+- 
+
 ## Common Methods
 
 Some summarized in this [Medium Post](https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268)

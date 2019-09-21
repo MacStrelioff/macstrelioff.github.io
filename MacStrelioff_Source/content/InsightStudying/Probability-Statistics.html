@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-09-20 15:50:21"
+date: "2019-09-21 10:00:13"
 math: true
 output:
   blogdown::html_page:
@@ -25,6 +25,7 @@ linktitle: Probability and Statistics
 <li><a href="#information-theory">Information Theory</a></li>
 </ul></li>
 <li><a href="#causal-inference">Causal Inference</a><ul>
+<li><a href="#assumptions">Assumptions</a></li>
 <li><a href="#common-methods">Common Methods</a><ul>
 <li><a href="#diff-in-diff">Diff in Diff</a></li>
 <li><a href="#causal-impact">Causal Impact</a></li>
@@ -369,6 +370,13 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <p>The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.</p>
 <p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y(T=1)-Y(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
 <p>Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">CI video</a> at 10:00.</p>
+<div id="assumptions" class="section level2">
+<h2>Assumptions</h2>
+<ul>
+<li><span class="math inline">\(Y_i(0),Y_i(1) \perp T_i | X_i\)</span> Unconfoundedness: conditional on observations (<span class="math inline">\(X\)</span>), treatment (<span class="math inline">\(T\)</span>) and potential outcomes (<span class="math inline">\(Y(T)\)</span>) are independent.</li>
+<li></li>
+</ul>
+</div>
 <div id="common-methods" class="section level2">
 <h2>Common Methods</h2>
 <p>Some summarized in this <a href="https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268">Medium Post</a></p>
