@@ -123,6 +123,13 @@ Next steps
 
 - Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program. 
 
+## From video on hiring practices
+
+- objective, assumptions, scope
+- reliable, readable, flexible
+- logically sound and complete
+- clear description of work and sharp Q&A
+
 ## Framework
 
 (copy from ipad after fb article...)
@@ -294,7 +301,11 @@ Customers:
 - Demand = p(convert | 100% supply)
 - CI methods for inferring demand if there had been supply? Can compare demand in similar regions that have sufficient supply (nearly no bounces from checkout page)
 
-Shoppers: 
+Pickers: 
+
+- time between scans on barcodes (time between picking items)
+
+Delivery: 
 
 - Goals: 
 1 match demand to maximize conversions
@@ -397,11 +408,18 @@ Shopper efficency:
 - Human sorting: people curate the orderings
 - Travling salesman solution: graph of items penalized by observed times between pickups. Ignores things like cold items parishing
 - Deep learning solution: outperforms human curation and travling salesman solution at large batch sizes. 
+- Problem: In a store, just pickes item a, need a model to suggest which item to pick next that would maximize efficency (RL problem with markov state space determined by which item was just picked!)
+- Estimate P(next=item A | last = item B, candidates = unpicked items in list)
+- Deep learning structure - embed products, shoppers, stores, account for candidate set, predict next item, penalize from cross entropy loss function
+- Make predictions either for individual shopper or for best shopper at a store location
+- see article on 'deep learning with emojis'
+- 
+
 
 Driving basket sizes: 
 
 - important way to increase revenue
-- 
+
 
 Considerations; 
 

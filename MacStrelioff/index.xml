@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sun, 22 Sep 2019 13:59:16 +0000</pubDate>
+      <pubDate>Sun, 22 Sep 2019 14:28:55 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -156,6 +156,15 @@
 &lt;li&gt;&lt;p&gt;At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;from-video-on-hiring-practices&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;From video on hiring practices&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;objective, assumptions, scope&lt;/li&gt;
+&lt;li&gt;reliable, readable, flexible&lt;/li&gt;
+&lt;li&gt;logically sound and complete&lt;/li&gt;
+&lt;li&gt;clear description of work and sharp Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&#34;framework&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Framework&lt;/h2&gt;
 &lt;p&gt;(copy from ipad after fb article…)&lt;/p&gt;
@@ -321,7 +330,11 @@
 &lt;li&gt;Demand = p(convert | 100% supply)&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;CI methods for inferring demand if there had been supply? Can compare demand in similar regions that have sufficient supply (nearly no bounces from checkout page)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Shoppers:&lt;/p&gt;
+&lt;p&gt;Pickers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;time between scans on barcodes (time between picking items)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Delivery:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Goals: 1 match demand to maximize conversions 2 efficiency for good unit economics&lt;/li&gt;
 &lt;li&gt;Delays in delivery could indivate holidays, bad weather, regional traffic events&lt;/li&gt;
@@ -427,11 +440,16 @@
 &lt;li&gt;Human sorting: people curate the orderings&lt;/li&gt;
 &lt;li&gt;Travling salesman solution: graph of items penalized by observed times between pickups. Ignores things like cold items parishing&lt;/li&gt;
 &lt;li&gt;Deep learning solution: outperforms human curation and travling salesman solution at large batch sizes.&lt;/li&gt;
+&lt;li&gt;Problem: In a store, just pickes item a, need a model to suggest which item to pick next that would maximize efficency (RL problem with markov state space determined by which item was just picked!)&lt;/li&gt;
+&lt;li&gt;Estimate P(next=item A | last = item B, candidates = unpicked items in list)&lt;/li&gt;
+&lt;li&gt;Deep learning structure - embed products, shoppers, stores, account for candidate set, predict next item, penalize from cross entropy loss function&lt;/li&gt;
+&lt;li&gt;Make predictions either for individual shopper or for best shopper at a store location&lt;/li&gt;
+&lt;li&gt;see article on ‘deep learning with emojis’&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Driving basket sizes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;important way to increase revenue&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Considerations;&lt;/p&gt;
 &lt;ul&gt;

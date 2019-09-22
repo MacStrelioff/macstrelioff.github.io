@@ -1,7 +1,7 @@
 ---
 title: "Instacart Notes"
 author: "Mac Strelioff"
-date: "2019-09-22 13:59:16"
+date: "2019-09-22 14:28:55"
 menu:
   InsightStudying:
     parent: Foundations
@@ -124,6 +124,15 @@ linktitle: Instacart Deep Dive
 <li><p>At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?</p></li>
 <li><p>Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.</p></li>
 </ul>
+<div id="from-video-on-hiring-practices" class="section level2">
+<h2>From video on hiring practices</h2>
+<ul>
+<li>objective, assumptions, scope</li>
+<li>reliable, readable, flexible</li>
+<li>logically sound and complete</li>
+<li>clear description of work and sharp Q&amp;A</li>
+</ul>
+</div>
 <div id="framework" class="section level2">
 <h2>Framework</h2>
 <p>(copy from ipad after fb article…)</p>
@@ -289,7 +298,11 @@ linktitle: Instacart Deep Dive
 <li>Demand = p(convert | 100% supply)</li>
 <li><p>CI methods for inferring demand if there had been supply? Can compare demand in similar regions that have sufficient supply (nearly no bounces from checkout page)</p></li>
 </ul>
-<p>Shoppers:</p>
+<p>Pickers:</p>
+<ul>
+<li>time between scans on barcodes (time between picking items)</li>
+</ul>
+<p>Delivery:</p>
 <ul>
 <li>Goals: 1 match demand to maximize conversions 2 efficiency for good unit economics</li>
 <li>Delays in delivery could indivate holidays, bad weather, regional traffic events</li>
@@ -395,11 +408,16 @@ linktitle: Instacart Deep Dive
 <li>Human sorting: people curate the orderings</li>
 <li>Travling salesman solution: graph of items penalized by observed times between pickups. Ignores things like cold items parishing</li>
 <li>Deep learning solution: outperforms human curation and travling salesman solution at large batch sizes.</li>
+<li>Problem: In a store, just pickes item a, need a model to suggest which item to pick next that would maximize efficency (RL problem with markov state space determined by which item was just picked!)</li>
+<li>Estimate P(next=item A | last = item B, candidates = unpicked items in list)</li>
+<li>Deep learning structure - embed products, shoppers, stores, account for candidate set, predict next item, penalize from cross entropy loss function</li>
+<li>Make predictions either for individual shopper or for best shopper at a store location</li>
+<li>see article on ‘deep learning with emojis’</li>
+<li></li>
 </ul>
 <p>Driving basket sizes:</p>
 <ul>
 <li>important way to increase revenue</li>
-<li></li>
 </ul>
 <p>Considerations;</p>
 <ul>
