@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sat, 21 Sep 2019 14:52:04 +0000</pubDate>
+      <pubDate>Sat, 21 Sep 2019 17:07:44 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -132,7 +132,10 @@
 &lt;ul&gt;
 &lt;li&gt;business case problem from a Sr DS, high level instacart related problem.&lt;/li&gt;
 &lt;li&gt;E.g. how would we gain more customers, retain more customers.&lt;/li&gt;
-&lt;li&gt;Something you’d think of as a DS. ask insightful questions, setup framework correctly, back up analysis and solution over phone.&lt;/li&gt;
+&lt;li&gt;Something you’d think of as a DS.&lt;/li&gt;
+&lt;li&gt;ask insightful questions,&lt;/li&gt;
+&lt;li&gt;setup framework correctly,&lt;/li&gt;
+&lt;li&gt;back up analysis and solution over phone&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Looking how you organize thoughts and pivot thinking, might have a wrench thrown.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;‘How do we get more customers?’&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;referral bonuses, ads, ads + discount codes&lt;/p&gt;&lt;/li&gt;
@@ -153,13 +156,16 @@
 &lt;li&gt;&lt;p&gt;At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- Framework --&gt;
-&lt;div id=&#34;framework&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Framework&lt;/h3&gt;
+&lt;div id=&#34;framework&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Framework&lt;/h2&gt;
 &lt;p&gt;(copy from ipad after fb article…)&lt;/p&gt;
-&lt;p&gt;Metrics:&lt;/p&gt;
-&lt;p&gt;..&lt;/p&gt;
-&lt;p&gt;Other things …&lt;/p&gt;
+&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Metrics:&lt;/h3&gt;
+&lt;p&gt;note when looking at product in video&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other-things&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Other things …&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;my-value-ads&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;My Value ads&lt;/h2&gt;

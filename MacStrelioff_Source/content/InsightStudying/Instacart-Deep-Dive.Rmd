@@ -95,7 +95,10 @@ Next steps
 
 - business case problem from a Sr DS, high level instacart related problem. 
 - E.g. how would we gain more customers, retain more customers. 
-- Something you'd think of as a DS. ask insightful questions, setup framework correctly, back up analysis and solution over phone. 
+- Something you'd think of as a DS. 
+- ask insightful questions, 
+- setup framework correctly, 
+- back up analysis and solution over phone
 - Looking how you organize thoughts and pivot thinking, might have a wrench thrown. 
 
 - 'How do we get more customers?'
@@ -121,17 +124,15 @@ Next steps
 
 - Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program. 
 
-<!-- Framework -->
-
-### Framework
+## Framework
 
 (copy from ipad after fb article...)
 
-Metrics:
+### Metrics:
 
-..
+note when looking at product in video
 
-Other things ...
+### Other things ...
 
 
 
