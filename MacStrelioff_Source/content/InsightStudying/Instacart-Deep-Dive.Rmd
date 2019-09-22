@@ -138,6 +138,8 @@ note when looking at product in video
 - Competition bids more
 - Ad targeting biases sample
 
+- Algorithms for routing shoppers can't be tested within the same geography since routes for T shoppers would influence the routes for C shoppers
+
 ### Other things ...
 
 
@@ -350,21 +352,71 @@ Shoppers
 
 ## Data Science work
 
-Forecasting demand and supply
+From [video](https://www.youtube.com/watch?v=-Y8GGgT4Qf8)
+
+Forecasting demand and supply (bounces from checkout and idle shoppers)
 
 - Different time series models perform better or worse at different times of year, so the team uses different models depending on time of year. Could this be optimized with bayesian model averaging? Or would that lag the changes in the data?
 - Brain following habitual (model-free) vs goal-directed (model-based) strategies and shifts between these strategies depending on outcome variance. At instacart, a similar modeling approach that automates changes between forecasting models or models for staffing shoppers might be more efficient than a current method? 
 
-Balancing supply and demand
+Balancing supply and demand (changing delivery prices based on capacity)
 
 - Charge more for delivery when estimated capacity drops
 - Incentivise people to place orders where it will be most efficient by offering cheaper prices
 - Account for consumers feeling gouged? 1) UX team can think about how this pricing influenced customers satisfaction, 2) AB testing, 3) models of longer term behavior of users exposed to higher surge prices to see causal effects of price strategies on longer term behavior
 
-Fulfuillment
+Fulfuillment timeliness (fulfillment speed, probability deliver on time, chance shopper gets all items, customer happiness)
 
-- Customers happier when orders are slightly early or in the early part of the delivery time window
+- Customers happiest near the beginning of time window, either before or after beginning of time window
+- Could start with Google API, but this breaks at scale
+- Instacart models outperform Google API estimates
+- Shoppers pick and then stage orders
+- Then drivers go to stores and pick up orders, then deliver them
+- Use quantile regression to model variance, which is important because of all the steps being modeled (picking each order, driver picking up each order and delivering each order)
+- (XGBoost?) Gradient boosting machines for comples time and space features and for scale
+- Account for picker variance? Design app to minimize picker veriance?
+
+- cost of idle hour (know shopper hourly pay)
+- cost of being late, know how much it affects customer happines, can relate to customer retention
+- guard rail metrics: probability of being late, 
+- Netflix heuristically doubles value of customers for network effects to account for 1 other friend
+- understanding queues is crucial for efficency
+- having staff that can pick or deliver enables efficency of handoff model where pickers stage orders for delivery, or can deliver themselves
+
+Capacitized vehicle route planning with time windows: 
+
+- computational infeasibility e.g. O orders, D deliveries, N shoppers leads to O choose D * N options
+- pick subset such that orders in only one batch, orders delivered on time, shoppers move as fast as possible
+- impossible problem... 
+- use greedy heuristics; for each unassigned order, assign to shopper that can do fastest, find other orders they can do quickly, ... . 
+
+Shopper efficency: 
+
+- Shopper speed (items per minute) vs batch size (items on list)
+- Control: sort departments randomly, then sort items within departments alphabetically. Shoppers got faster as batch size increases because item density increases (more adjacent items) and fewer unencountered items in unknown locations
+- Human sorting: people curate the orderings
+- Travling salesman solution: graph of items penalized by observed times between pickups. Ignores things like cold items parishing
+- Deep learning solution: outperforms human curation and travling salesman solution at large batch sizes. 
+
+Driving basket sizes: 
+
+- important way to increase revenue
 - 
+
+Considerations; 
+
+- long tail, ie storing lots of items
+- parishability, storing items for limited time
+- timeliness, physical pickups need to be close to dropoffs
+- cost
+- human errors;
+- pick wrong item (protected by scanning UPC code)
+- flag item as not there, when it was just not found
+
+Product Discovery
+
+- Discovery in stores based on laying out items in a way that forces users to walk past new items
+- At instacart, deep learning from image to see how similar item is to one that users may have bought
 
 
 ### On Web
