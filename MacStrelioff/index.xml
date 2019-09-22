@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sat, 21 Sep 2019 18:43:34 +0000</pubDate>
+      <pubDate>Sun, 22 Sep 2019 11:59:51 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -295,17 +295,65 @@
 &lt;h2&gt;Stakeholders and Use Cases&lt;/h2&gt;
 &lt;p&gt;User experiences covered in the beginning of &lt;a href=&#34;https://blog.dominodatalab.com/data-science-instacart/&#34;&gt;this video&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Consumers: Want&lt;/li&gt;
-&lt;li&gt;Pickers:&lt;/li&gt;
-&lt;li&gt;Delivery:&lt;/li&gt;
-&lt;li&gt;Stores:&lt;/li&gt;
+&lt;li&gt;Customer: Want to search and pick groceries for delivery, paritcularly items they are loyal to, possibly from stores that they are loyal to&lt;/li&gt;
+&lt;li&gt;Pickers: Go to stores, find and scan items from a customer’s list.&lt;/li&gt;
+&lt;li&gt;Delivery: Deliver items from picker to customer&lt;/li&gt;
+&lt;li&gt;Stores: Want their store to be chosen by customer&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Advertisers: Want to increase demand possibly through ads&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Instacart doesn’t tell shoppers where to find an item if a store is out of inventory. One reason is to maintain relationships with stores, rather than products.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Adding other types of retailers to the platform, but don’t want to canibalize the relationship with current retailers&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metrics-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Metrics&lt;/h2&gt;
+&lt;p&gt;For profitable unit economics;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;monetization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Monetization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;delivery fees from customers&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Service Fees and Tips from customers for shoppers&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Product partnerships from advertisers for ads&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Retail partners subsidize delivery to get more customers&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;transaction costs, driver insurance&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;time driving and shopping, can cost more than service fees and tips&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Instacart ads are highly valuable because of opportunities to measure intent and influence behavior at the point of sale.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;user-flows-and-metrics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;User Flows and Metrics&lt;/h2&gt;
 &lt;p&gt;Thinking of the broader user flow can help with identifying measurable events within that flow (metrics). Overall, consider units of individuals (accounts, unique visitors, cookies, IPs…), units of time (daily, weekly), and referents (week over week, …)&lt;/p&gt;
+&lt;p&gt;From &lt;a href=&#34;https://www.youtube.com/watch?v=-Y8GGgT4Qf8&#34;&gt;Jeremy Stanley small talk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Customer Experience&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;good source for some key &lt;a href=&#34;https://www.yelp.com/knowledge&#34;&gt;metrics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Select store&lt;/li&gt;
+&lt;li&gt;Shop by selecting items&lt;/li&gt;
+&lt;li&gt;Checkout&lt;/li&gt;
+&lt;li&gt;Select delivery time&lt;/li&gt;
+&lt;li&gt;Return&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Shoppers&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accept order&lt;/li&gt;
+&lt;li&gt;Drive to store, get list of groceries&lt;/li&gt;
+&lt;li&gt;Scan bar codes&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Delivery&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;‘buy it again model’ sorts items shown to users based on how likely it is they’ll buy them again&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;on-web&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;On Web&lt;/h3&gt;
