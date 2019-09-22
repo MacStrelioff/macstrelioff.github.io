@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sat, 21 Sep 2019 17:07:44 +0000</pubDate>
+      <pubDate>Sat, 21 Sep 2019 18:43:34 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -162,6 +162,14 @@
 &lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Metrics:&lt;/h3&gt;
 &lt;p&gt;note when looking at product in video&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;complications&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Complications&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Users go on vacation, (W=1,T=0,Y=0)&lt;/li&gt;
+&lt;li&gt;Competition bids more&lt;/li&gt;
+&lt;li&gt;Ad targeting biases sample&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;other-things&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Other things …&lt;/h3&gt;

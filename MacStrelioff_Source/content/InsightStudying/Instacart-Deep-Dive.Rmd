@@ -132,6 +132,13 @@ Next steps
 
 note when looking at product in video
 
+
+### Complications
+
+- Users go on vacation, (W=1,T=0,Y=0)
+- Competition bids more
+- Ad targeting biases sample
+
 ### Other things ...
 
 
