@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sun, 22 Sep 2019 11:59:51 +0000</pubDate>
+      <pubDate>Sun, 22 Sep 2019 12:56:08 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -296,8 +296,8 @@
 &lt;p&gt;User experiences covered in the beginning of &lt;a href=&#34;https://blog.dominodatalab.com/data-science-instacart/&#34;&gt;this video&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Customer: Want to search and pick groceries for delivery, paritcularly items they are loyal to, possibly from stores that they are loyal to&lt;/li&gt;
-&lt;li&gt;Pickers: Go to stores, find and scan items from a customer’s list.&lt;/li&gt;
-&lt;li&gt;Delivery: Deliver items from picker to customer&lt;/li&gt;
+&lt;li&gt;Pickers: Part time employees with hourly pay and incentive structures go to stores, find and scan items from a customer’s list.&lt;/li&gt;
+&lt;li&gt;Delivery: Contractors with incentive based pay deliver items from picker to customer. These are contract workers&lt;/li&gt;
 &lt;li&gt;Stores: Want their store to be chosen by customer&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Advertisers: Want to increase demand possibly through ads&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Instacart doesn’t tell shoppers where to find an item if a store is out of inventory. One reason is to maintain relationships with stores, rather than products.&lt;/li&gt;
@@ -306,9 +306,34 @@
 &lt;/div&gt;
 &lt;div id=&#34;metrics-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Metrics&lt;/h2&gt;
+&lt;p&gt;Ideas from &lt;a href=&#34;https://www.youtube.com/watch?v=-Y8GGgT4Qf8&#34;&gt;this video&lt;/a&gt;,&lt;/p&gt;
+&lt;p&gt;Customers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User funnel; store search, item search, checkout, delivery screen&lt;/li&gt;
+&lt;li&gt;Delivery page views might indicate demand&lt;/li&gt;
+&lt;li&gt;Bounce before delivery screen might indicate browsing without intent&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bounces at delivery screen might indicate a decision to go to the store instead of use instacart&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Browsing metrics&lt;/li&gt;
+&lt;li&gt;Checkout metrics: can check out (convert), get to checkout screen and see no delivery times then decide to go to store on their own (lost sale), or not go to check out screen (just browsing). Neglecting the lost sales could negatively impact staffing decisions, e.g. fewer delivery slots -&amp;gt; fewer shoppers needed -&amp;gt; fewer delivery slots -&amp;gt; … -&amp;gt; no more business.&lt;/li&gt;
+&lt;li&gt;Log every exposure to availability&lt;/li&gt;
+&lt;li&gt;Model probability of a checkout given customer-store-geography-hour. Then go back and model the probability of a checkout if the past customers had seen available checkouts. Demand models like this help with staffing decisions, and identifying undre staffed areas.&lt;/li&gt;
+&lt;li&gt;Demand = p(convert | 100% supply)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CI methods for inferring demand if there had been supply? Can compare demand in similar regions that have sufficient supply (nearly no bounces from checkout page)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Shoppers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goals: 1 match demand to maximize conversions 2 efficiency for good unit economics&lt;/li&gt;
+&lt;li&gt;Delays in delivery could indivate holidays, bad weather, regional traffic events&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;For profitable unit economics;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;More efficient deliveries; more deliveries per shopper (picker, delivery) hour&lt;/li&gt;
+&lt;li&gt;Number of deliveries / number of labor hours&lt;/li&gt;
+&lt;li&gt;Can improve if shoppers are better utilized (less idle) or faster (more efficient, less time spent searching for items)&lt;/li&gt;
+&lt;li&gt;Improve operational organization&lt;/li&gt;
+&lt;li&gt;Improve incentives and training for shoppers to reduce&lt;/li&gt;
+&lt;li&gt;Part time employees in store&lt;/li&gt;
+&lt;li&gt;Contractors who deliver&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;monetization&#34; class=&#34;section level2&#34;&gt;
@@ -354,6 +379,25 @@
 &lt;li&gt;Scan bar codes&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Delivery&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;‘buy it again model’ sorts items shown to users based on how likely it is they’ll buy them again&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-science-work&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Science work&lt;/h2&gt;
+&lt;p&gt;Forecasting demand and supply&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Different time series models perform better or worse at different times of year, so the team uses different models depending on time of year. Could this be optimized with bayesian model averaging? Or would that lag the changes in the data?&lt;/li&gt;
+&lt;li&gt;Brain following habitual (model-free) vs goal-directed (model-based) strategies and shifts between these strategies depending on outcome variance. At instacart, a similar modeling approach that automates changes between forecasting models or models for staffing shoppers might be more efficient than a current method?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Balancing supply and demand&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Charge more for delivery when estimated capacity drops&lt;/li&gt;
+&lt;li&gt;Incentivise people to place orders where it will be most efficient by offering cheaper prices&lt;/li&gt;
+&lt;li&gt;Account for consumers feeling gouged? 1) UX team can think about how this pricing influenced customers satisfaction, 2) AB testing, 3) models of longer term behavior of users exposed to higher surge prices to see causal effects of price strategies on longer term behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fulfuillment&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Customers happier when orders are slightly early or in the early part of the delivery time window&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;on-web&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;On Web&lt;/h3&gt;

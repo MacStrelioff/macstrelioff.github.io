@@ -266,8 +266,8 @@ Open problems:
 User experiences covered in the beginning of [this video](https://blog.dominodatalab.com/data-science-instacart/).
 
 - Customer: Want to search and pick groceries for delivery, paritcularly items they are loyal to, possibly from stores that they are loyal to
-- Pickers: Go to stores, find and scan items from a customer's list.
-- Delivery: Deliver items from picker to customer
+- Pickers: Part time employees with hourly pay and incentive structures go to stores, find and scan items from a customer's list. 
+- Delivery: Contractors with incentive based pay deliver items from picker to customer. These are contract workers 
 - Stores: Want their store to be chosen by customer
 - Advertisers: Want to increase demand possibly through ads
 
@@ -276,9 +276,39 @@ User experiences covered in the beginning of [this video](https://blog.dominodat
 
 ## Metrics
 
+Ideas from [this video](https://www.youtube.com/watch?v=-Y8GGgT4Qf8),
+
+Customers: 
+
+- User funnel; store search, item search, checkout, delivery screen
+- Delivery page views might indicate demand
+- Bounce before delivery screen might indicate browsing without intent
+- Bounces at delivery screen might indicate a decision to go to the store instead of use instacart
+
+- Browsing metrics
+- Checkout metrics: can check out (convert), get to checkout screen and see no delivery times then decide to go to store on their own (lost sale), or not go to check out screen (just browsing). Neglecting the lost sales could negatively impact staffing decisions, e.g. fewer delivery slots -> fewer shoppers needed -> fewer delivery slots -> ... -> no more business.
+- Log every exposure to availability
+- Model probability of a checkout given customer-store-geography-hour. Then go back and model the probability of a checkout if the past customers had seen available checkouts. Demand models like this help with staffing decisions, and identifying undre staffed areas.
+- Demand = p(convert | 100% supply)
+- CI methods for inferring demand if there had been supply? Can compare demand in similar regions that have sufficient supply (nearly no bounces from checkout page)
+
+Shoppers: 
+
+- Goals: 
+1 match demand to maximize conversions
+2 efficiency for good unit economics
+- Delays in delivery could indivate holidays, bad weather, regional traffic events
+
+
 For profitable unit economics;
 
-- 
+- More efficient deliveries; more deliveries per shopper (picker, delivery) hour
+- Number of deliveries / number of labor hours
+- Can improve if shoppers are better utilized (less idle) or faster (more efficient, less time spent searching for items)
+- Improve operational organization
+- Improve incentives and training for shoppers to reduce 
+- Part time employees in store
+- Contractors who deliver
 
 
 ## Monetization
@@ -315,9 +345,26 @@ Shoppers
 - Scan bar codes
 - Delivery
 
-
-
 - 'buy it again model' sorts items shown to users based on how likely it is they'll buy them again
+
+
+## Data Science work
+
+Forecasting demand and supply
+
+- Different time series models perform better or worse at different times of year, so the team uses different models depending on time of year. Could this be optimized with bayesian model averaging? Or would that lag the changes in the data?
+- Brain following habitual (model-free) vs goal-directed (model-based) strategies and shifts between these strategies depending on outcome variance. At instacart, a similar modeling approach that automates changes between forecasting models or models for staffing shoppers might be more efficient than a current method? 
+
+Balancing supply and demand
+
+- Charge more for delivery when estimated capacity drops
+- Incentivise people to place orders where it will be most efficient by offering cheaper prices
+- Account for consumers feeling gouged? 1) UX team can think about how this pricing influenced customers satisfaction, 2) AB testing, 3) models of longer term behavior of users exposed to higher surge prices to see causal effects of price strategies on longer term behavior
+
+Fulfuillment
+
+- Customers happier when orders are slightly early or in the early part of the delivery time window
+- 
 
 
 ### On Web
