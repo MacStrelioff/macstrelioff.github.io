@@ -193,8 +193,6 @@ Outputs:
 
 ### Complications
 
-
-
 For ad experiments;
 
 - Users go on vacation, (W=1,T=0,Y=0)
@@ -202,13 +200,6 @@ For ad experiments;
 - Ad targeting biases sample
 
 - Algorithms for routing shoppers can't be tested within the same geography since routes for T shoppers would influence the routes for C shoppers
-
-### Other things ...
-
-
-
-
-
 
 
 
@@ -596,13 +587,29 @@ From [why VP of DS joined](https://medium.com/@instacart/our-new-vp-of-data-scie
 
 
 
+## Insight from Jeremy on Kaggle
 
+from [here](https://www.kaggle.com/c/instacart-market-basket-analysis/discussion/34200#latest-262904)
 
+How is time spent?
 
+- 5% getting the data (if working with a new data source, this is higher)
+- 10% analyzing the data (understand context, build intuition)
+- 10% manipulating the data (combining many sources, manipulating in non-trivial ways)
+- 25% modeling R&D (trying out different algorithms, backtesting)
+- 25% putting into production (scalability, testing, app integration)
+- 5% documenting (making it easy for future self and / or others to follow)
+- 5% A/B test setup (setting up key metrics for success, resolving design decisions)
+- 10% deployment (flipping a switch and then dealing with any issues)
+- 5% maintenance (if not immediately iterating, ongoing maintenance for other changes)
 
+How are projects evaluated?
 
-
-
+- Metric impact. If we moved target metric by Y, how much would it matter to the business?
+- User influence. If we changed the product, would it affect the users and drive the metric?
+- Product leverage. If we built X, could we change the product to affect users?
+- Data availability. Do we have the data needed? (If not, let’s collect it!)
+- Algorithm feasibility. Is it feasible to solve, do we have a best practice, can it scale?
 
 
 

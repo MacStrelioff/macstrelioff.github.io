@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Mon, 23 Sep 2019 08:04:02 +0000</pubDate>
+      <pubDate>Mon, 23 Sep 2019 09:21:36 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -233,9 +233,6 @@
 &lt;li&gt;&lt;p&gt;Ad targeting biases sample&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Algorithms for routing shoppers can’t be tested within the same geography since routes for T shoppers would influence the routes for C shoppers&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-things&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Other things …&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;my-value-ads&#34; class=&#34;section level2&#34;&gt;
@@ -640,6 +637,30 @@
 &lt;li&gt;&lt;p&gt;Instacart (a grocery delivery app) implemented a pickup option at a subset of grocery stores that partner with the company. The subset of grocery stores that got the pickup option was not randomly assigned. How would you figure out whether the revenue from pickup is incremental to delivery? In other words, is pickup cannibalizing delivery?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;insight-from-jeremy-on-kaggle&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Insight from Jeremy on Kaggle&lt;/h2&gt;
+&lt;p&gt;from &lt;a href=&#34;https://www.kaggle.com/c/instacart-market-basket-analysis/discussion/34200#latest-262904&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;How is time spent?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5% getting the data (if working with a new data source, this is higher)&lt;/li&gt;
+&lt;li&gt;10% analyzing the data (understand context, build intuition)&lt;/li&gt;
+&lt;li&gt;10% manipulating the data (combining many sources, manipulating in non-trivial ways)&lt;/li&gt;
+&lt;li&gt;25% modeling R&amp;amp;D (trying out different algorithms, backtesting)&lt;/li&gt;
+&lt;li&gt;25% putting into production (scalability, testing, app integration)&lt;/li&gt;
+&lt;li&gt;5% documenting (making it easy for future self and / or others to follow)&lt;/li&gt;
+&lt;li&gt;5% A/B test setup (setting up key metrics for success, resolving design decisions)&lt;/li&gt;
+&lt;li&gt;10% deployment (flipping a switch and then dealing with any issues)&lt;/li&gt;
+&lt;li&gt;5% maintenance (if not immediately iterating, ongoing maintenance for other changes)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How are projects evaluated?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Metric impact. If we moved target metric by Y, how much would it matter to the business?&lt;/li&gt;
+&lt;li&gt;User influence. If we changed the product, would it affect the users and drive the metric?&lt;/li&gt;
+&lt;li&gt;Product leverage. If we built X, could we change the product to affect users?&lt;/li&gt;
+&lt;li&gt;Data availability. Do we have the data needed? (If not, let’s collect it!)&lt;/li&gt;
+&lt;li&gt;Algorithm feasibility. Is it feasible to solve, do we have a best practice, can it scale?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;

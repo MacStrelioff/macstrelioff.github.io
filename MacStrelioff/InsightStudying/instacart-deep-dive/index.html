@@ -141,9 +141,9 @@
  Groceries have been hard for internet companies to get right – it’s exciting to see Instacart managing this well, and I’d be excited to be a part of this technological revolution of grocery delivery   More about role?"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-23T08:04:02&#43;00:00">
+  <meta property="article:published_time" content="2019-09-23T09:21:36&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-23T08:04:02&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-23T09:21:36&#43;00:00">
   
 
   
@@ -356,8 +356,8 @@
 
 
 
-<meta content="2019-09-23 08:04:02 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-23 08:04:02 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-23 09:21:36 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-23 09:21:36 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -650,9 +650,6 @@
 <li><p>Ad targeting biases sample</p></li>
 <li><p>Algorithms for routing shoppers can’t be tested within the same geography since routes for T shoppers would influence the routes for C shoppers</p></li>
 </ul>
-</div>
-<div id="other-things" class="section level3">
-<h3>Other things …</h3>
 </div>
 </div>
 <div id="my-value-ads" class="section level2">
@@ -1057,6 +1054,30 @@
 <li><p>Instacart (a grocery delivery app) implemented a pickup option at a subset of grocery stores that partner with the company. The subset of grocery stores that got the pickup option was not randomly assigned. How would you figure out whether the revenue from pickup is incremental to delivery? In other words, is pickup cannibalizing delivery?</p></li>
 <li><p>At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?</p></li>
 <li><p>Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.</p></li>
+</ul>
+</div>
+<div id="insight-from-jeremy-on-kaggle" class="section level2">
+<h2>Insight from Jeremy on Kaggle</h2>
+<p>from <a href="https://www.kaggle.com/c/instacart-market-basket-analysis/discussion/34200#latest-262904">here</a></p>
+<p>How is time spent?</p>
+<ul>
+<li>5% getting the data (if working with a new data source, this is higher)</li>
+<li>10% analyzing the data (understand context, build intuition)</li>
+<li>10% manipulating the data (combining many sources, manipulating in non-trivial ways)</li>
+<li>25% modeling R&amp;D (trying out different algorithms, backtesting)</li>
+<li>25% putting into production (scalability, testing, app integration)</li>
+<li>5% documenting (making it easy for future self and / or others to follow)</li>
+<li>5% A/B test setup (setting up key metrics for success, resolving design decisions)</li>
+<li>10% deployment (flipping a switch and then dealing with any issues)</li>
+<li>5% maintenance (if not immediately iterating, ongoing maintenance for other changes)</li>
+</ul>
+<p>How are projects evaluated?</p>
+<ul>
+<li>Metric impact. If we moved target metric by Y, how much would it matter to the business?</li>
+<li>User influence. If we changed the product, would it affect the users and drive the metric?</li>
+<li>Product leverage. If we built X, could we change the product to affect users?</li>
+<li>Data availability. Do we have the data needed? (If not, let’s collect it!)</li>
+<li>Algorithm feasibility. Is it feasible to solve, do we have a best practice, can it scale?</li>
 </ul>
 </div>
 </div>
