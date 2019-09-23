@@ -123,6 +123,15 @@ Next steps
 
 - Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program. 
 
+
+- Brett 
+- fulfillment side: shopper success
+- 
+- Customer side has ads, growth, and core
+- bus
+- falls under customers catelogue team
+- 
+
 ## From video on hiring practices
 
 - objective, assumptions, scope
@@ -132,8 +141,31 @@ Next steps
 
 ### Framework 
 
-- Goals
-- Metrics
+- Instacart delivers groceries online and on app
+
+- online - cookie assignment issue.. 
+
+- assume people order all groceries from one shop
+- Instacart dispatches shoppers to fulfill order
+- shoppers (picker+delivery) or picker and deliverer
+- customers fill out their cart, then see available delivery times
+- times in blocks of an hour
+- marketplace involves stores who give catelogues and sometimes pay
+- and goods companies place ads in app to have product come up
+
+- aim to deliver asap, don't always have enough shoppers to meet demand. 
+- Turn off timeslot if unavailable
+- lets say we have busy pricing to combat this, so just charge more instead of turning slot off
+- can increase up to 4x, usually just by a few dollars
+- 
+
+- Goals: how would you know if surege pricing is a good idea? What next? 
+- Metrics: 
+- - moving demand?
+- see regular prices as baseline
+- see surge prices
+- - higher revenue?
+
 - Interventions
 - Incentives for each stakeholder (what if we optimize for this)
 - Models: assumptions, estimators

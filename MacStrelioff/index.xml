@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Mon, 23 Sep 2019 11:49:51 +0000</pubDate>
+      <pubDate>Mon, 23 Sep 2019 12:57:16 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -155,6 +155,13 @@
 &lt;li&gt;&lt;p&gt;Instacart (a grocery delivery app) implemented a pickup option at a subset of grocery stores that partner with the company. The subset of grocery stores that got the pickup option was not randomly assigned. How would you figure out whether the revenue from pickup is incremental to delivery? In other words, is pickup cannibalizing delivery?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Brett&lt;/li&gt;
+&lt;li&gt;fulfillment side: shopper success&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Customer side has ads, growth, and core&lt;/li&gt;
+&lt;li&gt;bus&lt;/li&gt;
+&lt;li&gt;falls under customers catelogue team&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;from-video-on-hiring-practices&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;From video on hiring practices&lt;/h2&gt;
@@ -167,11 +174,33 @@
 &lt;div id=&#34;framework&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Framework&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Goals&lt;/li&gt;
-&lt;li&gt;Metrics&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Instacart delivers groceries online and on app&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;online - cookie assignment issue..&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;assume people order all groceries from one shop&lt;/li&gt;
+&lt;li&gt;Instacart dispatches shoppers to fulfill order&lt;/li&gt;
+&lt;li&gt;shoppers (picker+delivery) or picker and deliverer&lt;/li&gt;
+&lt;li&gt;customers fill out their cart, then see available delivery times&lt;/li&gt;
+&lt;li&gt;times in blocks of an hour&lt;/li&gt;
+&lt;li&gt;marketplace involves stores who give catelogues and sometimes pay&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;and goods companies place ads in app to have product come up&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;aim to deliver asap, don’t always have enough shoppers to meet demand.&lt;/li&gt;
+&lt;li&gt;Turn off timeslot if unavailable&lt;/li&gt;
+&lt;li&gt;lets say we have busy pricing to combat this, so just charge more instead of turning slot off&lt;/li&gt;
+&lt;li&gt;can increase up to 4x, usually just by a few dollars&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;Goals: how would you know if surege pricing is a good idea? What next?&lt;/li&gt;
+&lt;li&gt;Metrics:&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;moving demand?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;see regular prices as baseline&lt;/li&gt;
+&lt;li&gt;see surge prices&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;higher revenue?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Interventions&lt;/li&gt;
 &lt;li&gt;Incentives for each stakeholder (what if we optimize for this)&lt;/li&gt;
-&lt;li&gt;Models: assumptions, estimators&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Models: assumptions, estimators&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
