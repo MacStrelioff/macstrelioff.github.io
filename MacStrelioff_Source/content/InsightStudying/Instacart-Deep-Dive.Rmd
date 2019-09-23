@@ -123,6 +123,14 @@ Next steps
 
 - Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program. 
 
+<!-- Framework -->
+
+- Goals
+- Metrics
+- Interventions
+- Incentives for each stakeholder (what if we optimize for this)
+- Models: assumptions
+
 ## From video on hiring practices
 
 - objective, assumptions, scope

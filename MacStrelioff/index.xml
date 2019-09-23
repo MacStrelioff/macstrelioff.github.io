@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sun, 22 Sep 2019 17:02:44 +0000</pubDate>
+      <pubDate>Mon, 23 Sep 2019 08:04:02 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -155,6 +155,14 @@
 &lt;li&gt;&lt;p&gt;Instacart (a grocery delivery app) implemented a pickup option at a subset of grocery stores that partner with the company. The subset of grocery stores that got the pickup option was not randomly assigned. How would you figure out whether the revenue from pickup is incremental to delivery? In other words, is pickup cannibalizing delivery?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- Framework --&gt;
+&lt;ul&gt;
+&lt;li&gt;Goals&lt;/li&gt;
+&lt;li&gt;Metrics&lt;/li&gt;
+&lt;li&gt;Interventions&lt;/li&gt;
+&lt;li&gt;Incentives for each stakeholder (what if we optimize for this)&lt;/li&gt;
+&lt;li&gt;Models: assumptions&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;from-video-on-hiring-practices&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;From video on hiring practices&lt;/h2&gt;
