@@ -1,7 +1,7 @@
 ---
 title: "Instacart Notes"
 author: "Mac Strelioff"
-date: "2019-09-23 09:21:36"
+date: "2019-09-23 11:49:51"
 menu:
   InsightStudying:
     parent: Foundations
@@ -124,14 +124,6 @@ linktitle: Instacart Deep Dive
 <li><p>At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?</p></li>
 <li><p>Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.</p></li>
 </ul>
-<!-- Framework -->
-<ul>
-<li>Goals</li>
-<li>Metrics</li>
-<li>Interventions</li>
-<li>Incentives for each stakeholder (what if we optimize for this)</li>
-<li>Models: assumptions</li>
-</ul>
 <div id="from-video-on-hiring-practices" class="section level2">
 <h2>From video on hiring practices</h2>
 <ul>
@@ -140,10 +132,16 @@ linktitle: Instacart Deep Dive
 <li>logically sound and complete</li>
 <li>clear description of work and sharp Q&amp;A</li>
 </ul>
+<div id="framework" class="section level3">
+<h3>Framework</h3>
+<ul>
+<li>Goals</li>
+<li>Metrics</li>
+<li>Interventions</li>
+<li>Incentives for each stakeholder (what if we optimize for this)</li>
+<li>Models: assumptions, estimators</li>
+</ul>
 </div>
-<div id="framework" class="section level2">
-<h2>Framework</h2>
-<p>(copy from ipad after fb article…)</p>
 <div id="metrics" class="section level3">
 <h3>Metrics:</h3>
 <p>many from <a href="https://www.slideshare.net/JagannathPutrevu/supply-optimization-instacartslideshare">this presentation</a></p>
@@ -198,8 +196,8 @@ linktitle: Instacart Deep Dive
 <ul>
 <li>Users go on vacation, (W=1,T=0,Y=0)</li>
 <li>Competition bids more</li>
-<li><p>Ad targeting biases sample</p></li>
-<li><p>Algorithms for routing shoppers can’t be tested within the same geography since routes for T shoppers would influence the routes for C shoppers</p></li>
+<li>Ad targeting biases sample</li>
+<li>Algorithms for routing shoppers can’t be tested within the same geography since routes for T shoppers would influence the routes for C shoppers</li>
 </ul>
 </div>
 </div>

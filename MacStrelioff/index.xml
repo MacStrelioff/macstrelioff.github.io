@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Mon, 23 Sep 2019 09:21:36 +0000</pubDate>
+      <pubDate>Mon, 23 Sep 2019 11:49:51 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -156,14 +156,6 @@
 &lt;li&gt;&lt;p&gt;At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- Framework --&gt;
-&lt;ul&gt;
-&lt;li&gt;Goals&lt;/li&gt;
-&lt;li&gt;Metrics&lt;/li&gt;
-&lt;li&gt;Interventions&lt;/li&gt;
-&lt;li&gt;Incentives for each stakeholder (what if we optimize for this)&lt;/li&gt;
-&lt;li&gt;Models: assumptions&lt;/li&gt;
-&lt;/ul&gt;
 &lt;div id=&#34;from-video-on-hiring-practices&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;From video on hiring practices&lt;/h2&gt;
 &lt;ul&gt;
@@ -172,10 +164,16 @@
 &lt;li&gt;logically sound and complete&lt;/li&gt;
 &lt;li&gt;clear description of work and sharp Q&amp;amp;A&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;framework&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Framework&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Goals&lt;/li&gt;
+&lt;li&gt;Metrics&lt;/li&gt;
+&lt;li&gt;Interventions&lt;/li&gt;
+&lt;li&gt;Incentives for each stakeholder (what if we optimize for this)&lt;/li&gt;
+&lt;li&gt;Models: assumptions, estimators&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;framework&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Framework&lt;/h2&gt;
-&lt;p&gt;(copy from ipad after fb article…)&lt;/p&gt;
 &lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Metrics:&lt;/h3&gt;
 &lt;p&gt;many from &lt;a href=&#34;https://www.slideshare.net/JagannathPutrevu/supply-optimization-instacartslideshare&#34;&gt;this presentation&lt;/a&gt;&lt;/p&gt;
@@ -230,8 +228,8 @@
 &lt;ul&gt;
 &lt;li&gt;Users go on vacation, (W=1,T=0,Y=0)&lt;/li&gt;
 &lt;li&gt;Competition bids more&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ad targeting biases sample&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Algorithms for routing shoppers can’t be tested within the same geography since routes for T shoppers would influence the routes for C shoppers&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Ad targeting biases sample&lt;/li&gt;
+&lt;li&gt;Algorithms for routing shoppers can’t be tested within the same geography since routes for T shoppers would influence the routes for C shoppers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;

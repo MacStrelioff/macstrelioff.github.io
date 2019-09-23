@@ -123,14 +123,6 @@ Next steps
 
 - Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program. 
 
-<!-- Framework -->
-
-- Goals
-- Metrics
-- Interventions
-- Incentives for each stakeholder (what if we optimize for this)
-- Models: assumptions
-
 ## From video on hiring practices
 
 - objective, assumptions, scope
@@ -138,9 +130,13 @@ Next steps
 - logically sound and complete
 - clear description of work and sharp Q&A
 
-## Framework
+### Framework 
 
-(copy from ipad after fb article...)
+- Goals
+- Metrics
+- Interventions
+- Incentives for each stakeholder (what if we optimize for this)
+- Models: assumptions, estimators
 
 ### Metrics:
 
@@ -178,18 +174,17 @@ Constraints:
 - shift length requirement
 - business rules
 
-Costs: 
+Costs:
 
 - idle hours
 - lost deliveries
 - lost efficiency
 
-Outputs: 
+Outputs:
 
 - number of shoppers required
 - percent of volume done through handoff
 - estimated efficiency and utilization
-
 
 ### Complications
 
@@ -198,12 +193,7 @@ For ad experiments;
 - Users go on vacation, (W=1,T=0,Y=0)
 - Competition bids more
 - Ad targeting biases sample
-
 - Algorithms for routing shoppers can't be tested within the same geography since routes for T shoppers would influence the routes for C shoppers
-
-
-
-
 
 ## My Value ads
 
