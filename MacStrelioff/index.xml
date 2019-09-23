@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Sun, 22 Sep 2019 14:28:55 +0000</pubDate>
+      <pubDate>Sun, 22 Sep 2019 16:49:27 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -170,10 +170,55 @@
 &lt;p&gt;(copy from ipad after fb article…)&lt;/p&gt;
 &lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Metrics:&lt;/h3&gt;
+&lt;p&gt;many from &lt;a href=&#34;https://www.slideshare.net/JagannathPutrevu/supply-optimization-instacartslideshare&#34;&gt;this presentation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;note when looking at product in video&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;efficiency = delivery time / active time * active time / total time = active efficiency * utilization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Shoppers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Driving time: batching, proximity to store, traffic&lt;/li&gt;
+&lt;li&gt;Picking time: speed of shopper, shopping list ordering, checkout times&lt;/li&gt;
+&lt;li&gt;Bags pickup time: staging area layout, numeber of bags being picked up&lt;/li&gt;
+&lt;li&gt;Delivery time: Traffic, order time/space density, routing algorithm efficiency&lt;/li&gt;
+&lt;li&gt;Idle time: Supply/Demand equilibrium, variance in cancellations, variance in shifts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Process:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Demand forecasts&lt;/li&gt;
+&lt;li&gt;Space/time density&lt;/li&gt;
+&lt;li&gt;Store Locations&lt;/li&gt;
+&lt;li&gt;Shopper pool or staffing&lt;/li&gt;
+&lt;li&gt;Traffic&lt;/li&gt;
+&lt;li&gt;Weather&lt;/li&gt;
+&lt;li&gt;Shopper ability (speed, precision)&lt;/li&gt;
+&lt;li&gt;Fulfillment times&lt;/li&gt;
+&lt;li&gt;Cancellation probability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Constraints:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;handoff vs full-service&lt;/li&gt;
+&lt;li&gt;idleness vs efficiency vs lost delivery&lt;/li&gt;
+&lt;li&gt;store timings&lt;/li&gt;
+&lt;li&gt;shift length requirement&lt;/li&gt;
+&lt;li&gt;business rules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Costs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;idle hours&lt;/li&gt;
+&lt;li&gt;lost deliveries&lt;/li&gt;
+&lt;li&gt;lost efficiency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outputs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of shoppers required&lt;/li&gt;
+&lt;li&gt;percent of volume done through handoff&lt;/li&gt;
+&lt;li&gt;estimated efficiency and utilization&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;complications&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Complications&lt;/h3&gt;
+&lt;p&gt;For ad experiments;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Users go on vacation, (W=1,T=0,Y=0)&lt;/li&gt;
 &lt;li&gt;Competition bids more&lt;/li&gt;
@@ -264,6 +309,11 @@
 &lt;li&gt;There’s a grocerie store within 10-15min from every household&lt;/li&gt;
 &lt;li&gt;Most valuable ads because they influence behavior right before the purchase&lt;/li&gt;
 &lt;li&gt;Want to build AdWords for groceries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Delivery Models;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Handoff model: in-store pickers fulfill orders and stage groceries for pickup, drivers pickup groceries and deliver them&lt;/li&gt;
+&lt;li&gt;Full service: a single shopper picks and delivers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Revenue&lt;/p&gt;
 &lt;ul&gt;

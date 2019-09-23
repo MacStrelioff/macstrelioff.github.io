@@ -136,10 +136,59 @@ Next steps
 
 ### Metrics:
 
+many from [this presentation](https://www.slideshare.net/JagannathPutrevu/supply-optimization-instacartslideshare)
+
 note when looking at product in video
+
+- efficiency = delivery time / active time \* active time / total time = active efficiency \* utilization
+
+Shoppers: 
+
+- Driving time: batching, proximity to store, traffic
+- Picking time: speed of shopper, shopping list ordering, checkout times
+- Bags pickup time: staging area layout, numeber of bags being picked up
+- Delivery time: Traffic, order time/space density, routing algorithm efficiency
+- Idle time: Supply/Demand equilibrium, variance in cancellations, variance in shifts
+
+
+Process: 
+
+- Demand forecasts
+- Space/time density
+- Store Locations
+- Shopper pool or staffing
+- Traffic
+- Weather
+- Shopper ability (speed, precision)
+- Fulfillment times
+- Cancellation probability
+
+Constraints: 
+
+- handoff vs full-service
+- idleness vs efficiency vs lost delivery
+- store timings
+- shift length requirement
+- business rules
+
+Costs: 
+
+- idle hours
+- lost deliveries
+- lost efficiency
+
+Outputs: 
+
+- number of shoppers required
+- percent of volume done through handoff
+- estimated efficiency and utilization
 
 
 ### Complications
+
+
+
+For ad experiments;
 
 - Users go on vacation, (W=1,T=0,Y=0)
 - Competition bids more
@@ -236,6 +285,11 @@ Business model:
 - There's a grocerie store within 10-15min from every household
 - Most valuable ads because they influence behavior right before the purchase
 - Want to build AdWords for groceries
+
+Delivery Models;
+
+- Handoff model: in-store pickers fulfill orders and stage groceries for pickup, drivers pickup groceries and deliver them
+- Full service: a single shopper picks and delivers
 
 Revenue
 
