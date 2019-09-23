@@ -150,7 +150,6 @@ Shoppers:
 - Delivery time: Traffic, order time/space density, routing algorithm efficiency
 - Idle time: Supply/Demand equilibrium, variance in cancellations, variance in shifts
 
-
 Process: 
 
 - Demand forecasts
