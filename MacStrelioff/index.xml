@@ -36,512 +36,9 @@
     </item>
     
     <item>
-      <title>Basic Computer Science</title>
-      <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Tue, 24 Sep 2019 08:28:51 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#computational-complexity&#34;&gt;Computational Complexity&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#constant-time-o1&#34;&gt;Constant Time: O(1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#logrithmic-time-ologn&#34;&gt;Logrithmic Time: O(log(n))&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#polynomial-time-on-on2&#34;&gt;Polynomial Time: O(n), O(n^2), …&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#exponential-time-oxn&#34;&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#lists-and-dictionaries&#34;&gt;Lists and Dictionaries&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#queues-and-stacks&#34;&gt;Queues and Stacks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graphs-and-trees&#34;&gt;Graphs and Trees&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graph-search&#34;&gt;Graph Search&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#breadth-first-bfs-and-queues&#34;&gt;Breadth First (BFS) and queues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#depth-first-dfs&#34;&gt;Depth First (DFS)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#dfs-vs-bfs&#34;&gt;DFS vs BFS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#examples&#34;&gt;Examples:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pointers&#34;&gt;Pointers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#todo-other-topics&#34;&gt;TODO / Other Topics:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;Recursion;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#dijkstras-algorithm&#34;&gt;Dijkstra’s algorithm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#dynamic-programming-knapsack-problem-fibonacci-sequence&#34;&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#functional-programming&#34;&gt;Functional programming&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tools&#34;&gt;Tools&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#git-and-github&#34;&gt;Git and GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql&#34;&gt;SQL&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#general-structure-of-sql-querys&#34;&gt;General Structure of SQL querys&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#aggregation-functions&#34;&gt;Aggregation functions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window functions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tricks&#34;&gt;Tricks:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;!--
-basic structures (tuples, list, arrays, dict), list comprehensions, 
-Data structures (hash, stack, queue, tree, linked list);
-sorting (bubble, selection, insertion, merge, quick)
-Sorting and graph algos (depth-first and breadth-first seach)
-sorting (heap, tim)
---&gt;
-&lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Foundations&lt;/h1&gt;
-&lt;p&gt;Data type manipulation (char, string, numeric, binary, ascii) regular expressions;&lt;/p&gt;
-&lt;div id=&#34;complexity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Complexity&lt;/h2&gt;
-&lt;p&gt;The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where &lt;span class=&#34;math inline&#34;&gt;\(O(f(n))\)&lt;/span&gt; is used to represent the terms that remain relevant when taking a limit of the computations required by the algorithm, &lt;span class=&#34;math inline&#34;&gt;\(f(n)\)&lt;/span&gt;, as &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; approaches &lt;span class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements).&lt;/p&gt;
-&lt;div id=&#34;computational-complexity&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Computational Complexity&lt;/h3&gt;
-&lt;p&gt;Here I’ll check the number of computations required by algorithms of different complexities.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;ns_to_test = [0,1,10,20]&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;constant-time-o1&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Constant Time: O(1)&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(1)\)&lt;/span&gt; represents comstant time complexity – a component of an algorithm that is only performed once, regardless of the input size.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def constant_example(n):
-    num_ops = 1      # 1 operation
-    num_ops +=1      # 1 operation
-    return num_ops   # total: 2 operations
-
-
-for n in ns_to_test:
-    out=constant_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 2
-&amp;gt;&amp;gt;&amp;gt; f(1): 2
-&amp;gt;&amp;gt;&amp;gt; f(10): 2
-&amp;gt;&amp;gt;&amp;gt; f(20): 2&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;logrithmic-time-ologn&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Logrithmic Time: O(log(n))&lt;/h4&gt;
-&lt;p&gt;Very slowly increases in computational demand. It can result from splitting the input on each recusrive call.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def log_example(n,num_ops=0):
-    # 1 operation per call
-    # if n&amp;gt;1, half n and recursively call again
-    if n&amp;gt;=1:
-        n/=2; num_ops += 1
-        num_ops += log_example(n)
-    return num_ops
-        
-for n in ns_to_test:
-    out=log_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
-&amp;gt;&amp;gt;&amp;gt; f(1): 1
-&amp;gt;&amp;gt;&amp;gt; f(10): 4
-&amp;gt;&amp;gt;&amp;gt; f(20): 5&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;polynomial-time-on-on2&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Polynomial Time: O(n), O(n^2), …&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P8Xa2BitN3I&amp;amp;list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&amp;amp;index=11&#34;&gt;good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Each for loop scales complexity by a factor of &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, so one loop would be linear (&lt;span class=&#34;math inline&#34;&gt;\(O(n)\)&lt;/span&gt;), two loops would be quadratic &lt;span class=&#34;math inline&#34;&gt;\(O(n^2)\)&lt;/span&gt;, and three loops would be cubic (&lt;span class=&#34;math inline&#34;&gt;\(O(n^3)\)&lt;/span&gt;), and so on. The example below is a quadratic time example.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def linear_example(n): 
-    num_ops = 0         # initialize counter
-    for i in range(n):  # n times, perform...
-        num_ops +=1     # 1 operation (n*1)
-    return num_ops      # 1+n*1 = 1+n operations, O(n)
-
-for n in ns_to_test:
-    out=linear_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
-&amp;gt;&amp;gt;&amp;gt; f(1): 1
-&amp;gt;&amp;gt;&amp;gt; f(10): 10
-&amp;gt;&amp;gt;&amp;gt; f(20): 20&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def quadratic_example(n):
-    num_ops = 0             # initialize counter
-    for i in range(n):      # n times
-        for j in range(n):  # n times (n*n)
-            num_ops+=1      # 1 operation (1*n*n)
-    return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
-
-for n in ns_to_test:
-    out=quadratic_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
-&amp;gt;&amp;gt;&amp;gt; f(1): 1
-&amp;gt;&amp;gt;&amp;gt; f(10): 100
-&amp;gt;&amp;gt;&amp;gt; f(20): 400&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;exponential-time-oxn&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/h4&gt;
-&lt;p&gt;With exponential time, the number of operations increases by a constant &lt;em&gt;factor&lt;/em&gt; whith the length of the input. An example of this is in recursion, where a function iteratively calls itself &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; times for each element of the input.&lt;/p&gt;
-&lt;p&gt;In the example below, I call the function twice within each call. The complexity is then a geometric series, and the closed for solution for the number of operations can be found with;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=1}^N ar^{i-1} = \frac{a(1-r^{N})}{1-r} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(r=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(a=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is looped over, and we start the index at 0 (&lt;span class=&#34;math inline&#34;&gt;\(i-1\)&lt;/span&gt;) instead of 1, so:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Recursive calls generally have time complexity of &lt;span class=&#34;math inline&#34;&gt;\(O(branches^{depth})\)&lt;/span&gt;.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def exponential_example(n,num_ops=0):
-    num_ops += 1 # 1 operation per call
-    # recursively called twice for each n&amp;gt;0 (2**n times)    
-    if n &amp;gt; 0:
-        n-=1
-        num_ops += exponential_example(n) # 2**(n)
-        num_ops += exponential_example(n) # 2**(n)
-    return num_ops # 
-    
-for n in ns_to_test:
-    out=exponential_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 1
-&amp;gt;&amp;gt;&amp;gt; f(1): 3
-&amp;gt;&amp;gt;&amp;gt; f(10): 2047
-&amp;gt;&amp;gt;&amp;gt; f(20): 2097151&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Structures&lt;/h2&gt;
-&lt;div id=&#34;lists-and-dictionaries&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Lists and Dictionaries&lt;/h3&gt;
-&lt;p&gt;Good descriptions of &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html&#34;&gt;lists&lt;/a&gt;, &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html&#34;&gt;dicts&lt;/a&gt;, and &lt;a href=&#34;https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists&#34;&gt;why some operations are much faster in sets or dict keys&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In depth description of &lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc&#34;&gt;hash tables&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;queues-and-stacks&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Queues and Stacks&lt;/h3&gt;
-&lt;p&gt;Queues and stacks are like lists that are used to prioritize operations.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Queues are First-in-last-out structures – meaning that the highest priority is given to the least recently queued thing. Imagine people in a queue for a theme park, those who entered the queue first are prioritized for admission to the park.&lt;/li&gt;
-&lt;li&gt;Stacks are Last-in-First-out structures – meaning that the highest priority is given to the most recently stacked element. Imagine a stack of books, the ones at the top of the stack are read first.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;graphs-and-trees&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Graphs and Trees&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.jenniferbland.com/the-difference-between-a-tree-and-a-graph-data-structure/&#34;&gt;short definition with pictures&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sorting&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Sorting&lt;/h2&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Python’s sotred() function uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Timsort&#34;&gt;TimSort&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Complexity for common sorts:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(Nlog(N))\)&lt;/span&gt; for quicksort, and merge sort.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In efficient sorting algorithms, the &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; part comes from the algorithm being called on up to each element, and the &lt;span class=&#34;math inline&#34;&gt;\(logN\)&lt;/span&gt; part comes from binary sorting in ways that render parts of the array unnecessary later.&lt;/p&gt;
-&lt;p&gt;e.g. ‘find median in a large dataset’ – sort half of it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Searching&lt;/h1&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;linear-search-binary-search&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Linear Search: Binary Search&lt;/h2&gt;
-&lt;p&gt;Complexity &lt;span class=&#34;math inline&#34;&gt;\(O(logN)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P3YID7liBug&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;requires sorting before applying the search&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;graph-search&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Graph Search&lt;/h2&gt;
-&lt;p&gt;Graphs are a collection of nodes and edges (connections between nodes). In the code below, I use dictionaries to represent graphs – keys represent nodes, and the list of elements represents all of the nodes that the parent node is connected to.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# examples
-Examples = []
-
-# Example 1: something where DFS would do equally well?
-tmp_graph = {1: [2,4], 2: [3], 3: [5], 4: [5,7], 5: [6,7], 6: [], 7: []}
-Examples.append(tmp_graph)
-
-# Example 2: something where DFS will run faster
-tmp_graph = {1:[2,3,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[7],7:[],8:[],9:[],10:[]}
-Examples.append(tmp_graph)
-
-# Example 3: something where BFS will run faster (swapped 3 and 10)
-tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
-Examples.append(tmp_graph)&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;breadth-first-bfs-and-queues&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Breadth First (BFS) and queues&lt;/h3&gt;
-&lt;p&gt;Breadth Frist Search (BFS) queues (FILO structures) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# breadth first search: just a queue
-def BFS_queue(graph,start,end):
-    queue = [start] 
-    visited = set()
-    # build and search through queue
-    while queue:
-        visiting = queue[0]
-        # if this was visited already, continue
-        if visiting in visited: continue
-        # mark node as visited
-        visited.add(visiting)
-        # if this is the end, return 
-        if visiting == end: return True,visited
-        # otherwise, append children to search queue
-        for child in graph[visiting]: queue.append(child)
-        queue.remove(visiting) # remove the visited node
-    # if end was never found, return False
-    return False,visited
-
-# breadth first search: For loop over each layer
-def BFS(graph,start,end):
-    queue = [start] 
-    visited = set()
-    # build and search through queue
-    while queue:
-        for visiting in queue:
-            # if this was visited already, continue
-            if visiting in visited: continue
-            # mark node as visited
-            visited.add(visiting)
-            # if this is the end, return 
-            if visiting == end: return True,visited
-            # otherwise, append children to search queue
-            for child in graph[visiting]:
-                queue.append(child)
-    # if end was never found, return False
-    return False,visited&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;depth-first-dfs&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Depth First (DFS)&lt;/h3&gt;
-&lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Example using DFS to find if a path to a node exists.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Depth first search with recursion
-def DFS(graph,start,end):
-    visited = set()
-    return _DFS(graph,start,end,visited),visited
-    
-def _DFS(graph,start,end,visited):
-    # if this was visited already, return False
-    if start in visited: return False
-    # mark node as visited
-    visited.add(start)
-    # if this is the target node, return True
-    if start == end: return True
-    # DFS through the children of this node
-    for child in graph[start]:
-        if _DFS(graph,child,end,visited):
-            return True
-    return False&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dfs-vs-bfs&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;DFS vs BFS&lt;/h3&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-for example in Examples:
-    print(&amp;#39;DFS  path: &amp;#39;, DFS(example,1,7))
-    print(&amp;#39;BFSq path: &amp;#39;, BFS(example,1,7))
-    print(&amp;#39;BFS  path: &amp;#39;, BFS(example,1,7),&amp;#39;\n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 5, 6, 7})
-&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 7})
-&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 7}) 
-&amp;gt;&amp;gt;&amp;gt; 
-&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 6, 7})
-&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
-&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) 
-&amp;gt;&amp;gt;&amp;gt; 
-&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
-&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 7})
-&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 7})&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;examples&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Examples:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;L332: Reconstruct a path from a starting node that hits all nodes once&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-tickets = [[&amp;quot;JFK&amp;quot;,&amp;quot;KUL&amp;quot;],[&amp;quot;JFK&amp;quot;,&amp;quot;NRT&amp;quot;],[&amp;quot;NRT&amp;quot;,&amp;quot;JFK&amp;quot;]]
-
-# convert to graph implemented in dict:
-import collections
-tree = collections.defaultdict(list)
-for parent,child in tickets:
-    tree[parent].append(child)
-
-# start at JFK
-path = [&amp;quot;JFK&amp;quot;]
-
-# define DFS algo
-def dfs(parent = &amp;#39;JFK&amp;#39;):
-    # success condition -- all tickets have been accounted for
-    if len(path) == len(tickets) + 1: 
-        print(&amp;quot;Final Path: {}&amp;quot;.format(path))
-        return path
-    # get destinations (children) from current node
-    children = sorted(tree[parent])
-    # iterate over children of this node
-    for child in children:
-        # include child in path
-        tree[parent].remove(child)
-        path.append(child)
-        # call DFS again starting at the child node
-        print(&amp;quot;Checking: {} -&amp;gt; {}&amp;quot;.format(parent,child))
-        sub_route = dfs(child)
-        if sub_route: 
-            return sub_route
-        else: print(&amp;quot;No successful sub-route&amp;quot;)
-        # implicitely return None if sub_route empty
-        # if no successful sub-route, remove child from path, 
-        path.pop()
-        #  and add child back to parent to be searched later
-        tree[parent].append(child)
-
-# run the dfs algo
-dfs()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
-&amp;gt;&amp;gt;&amp;gt; No successful sub-route
-&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; NRT
-&amp;gt;&amp;gt;&amp;gt; Checking: NRT -&amp;gt; JFK
-&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
-&amp;gt;&amp;gt;&amp;gt; Final Path: [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]
-&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]&lt;/code&gt;&lt;/pre&gt;
-&lt;!--
-# Ranking Algorithms
-
-Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
-
-# Recommendation
-
-Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
---&gt;
-&lt;!---
-Data science methods play a major role in discovering recommendations for users. 
-
-Econ, compliments and substitutes (competitors). 
-
-Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
-
-Temporal involves forecasting, which is a topic for another post. 
----&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;pointers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Pointers&lt;/h2&gt;
-&lt;p&gt;e.g. Find longest substring that is a pallendrome&lt;/p&gt;
-&lt;p&gt;Optimal way: Start at each letter, move out each&lt;/p&gt;
-&lt;p&gt;e.g. reverse a linked list&lt;/p&gt;
-&lt;p&gt;e.g. max price from a single buy and sell?&lt;/p&gt;
-&lt;p&gt;e.g. swapping values in an array?&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Algorithms&lt;/h1&gt;
-&lt;p&gt;lambda functions;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-nums=[1,1,2,2,1]
-val=1
-
-count = 0
-for i in range(len(nums)):
-  if nums[i] != val:
-    nums[count] = nums[i]
-    count += 1
-
-print(count)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(nums)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [2, 2, 2, 2, 1]&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;todo-other-topics&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;TODO / Other Topics:&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recursion&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Recursion;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Recursive calls&lt;/li&gt;
-&lt;li&gt;Methods applied within each recursion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;dijkstras-algorithm&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Dijkstra’s algorithm&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dynamic-programming-knapsack-problem-fibonacci-sequence&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;functional-programming&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Functional programming&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tools&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Tools&lt;/h1&gt;
-&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Git and GitHub&lt;/h2&gt;
-&lt;p&gt;git for version control (resolving merge conflicts)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL&lt;/h2&gt;
-&lt;div id=&#34;general-structure-of-sql-querys&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;General Structure of SQL querys&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_order_of_execution&#34;&gt;Order of execution for clauses below&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]&lt;/p&gt;
-&lt;p&gt;FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals]&lt;/p&gt;
-&lt;p&gt;WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery)&lt;/p&gt;
-&lt;p&gt;GROUP BY (column[,column,…])&lt;/p&gt;
-&lt;p&gt;HAVING [AGGREGATION(column) condition]&lt;/p&gt;
-&lt;p&gt;LIMIT n [OFFSET m] ```&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;SELECT&lt;/code&gt; clause can contain columns, aggregations, window functions, and subqueries.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;FROM&lt;/code&gt; clause can contain a single table, or joins between tables&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;JOIN&lt;/code&gt;s are useful for appending tables as columns, versus&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ON&lt;/code&gt; filters the table that is returned from the JOIN – it acts similarly to the WHERE clause.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;WHERE&lt;/code&gt; clause filters the table retreived by FROM can also contain sub queries, and can perform the same filtering as &lt;code&gt;ON&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;GROUP BY&lt;/code&gt; groups by a single column or a set of values if given multiple columns&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt; can be used to filter groups based on an aggregation function&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;UNION&lt;/code&gt; appends tables as rows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;aggregation-functions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Aggregation functions&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;GROUP BY&lt;/code&gt; clause can contain &lt;code&gt;GROUPING SETS&lt;/code&gt;, such as a &lt;code&gt;ROLLUP()&lt;/code&gt; and &lt;code&gt;CUBE()&lt;/code&gt; functions. These hierarchically group the rows passed to the aggregation functions. &lt;code&gt;ROLLUP()&lt;/code&gt; hierarchically groups by arguments, starting left to right. &lt;code&gt;CUBE()&lt;/code&gt; passes all permutations of its arguments to the aggregation functions.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/fachoursbymonth3.html&#34;&gt;Grouping sets are described a little here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;window-functions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Window functions&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/countmembers.html&#34;&gt;Orver() explained here&lt;/a&gt;. Some more detailed information &lt;a href=&#34;http://www.sqlservertutorial.net/sql-server-window-functions/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Window functions include &lt;code&gt;OVER()&lt;/code&gt; and &lt;code&gt;ROW_NUMBER()&lt;/code&gt;. They take two optional arguments, &lt;code&gt;PARTITION BY&lt;/code&gt; and &lt;code&gt;ORDER BY&lt;/code&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank and result in skipped values&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DENSE_RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank, but no rank number is skipped&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;LAG(column,lag) OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: Retreives values from a &lt;code&gt;lag&lt;/code&gt; rows before, see &lt;a href=&#34;http://www.mysqltutorial.org/mysql-window-functions/mysql-lag-function/&#34;&gt;example with a partition here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tricks&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tricks:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;When wanting to loop and compare, one can do a join or add a subquery and compare all columns at once. &lt;a href=&#34;https://leetcode.com/problems/department-highest-salary/discuss/53607/Three-accpeted-solutions&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;resources&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Resources&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;SQL training resources;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://academy.vertabelo.com/#courses_list_section&#34;&gt;vertabelo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://pgexercises.com/&#34;&gt;pgexercises&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://classroom.udacity.com/courses/ud198&#34;&gt;Udacity course&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_introduction&#34;&gt;sqlbolt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/&#34;&gt;Mode Analytics&lt;/a&gt; HackerRank (basic select, aggregation)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Python and other coding languages:&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Overview videos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Mon, 23 Sep 2019 12:57:16 +0000</pubDate>
+      <pubDate>Tue, 24 Sep 2019 12:54:34 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -663,8 +160,7 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;li&gt;Customer side has ads, growth, and core&lt;/li&gt;
 &lt;li&gt;bus&lt;/li&gt;
-&lt;li&gt;falls under customers catelogue team&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;falls under customers catelogue team&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;from-video-on-hiring-practices&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;From video on hiring practices&lt;/h2&gt;
@@ -1193,6 +689,509 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Algorithm feasibility. Is it feasible to solve, do we have a best practice, can it scale?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Basic Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Tue, 24 Sep 2019 08:28:51 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#computational-complexity&#34;&gt;Computational Complexity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#constant-time-o1&#34;&gt;Constant Time: O(1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logrithmic-time-ologn&#34;&gt;Logrithmic Time: O(log(n))&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#polynomial-time-on-on2&#34;&gt;Polynomial Time: O(n), O(n^2), …&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exponential-time-oxn&#34;&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#lists-and-dictionaries&#34;&gt;Lists and Dictionaries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#queues-and-stacks&#34;&gt;Queues and Stacks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graphs-and-trees&#34;&gt;Graphs and Trees&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graph-search&#34;&gt;Graph Search&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#breadth-first-bfs-and-queues&#34;&gt;Breadth First (BFS) and queues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#depth-first-dfs&#34;&gt;Depth First (DFS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dfs-vs-bfs&#34;&gt;DFS vs BFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#examples&#34;&gt;Examples:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pointers&#34;&gt;Pointers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo-other-topics&#34;&gt;TODO / Other Topics:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;Recursion;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#dijkstras-algorithm&#34;&gt;Dijkstra’s algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dynamic-programming-knapsack-problem-fibonacci-sequence&#34;&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functional-programming&#34;&gt;Functional programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tools&#34;&gt;Tools&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#git-and-github&#34;&gt;Git and GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql&#34;&gt;SQL&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#general-structure-of-sql-querys&#34;&gt;General Structure of SQL querys&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aggregation-functions&#34;&gt;Aggregation functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tricks&#34;&gt;Tricks:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--
+basic structures (tuples, list, arrays, dict), list comprehensions, 
+Data structures (hash, stack, queue, tree, linked list);
+sorting (bubble, selection, insertion, merge, quick)
+Sorting and graph algos (depth-first and breadth-first seach)
+sorting (heap, tim)
+--&gt;
+&lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Foundations&lt;/h1&gt;
+&lt;p&gt;Data type manipulation (char, string, numeric, binary, ascii) regular expressions;&lt;/p&gt;
+&lt;div id=&#34;complexity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Complexity&lt;/h2&gt;
+&lt;p&gt;The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where &lt;span class=&#34;math inline&#34;&gt;\(O(f(n))\)&lt;/span&gt; is used to represent the terms that remain relevant when taking a limit of the computations required by the algorithm, &lt;span class=&#34;math inline&#34;&gt;\(f(n)\)&lt;/span&gt;, as &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; approaches &lt;span class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements).&lt;/p&gt;
+&lt;div id=&#34;computational-complexity&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Computational Complexity&lt;/h3&gt;
+&lt;p&gt;Here I’ll check the number of computations required by algorithms of different complexities.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;ns_to_test = [0,1,10,20]&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;constant-time-o1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Constant Time: O(1)&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(1)\)&lt;/span&gt; represents comstant time complexity – a component of an algorithm that is only performed once, regardless of the input size.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def constant_example(n):
+    num_ops = 1      # 1 operation
+    num_ops +=1      # 1 operation
+    return num_ops   # total: 2 operations
+
+
+for n in ns_to_test:
+    out=constant_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 2
+&amp;gt;&amp;gt;&amp;gt; f(1): 2
+&amp;gt;&amp;gt;&amp;gt; f(10): 2
+&amp;gt;&amp;gt;&amp;gt; f(20): 2&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;logrithmic-time-ologn&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Logrithmic Time: O(log(n))&lt;/h4&gt;
+&lt;p&gt;Very slowly increases in computational demand. It can result from splitting the input on each recusrive call.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def log_example(n,num_ops=0):
+    # 1 operation per call
+    # if n&amp;gt;1, half n and recursively call again
+    if n&amp;gt;=1:
+        n/=2; num_ops += 1
+        num_ops += log_example(n)
+    return num_ops
+        
+for n in ns_to_test:
+    out=log_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
+&amp;gt;&amp;gt;&amp;gt; f(1): 1
+&amp;gt;&amp;gt;&amp;gt; f(10): 4
+&amp;gt;&amp;gt;&amp;gt; f(20): 5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;polynomial-time-on-on2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Polynomial Time: O(n), O(n^2), …&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P8Xa2BitN3I&amp;amp;list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&amp;amp;index=11&#34;&gt;good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Each for loop scales complexity by a factor of &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, so one loop would be linear (&lt;span class=&#34;math inline&#34;&gt;\(O(n)\)&lt;/span&gt;), two loops would be quadratic &lt;span class=&#34;math inline&#34;&gt;\(O(n^2)\)&lt;/span&gt;, and three loops would be cubic (&lt;span class=&#34;math inline&#34;&gt;\(O(n^3)\)&lt;/span&gt;), and so on. The example below is a quadratic time example.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def linear_example(n): 
+    num_ops = 0         # initialize counter
+    for i in range(n):  # n times, perform...
+        num_ops +=1     # 1 operation (n*1)
+    return num_ops      # 1+n*1 = 1+n operations, O(n)
+
+for n in ns_to_test:
+    out=linear_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
+&amp;gt;&amp;gt;&amp;gt; f(1): 1
+&amp;gt;&amp;gt;&amp;gt; f(10): 10
+&amp;gt;&amp;gt;&amp;gt; f(20): 20&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def quadratic_example(n):
+    num_ops = 0             # initialize counter
+    for i in range(n):      # n times
+        for j in range(n):  # n times (n*n)
+            num_ops+=1      # 1 operation (1*n*n)
+    return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
+
+for n in ns_to_test:
+    out=quadratic_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
+&amp;gt;&amp;gt;&amp;gt; f(1): 1
+&amp;gt;&amp;gt;&amp;gt; f(10): 100
+&amp;gt;&amp;gt;&amp;gt; f(20): 400&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exponential-time-oxn&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;With exponential time, the number of operations increases by a constant &lt;em&gt;factor&lt;/em&gt; whith the length of the input. An example of this is in recursion, where a function iteratively calls itself &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; times for each element of the input.&lt;/p&gt;
+&lt;p&gt;In the example below, I call the function twice within each call. The complexity is then a geometric series, and the closed for solution for the number of operations can be found with;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=1}^N ar^{i-1} = \frac{a(1-r^{N})}{1-r} \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(r=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(a=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is looped over, and we start the index at 0 (&lt;span class=&#34;math inline&#34;&gt;\(i-1\)&lt;/span&gt;) instead of 1, so:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Recursive calls generally have time complexity of &lt;span class=&#34;math inline&#34;&gt;\(O(branches^{depth})\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def exponential_example(n,num_ops=0):
+    num_ops += 1 # 1 operation per call
+    # recursively called twice for each n&amp;gt;0 (2**n times)    
+    if n &amp;gt; 0:
+        n-=1
+        num_ops += exponential_example(n) # 2**(n)
+        num_ops += exponential_example(n) # 2**(n)
+    return num_ops # 
+    
+for n in ns_to_test:
+    out=exponential_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 1
+&amp;gt;&amp;gt;&amp;gt; f(1): 3
+&amp;gt;&amp;gt;&amp;gt; f(10): 2047
+&amp;gt;&amp;gt;&amp;gt; f(20): 2097151&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Structures&lt;/h2&gt;
+&lt;div id=&#34;lists-and-dictionaries&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lists and Dictionaries&lt;/h3&gt;
+&lt;p&gt;Good descriptions of &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html&#34;&gt;lists&lt;/a&gt;, &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html&#34;&gt;dicts&lt;/a&gt;, and &lt;a href=&#34;https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists&#34;&gt;why some operations are much faster in sets or dict keys&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In depth description of &lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc&#34;&gt;hash tables&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;queues-and-stacks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Queues and Stacks&lt;/h3&gt;
+&lt;p&gt;Queues and stacks are like lists that are used to prioritize operations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Queues are First-in-last-out structures – meaning that the highest priority is given to the least recently queued thing. Imagine people in a queue for a theme park, those who entered the queue first are prioritized for admission to the park.&lt;/li&gt;
+&lt;li&gt;Stacks are Last-in-First-out structures – meaning that the highest priority is given to the most recently stacked element. Imagine a stack of books, the ones at the top of the stack are read first.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;graphs-and-trees&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Graphs and Trees&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jenniferbland.com/the-difference-between-a-tree-and-a-graph-data-structure/&#34;&gt;short definition with pictures&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sorting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sorting&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python’s sotred() function uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Timsort&#34;&gt;TimSort&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Complexity for common sorts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(Nlog(N))\)&lt;/span&gt; for quicksort, and merge sort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In efficient sorting algorithms, the &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; part comes from the algorithm being called on up to each element, and the &lt;span class=&#34;math inline&#34;&gt;\(logN\)&lt;/span&gt; part comes from binary sorting in ways that render parts of the array unnecessary later.&lt;/p&gt;
+&lt;p&gt;e.g. ‘find median in a large dataset’ – sort half of it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Searching&lt;/h1&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;linear-search-binary-search&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear Search: Binary Search&lt;/h2&gt;
+&lt;p&gt;Complexity &lt;span class=&#34;math inline&#34;&gt;\(O(logN)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P3YID7liBug&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;requires sorting before applying the search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;graph-search&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Graph Search&lt;/h2&gt;
+&lt;p&gt;Graphs are a collection of nodes and edges (connections between nodes). In the code below, I use dictionaries to represent graphs – keys represent nodes, and the list of elements represents all of the nodes that the parent node is connected to.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# examples
+Examples = []
+
+# Example 1: something where DFS would do equally well?
+tmp_graph = {1: [2,4], 2: [3], 3: [5], 4: [5,7], 5: [6,7], 6: [], 7: []}
+Examples.append(tmp_graph)
+
+# Example 2: something where DFS will run faster
+tmp_graph = {1:[2,3,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[7],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)
+
+# Example 3: something where BFS will run faster (swapped 3 and 10)
+tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;breadth-first-bfs-and-queues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Breadth First (BFS) and queues&lt;/h3&gt;
+&lt;p&gt;Breadth Frist Search (BFS) queues (FILO structures) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# breadth first search: just a queue
+def BFS_queue(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        visiting = queue[0]
+        # if this was visited already, continue
+        if visiting in visited: continue
+        # mark node as visited
+        visited.add(visiting)
+        # if this is the end, return 
+        if visiting == end: return True,visited
+        # otherwise, append children to search queue
+        for child in graph[visiting]: queue.append(child)
+        queue.remove(visiting) # remove the visited node
+    # if end was never found, return False
+    return False,visited
+
+# breadth first search: For loop over each layer
+def BFS(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        for visiting in queue:
+            # if this was visited already, continue
+            if visiting in visited: continue
+            # mark node as visited
+            visited.add(visiting)
+            # if this is the end, return 
+            if visiting == end: return True,visited
+            # otherwise, append children to search queue
+            for child in graph[visiting]:
+                queue.append(child)
+    # if end was never found, return False
+    return False,visited&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;depth-first-dfs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Depth First (DFS)&lt;/h3&gt;
+&lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example using DFS to find if a path to a node exists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Depth first search with recursion
+def DFS(graph,start,end):
+    visited = set()
+    return _DFS(graph,start,end,visited),visited
+    
+def _DFS(graph,start,end,visited):
+    # if this was visited already, return False
+    if start in visited: return False
+    # mark node as visited
+    visited.add(start)
+    # if this is the target node, return True
+    if start == end: return True
+    # DFS through the children of this node
+    for child in graph[start]:
+        if _DFS(graph,child,end,visited):
+            return True
+    return False&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dfs-vs-bfs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;DFS vs BFS&lt;/h3&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+for example in Examples:
+    print(&amp;#39;DFS  path: &amp;#39;, DFS(example,1,7))
+    print(&amp;#39;BFSq path: &amp;#39;, BFS(example,1,7))
+    print(&amp;#39;BFS  path: &amp;#39;, BFS(example,1,7),&amp;#39;\n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 5, 6, 7})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 7})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 7}) 
+&amp;gt;&amp;gt;&amp;gt; 
+&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 6, 7})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) 
+&amp;gt;&amp;gt;&amp;gt; 
+&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 7})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 7})&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Examples:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;L332: Reconstruct a path from a starting node that hits all nodes once&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+tickets = [[&amp;quot;JFK&amp;quot;,&amp;quot;KUL&amp;quot;],[&amp;quot;JFK&amp;quot;,&amp;quot;NRT&amp;quot;],[&amp;quot;NRT&amp;quot;,&amp;quot;JFK&amp;quot;]]
+
+# convert to graph implemented in dict:
+import collections
+tree = collections.defaultdict(list)
+for parent,child in tickets:
+    tree[parent].append(child)
+
+# start at JFK
+path = [&amp;quot;JFK&amp;quot;]
+
+# define DFS algo
+def dfs(parent = &amp;#39;JFK&amp;#39;):
+    # success condition -- all tickets have been accounted for
+    if len(path) == len(tickets) + 1: 
+        print(&amp;quot;Final Path: {}&amp;quot;.format(path))
+        return path
+    # get destinations (children) from current node
+    children = sorted(tree[parent])
+    # iterate over children of this node
+    for child in children:
+        # include child in path
+        tree[parent].remove(child)
+        path.append(child)
+        # call DFS again starting at the child node
+        print(&amp;quot;Checking: {} -&amp;gt; {}&amp;quot;.format(parent,child))
+        sub_route = dfs(child)
+        if sub_route: 
+            return sub_route
+        else: print(&amp;quot;No successful sub-route&amp;quot;)
+        # implicitely return None if sub_route empty
+        # if no successful sub-route, remove child from path, 
+        path.pop()
+        #  and add child back to parent to be searched later
+        tree[parent].append(child)
+
+# run the dfs algo
+dfs()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
+&amp;gt;&amp;gt;&amp;gt; No successful sub-route
+&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; NRT
+&amp;gt;&amp;gt;&amp;gt; Checking: NRT -&amp;gt; JFK
+&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
+&amp;gt;&amp;gt;&amp;gt; Final Path: [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]&lt;/code&gt;&lt;/pre&gt;
+&lt;!--
+# Ranking Algorithms
+
+Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
+
+# Recommendation
+
+Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
+--&gt;
+&lt;!---
+Data science methods play a major role in discovering recommendations for users. 
+
+Econ, compliments and substitutes (competitors). 
+
+Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
+
+Temporal involves forecasting, which is a topic for another post. 
+---&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pointers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pointers&lt;/h2&gt;
+&lt;p&gt;e.g. Find longest substring that is a pallendrome&lt;/p&gt;
+&lt;p&gt;Optimal way: Start at each letter, move out each&lt;/p&gt;
+&lt;p&gt;e.g. reverse a linked list&lt;/p&gt;
+&lt;p&gt;e.g. max price from a single buy and sell?&lt;/p&gt;
+&lt;p&gt;e.g. swapping values in an array?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Algorithms&lt;/h1&gt;
+&lt;p&gt;lambda functions;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+nums=[1,1,2,2,1]
+val=1
+
+count = 0
+for i in range(len(nums)):
+  if nums[i] != val:
+    nums[count] = nums[i]
+    count += 1
+
+print(count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(nums)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [2, 2, 2, 2, 1]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;todo-other-topics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO / Other Topics:&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recursion&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recursion;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Recursive calls&lt;/li&gt;
+&lt;li&gt;Methods applied within each recursion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;dijkstras-algorithm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Dijkstra’s algorithm&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dynamic-programming-knapsack-problem-fibonacci-sequence&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;functional-programming&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Functional programming&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tools&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tools&lt;/h1&gt;
+&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Git and GitHub&lt;/h2&gt;
+&lt;p&gt;git for version control (resolving merge conflicts)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL&lt;/h2&gt;
+&lt;div id=&#34;general-structure-of-sql-querys&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;General Structure of SQL querys&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_order_of_execution&#34;&gt;Order of execution for clauses below&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]&lt;/p&gt;
+&lt;p&gt;FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals]&lt;/p&gt;
+&lt;p&gt;WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery)&lt;/p&gt;
+&lt;p&gt;GROUP BY (column[,column,…])&lt;/p&gt;
+&lt;p&gt;HAVING [AGGREGATION(column) condition]&lt;/p&gt;
+&lt;p&gt;LIMIT n [OFFSET m] ```&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT&lt;/code&gt; clause can contain columns, aggregations, window functions, and subqueries.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FROM&lt;/code&gt; clause can contain a single table, or joins between tables&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JOIN&lt;/code&gt;s are useful for appending tables as columns, versus&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ON&lt;/code&gt; filters the table that is returned from the JOIN – it acts similarly to the WHERE clause.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WHERE&lt;/code&gt; clause filters the table retreived by FROM can also contain sub queries, and can perform the same filtering as &lt;code&gt;ON&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GROUP BY&lt;/code&gt; groups by a single column or a set of values if given multiple columns&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt; can be used to filter groups based on an aggregation function&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UNION&lt;/code&gt; appends tables as rows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;aggregation-functions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Aggregation functions&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;GROUP BY&lt;/code&gt; clause can contain &lt;code&gt;GROUPING SETS&lt;/code&gt;, such as a &lt;code&gt;ROLLUP()&lt;/code&gt; and &lt;code&gt;CUBE()&lt;/code&gt; functions. These hierarchically group the rows passed to the aggregation functions. &lt;code&gt;ROLLUP()&lt;/code&gt; hierarchically groups by arguments, starting left to right. &lt;code&gt;CUBE()&lt;/code&gt; passes all permutations of its arguments to the aggregation functions.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/fachoursbymonth3.html&#34;&gt;Grouping sets are described a little here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;window-functions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Window functions&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/countmembers.html&#34;&gt;Orver() explained here&lt;/a&gt;. Some more detailed information &lt;a href=&#34;http://www.sqlservertutorial.net/sql-server-window-functions/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Window functions include &lt;code&gt;OVER()&lt;/code&gt; and &lt;code&gt;ROW_NUMBER()&lt;/code&gt;. They take two optional arguments, &lt;code&gt;PARTITION BY&lt;/code&gt; and &lt;code&gt;ORDER BY&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank and result in skipped values&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DENSE_RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank, but no rank number is skipped&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LAG(column,lag) OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: Retreives values from a &lt;code&gt;lag&lt;/code&gt; rows before, see &lt;a href=&#34;http://www.mysqltutorial.org/mysql-window-functions/mysql-lag-function/&#34;&gt;example with a partition here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tricks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tricks:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When wanting to loop and compare, one can do a join or add a subquery and compare all columns at once. &lt;a href=&#34;https://leetcode.com/problems/department-highest-salary/discuss/53607/Three-accpeted-solutions&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;resources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Resources&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL training resources;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://academy.vertabelo.com/#courses_list_section&#34;&gt;vertabelo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pgexercises.com/&#34;&gt;pgexercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://classroom.udacity.com/courses/ud198&#34;&gt;Udacity course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_introduction&#34;&gt;sqlbolt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/&#34;&gt;Mode Analytics&lt;/a&gt; HackerRank (basic select, aggregation)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Python and other coding languages:&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overview videos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
