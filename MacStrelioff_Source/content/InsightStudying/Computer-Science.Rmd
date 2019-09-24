@@ -433,7 +433,6 @@ GROUP BY (column[,column,...])
 HAVING [AGGREGATION(column) condition]
   
 LIMIT n [OFFSET m]
-
 ```
 
 - `SELECT` clause can contain columns, aggregations, window functions, and subqueries. 
