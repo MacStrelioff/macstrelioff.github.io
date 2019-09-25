@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-24 18:31:36"
+date: "2019-09-24 20:59:42"
 output:
   blogdown::html_page:
     toc: true
@@ -225,6 +225,20 @@ from friend
 join highschooler h1 on friend.ID2=h1.ID
 join highschooler h2 on friend.ID1=h2.ID
 where h1.name = &#39;Gabriel&#39;</code></pre></li>
+<li><p>For every student who likes someone 2 or more grades younger than themselves, return that student’s name and grade, and the name and grade of the student they like.</p>
+<pre class="{,eval=false,echo=true}"><code>select h1.name,h1.grade,h2.name,h2.grade
+from likes as l
+join highschooler as h1 on l.ID1 = h1.id
+join highschooler as h2 on l.ID2 = h2.id
+where (h1.grade - h2.grade) &gt;= 2</code></pre></li>
+<li><p>For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order. ```{,eval=FALSE,echo=TRUE}</p></li>
 </ol>
+<p>```</p>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
 </div>
 </div>

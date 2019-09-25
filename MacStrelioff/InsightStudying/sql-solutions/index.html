@@ -139,9 +139,9 @@
   <meta property="og:description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-24T18:31:36&#43;00:00">
+  <meta property="article:published_time" content="2019-09-24T20:59:42&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-24T18:31:36&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-24T20:59:42&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-24 18:31:36 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-24 18:31:36 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-24 20:59:42 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-24 20:59:42 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -668,7 +668,21 @@ from friend
 join highschooler h1 on friend.ID2=h1.ID
 join highschooler h2 on friend.ID1=h2.ID
 where h1.name = &#39;Gabriel&#39;</code></pre></li>
+<li><p>For every student who likes someone 2 or more grades younger than themselves, return that student’s name and grade, and the name and grade of the student they like.</p>
+<pre class="{,eval=false,echo=true}"><code>select h1.name,h1.grade,h2.name,h2.grade
+from likes as l
+join highschooler as h1 on l.ID1 = h1.id
+join highschooler as h2 on l.ID2 = h2.id
+where (h1.grade - h2.grade) &gt;= 2</code></pre></li>
+<li><p>For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order. ```{,eval=FALSE,echo=TRUE}</p></li>
 </ol>
+<p>```</p>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
+<pre class="{,eval=false,echo=true}"><code></code></pre>
 </div>
 </div>
 
