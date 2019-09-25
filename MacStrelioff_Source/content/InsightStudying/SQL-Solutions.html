@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-25 07:52:04"
+date: "2019-09-25 08:48:53"
 output:
   blogdown::html_page:
     toc: true
@@ -22,6 +22,7 @@ math: true
 <li><a href="#sql-movie-rating-query-exercises">SQL Movie-Rating Query Exercises</a></li>
 <li><a href="#sql-movie-rating-query-exercises-extras">SQL Movie-Rating Query Exercises Extras</a></li>
 <li><a href="#sql-social-network-query-exercises">SQL Social-Network Query Exercises</a></li>
+<li><a href="#sql-social-network-query-exercises-extras">SQL Social-Network Query Exercises Extras</a></li>
 </ul></li>
 </ul>
 </div>
@@ -244,12 +245,51 @@ order by 1,2</code></pre></li>
 from highschooler h
 where h.id not in (select id1 from likes union select id2 from likes)
 order by 2,1</code></pre></li>
-<li><p>For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B’s names and grades. ```{,eval=FALSE,echo=TRUE}</p></li>
+<li><p>For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B’s names and grades.</p>
+<pre class="{,eval=false,echo=true}"><code>select hA.name,hA.grade,h.name,h.grade
+from highschooler as h
+join likes on h.id=likes.id2
+join highschooler as hA on likes.id1=hA.id
+where h.id not in (select id1 from likes)</code></pre></li>
+<li><p>Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.</p>
+<pre class="{,eval=false,echo=true}"><code>select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids of friends in different grades */
+select f1.id1
+from friend f1
+join highschooler h1 on f1.id1=h1.id
+join highschooler h2 on f1.id2=h2.id
+where h1.grade &lt;&gt; h2.grade
+)
+order by 2,1</code></pre></li>
+<li><p>For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.</p>
+<pre class="{,eval=false,echo=true}"><code>select ha.name,ha.grade,hb.name,hb.grade,hc.name,hc.grade
+from likes
+join friend f1 on likes.id1=f1.id2 
+join friend f2 on likes.id2=f2.id2 and f2.id1=f1.id1
+join highschooler ha on likes.id1=ha.id
+join highschooler hb on likes.id2=hb.id
+join highschooler hc on f1.id1=hc.id
+/* list of like ids who are friends */
+where likes.id1 not in 
+(select likes.id1
+from likes
+join friend f1 on likes.id1=f1.id1
+where likes.id2 = f1.id2
+)</code></pre></li>
+<li><p>Find the difference between the number of students in the school and the number of different first names.</p>
+<pre class="{,eval=false,echo=true}"><code>select count(*)-count(distinct name)
+from highschooler</code></pre></li>
+<li><p>Find the name and grade of all students who are liked by more than one other student.</p>
+<pre class="{,eval=false,echo=true}"><code>select h.name,h.grade
+from likes
+join highschooler as h on likes.id2=h.id
+group by h.id
+having count(likes.id2) &gt; 1</code></pre></li>
 </ol>
-<p>```</p>
-<pre class="{,eval=false,echo=true}"><code></code></pre>
-<pre class="{,eval=false,echo=true}"><code></code></pre>
-<pre class="{,eval=false,echo=true}"><code></code></pre>
-<pre class="{,eval=false,echo=true}"><code></code></pre>
+</div>
+<div id="sql-social-network-query-exercises-extras" class="section level2">
+<h2>SQL Social-Network Query Exercises Extras</h2>
 </div>
 </div>

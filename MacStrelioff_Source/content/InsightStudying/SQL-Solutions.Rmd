@@ -320,25 +320,62 @@ order by 2,1
 
 5. For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B's names and grades.
 ```{,eval=FALSE,echo=TRUE}
-
+select hA.name,hA.grade,h.name,h.grade
+from highschooler as h
+join likes on h.id=likes.id2
+join highschooler as hA on likes.id1=hA.id
+where h.id not in (select id1 from likes)
 ```
 
+6. Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.
 ```{,eval=FALSE,echo=TRUE}
-
+select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids of friends in different grades */
+select f1.id1
+from friend f1
+join highschooler h1 on f1.id1=h1.id
+join highschooler h2 on f1.id2=h2.id
+where h1.grade <> h2.grade
+)
+order by 2,1
 ```
 
+7. For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.
 ```{,eval=FALSE,echo=TRUE}
-
+select ha.name,ha.grade,hb.name,hb.grade,hc.name,hc.grade
+from likes
+join friend f1 on likes.id1=f1.id2 
+join friend f2 on likes.id2=f2.id2 and f2.id1=f1.id1
+join highschooler ha on likes.id1=ha.id
+join highschooler hb on likes.id2=hb.id
+join highschooler hc on f1.id1=hc.id
+/* list of like ids who are friends */
+where likes.id1 not in 
+(select likes.id1
+from likes
+join friend f1 on likes.id1=f1.id1
+where likes.id2 = f1.id2
+)
 ```
 
+8. Find the difference between the number of students in the school and the number of different first names.
 ```{,eval=FALSE,echo=TRUE}
-
+select count(*)-count(distinct name)
+from highschooler
 ```
 
+9. Find the name and grade of all students who are liked by more than one other student.
 ```{,eval=FALSE,echo=TRUE}
-
+select h.name,h.grade
+from likes
+join highschooler as h on likes.id2=h.id
+group by h.id
+having count(likes.id2) > 1
 ```
 
+## SQL Social-Network Query Exercises Extras
 
 
 
