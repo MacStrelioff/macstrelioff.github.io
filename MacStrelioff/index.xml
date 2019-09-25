@@ -38,7 +38,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Tue, 24 Sep 2019 20:59:42 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 07:52:04 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>
@@ -259,11 +259,22 @@ from likes as l
 join highschooler as h1 on l.ID1 = h1.id
 join highschooler as h2 on l.ID2 = h2.id
 where (h1.grade - h2.grade) &amp;gt;= 2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order. ```{,eval=FALSE,echo=TRUE}&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
+from likes as l1
+join likes as l2 on l1.id1=l2.id2 and l1.id2 = l2.id1 /* like eachother */
+join highschooler h1 on l1.id1=h1.id
+join highschooler h2 on l1.id2=h2.id
+where h1.name &amp;lt; h2.name /* alphabetical order across columns */
+order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find all students who do not appear in the Likes table (as a student who likes or is liked) and return their names and grades. Sort by grade, then by name within each grade.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from highschooler h
+where h.id not in (select id1 from likes union select id2 from likes)
+order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B’s names and grades. ```{,eval=FALSE,echo=TRUE}&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;```&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;

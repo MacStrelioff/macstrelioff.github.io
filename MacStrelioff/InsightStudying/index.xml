@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Sep 2019 20:59:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2019 07:52:04 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Tue, 24 Sep 2019 20:59:42 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 07:52:04 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.</description>
