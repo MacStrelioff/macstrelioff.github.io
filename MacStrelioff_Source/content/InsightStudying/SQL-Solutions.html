@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-25 14:43:33"
+date: "2019-09-25 15:07:09"
 output:
   blogdown::html_page:
     toc: true
@@ -375,6 +375,33 @@ select facs.name, sum(case
     group by facs.name
 ) as agg where revenue &lt; 1000
 order by revenue;</code></pre></li>
+<li><p>Output the facility id that has the highest number of slots booked. For bonus points, try a version without a LIMIT clause. This version will probably look messy!</p>
+<pre class="{,eval=false,echo=true}"><code>select facid, &quot;Total Slots&quot;
+from (select facid, sum(slots) as &quot;Total Slots&quot;
+from cd.bookings as b
+group by facid) as t1
+where &quot;Total Slots&quot; = (
+  select max(&quot;Total Slots&quot;) from
+(select facid, sum(slots) as &quot;Total Slots&quot;
+from cd.bookings as b
+group by facid) as t2)
+/* USING HAVING */
+select facid, sum(slots) as totalslots
+from cd.bookings
+group by facid
+having sum(slots) = (select max(sum2.totalslots) from
+    (select sum(slots) as totalslots
+    from cd.bookings
+    group by facid
+    ) as sum2);
+/* Using CTE */
+with sum as (select facid, sum(slots) as totalslots
+from cd.bookings
+group by facid
+)
+select facid, totalslots 
+from sum
+where totalslots = (select max(totalslots) from sum);</code></pre></li>
 </ol>
 </div>
 </div>

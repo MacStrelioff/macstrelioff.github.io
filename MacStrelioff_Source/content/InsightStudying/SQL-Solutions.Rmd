@@ -500,7 +500,35 @@ select name, revenue from (
 order by revenue;
 ```
 
-
+3. Output the facility id that has the highest number of slots booked. For bonus points, try a version without a LIMIT clause. This version will probably look messy!
+```{,eval=FALSE,echo=TRUE}
+select facid, "Total Slots"
+from (select facid, sum(slots) as "Total Slots"
+from cd.bookings as b
+group by facid) as t1
+where "Total Slots" = (
+  select max("Total Slots") from
+(select facid, sum(slots) as "Total Slots"
+from cd.bookings as b
+group by facid) as t2)
+/* USING HAVING */
+select facid, sum(slots) as totalslots
+	from cd.bookings
+	group by facid
+	having sum(slots) = (select max(sum2.totalslots) from
+		(select sum(slots) as totalslots
+		from cd.bookings
+		group by facid
+		) as sum2);
+/* Using CTE */
+with sum as (select facid, sum(slots) as totalslots
+	from cd.bookings
+	group by facid
+)
+select facid, totalslots 
+	from sum
+	where totalslots = (select max(totalslots) from sum);
+```
 
 
 

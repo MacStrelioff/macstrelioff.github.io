@@ -139,9 +139,9 @@
   <meta property="og:description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-25T14:43:33&#43;00:00">
+  <meta property="article:published_time" content="2019-09-25T15:07:09&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-25T14:43:33&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-25T15:07:09&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-25 14:43:33 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-25 14:43:33 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-25 15:07:09 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-25 15:07:09 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -818,6 +818,33 @@ select facs.name, sum(case
     group by facs.name
 ) as agg where revenue &lt; 1000
 order by revenue;</code></pre></li>
+<li><p>Output the facility id that has the highest number of slots booked. For bonus points, try a version without a LIMIT clause. This version will probably look messy!</p>
+<pre class="{,eval=false,echo=true}"><code>select facid, &quot;Total Slots&quot;
+from (select facid, sum(slots) as &quot;Total Slots&quot;
+from cd.bookings as b
+group by facid) as t1
+where &quot;Total Slots&quot; = (
+  select max(&quot;Total Slots&quot;) from
+(select facid, sum(slots) as &quot;Total Slots&quot;
+from cd.bookings as b
+group by facid) as t2)
+/* USING HAVING */
+select facid, sum(slots) as totalslots
+from cd.bookings
+group by facid
+having sum(slots) = (select max(sum2.totalslots) from
+    (select sum(slots) as totalslots
+    from cd.bookings
+    group by facid
+    ) as sum2);
+/* Using CTE */
+with sum as (select facid, sum(slots) as totalslots
+from cd.bookings
+group by facid
+)
+select facid, totalslots 
+from sum
+where totalslots = (select max(totalslots) from sum);</code></pre></li>
 </ol>
 </div>
 </div>
