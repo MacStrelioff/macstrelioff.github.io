@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Wed, 25 Sep 2019 11:13:42 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 12:34:12 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -184,6 +184,9 @@
 &lt;/div&gt;
 &lt;div id=&#34;sql&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;SQL:&lt;/h2&gt;
+&lt;div id=&#34;howard-advice&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Howard advice&lt;/h3&gt;
+&lt;/div&gt;
 &lt;div id=&#34;framework&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Framework&lt;/h3&gt;
 &lt;ul&gt;
