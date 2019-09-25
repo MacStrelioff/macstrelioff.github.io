@@ -6,18 +6,28 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Sep 2019 10:36:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2019 11:13:42 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Instacart Notes</title>
+      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
+      <pubDate>Wed, 25 Sep 2019 11:13:42 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
+      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Recruiter call “Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc”
+ Groceries have been hard for internet companies to get right – it’s exciting to see Instacart managing this well, and I’d be excited to be a part of this technological revolution of grocery delivery   More about role?</description>
+    </item>
+    
+    <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Wed, 25 Sep 2019 10:36:11 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 11:11:52 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
-      <description>General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.</description>
+      <description>General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras HackerRank    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.</description>
     </item>
     
     <item>
@@ -27,16 +37,6 @@
       
       <guid>/MacStrelioff/insightstudying/computer-science/</guid>
       <description>Foundations Complexity Computational Complexity Constant Time: O(1) Logrithmic Time: O(log(n)) Polynomial Time: O(n), O(n^2), … Exponential Time: \(O(x^n)\)   Data Structures Lists and Dictionaries Queues and Stacks Graphs and Trees  Sorting  Searching Linear Search: Binary Search Graph Search Breadth First (BFS) and queues Depth First (DFS) DFS vs BFS Examples:  Pointers  Algorithms TODO / Other Topics: Recursion; Dijkstra’s algorithm dynamic programming (knapsack problem, Fibonacci sequence) Functional programming  Tools Git and GitHub SQL General Structure of SQL querys Aggregation functions Window functions Tricks:   Resources   Foundations Data type manipulation (char, string, numeric, binary, ascii) regular expressions;</description>
-    </item>
-    
-    <item>
-      <title>Instacart Notes</title>
-      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Tue, 24 Sep 2019 17:21:25 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
-      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Recruiter call “Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc”
- Groceries have been hard for internet companies to get right – it’s exciting to see Instacart managing this well, and I’d be excited to be a part of this technological revolution of grocery delivery   More about role?</description>
     </item>
     
     <item>

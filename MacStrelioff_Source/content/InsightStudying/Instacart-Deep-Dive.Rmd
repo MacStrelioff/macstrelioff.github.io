@@ -126,7 +126,7 @@ Next steps
 
 - Brett 
 - fulfillment side: shopper success
-- 
+
 - Customer side has ads, growth, and core
 - bus
 - falls under customers catelogue team
@@ -138,6 +138,27 @@ Next steps
 - reliable, readable, flexible
 - logically sound and complete
 - clear description of work and sharp Q&A
+
+
+# Technical Phone Interview
+
+Interviewer: [Gregory Renner](https://www.linkedin.com/in/gregxrenner/)
+
+- Growth team
+- Started on people analytics team
+- Previously: Airforce, stats teacher, optimization and operations research
+
+
+## Stats: 
+
+
+
+
+## SQL:
+
+
+
+
 
 ### Framework 
 

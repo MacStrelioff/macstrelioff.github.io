@@ -36,849 +36,9 @@
     </item>
     
     <item>
-      <title>SQL Solutions</title>
-      <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Wed, 25 Sep 2019 10:36:11 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#stanford-lagunita-course&#34;&gt;Stanford Lagunita Course&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises&#34;&gt;SQL Movie-Rating Query Exercises&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises-extras&#34;&gt;SQL Movie-Rating Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises&#34;&gt;SQL Social-Network Query Exercises&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises-extras&#34;&gt;SQL Social-Network Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;general-queries-and-tricks&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;General Queries and Tricks&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Below is a general template for generic queries;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT (column names to select) [AS (name for selection)]
-FROM (table to select from) 
-[INNER,LEFT,RIGHT,OUTTER] JOIN table2 
-ON [join keys and conditionals]
-WHERE (logical condition on rows)
-  column = (value or subquery),
-  OR column IN (list or subquery)
-GROUP BY (column[,column,...])
-HAVING [AGGREGATION(column) condition]
-LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;stanford-lagunita-course&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Stanford Lagunita Course&lt;/h1&gt;
-&lt;div id=&#34;sql-movie-rating-query-exercises&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Movie-Rating Query Exercises&lt;/h2&gt;
-&lt;p&gt;1.Find the titles of all movies directed by Steven Spielberg.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT title
-from movie
-where director like &amp;quot;Steven%&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT year
-FROM movie as m
-JOIN rating as r
-ON r.mid=m.mid
-WHERE r.stars&amp;gt;=4
-GROUP BY title
-ORDER BY year&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the titles of all movies that have no ratings.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct title
-FROM movie as m
-WHERE m.mid not in (select distinct mid from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some reviewers didn’t provide a date with their rating. Find the names of all reviewers who have ratings with a NULL value for the date.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct name
-from rating join reviewer on rating.rid=reviewer.rid
-where ratingdate is null&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Write a query to return the ratings data in a more readable format: reviewer name, movie title, stars, and ratingDate. Also, sort the data, first by reviewer name, then by movie title, and lastly by number of stars.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name,m.title,r.stars,r.ratingdate
-FROM rating r 
-JOIN movie m on r.mid=m.mid
-JOIN reviewer re on r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For all cases where the same reviewer rated the same movie twice and gave it a higher rating the second time, return the reviewer’s name and the title of the movie.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select reviewer.name,m.title
-from rating as r
-join movie as m on r.mid=m.mid
-join reviewer on r.rid = reviewer.rid
-join rating as r2 on r2.ratingdate &amp;gt; r.ratingdate and r2.stars &amp;gt; r.stars and r2.mid=r.mid and r2.rid=r.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each movie that has at least one rating, find the highest number of stars that movie received. Return the movie title and number of stars. Sort by movie title.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.title,max(r.stars)
-from rating as r
-join movie m on r.mid=m.mid
-group by m.title&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each movie, return the title and the ‘rating spread’, that is, the difference between highest and lowest ratings given to that movie. Sort by rating spread from highest to lowest, then by movie title.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title,max(r.stars)-min(r.stars)
-from rating as r
-join movie as m on r.mid=m.mid
-group by m.title
-order by 2 desc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don’t just calculate the overall average rating before and after 1980.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select
-(
-select avg(mavg) from
-(
-select avg(r.stars) as mavg
-from rating as r 
-join movie as m 
-on r.mid=m.mid 
-where m.year &amp;lt; 1980 
-group by m.title
-) as tab1) -
-( select avg(mavg) 
-from (
-select avg(r.stars) as mavg
-from rating as r 
-join movie as m 
-on r.mid=m.mid 
-where m.year &amp;gt; 1980 
-group by m.title
-) as tab2
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql-movie-rating-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Movie-Rating Query Exercises Extras&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Find the names of all reviewers who rated Gone with the Wind.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name
-FROM rating as r 
-JOIN movie as m 
-ON r.mid=m.mid AND m.title = &amp;#39;Gone with the Wind&amp;#39;
-JOIN reviewer as re 
-ON r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For any rating where the reviewer is the same as the director of the movie, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,r.stars
-from rating as r 
-join reviewer as re on r.rid = re.rid
-join movie as m on re.name = m.director and r.mid=m.mid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Return all reviewer names and movie names together in a single list, alphabetized. (Sorting by the first name of the reviewer and first word in the title is fine; no need for special processing on last names or removing “The”.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select name 
-from(
-select title as name from movie
-union
-select name from reviewer
-)
-order by name&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the titles of all movies not reviewed by Chris Jackson.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title 
-from movie
-where mid not in (select ra.mid
-from rating as ra 
-join reviewer as re on ra.rid=re.rid
-join movie as m on ra.mid=m.mid
-where re.name LIKE &amp;#39;Chris Jackson&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For all pairs of reviewers such that both reviewers gave a rating to the same movie, return the names of both reviewers. Eliminate duplicates, don’t pair reviewers with themselves, and include each pair only once. For each pair, return the names in the pair in alphabetical order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct re1.name,re2.name
-from rating as ra1 
-join rating as ra2 on ra1.mid = ra2.mid
-join reviewer as re1 on ra1.rid=re1.rid
-join reviewer as re2 on ra2.rid=re2.rid
-where re1.name &amp;lt; re2.name 
-order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each rating that is the lowest (fewest stars) currently in the database, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,ra.stars
-from rating as ra
-join reviewer as re on ra.rid = re.rid
-join movie as m on ra.mid = m.mid
-where ra.stars &amp;lt;= (select stars from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;List movie titles and average ratings, from highest-rated to lowest-rated. If two or more movies have the same average rating, list them in alphabetical order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title, avg(ra.stars)
-from rating as ra
-join movie as m on ra.mid=m.mid
-group by m.title
-order by 2 desc, 1 asc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the names of all reviewers who have contributed three or more ratings. (As an extra challenge, try writing the query without HAVING or without COUNT.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name as name
-from rating as ra 
-join reviewer as re on ra.rid = re.rid
-group by re.name
-having count(re.name) &amp;gt;= 3&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some directors directed more than one movie. For all such directors, return the titles of all movies directed by them, along with the director name. Sort by director name, then movie title. (As an extra challenge, try writing the query both with and without COUNT.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title,director
-from movie
-where director in (
-select director
-from movie
-group by director
-having count(*) &amp;gt; 1
-)
-order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the movie(s) with the highest average rating. Return the movie title(s) and average rating. (Hint: This query is more difficult to write in SQLite than other systems; you might think of it as finding the highest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
-from 
-(
-select ra.mid, m.title as title, avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-)
-where avg = (select max(avg) from (
-select avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
-from 
-(
-select ra.mid, m.title as title, avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-)
-where avg = (select min(avg) from (
-select avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each director, return the director’s name together with the title(s) of the movie(s) they directed that received the highest rating among all of their movies, and the value of that rating. Ignore movies whose director is NULL.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.director,m.title,max(ra.stars)
-from rating as ra
-join reviewer as re on ra.rid=re.rid
-join movie as m on ra.mid = m.mid
-where m.director is not null
-group by m.director
-having max(ra.stars)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql-social-network-query-exercises&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Social-Network Query Exercises&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Find the names of all students who are friends with someone named Gabriel.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h2.name
-from friend
-join highschooler h1 on friend.ID2=h1.ID
-join highschooler h2 on friend.ID1=h2.ID
-where h1.name = &amp;#39;Gabriel&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For every student who likes someone 2 or more grades younger than themselves, return that student’s name and grade, and the name and grade of the student they like.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
-from likes as l
-join highschooler as h1 on l.ID1 = h1.id
-join highschooler as h2 on l.ID2 = h2.id
-where (h1.grade - h2.grade) &amp;gt;= 2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
-from likes as l1
-join likes as l2 on l1.id1=l2.id2 and l1.id2 = l2.id1 /* like eachother */
-join highschooler h1 on l1.id1=h1.id
-join highschooler h2 on l1.id2=h2.id
-where h1.name &amp;lt; h2.name /* alphabetical order across columns */
-order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find all students who do not appear in the Likes table (as a student who likes or is liked) and return their names and grades. Sort by grade, then by name within each grade.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from highschooler h
-where h.id not in (select id1 from likes union select id2 from likes)
-order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B’s names and grades.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select hA.name,hA.grade,h.name,h.grade
-from highschooler as h
-join likes on h.id=likes.id2
-join highschooler as hA on likes.id1=hA.id
-where h.id not in (select id1 from likes)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from highschooler as h
-where h.id not in 
-( /* list of ids of friends in different grades */
-select f1.id1
-from friend f1
-join highschooler h1 on f1.id1=h1.id
-join highschooler h2 on f1.id2=h2.id
-where h1.grade &amp;lt;&amp;gt; h2.grade
-)
-order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select ha.name,ha.grade,hb.name,hb.grade,hc.name,hc.grade
-from likes
-join friend f1 on likes.id1=f1.id2 
-join friend f2 on likes.id2=f2.id2 and f2.id1=f1.id1
-join highschooler ha on likes.id1=ha.id
-join highschooler hb on likes.id2=hb.id
-join highschooler hc on f1.id1=hc.id
-/* list of like ids who are friends */
-where likes.id1 not in 
-(select likes.id1
-from likes
-join friend f1 on likes.id1=f1.id1
-where likes.id2 = f1.id2
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the difference between the number of students in the school and the number of different first names.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)-count(distinct name)
-from highschooler&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the name and grade of all students who are liked by more than one other student.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from likes
-join highschooler as h on likes.id2=h.id
-group by h.id
-having count(likes.id2) &amp;gt; 1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql-social-network-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Social-Network Query Exercises Extras&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but student B likes a different student C, return the names and grades of A, B, and C.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade,h3.name,h3.grade
-from likes l1
-join likes l2 on l1.id2=l2.id1
-join highschooler h1 on l1.id1=h1.id
-join highschooler h2 on l1.id2=h2.id
-join highschooler h3 on l2.id2=h3.id
-where l1.id1 &amp;lt;&amp;gt; l2.id2 /* filters out cycles */&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;(3 min) Find those students for whom all of their friends are in different grades from themselves. Return the students’ names and grades.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from highschooler as h
-where h.id not in 
-( /* list of ids with friends in same grade */
-select distinct h1.id
-from friend as f
-join highschooler h1 on f.id1=h1.id
-join highschooler h2 on f.id2=h2.id
-where h1.grade=h2.grade
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;What is the average number of friends per student? (Your result should be just one number.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select avg(nfriends) 
-from
-(select count(f1.id2) as nfriends
-from friend f1
-join highschooler h1 on h1.id=f1.id1
-group by h1.id
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra. Do not count Cassandra, even though technically she is a friend of a friend.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)
-from friend f1
-join friend f2 on f1.id2=f2.id1
-join highschooler h on h.id=f1.id1 
-where h.name = &amp;#39;Cassandra&amp;#39; &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the name and grade of the student(s) with the greatest number of friends.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from friend f join highschooler h on h.id=f.id1
-group by h.id
-having count(*) = 
-(
-select max(nfriends) from
-(
-select count(*) as nfriends
-from friend f
-group by f.id1
-)
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Basic Computer Science</title>
-      <link>/MacStrelioff/insightstudying/computer-science/</link>
-      <pubDate>Tue, 24 Sep 2019 17:27:18 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#computational-complexity&#34;&gt;Computational Complexity&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#constant-time-o1&#34;&gt;Constant Time: O(1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#logrithmic-time-ologn&#34;&gt;Logrithmic Time: O(log(n))&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#polynomial-time-on-on2&#34;&gt;Polynomial Time: O(n), O(n^2), …&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#exponential-time-oxn&#34;&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#lists-and-dictionaries&#34;&gt;Lists and Dictionaries&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#queues-and-stacks&#34;&gt;Queues and Stacks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graphs-and-trees&#34;&gt;Graphs and Trees&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#graph-search&#34;&gt;Graph Search&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#breadth-first-bfs-and-queues&#34;&gt;Breadth First (BFS) and queues&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#depth-first-dfs&#34;&gt;Depth First (DFS)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#dfs-vs-bfs&#34;&gt;DFS vs BFS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#examples&#34;&gt;Examples:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pointers&#34;&gt;Pointers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#todo-other-topics&#34;&gt;TODO / Other Topics:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;Recursion;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#dijkstras-algorithm&#34;&gt;Dijkstra’s algorithm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#dynamic-programming-knapsack-problem-fibonacci-sequence&#34;&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#functional-programming&#34;&gt;Functional programming&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tools&#34;&gt;Tools&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#git-and-github&#34;&gt;Git and GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql&#34;&gt;SQL&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#general-structure-of-sql-querys&#34;&gt;General Structure of SQL querys&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#aggregation-functions&#34;&gt;Aggregation functions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window functions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tricks&#34;&gt;Tricks:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;!--
-basic structures (tuples, list, arrays, dict), list comprehensions, 
-Data structures (hash, stack, queue, tree, linked list);
-sorting (bubble, selection, insertion, merge, quick)
-Sorting and graph algos (depth-first and breadth-first seach)
-sorting (heap, tim)
---&gt;
-&lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Foundations&lt;/h1&gt;
-&lt;p&gt;Data type manipulation (char, string, numeric, binary, ascii) regular expressions;&lt;/p&gt;
-&lt;div id=&#34;complexity&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Complexity&lt;/h2&gt;
-&lt;p&gt;The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where &lt;span class=&#34;math inline&#34;&gt;\(O(f(n))\)&lt;/span&gt; is used to represent the terms that remain relevant when taking a limit of the computations required by the algorithm, &lt;span class=&#34;math inline&#34;&gt;\(f(n)\)&lt;/span&gt;, as &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; approaches &lt;span class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements).&lt;/p&gt;
-&lt;div id=&#34;computational-complexity&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Computational Complexity&lt;/h3&gt;
-&lt;p&gt;Here I’ll check the number of computations required by algorithms of different complexities.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;ns_to_test = [0,1,10,20]&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;constant-time-o1&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Constant Time: O(1)&lt;/h4&gt;
-&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(1)\)&lt;/span&gt; represents comstant time complexity – a component of an algorithm that is only performed once, regardless of the input size.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def constant_example(n):
-    num_ops = 1      # 1 operation
-    num_ops +=1      # 1 operation
-    return num_ops   # total: 2 operations
-
-
-for n in ns_to_test:
-    out=constant_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 2
-&amp;gt;&amp;gt;&amp;gt; f(1): 2
-&amp;gt;&amp;gt;&amp;gt; f(10): 2
-&amp;gt;&amp;gt;&amp;gt; f(20): 2&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;logrithmic-time-ologn&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Logrithmic Time: O(log(n))&lt;/h4&gt;
-&lt;p&gt;Very slowly increases in computational demand. It can result from splitting the input on each recusrive call.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def log_example(n,num_ops=0):
-    # 1 operation per call
-    # if n&amp;gt;1, half n and recursively call again
-    if n&amp;gt;=1:
-        n/=2; num_ops += 1
-        num_ops += log_example(n)
-    return num_ops
-        
-for n in ns_to_test:
-    out=log_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
-&amp;gt;&amp;gt;&amp;gt; f(1): 1
-&amp;gt;&amp;gt;&amp;gt; f(10): 4
-&amp;gt;&amp;gt;&amp;gt; f(20): 5&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;polynomial-time-on-on2&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Polynomial Time: O(n), O(n^2), …&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P8Xa2BitN3I&amp;amp;list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&amp;amp;index=11&#34;&gt;good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Each for loop scales complexity by a factor of &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, so one loop would be linear (&lt;span class=&#34;math inline&#34;&gt;\(O(n)\)&lt;/span&gt;), two loops would be quadratic &lt;span class=&#34;math inline&#34;&gt;\(O(n^2)\)&lt;/span&gt;, and three loops would be cubic (&lt;span class=&#34;math inline&#34;&gt;\(O(n^3)\)&lt;/span&gt;), and so on. The example below is a quadratic time example.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def linear_example(n): 
-    num_ops = 0         # initialize counter
-    for i in range(n):  # n times, perform...
-        num_ops +=1     # 1 operation (n*1)
-    return num_ops      # 1+n*1 = 1+n operations, O(n)
-
-for n in ns_to_test:
-    out=linear_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
-&amp;gt;&amp;gt;&amp;gt; f(1): 1
-&amp;gt;&amp;gt;&amp;gt; f(10): 10
-&amp;gt;&amp;gt;&amp;gt; f(20): 20&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def quadratic_example(n):
-    num_ops = 0             # initialize counter
-    for i in range(n):      # n times
-        for j in range(n):  # n times (n*n)
-            num_ops+=1      # 1 operation (1*n*n)
-    return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
-
-for n in ns_to_test:
-    out=quadratic_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
-&amp;gt;&amp;gt;&amp;gt; f(1): 1
-&amp;gt;&amp;gt;&amp;gt; f(10): 100
-&amp;gt;&amp;gt;&amp;gt; f(20): 400&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;exponential-time-oxn&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/h4&gt;
-&lt;p&gt;With exponential time, the number of operations increases by a constant &lt;em&gt;factor&lt;/em&gt; whith the length of the input. An example of this is in recursion, where a function iteratively calls itself &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; times for each element of the input.&lt;/p&gt;
-&lt;p&gt;In the example below, I call the function twice within each call. The complexity is then a geometric series, and the closed for solution for the number of operations can be found with;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=1}^N ar^{i-1} = \frac{a(1-r^{N})}{1-r} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(r=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(a=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is looped over, and we start the index at 0 (&lt;span class=&#34;math inline&#34;&gt;\(i-1\)&lt;/span&gt;) instead of 1, so:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Recursive calls generally have time complexity of &lt;span class=&#34;math inline&#34;&gt;\(O(branches^{depth})\)&lt;/span&gt;.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def exponential_example(n,num_ops=0):
-    num_ops += 1 # 1 operation per call
-    # recursively called twice for each n&amp;gt;0 (2**n times)    
-    if n &amp;gt; 0:
-        n-=1
-        num_ops += exponential_example(n) # 2**(n)
-        num_ops += exponential_example(n) # 2**(n)
-    return num_ops # 
-    
-for n in ns_to_test:
-    out=exponential_example(n)
-    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 1
-&amp;gt;&amp;gt;&amp;gt; f(1): 3
-&amp;gt;&amp;gt;&amp;gt; f(10): 2047
-&amp;gt;&amp;gt;&amp;gt; f(20): 2097151&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Structures&lt;/h2&gt;
-&lt;div id=&#34;lists-and-dictionaries&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Lists and Dictionaries&lt;/h3&gt;
-&lt;p&gt;Good descriptions of &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html&#34;&gt;lists&lt;/a&gt;, &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html&#34;&gt;dicts&lt;/a&gt;, and &lt;a href=&#34;https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists&#34;&gt;why some operations are much faster in sets or dict keys&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In depth description of &lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc&#34;&gt;hash tables&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;queues-and-stacks&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Queues and Stacks&lt;/h3&gt;
-&lt;p&gt;Queues and stacks are like lists that are used to prioritize operations.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Queues are First-in-last-out structures – meaning that the highest priority is given to the least recently queued thing. Imagine people in a queue for a theme park, those who entered the queue first are prioritized for admission to the park.&lt;/li&gt;
-&lt;li&gt;Stacks are Last-in-First-out structures – meaning that the highest priority is given to the most recently stacked element. Imagine a stack of books, the ones at the top of the stack are read first.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;graphs-and-trees&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Graphs and Trees&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.jenniferbland.com/the-difference-between-a-tree-and-a-graph-data-structure/&#34;&gt;short definition with pictures&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sorting&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Sorting&lt;/h2&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Python’s sotred() function uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Timsort&#34;&gt;TimSort&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Complexity for common sorts:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(Nlog(N))\)&lt;/span&gt; for quicksort, and merge sort.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In efficient sorting algorithms, the &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; part comes from the algorithm being called on up to each element, and the &lt;span class=&#34;math inline&#34;&gt;\(logN\)&lt;/span&gt; part comes from binary sorting in ways that render parts of the array unnecessary later.&lt;/p&gt;
-&lt;p&gt;e.g. ‘find median in a large dataset’ – sort half of it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Searching&lt;/h1&gt;
-&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;linear-search-binary-search&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Linear Search: Binary Search&lt;/h2&gt;
-&lt;p&gt;Complexity &lt;span class=&#34;math inline&#34;&gt;\(O(logN)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P3YID7liBug&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;requires sorting before applying the search&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;graph-search&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Graph Search&lt;/h2&gt;
-&lt;p&gt;Graphs are a collection of nodes and edges (connections between nodes). In the code below, I use dictionaries to represent graphs – keys represent nodes, and the list of elements represents all of the nodes that the parent node is connected to.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# examples
-Examples = []
-
-# Example 1: something where DFS would do equally well?
-tmp_graph = {1: [2,4], 2: [3], 3: [5], 4: [5,7], 5: [6,7], 6: [], 7: []}
-Examples.append(tmp_graph)
-
-# Example 2: something where DFS will run faster
-tmp_graph = {1:[2,3,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[7],7:[],8:[],9:[],10:[]}
-Examples.append(tmp_graph)
-
-# Example 3: something where BFS will run faster (swapped 3 and 10)
-tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
-Examples.append(tmp_graph)&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;breadth-first-bfs-and-queues&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Breadth First (BFS) and queues&lt;/h3&gt;
-&lt;p&gt;Breadth Frist Search (BFS) queues (FILO structures) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# breadth first search: just a queue
-def BFS_queue(graph,start,end):
-    queue = [start] 
-    visited = set()
-    # build and search through queue
-    while queue:
-        visiting = queue[0]
-        # if this was visited already, continue
-        if visiting in visited: continue
-        # mark node as visited
-        visited.add(visiting)
-        # if this is the end, return 
-        if visiting == end: return True,visited
-        # otherwise, append children to search queue
-        for child in graph[visiting]: queue.append(child)
-        queue.remove(visiting) # remove the visited node
-    # if end was never found, return False
-    return False,visited
-
-# breadth first search: For loop over each layer
-def BFS(graph,start,end):
-    queue = [start] 
-    visited = set()
-    # build and search through queue
-    while queue:
-        for visiting in queue:
-            # if this was visited already, continue
-            if visiting in visited: continue
-            # mark node as visited
-            visited.add(visiting)
-            # if this is the end, return 
-            if visiting == end: return True,visited
-            # otherwise, append children to search queue
-            for child in graph[visiting]:
-                queue.append(child)
-    # if end was never found, return False
-    return False,visited&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;depth-first-dfs&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Depth First (DFS)&lt;/h3&gt;
-&lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Example using DFS to find if a path to a node exists.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Depth first search with recursion
-def DFS(graph,start,end):
-    visited = set()
-    return _DFS(graph,start,end,visited),visited
-    
-def _DFS(graph,start,end,visited):
-    # if this was visited already, return False
-    if start in visited: return False
-    # mark node as visited
-    visited.add(start)
-    # if this is the target node, return True
-    if start == end: return True
-    # DFS through the children of this node
-    for child in graph[start]:
-        if _DFS(graph,child,end,visited):
-            return True
-    return False&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dfs-vs-bfs&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;DFS vs BFS&lt;/h3&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-for example in Examples:
-    print(&amp;#39;DFS  path: &amp;#39;, DFS(example,1,7))
-    print(&amp;#39;BFSq path: &amp;#39;, BFS(example,1,7))
-    print(&amp;#39;BFS  path: &amp;#39;, BFS(example,1,7),&amp;#39;\n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 5, 6, 7})
-&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 7})
-&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 7}) 
-&amp;gt;&amp;gt;&amp;gt; 
-&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 6, 7})
-&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
-&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) 
-&amp;gt;&amp;gt;&amp;gt; 
-&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
-&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 7})
-&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 7})&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;examples&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Examples:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;L332: Reconstruct a path from a starting node that hits all nodes once&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-tickets = [[&amp;quot;JFK&amp;quot;,&amp;quot;KUL&amp;quot;],[&amp;quot;JFK&amp;quot;,&amp;quot;NRT&amp;quot;],[&amp;quot;NRT&amp;quot;,&amp;quot;JFK&amp;quot;]]
-
-# convert to graph implemented in dict:
-import collections
-tree = collections.defaultdict(list)
-for parent,child in tickets:
-    tree[parent].append(child)
-
-# start at JFK
-path = [&amp;quot;JFK&amp;quot;]
-
-# define DFS algo
-def dfs(parent = &amp;#39;JFK&amp;#39;):
-    # success condition -- all tickets have been accounted for
-    if len(path) == len(tickets) + 1: 
-        print(&amp;quot;Final Path: {}&amp;quot;.format(path))
-        return path
-    # get destinations (children) from current node
-    children = sorted(tree[parent])
-    # iterate over children of this node
-    for child in children:
-        # include child in path
-        tree[parent].remove(child)
-        path.append(child)
-        # call DFS again starting at the child node
-        print(&amp;quot;Checking: {} -&amp;gt; {}&amp;quot;.format(parent,child))
-        sub_route = dfs(child)
-        if sub_route: 
-            return sub_route
-        else: print(&amp;quot;No successful sub-route&amp;quot;)
-        # implicitely return None if sub_route empty
-        # if no successful sub-route, remove child from path, 
-        path.pop()
-        #  and add child back to parent to be searched later
-        tree[parent].append(child)
-
-# run the dfs algo
-dfs()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
-&amp;gt;&amp;gt;&amp;gt; No successful sub-route
-&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; NRT
-&amp;gt;&amp;gt;&amp;gt; Checking: NRT -&amp;gt; JFK
-&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
-&amp;gt;&amp;gt;&amp;gt; Final Path: [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]
-&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]&lt;/code&gt;&lt;/pre&gt;
-&lt;!--
-# Ranking Algorithms
-
-Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
-
-# Recommendation
-
-Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
---&gt;
-&lt;!---
-Data science methods play a major role in discovering recommendations for users. 
-
-Econ, compliments and substitutes (competitors). 
-
-Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
-
-Temporal involves forecasting, which is a topic for another post. 
----&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;pointers&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Pointers&lt;/h2&gt;
-&lt;p&gt;e.g. Find longest substring that is a pallendrome&lt;/p&gt;
-&lt;p&gt;Optimal way: Start at each letter, move out each&lt;/p&gt;
-&lt;p&gt;e.g. reverse a linked list&lt;/p&gt;
-&lt;p&gt;e.g. max price from a single buy and sell?&lt;/p&gt;
-&lt;p&gt;e.g. swapping values in an array?&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Algorithms&lt;/h1&gt;
-&lt;p&gt;lambda functions;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
-nums=[1,1,2,2,1]
-val=1
-
-count = 0
-for i in range(len(nums)):
-  if nums[i] != val:
-    nums[count] = nums[i]
-    count += 1
-
-print(count)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(nums)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [2, 2, 2, 2, 1]&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;todo-other-topics&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;TODO / Other Topics:&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;recursion&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Recursion;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Recursive calls&lt;/li&gt;
-&lt;li&gt;Methods applied within each recursion&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;dijkstras-algorithm&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Dijkstra’s algorithm&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dynamic-programming-knapsack-problem-fibonacci-sequence&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;functional-programming&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Functional programming&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tools&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Tools&lt;/h1&gt;
-&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Git and GitHub&lt;/h2&gt;
-&lt;p&gt;git for version control (resolving merge conflicts)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL&lt;/h2&gt;
-&lt;div id=&#34;general-structure-of-sql-querys&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;General Structure of SQL querys&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_order_of_execution&#34;&gt;Order of execution for clauses below&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]&lt;/p&gt;
-&lt;p&gt;FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals]&lt;/p&gt;
-&lt;p&gt;WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery)&lt;/p&gt;
-&lt;p&gt;GROUP BY (column[,column,…])&lt;/p&gt;
-&lt;p&gt;HAVING [AGGREGATION(column) condition]&lt;/p&gt;
-&lt;p&gt;LIMIT n [OFFSET m] ```&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;SELECT&lt;/code&gt; clause can contain columns, aggregations, window functions, and subqueries.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;FROM&lt;/code&gt; clause can contain a single table, or joins between tables&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;JOIN&lt;/code&gt;s are useful for appending tables as columns, versus&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ON&lt;/code&gt; filters the table that is returned from the JOIN – it acts similarly to the WHERE clause.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;WHERE&lt;/code&gt; clause filters the table retreived by FROM can also contain sub queries, and can perform the same filtering as &lt;code&gt;ON&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;GROUP BY&lt;/code&gt; groups by a single column or a set of values if given multiple columns&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt; can be used to filter groups based on an aggregation function&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;UNION&lt;/code&gt; appends tables as rows&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;aggregation-functions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Aggregation functions&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;GROUP BY&lt;/code&gt; clause can contain &lt;code&gt;GROUPING SETS&lt;/code&gt;, such as a &lt;code&gt;ROLLUP()&lt;/code&gt; and &lt;code&gt;CUBE()&lt;/code&gt; functions. These hierarchically group the rows passed to the aggregation functions. &lt;code&gt;ROLLUP()&lt;/code&gt; hierarchically groups by arguments, starting left to right. &lt;code&gt;CUBE()&lt;/code&gt; passes all permutations of its arguments to the aggregation functions.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/fachoursbymonth3.html&#34;&gt;Grouping sets are described a little here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;window-functions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Window functions&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/countmembers.html&#34;&gt;Orver() explained here&lt;/a&gt;. Some more detailed information &lt;a href=&#34;http://www.sqlservertutorial.net/sql-server-window-functions/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Window functions include &lt;code&gt;OVER()&lt;/code&gt; and &lt;code&gt;ROW_NUMBER()&lt;/code&gt;. They take two optional arguments, &lt;code&gt;PARTITION BY&lt;/code&gt; and &lt;code&gt;ORDER BY&lt;/code&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank and result in skipped values&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DENSE_RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank, but no rank number is skipped&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;LAG(column,lag) OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: Retreives values from a &lt;code&gt;lag&lt;/code&gt; rows before, see &lt;a href=&#34;http://www.mysqltutorial.org/mysql-window-functions/mysql-lag-function/&#34;&gt;example with a partition here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tricks&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tricks:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;When wanting to loop and compare, one can do a join or add a subquery and compare all columns at once. &lt;a href=&#34;https://leetcode.com/problems/department-highest-salary/discuss/53607/Three-accpeted-solutions&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;resources&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Resources&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;SQL training resources;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://academy.vertabelo.com/#courses_list_section&#34;&gt;vertabelo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://pgexercises.com/&#34;&gt;pgexercises&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://classroom.udacity.com/courses/ud198&#34;&gt;Udacity course&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_introduction&#34;&gt;sqlbolt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/&#34;&gt;Mode Analytics&lt;/a&gt; HackerRank (basic select, aggregation)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Python and other coding languages:&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Overview videos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Tue, 24 Sep 2019 17:21:25 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 11:13:42 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -996,8 +156,7 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Brett&lt;/li&gt;
-&lt;li&gt;fulfillment side: shopper success&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;fulfillment side: shopper success&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Customer side has ads, growth, and core&lt;/li&gt;
 &lt;li&gt;bus&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;falls under customers catelogue team&lt;/p&gt;&lt;/li&gt;
@@ -1010,6 +169,21 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;logically sound and complete&lt;/li&gt;
 &lt;li&gt;clear description of work and sharp Q&amp;amp;A&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;technical-phone-interview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Technical Phone Interview&lt;/h1&gt;
+&lt;p&gt;Interviewer: &lt;a href=&#34;https://www.linkedin.com/in/gregxrenner/&#34;&gt;Gregory Renner&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Growth team&lt;/li&gt;
+&lt;li&gt;Started on people analytics team&lt;/li&gt;
+&lt;li&gt;Previously: Airforce, stats teacher, optimization and operations research&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;stats&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Stats:&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL:&lt;/h2&gt;
 &lt;div id=&#34;framework&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Framework&lt;/h3&gt;
 &lt;ul&gt;
@@ -1529,6 +703,850 @@ print(count)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Algorithm feasibility. Is it feasible to solve, do we have a best practice, can it scale?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SQL Solutions</title>
+      <link>/MacStrelioff/insightstudying/sql-solutions/</link>
+      <pubDate>Wed, 25 Sep 2019 11:11:52 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#stanford-lagunita-course&#34;&gt;Stanford Lagunita Course&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises&#34;&gt;SQL Movie-Rating Query Exercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises-extras&#34;&gt;SQL Movie-Rating Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises&#34;&gt;SQL Social-Network Query Exercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises-extras&#34;&gt;SQL Social-Network Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hackerrank&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;general-queries-and-tricks&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;General Queries and Tricks&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Below is a general template for generic queries;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT (column names to select) [AS (name for selection)]
+FROM (table to select from) 
+[INNER,LEFT,RIGHT,OUTTER] JOIN table2 
+ON [join keys and conditionals]
+WHERE (logical condition on rows)
+  column = (value or subquery),
+  OR column IN (list or subquery)
+GROUP BY (column[,column,...])
+HAVING [AGGREGATION(column) condition]
+LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stanford-lagunita-course&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Stanford Lagunita Course&lt;/h1&gt;
+&lt;div id=&#34;sql-movie-rating-query-exercises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Movie-Rating Query Exercises&lt;/h2&gt;
+&lt;p&gt;1.Find the titles of all movies directed by Steven Spielberg.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT title
+from movie
+where director like &amp;quot;Steven%&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT year
+FROM movie as m
+JOIN rating as r
+ON r.mid=m.mid
+WHERE r.stars&amp;gt;=4
+GROUP BY title
+ORDER BY year&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the titles of all movies that have no ratings.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct title
+FROM movie as m
+WHERE m.mid not in (select distinct mid from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some reviewers didn’t provide a date with their rating. Find the names of all reviewers who have ratings with a NULL value for the date.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct name
+from rating join reviewer on rating.rid=reviewer.rid
+where ratingdate is null&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write a query to return the ratings data in a more readable format: reviewer name, movie title, stars, and ratingDate. Also, sort the data, first by reviewer name, then by movie title, and lastly by number of stars.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name,m.title,r.stars,r.ratingdate
+FROM rating r 
+JOIN movie m on r.mid=m.mid
+JOIN reviewer re on r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For all cases where the same reviewer rated the same movie twice and gave it a higher rating the second time, return the reviewer’s name and the title of the movie.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select reviewer.name,m.title
+from rating as r
+join movie as m on r.mid=m.mid
+join reviewer on r.rid = reviewer.rid
+join rating as r2 on r2.ratingdate &amp;gt; r.ratingdate and r2.stars &amp;gt; r.stars and r2.mid=r.mid and r2.rid=r.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each movie that has at least one rating, find the highest number of stars that movie received. Return the movie title and number of stars. Sort by movie title.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.title,max(r.stars)
+from rating as r
+join movie m on r.mid=m.mid
+group by m.title&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each movie, return the title and the ‘rating spread’, that is, the difference between highest and lowest ratings given to that movie. Sort by rating spread from highest to lowest, then by movie title.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title,max(r.stars)-min(r.stars)
+from rating as r
+join movie as m on r.mid=m.mid
+group by m.title
+order by 2 desc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don’t just calculate the overall average rating before and after 1980.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select
+(
+select avg(mavg) from
+(
+select avg(r.stars) as mavg
+from rating as r 
+join movie as m 
+on r.mid=m.mid 
+where m.year &amp;lt; 1980 
+group by m.title
+) as tab1) -
+( select avg(mavg) 
+from (
+select avg(r.stars) as mavg
+from rating as r 
+join movie as m 
+on r.mid=m.mid 
+where m.year &amp;gt; 1980 
+group by m.title
+) as tab2
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql-movie-rating-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Movie-Rating Query Exercises Extras&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find the names of all reviewers who rated Gone with the Wind.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name
+FROM rating as r 
+JOIN movie as m 
+ON r.mid=m.mid AND m.title = &amp;#39;Gone with the Wind&amp;#39;
+JOIN reviewer as re 
+ON r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For any rating where the reviewer is the same as the director of the movie, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,r.stars
+from rating as r 
+join reviewer as re on r.rid = re.rid
+join movie as m on re.name = m.director and r.mid=m.mid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Return all reviewer names and movie names together in a single list, alphabetized. (Sorting by the first name of the reviewer and first word in the title is fine; no need for special processing on last names or removing “The”.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select name 
+from(
+select title as name from movie
+union
+select name from reviewer
+)
+order by name&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the titles of all movies not reviewed by Chris Jackson.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title 
+from movie
+where mid not in (select ra.mid
+from rating as ra 
+join reviewer as re on ra.rid=re.rid
+join movie as m on ra.mid=m.mid
+where re.name LIKE &amp;#39;Chris Jackson&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For all pairs of reviewers such that both reviewers gave a rating to the same movie, return the names of both reviewers. Eliminate duplicates, don’t pair reviewers with themselves, and include each pair only once. For each pair, return the names in the pair in alphabetical order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct re1.name,re2.name
+from rating as ra1 
+join rating as ra2 on ra1.mid = ra2.mid
+join reviewer as re1 on ra1.rid=re1.rid
+join reviewer as re2 on ra2.rid=re2.rid
+where re1.name &amp;lt; re2.name 
+order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each rating that is the lowest (fewest stars) currently in the database, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,ra.stars
+from rating as ra
+join reviewer as re on ra.rid = re.rid
+join movie as m on ra.mid = m.mid
+where ra.stars &amp;lt;= (select stars from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;List movie titles and average ratings, from highest-rated to lowest-rated. If two or more movies have the same average rating, list them in alphabetical order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title, avg(ra.stars)
+from rating as ra
+join movie as m on ra.mid=m.mid
+group by m.title
+order by 2 desc, 1 asc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the names of all reviewers who have contributed three or more ratings. (As an extra challenge, try writing the query without HAVING or without COUNT.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name as name
+from rating as ra 
+join reviewer as re on ra.rid = re.rid
+group by re.name
+having count(re.name) &amp;gt;= 3&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some directors directed more than one movie. For all such directors, return the titles of all movies directed by them, along with the director name. Sort by director name, then movie title. (As an extra challenge, try writing the query both with and without COUNT.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title,director
+from movie
+where director in (
+select director
+from movie
+group by director
+having count(*) &amp;gt; 1
+)
+order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the movie(s) with the highest average rating. Return the movie title(s) and average rating. (Hint: This query is more difficult to write in SQLite than other systems; you might think of it as finding the highest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
+from 
+(
+select ra.mid, m.title as title, avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+)
+where avg = (select max(avg) from (
+select avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
+from 
+(
+select ra.mid, m.title as title, avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+)
+where avg = (select min(avg) from (
+select avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each director, return the director’s name together with the title(s) of the movie(s) they directed that received the highest rating among all of their movies, and the value of that rating. Ignore movies whose director is NULL.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.director,m.title,max(ra.stars)
+from rating as ra
+join reviewer as re on ra.rid=re.rid
+join movie as m on ra.mid = m.mid
+where m.director is not null
+group by m.director
+having max(ra.stars)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql-social-network-query-exercises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Social-Network Query Exercises&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find the names of all students who are friends with someone named Gabriel.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h2.name
+from friend
+join highschooler h1 on friend.ID2=h1.ID
+join highschooler h2 on friend.ID1=h2.ID
+where h1.name = &amp;#39;Gabriel&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every student who likes someone 2 or more grades younger than themselves, return that student’s name and grade, and the name and grade of the student they like.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
+from likes as l
+join highschooler as h1 on l.ID1 = h1.id
+join highschooler as h2 on l.ID2 = h2.id
+where (h1.grade - h2.grade) &amp;gt;= 2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
+from likes as l1
+join likes as l2 on l1.id1=l2.id2 and l1.id2 = l2.id1 /* like eachother */
+join highschooler h1 on l1.id1=h1.id
+join highschooler h2 on l1.id2=h2.id
+where h1.name &amp;lt; h2.name /* alphabetical order across columns */
+order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find all students who do not appear in the Likes table (as a student who likes or is liked) and return their names and grades. Sort by grade, then by name within each grade.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from highschooler h
+where h.id not in (select id1 from likes union select id2 from likes)
+order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B’s names and grades.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select hA.name,hA.grade,h.name,h.grade
+from highschooler as h
+join likes on h.id=likes.id2
+join highschooler as hA on likes.id1=hA.id
+where h.id not in (select id1 from likes)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids of friends in different grades */
+select f1.id1
+from friend f1
+join highschooler h1 on f1.id1=h1.id
+join highschooler h2 on f1.id2=h2.id
+where h1.grade &amp;lt;&amp;gt; h2.grade
+)
+order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select ha.name,ha.grade,hb.name,hb.grade,hc.name,hc.grade
+from likes
+join friend f1 on likes.id1=f1.id2 
+join friend f2 on likes.id2=f2.id2 and f2.id1=f1.id1
+join highschooler ha on likes.id1=ha.id
+join highschooler hb on likes.id2=hb.id
+join highschooler hc on f1.id1=hc.id
+/* list of like ids who are friends */
+where likes.id1 not in 
+(select likes.id1
+from likes
+join friend f1 on likes.id1=f1.id1
+where likes.id2 = f1.id2
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the difference between the number of students in the school and the number of different first names.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)-count(distinct name)
+from highschooler&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the name and grade of all students who are liked by more than one other student.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from likes
+join highschooler as h on likes.id2=h.id
+group by h.id
+having count(likes.id2) &amp;gt; 1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql-social-network-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Social-Network Query Exercises Extras&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but student B likes a different student C, return the names and grades of A, B, and C.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade,h3.name,h3.grade
+from likes l1
+join likes l2 on l1.id2=l2.id1
+join highschooler h1 on l1.id1=h1.id
+join highschooler h2 on l1.id2=h2.id
+join highschooler h3 on l2.id2=h3.id
+where l1.id1 &amp;lt;&amp;gt; l2.id2 /* filters out cycles */&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(3 min) Find those students for whom all of their friends are in different grades from themselves. Return the students’ names and grades.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids with friends in same grade */
+select distinct h1.id
+from friend as f
+join highschooler h1 on f.id1=h1.id
+join highschooler h2 on f.id2=h2.id
+where h1.grade=h2.grade
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What is the average number of friends per student? (Your result should be just one number.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select avg(nfriends) 
+from
+(select count(f1.id2) as nfriends
+from friend f1
+join highschooler h1 on h1.id=f1.id1
+group by h1.id
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra. Do not count Cassandra, even though technically she is a friend of a friend.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)
+from friend f1
+join friend f2 on f1.id2=f2.id1
+join highschooler h on h.id=f1.id1 
+where h.name = &amp;#39;Cassandra&amp;#39; &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the name and grade of the student(s) with the greatest number of friends.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from friend f join highschooler h on h.id=f.id1
+group by h.id
+having count(*) = 
+(
+select max(nfriends) from
+(
+select count(*) as nfriends
+from friend f
+group by f.id1
+)
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hackerrank&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;HackerRank&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Basic Computer Science</title>
+      <link>/MacStrelioff/insightstudying/computer-science/</link>
+      <pubDate>Tue, 24 Sep 2019 17:27:18 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/computer-science/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#complexity&#34;&gt;Complexity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#computational-complexity&#34;&gt;Computational Complexity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#constant-time-o1&#34;&gt;Constant Time: O(1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logrithmic-time-ologn&#34;&gt;Logrithmic Time: O(log(n))&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#polynomial-time-on-on2&#34;&gt;Polynomial Time: O(n), O(n^2), …&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exponential-time-oxn&#34;&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-structures&#34;&gt;Data Structures&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#lists-and-dictionaries&#34;&gt;Lists and Dictionaries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#queues-and-stacks&#34;&gt;Queues and Stacks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graphs-and-trees&#34;&gt;Graphs and Trees&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sorting&#34;&gt;Sorting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#searching&#34;&gt;Searching&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-search-binary-search&#34;&gt;Linear Search: Binary Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graph-search&#34;&gt;Graph Search&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#breadth-first-bfs-and-queues&#34;&gt;Breadth First (BFS) and queues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#depth-first-dfs&#34;&gt;Depth First (DFS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dfs-vs-bfs&#34;&gt;DFS vs BFS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#examples&#34;&gt;Examples:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pointers&#34;&gt;Pointers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#algorithms&#34;&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todo-other-topics&#34;&gt;TODO / Other Topics:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recursion&#34;&gt;Recursion;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#dijkstras-algorithm&#34;&gt;Dijkstra’s algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dynamic-programming-knapsack-problem-fibonacci-sequence&#34;&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functional-programming&#34;&gt;Functional programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tools&#34;&gt;Tools&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#git-and-github&#34;&gt;Git and GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql&#34;&gt;SQL&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#general-structure-of-sql-querys&#34;&gt;General Structure of SQL querys&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aggregation-functions&#34;&gt;Aggregation functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tricks&#34;&gt;Tricks:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--
+basic structures (tuples, list, arrays, dict), list comprehensions, 
+Data structures (hash, stack, queue, tree, linked list);
+sorting (bubble, selection, insertion, merge, quick)
+Sorting and graph algos (depth-first and breadth-first seach)
+sorting (heap, tim)
+--&gt;
+&lt;div id=&#34;foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Foundations&lt;/h1&gt;
+&lt;p&gt;Data type manipulation (char, string, numeric, binary, ascii) regular expressions;&lt;/p&gt;
+&lt;div id=&#34;complexity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Complexity&lt;/h2&gt;
+&lt;p&gt;The worst-case complexity of an algorithm is represented with big-O notation. Big-O notation is adapted from mathematics where &lt;span class=&#34;math inline&#34;&gt;\(O(f(n))\)&lt;/span&gt; is used to represent the terms that remain relevant when taking a limit of the computations required by the algorithm, &lt;span class=&#34;math inline&#34;&gt;\(f(n)\)&lt;/span&gt;, as &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; approaches &lt;span class=&#34;math inline&#34;&gt;\(\infty\)&lt;/span&gt;. The same notation is used for time complexity (number of operations) and for space complexity (memory requirements).&lt;/p&gt;
+&lt;div id=&#34;computational-complexity&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Computational Complexity&lt;/h3&gt;
+&lt;p&gt;Here I’ll check the number of computations required by algorithms of different complexities.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;ns_to_test = [0,1,10,20]&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;constant-time-o1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Constant Time: O(1)&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(1)\)&lt;/span&gt; represents comstant time complexity – a component of an algorithm that is only performed once, regardless of the input size.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def constant_example(n):
+    num_ops = 1      # 1 operation
+    num_ops +=1      # 1 operation
+    return num_ops   # total: 2 operations
+
+
+for n in ns_to_test:
+    out=constant_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 2
+&amp;gt;&amp;gt;&amp;gt; f(1): 2
+&amp;gt;&amp;gt;&amp;gt; f(10): 2
+&amp;gt;&amp;gt;&amp;gt; f(20): 2&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;logrithmic-time-ologn&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Logrithmic Time: O(log(n))&lt;/h4&gt;
+&lt;p&gt;Very slowly increases in computational demand. It can result from splitting the input on each recusrive call.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def log_example(n,num_ops=0):
+    # 1 operation per call
+    # if n&amp;gt;1, half n and recursively call again
+    if n&amp;gt;=1:
+        n/=2; num_ops += 1
+        num_ops += log_example(n)
+    return num_ops
+        
+for n in ns_to_test:
+    out=log_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
+&amp;gt;&amp;gt;&amp;gt; f(1): 1
+&amp;gt;&amp;gt;&amp;gt; f(10): 4
+&amp;gt;&amp;gt;&amp;gt; f(20): 5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;polynomial-time-on-on2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Polynomial Time: O(n), O(n^2), …&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P8Xa2BitN3I&amp;amp;list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL&amp;amp;index=11&#34;&gt;good hackerrank video with explanation of polynomial complexity for a recursive solution to fibbinochi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Each for loop scales complexity by a factor of &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, so one loop would be linear (&lt;span class=&#34;math inline&#34;&gt;\(O(n)\)&lt;/span&gt;), two loops would be quadratic &lt;span class=&#34;math inline&#34;&gt;\(O(n^2)\)&lt;/span&gt;, and three loops would be cubic (&lt;span class=&#34;math inline&#34;&gt;\(O(n^3)\)&lt;/span&gt;), and so on. The example below is a quadratic time example.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def linear_example(n): 
+    num_ops = 0         # initialize counter
+    for i in range(n):  # n times, perform...
+        num_ops +=1     # 1 operation (n*1)
+    return num_ops      # 1+n*1 = 1+n operations, O(n)
+
+for n in ns_to_test:
+    out=linear_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
+&amp;gt;&amp;gt;&amp;gt; f(1): 1
+&amp;gt;&amp;gt;&amp;gt; f(10): 10
+&amp;gt;&amp;gt;&amp;gt; f(20): 20&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def quadratic_example(n):
+    num_ops = 0             # initialize counter
+    for i in range(n):      # n times
+        for j in range(n):  # n times (n*n)
+            num_ops+=1      # 1 operation (1*n*n)
+    return num_ops          # total 1 + 1*n + 1*n*n, O(n^2)
+
+for n in ns_to_test:
+    out=quadratic_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 0
+&amp;gt;&amp;gt;&amp;gt; f(1): 1
+&amp;gt;&amp;gt;&amp;gt; f(10): 100
+&amp;gt;&amp;gt;&amp;gt; f(20): 400&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exponential-time-oxn&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Exponential Time: &lt;span class=&#34;math inline&#34;&gt;\(O(x^n)\)&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;With exponential time, the number of operations increases by a constant &lt;em&gt;factor&lt;/em&gt; whith the length of the input. An example of this is in recursion, where a function iteratively calls itself &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; times for each element of the input.&lt;/p&gt;
+&lt;p&gt;In the example below, I call the function twice within each call. The complexity is then a geometric series, and the closed for solution for the number of operations can be found with;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=1}^N ar^{i-1} = \frac{a(1-r^{N})}{1-r} \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(r=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(a=2\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is looped over, and we start the index at 0 (&lt;span class=&#34;math inline&#34;&gt;\(i-1\)&lt;/span&gt;) instead of 1, so:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ \sum_{i=0}^n 2*2^{i} = \frac{(1-2^{n+1})}{1-2} = \frac{(1-2^{n+1})}{-1}=-(1-2^{n+1}) = 2^{n+1}-1 \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Recursive calls generally have time complexity of &lt;span class=&#34;math inline&#34;&gt;\(O(branches^{depth})\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;def exponential_example(n,num_ops=0):
+    num_ops += 1 # 1 operation per call
+    # recursively called twice for each n&amp;gt;0 (2**n times)    
+    if n &amp;gt; 0:
+        n-=1
+        num_ops += exponential_example(n) # 2**(n)
+        num_ops += exponential_example(n) # 2**(n)
+    return num_ops # 
+    
+for n in ns_to_test:
+    out=exponential_example(n)
+    print(&amp;#39;f({}): {}&amp;#39;.format(n,out))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; f(0): 1
+&amp;gt;&amp;gt;&amp;gt; f(1): 3
+&amp;gt;&amp;gt;&amp;gt; f(10): 2047
+&amp;gt;&amp;gt;&amp;gt; f(20): 2097151&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-structures&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Structures&lt;/h2&gt;
+&lt;div id=&#34;lists-and-dictionaries&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lists and Dictionaries&lt;/h3&gt;
+&lt;p&gt;Good descriptions of &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Lists.html&#34;&gt;lists&lt;/a&gt;, &lt;a href=&#34;https://runestone.academy/runestone/books/published/pythonds/AlgorithmAnalysis/Dictionaries.html&#34;&gt;dicts&lt;/a&gt;, and &lt;a href=&#34;https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists&#34;&gt;why some operations are much faster in sets or dict keys&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In depth description of &lt;a href=&#34;https://en.wikipedia.org/wiki/Hash_table?fbclid=IwAR1N5-jAoM9e6iY58CDP9MAwycenvOXXJwmkpa0eBVDKed3RBs9uVBm9Kkc&#34;&gt;hash tables&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;queues-and-stacks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Queues and Stacks&lt;/h3&gt;
+&lt;p&gt;Queues and stacks are like lists that are used to prioritize operations.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Queues are First-in-last-out structures – meaning that the highest priority is given to the least recently queued thing. Imagine people in a queue for a theme park, those who entered the queue first are prioritized for admission to the park.&lt;/li&gt;
+&lt;li&gt;Stacks are Last-in-First-out structures – meaning that the highest priority is given to the most recently stacked element. Imagine a stack of books, the ones at the top of the stack are read first.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;graphs-and-trees&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Graphs and Trees&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jenniferbland.com/the-difference-between-a-tree-and-a-graph-data-structure/&#34;&gt;short definition with pictures&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sorting&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sorting&lt;/h2&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://www.geeksforgeeks.org/sorting-algorithms/&#34;&gt;sort algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python’s sotred() function uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Timsort&#34;&gt;TimSort&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Complexity for common sorts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(O(Nlog(N))\)&lt;/span&gt; for quicksort, and merge sort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In efficient sorting algorithms, the &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; part comes from the algorithm being called on up to each element, and the &lt;span class=&#34;math inline&#34;&gt;\(logN\)&lt;/span&gt; part comes from binary sorting in ways that render parts of the array unnecessary later.&lt;/p&gt;
+&lt;p&gt;e.g. ‘find median in a large dataset’ – sort half of it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;searching&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Searching&lt;/h1&gt;
+&lt;p&gt;Lots of &lt;a href=&#34;https://en.wikipedia.org/wiki/Category:Search_algorithms&#34;&gt;search algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;linear-search-binary-search&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear Search: Binary Search&lt;/h2&gt;
+&lt;p&gt;Complexity &lt;span class=&#34;math inline&#34;&gt;\(O(logN)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=P3YID7liBug&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;requires sorting before applying the search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;graph-search&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Graph Search&lt;/h2&gt;
+&lt;p&gt;Graphs are a collection of nodes and edges (connections between nodes). In the code below, I use dictionaries to represent graphs – keys represent nodes, and the list of elements represents all of the nodes that the parent node is connected to.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# examples
+Examples = []
+
+# Example 1: something where DFS would do equally well?
+tmp_graph = {1: [2,4], 2: [3], 3: [5], 4: [5,7], 5: [6,7], 6: [], 7: []}
+Examples.append(tmp_graph)
+
+# Example 2: something where DFS will run faster
+tmp_graph = {1:[2,3,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[7],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)
+
+# Example 3: something where BFS will run faster (swapped 3 and 10)
+tmp_graph = {1:[2,7,4,5],2:[6,10,8,9],3:[],4:[],5:[],6:[3],7:[],8:[],9:[],10:[]}
+Examples.append(tmp_graph)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;breadth-first-bfs-and-queues&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Breadth First (BFS) and queues&lt;/h3&gt;
+&lt;p&gt;Breadth Frist Search (BFS) queues (FILO structures) nodes based on their distance from an origin node. This can be implemented with a list (queue) by searching the nodes at the head of the list and appending encountered nodes to the tail of the list.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# breadth first search: just a queue
+def BFS_queue(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        visiting = queue[0]
+        # if this was visited already, continue
+        if visiting in visited: continue
+        # mark node as visited
+        visited.add(visiting)
+        # if this is the end, return 
+        if visiting == end: return True,visited
+        # otherwise, append children to search queue
+        for child in graph[visiting]: queue.append(child)
+        queue.remove(visiting) # remove the visited node
+    # if end was never found, return False
+    return False,visited
+
+# breadth first search: For loop over each layer
+def BFS(graph,start,end):
+    queue = [start] 
+    visited = set()
+    # build and search through queue
+    while queue:
+        for visiting in queue:
+            # if this was visited already, continue
+            if visiting in visited: continue
+            # mark node as visited
+            visited.add(visiting)
+            # if this is the end, return 
+            if visiting == end: return True,visited
+            # otherwise, append children to search queue
+            for child in graph[visiting]:
+                queue.append(child)
+    # if end was never found, return False
+    return False,visited&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;depth-first-dfs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Depth First (DFS)&lt;/h3&gt;
+&lt;p&gt;Depth First search can be implemented with recursively (below) or with a stack (LIFO structures). &lt;a href=&#34;https://www.youtube.com/watch?v=zaBhtODEL0w&#34;&gt;good hackerrank video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example using DFS to find if a path to a node exists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;# Depth first search with recursion
+def DFS(graph,start,end):
+    visited = set()
+    return _DFS(graph,start,end,visited),visited
+    
+def _DFS(graph,start,end,visited):
+    # if this was visited already, return False
+    if start in visited: return False
+    # mark node as visited
+    visited.add(start)
+    # if this is the target node, return True
+    if start == end: return True
+    # DFS through the children of this node
+    for child in graph[start]:
+        if _DFS(graph,child,end,visited):
+            return True
+    return False&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dfs-vs-bfs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;DFS vs BFS&lt;/h3&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+for example in Examples:
+    print(&amp;#39;DFS  path: &amp;#39;, DFS(example,1,7))
+    print(&amp;#39;BFSq path: &amp;#39;, BFS(example,1,7))
+    print(&amp;#39;BFS  path: &amp;#39;, BFS(example,1,7),&amp;#39;\n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 5, 6, 7})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 7})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 7}) 
+&amp;gt;&amp;gt;&amp;gt; 
+&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 6, 7})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) 
+&amp;gt;&amp;gt;&amp;gt; 
+&amp;gt;&amp;gt;&amp;gt; DFS  path:  (True, {1, 2, 3, 6, 7, 8, 9, 10})
+&amp;gt;&amp;gt;&amp;gt; BFSq path:  (True, {1, 2, 7})
+&amp;gt;&amp;gt;&amp;gt; BFS  path:  (True, {1, 2, 7})&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Examples:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;L332: Reconstruct a path from a starting node that hits all nodes once&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+tickets = [[&amp;quot;JFK&amp;quot;,&amp;quot;KUL&amp;quot;],[&amp;quot;JFK&amp;quot;,&amp;quot;NRT&amp;quot;],[&amp;quot;NRT&amp;quot;,&amp;quot;JFK&amp;quot;]]
+
+# convert to graph implemented in dict:
+import collections
+tree = collections.defaultdict(list)
+for parent,child in tickets:
+    tree[parent].append(child)
+
+# start at JFK
+path = [&amp;quot;JFK&amp;quot;]
+
+# define DFS algo
+def dfs(parent = &amp;#39;JFK&amp;#39;):
+    # success condition -- all tickets have been accounted for
+    if len(path) == len(tickets) + 1: 
+        print(&amp;quot;Final Path: {}&amp;quot;.format(path))
+        return path
+    # get destinations (children) from current node
+    children = sorted(tree[parent])
+    # iterate over children of this node
+    for child in children:
+        # include child in path
+        tree[parent].remove(child)
+        path.append(child)
+        # call DFS again starting at the child node
+        print(&amp;quot;Checking: {} -&amp;gt; {}&amp;quot;.format(parent,child))
+        sub_route = dfs(child)
+        if sub_route: 
+            return sub_route
+        else: print(&amp;quot;No successful sub-route&amp;quot;)
+        # implicitely return None if sub_route empty
+        # if no successful sub-route, remove child from path, 
+        path.pop()
+        #  and add child back to parent to be searched later
+        tree[parent].append(child)
+
+# run the dfs algo
+dfs()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
+&amp;gt;&amp;gt;&amp;gt; No successful sub-route
+&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; NRT
+&amp;gt;&amp;gt;&amp;gt; Checking: NRT -&amp;gt; JFK
+&amp;gt;&amp;gt;&amp;gt; Checking: JFK -&amp;gt; KUL
+&amp;gt;&amp;gt;&amp;gt; Final Path: [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]
+&amp;gt;&amp;gt;&amp;gt; [&amp;#39;JFK&amp;#39;, &amp;#39;NRT&amp;#39;, &amp;#39;JFK&amp;#39;, &amp;#39;KUL&amp;#39;]&lt;/code&gt;&lt;/pre&gt;
+&lt;!--
+# Ranking Algorithms
+
+Lots of [ranking algorithms](https://en.wikipedia.org/wiki/Ranking_(information_retrieval))
+
+# Recommendation
+
+Lots of [recommendation algorithms](https://en.wikipedia.org/wiki/Recommender_system)
+--&gt;
+&lt;!---
+Data science methods play a major role in discovering recommendations for users. 
+
+Econ, compliments and substitutes (competitors). 
+
+Types of recommendation; compliments (these go together), competitors (you might also like...), temporal (might buy this again in the future). Horizontal and vertical focus 
+
+Temporal involves forecasting, which is a topic for another post. 
+---&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pointers&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pointers&lt;/h2&gt;
+&lt;p&gt;e.g. Find longest substring that is a pallendrome&lt;/p&gt;
+&lt;p&gt;Optimal way: Start at each letter, move out each&lt;/p&gt;
+&lt;p&gt;e.g. reverse a linked list&lt;/p&gt;
+&lt;p&gt;e.g. max price from a single buy and sell?&lt;/p&gt;
+&lt;p&gt;e.g. swapping values in an array?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;algorithms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Algorithms&lt;/h1&gt;
+&lt;p&gt;lambda functions;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;
+nums=[1,1,2,2,1]
+val=1
+
+count = 0
+for i in range(len(nums)):
+  if nums[i] != val:
+    nums[count] = nums[i]
+    count += 1
+
+print(count)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;print(nums)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [2, 2, 2, 2, 1]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;todo-other-topics&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO / Other Topics:&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recursion&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Recursion;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Recursive calls&lt;/li&gt;
+&lt;li&gt;Methods applied within each recursion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;dijkstras-algorithm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Dijkstra’s algorithm&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dynamic-programming-knapsack-problem-fibonacci-sequence&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;dynamic programming (knapsack problem, Fibonacci sequence)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;functional-programming&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Functional programming&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tools&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tools&lt;/h1&gt;
+&lt;div id=&#34;git-and-github&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Git and GitHub&lt;/h2&gt;
+&lt;p&gt;git for version control (resolving merge conflicts)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL&lt;/h2&gt;
+&lt;div id=&#34;general-structure-of-sql-querys&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;General Structure of SQL querys&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_order_of_execution&#34;&gt;Order of execution for clauses below&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;```{, eval=FALSE, echo=TRUE} SELECT (column names to select) [AS (name for selection)]&lt;/p&gt;
+&lt;p&gt;FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals]&lt;/p&gt;
+&lt;p&gt;WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery)&lt;/p&gt;
+&lt;p&gt;GROUP BY (column[,column,…])&lt;/p&gt;
+&lt;p&gt;HAVING [AGGREGATION(column) condition]&lt;/p&gt;
+&lt;p&gt;LIMIT n [OFFSET m] ```&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SELECT&lt;/code&gt; clause can contain columns, aggregations, window functions, and subqueries.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FROM&lt;/code&gt; clause can contain a single table, or joins between tables&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JOIN&lt;/code&gt;s are useful for appending tables as columns, versus&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ON&lt;/code&gt; filters the table that is returned from the JOIN – it acts similarly to the WHERE clause.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WHERE&lt;/code&gt; clause filters the table retreived by FROM can also contain sub queries, and can perform the same filtering as &lt;code&gt;ON&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GROUP BY&lt;/code&gt; groups by a single column or a set of values if given multiple columns&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt; can be used to filter groups based on an aggregation function&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UNION&lt;/code&gt; appends tables as rows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;aggregation-functions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Aggregation functions&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;GROUP BY&lt;/code&gt; clause can contain &lt;code&gt;GROUPING SETS&lt;/code&gt;, such as a &lt;code&gt;ROLLUP()&lt;/code&gt; and &lt;code&gt;CUBE()&lt;/code&gt; functions. These hierarchically group the rows passed to the aggregation functions. &lt;code&gt;ROLLUP()&lt;/code&gt; hierarchically groups by arguments, starting left to right. &lt;code&gt;CUBE()&lt;/code&gt; passes all permutations of its arguments to the aggregation functions.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/fachoursbymonth3.html&#34;&gt;Grouping sets are described a little here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;window-functions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Window functions&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://pgexercises.com/questions/aggregates/countmembers.html&#34;&gt;Orver() explained here&lt;/a&gt;. Some more detailed information &lt;a href=&#34;http://www.sqlservertutorial.net/sql-server-window-functions/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Window functions include &lt;code&gt;OVER()&lt;/code&gt; and &lt;code&gt;ROW_NUMBER()&lt;/code&gt;. They take two optional arguments, &lt;code&gt;PARTITION BY&lt;/code&gt; and &lt;code&gt;ORDER BY&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank and result in skipped values&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DENSE_RANK() OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: ranks the column specified in the order by clause, ties are assigned the same rank, but no rank number is skipped&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LAG(column,lag) OVER([partition_by_clause] order_by_clause)&lt;/code&gt;: Retreives values from a &lt;code&gt;lag&lt;/code&gt; rows before, see &lt;a href=&#34;http://www.mysqltutorial.org/mysql-window-functions/mysql-lag-function/&#34;&gt;example with a partition here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tricks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Tricks:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When wanting to loop and compare, one can do a join or add a subquery and compare all columns at once. &lt;a href=&#34;https://leetcode.com/problems/department-highest-salary/discuss/53607/Three-accpeted-solutions&#34;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;resources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Resources&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL training resources;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://academy.vertabelo.com/#courses_list_section&#34;&gt;vertabelo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pgexercises.com/&#34;&gt;pgexercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://classroom.udacity.com/courses/ud198&#34;&gt;Udacity course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sqlbolt.com/lesson/select_queries_introduction&#34;&gt;sqlbolt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/&#34;&gt;Mode Analytics&lt;/a&gt; HackerRank (basic select, aggregation)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/domains/sql&#34;&gt;Hacker Rank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1&#34;&gt;W3School&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Python and other coding languages:&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hackerrank.com/dashboard&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://leetcode.com/&#34;&gt;LeetCode&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overview videos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Top 10 Algorithms for the Coding Interview &lt;a href=&#34;https://www.youtube.com/watch?v=r1MXwyiGi_U&#34;&gt;Part I&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=zHczhZn-z30&#34;&gt;Part II&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
