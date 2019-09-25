@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras HackerRank    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.">
+  <meta name="description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/sql-solutions/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/sql-solutions/">
   <meta property="og:title" content="SQL Solutions | Mac Strelioff">
-  <meta property="og:description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras HackerRank    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-25T11:11:52&#43;00:00">
+  <meta property="article:published_time" content="2019-09-25T14:43:33&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-25T11:11:52&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-25T14:43:33&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-25 11:11:52 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-25 11:11:52 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-25 14:43:33 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-25 14:43:33 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -466,7 +466,7 @@
 <li><a href="#sql-movie-rating-query-exercises-extras">SQL Movie-Rating Query Exercises Extras</a></li>
 <li><a href="#sql-social-network-query-exercises">SQL Social-Network Query Exercises</a></li>
 <li><a href="#sql-social-network-query-exercises-extras">SQL Social-Network Query Exercises Extras</a></li>
-<li><a href="#hackerrank">HackerRank</a></li>
+<li><a href="#pg-exercises-select-problems">PG exercises select problems</a></li>
 </ul></li>
 </ul>
 </div>
@@ -784,8 +784,41 @@ group by f.id1
 )</code></pre></li>
 </ol>
 </div>
-<div id="hackerrank" class="section level2">
-<h2>HackerRank</h2>
+<div id="pg-exercises-select-problems" class="section level2">
+<h2>PG exercises select problems</h2>
+<ol style="list-style-type: decimal">
+<li>Produce a list of facilities along with their total revenue. The output table should consist of facility name and revenue, sorted by revenue. Remember that there’s a different cost for guests and members! ```{,eval=FALSE,echo=TRUE} /* with subquery <em>/ select name, sum(revenue) as revenue from (select f.name as name,f.facid, case when memid = 0 then b.slots </em> f.guestcost else b.slots * f.membercost end as revenue from cd.bookings as b join cd.facilities as f on b.facid = f.facid ) as t1 group by name order by 2 asc /* without subquery <em>/ select facs.name, sum(slots </em> case when memid = 0 then facs.guestcost else facs.membercost end) as revenue from cd.bookings bks inner join cd.facilities facs on bks.facid = facs.facid group by facs.name order by revenue;</li>
+</ol>
+<p>```</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Produce a list of facilities with a total revenue less than 1000. Produce an output table consisting of facility name and revenue, sorted by revenue. Remember that there’s a different cost for guests and members!</p>
+<pre class="{,eval=false,echo=true}"><code>select f.name, 
+    sum( case 
+           when b.memid = 0 then b.slots * f.guestcost
+           else b.slots * f.membercost
+        end) as revenue
+from cd.bookings as b
+join cd.facilities as f 
+on b.facid=f.facid
+group by f.name
+having sum( case 
+           when b.memid = 0 then b.slots * f.guestcost
+           else b.slots * f.membercost
+        end) &lt; 1000
+order by 2
+/* SOLUTION */
+select name, revenue from (
+select facs.name, sum(case 
+            when memid = 0 then slots * facs.guestcost
+            else slots * membercost
+        end) as revenue
+    from cd.bookings bks
+    inner join cd.facilities facs
+        on bks.facid = facs.facid
+    group by facs.name
+) as agg where revenue &lt; 1000
+order by revenue;</code></pre></li>
+</ol>
 </div>
 </div>
 
@@ -924,15 +957,8 @@ group by f.id1
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/MacStrelioff/insightstudying/instacart-deep-dive/" rel="next">Instacart Notes</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/MacStrelioff/insightstudying/computer-science/" rel="prev">Basic Computer Science</a>
+    <a href="/MacStrelioff/insightstudying/instacart-deep-dive/" rel="prev">Instacart Notes</a>
   </div>
   
 </div>

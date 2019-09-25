@@ -36,6 +36,380 @@
     </item>
     
     <item>
+      <title>SQL Solutions</title>
+      <link>/MacStrelioff/insightstudying/sql-solutions/</link>
+      <pubDate>Wed, 25 Sep 2019 14:43:33 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#stanford-lagunita-course&#34;&gt;Stanford Lagunita Course&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises&#34;&gt;SQL Movie-Rating Query Exercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises-extras&#34;&gt;SQL Movie-Rating Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises&#34;&gt;SQL Social-Network Query Exercises&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises-extras&#34;&gt;SQL Social-Network Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pg-exercises-select-problems&#34;&gt;PG exercises select problems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;general-queries-and-tricks&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;General Queries and Tricks&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Below is a general template for generic queries;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT (column names to select) [AS (name for selection)]
+FROM (table to select from) 
+[INNER,LEFT,RIGHT,OUTTER] JOIN table2 
+ON [join keys and conditionals]
+WHERE (logical condition on rows)
+  column = (value or subquery),
+  OR column IN (list or subquery)
+GROUP BY (column[,column,...])
+HAVING [AGGREGATION(column) condition]
+LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stanford-lagunita-course&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Stanford Lagunita Course&lt;/h1&gt;
+&lt;div id=&#34;sql-movie-rating-query-exercises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Movie-Rating Query Exercises&lt;/h2&gt;
+&lt;p&gt;1.Find the titles of all movies directed by Steven Spielberg.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT title
+from movie
+where director like &amp;quot;Steven%&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT year
+FROM movie as m
+JOIN rating as r
+ON r.mid=m.mid
+WHERE r.stars&amp;gt;=4
+GROUP BY title
+ORDER BY year&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the titles of all movies that have no ratings.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct title
+FROM movie as m
+WHERE m.mid not in (select distinct mid from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some reviewers didn’t provide a date with their rating. Find the names of all reviewers who have ratings with a NULL value for the date.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct name
+from rating join reviewer on rating.rid=reviewer.rid
+where ratingdate is null&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write a query to return the ratings data in a more readable format: reviewer name, movie title, stars, and ratingDate. Also, sort the data, first by reviewer name, then by movie title, and lastly by number of stars.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name,m.title,r.stars,r.ratingdate
+FROM rating r 
+JOIN movie m on r.mid=m.mid
+JOIN reviewer re on r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For all cases where the same reviewer rated the same movie twice and gave it a higher rating the second time, return the reviewer’s name and the title of the movie.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select reviewer.name,m.title
+from rating as r
+join movie as m on r.mid=m.mid
+join reviewer on r.rid = reviewer.rid
+join rating as r2 on r2.ratingdate &amp;gt; r.ratingdate and r2.stars &amp;gt; r.stars and r2.mid=r.mid and r2.rid=r.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each movie that has at least one rating, find the highest number of stars that movie received. Return the movie title and number of stars. Sort by movie title.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.title,max(r.stars)
+from rating as r
+join movie m on r.mid=m.mid
+group by m.title&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each movie, return the title and the ‘rating spread’, that is, the difference between highest and lowest ratings given to that movie. Sort by rating spread from highest to lowest, then by movie title.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title,max(r.stars)-min(r.stars)
+from rating as r
+join movie as m on r.mid=m.mid
+group by m.title
+order by 2 desc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don’t just calculate the overall average rating before and after 1980.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select
+(
+select avg(mavg) from
+(
+select avg(r.stars) as mavg
+from rating as r 
+join movie as m 
+on r.mid=m.mid 
+where m.year &amp;lt; 1980 
+group by m.title
+) as tab1) -
+( select avg(mavg) 
+from (
+select avg(r.stars) as mavg
+from rating as r 
+join movie as m 
+on r.mid=m.mid 
+where m.year &amp;gt; 1980 
+group by m.title
+) as tab2
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql-movie-rating-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Movie-Rating Query Exercises Extras&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find the names of all reviewers who rated Gone with the Wind.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name
+FROM rating as r 
+JOIN movie as m 
+ON r.mid=m.mid AND m.title = &amp;#39;Gone with the Wind&amp;#39;
+JOIN reviewer as re 
+ON r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For any rating where the reviewer is the same as the director of the movie, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,r.stars
+from rating as r 
+join reviewer as re on r.rid = re.rid
+join movie as m on re.name = m.director and r.mid=m.mid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Return all reviewer names and movie names together in a single list, alphabetized. (Sorting by the first name of the reviewer and first word in the title is fine; no need for special processing on last names or removing “The”.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select name 
+from(
+select title as name from movie
+union
+select name from reviewer
+)
+order by name&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the titles of all movies not reviewed by Chris Jackson.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title 
+from movie
+where mid not in (select ra.mid
+from rating as ra 
+join reviewer as re on ra.rid=re.rid
+join movie as m on ra.mid=m.mid
+where re.name LIKE &amp;#39;Chris Jackson&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For all pairs of reviewers such that both reviewers gave a rating to the same movie, return the names of both reviewers. Eliminate duplicates, don’t pair reviewers with themselves, and include each pair only once. For each pair, return the names in the pair in alphabetical order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct re1.name,re2.name
+from rating as ra1 
+join rating as ra2 on ra1.mid = ra2.mid
+join reviewer as re1 on ra1.rid=re1.rid
+join reviewer as re2 on ra2.rid=re2.rid
+where re1.name &amp;lt; re2.name 
+order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each rating that is the lowest (fewest stars) currently in the database, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,ra.stars
+from rating as ra
+join reviewer as re on ra.rid = re.rid
+join movie as m on ra.mid = m.mid
+where ra.stars &amp;lt;= (select stars from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;List movie titles and average ratings, from highest-rated to lowest-rated. If two or more movies have the same average rating, list them in alphabetical order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title, avg(ra.stars)
+from rating as ra
+join movie as m on ra.mid=m.mid
+group by m.title
+order by 2 desc, 1 asc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the names of all reviewers who have contributed three or more ratings. (As an extra challenge, try writing the query without HAVING or without COUNT.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name as name
+from rating as ra 
+join reviewer as re on ra.rid = re.rid
+group by re.name
+having count(re.name) &amp;gt;= 3&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Some directors directed more than one movie. For all such directors, return the titles of all movies directed by them, along with the director name. Sort by director name, then movie title. (As an extra challenge, try writing the query both with and without COUNT.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title,director
+from movie
+where director in (
+select director
+from movie
+group by director
+having count(*) &amp;gt; 1
+)
+order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the movie(s) with the highest average rating. Return the movie title(s) and average rating. (Hint: This query is more difficult to write in SQLite than other systems; you might think of it as finding the highest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
+from 
+(
+select ra.mid, m.title as title, avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+)
+where avg = (select max(avg) from (
+select avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
+from 
+(
+select ra.mid, m.title as title, avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+)
+where avg = (select min(avg) from (
+select avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each director, return the director’s name together with the title(s) of the movie(s) they directed that received the highest rating among all of their movies, and the value of that rating. Ignore movies whose director is NULL.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.director,m.title,max(ra.stars)
+from rating as ra
+join reviewer as re on ra.rid=re.rid
+join movie as m on ra.mid = m.mid
+where m.director is not null
+group by m.director
+having max(ra.stars)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql-social-network-query-exercises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Social-Network Query Exercises&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find the names of all students who are friends with someone named Gabriel.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h2.name
+from friend
+join highschooler h1 on friend.ID2=h1.ID
+join highschooler h2 on friend.ID1=h2.ID
+where h1.name = &amp;#39;Gabriel&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every student who likes someone 2 or more grades younger than themselves, return that student’s name and grade, and the name and grade of the student they like.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
+from likes as l
+join highschooler as h1 on l.ID1 = h1.id
+join highschooler as h2 on l.ID2 = h2.id
+where (h1.grade - h2.grade) &amp;gt;= 2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
+from likes as l1
+join likes as l2 on l1.id1=l2.id2 and l1.id2 = l2.id1 /* like eachother */
+join highschooler h1 on l1.id1=h1.id
+join highschooler h2 on l1.id2=h2.id
+where h1.name &amp;lt; h2.name /* alphabetical order across columns */
+order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find all students who do not appear in the Likes table (as a student who likes or is liked) and return their names and grades. Sort by grade, then by name within each grade.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from highschooler h
+where h.id not in (select id1 from likes union select id2 from likes)
+order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B’s names and grades.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select hA.name,hA.grade,h.name,h.grade
+from highschooler as h
+join likes on h.id=likes.id2
+join highschooler as hA on likes.id1=hA.id
+where h.id not in (select id1 from likes)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids of friends in different grades */
+select f1.id1
+from friend f1
+join highschooler h1 on f1.id1=h1.id
+join highschooler h2 on f1.id2=h2.id
+where h1.grade &amp;lt;&amp;gt; h2.grade
+)
+order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select ha.name,ha.grade,hb.name,hb.grade,hc.name,hc.grade
+from likes
+join friend f1 on likes.id1=f1.id2 
+join friend f2 on likes.id2=f2.id2 and f2.id1=f1.id1
+join highschooler ha on likes.id1=ha.id
+join highschooler hb on likes.id2=hb.id
+join highschooler hc on f1.id1=hc.id
+/* list of like ids who are friends */
+where likes.id1 not in 
+(select likes.id1
+from likes
+join friend f1 on likes.id1=f1.id1
+where likes.id2 = f1.id2
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the difference between the number of students in the school and the number of different first names.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)-count(distinct name)
+from highschooler&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the name and grade of all students who are liked by more than one other student.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from likes
+join highschooler as h on likes.id2=h.id
+group by h.id
+having count(likes.id2) &amp;gt; 1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sql-social-network-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;SQL Social-Network Query Exercises Extras&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but student B likes a different student C, return the names and grades of A, B, and C.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade,h3.name,h3.grade
+from likes l1
+join likes l2 on l1.id2=l2.id1
+join highschooler h1 on l1.id1=h1.id
+join highschooler h2 on l1.id2=h2.id
+join highschooler h3 on l2.id2=h3.id
+where l1.id1 &amp;lt;&amp;gt; l2.id2 /* filters out cycles */&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(3 min) Find those students for whom all of their friends are in different grades from themselves. Return the students’ names and grades.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids with friends in same grade */
+select distinct h1.id
+from friend as f
+join highschooler h1 on f.id1=h1.id
+join highschooler h2 on f.id2=h2.id
+where h1.grade=h2.grade
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What is the average number of friends per student? (Your result should be just one number.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select avg(nfriends) 
+from
+(select count(f1.id2) as nfriends
+from friend f1
+join highschooler h1 on h1.id=f1.id1
+group by h1.id
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra. Do not count Cassandra, even though technically she is a friend of a friend.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)
+from friend f1
+join friend f2 on f1.id2=f2.id1
+join highschooler h on h.id=f1.id1 
+where h.name = &amp;#39;Cassandra&amp;#39; &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the name and grade of the student(s) with the greatest number of friends.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
+from friend f join highschooler h on h.id=f.id1
+group by h.id
+having count(*) = 
+(
+select max(nfriends) from
+(
+select count(*) as nfriends
+from friend f
+group by f.id1
+)
+)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pg-exercises-select-problems&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;PG exercises select problems&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Produce a list of facilities along with their total revenue. The output table should consist of facility name and revenue, sorted by revenue. Remember that there’s a different cost for guests and members! ```{,eval=FALSE,echo=TRUE} /* with subquery &lt;em&gt;/ select name, sum(revenue) as revenue from (select f.name as name,f.facid, case when memid = 0 then b.slots &lt;/em&gt; f.guestcost else b.slots * f.membercost end as revenue from cd.bookings as b join cd.facilities as f on b.facid = f.facid ) as t1 group by name order by 2 asc /* without subquery &lt;em&gt;/ select facs.name, sum(slots &lt;/em&gt; case when memid = 0 then facs.guestcost else facs.membercost end) as revenue from cd.bookings bks inner join cd.facilities facs on bks.facid = facs.facid group by facs.name order by revenue;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Produce a list of facilities with a total revenue less than 1000. Produce an output table consisting of facility name and revenue, sorted by revenue. Remember that there’s a different cost for guests and members!&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select f.name, 
+    sum( case 
+           when b.memid = 0 then b.slots * f.guestcost
+           else b.slots * f.membercost
+        end) as revenue
+from cd.bookings as b
+join cd.facilities as f 
+on b.facid=f.facid
+group by f.name
+having sum( case 
+           when b.memid = 0 then b.slots * f.guestcost
+           else b.slots * f.membercost
+        end) &amp;lt; 1000
+order by 2
+/* SOLUTION */
+select name, revenue from (
+select facs.name, sum(case 
+            when memid = 0 then slots * facs.guestcost
+            else slots * membercost
+        end) as revenue
+    from cd.bookings bks
+    inner join cd.facilities facs
+        on bks.facid = facs.facid
+    group by facs.name
+) as agg where revenue &amp;lt; 1000
+order by revenue;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
       <pubDate>Wed, 25 Sep 2019 12:34:12 +0000</pubDate>
@@ -705,347 +1079,6 @@
 &lt;li&gt;Data availability. Do we have the data needed? (If not, let’s collect it!)&lt;/li&gt;
 &lt;li&gt;Algorithm feasibility. Is it feasible to solve, do we have a best practice, can it scale?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>SQL Solutions</title>
-      <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Wed, 25 Sep 2019 11:11:52 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#stanford-lagunita-course&#34;&gt;Stanford Lagunita Course&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises&#34;&gt;SQL Movie-Rating Query Exercises&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises-extras&#34;&gt;SQL Movie-Rating Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises&#34;&gt;SQL Social-Network Query Exercises&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises-extras&#34;&gt;SQL Social-Network Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#hackerrank&#34;&gt;HackerRank&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;general-queries-and-tricks&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;General Queries and Tricks&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Below is a general template for generic queries;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT (column names to select) [AS (name for selection)]
-FROM (table to select from) 
-[INNER,LEFT,RIGHT,OUTTER] JOIN table2 
-ON [join keys and conditionals]
-WHERE (logical condition on rows)
-  column = (value or subquery),
-  OR column IN (list or subquery)
-GROUP BY (column[,column,...])
-HAVING [AGGREGATION(column) condition]
-LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;stanford-lagunita-course&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Stanford Lagunita Course&lt;/h1&gt;
-&lt;div id=&#34;sql-movie-rating-query-exercises&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Movie-Rating Query Exercises&lt;/h2&gt;
-&lt;p&gt;1.Find the titles of all movies directed by Steven Spielberg.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT title
-from movie
-where director like &amp;quot;Steven%&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT year
-FROM movie as m
-JOIN rating as r
-ON r.mid=m.mid
-WHERE r.stars&amp;gt;=4
-GROUP BY title
-ORDER BY year&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the titles of all movies that have no ratings.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct title
-FROM movie as m
-WHERE m.mid not in (select distinct mid from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some reviewers didn’t provide a date with their rating. Find the names of all reviewers who have ratings with a NULL value for the date.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct name
-from rating join reviewer on rating.rid=reviewer.rid
-where ratingdate is null&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Write a query to return the ratings data in a more readable format: reviewer name, movie title, stars, and ratingDate. Also, sort the data, first by reviewer name, then by movie title, and lastly by number of stars.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name,m.title,r.stars,r.ratingdate
-FROM rating r 
-JOIN movie m on r.mid=m.mid
-JOIN reviewer re on r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For all cases where the same reviewer rated the same movie twice and gave it a higher rating the second time, return the reviewer’s name and the title of the movie.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select reviewer.name,m.title
-from rating as r
-join movie as m on r.mid=m.mid
-join reviewer on r.rid = reviewer.rid
-join rating as r2 on r2.ratingdate &amp;gt; r.ratingdate and r2.stars &amp;gt; r.stars and r2.mid=r.mid and r2.rid=r.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each movie that has at least one rating, find the highest number of stars that movie received. Return the movie title and number of stars. Sort by movie title.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.title,max(r.stars)
-from rating as r
-join movie m on r.mid=m.mid
-group by m.title&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each movie, return the title and the ‘rating spread’, that is, the difference between highest and lowest ratings given to that movie. Sort by rating spread from highest to lowest, then by movie title.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title,max(r.stars)-min(r.stars)
-from rating as r
-join movie as m on r.mid=m.mid
-group by m.title
-order by 2 desc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don’t just calculate the overall average rating before and after 1980.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select
-(
-select avg(mavg) from
-(
-select avg(r.stars) as mavg
-from rating as r 
-join movie as m 
-on r.mid=m.mid 
-where m.year &amp;lt; 1980 
-group by m.title
-) as tab1) -
-( select avg(mavg) 
-from (
-select avg(r.stars) as mavg
-from rating as r 
-join movie as m 
-on r.mid=m.mid 
-where m.year &amp;gt; 1980 
-group by m.title
-) as tab2
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql-movie-rating-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Movie-Rating Query Exercises Extras&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Find the names of all reviewers who rated Gone with the Wind.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name
-FROM rating as r 
-JOIN movie as m 
-ON r.mid=m.mid AND m.title = &amp;#39;Gone with the Wind&amp;#39;
-JOIN reviewer as re 
-ON r.rid=re.rid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For any rating where the reviewer is the same as the director of the movie, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,r.stars
-from rating as r 
-join reviewer as re on r.rid = re.rid
-join movie as m on re.name = m.director and r.mid=m.mid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Return all reviewer names and movie names together in a single list, alphabetized. (Sorting by the first name of the reviewer and first word in the title is fine; no need for special processing on last names or removing “The”.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select name 
-from(
-select title as name from movie
-union
-select name from reviewer
-)
-order by name&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the titles of all movies not reviewed by Chris Jackson.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title 
-from movie
-where mid not in (select ra.mid
-from rating as ra 
-join reviewer as re on ra.rid=re.rid
-join movie as m on ra.mid=m.mid
-where re.name LIKE &amp;#39;Chris Jackson&amp;#39;)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For all pairs of reviewers such that both reviewers gave a rating to the same movie, return the names of both reviewers. Eliminate duplicates, don’t pair reviewers with themselves, and include each pair only once. For each pair, return the names in the pair in alphabetical order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct re1.name,re2.name
-from rating as ra1 
-join rating as ra2 on ra1.mid = ra2.mid
-join reviewer as re1 on ra1.rid=re1.rid
-join reviewer as re2 on ra2.rid=re2.rid
-where re1.name &amp;lt; re2.name 
-order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each rating that is the lowest (fewest stars) currently in the database, return the reviewer name, movie title, and number of stars.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name,m.title,ra.stars
-from rating as ra
-join reviewer as re on ra.rid = re.rid
-join movie as m on ra.mid = m.mid
-where ra.stars &amp;lt;= (select stars from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;List movie titles and average ratings, from highest-rated to lowest-rated. If two or more movies have the same average rating, list them in alphabetical order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.title, avg(ra.stars)
-from rating as ra
-join movie as m on ra.mid=m.mid
-group by m.title
-order by 2 desc, 1 asc&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the names of all reviewers who have contributed three or more ratings. (As an extra challenge, try writing the query without HAVING or without COUNT.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select re.name as name
-from rating as ra 
-join reviewer as re on ra.rid = re.rid
-group by re.name
-having count(re.name) &amp;gt;= 3&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Some directors directed more than one movie. For all such directors, return the titles of all movies directed by them, along with the director name. Sort by director name, then movie title. (As an extra challenge, try writing the query both with and without COUNT.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title,director
-from movie
-where director in (
-select director
-from movie
-group by director
-having count(*) &amp;gt; 1
-)
-order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the movie(s) with the highest average rating. Return the movie title(s) and average rating. (Hint: This query is more difficult to write in SQLite than other systems; you might think of it as finding the highest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
-from 
-(
-select ra.mid, m.title as title, avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-)
-where avg = (select max(avg) from (
-select avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
-from 
-(
-select ra.mid, m.title as title, avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-)
-where avg = (select min(avg) from (
-select avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each director, return the director’s name together with the title(s) of the movie(s) they directed that received the highest rating among all of their movies, and the value of that rating. Ignore movies whose director is NULL.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.director,m.title,max(ra.stars)
-from rating as ra
-join reviewer as re on ra.rid=re.rid
-join movie as m on ra.mid = m.mid
-where m.director is not null
-group by m.director
-having max(ra.stars)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql-social-network-query-exercises&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Social-Network Query Exercises&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;Find the names of all students who are friends with someone named Gabriel.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h2.name
-from friend
-join highschooler h1 on friend.ID2=h1.ID
-join highschooler h2 on friend.ID1=h2.ID
-where h1.name = &amp;#39;Gabriel&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For every student who likes someone 2 or more grades younger than themselves, return that student’s name and grade, and the name and grade of the student they like.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
-from likes as l
-join highschooler as h1 on l.ID1 = h1.id
-join highschooler as h2 on l.ID2 = h2.id
-where (h1.grade - h2.grade) &amp;gt;= 2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For every pair of students who both like each other, return the name and grade of both students. Include each pair only once, with the two names in alphabetical order.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade
-from likes as l1
-join likes as l2 on l1.id1=l2.id2 and l1.id2 = l2.id1 /* like eachother */
-join highschooler h1 on l1.id1=h1.id
-join highschooler h2 on l1.id2=h2.id
-where h1.name &amp;lt; h2.name /* alphabetical order across columns */
-order by 1,2&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find all students who do not appear in the Likes table (as a student who likes or is liked) and return their names and grades. Sort by grade, then by name within each grade.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from highschooler h
-where h.id not in (select id1 from likes union select id2 from likes)
-order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but we have no information about whom B likes (that is, B does not appear as an ID1 in the Likes table), return A and B’s names and grades.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select hA.name,hA.grade,h.name,h.grade
-from highschooler as h
-join likes on h.id=likes.id2
-join highschooler as hA on likes.id1=hA.id
-where h.id not in (select id1 from likes)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from highschooler as h
-where h.id not in 
-( /* list of ids of friends in different grades */
-select f1.id1
-from friend f1
-join highschooler h1 on f1.id1=h1.id
-join highschooler h2 on f1.id2=h2.id
-where h1.grade &amp;lt;&amp;gt; h2.grade
-)
-order by 2,1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select ha.name,ha.grade,hb.name,hb.grade,hc.name,hc.grade
-from likes
-join friend f1 on likes.id1=f1.id2 
-join friend f2 on likes.id2=f2.id2 and f2.id1=f1.id1
-join highschooler ha on likes.id1=ha.id
-join highschooler hb on likes.id2=hb.id
-join highschooler hc on f1.id1=hc.id
-/* list of like ids who are friends */
-where likes.id1 not in 
-(select likes.id1
-from likes
-join friend f1 on likes.id1=f1.id1
-where likes.id2 = f1.id2
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the difference between the number of students in the school and the number of different first names.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)-count(distinct name)
-from highschooler&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the name and grade of all students who are liked by more than one other student.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from likes
-join highschooler as h on likes.id2=h.id
-group by h.id
-having count(likes.id2) &amp;gt; 1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sql-social-network-query-exercises-extras&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;SQL Social-Network Query Exercises Extras&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;For every situation where student A likes student B, but student B likes a different student C, return the names and grades of A, B, and C.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h1.name,h1.grade,h2.name,h2.grade,h3.name,h3.grade
-from likes l1
-join likes l2 on l1.id2=l2.id1
-join highschooler h1 on l1.id1=h1.id
-join highschooler h2 on l1.id2=h2.id
-join highschooler h3 on l2.id2=h3.id
-where l1.id1 &amp;lt;&amp;gt; l2.id2 /* filters out cycles */&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;(3 min) Find those students for whom all of their friends are in different grades from themselves. Return the students’ names and grades.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from highschooler as h
-where h.id not in 
-( /* list of ids with friends in same grade */
-select distinct h1.id
-from friend as f
-join highschooler h1 on f.id1=h1.id
-join highschooler h2 on f.id2=h2.id
-where h1.grade=h2.grade
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;What is the average number of friends per student? (Your result should be just one number.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select avg(nfriends) 
-from
-(select count(f1.id2) as nfriends
-from friend f1
-join highschooler h1 on h1.id=f1.id1
-group by h1.id
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra. Do not count Cassandra, even though technically she is a friend of a friend.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select count(*)
-from friend f1
-join friend f2 on f1.id2=f2.id1
-join highschooler h on h.id=f1.id1 
-where h.name = &amp;#39;Cassandra&amp;#39; &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the name and grade of the student(s) with the greatest number of friends.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select h.name,h.grade
-from friend f join highschooler h on h.id=f.id1
-group by h.id
-having count(*) = 
-(
-select max(nfriends) from
-(
-select count(*) as nfriends
-from friend f
-group by f.id1
-)
-)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;hackerrank&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;HackerRank&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
