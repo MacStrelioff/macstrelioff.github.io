@@ -377,7 +377,66 @@ having count(likes.id2) > 1
 
 ## SQL Social-Network Query Exercises Extras
 
+1. For every situation where student A likes student B, but student B likes a different student C, return the names and grades of A, B, and C.
+```{,eval=FALSE,echo=TRUE}
+select h1.name,h1.grade,h2.name,h2.grade,h3.name,h3.grade
+from likes l1
+join likes l2 on l1.id2=l2.id1
+join highschooler h1 on l1.id1=h1.id
+join highschooler h2 on l1.id2=h2.id
+join highschooler h3 on l2.id2=h3.id
+where l1.id1 <> l2.id2 /* filters out cycles */
+```
 
+2. (3 min) Find those students for whom all of their friends are in different grades from themselves. Return the students' names and grades.
+```{,eval=FALSE,echo=TRUE}
+select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids with friends in same grade */
+select distinct h1.id
+from friend as f
+join highschooler h1 on f.id1=h1.id
+join highschooler h2 on f.id2=h2.id
+where h1.grade=h2.grade
+)
+```
+
+3. What is the average number of friends per student? (Your result should be just one number.)
+```{,eval=FALSE,echo=TRUE}
+select avg(nfriends) 
+from
+(select count(f1.id2) as nfriends
+from friend f1
+join highschooler h1 on h1.id=f1.id1
+group by h1.id
+)
+```
+
+4. Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra. Do not count Cassandra, even though technically she is a friend of a friend.
+```{,eval=FALSE,echo=TRUE}
+select count(*)
+from friend f1
+join friend f2 on f1.id2=f2.id1
+join highschooler h on h.id=f1.id1 
+where h.name = 'Cassandra' 
+```
+
+5. Find the name and grade of the student(s) with the greatest number of friends.
+```{,eval=FALSE,echo=TRUE}
+select h.name,h.grade
+from friend f join highschooler h on h.id=f.id1
+group by h.id
+having count(*) = 
+(
+select max(nfriends) from
+(
+select count(*) as nfriends
+from friend f
+group by f.id1
+)
+)
+```
 
 
 

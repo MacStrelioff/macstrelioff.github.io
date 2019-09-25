@@ -139,9 +139,9 @@
   <meta property="og:description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-25T08:48:53&#43;00:00">
+  <meta property="article:published_time" content="2019-09-25T10:36:11&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-25T08:48:53&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-25T10:36:11&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-25 08:48:53 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-25 08:48:53 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-25 10:36:11 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-25 10:36:11 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -734,6 +734,54 @@ having count(likes.id2) &gt; 1</code></pre></li>
 </div>
 <div id="sql-social-network-query-exercises-extras" class="section level2">
 <h2>SQL Social-Network Query Exercises Extras</h2>
+<ol style="list-style-type: decimal">
+<li><p>For every situation where student A likes student B, but student B likes a different student C, return the names and grades of A, B, and C.</p>
+<pre class="{,eval=false,echo=true}"><code>select h1.name,h1.grade,h2.name,h2.grade,h3.name,h3.grade
+from likes l1
+join likes l2 on l1.id2=l2.id1
+join highschooler h1 on l1.id1=h1.id
+join highschooler h2 on l1.id2=h2.id
+join highschooler h3 on l2.id2=h3.id
+where l1.id1 &lt;&gt; l2.id2 /* filters out cycles */</code></pre></li>
+<li><p>(3 min) Find those students for whom all of their friends are in different grades from themselves. Return the students’ names and grades.</p>
+<pre class="{,eval=false,echo=true}"><code>select h.name,h.grade
+from highschooler as h
+where h.id not in 
+( /* list of ids with friends in same grade */
+select distinct h1.id
+from friend as f
+join highschooler h1 on f.id1=h1.id
+join highschooler h2 on f.id2=h2.id
+where h1.grade=h2.grade
+)</code></pre></li>
+<li><p>What is the average number of friends per student? (Your result should be just one number.)</p>
+<pre class="{,eval=false,echo=true}"><code>select avg(nfriends) 
+from
+(select count(f1.id2) as nfriends
+from friend f1
+join highschooler h1 on h1.id=f1.id1
+group by h1.id
+)</code></pre></li>
+<li><p>Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra. Do not count Cassandra, even though technically she is a friend of a friend.</p>
+<pre class="{,eval=false,echo=true}"><code>select count(*)
+from friend f1
+join friend f2 on f1.id2=f2.id1
+join highschooler h on h.id=f1.id1 
+where h.name = &#39;Cassandra&#39; </code></pre></li>
+<li><p>Find the name and grade of the student(s) with the greatest number of friends.</p>
+<pre class="{,eval=false,echo=true}"><code>select h.name,h.grade
+from friend f join highschooler h on h.id=f.id1
+group by h.id
+having count(*) = 
+(
+select max(nfriends) from
+(
+select count(*) as nfriends
+from friend f
+group by f.id1
+)
+)</code></pre></li>
+</ol>
 </div>
 </div>
 
