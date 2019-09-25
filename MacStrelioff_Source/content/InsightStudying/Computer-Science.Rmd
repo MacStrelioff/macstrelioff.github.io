@@ -419,7 +419,7 @@ git for version control (resolving merge conflicts)
 
 ```{, eval=FALSE, echo=TRUE}
 SELECT (column names to select) [AS (name for selection)]
-
+ 
 FROM (table to select from) 
 [INNER,LEFT,RIGHT,OUTTER] JOIN table2 
 ON [join keys and conditionals]
