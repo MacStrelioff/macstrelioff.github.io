@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-26 14:14:57"
+date: "2019-09-26 15:04:15"
 output:
   blogdown::html_page:
     toc: true
@@ -20,7 +20,8 @@ math: true
 <li><a href="#general-queries-and-tricks">General Queries and Tricks</a><ul>
 <li><a href="#window-functions">Window Functions</a></li>
 <li><a href="#aggregation-and-window">Aggregation and window</a></li>
-<li><a href="#formatting-and-strings">formatting and Strings</a></li>
+<li><a href="#formatting-and-strings">Formatting and Strings</a></li>
+<li><a href="#dates">Dates</a></li>
 </ul></li>
 <li><a href="#stanford-lagunita-course">Stanford Lagunita Course</a><ul>
 <li><a href="#sql-movie-rating-query-exercises">SQL Movie-Rating Query Exercises</a></li>
@@ -76,9 +77,9 @@ LIMIT n [OFFSET m]</code></pre>
 order by rank, surname, firstname;</code></pre>
 </div>
 <div id="formatting-and-strings" class="section level3">
-<h3>formatting and Strings</h3>
+<h3>Formatting and Strings</h3>
 <ul>
-<li>casting:</li>
+<li>casting: <code>CAST(25.65 AS int)</code>, also see <code>CONVERT()</code></li>
 <li>rounding: <code>trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as &quot;Total Hours&quot;</code></li>
 <li>String replacement: <code>translate([string column], '[chars to replace]', '[replacement char]')</code></li>
 <li>String replacement: <code>regexp_replace(telephone, '[^0-9]', '', 'g')</code></li>
@@ -88,6 +89,9 @@ order by rank, surname, firstname;</code></pre>
 <li>Strip chars: <code>SUBSTRING([string],[start idx],[end idx])</code></li>
 <li>Pad chard: <code>lpad(cast(zipcode as char(5)),5,'0')</code></li>
 </ul>
+</div>
+<div id="dates" class="section level3">
+<h3>Dates</h3>
 </div>
 </div>
 <div id="stanford-lagunita-course" class="section level1">

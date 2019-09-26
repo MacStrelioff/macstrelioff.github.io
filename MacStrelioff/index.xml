@@ -38,7 +38,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Thu, 26 Sep 2019 14:14:57 +0000</pubDate>
+      <pubDate>Thu, 26 Sep 2019 15:04:15 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>
@@ -48,7 +48,8 @@
 &lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window Functions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#aggregation-and-window&#34;&gt;Aggregation and window&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#formatting-and-strings&#34;&gt;formatting and Strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#formatting-and-strings&#34;&gt;Formatting and Strings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dates&#34;&gt;Dates&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#stanford-lagunita-course&#34;&gt;Stanford Lagunita Course&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises&#34;&gt;SQL Movie-Rating Query Exercises&lt;/a&gt;&lt;/li&gt;
@@ -104,9 +105,9 @@ LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
 order by rank, surname, firstname;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;formatting-and-strings&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;formatting and Strings&lt;/h3&gt;
+&lt;h3&gt;Formatting and Strings&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;casting:&lt;/li&gt;
+&lt;li&gt;casting: &lt;code&gt;CAST(25.65 AS int)&lt;/code&gt;, also see &lt;code&gt;CONVERT()&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;rounding: &lt;code&gt;trim(to_char(sum(b.slots)/2.0, &#39;9999999999999999D99&#39;)) as &amp;quot;Total Hours&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;String replacement: &lt;code&gt;translate([string column], &#39;[chars to replace]&#39;, &#39;[replacement char]&#39;)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;String replacement: &lt;code&gt;regexp_replace(telephone, &#39;[^0-9]&#39;, &#39;&#39;, &#39;g&#39;)&lt;/code&gt;&lt;/li&gt;
@@ -116,6 +117,9 @@ order by rank, surname, firstname;&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Strip chars: &lt;code&gt;SUBSTRING([string],[start idx],[end idx])&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Pad chard: &lt;code&gt;lpad(cast(zipcode as char(5)),5,&#39;0&#39;)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dates&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Dates&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;stanford-lagunita-course&#34; class=&#34;section level1&#34;&gt;

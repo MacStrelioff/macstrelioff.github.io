@@ -82,9 +82,9 @@ select firstname, surname,
 order by rank, surname, firstname;
 ```
 
-### formatting and Strings
+### Formatting and Strings
 
-- casting: 
+- casting: ` CAST(25.65 AS int)`, also see `CONVERT()`
 - rounding: `trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as "Total Hours"`
 - String replacement: `translate([string column], '[chars to replace]', '[replacement char]')` 
 - String replacement: `regexp_replace(telephone, '[^0-9]', '', 'g')`
@@ -93,6 +93,10 @@ order by rank, surname, firstname;
 - Strip chars: `RIGHT([string],[n to strip])`
 - Strip chars: `SUBSTRING([string],[start idx],[end idx])`
 - Pad chard:  `lpad(cast(zipcode as char(5)),5,'0')`
+
+### Dates
+
+
 
 # Stanford Lagunita Course
 
