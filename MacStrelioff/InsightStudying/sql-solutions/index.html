@@ -139,9 +139,9 @@
   <meta property="og:description" content="General Queries and Tricks Window Functions Aggregation and window formatting  Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises, aggregates select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-25T22:12:50&#43;00:00">
+  <meta property="article:published_time" content="2019-09-26T10:35:20&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-25T22:12:50&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-26T10:35:20&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-25 22:12:50 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-25 22:12:50 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-26 10:35:20 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-26 10:35:20 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -368,7 +368,7 @@
     
       
     
-    <time>Sep 25, 2019</time>
+    <time>Sep 26, 2019</time>
   </span>
   
 
@@ -953,6 +953,45 @@ select facs.name as name, rank() over (order by sum(case
 ) as subq
 where rank &lt;= 3
 order by rank;   </code></pre></li>
+<li><p>Classify facilities into equally sized groups of high, average, and low based on their revenue. Order by classification and facility name.</p>
+<pre class="{,eval=false,echo=true}"><code>select name, case when class=1 then &#39;high&#39;
+    when class=2 then &#39;average&#39;
+    else &#39;low&#39;
+    end revenue
+from (
+    select facs.name as name, ntile(3) over (order by sum(case
+            when memid = 0 then slots * facs.guestcost
+            else slots * membercost
+        end) desc) as class
+    from cd.bookings bks
+    inner join cd.facilities facs
+        on bks.facid = facs.facid
+    group by facs.name
+) as subq
+order by class, name;  </code></pre></li>
+<li><p>For each day in August 2012, calculate a rolling average of total revenue over the previous 15 days. Output should contain date and revenue columns, sorted by the date. Remember to account for the possibility of a day having zero revenue. This one’s a bit tough, so don’t be afraid to check out the hint!</p>
+<pre class="{,eval=false,echo=true}"><code>select  dategen.date,
+(
+    -- correlated subquery that, for each day fed into it,
+    -- finds the average revenue for the last 15 days
+    select sum(case
+        when memid = 0 then slots * facs.guestcost
+        else slots * membercost
+    end) as rev
+
+    from cd.bookings bks
+    inner join cd.facilities facs
+        on bks.facid = facs.facid
+    where bks.starttime &gt; dategen.date - interval &#39;14 days&#39;
+        and bks.starttime &lt; dategen.date + interval &#39;1 day&#39;
+)/15 as revenue
+from
+(
+    -- generates a list of days in august
+    select  cast(generate_series(timestamp &#39;2012-08-01&#39;,
+        &#39;2012-08-31&#39;,&#39;1 day&#39;) as date) as date
+)  as dategen
+order by dategen.date;   </code></pre></li>
 </ol>
 </div>
 </div>
