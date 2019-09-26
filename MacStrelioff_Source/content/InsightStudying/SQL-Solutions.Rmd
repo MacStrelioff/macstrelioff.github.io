@@ -56,6 +56,17 @@ FUNCTION() OVER(PARTITION BY [grouping row] ORDER BY [ordering row] [DESC|ASC])
 
 - operate after the `where` clause and after aggregation
 
+Example using Rank to get the max
+```{,eval=FALSE,echo=TRUE}
+select facid, total from (
+	select facid, sum(slots) total, rank() over (order by sum(slots) desc) rank
+        	from cd.bookings
+		group by facid
+	) as ranked
+	where rank = 1
+```
+
+
 ### formatting 
 
 - rounding: `trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as "Total Hours"`
@@ -543,6 +554,13 @@ with sum as (select facid, sum(slots) as totalslots
 select facid, totalslots 
 	from sum
 	where totalslots = (select max(totalslots) from sum);
+/* USING RANK */
+select facid, total from (
+	select facid, sum(slots) total, rank() over (order by sum(slots) desc) rank
+        	from cd.bookings
+		group by facid
+	) as ranked
+	where rank = 1
 ```
 
 4. Produce a list of the total number of slots booked per facility per month in the year of 2012. In this version, include output rows containing totals for all months per facility, and a total for all months for all facilities. The output table should consist of facility id, month and slots, sorted by the id and month. When calculating the aggregated values for all months and all facids, return null values in the month and facid columns.
