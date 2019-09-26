@@ -56,7 +56,7 @@ FUNCTION() OVER(PARTITION BY [grouping row] ORDER BY [ordering row] [DESC|ASC])
 
 - operate after the `where` clause and after aggregation
 
-Example using Rank to get the max
+Example using `Rank` to get the max
 ```{,eval=FALSE,echo=TRUE}
 select facid, total from (
 	select facid, sum(slots) total, rank() over (order by sum(slots) desc) rank
@@ -66,6 +66,21 @@ select facid, total from (
 	where rank = 1
 ```
 
+`rank` skips tied numbers (1,1,3) while `dense_rank` does not (1,1,2).
+
+### Aggregation and window
+
+Q: Produce a list of members, along with the number of hours they've booked in facilities, rounded to the nearest ten hours. Rank them by this rounded figure, producing output of first name, surname, rounded hours, rank. Sort by rank, surname, and first name.
+```{,eval=FALSE,echo=TRUE}
+select firstname, surname,
+	((sum(bks.slots)+10)/20)*10 as hours,
+	rank() over (order by ((sum(bks.slots)+10)/20)*10 desc) as rank
+	from cd.bookings bks
+	inner join cd.members mems
+		on bks.memid = mems.memid
+	group by mems.memid
+order by rank, surname, firstname;
+```
 
 ### formatting 
 
@@ -603,7 +618,37 @@ group by m.memid
 order by m.memid
 ```
 
-
+6. Produce a list of the top three revenue generating facilities (including ties). Output facility name and rank, sorted by rank and facility name.
+```{,eval=FALSE,echo=TRUE}
+select name, rank
+from (
+select distinct name, rank() over(order by revenue desc) as rank
+from (
+select f.name as name, sum(case 
+		when b.memid = 0 then b.slots * f.guestcost
+		else b.slots * f.membercost
+	   end) as revenue
+from cd.bookings as b
+join cd.facilities as f on b.facid=f.facid
+group by f.name
+) as t1
+) as t2
+where rank <= 3
+order by rank
+/* USING ONE FEWER SUB QUERY */
+select name, rank from (
+	select facs.name as name, rank() over (order by sum(case
+				when memid = 0 then slots * facs.guestcost
+				else slots * membercost
+			end) desc) as rank
+		from cd.bookings bks
+		inner join cd.facilities facs
+			on bks.facid = facs.facid
+		group by facs.name
+	) as subq
+	where rank <= 3
+order by rank;   
+```
 
 
 

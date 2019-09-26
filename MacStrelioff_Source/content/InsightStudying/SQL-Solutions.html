@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-25 17:48:31"
+date: "2019-09-25 22:12:50"
 output:
   blogdown::html_page:
     toc: true
@@ -19,6 +19,7 @@ math: true
 <ul>
 <li><a href="#general-queries-and-tricks">General Queries and Tricks</a><ul>
 <li><a href="#window-functions">Window Functions</a></li>
+<li><a href="#aggregation-and-window">Aggregation and window</a></li>
 <li><a href="#formatting">formatting</a></li>
 </ul></li>
 <li><a href="#stanford-lagunita-course">Stanford Lagunita Course</a><ul>
@@ -48,9 +49,31 @@ HAVING [AGGREGATION(column) condition]
 LIMIT n [OFFSET m]</code></pre>
 <div id="window-functions" class="section level3">
 <h3>Window Functions</h3>
+<p>General form:</p>
+<pre class="{,eval=false,echo=true}"><code>FUNCTION() OVER(PARTITION BY [grouping row] ORDER BY [ordering row] [DESC|ASC]) </code></pre>
 <ul>
 <li>operate after the <code>where</code> clause and after aggregation</li>
 </ul>
+<p>Example using <code>Rank</code> to get the max</p>
+<pre class="{,eval=false,echo=true}"><code>select facid, total from (
+    select facid, sum(slots) total, rank() over (order by sum(slots) desc) rank
+            from cd.bookings
+        group by facid
+    ) as ranked
+    where rank = 1</code></pre>
+<p><code>rank</code> skips tied numbers (1,1,3) while <code>dense_rank</code> does not (1,1,2).</p>
+</div>
+<div id="aggregation-and-window" class="section level3">
+<h3>Aggregation and window</h3>
+<p>Q: Produce a list of members, along with the number of hours they’ve booked in facilities, rounded to the nearest ten hours. Rank them by this rounded figure, producing output of first name, surname, rounded hours, rank. Sort by rank, surname, and first name.</p>
+<pre class="{,eval=false,echo=true}"><code>select firstname, surname,
+    ((sum(bks.slots)+10)/20)*10 as hours,
+    rank() over (order by ((sum(bks.slots)+10)/20)*10 desc) as rank
+    from cd.bookings bks
+    inner join cd.members mems
+        on bks.memid = mems.memid
+    group by mems.memid
+order by rank, surname, firstname;</code></pre>
 </div>
 <div id="formatting" class="section level3">
 <h3>formatting</h3>
@@ -416,7 +439,14 @@ group by facid
 )
 select facid, totalslots 
 from sum
-where totalslots = (select max(totalslots) from sum);</code></pre></li>
+where totalslots = (select max(totalslots) from sum);
+/* USING RANK */
+select facid, total from (
+select facid, sum(slots) total, rank() over (order by sum(slots) desc) rank
+        from cd.bookings
+    group by facid
+) as ranked
+where rank = 1</code></pre></li>
 <li><p>Produce a list of the total number of slots booked per facility per month in the year of 2012. In this version, include output rows containing totals for all months per facility, and a total for all months for all facilities. The output table should consist of facility id, month and slots, sorted by the id and month. When calculating the aggregated values for all months and all facids, return null values in the month and facid columns.</p>
 <pre class="{,eval=false,echo=true}"><code>(select facid, month, slots
 from (
@@ -451,6 +481,35 @@ join cd.bookings b on m.memid=b.memid
 where b.starttime &gt; &#39;2012-09-01&#39;
 group by m.memid
 order by m.memid</code></pre></li>
+<li><p>Produce a list of the top three revenue generating facilities (including ties). Output facility name and rank, sorted by rank and facility name.</p>
+<pre class="{,eval=false,echo=true}"><code>select name, rank
+from (
+select distinct name, rank() over(order by revenue desc) as rank
+from (
+select f.name as name, sum(case 
+    when b.memid = 0 then b.slots * f.guestcost
+    else b.slots * f.membercost
+   end) as revenue
+from cd.bookings as b
+join cd.facilities as f on b.facid=f.facid
+group by f.name
+) as t1
+) as t2
+where rank &lt;= 3
+order by rank
+/* USING ONE FEWER SUB QUERY */
+select name, rank from (
+select facs.name as name, rank() over (order by sum(case
+            when memid = 0 then slots * facs.guestcost
+            else slots * membercost
+        end) desc) as rank
+    from cd.bookings bks
+    inner join cd.facilities facs
+        on bks.facid = facs.facid
+    group by facs.name
+) as subq
+where rank &lt;= 3
+order by rank;   </code></pre></li>
 </ol>
 </div>
 </div>

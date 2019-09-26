@@ -38,7 +38,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Wed, 25 Sep 2019 17:48:31 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 22:12:50 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>
@@ -47,6 +47,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aggregation-and-window&#34;&gt;Aggregation and window&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#formatting&#34;&gt;formatting&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#stanford-lagunita-course&#34;&gt;Stanford Lagunita Course&lt;/a&gt;&lt;ul&gt;
@@ -76,9 +77,31 @@ HAVING [AGGREGATION(column) condition]
 LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;window-functions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Window Functions&lt;/h3&gt;
+&lt;p&gt;General form:&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;FUNCTION() OVER(PARTITION BY [grouping row] ORDER BY [ordering row] [DESC|ASC]) &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;operate after the &lt;code&gt;where&lt;/code&gt; clause and after aggregation&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Example using &lt;code&gt;Rank&lt;/code&gt; to get the max&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select facid, total from (
+    select facid, sum(slots) total, rank() over (order by sum(slots) desc) rank
+            from cd.bookings
+        group by facid
+    ) as ranked
+    where rank = 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;rank&lt;/code&gt; skips tied numbers (1,1,3) while &lt;code&gt;dense_rank&lt;/code&gt; does not (1,1,2).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;aggregation-and-window&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Aggregation and window&lt;/h3&gt;
+&lt;p&gt;Q: Produce a list of members, along with the number of hours they’ve booked in facilities, rounded to the nearest ten hours. Rank them by this rounded figure, producing output of first name, surname, rounded hours, rank. Sort by rank, surname, and first name.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select firstname, surname,
+    ((sum(bks.slots)+10)/20)*10 as hours,
+    rank() over (order by ((sum(bks.slots)+10)/20)*10 desc) as rank
+    from cd.bookings bks
+    inner join cd.members mems
+        on bks.memid = mems.memid
+    group by mems.memid
+order by rank, surname, firstname;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;formatting&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;formatting&lt;/h3&gt;
@@ -444,7 +467,14 @@ group by facid
 )
 select facid, totalslots 
 from sum
-where totalslots = (select max(totalslots) from sum);&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+where totalslots = (select max(totalslots) from sum);
+/* USING RANK */
+select facid, total from (
+select facid, sum(slots) total, rank() over (order by sum(slots) desc) rank
+        from cd.bookings
+    group by facid
+) as ranked
+where rank = 1&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Produce a list of the total number of slots booked per facility per month in the year of 2012. In this version, include output rows containing totals for all months per facility, and a total for all months for all facilities. The output table should consist of facility id, month and slots, sorted by the id and month. When calculating the aggregated values for all months and all facids, return null values in the month and facid columns.&lt;/p&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;(select facid, month, slots
 from (
@@ -479,6 +509,35 @@ join cd.bookings b on m.memid=b.memid
 where b.starttime &amp;gt; &amp;#39;2012-09-01&amp;#39;
 group by m.memid
 order by m.memid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Produce a list of the top three revenue generating facilities (including ties). Output facility name and rank, sorted by rank and facility name.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select name, rank
+from (
+select distinct name, rank() over(order by revenue desc) as rank
+from (
+select f.name as name, sum(case 
+    when b.memid = 0 then b.slots * f.guestcost
+    else b.slots * f.membercost
+   end) as revenue
+from cd.bookings as b
+join cd.facilities as f on b.facid=f.facid
+group by f.name
+) as t1
+) as t2
+where rank &amp;lt;= 3
+order by rank
+/* USING ONE FEWER SUB QUERY */
+select name, rank from (
+select facs.name as name, rank() over (order by sum(case
+            when memid = 0 then slots * facs.guestcost
+            else slots * membercost
+        end) desc) as rank
+    from cd.bookings bks
+    inner join cd.facilities facs
+        on bks.facid = facs.facid
+    group by facs.name
+) as subq
+where rank &amp;lt;= 3
+order by rank;   &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
