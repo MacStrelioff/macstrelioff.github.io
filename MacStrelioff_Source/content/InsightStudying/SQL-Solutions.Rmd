@@ -82,11 +82,15 @@ select firstname, surname,
 order by rank, surname, firstname;
 ```
 
-### formatting 
+### formatting and Strings
 
 - rounding: `trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as "Total Hours"`
-
-
+- String replacement: `translate([string column], '[chars to replace]', '[replacement char]')` 
+- String replacement: `regexp_replace(telephone, '[^0-9]', '', 'g')`
+- Strip chars: `substr ([string],1,1)`
+- Strip chars: `LEFT([string],[n to strip])`
+- Strip chars: `RIGHT([string],[n to strip])`
+- Strip chars: `SUBSTRING([string],[start idx],[end idx])`
 
 # Stanford Lagunita Course
 
@@ -695,6 +699,22 @@ select 	dategen.date,
 order by dategen.date;   
 ```
 
+9. Work out the utilisation percentage for each facility by month, sorted by name and month, rounded to 1 decimal place. Opening time is 8am, closing time is 8.30pm. You can treat every month as a full month, regardless of if there were some dates the club was not open.
+```{,eval=FALSE,echo=TRUE}
+select name, month, 
+	round((100*slots)/
+		cast(
+			25*(cast((month + interval '1 month') as date)
+			- cast (month as date)) as numeric),1) as utilisation
+	from  (
+		select facs.name as name, date_trunc('month', starttime) as month, sum(slots) as slots
+			from cd.bookings bks
+			inner join cd.facilities facs
+				on bks.facid = facs.facid
+			group by facs.facid, month
+	) as inn
+order by name, month    
+```
 
 
 
