@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-26 12:48:00"
+date: "2019-09-26 14:14:57"
 output:
   blogdown::html_page:
     toc: true
@@ -78,6 +78,7 @@ order by rank, surname, firstname;</code></pre>
 <div id="formatting-and-strings" class="section level3">
 <h3>formatting and Strings</h3>
 <ul>
+<li>casting:</li>
 <li>rounding: <code>trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as &quot;Total Hours&quot;</code></li>
 <li>String replacement: <code>translate([string column], '[chars to replace]', '[replacement char]')</code></li>
 <li>String replacement: <code>regexp_replace(telephone, '[^0-9]', '', 'g')</code></li>
@@ -85,6 +86,7 @@ order by rank, surname, firstname;</code></pre>
 <li>Strip chars: <code>LEFT([string],[n to strip])</code></li>
 <li>Strip chars: <code>RIGHT([string],[n to strip])</code></li>
 <li>Strip chars: <code>SUBSTRING([string],[start idx],[end idx])</code></li>
+<li>Pad chard: <code>lpad(cast(zipcode as char(5)),5,'0')</code></li>
 </ul>
 </div>
 </div>
@@ -136,7 +138,16 @@ join movie as m on r.mid=m.mid
 group by m.title
 order by 2 desc</code></pre></li>
 <li><p>Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don’t just calculate the overall average rating before and after 1980.)</p>
-<pre class="{,eval=false,echo=true}"><code>select
+<pre class="{,eval=false,echo=true}"><code>select avg(case when year &lt; 1980 then mavg end) - avg(case when year &gt; 1980 then mavg end)
+from (
+select avg(r.stars) as mavg, year
+from rating as r 
+join movie as m 
+on r.mid=m.mid 
+group by m.title
+) as tab1
+/* longer, 2 subqueries */
+select
 (
 select avg(mavg) from
 (

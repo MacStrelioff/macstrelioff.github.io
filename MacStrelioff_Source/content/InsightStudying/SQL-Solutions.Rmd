@@ -84,6 +84,7 @@ order by rank, surname, firstname;
 
 ### formatting and Strings
 
+- casting: 
 - rounding: `trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as "Total Hours"`
 - String replacement: `translate([string column], '[chars to replace]', '[replacement char]')` 
 - String replacement: `regexp_replace(telephone, '[^0-9]', '', 'g')`
@@ -91,6 +92,7 @@ order by rank, surname, firstname;
 - Strip chars: `LEFT([string],[n to strip])`
 - Strip chars: `RIGHT([string],[n to strip])`
 - Strip chars: `SUBSTRING([string],[start idx],[end idx])`
+- Pad chard:  `lpad(cast(zipcode as char(5)),5,'0')`
 
 # Stanford Lagunita Course
 
@@ -164,6 +166,15 @@ order by 2 desc
 
 9. Find the difference between the average rating of movies released before 1980 and the average rating of movies released after 1980. (Make sure to calculate the average rating for each movie, then the average of those averages for movies before 1980 and movies after. Don't just calculate the overall average rating before and after 1980.)
 ```{,eval=FALSE,echo=TRUE}
+select avg(case when year < 1980 then mavg end) - avg(case when year > 1980 then mavg end)
+from (
+select avg(r.stars) as mavg, year
+from rating as r 
+join movie as m 
+on r.mid=m.mid 
+group by m.title
+) as tab1
+/* longer, 2 subqueries */
 select
 (
 select avg(mavg) from
