@@ -49,12 +49,16 @@ LIMIT n [OFFSET m]
 
 ### Window Functions
 
+General form: 
+```{,eval=FALSE,echo=TRUE}
+FUNCTION() OVER(PARTITION BY [grouping row] ORDER BY [ordering row] [DESC|ASC]) 
+```
+
 - operate after the `where` clause and after aggregation
 
 ### formatting 
 
 - rounding: `trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as "Total Hours"`
-
 
 
 
