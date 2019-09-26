@@ -47,6 +47,17 @@ HAVING [AGGREGATION(column) condition]
 LIMIT n [OFFSET m]
 ```
 
+### Window Functions
+
+- operate after the `where` clause and after aggregation
+
+### formatting 
+
+- rounding: `trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as "Total Hours"`
+
+
+
+
 # Stanford Lagunita Course
 
 ## SQL Movie-Rating Query Exercises
@@ -439,7 +450,7 @@ group by f.id1
 ```
 
 
-## PG exercises select problems
+## PG exercises, aggregates select problems
 
 
 1. Produce a list of facilities along with their total revenue. The output table should consist of facility name and revenue, sorted by revenue. Remember that there's a different cost for guests and members!
@@ -530,10 +541,45 @@ select facid, totalslots
 	where totalslots = (select max(totalslots) from sum);
 ```
 
+4. Produce a list of the total number of slots booked per facility per month in the year of 2012. In this version, include output rows containing totals for all months per facility, and a total for all months for all facilities. The output table should consist of facility id, month and slots, sorted by the id and month. When calculating the aggregated values for all months and all facids, return null values in the month and facid columns.
+```{,eval=FALSE,echo=TRUE}
+(select facid, month, slots
+from (
+(select facid, extract(month from starttime) as month, sum(slots) as slots
+from cd.bookings
+where starttime between '2012-01-01' and '2013-01-01'
+group by facid, 2)
+union
+(select facid, NULL as month, sum(b2.slots) as slots
+from cd.bookings b2
+where starttime between '2012-01-01' and '2013-01-01'
+group by facid)
+) as s3)
+union
+(select NULL as facid, NULL as month, 
+ (select sum(slots) from cd.bookings 
+  where starttime between '2012-01-01' and '2013-01-01'
+ ))
+order by facid,month
+/* USING ROLLUP */
+select facid, extract(month from starttime) as month, sum(slots) as slots
+	from cd.bookings
+	where
+		starttime >= '2012-01-01'
+		and starttime < '2013-01-01'
+	group by rollup(facid, month)
+order by facid, month;  
+```
 
-
-
-
+5. Produce a list of each member name, id, and their first booking after September 1st 2012. Order by member ID.
+```{,eval=FALSE,echo=TRUE}
+select m.surname,m.firstname,m.memid,min(b.starttime)
+from cd.members m
+join cd.bookings b on m.memid=b.memid
+where b.starttime > '2012-09-01'
+group by m.memid
+order by m.memid
+```
 
 
 

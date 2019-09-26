@@ -38,20 +38,23 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Wed, 25 Sep 2019 15:07:09 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 17:48:31 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#general-queries-and-tricks&#34;&gt;General Queries and Tricks&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#window-functions&#34;&gt;Window Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#formatting&#34;&gt;formatting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#stanford-lagunita-course&#34;&gt;Stanford Lagunita Course&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises&#34;&gt;SQL Movie-Rating Query Exercises&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sql-movie-rating-query-exercises-extras&#34;&gt;SQL Movie-Rating Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises&#34;&gt;SQL Social-Network Query Exercises&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sql-social-network-query-exercises-extras&#34;&gt;SQL Social-Network Query Exercises Extras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#pg-exercises-select-problems&#34;&gt;PG exercises select problems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pg-exercises-aggregates-select-problems&#34;&gt;PG exercises, aggregates select problems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -71,6 +74,18 @@ WHERE (logical condition on rows)
 GROUP BY (column[,column,...])
 HAVING [AGGREGATION(column) condition]
 LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;window-functions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Window Functions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;operate after the &lt;code&gt;where&lt;/code&gt; clause and after aggregation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;formatting&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;formatting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;rounding: &lt;code&gt;trim(to_char(sum(b.slots)/2.0, &#39;9999999999999999D99&#39;)) as &amp;quot;Total Hours&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;stanford-lagunita-course&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Stanford Lagunita Course&lt;/h1&gt;
@@ -369,8 +384,8 @@ group by f.id1
 )&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div id=&#34;pg-exercises-select-problems&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;PG exercises select problems&lt;/h2&gt;
+&lt;div id=&#34;pg-exercises-aggregates-select-problems&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;PG exercises, aggregates select problems&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Produce a list of facilities along with their total revenue. The output table should consist of facility name and revenue, sorted by revenue. Remember that there’s a different cost for guests and members! ```{,eval=FALSE,echo=TRUE} /* with subquery &lt;em&gt;/ select name, sum(revenue) as revenue from (select f.name as name,f.facid, case when memid = 0 then b.slots &lt;/em&gt; f.guestcost else b.slots * f.membercost end as revenue from cd.bookings as b join cd.facilities as f on b.facid = f.facid ) as t1 group by name order by 2 asc /* without subquery &lt;em&gt;/ select facs.name, sum(slots &lt;/em&gt; case when memid = 0 then facs.guestcost else facs.membercost end) as revenue from cd.bookings bks inner join cd.facilities facs on bks.facid = facs.facid group by facs.name order by revenue;&lt;/li&gt;
 &lt;/ol&gt;
@@ -430,6 +445,40 @@ group by facid
 select facid, totalslots 
 from sum
 where totalslots = (select max(totalslots) from sum);&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Produce a list of the total number of slots booked per facility per month in the year of 2012. In this version, include output rows containing totals for all months per facility, and a total for all months for all facilities. The output table should consist of facility id, month and slots, sorted by the id and month. When calculating the aggregated values for all months and all facids, return null values in the month and facid columns.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;(select facid, month, slots
+from (
+(select facid, extract(month from starttime) as month, sum(slots) as slots
+from cd.bookings
+where starttime between &amp;#39;2012-01-01&amp;#39; and &amp;#39;2013-01-01&amp;#39;
+group by facid, 2)
+union
+(select facid, NULL as month, sum(b2.slots) as slots
+from cd.bookings b2
+where starttime between &amp;#39;2012-01-01&amp;#39; and &amp;#39;2013-01-01&amp;#39;
+group by facid)
+) as s3)
+union
+(select NULL as facid, NULL as month, 
+ (select sum(slots) from cd.bookings 
+  where starttime between &amp;#39;2012-01-01&amp;#39; and &amp;#39;2013-01-01&amp;#39;
+ ))
+order by facid,month
+/* USING ROLLUP */
+select facid, extract(month from starttime) as month, sum(slots) as slots
+from cd.bookings
+where
+    starttime &amp;gt;= &amp;#39;2012-01-01&amp;#39;
+    and starttime &amp;lt; &amp;#39;2013-01-01&amp;#39;
+group by rollup(facid, month)
+order by facid, month;  &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Produce a list of each member name, id, and their first booking after September 1st 2012. Order by member ID.&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m.surname,m.firstname,m.memid,min(b.starttime)
+from cd.members m
+join cd.bookings b on m.memid=b.memid
+where b.starttime &amp;gt; &amp;#39;2012-09-01&amp;#39;
+group by m.memid
+order by m.memid&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;

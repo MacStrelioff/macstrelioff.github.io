@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.">
+  <meta name="description" content="General Queries and Tricks Window Functions formatting  Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises, aggregates select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.">
 
   
   <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/sql-solutions/">
@@ -136,12 +136,12 @@
   <meta property="og:site_name" content="Mac Strelioff">
   <meta property="og:url" content="/MacStrelioff/insightstudying/sql-solutions/">
   <meta property="og:title" content="SQL Solutions | Mac Strelioff">
-  <meta property="og:description" content="General Queries and Tricks Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:description" content="General Queries and Tricks Window Functions formatting  Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises, aggregates select problems    General Queries and Tricks  Below is a general template for generic queries;  SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-25T15:07:09&#43;00:00">
+  <meta property="article:published_time" content="2019-09-25T17:48:31&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-25T15:07:09&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-25T17:48:31&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-09-25 15:07:09 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-25 15:07:09 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-25 17:48:31 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-09-25 17:48:31 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -460,13 +460,16 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#general-queries-and-tricks">General Queries and Tricks</a></li>
+<li><a href="#general-queries-and-tricks">General Queries and Tricks</a><ul>
+<li><a href="#window-functions">Window Functions</a></li>
+<li><a href="#formatting">formatting</a></li>
+</ul></li>
 <li><a href="#stanford-lagunita-course">Stanford Lagunita Course</a><ul>
 <li><a href="#sql-movie-rating-query-exercises">SQL Movie-Rating Query Exercises</a></li>
 <li><a href="#sql-movie-rating-query-exercises-extras">SQL Movie-Rating Query Exercises Extras</a></li>
 <li><a href="#sql-social-network-query-exercises">SQL Social-Network Query Exercises</a></li>
 <li><a href="#sql-social-network-query-exercises-extras">SQL Social-Network Query Exercises Extras</a></li>
-<li><a href="#pg-exercises-select-problems">PG exercises select problems</a></li>
+<li><a href="#pg-exercises-aggregates-select-problems">PG exercises, aggregates select problems</a></li>
 </ul></li>
 </ul>
 </div>
@@ -486,6 +489,18 @@ WHERE (logical condition on rows)
 GROUP BY (column[,column,...])
 HAVING [AGGREGATION(column) condition]
 LIMIT n [OFFSET m]</code></pre>
+<div id="window-functions" class="section level3">
+<h3>Window Functions</h3>
+<ul>
+<li>operate after the <code>where</code> clause and after aggregation</li>
+</ul>
+</div>
+<div id="formatting" class="section level3">
+<h3>formatting</h3>
+<ul>
+<li>rounding: <code>trim(to_char(sum(b.slots)/2.0, '9999999999999999D99')) as &quot;Total Hours&quot;</code></li>
+</ul>
+</div>
 </div>
 <div id="stanford-lagunita-course" class="section level1">
 <h1>Stanford Lagunita Course</h1>
@@ -784,8 +799,8 @@ group by f.id1
 )</code></pre></li>
 </ol>
 </div>
-<div id="pg-exercises-select-problems" class="section level2">
-<h2>PG exercises select problems</h2>
+<div id="pg-exercises-aggregates-select-problems" class="section level2">
+<h2>PG exercises, aggregates select problems</h2>
 <ol style="list-style-type: decimal">
 <li>Produce a list of facilities along with their total revenue. The output table should consist of facility name and revenue, sorted by revenue. Remember that there’s a different cost for guests and members! ```{,eval=FALSE,echo=TRUE} /* with subquery <em>/ select name, sum(revenue) as revenue from (select f.name as name,f.facid, case when memid = 0 then b.slots </em> f.guestcost else b.slots * f.membercost end as revenue from cd.bookings as b join cd.facilities as f on b.facid = f.facid ) as t1 group by name order by 2 asc /* without subquery <em>/ select facs.name, sum(slots </em> case when memid = 0 then facs.guestcost else facs.membercost end) as revenue from cd.bookings bks inner join cd.facilities facs on bks.facid = facs.facid group by facs.name order by revenue;</li>
 </ol>
@@ -845,6 +860,40 @@ group by facid
 select facid, totalslots 
 from sum
 where totalslots = (select max(totalslots) from sum);</code></pre></li>
+<li><p>Produce a list of the total number of slots booked per facility per month in the year of 2012. In this version, include output rows containing totals for all months per facility, and a total for all months for all facilities. The output table should consist of facility id, month and slots, sorted by the id and month. When calculating the aggregated values for all months and all facids, return null values in the month and facid columns.</p>
+<pre class="{,eval=false,echo=true}"><code>(select facid, month, slots
+from (
+(select facid, extract(month from starttime) as month, sum(slots) as slots
+from cd.bookings
+where starttime between &#39;2012-01-01&#39; and &#39;2013-01-01&#39;
+group by facid, 2)
+union
+(select facid, NULL as month, sum(b2.slots) as slots
+from cd.bookings b2
+where starttime between &#39;2012-01-01&#39; and &#39;2013-01-01&#39;
+group by facid)
+) as s3)
+union
+(select NULL as facid, NULL as month, 
+ (select sum(slots) from cd.bookings 
+  where starttime between &#39;2012-01-01&#39; and &#39;2013-01-01&#39;
+ ))
+order by facid,month
+/* USING ROLLUP */
+select facid, extract(month from starttime) as month, sum(slots) as slots
+from cd.bookings
+where
+    starttime &gt;= &#39;2012-01-01&#39;
+    and starttime &lt; &#39;2013-01-01&#39;
+group by rollup(facid, month)
+order by facid, month;  </code></pre></li>
+<li><p>Produce a list of each member name, id, and their first booking after September 1st 2012. Order by member ID.</p>
+<pre class="{,eval=false,echo=true}"><code>select m.surname,m.firstname,m.memid,min(b.starttime)
+from cd.members m
+join cd.bookings b on m.memid=b.memid
+where b.starttime &gt; &#39;2012-09-01&#39;
+group by m.memid
+order by m.memid</code></pre></li>
 </ol>
 </div>
 </div>
