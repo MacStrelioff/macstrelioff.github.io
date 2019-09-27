@@ -1,7 +1,7 @@
 ---
 title: "Instacart Notes"
 author: "Mac Strelioff"
-date: "2019-09-26 20:55:23"
+date: "2019-09-27 13:59:22"
 menu:
   InsightStudying:
     parent: Foundations
@@ -167,13 +167,22 @@ linktitle: Instacart Deep Dive
 <li>Approach: Classification problem,</li>
 <li>SMOTE to address class imbalance (around 20% didn’t convert)</li>
 <li>F1 because of class imbalance and no particular preference for precision or recall..</li>
-<li>In hindsight, recall might have been more important, so I might have used an <span class="math inline">\(F\beta\)</span> score to upweight recall.</li>
-<li>So I think in future projects I’d spend time linking the outcomes to some concrete value.</li>
+<li>In hindsight, recall might have been more important,</li>
+<li>because part of the use case for a model like this was to reach out to subscribers earlier on with different subscription tiers</li>
+<li>so I might have used an <span class="math inline">\(F\beta\)</span> score to upweight recall.</li>
+<li>so I think in future projects I’d spend time linking the outcomes to some concrete value.</li>
 <li>Also a little more time building an understanding of the users through something like a funnel analysis.</li>
 <li>Result:</li>
 <li>Overall I achieved decent F1 score (don’t remember number)</li>
 <li>And my client was really happy.</li>
 <li>The collaboration was really nice too – multiple teams were engaged in meetings and appreciated what I could deliver in two weeks.</li>
+</ul>
+<p><a href="https://www.crazyegg.com/blog/ecommerce-conversion-funnel/">conversion funnel</a></p>
+<ul>
+<li>User flow</li>
+<li>Funnel, how many users take up each of more complex actions</li>
+<li>Persistant use: how many users days in a row a user logs in</li>
+<li>proportion of weekdays logged in</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>Strategy Inference Project:</li>

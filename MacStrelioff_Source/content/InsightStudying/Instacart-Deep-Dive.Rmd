@@ -166,15 +166,22 @@ Ben:
 - Approach: Classification problem, 
 - SMOTE to address class imbalance (around 20\% didn't convert)
 - F1 because of class imbalance and no particular preference for precision or recall..
-- In hindsight, recall might have been more important, so I might have used an $F\beta$ score to upweight recall.
-- So I think in future projects I'd spend time linking the outcomes to some concrete value. 
+- In hindsight, recall might have been more important, 
+- because part of the use case for a model like this was to reach out to subscribers earlier on with different subscription tiers
+- so I might have used an $F\beta$ score to upweight recall.
+- so I think in future projects I'd spend time linking the outcomes to some concrete value. 
 - Also a little more time building an understanding of the users through something like a funnel analysis.
 - Result: 
 - Overall I achieved decent F1 score (don't remember number)
 - And my client was really happy. 
 - The collaboration was really nice too -- multiple teams were engaged in meetings and appreciated what I could deliver in two weeks.
 
+[conversion funnel](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
 
+- User flow
+- Funnel, how many users take up each of more complex actions
+- Persistant use: how many users days in a row a user logs in
+- proportion of weekdays logged in 
 
 2. Strategy Inference Project:
 - Context: Participants chose between two gambling machines across 30-50 trials. 
@@ -306,6 +313,7 @@ Ads:
 - Showing ads to people who will buy anyway confounds the effectiveness of the ad experiments. 
 
 ### Discussion of past work
+
 "Be prepared to discuss your past work involving analyzing large and complicated datasets, defending your approaches and communicating what you learned during your project."
 
 "elaborate on related projects from your resume"
