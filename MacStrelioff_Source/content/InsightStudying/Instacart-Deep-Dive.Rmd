@@ -159,13 +159,32 @@ Ben:
 ### About past work
 
 1. Insight Project
-- Context: Startup focused on workspace collaboration
+- Context: Startup focused on workspace collaboration, combined features of Google Docs with features of Github
 - Problem: Only 20\% of users converted from a free trial to a subscription, client wanted to predict who would convert as early as possible
 - Data: daily counts of engagements with a product feature
 - Features: cumulative sums, divided by number of users in the account -- a measure of how much an account had engaged with a product feature since the account's creation. 
 - Approach: Classification problem, 
-- Result: Model achieved decent F1 score (don't remember number)
+- SMOTE to address class imbalance (around 20\% didn't convert)
+- F1 because of class imbalance and no particular preference for precision or recall..
+- In hindsight, recall might have been more important, so I might have used an $F\beta$ score to upweight recall.
+- So I think in future projects I'd spend time linking the outcomes to some concrete value. 
+- Also a little more time building an understanding of the users through something like a funnel analysis.
+- Result: 
+- Overall I achieved decent F1 score (don't remember number)
+- And my client was really happy. 
+- The collaboration was really nice too -- multiple teams were engaged in meetings and appreciated what I could deliver in two weeks.
 
+
+
+2. Strategy Inference Project:
+- Context: Participants chose between two gambling machines across 30-50 trials. 
+- Project: I specified four models to predict which machine they'd choose on the next trial.
+- I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time. 
+- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
+- Value add: Could maybe be useful for inferring user types if we can specify certain users. 
+
+At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user's decisions. This informaiton could then be used to modify search rankings. 
+- More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings. 
 
 
 ## Stats: 

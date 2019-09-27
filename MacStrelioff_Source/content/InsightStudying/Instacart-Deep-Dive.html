@@ -1,7 +1,7 @@
 ---
 title: "Instacart Notes"
 author: "Mac Strelioff"
-date: "2019-09-26 19:52:14"
+date: "2019-09-26 20:55:23"
 menu:
   InsightStudying:
     parent: Foundations
@@ -160,13 +160,32 @@ linktitle: Instacart Deep Dive
 <li>Insight Project</li>
 </ol>
 <ul>
-<li>Context: Startup focused on workspace collaboration</li>
+<li>Context: Startup focused on workspace collaboration, combined features of Google Docs with features of Github</li>
 <li>Problem: Only 20% of users converted from a free trial to a subscription, client wanted to predict who would convert as early as possible</li>
 <li>Data: daily counts of engagements with a product feature</li>
 <li>Features: cumulative sums, divided by number of users in the account – a measure of how much an account had engaged with a product feature since the account’s creation.</li>
 <li>Approach: Classification problem,</li>
-<li>Result: Model achieved decent F1 score (don’t remember number)</li>
+<li>SMOTE to address class imbalance (around 20% didn’t convert)</li>
+<li>F1 because of class imbalance and no particular preference for precision or recall..</li>
+<li>In hindsight, recall might have been more important, so I might have used an <span class="math inline">\(F\beta\)</span> score to upweight recall.</li>
+<li>So I think in future projects I’d spend time linking the outcomes to some concrete value.</li>
+<li>Also a little more time building an understanding of the users through something like a funnel analysis.</li>
+<li>Result:</li>
+<li>Overall I achieved decent F1 score (don’t remember number)</li>
+<li>And my client was really happy.</li>
+<li>The collaboration was really nice too – multiple teams were engaged in meetings and appreciated what I could deliver in two weeks.</li>
 </ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Strategy Inference Project:</li>
+</ol>
+<ul>
+<li>Context: Participants chose between two gambling machines across 30-50 trials.</li>
+<li>Project: I specified four models to predict which machine they’d choose on the next trial.</li>
+<li>I worked with a friend to formalize the possible set of strategies, and then I implemented a model to infer the probability of a kid following each strategy on each trial, and applied Bayes Theorem to get a probability that the kid was following any strategy over time.</li>
+<li>Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.</li>
+<li>Value add: Could maybe be useful for inferring user types if we can specify certain users.</li>
+</ul>
+<p>At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings. - More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.</p>
 </div>
 <div id="stats" class="section level2">
 <h2>Stats:</h2>
