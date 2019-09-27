@@ -168,18 +168,11 @@ Ben:
 
 
 
-
 ## Stats: 
 
 
 
-
 ## SQL:
-
-
-### Howard advice
-
-
 
 
 
@@ -201,7 +194,6 @@ Ben:
 - Turn off timeslot if unavailable
 - lets say we have busy pricing to combat this, so just charge more instead of turning slot off
 - can increase up to 4x, usually just by a few dollars
-- 
 
 - Goals: how would you know if surege pricing is a good idea? What next? 
 - Metrics: 
@@ -307,7 +299,7 @@ PredictIt Project:
 - I also aggregated data based on days until expiration, and applied a linear in log odds model at each day. 
 - Found the common S shaped calibration curve that comes up in lab experiments, particularly at 1-2 days before market expiration.
 - Result: 
-- Value to Yelp: Relates to the economic patterns maybe? 
+- Value add: ???
 
 Strategy Inference Project:
 
