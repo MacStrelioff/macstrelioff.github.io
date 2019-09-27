@@ -38,7 +38,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Fri, 27 Sep 2019 09:40:33 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 11:42:21 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>
@@ -130,6 +130,7 @@ order by rank, surname, firstname;&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;other&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Other&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;exists ([subquery])&lt;/code&gt;: True if the subquery is not empty&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ROLLUP(facid,month)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;ROLLUP&lt;/code&gt; produces a hierarchy of aggregations in the order passed into it: for example, ROLLUP(facid, month) outputs aggregations on (facid, month), (facid), and (). If we wanted an aggregation of all facilities for a month (instead of all months for a facility) we’d have to reverse the order, using ROLLUP(month, facid). Alternatively, if we instead want all possible permutations of the columns we pass in, we can use CUBE rather than ROLLUP. This will produce (facid, month), (month), (facid), and ().&lt;/p&gt;
@@ -139,11 +140,11 @@ order by rank, surname, firstname;&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;Stanford Lagunita Course&lt;/h1&gt;
 &lt;div id=&#34;sql-movie-rating-query-exercises&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;SQL Movie-Rating Query Exercises&lt;/h2&gt;
-&lt;p&gt;1.Find the titles of all movies directed by Steven Spielberg.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find the titles of all movies directed by Steven Spielberg.&lt;/p&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT title
 from movie
-where director like &amp;quot;Steven%&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+where director like &amp;quot;Steven%&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.&lt;/p&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.year 
 from movie m
@@ -154,9 +155,14 @@ on m.mid=r.mid and r.stars&amp;gt;=4&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 FROM movie as m
 WHERE m.mid not in (select distinct mid from rating)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Some reviewers didn’t provide a date with their rating. Find the names of all reviewers who have ratings with a NULL value for the date.&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT distinct name
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;/* USING JOIN */
+SELECT distinct name
 from rating join reviewer on rating.rid=reviewer.rid
-where ratingdate is null&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+where ratingdate is null
+/* USING SUBQUERY */
+select re.name
+from reviewer re
+where re.rid in (select rid from rating where rating.ratingDate is NULL)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Write a query to return the ratings data in a more readable format: reviewer name, movie title, stars, and ratingDate. Also, sort the data, first by reviewer name, then by movie title, and lastly by number of stars.&lt;/p&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;SELECT DISTINCT re.name,m.title,r.stars,r.ratingdate
 FROM rating r 

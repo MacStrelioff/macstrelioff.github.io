@@ -102,6 +102,7 @@ order by rank, surname, firstname;
 
 ### Other
 
+- `exists ([subquery])`: True if the subquery is not empty
 - `ROLLUP(facid,month)`
 
 `ROLLUP` produces a hierarchy of aggregations in the order passed into it: for example, ROLLUP(facid, month) outputs aggregations on (facid, month), (facid), and (). If we wanted an aggregation of all facilities for a month (instead of all months for a facility) we'd have to reverse the order, using ROLLUP(month, facid). Alternatively, if we instead want all possible permutations of the columns we pass in, we can use CUBE rather than ROLLUP. This will produce (facid, month), (month), (facid), and ().
@@ -110,7 +111,7 @@ order by rank, surname, firstname;
 
 ## SQL Movie-Rating Query Exercises
 
-1.Find the titles of all movies directed by Steven Spielberg.
+1. Find the titles of all movies directed by Steven Spielberg.
 ```{,eval=FALSE,echo=TRUE}
 SELECT title
 from movie
@@ -134,9 +135,14 @@ WHERE m.mid not in (select distinct mid from rating)
 
 4. Some reviewers didn't provide a date with their rating. Find the names of all reviewers who have ratings with a NULL value for the date.
 ```{,eval=FALSE,echo=TRUE}
+/* USING JOIN */
 SELECT distinct name
 from rating join reviewer on rating.rid=reviewer.rid
 where ratingdate is null
+/* USING SUBQUERY */
+select re.name
+from reviewer re
+where re.rid in (select rid from rating where rating.ratingDate is NULL)
 ```
 
 5. Write a query to return the ratings data in a more readable format: reviewer name, movie title, stars, and ratingDate. Also, sort the data, first by reviewer name, then by movie title, and lastly by number of stars.

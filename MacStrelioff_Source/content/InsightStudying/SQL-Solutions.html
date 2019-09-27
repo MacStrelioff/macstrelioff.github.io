@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-27 09:40:33"
+date: "2019-09-27 11:42:21"
 output:
   blogdown::html_page:
     toc: true
@@ -102,6 +102,7 @@ order by rank, surname, firstname;</code></pre>
 <div id="other" class="section level3">
 <h3>Other</h3>
 <ul>
+<li><code>exists ([subquery])</code>: True if the subquery is not empty</li>
 <li><code>ROLLUP(facid,month)</code></li>
 </ul>
 <p><code>ROLLUP</code> produces a hierarchy of aggregations in the order passed into it: for example, ROLLUP(facid, month) outputs aggregations on (facid, month), (facid), and (). If we wanted an aggregation of all facilities for a month (instead of all months for a facility) we’d have to reverse the order, using ROLLUP(month, facid). Alternatively, if we instead want all possible permutations of the columns we pass in, we can use CUBE rather than ROLLUP. This will produce (facid, month), (month), (facid), and ().</p>
@@ -111,11 +112,11 @@ order by rank, surname, firstname;</code></pre>
 <h1>Stanford Lagunita Course</h1>
 <div id="sql-movie-rating-query-exercises" class="section level2">
 <h2>SQL Movie-Rating Query Exercises</h2>
-<p>1.Find the titles of all movies directed by Steven Spielberg.</p>
+<ol style="list-style-type: decimal">
+<li><p>Find the titles of all movies directed by Steven Spielberg.</p>
 <pre class="{,eval=false,echo=true}"><code>SELECT title
 from movie
-where director like &quot;Steven%&quot;</code></pre>
-<ol start="2" style="list-style-type: decimal">
+where director like &quot;Steven%&quot;</code></pre></li>
 <li><p>Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.</p>
 <pre class="{,eval=false,echo=true}"><code>select distinct m.year 
 from movie m
@@ -126,9 +127,14 @@ on m.mid=r.mid and r.stars&gt;=4</code></pre></li>
 FROM movie as m
 WHERE m.mid not in (select distinct mid from rating)</code></pre></li>
 <li><p>Some reviewers didn’t provide a date with their rating. Find the names of all reviewers who have ratings with a NULL value for the date.</p>
-<pre class="{,eval=false,echo=true}"><code>SELECT distinct name
+<pre class="{,eval=false,echo=true}"><code>/* USING JOIN */
+SELECT distinct name
 from rating join reviewer on rating.rid=reviewer.rid
-where ratingdate is null</code></pre></li>
+where ratingdate is null
+/* USING SUBQUERY */
+select re.name
+from reviewer re
+where re.rid in (select rid from rating where rating.ratingDate is NULL)</code></pre></li>
 <li><p>Write a query to return the ratings data in a more readable format: reviewer name, movie title, stars, and ratingDate. Also, sort the data, first by reviewer name, then by movie title, and lastly by number of stars.</p>
 <pre class="{,eval=false,echo=true}"><code>SELECT DISTINCT re.name,m.title,r.stars,r.ratingdate
 FROM rating r 
