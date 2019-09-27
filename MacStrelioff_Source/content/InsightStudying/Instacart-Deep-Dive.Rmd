@@ -140,13 +140,33 @@ Next steps
 - clear description of work and sharp Q&A
 
 
-# Technical Phone Interview
+# Technical Phone Interview (45-60 min)
 
-Interviewer: [Gregory Renner](https://www.linkedin.com/in/gregxrenner/)
+Interviewers: [Gregory Renner](https://www.linkedin.com/in/gregxrenner/), [Ben Knight](https://www.linkedin.com/in/benjamin-knight/)
+
+Gregory:
 
 - Growth team
 - Started on people analytics team
 - Previously: Airforce, stats teacher, optimization and operations research
+
+Ben: 
+
+- Project similar to my Insight project
+- Extensive SQL and stats training
+- Previously in navy
+
+### About past work
+
+1. Insight Project
+- Context: Startup focused on workspace collaboration
+- Problem: Only 20\% of users converted from a free trial to a subscription, client wanted to predict who would convert as early as possible
+- Data: daily counts of engagements with a product feature
+- Features: cumulative sums, divided by number of users in the account -- a measure of how much an account had engaged with a product feature since the account's creation. 
+- Approach: Classification problem, 
+- Result: Model achieved decent F1 score (don't remember number)
+
+
 
 
 ## Stats: 
