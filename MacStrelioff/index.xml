@@ -38,7 +38,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Fri, 27 Sep 2019 11:42:21 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 12:38:48 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>
@@ -93,6 +93,12 @@ LIMIT n [OFFSET m]&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;subqueries&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Subqueries&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;exists&lt;/code&gt; to get max mid from movie&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select m1.mid 
+from movie as m1
+where not exists (select * from movie m2 where m2.mid &amp;gt; m1.mid and m2.mid &amp;lt;&amp;gt; m1.mid)&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;aggregation-and-window&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Aggregation and window&lt;/h3&gt;
@@ -298,19 +304,11 @@ select avg(stars) as avg
 from rating as ra join movie m on ra.mid=m.mid
 group by ra.mid
 ))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
-&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
-from 
-(
-select ra.mid, m.title as title, avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-)
-where avg = (select min(avg) from (
-select avg(stars) as avg
-from rating as ra join movie m on ra.mid=m.mid
-group by ra.mid
-))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.) ```{,eval=FALSE,echo=TRUE} select title, avg from ( select ra.mid, m.title as title, avg(stars) as avg from rating as ra join movie m on ra.mid=m.mid group by ra.mid ) where avg = (select min(avg) from ( select avg(stars) as avg from rating as ra join movie m on ra.mid=m.mid group by ra.mid ))&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;/* Using having from Gina*/ SELECT mov.title, AVG(rat.stars) as mov_avg_rating FROM rating rat INNER JOIN movie mov ON mov.mID = rat.mID GROUP BY rat.mID HAVING mov_avg_rating = (SELECT MIN(sub1.avg_rating) as lowest_rating FROM (SELECT AVG(stars) as avg_rating FROM Rating GROUP BY mID) sub1)&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;ol start=&#34;12&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;For each director, return the director’s name together with the title(s) of the movie(s) they directed that received the highest rating among all of their movies, and the value of that rating. Ignore movies whose director is NULL.&lt;/p&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.director,m.title,max(ra.stars)
 from rating as ra

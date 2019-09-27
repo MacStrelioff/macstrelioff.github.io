@@ -68,6 +68,12 @@ select facid, total from (
 
 ### Subqueries
 
+- `exists` to get max mid from movie
+```{,eval=FALSE,echo=TRUE}
+select m1.mid 
+from movie as m1
+where not exists (select * from movie m2 where m2.mid > m1.mid and m2.mid <> m1.mid)
+```
 
 ### Aggregation and window
 
@@ -337,6 +343,15 @@ select avg(stars) as avg
 from rating as ra join movie m on ra.mid=m.mid
 group by ra.mid
 ))
+
+/* Using having from Gina*/
+SELECT mov.title, AVG(rat.stars) as mov_avg_rating
+FROM rating rat
+INNER JOIN movie mov ON mov.mID = rat.mID
+GROUP BY rat.mID
+HAVING mov_avg_rating = (SELECT MIN(sub1.avg_rating) as lowest_rating
+    FROM (SELECT AVG(stars) as avg_rating FROM Rating GROUP BY mID) sub1) 
+
 ```
 
 12. For each director, return the director's name together with the title(s) of the movie(s) they directed that received the highest rating among all of their movies, and the value of that rating. Ignore movies whose director is NULL.
