@@ -1,7 +1,7 @@
 ---
 title: "SQL Solutions"
 author: "Mac Strelioff"
-date: "2019-09-26 15:04:15"
+date: "2019-09-27 09:40:33"
 output:
   blogdown::html_page:
     toc: true
@@ -19,9 +19,11 @@ math: true
 <ul>
 <li><a href="#general-queries-and-tricks">General Queries and Tricks</a><ul>
 <li><a href="#window-functions">Window Functions</a></li>
+<li><a href="#subqueries">Subqueries</a></li>
 <li><a href="#aggregation-and-window">Aggregation and window</a></li>
 <li><a href="#formatting-and-strings">Formatting and Strings</a></li>
 <li><a href="#dates">Dates</a></li>
+<li><a href="#other">Other</a></li>
 </ul></li>
 <li><a href="#stanford-lagunita-course">Stanford Lagunita Course</a><ul>
 <li><a href="#sql-movie-rating-query-exercises">SQL Movie-Rating Query Exercises</a></li>
@@ -35,9 +37,6 @@ math: true
 
 <div id="general-queries-and-tricks" class="section level1">
 <h1>General Queries and Tricks</h1>
-<ul>
-<li>Below is a general template for generic queries;</li>
-</ul>
 <pre class="{,eval=false,echo=true}"><code>SELECT (column names to select) [AS (name for selection)]
 FROM (table to select from) 
 [INNER,LEFT,RIGHT,OUTTER] JOIN table2 
@@ -51,7 +50,7 @@ LIMIT n [OFFSET m]</code></pre>
 <div id="window-functions" class="section level3">
 <h3>Window Functions</h3>
 <p>General form:</p>
-<pre class="{,eval=false,echo=true}"><code>FUNCTION() OVER(PARTITION BY [grouping row] ORDER BY [ordering row] [DESC|ASC]) </code></pre>
+<pre class="{,eval=false,echo=true}"><code>WINDOW_FUNCTION() OVER(PARTITION BY [grouping row] ORDER BY [ordering row] [DESC|ASC]) </code></pre>
 <ul>
 <li>operate after the <code>where</code> clause and after aggregation</li>
 </ul>
@@ -64,16 +63,19 @@ LIMIT n [OFFSET m]</code></pre>
     where rank = 1</code></pre>
 <p><code>rank</code> skips tied numbers (1,1,3) while <code>dense_rank</code> does not (1,1,2).</p>
 </div>
+<div id="subqueries" class="section level3">
+<h3>Subqueries</h3>
+</div>
 <div id="aggregation-and-window" class="section level3">
 <h3>Aggregation and window</h3>
 <p>Q: Produce a list of members, along with the number of hours they’ve booked in facilities, rounded to the nearest ten hours. Rank them by this rounded figure, producing output of first name, surname, rounded hours, rank. Sort by rank, surname, and first name.</p>
 <pre class="{,eval=false,echo=true}"><code>select firstname, surname,
-    ((sum(bks.slots)+10)/20)*10 as hours,
-    rank() over (order by ((sum(bks.slots)+10)/20)*10 desc) as rank
-    from cd.bookings bks
-    inner join cd.members mems
-        on bks.memid = mems.memid
-    group by mems.memid
+    ((sum(b.slots)+10)/20)*10 as hours,
+    rank() over (order by ((sum(b.slots)+10)/20)*10 desc) as rank
+from cd.bookings b
+inner join cd.members m
+    on b.memid = m.memid
+group by m.memid
 order by rank, surname, firstname;</code></pre>
 </div>
 <div id="formatting-and-strings" class="section level3">
@@ -87,11 +89,22 @@ order by rank, surname, firstname;</code></pre>
 <li>Strip chars: <code>LEFT([string],[n to strip])</code></li>
 <li>Strip chars: <code>RIGHT([string],[n to strip])</code></li>
 <li>Strip chars: <code>SUBSTRING([string],[start idx],[end idx])</code></li>
-<li>Pad chard: <code>lpad(cast(zipcode as char(5)),5,'0')</code></li>
+<li>Pad chars: <code>lpad(cast(zipcode as char(5)),5,'0')</code></li>
 </ul>
 </div>
 <div id="dates" class="section level3">
 <h3>Dates</h3>
+<ul>
+<li>Extract from timestamp: <code>extract([month] from [timestamp])</code></li>
+<li>Truncate timestamp: <code>date_trunc(['year'],[timestamp])</code></li>
+</ul>
+</div>
+<div id="other" class="section level3">
+<h3>Other</h3>
+<ul>
+<li><code>ROLLUP(facid,month)</code></li>
+</ul>
+<p><code>ROLLUP</code> produces a hierarchy of aggregations in the order passed into it: for example, ROLLUP(facid, month) outputs aggregations on (facid, month), (facid), and (). If we wanted an aggregation of all facilities for a month (instead of all months for a facility) we’d have to reverse the order, using ROLLUP(month, facid). Alternatively, if we instead want all possible permutations of the columns we pass in, we can use CUBE rather than ROLLUP. This will produce (facid, month), (month), (facid), and ().</p>
 </div>
 </div>
 <div id="stanford-lagunita-course" class="section level1">
@@ -104,13 +117,10 @@ from movie
 where director like &quot;Steven%&quot;</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Find all years that have a movie that received a rating of 4 or 5, and sort them in increasing order.</p>
-<pre class="{,eval=false,echo=true}"><code>SELECT year
-FROM movie as m
-JOIN rating as r
-ON r.mid=m.mid
-WHERE r.stars&gt;=4
-GROUP BY title
-ORDER BY year</code></pre></li>
+<pre class="{,eval=false,echo=true}"><code>select distinct m.year 
+from movie m
+join rating r 
+on m.mid=r.mid and r.stars&gt;=4</code></pre></li>
 <li><p>Find the titles of all movies that have no ratings.</p>
 <pre class="{,eval=false,echo=true}"><code>SELECT distinct title
 FROM movie as m
