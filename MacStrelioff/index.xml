@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Fri, 27 Sep 2019 14:59:08 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 15:55:57 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -174,19 +174,38 @@
 &lt;div id=&#34;technical-phone-interview-45-60-min&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Technical Phone Interview (45-60 min)&lt;/h1&gt;
 &lt;p&gt;Interviewers: &lt;a href=&#34;https://www.linkedin.com/in/gregxrenner/&#34;&gt;Gregory Renner&lt;/a&gt;, &lt;a href=&#34;https://www.linkedin.com/in/benjamin-knight/&#34;&gt;Ben Knight&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;stats interview for around 15min&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;coding challenge on my own. should have email with link.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;shouldn’t need full hour..&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Gregory:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Growth team&lt;/li&gt;
 &lt;li&gt;Started on people analytics team&lt;/li&gt;
-&lt;li&gt;Previously: Airforce, stats teacher, optimization and operations research&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Previously: Airforce, stats teacher, optimization and operations research&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;retention&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Ben:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Project similar to my Insight project&lt;/li&gt;
 &lt;li&gt;Extensive SQL and stats training&lt;/li&gt;
-&lt;li&gt;Previously in navy&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Previously in navy&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;logistics team works to make sure shopper app is useful to the shopper&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- Questions --&gt;
+&lt;ul&gt;
+&lt;li&gt;first Q giving answer to two audiences;&lt;/li&gt;
+&lt;li&gt;basic/intermediate stats&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;audiance more lay audience&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;what is a p value&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;working on analysis&lt;/li&gt;
+&lt;li&gt;asked about analysis&lt;/li&gt;
+&lt;li&gt;they express concern at outliers could invalidate results&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;copy query and output into answer field then submit&lt;/p&gt;
+&lt;p&gt;select avg(case when rating = 5 then basket_size end) as “Avg basket size for 5 stars”, avg(case when rating &amp;lt; 5 then basket_size end) as “Avg basket size for &amp;lt;5 stars”, avg(case when rating is NULL then basket_size end) as “Avg basket size for NULL rating” from (select o.order_id as id, r.ratings as rating, o.basket_size as basket_size from orders as o left join ratings as r on r.order_id = o.order_id) as t1&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Stats tech stack? What methods do you use often?&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;

@@ -144,11 +144,20 @@ Next steps
 
 Interviewers: [Gregory Renner](https://www.linkedin.com/in/gregxrenner/), [Ben Knight](https://www.linkedin.com/in/benjamin-knight/)
 
+- stats interview for around 15min
+
+- coding challenge on my own. should have email with link. 
+
+- shouldn't need full hour.. 
+
+
 Gregory:
 
 - Growth team
 - Started on people analytics team
 - Previously: Airforce, stats teacher, optimization and operations research
+
+- retention
 
 Ben: 
 
@@ -156,7 +165,35 @@ Ben:
 - Extensive SQL and stats training
 - Previously in navy
 
+- logistics team works to make sure shopper app is useful to the shopper
+
+
+
 <!-- Questions -->
+
+- first Q giving answer to two audiences; 
+- basic/intermediate stats
+- audiance more lay audience
+
+- what is a p value
+
+- working on analysis
+- asked about analysis
+- they express concern at outliers could invalidate results
+- 
+
+copy query and output into answer field then submit
+
+select avg(case when rating = 5 then basket_size end) as "Avg basket size for 5 stars",
+       avg(case when rating < 5 then basket_size end) as "Avg basket size for <5 stars",
+       avg(case when rating is NULL then basket_size end) as "Avg basket size for NULL rating"
+from (select o.order_id as id, 
+       r.ratings as rating,
+       o.basket_size as basket_size
+from orders as o
+left join ratings as r 
+on r.order_id = o.order_id) as t1
+
 
 - Stats tech stack? What methods do you use often? 
 - 
