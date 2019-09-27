@@ -6,7 +6,7 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 13:59:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 14:59:08 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Fri, 27 Sep 2019 13:59:22 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 14:59:08 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Recruiter call “Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc”
@@ -24,7 +24,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Fri, 27 Sep 2019 12:38:48 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 14:42:58 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>General Queries and Tricks Window Functions Subqueries Aggregation and window Formatting and Strings Dates Other  Stanford Lagunita Course SQL Movie-Rating Query Exercises SQL Movie-Rating Query Exercises Extras SQL Social-Network Query Exercises SQL Social-Network Query Exercises Extras PG exercises, aggregates select problems    General Queries and Tricks SELECT (column names to select) [AS (name for selection)] FROM (table to select from) [INNER,LEFT,RIGHT,OUTTER] JOIN table2 ON [join keys and conditionals] WHERE (logical condition on rows) column = (value or subquery), OR column IN (list or subquery) GROUP BY (column[,column,.</description>

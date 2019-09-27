@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Fri, 27 Sep 2019 13:59:22 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 14:59:08 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -186,16 +186,21 @@
 &lt;li&gt;Extensive SQL and stats training&lt;/li&gt;
 &lt;li&gt;Previously in navy&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- Questions --&gt;
+&lt;ul&gt;
+&lt;li&gt;Stats tech stack? What methods do you use often?&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;about-past-work&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;About past work&lt;/h3&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Insight Project&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;Context: Startup focused on workspace collaboration, combined features of Google Docs with features of Github&lt;/li&gt;
-&lt;li&gt;Problem: Only 20% of users converted from a free trial to a subscription, client wanted to predict who would convert as early as possible&lt;/li&gt;
-&lt;li&gt;Data: daily counts of engagements with a product feature&lt;/li&gt;
-&lt;li&gt;Features: cumulative sums, divided by number of users in the account – a measure of how much an account had engaged with a product feature since the account’s creation.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Context: Startup focused on workspace collaboration, combined features of Google Docs with features of Github&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Problem: Only 20% of users converted from a free trial to a subscription, client wanted to predict who would convert as early as possible&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Data: daily counts of engagements with a product feature from an account&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Features: cumulative sums, divided by number of users in the account – a measure of how much an account had engaged with a product feature since the account’s creation.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Approach: Classification problem,&lt;/li&gt;
 &lt;li&gt;SMOTE to address class imbalance (around 20% didn’t convert)&lt;/li&gt;
 &lt;li&gt;F1 because of class imbalance and no particular preference for precision or recall..&lt;/li&gt;
@@ -203,16 +208,16 @@
 &lt;li&gt;because part of the use case for a model like this was to reach out to subscribers earlier on with different subscription tiers&lt;/li&gt;
 &lt;li&gt;so I might have used an &lt;span class=&#34;math inline&#34;&gt;\(F\beta\)&lt;/span&gt; score to upweight recall.&lt;/li&gt;
 &lt;li&gt;so I think in future projects I’d spend time linking the outcomes to some concrete value.&lt;/li&gt;
-&lt;li&gt;Also a little more time building an understanding of the users through something like a funnel analysis.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Also a little more time building an understanding of the users through something like a funnel analysis.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Result:&lt;/li&gt;
 &lt;li&gt;Overall I achieved decent F1 score (don’t remember number)&lt;/li&gt;
 &lt;li&gt;And my client was really happy.&lt;/li&gt;
-&lt;li&gt;The collaboration was really nice too – multiple teams were engaged in meetings and appreciated what I could deliver in two weeks.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The collaboration was really nice too – multiple teams were engaged in meetings and appreciated what I could deliver in two weeks.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.crazyegg.com/blog/ecommerce-conversion-funnel/&#34;&gt;conversion funnel&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User flow&lt;/li&gt;
-&lt;li&gt;Funnel, how many users take up each of more complex actions&lt;/li&gt;
+&lt;li&gt;Funnel, how many accounts have at least one user that took up each of more complex actions&lt;/li&gt;
 &lt;li&gt;Persistant use: how many users days in a row a user logs in&lt;/li&gt;
 &lt;li&gt;proportion of weekdays logged in&lt;/li&gt;
 &lt;/ul&gt;
@@ -758,7 +763,7 @@
     <item>
       <title>SQL Solutions</title>
       <link>/MacStrelioff/insightstudying/sql-solutions/</link>
-      <pubDate>Fri, 27 Sep 2019 12:38:48 +0000</pubDate>
+      <pubDate>Fri, 27 Sep 2019 14:42:58 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/sql-solutions/</guid>
       <description>
@@ -1024,11 +1029,26 @@ select avg(stars) as avg
 from rating as ra join movie m on ra.mid=m.mid
 group by ra.mid
 ))&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.) ```{,eval=FALSE,echo=TRUE} select title, avg from ( select ra.mid, m.title as title, avg(stars) as avg from rating as ra join movie m on ra.mid=m.mid group by ra.mid ) where avg = (select min(avg) from ( select avg(stars) as avg from rating as ra join movie m on ra.mid=m.mid group by ra.mid ))&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;/* Using having from Gina*/ SELECT mov.title, AVG(rat.stars) as mov_avg_rating FROM rating rat INNER JOIN movie mov ON mov.mID = rat.mID GROUP BY rat.mID HAVING mov_avg_rating = (SELECT MIN(sub1.avg_rating) as lowest_rating FROM (SELECT AVG(stars) as avg_rating FROM Rating GROUP BY mID) sub1)&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
-&lt;ol start=&#34;12&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Find the movie(s) with the lowest average rating. Return the movie title(s) and average rating. (Hint: This query may be more difficult to write in SQLite than other systems; you might think of it as finding the lowest average rating and then choosing the movie(s) with that average rating.)&lt;/p&gt;
+&lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select title, avg 
+from 
+(
+select ra.mid, m.title as title, avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+)
+where avg = (select min(avg) from (
+select avg(stars) as avg
+from rating as ra join movie m on ra.mid=m.mid
+group by ra.mid
+))
+/* Using having from Gina*/
+SELECT mov.title, AVG(rat.stars) as mov_avg_rating
+FROM rating rat
+INNER JOIN movie mov ON mov.mID = rat.mID
+GROUP BY rat.mID
+HAVING mov_avg_rating = (SELECT MIN(sub1.avg_rating) as lowest_rating
+FROM (SELECT AVG(stars) as avg_rating FROM Rating GROUP BY mID) sub1) &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;For each director, return the director’s name together with the title(s) of the movie(s) they directed that received the highest rating among all of their movies, and the value of that rating. Ignore movies whose director is NULL.&lt;/p&gt;
 &lt;pre class=&#34;{,eval=false,echo=true}&#34;&gt;&lt;code&gt;select distinct m.director,m.title,max(ra.stars)
 from rating as ra

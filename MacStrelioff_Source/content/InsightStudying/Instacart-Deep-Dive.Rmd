@@ -156,13 +156,22 @@ Ben:
 - Extensive SQL and stats training
 - Previously in navy
 
+<!-- Questions -->
+
+- Stats tech stack? What methods do you use often? 
+- 
+
 ### About past work
 
 1. Insight Project
 - Context: Startup focused on workspace collaboration, combined features of Google Docs with features of Github
+
 - Problem: Only 20\% of users converted from a free trial to a subscription, client wanted to predict who would convert as early as possible
-- Data: daily counts of engagements with a product feature
+
+- Data: daily counts of engagements with a product feature from an account
+
 - Features: cumulative sums, divided by number of users in the account -- a measure of how much an account had engaged with a product feature since the account's creation. 
+
 - Approach: Classification problem, 
 - SMOTE to address class imbalance (around 20\% didn't convert)
 - F1 because of class imbalance and no particular preference for precision or recall..
@@ -171,6 +180,7 @@ Ben:
 - so I might have used an $F\beta$ score to upweight recall.
 - so I think in future projects I'd spend time linking the outcomes to some concrete value. 
 - Also a little more time building an understanding of the users through something like a funnel analysis.
+
 - Result: 
 - Overall I achieved decent F1 score (don't remember number)
 - And my client was really happy. 
@@ -179,7 +189,7 @@ Ben:
 [conversion funnel](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
 
 - User flow
-- Funnel, how many users take up each of more complex actions
+- Funnel, how many accounts have at least one user that took up each of more complex actions
 - Persistant use: how many users days in a row a user logs in
 - proportion of weekdays logged in 
 
@@ -202,7 +212,7 @@ At yelp, for example, a user might be choosing restaurants based primarily on va
 
 
 
-### Framework 
+### Framework
 
 - Instacart delivers groceries online and on app
 
