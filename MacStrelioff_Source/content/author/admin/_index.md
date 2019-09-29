@@ -44,21 +44,23 @@ education:
 email: "macstrelioff@gmail.com"
 
 interests:
-- Applied Decision Theory
 - Causal Inference
+- Decision Theory
 - Experimentation
+- Statistical Learning
 ---
 
 <!-- Work goals and interests -->
 I’m interested in optimizing discovery and decision making processes. This lead me to pursue a PhD in an Experimental Psychology lab and a concurrent MS in Statistics. In graduate school, I designed experiments to investigate how context and feedback influence subsequent choices and developed statistical models to emulate and infer a person's decision making strategy.
 
-<!-- Interesting passion -->
-I am personally passionate about breaking down barriers by democratizing education. Along these lines, I maintain a [YouTube channel](https://www.youtube.com/channel/UC8KypaF6w6K0SO6KLvyst8w) that began as recordings of my lessons for students who couldn't attend lectures. 
-
 <!-- more interesting passion -->
 I also enjoy diving into new areas and learning new tools through consulting work and [hobby projects](https://macstrelioff.github.io/MacStrelioff/data-science/). 
 <!-- call to action -->
 I am constantly looking for new ways to apply my skills -- Feel free to [reach out](https://www.linkedin.com/in/macstrelioff/) if you have any opportunities!
+
+<!-- Interesting passion -->
+<!-- I am personally passionate about breaking down barriers by democratizing education. Along these lines, I maintain a [YouTube channel](https://www.youtube.com/channel/UC8KypaF6w6K0SO6KLvyst8w) that began as recordings of my lessons for students who couldn't attend lectures. 
+-->
 
 <!--
 old LI blurb
