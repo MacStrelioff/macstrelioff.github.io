@@ -167,8 +167,6 @@ Ben:
 
 - logistics team works to make sure shopper app is useful to the shopper
 
-
-
 <!-- Questions -->
 
 - first Q giving answer to two audiences; 
@@ -180,7 +178,6 @@ Ben:
 - working on analysis
 - asked about analysis
 - they express concern at outliers could invalidate results
-- 
 
 copy query and output into answer field then submit
 
@@ -194,9 +191,13 @@ from orders as o
 left join ratings as r 
 on r.order_id = o.order_id) as t1
 
-
 - Stats tech stack? What methods do you use often? 
-- 
+
+
+# Onsite
+
+great article on [experimentation and metrics](https://tech.instacart.com/it-all-depends-4bb7b22e854b)
+
 
 ### About past work
 
