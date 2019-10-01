@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Fri, 27 Sep 2019 15:55:57 +0000</pubDate>
+      <pubDate>Mon, 30 Sep 2019 20:12:29 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -201,13 +201,94 @@
 &lt;li&gt;&lt;p&gt;what is a p value&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;working on analysis&lt;/li&gt;
 &lt;li&gt;asked about analysis&lt;/li&gt;
-&lt;li&gt;they express concern at outliers could invalidate results&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;they express concern at outliers could invalidate results&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;copy query and output into answer field then submit&lt;/p&gt;
 &lt;p&gt;select avg(case when rating = 5 then basket_size end) as “Avg basket size for 5 stars”, avg(case when rating &amp;lt; 5 then basket_size end) as “Avg basket size for &amp;lt;5 stars”, avg(case when rating is NULL then basket_size end) as “Avg basket size for NULL rating” from (select o.order_id as id, r.ratings as rating, o.basket_size as basket_size from orders as o left join ratings as r on r.order_id = o.order_id) as t1&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Stats tech stack? What methods do you use often?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;onsite&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Onsite&lt;/h1&gt;
+&lt;p&gt;great article on &lt;a href=&#34;https://tech.instacart.com/it-all-depends-4bb7b22e854b&#34;&gt;experimentation and metrics&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;notes&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;hiring in customer, performance (incentive structures, …), and ads&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- Questions --&gt;
+&lt;ul&gt;
+&lt;li&gt;prep for the project?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;pandas, SQL to pull data, stats in Python, other packages, … ?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;in practice, how are funnels constructed&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Salary talk with Charlene? She said she’d bring it up at the onsite.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;feedback from phone screens&lt;/li&gt;
+&lt;li&gt;Brett liked framework, clarity of thought, how I broke problem down. Sould tell I have solid background in experimental / causal inference.&lt;/li&gt;
+&lt;li&gt;Improvement:&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;clear I didn’t have product experience, lacked vocabulary to talk about problem&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;talking about retention, churn without using those terms / tieing it to a problem solving framework.&lt;/li&gt;
+&lt;li&gt;today / tomorrow, try to read blogs/articles on (not giving much away) - look for product management interview prep materials. Try to find articles on growth mindset, acquisition strategies, retention, things related to how we make a product grow / be profitable.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;If I have app downloaded, think about user experience, painpoints, with mindset of how the company should think about it, what’s important to measure, observe, … .&lt;/li&gt;
+&lt;li&gt;startup growth blogs&lt;/li&gt;
+&lt;li&gt;tradeoffs betweeen acquisition, retention, ROI, cost per acquisition, incremental gains and costs, …&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;second thing: clear experimentation was my strong suit, might have gone into it a little too fast.&lt;/li&gt;
+&lt;li&gt;didn’t articulate problem, break it down, … .&lt;/li&gt;
+&lt;li&gt;simple things first (segmentation, funnel, .. )&lt;/li&gt;
+&lt;li&gt;breaking down metrics&lt;/li&gt;
+&lt;li&gt;want to make sure to identify root cause in question before designing an experiment.&lt;/li&gt;
+&lt;li&gt;this prevents doing a bunch of experiments that go nowhere&lt;/li&gt;
+&lt;li&gt;MECE: a consulting guideline for a framework. Frameworks should be composed of small parts that are mutually exclusive and collectively exhaustive.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Break problem down into little hypotheses.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;stats focused on experimentation&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;problem solving are focues on product&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;project, think of it as a condensed data challenge&lt;/li&gt;
+&lt;li&gt;should be able to use any or all of those tools (SQL, Python, R)&lt;/li&gt;
+&lt;li&gt;again think about framework and execution time&lt;/li&gt;
+&lt;li&gt;make sure data manipulation skills are on point&lt;/li&gt;
+&lt;li&gt;not like a ML exercise&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;trying to get signal on day to day skills I’ll need&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;roles more focused on product analytics&lt;/li&gt;
+&lt;li&gt;dashboards, metrics&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;product focused role, heavily on experimentation and CI&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;bottom line drives what you work on, …&lt;/li&gt;
+&lt;li&gt;fulfillment side, focusing on how to properly staff the demand.&lt;/li&gt;
+&lt;li&gt;enought people to work?&lt;/li&gt;
+&lt;li&gt;the people working have work available?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;best people get work more easily?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;customer/growth&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;how can we get people to place first, second ,… orders?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;nobody on interview list on ads team.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ads: make sure we show right ads to right people and getting most profit out of that exposure.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;p’s : priority&lt;/li&gt;
+&lt;li&gt;SLA: service level agreements.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;top priority: increase number of new activations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;do food items on signup screen increase clickthrough or conversion?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;can we predict retention or churn?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Most projects had a monetary amount in the results section&lt;/li&gt;
+&lt;li&gt;cost per acquisition&lt;/li&gt;
+&lt;li&gt;lifetime value&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;context&lt;/li&gt;
+&lt;li&gt;hypothesis&lt;/li&gt;
+&lt;li&gt;population&lt;/li&gt;
+&lt;li&gt;conditions&lt;/li&gt;
+&lt;li&gt;methods&lt;/li&gt;
+&lt;li&gt;results&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;next steps&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prep&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Prep:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Instacart conversion funnel&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Instacart repeat user patterns&lt;/li&gt;
+&lt;li&gt;what would grow repeat users?&lt;/li&gt;
+&lt;li&gt;what would grop user acquisition?&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;about-past-work&#34; class=&#34;section level3&#34;&gt;
@@ -251,6 +332,7 @@
 &lt;li&gt;Value add: Could maybe be useful for inferring user types if we can specify certain users.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings. - More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;stats&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Stats:&lt;/h2&gt;

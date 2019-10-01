@@ -1,7 +1,7 @@
 ---
 title: "Instacart Notes"
 author: "Mac Strelioff"
-date: "2019-09-27 15:55:57"
+date: "2019-09-30 20:12:29"
 menu:
   InsightStudying:
     parent: Foundations
@@ -169,13 +169,94 @@ linktitle: Instacart Deep Dive
 <li><p>what is a p value</p></li>
 <li>working on analysis</li>
 <li>asked about analysis</li>
-<li>they express concern at outliers could invalidate results</li>
-<li></li>
+<li><p>they express concern at outliers could invalidate results</p></li>
 </ul>
 <p>copy query and output into answer field then submit</p>
 <p>select avg(case when rating = 5 then basket_size end) as “Avg basket size for 5 stars”, avg(case when rating &lt; 5 then basket_size end) as “Avg basket size for &lt;5 stars”, avg(case when rating is NULL then basket_size end) as “Avg basket size for NULL rating” from (select o.order_id as id, r.ratings as rating, o.basket_size as basket_size from orders as o left join ratings as r on r.order_id = o.order_id) as t1</p>
 <ul>
 <li>Stats tech stack? What methods do you use often?</li>
+</ul>
+</div>
+<div id="onsite" class="section level1">
+<h1>Onsite</h1>
+<p>great article on <a href="https://tech.instacart.com/it-all-depends-4bb7b22e854b">experimentation and metrics</a></p>
+<div id="notes" class="section level3">
+<h3>Notes</h3>
+<ul>
+<li>hiring in customer, performance (incentive structures, …), and ads</li>
+</ul>
+<!-- Questions -->
+<ul>
+<li>prep for the project?</li>
+<li><p>pandas, SQL to pull data, stats in Python, other packages, … ?</p></li>
+<li><p>in practice, how are funnels constructed</p></li>
+<li><p>Salary talk with Charlene? She said she’d bring it up at the onsite.</p></li>
+<li>feedback from phone screens</li>
+<li>Brett liked framework, clarity of thought, how I broke problem down. Sould tell I have solid background in experimental / causal inference.</li>
+<li>Improvement:</li>
+<li><ul>
+<li>clear I didn’t have product experience, lacked vocabulary to talk about problem</li>
+</ul></li>
+<li>talking about retention, churn without using those terms / tieing it to a problem solving framework.</li>
+<li>today / tomorrow, try to read blogs/articles on (not giving much away) - look for product management interview prep materials. Try to find articles on growth mindset, acquisition strategies, retention, things related to how we make a product grow / be profitable.</li>
+<li></li>
+<li>If I have app downloaded, think about user experience, painpoints, with mindset of how the company should think about it, what’s important to measure, observe, … .</li>
+<li>startup growth blogs</li>
+<li>tradeoffs betweeen acquisition, retention, ROI, cost per acquisition, incremental gains and costs, …</li>
+<li></li>
+<li>second thing: clear experimentation was my strong suit, might have gone into it a little too fast.</li>
+<li>didn’t articulate problem, break it down, … .</li>
+<li>simple things first (segmentation, funnel, .. )</li>
+<li>breaking down metrics</li>
+<li>want to make sure to identify root cause in question before designing an experiment.</li>
+<li>this prevents doing a bunch of experiments that go nowhere</li>
+<li>MECE: a consulting guideline for a framework. Frameworks should be composed of small parts that are mutually exclusive and collectively exhaustive.</li>
+<li><p>Break problem down into little hypotheses.</p></li>
+<li>stats focused on experimentation</li>
+<li><p>problem solving are focues on product</p></li>
+<li>project, think of it as a condensed data challenge</li>
+<li>should be able to use any or all of those tools (SQL, Python, R)</li>
+<li>again think about framework and execution time</li>
+<li>make sure data manipulation skills are on point</li>
+<li>not like a ML exercise</li>
+<li><p>trying to get signal on day to day skills I’ll need</p></li>
+<li>roles more focused on product analytics</li>
+<li>dashboards, metrics</li>
+<li><p>product focused role, heavily on experimentation and CI</p></li>
+<li>bottom line drives what you work on, …</li>
+<li>fulfillment side, focusing on how to properly staff the demand.</li>
+<li>enought people to work?</li>
+<li>the people working have work available?</li>
+<li><p>best people get work more easily?</p></li>
+<li>customer/growth</li>
+<li><p>how can we get people to place first, second ,… orders?</p></li>
+<li>nobody on interview list on ads team.</li>
+<li><p>ads: make sure we show right ads to right people and getting most profit out of that exposure.</p></li>
+<li>p’s : priority</li>
+<li>SLA: service level agreements.</li>
+<li><p>top priority: increase number of new activations</p></li>
+<li>do food items on signup screen increase clickthrough or conversion?</li>
+<li><p>can we predict retention or churn?</p></li>
+<li>Most projects had a monetary amount in the results section</li>
+<li>cost per acquisition</li>
+<li>lifetime value</li>
+<li></li>
+<li>context</li>
+<li>hypothesis</li>
+<li>population</li>
+<li>conditions</li>
+<li>methods</li>
+<li>results</li>
+<li><p>next steps</p></li>
+</ul>
+</div>
+<div id="prep" class="section level2">
+<h2>Prep:</h2>
+<ul>
+<li><p>Instacart conversion funnel</p></li>
+<li>Instacart repeat user patterns</li>
+<li>what would grow repeat users?</li>
+<li>what would grop user acquisition?</li>
 <li></li>
 </ul>
 <div id="about-past-work" class="section level3">
@@ -219,6 +300,7 @@ linktitle: Instacart Deep Dive
 <li>Value add: Could maybe be useful for inferring user types if we can specify certain users.</li>
 </ul>
 <p>At yelp, for example, a user might be choosing restaurants based primarily on value, then shift to preferring restaurants based on rating. An analogous modeling approach might be able to detect, in near real time, the features that are driving an individual user’s decisions. This informaiton could then be used to modify search rankings. - More specifically, model click probability as a function of value and stars, estimate the coefficients online, and use the coefficients to prioritize these features in rankings.</p>
+</div>
 </div>
 <div id="stats" class="section level2">
 <h2>Stats:</h2>

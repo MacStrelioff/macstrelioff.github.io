@@ -270,7 +270,6 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - top priority: increase number of new activations
 
 
-
 - do food items on signup screen increase clickthrough or conversion? 
 - can we predict retention or churn? 
 
