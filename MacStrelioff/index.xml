@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Tue, 01 Oct 2019 10:58:44 +0000</pubDate>
+      <pubDate>Tue, 01 Oct 2019 11:33:50 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -224,7 +224,7 @@
 &lt;li&gt;&lt;p&gt;in practice, how are funnels constructed&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Salary talk with Charlene? She said she’d bring it up at the onsite.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;feedback from phone screens&lt;/li&gt;
-&lt;li&gt;Brett liked framework, clarity of thought, how I broke problem down. Sould tell I have solid background in experimental / causal inference.&lt;/li&gt;
+&lt;li&gt;Brett liked framework, clarity of thought, how I broke problem down. Could tell I have solid background in experimental / causal inference.&lt;/li&gt;
 &lt;li&gt;Improvement:&lt;/li&gt;
 &lt;li&gt;&lt;ul&gt;
 &lt;li&gt;clear I didn’t have product experience, lacked vocabulary to talk about problem&lt;/li&gt;
@@ -287,6 +287,7 @@
 &lt;li&gt;what would grow repeat users?&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;what would grop user acquisition?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;for some metrics and models in production at instacart, see &lt;a href=&#34;https://www.youtube.com/watch?v=7PBM_sAvMPA&#34;&gt;this video&lt;/a&gt; at 5:01.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;my-unique-value-ads&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;My unique value ads&lt;/h2&gt;

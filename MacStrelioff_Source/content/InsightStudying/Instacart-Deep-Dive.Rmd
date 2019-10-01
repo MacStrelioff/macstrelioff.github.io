@@ -199,12 +199,9 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 
 ### Notes
 
-
 - hiring in customer, performance (incentive structures, ...), and ads
 
-
 <!-- Questions -->
-
 
 - prep for the project? 
 - pandas, SQL to pull data, stats in Python, other packages, ... ? 
@@ -214,10 +211,8 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - Salary talk with Charlene? She said she'd bring it up at the onsite. 
 
 
-
-
 - feedback from phone screens
-- Brett liked framework, clarity of thought, how I broke problem down. Sould tell I have solid background in experimental / causal inference. 
+- Brett liked framework, clarity of thought, how I broke problem down. Could tell I have solid background in experimental / causal inference. 
 - Improvement: 
 - - clear I didn't have product experience, lacked vocabulary to talk about problem 
 - talking about retention, churn without using those terms / tieing it to a problem solving framework. 
@@ -291,6 +286,8 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - Instacart repeat user patterns
 - what would grow repeat users? 
 - what would grop user acquisition? 
+
+for some metrics and models in production at instacart, see [this video](https://www.youtube.com/watch?v=7PBM_sAvMPA) at 5:01.
 
 ## My unique value ads
 
