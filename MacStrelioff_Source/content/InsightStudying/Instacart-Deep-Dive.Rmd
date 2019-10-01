@@ -200,14 +200,51 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 ### Notes
 
 
+- hiring in customer, performance (incentive structures, ...), and ads
+
+
+<!-- Questions -->
+
+
+- prep for the project? 
+- pandas, SQL to pull data, stats in Python, other packages, ... ? 
+
+- in practice, how are funnels constructed
+
+- Salary talk with Charlene? She said she'd bring it up at the onsite. 
 
 
 
+- feedback from phone screens
+- Brett liked framework, clarity of thought, how I broke problem down. Sould tell I have solid background in experimental / causal inference. 
+- Improvement: 
+- - clear I didn't have product experience, lacked vocabulary to talk about problem 
+- talking about retention, churn without using those terms / tieing it to a problem solving framework. 
+- today / tomorrow, try to read blogs/articles on (not giving much away) - look for product management interview prep materials. Try to find articles on growth mindset, acquisition strategies, retention, things related to how we make a product grow / be profitable. 
+- 
+- If I have app downloaded, think about user experience, painpoints, with mindset of how the company should think about it, what's important to measure, observe, ... . 
+- startup growth blogs
+- tradeoffs betweeen acquisition, retention, ROI, cost per acquisition, incremental gains and costs, ...
+- 
+- second thing: clear experimentation was my strong suit, might have gone into it a little too fast. 
+- didn't articulate problem, break it down, ... .
+- simple things first (segmentation, funnel, .. )
+- breaking down metrics
+- want to make sure to identify root cause in question before designing an experiment.
+- this prevents doing a bunch of experiments that go nowhere
+- MECE: a consulting guideline for a framework. Frameworks should be composed of small parts that are mutually exclusive and collectively exhaustive. 
+- Break problem down into little hypotheses.
+- 
 
 
 
+- stats focused on experimentation
+- problem solving are focues on product
 
-
+- project, think of it as a condensed data challenge
+- should be able to use any or all of those tools (SQL, Python, R)
+- again think about framework and execution time
+- 
 
 
 
