@@ -215,6 +215,7 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 
 
 
+
 - feedback from phone screens
 - Brett liked framework, clarity of thought, how I broke problem down. Sould tell I have solid background in experimental / causal inference. 
 - Improvement: 
@@ -234,28 +235,68 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - this prevents doing a bunch of experiments that go nowhere
 - MECE: a consulting guideline for a framework. Frameworks should be composed of small parts that are mutually exclusive and collectively exhaustive. 
 - Break problem down into little hypotheses.
-- 
-
 
 
 - stats focused on experimentation
 - problem solving are focues on product
 
+
 - project, think of it as a condensed data challenge
 - should be able to use any or all of those tools (SQL, Python, R)
 - again think about framework and execution time
+- make sure data manipulation skills are on point
+- not like a ML exercise
+- trying to get signal on day to day skills I'll need
+
+
+- roles more focused on product analytics
+- dashboards, metrics
+- product focused role, heavily on experimentation and CI
+
+- bottom line drives what you work on, ... 
+- fulfillment side, focusing on how to properly staff the demand. 
+- enought people to work? 
+- the people working have work available? 
+- best people get work more easily? 
+
+- customer/growth
+- how can we get people to place first, second ,... orders?
+
+- nobody on interview list on ads team.
+- ads: make sure we show right ads to right people and getting most profit out of that exposure.
+
+- p's : priority
+- SLA: service level agreements.
+- top priority: increase number of new activations
+
+
+
+- do food items on signup screen increase clickthrough or conversion? 
+- can we predict retention or churn? 
+
+- Most projects had a monetary amount in the results section
+- cost per acquisition
+- lifetime value
 - 
 
+- context
+- hypothesis
+- population
+- conditions
+- methods
+- results
+- next steps
 
 
 
+## Prep: 
 
+- Instacart conversion funnel
 
-
-
-
-
-
+- Instacart repeat user patterns
+- what would grow repeat users? 
+- what would grop user acquisition? 
+- 
 
 
 
