@@ -197,6 +197,33 @@ on r.order_id = o.order_id) as t1
 
 great article on [experimentation and metrics](https://tech.instacart.com/it-all-depends-4bb7b22e854b)
 
+### Notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### About past work
 
