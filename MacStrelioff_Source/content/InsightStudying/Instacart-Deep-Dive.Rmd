@@ -210,7 +210,6 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 
 - Salary talk with Charlene? She said she'd bring it up at the onsite. 
 
-
 - feedback from phone screens
 - Brett liked framework, clarity of thought, how I broke problem down. Could tell I have solid background in experimental / causal inference. 
 - Improvement: 
@@ -220,7 +219,7 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 
 - If I have app downloaded, think about user experience, painpoints, with mindset of how the company should think about it, what's important to measure, observe, ... . 
 - startup growth blogs
-- tradeoffs betweeen acquisition, retention, ROI, cost per acquisition, incremental gains and costs, ...
+- tradeoffs between acquisition, retention, ROI, cost per acquisition, incremental gains and costs, ...
 
 - second thing: clear experimentation was my strong suit, might have gone into it a little too fast. 
 - didn't articulate problem, break it down, ... .
