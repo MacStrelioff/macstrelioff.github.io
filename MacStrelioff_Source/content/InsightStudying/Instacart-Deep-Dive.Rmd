@@ -295,9 +295,31 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - Instacart repeat user patterns
 - what would grow repeat users? 
 - what would grop user acquisition? 
-- 
+
+## My unique value ads
+
+Preference for high divergance outcome distributions:
+
+- Project on choosing rooms with gambles with high divergance. 
+- At Instacart, this would be like a higher probability of picking stores with more variety in their items. In an extreme case, imagina a bananna store with all different kinds of banannas, versus a typical Safeway which has some banannas along with lots of other kinds of items too.
+- At Instacart, it could also be shoppers chosing to log in 
+
+Paradox of choice and decision fatigue;
+
+- Customers and multiattribute decision making;
+- Decision fatigue and heuristics: Lots of stores, lots of similar products within stores
+- Maximizing search efficiency: In the search area, could cluster items by similarity -- stack 'bananna' cards, ... .
+- Maximizing entropy in item types: In the discovery area, could organize items by dissimilarity so that a person doesn't need to scoll past 3 banannas 2 avacados, ... . Instead they see a variety of items throughout their scrolling. 
+
+Cues and impulsivity: 
+
+- Chose between smaller, sooner amounts and larger, later amounts
+- Associated a cue with money
+- Hypothesized that the association with money would increase the 'incentive salience' of money which would induce impulsive behavior -- i.e. invrease the value of money. 
+- At Instacart, this would be like an image of food on the signup page inducing a higher proportion of homepage conversions. 
 
 
+- Shoppers and deciding when to work: Studies with taxi drivers shows that they work until they make a certain amount of money, rather than working more during peak hours and less during times of low demand. How would this play out in Instacart markets?
 
 
 

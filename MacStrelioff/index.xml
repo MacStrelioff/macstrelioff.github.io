@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Mon, 30 Sep 2019 20:12:29 +0000</pubDate>
+      <pubDate>Tue, 01 Oct 2019 08:53:35 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -288,8 +288,31 @@
 &lt;li&gt;&lt;p&gt;Instacart conversion funnel&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Instacart repeat user patterns&lt;/li&gt;
 &lt;li&gt;what would grow repeat users?&lt;/li&gt;
-&lt;li&gt;what would grop user acquisition?&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;what would grop user acquisition?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;my-unique-value-ads&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;My unique value ads&lt;/h2&gt;
+&lt;p&gt;Preference for high divergance outcome distributions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Project on choosing rooms with gambles with high divergance.&lt;/li&gt;
+&lt;li&gt;At Instacart, this would be like a higher probability of picking stores with more variety in their items. In an extreme case, imagina a bananna store with all different kinds of banannas, versus a typical Safeway which has some banannas along with lots of other kinds of items too.&lt;/li&gt;
+&lt;li&gt;At Instacart, it could also be shoppers chosing to log in&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Paradox of choice and decision fatigue;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Customers and multiattribute decision making;&lt;/li&gt;
+&lt;li&gt;Decision fatigue and heuristics: Lots of stores, lots of similar products within stores&lt;/li&gt;
+&lt;li&gt;Maximizing search efficiency: In the search area, could cluster items by similarity – stack ‘bananna’ cards, … .&lt;/li&gt;
+&lt;li&gt;Maximizing entropy in item types: In the discovery area, could organize items by dissimilarity so that a person doesn’t need to scoll past 3 banannas 2 avacados, … . Instead they see a variety of items throughout their scrolling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cues and impulsivity:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chose between smaller, sooner amounts and larger, later amounts&lt;/li&gt;
+&lt;li&gt;Associated a cue with money&lt;/li&gt;
+&lt;li&gt;Hypothesized that the association with money would increase the ‘incentive salience’ of money which would induce impulsive behavior – i.e. invrease the value of money.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At Instacart, this would be like an image of food on the signup page inducing a higher proportion of homepage conversions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Shoppers and deciding when to work: Studies with taxi drivers shows that they work until they make a certain amount of money, rather than working more during peak hours and less during times of low demand. How would this play out in Instacart markets?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;about-past-work&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;About past work&lt;/h3&gt;
