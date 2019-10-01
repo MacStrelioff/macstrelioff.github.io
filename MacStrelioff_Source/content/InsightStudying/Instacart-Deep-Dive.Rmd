@@ -222,11 +222,11 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - - clear I didn't have product experience, lacked vocabulary to talk about problem 
 - talking about retention, churn without using those terms / tieing it to a problem solving framework. 
 - today / tomorrow, try to read blogs/articles on (not giving much away) - look for product management interview prep materials. Try to find articles on growth mindset, acquisition strategies, retention, things related to how we make a product grow / be profitable. 
-- 
+
 - If I have app downloaded, think about user experience, painpoints, with mindset of how the company should think about it, what's important to measure, observe, ... . 
 - startup growth blogs
 - tradeoffs betweeen acquisition, retention, ROI, cost per acquisition, incremental gains and costs, ...
-- 
+
 - second thing: clear experimentation was my strong suit, might have gone into it a little too fast. 
 - didn't articulate problem, break it down, ... .
 - simple things first (segmentation, funnel, .. )
@@ -236,10 +236,8 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - MECE: a consulting guideline for a framework. Frameworks should be composed of small parts that are mutually exclusive and collectively exhaustive. 
 - Break problem down into little hypotheses.
 
-
 - stats focused on experimentation
 - problem solving are focues on product
-
 
 - project, think of it as a condensed data challenge
 - should be able to use any or all of those tools (SQL, Python, R)
@@ -247,7 +245,6 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - make sure data manipulation skills are on point
 - not like a ML exercise
 - trying to get signal on day to day skills I'll need
-
 
 - roles more focused on product analytics
 - dashboards, metrics
@@ -276,7 +273,6 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - Most projects had a monetary amount in the results section
 - cost per acquisition
 - lifetime value
-- 
 
 - context
 - hypothesis
@@ -304,24 +300,63 @@ Preference for high divergance outcome distributions:
 - At Instacart, this would be like a higher probability of picking stores with more variety in their items. In an extreme case, imagina a bananna store with all different kinds of banannas, versus a typical Safeway which has some banannas along with lots of other kinds of items too.
 - At Instacart, it could also be shoppers chosing to log in 
 
-Paradox of choice and decision fatigue;
+Paradox of choice and decision fatigue, and statistics people use to simplify decisions;
 
 - Customers and multiattribute decision making;
 - Decision fatigue and heuristics: Lots of stores, lots of similar products within stores
+- Come up with a way of presenting the items that is consistent with the heuristics people might be using to make simple decisions when there are many options. (show price information, quantity information, other helpful statistics -- maybe neutritional information?)
 - Maximizing search efficiency: In the search area, could cluster items by similarity -- stack 'bananna' cards, ... .
 - Maximizing entropy in item types: In the discovery area, could organize items by dissimilarity so that a person doesn't need to scoll past 3 banannas 2 avacados, ... . Instead they see a variety of items throughout their scrolling. 
+- Some users might care a lot about neutritional informaiton, so making that accessible on demand could be a huge value add of instacart versus other options, even including actually going to the store (since neutrition info isn't accessible on some in store items). 
 
 Cues and impulsivity: 
 
 - Chose between smaller, sooner amounts and larger, later amounts
 - Associated a cue with money
 - Hypothesized that the association with money would increase the 'incentive salience' of money which would induce impulsive behavior -- i.e. invrease the value of money. 
+- At a summer internship the company found that having a dark background and an image of a padlocklock reduced dropoff on a page that asked for credit card information. 
 - At Instacart, this would be like an image of food on the signup page inducing a higher proportion of homepage conversions. 
 
+- cues as something people use to simplify decisions
 
 - Shoppers and deciding when to work: Studies with taxi drivers shows that they work until they make a certain amount of money, rather than working more during peak hours and less during times of low demand. How would this play out in Instacart markets?
 
+- Decoy effects and subscription plans; 
+- features: price and number of free deliveries
+- having a similar but inferior option can shift users towards the superior similar option
 
+
+- Personalization -- what kind of food will most entice this person? 
+- Time of day, source to page? 
+
+- Showing an image of a juicy burger to a vegetarian, or a bag of chips to someone on a diet, might result in a lost conversion. 
+- 
+
+### Lunch; 
+
+Fun hobby projects; 
+
+- Prediction market prices
+- Scraping data from predictit
+- Writing code to trade / text us when there's opportunities
+- Sportsbook -- using a 'free bet' to get free money. 
+
+
+
+### Salary
+
+- Range sounded good.
+- Depends on feedback from the interview and timing of pipelines with other companies.
+- I like Instacart a lot, I like the kinds of problems, I like the people, I like the kind of data, ...
+- So if I was offered something in the Sr. DS range now, I'd probably pull out of other interview pipelines and accept.
+
+- Are salaries dependent on the team?
+- Bonuses?
+- Structure of raises and promotions?
+- How long do employees typically spend in each level (DS, Sr., Staff)?
+- Is more equity offered after 4 years?
+- Other components of the offer?
+- When is Instacart aiming to IPO?
 
 
 ### About past work

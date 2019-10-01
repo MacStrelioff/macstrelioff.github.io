@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Tue, 01 Oct 2019 08:53:35 +0000</pubDate>
+      <pubDate>Tue, 01 Oct 2019 10:58:44 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -230,12 +230,10 @@
 &lt;li&gt;clear I didn’t have product experience, lacked vocabulary to talk about problem&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;talking about retention, churn without using those terms / tieing it to a problem solving framework.&lt;/li&gt;
-&lt;li&gt;today / tomorrow, try to read blogs/articles on (not giving much away) - look for product management interview prep materials. Try to find articles on growth mindset, acquisition strategies, retention, things related to how we make a product grow / be profitable.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;today / tomorrow, try to read blogs/articles on (not giving much away) - look for product management interview prep materials. Try to find articles on growth mindset, acquisition strategies, retention, things related to how we make a product grow / be profitable.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;If I have app downloaded, think about user experience, painpoints, with mindset of how the company should think about it, what’s important to measure, observe, … .&lt;/li&gt;
 &lt;li&gt;startup growth blogs&lt;/li&gt;
-&lt;li&gt;tradeoffs betweeen acquisition, retention, ROI, cost per acquisition, incremental gains and costs, …&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tradeoffs betweeen acquisition, retention, ROI, cost per acquisition, incremental gains and costs, …&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;second thing: clear experimentation was my strong suit, might have gone into it a little too fast.&lt;/li&gt;
 &lt;li&gt;didn’t articulate problem, break it down, … .&lt;/li&gt;
 &lt;li&gt;simple things first (segmentation, funnel, .. )&lt;/li&gt;
@@ -271,8 +269,7 @@
 &lt;li&gt;&lt;p&gt;can we predict retention or churn?&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Most projects had a monetary amount in the results section&lt;/li&gt;
 &lt;li&gt;cost per acquisition&lt;/li&gt;
-&lt;li&gt;lifetime value&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;lifetime value&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;context&lt;/li&gt;
 &lt;li&gt;hypothesis&lt;/li&gt;
 &lt;li&gt;population&lt;/li&gt;
@@ -299,21 +296,58 @@
 &lt;li&gt;At Instacart, this would be like a higher probability of picking stores with more variety in their items. In an extreme case, imagina a bananna store with all different kinds of banannas, versus a typical Safeway which has some banannas along with lots of other kinds of items too.&lt;/li&gt;
 &lt;li&gt;At Instacart, it could also be shoppers chosing to log in&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Paradox of choice and decision fatigue;&lt;/p&gt;
+&lt;p&gt;Paradox of choice and decision fatigue, and statistics people use to simplify decisions;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Customers and multiattribute decision making;&lt;/li&gt;
 &lt;li&gt;Decision fatigue and heuristics: Lots of stores, lots of similar products within stores&lt;/li&gt;
+&lt;li&gt;Come up with a way of presenting the items that is consistent with the heuristics people might be using to make simple decisions when there are many options. (show price information, quantity information, other helpful statistics – maybe neutritional information?)&lt;/li&gt;
 &lt;li&gt;Maximizing search efficiency: In the search area, could cluster items by similarity – stack ‘bananna’ cards, … .&lt;/li&gt;
 &lt;li&gt;Maximizing entropy in item types: In the discovery area, could organize items by dissimilarity so that a person doesn’t need to scoll past 3 banannas 2 avacados, … . Instead they see a variety of items throughout their scrolling.&lt;/li&gt;
+&lt;li&gt;Some users might care a lot about neutritional informaiton, so making that accessible on demand could be a huge value add of instacart versus other options, even including actually going to the store (since neutrition info isn’t accessible on some in store items).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Cues and impulsivity:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Chose between smaller, sooner amounts and larger, later amounts&lt;/li&gt;
 &lt;li&gt;Associated a cue with money&lt;/li&gt;
 &lt;li&gt;Hypothesized that the association with money would increase the ‘incentive salience’ of money which would induce impulsive behavior – i.e. invrease the value of money.&lt;/li&gt;
+&lt;li&gt;At a summer internship the company found that having a dark background and an image of a padlocklock reduced dropoff on a page that asked for credit card information.&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;At Instacart, this would be like an image of food on the signup page inducing a higher proportion of homepage conversions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cues as something people use to simplify decisions&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Shoppers and deciding when to work: Studies with taxi drivers shows that they work until they make a certain amount of money, rather than working more during peak hours and less during times of low demand. How would this play out in Instacart markets?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Decoy effects and subscription plans;&lt;/li&gt;
+&lt;li&gt;features: price and number of free deliveries&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;having a similar but inferior option can shift users towards the superior similar option&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Personalization – what kind of food will most entice this person?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Time of day, source to page?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Showing an image of a juicy burger to a vegetarian, or a bag of chips to someone on a diet, might result in a lost conversion.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;lunch&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lunch;&lt;/h3&gt;
+&lt;p&gt;Fun hobby projects;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prediction market prices&lt;/li&gt;
+&lt;li&gt;Scraping data from predictit&lt;/li&gt;
+&lt;li&gt;Writing code to trade / text us when there’s opportunities&lt;/li&gt;
+&lt;li&gt;Sportsbook – using a ‘free bet’ to get free money.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;salary&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Salary&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Range sounded good.&lt;/li&gt;
+&lt;li&gt;Depends on feedback from the interview and timing of pipelines with other companies.&lt;/li&gt;
+&lt;li&gt;I like Instacart a lot, I like the kinds of problems, I like the people, I like the kind of data, …&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;So if I was offered something in the Sr. DS range now, I’d probably pull out of other interview pipelines and accept.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Are salaries dependent on the team?&lt;/li&gt;
+&lt;li&gt;Bonuses?&lt;/li&gt;
+&lt;li&gt;Structure of raises and promotions?&lt;/li&gt;
+&lt;li&gt;How long do employees typically spend in each level (DS, Sr., Staff)?&lt;/li&gt;
+&lt;li&gt;Is more equity offered after 4 years?&lt;/li&gt;
+&lt;li&gt;Other components of the offer?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When is Instacart aiming to IPO?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;div id=&#34;about-past-work&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;About past work&lt;/h3&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
