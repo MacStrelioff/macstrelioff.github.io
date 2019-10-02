@@ -260,7 +260,6 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - SLA: service level agreements.
 - top priority: increase number of new activations
 
-
 - do food items on signup screen increase clickthrough or conversion? 
 - can we predict retention or churn? 
 
@@ -287,6 +286,8 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - what would grop user acquisition? 
 
 for some metrics and models in production at instacart, see [this video](https://www.youtube.com/watch?v=7PBM_sAvMPA) at 5:01.
+
+Good article on [AARRR](https://medium.com/@ms.mbalke/aarrr-framework-metrics-that-let-your-startup-sound-like-a-pirate-ship-e91d4082994b) framework.
 
 ## My unique value ads
 
@@ -321,12 +322,10 @@ Cues and impulsivity:
 - features: price and number of free deliveries
 - having a similar but inferior option can shift users towards the superior similar option
 
-
 - Personalization -- what kind of food will most entice this person? 
 - Time of day, source to page? 
 
 - Showing an image of a juicy burger to a vegetarian, or a bag of chips to someone on a diet, might result in a lost conversion. 
-- 
 
 ### Lunch; 
 
@@ -336,7 +335,6 @@ Fun hobby projects;
 - Scraping data from predictit
 - Writing code to trade / text us when there's opportunities
 - Sportsbook -- using a 'free bet' to get free money. 
-
 
 
 ### Salary

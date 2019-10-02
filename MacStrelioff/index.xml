@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Tue, 01 Oct 2019 12:36:21 +0000</pubDate>
+      <pubDate>Tue, 01 Oct 2019 18:53:43 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -288,6 +288,7 @@
 &lt;li&gt;&lt;p&gt;what would grop user acquisition?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;for some metrics and models in production at instacart, see &lt;a href=&#34;https://www.youtube.com/watch?v=7PBM_sAvMPA&#34;&gt;this video&lt;/a&gt; at 5:01.&lt;/p&gt;
+&lt;p&gt;Good article on &lt;a href=&#34;https://medium.com/@ms.mbalke/aarrr-framework-metrics-that-let-your-startup-sound-like-a-pirate-ship-e91d4082994b&#34;&gt;AARRR&lt;/a&gt; framework.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;my-unique-value-ads&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;My unique value ads&lt;/h2&gt;
@@ -320,8 +321,7 @@
 &lt;li&gt;&lt;p&gt;having a similar but inferior option can shift users towards the superior similar option&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Personalization – what kind of food will most entice this person?&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Time of day, source to page?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;Showing an image of a juicy burger to a vegetarian, or a bag of chips to someone on a diet, might result in a lost conversion.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Showing an image of a juicy burger to a vegetarian, or a bag of chips to someone on a diet, might result in a lost conversion.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;lunch&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Lunch;&lt;/h3&gt;
