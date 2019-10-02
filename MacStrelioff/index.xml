@@ -38,7 +38,7 @@
     <item>
       <title>Instacart Notes</title>
       <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Tue, 01 Oct 2019 18:53:43 +0000</pubDate>
+      <pubDate>Tue, 01 Oct 2019 19:25:31 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
       <description>
@@ -289,6 +289,35 @@
 &lt;/ul&gt;
 &lt;p&gt;for some metrics and models in production at instacart, see &lt;a href=&#34;https://www.youtube.com/watch?v=7PBM_sAvMPA&#34;&gt;this video&lt;/a&gt; at 5:01.&lt;/p&gt;
 &lt;p&gt;Good article on &lt;a href=&#34;https://medium.com/@ms.mbalke/aarrr-framework-metrics-that-let-your-startup-sound-like-a-pirate-ship-e91d4082994b&#34;&gt;AARRR&lt;/a&gt; framework.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;From Rafael:&lt;/li&gt;
+&lt;li&gt;Fulfillment&lt;/li&gt;
+&lt;li&gt;enought people to work?&lt;/li&gt;
+&lt;li&gt;the people working have work available?&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;best people get work more easily?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;customer/growth&lt;/li&gt;
+&lt;li&gt;how can we get people to place first, second ,… orders?&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;What about a lessening discount on the first 3 orders – 20% off, 10% off, 5% off, full price … .&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Referral bonuses&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Randomized referral bonouses to incentivize multiple referrals&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Retention:&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;instacart loyalty rewards&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;nobody on interview list on ads team.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ads: make sure we show right ads to right people and getting most profit out of that exposure.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;p’s : priority&lt;/li&gt;
+&lt;li&gt;SLA: service level agreements.&lt;/li&gt;
+&lt;li&gt;top priority: increase number of new activations&lt;/li&gt;
+&lt;li&gt;Cues on signup page&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dark background, padlock image on pages that require sensitive info (credit card).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;my-unique-value-ads&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;My unique value ads&lt;/h2&gt;

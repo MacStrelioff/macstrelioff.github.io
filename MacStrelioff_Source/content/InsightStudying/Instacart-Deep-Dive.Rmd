@@ -275,8 +275,6 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 - results
 - next steps
 
-
-
 ## Prep: 
 
 - Instacart conversion funnel
@@ -288,6 +286,30 @@ great article on [experimentation and metrics](https://tech.instacart.com/it-all
 for some metrics and models in production at instacart, see [this video](https://www.youtube.com/watch?v=7PBM_sAvMPA) at 5:01.
 
 Good article on [AARRR](https://medium.com/@ms.mbalke/aarrr-framework-metrics-that-let-your-startup-sound-like-a-pirate-ship-e91d4082994b) framework.
+
+- From Rafael:
+- Fulfillment
+- enought people to work?
+- the people working have work available?
+- best people get work more easily?
+
+- customer/growth
+- how can we get people to place first, second ,... orders?
+- - What about a lessening discount on the first 3 orders -- 20% off, 10% off, 5% off, full price ... .
+- - Referral bonuses
+- - Randomized referral bonouses to incentivize multiple referrals
+
+- Retention:
+- - instacart loyalty rewards
+
+- nobody on interview list on ads team.
+- ads: make sure we show right ads to right people and getting most profit out of that exposure.
+
+- p's : priority
+- SLA: service level agreements.
+- top priority: increase number of new activations
+- Cues on signup page
+- Dark background, padlock image on pages that require sensitive info (credit card).
 
 ## My unique value ads
 
