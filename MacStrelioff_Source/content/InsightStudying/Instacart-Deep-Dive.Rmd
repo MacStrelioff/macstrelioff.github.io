@@ -358,7 +358,6 @@ Fun hobby projects;
 - Writing code to trade / text us when there's opportunities
 - Sportsbook -- using a 'free bet' to get free money. 
 
-
 ### Salary
 
 - Range sounded good.
@@ -373,7 +372,6 @@ Fun hobby projects;
 - Is more equity offered after 4 years?
 - Other components of the offer?
 - When is Instacart aiming to IPO?
-
 
 ### About past work
 
