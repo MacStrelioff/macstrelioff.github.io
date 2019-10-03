@@ -112,6 +112,7 @@ Moody's / Margaux call:
 -->
 
 <!--
+
 Pintrest
 - Python, data munging, pandas
 - SQL care about efficency (e.g. reduce data before joining)
@@ -119,6 +120,7 @@ Pintrest
 - - CTR of x, what's p(5 out of n click through)
 - - fundamental probability
 - business case; open case study..
+
 -->
 
 

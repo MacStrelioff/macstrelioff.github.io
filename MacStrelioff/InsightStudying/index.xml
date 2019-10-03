@@ -6,10 +6,20 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2019 09:43:52 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 09:55:21 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pinterest</title>
+      <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
+      <pubDate>Thu, 03 Oct 2019 09:55:21 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
+      <description> TODO:  Phone Screen Pintrest - Python, data munging, pandas - SQL care about efficency (e.g. reduce data before joining) - probability questions; - - CTR of x, what’s p(5 out of n click through) - - fundamental probability - business case; open case study..
+ </description>
+    </item>
     
     <item>
       <title>Instacart Notes</title>

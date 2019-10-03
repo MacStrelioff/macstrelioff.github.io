@@ -1,0 +1,51 @@
+---
+title: "Pinterest"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 99
+math: yes
+linktitle: Pinterest
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+
+# TODO: 
+
+
+# Phone Screen
+
+Pintrest
+- Python, data munging, pandas
+- SQL care about efficency (e.g. reduce data before joining)
+- probability questions; 
+- - CTR of x, what's p(5 out of n click through)
+- - fundamental probability
+- business case; open case study..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
