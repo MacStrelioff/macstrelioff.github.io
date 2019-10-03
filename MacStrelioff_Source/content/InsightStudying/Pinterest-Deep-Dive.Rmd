@@ -30,9 +30,13 @@ Pintrest
 - Python, data munging, pandas
 - SQL care about efficency (e.g. reduce data before joining)
 - probability questions; 
-- - CTR of x, what's p(5 out of n click through)
+- - Clickthrough rate of x, what's p(5 out of n click through)
 - - fundamental probability
 - business case; open case study..
+
+
+
+
 
 
 
