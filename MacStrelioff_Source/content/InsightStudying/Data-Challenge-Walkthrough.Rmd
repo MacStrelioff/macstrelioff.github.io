@@ -26,8 +26,6 @@ set.seed(10201991)
 
 
 
-
-
 # EDA
 
 - [good post with code here](https://towardsdatascience.com/exploratory-data-analysis-eda-a-practical-guide-and-template-for-structured-data-abfbf3ee3bd9)

@@ -6,15 +6,25 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2019 17:58:54 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Oct 2019 12:43:38 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Instacart Notes</title>
+      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
+      <pubDate>Fri, 04 Oct 2019 12:43:38 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
+      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Recruiter call “Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc”
+ Groceries have been hard for internet companies to get right – it’s exciting to see Instacart managing this well, and I’d be excited to be a part of this technological revolution of grocery delivery   More about role?</description>
+    </item>
+    
+    <item>
       <title>Data Challenges</title>
       <link>/MacStrelioff/insightstudying/data-challenge-walkthrough/</link>
-      <pubDate>Thu, 03 Oct 2019 17:58:54 +0000</pubDate>
+      <pubDate>Fri, 04 Oct 2019 12:39:42 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/data-challenge-walkthrough/</guid>
       <description>  EDA   EDA  good post with code here Another resource for missing values here Long post on missing data in Python here   </description>
@@ -23,23 +33,13 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Thu, 03 Oct 2019 16:33:29 +0000</pubDate>
+      <pubDate>Fri, 04 Oct 2019 12:39:28 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>TODO:  Articles from Pintrest labs   Phone Screen Pintrest - Python, data munging, pandas - SQL care about efficency (e.g. reduce data before joining) - probability questions; - - Clickthrough rate of x, what’s p(5 out of n click through) - - fundamental probability - business case; open case study..
 Explain some research at Pintrest See:
 Predicting Intent Using Activity Logs  Pintrest:
  Content sharing platform, and image based search engine Prior research found user types; 1) casual browsers, 2) responding to a specific goals Prior research found different temporal horizons, e.</description>
-    </item>
-    
-    <item>
-      <title>Instacart Notes</title>
-      <link>/MacStrelioff/insightstudying/instacart-deep-dive/</link>
-      <pubDate>Wed, 02 Oct 2019 09:43:52 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/instacart-deep-dive/</guid>
-      <description>TODO:  Check out info from blog Read articles on their DS blog LinkedIn application for data scientist Instacart posting for data scientist LinkedIn app for analyst   Recruiter call “Just be prepared to share with me what you are looking for, what is exciting to you and feel free to have questions ready about the team, role, business etc”
- Groceries have been hard for internet companies to get right – it’s exciting to see Instacart managing this well, and I’d be excited to be a part of this technological revolution of grocery delivery   More about role?</description>
     </item>
     
     <item>

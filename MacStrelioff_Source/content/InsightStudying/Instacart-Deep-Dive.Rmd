@@ -881,7 +881,6 @@ From [why VP of DS joined](https://medium.com/@instacart/our-new-vp-of-data-scie
 - The problem he asked to be solved is one of their most immediate business challenges, full-blown, not a coding test or even a restricted example at all. So it was odd they'd expect you to work on something for a week that an actual employee would spend several weeks refining. I thought it was to demonstrate coding and analytics skills, and provided a succint, well-commented solution, but didn't try to overdo it. 
 - Then I had an analytical case where I had to build and explain a mode. Next I had an in-person interview which was another analytical challenge, but more whiteboarding. It included a data scientist and the hiring manager, who seemed great to work with. Lastly I chatted with the CEO who was friendly and down-to-earth.
 - Explored various ways of monitoring user growth and retention.
-- 
 
 
 ## Insight Alum Mock Questions
@@ -891,7 +890,6 @@ From [why VP of DS joined](https://medium.com/@instacart/our-new-vp-of-data-scie
 - At Instacart, if you order 1-7 items, the delivery window is 1 hour. If you order 8-24 items, the window is 2 hours. If you order 25+ items, the window is 4 hours. Why is this approach problematic?
 
 - Imagine Instacart is rolling out a program which allows grocery stores to reduce wait times for pickups. Design an experiment for this program. 
-
 
 
 ## Insight from Jeremy on Kaggle
@@ -919,6 +917,18 @@ How are projects evaluated?
 - Algorithm feasibility. Is it feasible to solve, do we have a best practice, can it scale?
 
 
+## Feedback; 
+
+- feedback:
+- good energy, collaboration
+- work on: 
+- experience, ability to ex..?
+- structured thinking
+- academic experience into real world peoblem
+- lot of hand holding to come up with a metric or solution, were hoping for more independence.. 
+- sandeep, didn't have right role currently.. and didn't have a role where I'd be able to mentor the skillsets I'd need
+- if I'm able to improve in aspects of execution, structured thinking, ... 
+- could reinterview on a future date after I have some experience on a team that can better mentor.
 
 
 
