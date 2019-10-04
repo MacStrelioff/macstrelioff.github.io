@@ -6,10 +6,19 @@
     <description>Recent content in Overview on Mac Strelioff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2019 16:33:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 17:58:54 +0000</lastBuildDate>
     
 	<atom:link href="/MacStrelioff/insightstudying/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data Challenges</title>
+      <link>/MacStrelioff/insightstudying/data-challenge-walkthrough/</link>
+      <pubDate>Thu, 03 Oct 2019 17:58:54 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/data-challenge-walkthrough/</guid>
+      <description>  EDA   EDA  good post with code here Another resource for missing values here Long post on missing data in Python here   </description>
+    </item>
     
     <item>
       <title>Pinterest</title>

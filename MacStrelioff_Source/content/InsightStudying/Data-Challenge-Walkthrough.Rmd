@@ -1,0 +1,44 @@
+---
+title: "Data Challenges"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+math: true
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 4
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 20
+linktitle: Data Challenges
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+
+
+
+
+# EDA
+
+- [good post with code here](https://towardsdatascience.com/exploratory-data-analysis-eda-a-practical-guide-and-template-for-structured-data-abfbf3ee3bd9)
+- Another resource for missing values [here](https://dev.to/tomoyukiaota/visualizing-the-patterns-of-missing-value-occurrence-with-python-46dj)
+- Long post on missing data in Python [here](https://towardsdatascience.com/handling-missing-data-for-a-beginner-6d6f5ea53436)
+
+
+
+
+
+
+
+
+
