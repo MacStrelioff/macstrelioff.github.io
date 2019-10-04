@@ -23,6 +23,7 @@ set.seed(10201991)
 
 # TODO: 
 
+- Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
 
 # Phone Screen
 
@@ -34,6 +35,91 @@ Pintrest
 - - fundamental probability
 - business case; open case study..
 
+
+### Explain some research at Pintrest
+
+See: 
+
+1. [Predicting Intent Using Activity Logs](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf)
+
+Pintrest: 
+
+- Content sharing platform, and image based search engine
+- Prior research found user types; 1) casual browsers, 2) responding to a specific goals
+- Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.
+- On Pintrest users view pins (content) to boards (collections). 
+- Pins have 33 categories (DIY, food and drink, ...)
+- Users can look at closeups of Pins, which provides additional information
+- Users can click through to visit a site affiliated with a pin
+
+Problem and volue of a solution: 
+
+- Users can use a product with different intents, and the material that a user finds valuable may depend on their intent.
+- Being able to infer a user's intent from their behavior during a session would enable a personalized experience aligned with a user's goals. 
+- Example: Someone looking for dinner recepies might want something they can quickly make with common ingredients, while someone looking for potluck ideas might want more unique dishes, and someone who is just browsing food might prefer a variety of exotic food images. 
+- User intent can vary with each session, so quickly identifying intent within a session can help with changing the interface and content shown to the user in real time based on their inferred intent
+
+Current paper: 
+
+- Goals: Understand how intent informs behavior, and whether intent can be inferred from behavior.
+- Two dimensions of intent: 
+- Goal specificity: whether the intent is stimulus specific (glutin free chocolate chip recepies) or vague (just browsing to pass time).
+- and temporal range: Time horizon for goal completion (tonight, next week, next month, ...).
+- In psych, motivation is defined as a directing and activating or invigorating force. The directional component maps onto what Pintrest is calling goal specificity, and the invigorating component might map onto the inverse of what Pintrest refers to as temporal range.
+- In psych, there's a notion of goal-directed and habitual behavior. The former is driven by a specific desired outcome (similar to goal specificity here) while the later is a less mindful response to stimuli (eg boredom triggers a passive arousal seeking).
+- In social psych, attitudes have been thought about along a gradient of specificity -- so maybe things like time-related words in a query can be used to identify goal-directed users.
+- Shopping websites can be used for a specific purchase (goal-directed) or in an experiential way (habitual).
+
+Methods: 
+
+- Sample: 5369 females mean age 33.5, 564 males mean age 38.6, all from US and on Pintrest during July 2016
+- Survey asking; 
+- 7 point likert scale: "Are you visiting Pintrest with a goal in mind?"
+- "When are you planning to act on what you're looking for today"
+- Question about Pintrest specific motivations (eg finding DIY ideas)
+- "What are you looking for on Pintrest today?" Response options were based on Pintrest categories
+- Focused on data in the session immediately following the survey
+- primarily analyzed first 10 minutes because this window had peak performance, around 27% of sessions had fewer than 10 minutes
+- Over 850,000 behavioral events (views, closeups, searches) across 5933 users within 10 minutes.
+- Also analyzed behavior from when the user first created account until a week after survey completion
+- used Holm-corrected p-values, a method that is more powerful than a the conservative Bonferroni correction.
+
+
+Mitigating limitations: 
+
+- coverage bias: mitigated by uniformly sampling from users for inclusion
+- participation bias: compared activity of users who completed the survey (addigned survey, took survey) to those who saw the survey popup but did not complete the survey (assigned survey, did not take survey). 
+- Survey takers had been using Pintrest longer, and had more saved pins. Inferred from this that engaged users were 
+
+Findings: 
+
+- Goal-specific users are: 
+more focused, 
+search more (1.1 vs 0.4 searches),
+spend more time browsing specific categories of content in detail, 
+more likely to reference saved content, 
+less likely to return in next 7 days,
+less likely to attribute their visit to boredom (2% vs 25% for habitual),
+more likely to attribute visit to making something (26% vs 5% for habitual)
+- users with short term goals:
+specific categories of content, 
+likely to reference saved content, 
+less likely to save new content, 
+goal-specific users more likely to act in short term, habitual users more unsure of taking actions
+- Demographic differences:
+females more likely to be goal-specific (49% vs 40%), 
+males unsure of taking action, 
+older users more short-term goals, 
+younger users more unsure of taking action, 
+food, drink, DIY searches more likely to be goal-specific and act in short term, 
+travel, entertainment more likely to be habitual and likely to act in long term, 
+intent moderates the type of recepies users save
+- Model can predict goal specificity and temporal range. 
+- Current session data is most informative, historical activity data also helpful
+
+
+
+2. [Understanding behaviors that lead to purchasing](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf)
 
 
 

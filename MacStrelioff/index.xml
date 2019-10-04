@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Thu, 03 Oct 2019 15:09:28 +0000</pubDate>
+      <pubDate>Thu, 03 Oct 2019 16:33:29 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -46,10 +46,79 @@
 
 &lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Articles from &lt;a href=&#34;https://labs.pinterest.com/projects/data-science/&#34;&gt;Pintrest labs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;phone-screen&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Phone Screen&lt;/h1&gt;
 &lt;p&gt;Pintrest - Python, data munging, pandas - SQL care about efficency (e.g. reduce data before joining) - probability questions; - - Clickthrough rate of x, what’s p(5 out of n click through) - - fundamental probability - business case; open case study..&lt;/p&gt;
+&lt;div id=&#34;explain-some-research-at-pintrest&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Explain some research at Pintrest&lt;/h3&gt;
+&lt;p&gt;See:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf&#34;&gt;Predicting Intent Using Activity Logs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pintrest:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Content sharing platform, and image based search engine&lt;/li&gt;
+&lt;li&gt;Prior research found user types; 1) casual browsers, 2) responding to a specific goals&lt;/li&gt;
+&lt;li&gt;Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.&lt;/li&gt;
+&lt;li&gt;On Pintrest users view pins (content) to boards (collections).&lt;/li&gt;
+&lt;li&gt;Pins have 33 categories (DIY, food and drink, …)&lt;/li&gt;
+&lt;li&gt;Users can look at closeups of Pins, which provides additional information&lt;/li&gt;
+&lt;li&gt;Users can click through to visit a site affiliated with a pin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Problem and volue of a solution:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users can use a product with different intents, and the material that a user finds valuable may depend on their intent.&lt;/li&gt;
+&lt;li&gt;Being able to infer a user’s intent from their behavior during a session would enable a personalized experience aligned with a user’s goals.&lt;/li&gt;
+&lt;li&gt;Example: Someone looking for dinner recepies might want something they can quickly make with common ingredients, while someone looking for potluck ideas might want more unique dishes, and someone who is just browsing food might prefer a variety of exotic food images.&lt;/li&gt;
+&lt;li&gt;User intent can vary with each session, so quickly identifying intent within a session can help with changing the interface and content shown to the user in real time based on their inferred intent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Current paper:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goals: Understand how intent informs behavior, and whether intent can be inferred from behavior.&lt;/li&gt;
+&lt;li&gt;Two dimensions of intent:&lt;/li&gt;
+&lt;li&gt;Goal specificity: whether the intent is stimulus specific (glutin free chocolate chip recepies) or vague (just browsing to pass time).&lt;/li&gt;
+&lt;li&gt;and temporal range: Time horizon for goal completion (tonight, next week, next month, …).&lt;/li&gt;
+&lt;li&gt;In psych, motivation is defined as a directing and activating or invigorating force. The directional component maps onto what Pintrest is calling goal specificity, and the invigorating component might map onto the inverse of what Pintrest refers to as temporal range.&lt;/li&gt;
+&lt;li&gt;In psych, there’s a notion of goal-directed and habitual behavior. The former is driven by a specific desired outcome (similar to goal specificity here) while the later is a less mindful response to stimuli (eg boredom triggers a passive arousal seeking).&lt;/li&gt;
+&lt;li&gt;In social psych, attitudes have been thought about along a gradient of specificity – so maybe things like time-related words in a query can be used to identify goal-directed users.&lt;/li&gt;
+&lt;li&gt;Shopping websites can be used for a specific purchase (goal-directed) or in an experiential way (habitual).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sample: 5369 females mean age 33.5, 564 males mean age 38.6, all from US and on Pintrest during July 2016&lt;/li&gt;
+&lt;li&gt;Survey asking;&lt;/li&gt;
+&lt;li&gt;7 point likert scale: “Are you visiting Pintrest with a goal in mind?”&lt;/li&gt;
+&lt;li&gt;“When are you planning to act on what you’re looking for today”&lt;/li&gt;
+&lt;li&gt;Question about Pintrest specific motivations (eg finding DIY ideas)&lt;/li&gt;
+&lt;li&gt;“What are you looking for on Pintrest today?” Response options were based on Pintrest categories&lt;/li&gt;
+&lt;li&gt;Focused on data in the session immediately following the survey&lt;/li&gt;
+&lt;li&gt;primarily analyzed first 10 minutes because this window had peak performance, around 27% of sessions had fewer than 10 minutes&lt;/li&gt;
+&lt;li&gt;Over 850,000 behavioral events (views, closeups, searches) across 5933 users within 10 minutes.&lt;/li&gt;
+&lt;li&gt;Also analyzed behavior from when the user first created account until a week after survey completion&lt;/li&gt;
+&lt;li&gt;used Holm-corrected p-values, a method that is more powerful than a the conservative Bonferroni correction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mitigating limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;coverage bias: mitigated by uniformly sampling from users for inclusion&lt;/li&gt;
+&lt;li&gt;participation bias: compared activity of users who completed the survey (addigned survey, took survey) to those who saw the survey popup but did not complete the survey (assigned survey, did not take survey).&lt;/li&gt;
+&lt;li&gt;Survey takers had been using Pintrest longer, and had more saved pins. Inferred from this that engaged users were&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Findings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goal-specific users are: more focused, search more (1.1 vs 0.4 searches), spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days, less likely to attribute their visit to boredom (2% vs 25% for habitual), more likely to attribute visit to making something (26% vs 5% for habitual)&lt;/li&gt;
+&lt;li&gt;users with short term goals: specific categories of content, likely to reference saved content, less likely to save new content, goal-specific users more likely to act in short term, habitual users more unsure of taking actions&lt;/li&gt;
+&lt;li&gt;Demographic differences: females more likely to be goal-specific (49% vs 40%), males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save&lt;/li&gt;
+&lt;li&gt;Model can predict goal specificity and temporal range.&lt;/li&gt;
+&lt;li&gt;Current session data is most informative, historical activity data also helpful&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf&#34;&gt;Understanding behaviors that lead to purchasing&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
