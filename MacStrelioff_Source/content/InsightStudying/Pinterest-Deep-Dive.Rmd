@@ -24,6 +24,8 @@ set.seed(10201991)
 # TODO: 
 
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
+- Google or look up 'growth levers'
+
 
 # Phone Screen
 

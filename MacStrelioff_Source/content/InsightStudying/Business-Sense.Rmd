@@ -95,15 +95,34 @@ Overall product sense is about what to build and why.
 [Deep Dive guide](https://sites.google.com/insightdatascience.com/interviewstrategies/interviews/interview-logistics/deep-dives?authuser=0)
 
 
+# Frameworks
+
+## AARRR
+
+### Acquire
+
+### Activate
+
+### Retention
+
+- Churn
+
+
+### Referral
+
+### Revenue
+
+
+## User Funnel
+
+
+
+
+
 # Platform Concepts and Metrics
 
 ## Users
 
-### User Funnel
-
-Churn,
-
-funnel analysis
 
 ### User Flow
 
