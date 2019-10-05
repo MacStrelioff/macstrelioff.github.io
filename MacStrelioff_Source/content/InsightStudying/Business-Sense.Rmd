@@ -101,6 +101,9 @@ Overall product sense is about what to build and why.
 
 ### Acquire
 
+- [Growth Case Studies](https://sujanpatel.com/marketing/growth-levers/)
+- 
+
 ### Activate
 
 ### Retention
@@ -134,6 +137,8 @@ Overall product sense is about what to build and why.
 - Time on pages
 - Time on site
 - Conversion (purchase, reservation, end-goal action)
+
+### Intent
 
 ### Lifetime Value
 

@@ -125,6 +125,39 @@ intent moderates the type of recepies users save
 
 
 
+# Metrics
+
+## Acquisition
+
+- Week / Week new users
+
+## Activation
+
+- Pin likes
+- Pin shares
+- Pin comments
+- Pins created
+- Boards creates
+- Pins on board
+
+## Retention
+
+- Returning users 
+
+## Referral
+
+- Referral links? 
+- New users by source
+
+## Revenue
+
+- Ads clicked
+- Ads clicked by user segment
+- Ads clicked by location
+- Ad conversions (clicks and a microconversion on the next page)
+
+
+
 
 
 
