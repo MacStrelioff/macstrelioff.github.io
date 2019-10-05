@@ -42,7 +42,7 @@ See:
 
 1. [Predicting Intent Using Activity Logs](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf)
 
-Pintrest: 
+Pinterest: 
 
 - Content sharing platform, and image based search engine
 - Prior research found user types; 1) casual browsers, 2) responding to a specific goals
