@@ -36,6 +36,11 @@ Pintrest
 - - Clickthrough rate of x, what's p(5 out of n click through)
 - - fundamental probability
 - business case; open case study..
+- behavioral
+
+## Behavioral 
+
+
 
 
 ### Explain some research at Pintrest
