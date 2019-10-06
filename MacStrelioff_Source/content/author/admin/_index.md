@@ -70,6 +70,7 @@ Make an interview simulator app!
 - Have behavioral, coding, probability, SQL, experimentation, and product
 --
 
+
 <!--
 old LI blurb
 Experienced researcher with graduate degrees in cognitive science and statistics, and deep experience with: Bayesian modeling, decision theory, experimentation, machine learning. I'm primarily interested in experimentation and developing machine learning methods to automate real time decision making. 
