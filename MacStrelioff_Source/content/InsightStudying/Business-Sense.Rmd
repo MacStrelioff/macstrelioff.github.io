@@ -27,7 +27,34 @@ set.seed(10201991)
 
 ### Acquisition
 
+#### Metrics
+
+- Downloads
+- Installs
+- App Store Product Page Visits
+- Site Visits
+- Top-of-Mind or Aided Awareness
+- People on Waiting List
+
+#### Strategies
+
+- SEO
+- Ratings and reviews
+- Paid Advertising
+- Digital and Traditional Marketing
+- Word of Mounth
+- Promotoinal Content on free platforms (YouTube, Facebook, media outlets, ...)
+
 ### Activation
+
+#### Metrics
+
+- Registrations
+- Session Length
+- Screens Per Session
+- One-Day Retention
+- signups 
+- downloads
 
 CTR
 Conversion rate
@@ -38,8 +65,21 @@ Activity time
 - hours of streaming content per subscriber 
 - DVDs rented 
 
+#### Strategies
+
+- Simple download
+- sign-up form
+- intuitive UX
+- One-Step Registration with Email/Facebook/...
+- Customer On-Boarding
 
 ### Retention
+
+#### Metrics
+
+- n-Day Retention
+- Monthly Active Users
+- Session Frequency
 
 - Retention rate
 - Churn rates
@@ -48,17 +88,56 @@ Activity time
 - Conversion rate from free to paid subscription 
 - Subscription renewal rate 
 
+#### Strategies
+
+- Minimize pain points
+- Cross platform availability
+- Proactive Communication
+- Loyalty Bonuses
+- Push Notifications
+- Re-Engagement Ads
 
 ### Referral
 
+#### Metrics
+
+- Referrals
+- App Store Ratings and Reviews
+- Social Sentiment
+- New User Referral Codes
+
+#### Strategies
+
+- Rating/Review Prompts
+- One-Click Sharing
+- Contacts List Integration
+- Incentivized Sharing
 
 ### Revenue
+
+#### Metrics
+
+- RPU: Average Revenue Per User 
+- LTV: Customer Lifetime Value 
+- App Purchases / Subscriptions
+- In-App Transactions
+- Ad Revenue
 
 Acquisition cost
 LTV 
 Revenue
 Profit
 Costs
+
+#### Strategies
+
+- Proportion of free users
+- Proportion of paying active users
+- Revenue / Customer
+- Sales and Promotions
+- Downloadable Content
+- Personalization
+- Frequent Updates
 
 ## Conversion Funnel
 
