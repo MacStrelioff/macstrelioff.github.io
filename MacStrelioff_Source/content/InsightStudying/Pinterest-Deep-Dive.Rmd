@@ -41,8 +41,6 @@ Pintrest
 ## Behavioral 
 
 
-
-
 ### Explain some research at Pintrest
 
 See: 
@@ -124,10 +122,7 @@ intent moderates the type of recepies users save
 - Model can predict goal specificity and temporal range. 
 - Current session data is most informative, historical activity data also helpful
 
-
-
 2. [Understanding behaviors that lead to purchasing](https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf)
-
 
 
 # Metrics
