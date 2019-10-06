@@ -21,6 +21,64 @@ set.seed(10201991)
 ```
 
 
+# Frameworks
+
+## AARRR
+
+### Acquisition
+
+### Activation
+
+CTR
+Conversion rate
+Activity time
+
+
+### Retention
+
+- Retention rate
+- Churn rates
+- DAU/MAU 
+
+
+### Referral
+
+
+### Revenue
+
+Acquisition cost
+LTV 
+Revenue
+Profit
+Costs
+
+## Conversion Funnel
+
+### Discovery 
+
+### Realization of Need
+
+### Consideration
+
+### Conversion
+
+### Retention
+
+### Referrals
+
+# Tools
+
+## Funnel Analysis
+
+- Conversion Funnel
+- Engagement Funnel
+
+## Root Cause Analysis
+
+# Relation to Behavioral Theory
+
+- Successive approximations describes people moving through a user funnel. Each level should be the reward for the previous level.
+
 # YouTube Example
 
 The YouTube recommendation algorithm favors videos with high watchtime. 
