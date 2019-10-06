@@ -33,12 +33,20 @@ CTR
 Conversion rate
 Activity time
 
+- free subscribers 
+- paid subscribers 
+- hours of streaming content per subscriber 
+- DVDs rented 
+
 
 ### Retention
 
 - Retention rate
 - Churn rates
 - DAU/MAU 
+
+- Conversion rate from free to paid subscription 
+- Subscription renewal rate 
 
 
 ### Referral
@@ -54,17 +62,54 @@ Costs
 
 ## Conversion Funnel
 
-### Discovery 
+### Discovery or Awareness
+
+- unique visitors to the website 
+- clicks on ads 
+- ppl at events 
+
+- # visitors to site, 
+- # searches for that city, 
+- # host listings for that city, 
+- # clicks on city listings, 
+- # contacts initiated (and reply rate), 
+- # successful bookings
+
+- Change/growth in any of these metrics weeks to week
+- Time spent looking at listings, time spent creating new listing
+- Average rating of local listing, average number of nights booked
+
+
+For Netflix
+
+- visits to site 
+- clicks on ads 
+- blog visits 
+- followers on social media 
+- video views 
+- document views or downloads (white papers, ebook)
 
 ### Realization of Need
 
+- # free accounts created 
+
 ### Consideration
+
+- ppl with items in shopping cart 
+- ppl who saved items to favorite list 
 
 ### Conversion
 
+- orders 
+
 ### Retention
 
+- Repeat orders
+
 ### Referrals
+
+- # referral codes used 
+
 
 # Tools
 
