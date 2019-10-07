@@ -50,8 +50,24 @@ Example Answer:
 - Search for recepies, then I might immediately see 3 pins with food images that have different attributes (carbs, brightness of the image, text, ...). 
 - Very relevant, which is one of the reasons I'm excited to be interviewing with Pinterest. 
 
+
+
 - That overlap between the tasks I created, and the user experience on the pinterest platform is one of the big reasons why I'd be excited to work at Pinterest.
 - Another reason is the proximity of user data to user purchasing decisions (high user intent). 
+
+
+
+- UCI
+- Cognitive science and statistics
+- My research focused on decision making -- 
+- 1) How environmental cues impact impulsivity or preferences for immediate rewards
+- 2) Decoy effects -- so how the attributes of an undesirable option can influence preference between two desirable options. 
+- 3) Inferring which decision making strategy a person is currently following
+- For all of these studies, I was writing programs that would show participants multiple options (e.g. pins) and modify the context (adding other cues) or the attributes of the options to see how those modifications influenced the probability of a person picking one of the options. 
+- Very relevant to the kind of environments users experience on Pinterest, which is one of the reasons I'm excited to be interviewing with Pinterest. 
+
+
+- One of the phenomena that I studied was the decoy effect -- For example at Pinterest, if a user sees a set of three pins (A,B,C), they pick A 70% of the time and B 30% of the time, but when we just show pins A and B, they pick B 55% of the time and A 45% of the time. 
 
 
 ### HaaS freelance work
