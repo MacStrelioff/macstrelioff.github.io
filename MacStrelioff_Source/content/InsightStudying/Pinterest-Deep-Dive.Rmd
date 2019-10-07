@@ -40,6 +40,19 @@ Pinterest
 
 ## Behavioral 
 
+### Background 
+
+Example Answer: 
+
+- I recently graduated from UC Irvine where I studied cognitive science and statistics. 
+- My research focused on decision making, which means I programed experiments that would show people two or three alternatives and vary the attributes of the alternatives to reveal how people are making decisions. 
+- So for example someone might see three different pins -- These pins have attributes like different properties of the image, maybe different text captions. 
+- Search for recepies, then I might immediately see 3 pins with food images that have different attributes (carbs, brightness of the image, text, ...). 
+- Very relevant, which is one of the reasons I'm excited to be interviewing with Pinterest. 
+
+- That overlap between the tasks I created, and the user experience on the pinterest platform is one of the big reasons why I'd be excited to work at Pinterest.
+- Another reason is the proximity of user data to user purchasing decisions (high user intent). 
+
 
 ### HaaS freelance work
 
