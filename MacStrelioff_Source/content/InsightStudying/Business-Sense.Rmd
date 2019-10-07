@@ -21,7 +21,82 @@ set.seed(10201991)
 ```
 
 
-# Frameworks
+# Question Types
+
+1. Experimentation: "Launching new app/feature, how do you determine if it is a success?"
+2. Unexpected Change: "Your manager sees a sharp, sudden drop in satisfaction survey scores, how do you investigate this?"
+3. 
+
+# Businesses and Products
+
+- Characterize the Company and Explore its Products
+- Summarize the business in 2-3 sentences
+- List Offerings/Products/Features
+- End Users/Customers
+- Describe User Journey 
+- How does the company monetize?
+- Identify Metrics (high level and product specific)
+- Growth/Retention
+- Engagement/Transactions
+- Monetization
+- Brainstorm Business Problems
+- Develop for specific Products and Business Areas
+
+- Analytics can help Businesses achieve the following:
+- Understand their Users/Customers
+- Track health of a product or feature
+- Determine if they are achieving growth
+- Keep Cross-functional Teams aligned on roadmaps and goals
+- Uncover Areas of Opportunity and Improvement
+- Forecast future trends
+- Build More Effective Products
+- Reduce biased perspectives
+- Avoid HIPPO (Highest Paid Person’s Opinion)
+
+- All of your work will be done in context of specific business and product objectives
+- Ensures your work is consistently aligned with goals of the company
+- BI and Product Analytics Roles:
+- Identify Key Metrics, develop insights and product Recommendations that will have the biggest impact
+- Machine Learning driven roles:
+- Develop ML models in that are in alignment with company goals, scalable and adaptive to changing needs and usage patterns
+- Product Sense can inform feature engineering, segmentation, etc
+- Allows you to effectively use and communicate data analysis to stakeholders and drive important business and product - decisions
+
+- Deeply understanding the goals of a product, both for the business and the customer.
+- Constantly evaluating how well the product is serving those goals, and what elements contribute or detract.
+- Finding opportunities to better serve these goals.
+- Understand the best set of metrics to use and deliver key insights that help drive actionable recommendations for the product or business
+
+- A useful metric is a figure that is directly measurable and can be used to track performance over time
+- Quantities
+- eg. ‘Likes” per post, Daily unique visitors, pages viewed per session
+- Calculated values
+- eg. Revenue Per Sale, Weekly retention
+- Discrepancies
+- eg. Comparisons by week before, baseline averages, cohort views
+
+- General Tips
+- Ask Clarifying Questions
+- Explore potential markets, customer segments, business impact
+- Agree on GOAL with your interviewer
+- Identify Key Metrics
+- Turn goal into a measurable item(s)
+- Eg. If engagement is of concern what metrics can be used to measure that?
+- Daily Average number of likes per user on Facebook
+- Don’t forget that Revenue is the ultimate goal for any company
+
+- Scope potential Data Points and Variables
+- What variables may help move the metric?
+- How data can identify areas for simplification?
+- Develop hypothetical examples (eg. specific market that may behave differently)
+- Define Next Steps and Recommendations
+- Describe how would you track success of your efforts
+- A/B Testing
+- What Success Metrics would you use?
+
+- See Rocio's Product Analytics workshop slides for more references
+
+# Metrics Frameworks
 
 ## AARRR
 
