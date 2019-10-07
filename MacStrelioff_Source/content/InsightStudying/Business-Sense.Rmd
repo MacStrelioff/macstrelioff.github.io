@@ -101,10 +101,10 @@ Activity time
 
 #### Metrics
 
+- # referral codes used 
 - Referrals
 - App Store Ratings and Reviews
 - Social Sentiment
-- New User Referral Codes
 
 #### Strategies
 
@@ -168,26 +168,22 @@ For Netflix
 - video views 
 - document views or downloads (white papers, ebook)
 
-### Realization of Need
+### Realization of Need or Interest
 
 - # free accounts created 
 
-### Consideration
+### Consideration, Evaluation, Desire
 
 - ppl with items in shopping cart 
 - ppl who saved items to favorite list 
 
-### Conversion
+### Conversion or Purchase
 
 - orders 
 
-### Retention
+### Retention, Repetions
 
 - Repeat orders
-
-### Referrals
-
-- # referral codes used 
 
 
 # Tools

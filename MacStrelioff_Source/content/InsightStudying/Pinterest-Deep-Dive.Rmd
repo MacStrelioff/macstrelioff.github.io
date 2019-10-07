@@ -29,7 +29,7 @@ set.seed(10201991)
 
 # Phone Screen
 
-Pintrest
+Pinterest
 - Python, data munging, pandas
 - SQL care about efficency (e.g. reduce data before joining)
 - probability questions; 
