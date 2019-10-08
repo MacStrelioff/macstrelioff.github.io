@@ -27,8 +27,15 @@ set.seed(10201991)
 - Google or look up 'growth levers'
 
 
-# Phone Screen
 
+# Onsite Prep
+
+- Pinterest [user demographic](https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform)
+
+
+
+
+# Phone Screen
 
 ```{eval=false}
 This is just a simple shared plaintext pad, with no execution capabilities.
