@@ -70,6 +70,20 @@ Make an interview simulator app!
 - Have behavioral, coding, probability, SQL, experimentation, and product
 -->
 
+<!-- HAAS Meeting
+
+HaaS offer:
+- getting inside to get google analytics setup correctly
+- smarter about data?
+- figure out what we need to put in place 
+- other tech support
+- $15/hour
+- + be involved on side when I do get an offer (but Peter would respect this)
+- + 
+
+
+-->
+
 
 <!--
 old LI blurb
