@@ -29,6 +29,230 @@ set.seed(10201991)
 
 # Phone Screen
 
+
+```{eval=false}
+This is just a simple shared plaintext pad, with no execution capabilities.
+
+When you know what language you'd like to use for your interview,
+simply choose it from the dropdown in the top bar.
+
+You can also change the default language your pads are created with
+in your account settings: https://coderpad.io/settings
+
+Enjoy your interview!
+
+
+
+Your previous Python 3 content is preserved below:
+
+# def say_hello():
+#     print('Hello, World')
+
+# for i in range(5):
+#     say_hello()
+
+
+# 
+# Your previous MySQL content is preserved below:
+# 
+# /*
+# Write a query to calculate the Average revenue generated per user for US users in first 10 slots for each advertiser on a given date
+# 
+# pick any date
+# 
+# 
+# 
+# ad_events                             user_dimension
+# +---------------+---------+           +---------------+----+
+# | user_id       | int     |           | user_id  | int     |
+# | advertiser_id | int     |           | country  | varchar |
+# | slot_id       | int     |           | age      | int     | 
+# | revenue       | int     |           | gender   | varchar | 
+# | dt            | date    |           | spam     | int     | 
+# +---------------+---------+           +---------------+----+
+# 
+# 
+# ad_events                             user_dimension
+# ad_id | uaser_id                         
+# 1
+# 1
+# .
+# .
+# .
+# 
+# 
+# 
+# Want: 
+# +-----+
+# ad_id   | avg rev per user for firt 10 slots
+# ad1        .89      
+# ad2        .90
+# +---+
+# 
+# */                      
+# 
+# 
+# select SUM(a.revenue)/COUNT(distinct a.user_id) as avg_rev_user_advertiser, a.advertiser_id
+# from user_dimension u
+# join ad_events a
+# on a.user_id = u.user_id
+# where a.slot_id <=10 and u.country = "US"
+# group by user_id
+# 
+# 
+# 
+# /*
+# Write a query to calculate the number of repeated ads for each user on a given day
+# 
+# user_insertion                        ad_insertion
+# +---------------+---------+           +---------------+--------------+
+# | user_id       | int     |           | insertion_id     | int       |
+# | insertion_id  | int     |           | promoted_pin_id  | int       |
+# | dt            | date    |           | action_type      | varchar   | 
+# +---------------+---------+           | action_timestamp | timestamp |    
+#                                       | dt               | date      | 
+#                                       +---------------+--------------+  
+# 
+# user_insertion sample rows:
+# 
+# user_id  insertion_id         dt
+# 1        hofh38u9uvhcc   2018-09-29
+# 2        abcddh99840cc   2018-09-29
+# 3        ueiruoeir0419   2018-09-29
+# 
+# 
+# ad_insertion sample rows:
+# 
+# insertion_id    promoted_pin_id   action_type   action_timestamp   dt   
+# hofh38u9uvhcc   1234              impression    1530793815         2018-10-01
+# abcddh99840cc   1234              click         1530793815         2018-10-01
+# ueiruoeir0419   1234              save          1530793815         2018-10-01
+# 
+# 
+# uid pid count
+# 1   1    1
+# 1   1    4
+# 
+# 
+# want: 
+# Userid, Number_of_repeated_ads (number of ad pins that were repeated)
+# 1        5
+# 2        9
+# 3        0
+# 
+# 
+# */
+# 
+# select sub.user_id, count(*)
+# from
+# (
+# select u.user_id as user_id, a.promoted_pin_id as pin_id, count(*) as repetitions
+# from user_insertion u 
+# join ad_insertion a
+# on u.insertion_id = a.insertion_id
+# group by u.user_id,a.promoted_pin_id
+# having count(*) >= 2
+# ) as sub
+# group by sub.user_id
+# 
+# # within users, count unique, repeated pin ids
+# 
+# 
+# 
+
+import numpy as np
+import pandas as pd
+import random
+
+
+user_ids = list(np.random.choice(range(1000000,1001000), 1000))
+impressions = list((np.random.pareto(a = 3, size = 1000)*1000))
+impressions = [int(i) for i in impressions]
+clicks = list((np.random.pareto(a = 3, size = 1000)*100))
+clicks = [int(i) for i in clicks]
+data = pd.DataFrame(np.column_stack([user_ids, impressions, clicks]), columns = ['user_id','impressions','clicks'])
+data.head()
+
+
+# code generates dataset
+# 
+
+# Does this dataset make sense? - What will you check ?
+# 1) user 2 more clicks than impressions
+
+# How will you clean it up ?
+
+tmp=data['impressions']<data['clicks']
+tmp.all()
+
+# data = data[data['impressions']>=data['clicks']]
+
+
+###
+
+
+We currently have a button on each Pin on the Pinterest app. It has a click rate of 0.04 (number of clicks / number of pins seen). The only outcomes possible are click or not click.
+
+Q: What is the probability of observing exactly 5 clicks out of 100 pins seen?
+
+100 choose 5 * .04^5 * (1-.04)^(100-5)
+
+
+Q: What is the probability of observing at least 5 clicks out of 100 pins seen?
+
+1 - sum from i = 0 to 5 (100 choose i * .04^i * (1-.04)^(100-i))
+
+
+Q: Given that we observe 5 clicks out of 100 pins seen in the treatment group of an experiment, construct a hypothesis test to test whether the button click rate is significantly different than 0.04.
+
+
+p_0 = 0.04
+p = 5/100
+n = ? 
+
+z = (p - p_0) / (p_0 * (1-p_0) / sqrt(n) ) 
+z = (.05 - .040) / (.04 * (1-.04) / sqrt(n) ) 
+
+
+Q. Can you describe what alpha of 0.05 means here (i.e., type 1 error rate)? To a data scientist (technical audience)? To a person with no statistical background (non-technical audience)?
+
+
+Q. Can you describe the outcome of this hypothesis test to a data scientist (i.e., to a technical audience)? To a person with no statistical background (i.e., to a non-technical audience)?
+
+p>.05
+
+Experimentation
+
+We have been getting feedback from users in focus groups that they’d like to see fresher search results, meaning more up-to-date pins. So we’d like to see how freshness would affect user experience. 
+
+Q: How would you approach this problem?
+
+freshness [?] -> user satisfaction?
+
+1) define freshness
+
+2) metrics to reflect a better user experience
+
+Acquisition
+- 
+
+Activation
+- time on home page
+- boards created
+- pins per board
+- pins pinned per user
+
+Retention
+- repeat logins / week
+
+Referral
+- 
+
+Revenue
+
+```
+
+
 Pinterest
 - Python, data munging, pandas
 - SQL care about efficency (e.g. reduce data before joining)
@@ -49,8 +273,6 @@ Example Answer:
 - So for example someone might see three different pins -- These pins have attributes like different properties of the image, maybe different text captions. 
 - Search for recepies, then I might immediately see 3 pins with food images that have different attributes (carbs, brightness of the image, text, ...). 
 - Very relevant, which is one of the reasons I'm excited to be interviewing with Pinterest. 
-
-
 
 - That overlap between the tasks I created, and the user experience on the pinterest platform is one of the big reasons why I'd be excited to work at Pinterest.
 - Another reason is the proximity of user data to user purchasing decisions (high user intent). 
