@@ -111,38 +111,12 @@ HaaS offer:
 
 
 <!--
-old LI blurb
-Experienced researcher with graduate degrees in cognitive science and statistics, and deep experience with: Bayesian modeling, decision theory, experimentation, machine learning. I'm primarily interested in experimentation and developing machine learning methods to automate real time decision making. 
--->
-
-<!--
 - PhD in cognitive science and a masters in statistics
 - Researched decision making, 
 - Programming an application that would show people two or three options and ask them to pick the one they most preferred, and the program would change attributes of the options (e.g. probabilities and payoffs for gambles, conditioned cues on the screen)
 - cues talk about memory and advertising
 - So one study we'd show a cue followed by a dollar, then in a second phase ask them to choose between delayed and immediate rewards when the cue was present versus absent -- within participant design. 
 - Principles I studied are the same psychological principles that underlie a lot of online decision making, e.g. choosing to click a pin, or deciding which product to buy from the Pinterest interface.
-
--->
-
-
-<!-- AIRBNB COVER LETTER
-Dear Hiring Team,
-
-Airbnb has helped me broaden my perspective and expand my professional network through numerous experiences. Ironically, many of the experiences Airbnb has afforded me have helped me develop the skills that I hope to bring to the table as a Data Scientist at Airbnb.
-
-In the summer of 2017 I stayed in London to present evidence of anomalies in prediction market prices that were predicted by behavioral economic theory. Through Airbnb, I subsequently stayed in Amsterdam for a workshop on advanced Bayesian statistics followed by a vacation in Venice with a close friend and brilliant collaborator. 
-
-In 2018, Airbnb enabled me to stay in a homely loft with an amazing host in Mexico City during a small collaborative meeting at The National Autonomous University of Mexico. While there, I presented work using Bayesian inference and advanced cognitive models to understand how people and animals adapt their behavior to maximize rewards under complex incentive structures. 
-
-After graduating from UC Irvine in May of 2019 with a Ph.D. in Cognitive Science and a M.S. in Statistics, Airbnb made it easy to find lodging in San Francisco during a data science bootcamp. While in San Francisco, I consulted with a Bay Area startup to help them understand their user demographic and to develop a machine learning model to predict which users on a free-trial would convert to paying customers. Most recently I've been working with another San Francisco startup to develop effective ads. 
-
-Overall I cherish the experiences that were affordable through Airbnb, and I look forward to an opportunity to apply my skills to an organization that facilitates life changing experiences for millions of people.
-
-I look forward to hearing from you if you feel I would be a good addition to the team! 
-
-Best Wishes, 
-Mac Strelioff
 -->
 
 

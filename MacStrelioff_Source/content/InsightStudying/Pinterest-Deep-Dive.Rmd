@@ -29,7 +29,6 @@ set.seed(10201991)
 - Google or look up 'growth levers'
 - [growth lever](https://sujanpatel.com/marketing/growth-levers/) case studies
 - [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf)
-- 
 
 # Onsite Prep
 
@@ -41,14 +40,21 @@ Growth initiatives:
 - [selecting A/B testing metrics](https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb): Point is that late funnel metrics might require a larger sample size because of the smaller effect size
 
 
+7 Growth Strategies from [here](https://sujanpatel.com/marketing/growth-levers/)
+
+1. Pinterest: Exclusivity. Pinterest began as an invite-only platform. 
+2. PayPal: Buy users. PayPal offered monetary rewards to new users. An alternative is cash back, since that first requires a purchase. This can be less than a customer's LTV tokeep resaonable revenue.
+3. Popcorn Metrics: Deep Onboarding. Working personally with new users, providing videos and tutorials. 
+4. SpringShield: viral referral loop. Like Robinhood, can have a waitlist for a new feature and make your position in line contingent on referrals -- this induces a competition that favors users who successfully refer more users. 
+5. GrooveHQ: Segment marketing emails based on user behavior. 
+
 ### Metrics
 
 MAUs and ARPU depend on the methodology used to track user data, and changes in this methodology can influence Pinterest's revenue projections.
 
-
 Retention:
 
-- MAU: Monthly active users, a logged-in Pinterest user who visits our website or opens our mobile application at least once during the 30-day period ending on the date of measurement.
+- MAU: Monthly active users, a logged-in Pinterest user who visits our website or opens our mobile application at least once during the 30-day period ending on the date of measurement. 
 
 Revenue:
 
