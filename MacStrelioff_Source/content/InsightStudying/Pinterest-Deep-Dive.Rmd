@@ -46,8 +46,13 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 
 [Funnel Examples](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
 
-- sessions > sessions with product page view > sessions with Add-To-Cart > sessions with transaction
-- 
+- Awareness: Keep the product at top of mind
+- Interest: 
+- Desire: emphasize benefits to the user and a call to action. E.g. "sign up for (product) and enjoy (benefits)"
+- Action: 
+- Example: sessions > sessions with product page view > sessions with Add-To-Cart > sessions with transaction
+- User flow to see if users behave differently from the first touch
+- Important metrics: traffic > conversion rate, bounce rate > sales, cart abandonment > 
 
 7 Growth Strategies from [here](https://sujanpatel.com/marketing/growth-levers/)
 
@@ -58,6 +63,10 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 5. GrooveHQ: Segment marketing emails based on user behavior. Targeted differet users with statistics (time on page, and logins per day) resonent of the users who churned within a 30 day window. Also measured response rate and retention rate among those who responded to the email. 
 6. Milkshake: Leverage happy customers for referrals. Using NPS (Net Promoter Score) responses (positive ones, of course) as testimonials. Asking for shares inside Mailshake. Engaging referrers by asking at sign-up if a customer was there via a referral and who gave it, and thanking them via social media and email. Increasing customer/product investment by asking our most active customers for product feedback. Conducting and featuring case studies from our most successful customers.
 7. PicMonkey: Freemium. 
+
+[Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf): 
+
+- Introduced personalized search in home and sidebar.
 
 ### Metrics
 
