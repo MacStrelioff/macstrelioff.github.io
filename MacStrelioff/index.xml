@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Tue, 08 Oct 2019 17:47:48 +0000</pubDate>
+      <pubDate>Wed, 09 Oct 2019 11:47:14 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -47,13 +47,18 @@
 &lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TODO:&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;Be able to list growth strategies&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Be able to outline and work through experimentation problems&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;job description &lt;a href=&#34;https://careers.pinterest.com/careers/details/1807876&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Pinterest &lt;a href=&#34;https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform&#34;&gt;user demographic&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Articles from &lt;a href=&#34;https://labs.pinterest.com/projects/data-science/&#34;&gt;Pintrest labs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Google or look up ‘growth levers’&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://sujanpatel.com/marketing/growth-levers/&#34;&gt;growth lever&lt;/a&gt; case studies&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ideas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Ideas:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;AR to show a product in the person’s house (built on the &lt;a href=&#34;https://newsroom.pinterest.com/en/post/upgrading-lens-for-more-online-to-offline-inspiration&#34;&gt;lens/picture-based search feature&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Registery or ‘wishlist’ pinboards for weddings, baby showers, holidays, birthdays, …&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;onsite-prep&#34; class=&#34;section level1&#34;&gt;
@@ -64,6 +69,42 @@
 &lt;li&gt;Grow other demographics?&lt;/li&gt;
 &lt;li&gt;Look deep into product experimentation beyond just A/B designs&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb&#34;&gt;selecting A/B testing metrics&lt;/a&gt;: Point is that late funnel metrics might require a larger sample size because of the smaller effect size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From &lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68ae2-b0f2-47d5-a14e-757e66a6f421.pdf&#34;&gt;Risks&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Important metrics: growth, retention, frequency and duration of engagement or use.&lt;/li&gt;
+&lt;li&gt;Ad spend to acquire new users and retain current users&lt;/li&gt;
+&lt;li&gt;Audience approximately 43% of US internet users, 80% of women age 18-64 with children &lt;a href=&#34;https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform&#34;&gt;user demographic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;May be saturated with that demographic and need to grow to other demographics like men and international users&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.crazyegg.com/blog/ecommerce-conversion-funnel/&#34;&gt;Funnel Examples&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Awareness: Keep the product at top of mind&lt;/li&gt;
+&lt;li&gt;Interest:&lt;/li&gt;
+&lt;li&gt;Desire: emphasize benefits to the user and a call to action. E.g. “sign up for (product) and enjoy (benefits)”&lt;/li&gt;
+&lt;li&gt;Action:&lt;/li&gt;
+&lt;li&gt;Example: sessions &amp;gt; sessions with product page view &amp;gt; sessions with Add-To-Cart &amp;gt; sessions with transaction&lt;/li&gt;
+&lt;li&gt;User flow to see if users behave differently from the first touch&lt;/li&gt;
+&lt;li&gt;Important metrics: traffic &amp;gt; conversion rate, bounce rate &amp;gt; sales, cart abandonment &amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;7 Growth Strategies from &lt;a href=&#34;https://sujanpatel.com/marketing/growth-levers/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Pinterest: Exclusivity. Pinterest began as an invite-only platform.&lt;/li&gt;
+&lt;li&gt;PayPal: Buy users. PayPal offered monetary rewards to new users. An alternative is cash back, since that first requires a purchase. This can be less than a customer’s LTV tokeep resaonable revenue.&lt;/li&gt;
+&lt;li&gt;Popcorn Metrics: Deep Onboarding. Working personally with new users, providing videos and tutorials.&lt;/li&gt;
+&lt;li&gt;SpringShield: viral referral loop. Like Robinhood, can have a waitlist for a new feature and make your position in line contingent on referrals – this induces a competition that favors users who successfully refer more users.&lt;/li&gt;
+&lt;li&gt;GrooveHQ: Segment marketing emails based on user behavior. Targeted differet users with statistics (time on page, and logins per day) resonent of the users who churned within a 30 day window. Also measured response rate and retention rate among those who responded to the email.&lt;/li&gt;
+&lt;li&gt;Milkshake: Leverage happy customers for referrals. Using NPS (Net Promoter Score) responses (positive ones, of course) as testimonials. Asking for shares inside Mailshake. Engaging referrers by asking at sign-up if a customer was there via a referral and who gave it, and thanking them via social media and email. Increasing customer/product investment by asking our most active customers for product feedback. Conducting and featuring case studies from our most successful customers.&lt;/li&gt;
+&lt;li&gt;PicMonkey: Freemium.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduced personalized search in home and sidebar.&lt;/li&gt;
+&lt;li&gt;More video content: user repin rate for videos is 1.4x that of static images. Video views greater in Q2 than all of 2018. Searches for specific terms (paint on canvas) also increased by &amp;gt;300% after video pins on those topics. Big gains in searches in food, style, beauty, and skill learning.&lt;/li&gt;
+&lt;li&gt;Videos also improve clickthrough rate and can have a lower cost per click for advertisers (ads pay for impressions and ranking, so a higher CTR may imply a lower CPC).&lt;/li&gt;
+&lt;li&gt;Focusing on growing products from retailers, saw increase of 50% from methods for acquiring pin inventory, which improves relevance and engagement, measured in weekly shopper impressions and clicks.&lt;/li&gt;
+&lt;li&gt;New &lt;a href=&#34;https://newsroom.pinterest.com/en/post/summer-shopping&#34;&gt;shopping features&lt;/a&gt;. Retailers saw 2x higher return on ad spend with Pinterest vs social media, and 1.3x higher return than on paid search.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Metrics&lt;/h3&gt;

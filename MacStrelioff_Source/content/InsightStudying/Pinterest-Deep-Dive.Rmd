@@ -23,9 +23,17 @@ set.seed(10201991)
 
 # TODO: 
 
+- Be able to list growth strategies
+- Be able to outline and work through experimentation problems
+
 - job description [here](https://careers.pinterest.com/careers/details/1807876)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
 - [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf)
+
+# Ideas: 
+
+- AR to show a product in the person's house (built on the [lens/picture-based search feature](https://newsroom.pinterest.com/en/post/upgrading-lens-for-more-online-to-offline-inspiration))
+- Registery or 'wishlist' pinboards for weddings, baby showers, holidays, birthdays, ... 
 
 # Onsite Prep
 
@@ -35,7 +43,6 @@ Growth initiatives:
 - Grow other demographics?
 - Look deep into product experimentation beyond just A/B designs
 - [selecting A/B testing metrics](https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb): Point is that late funnel metrics might require a larger sample size because of the smaller effect size
-
 
 From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68ae2-b0f2-47d5-a14e-757e66a6f421.pdf):
 
@@ -67,6 +74,11 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf): 
 
 - Introduced personalized search in home and sidebar.
+- More video content: user repin rate for videos is 1.4x that of static images. Video views greater in Q2 than all of 2018. Searches for specific terms (paint on canvas) also increased by >300% after video pins on those topics. Big gains in searches in food, style, beauty, and skill learning.
+- Videos also improve clickthrough rate and can have a lower cost per click for advertisers (ads pay for impressions and ranking, so a higher CTR may imply a lower CPC).
+- Focusing on growing products from retailers, saw increase of 50% from methods for acquiring pin inventory, which improves relevance and engagement, measured in weekly shopper impressions and clicks. 
+- New [shopping features](https://newsroom.pinterest.com/en/post/summer-shopping). Retailers saw 2x higher return on ad spend with Pinterest vs social media, and 1.3x higher return than on paid search. 
+- 
 
 ### Metrics
 
