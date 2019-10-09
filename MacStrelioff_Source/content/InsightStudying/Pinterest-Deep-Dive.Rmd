@@ -23,15 +23,34 @@ set.seed(10201991)
 
 # TODO: 
 
+- job description [here](https://careers.pinterest.com/careers/details/1807876)
+- Pinterest [user demographic](https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
 - Google or look up 'growth levers'
-
-
+- [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf)
+- 
 
 # Onsite Prep
 
-- Pinterest [user demographic](https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform)
+Growth initiatives: 
 
+- Grow userbase to males? 
+- Grow other demographics?
+- Look deep into product experimentation beyond just A/B designs
+
+### Metrics
+
+MAUs and ARPU depend on the methodology used to track user data, and changes in this methodology can influence Pinterest's revenue projections.
+
+
+Retention:
+
+- MAU: Monthly active users, a logged-in Pinterest user who visits our website or opens our mobile application at least once during the 30-day period ending on the date of measurement.
+
+Revenue:
+
+- ARPU: Average revenue per user = revenue in a grography / ((MAU0 + MAU1) / 2)
+- Where MAU0 is for the same 30 day period as the revenue and MAU1 is for the prior period
 
 
 

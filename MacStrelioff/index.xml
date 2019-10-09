@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Tue, 08 Oct 2019 15:41:52 +0000</pubDate>
+      <pubDate>Tue, 08 Oct 2019 16:54:45 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -47,15 +47,35 @@
 &lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TODO:&lt;/h1&gt;
 &lt;ul&gt;
+&lt;li&gt;job description &lt;a href=&#34;https://careers.pinterest.com/careers/details/1807876&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pinterest &lt;a href=&#34;https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform&#34;&gt;user demographic&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Articles from &lt;a href=&#34;https://labs.pinterest.com/projects/data-science/&#34;&gt;Pintrest labs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Google or look up ‘growth levers’&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;onsite-prep&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Onsite Prep&lt;/h1&gt;
+&lt;p&gt;Growth initiatives:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Pinterest &lt;a href=&#34;https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform&#34;&gt;user demographic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Grow userbase to males?&lt;/li&gt;
+&lt;li&gt;Grow other demographics?&lt;/li&gt;
+&lt;li&gt;Look deep into product experimentation beyond just A/B designs&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Metrics&lt;/h3&gt;
+&lt;p&gt;MAUs and ARPU depend on the methodology used to track user data, and changes in this methodology can influence Pinterest’s revenue projections.&lt;/p&gt;
+&lt;p&gt;Retention:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MAU: Monthly active users, a logged-in Pinterest user who visits our website or opens our mobile application at least once during the 30-day period ending on the date of measurement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Revenue:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ARPU: Average revenue per user = revenue in a grography / ((MAU0 + MAU1) / 2)&lt;/li&gt;
+&lt;li&gt;Where MAU0 is for the same 30 day period as the revenue and MAU1 is for the prior period&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;phone-screen&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Phone Screen&lt;/h1&gt;
@@ -468,7 +488,7 @@ Revenue
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;metrics&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;metrics-1&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Metrics&lt;/h1&gt;
 &lt;div id=&#34;acquisition&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Acquisition&lt;/h2&gt;
