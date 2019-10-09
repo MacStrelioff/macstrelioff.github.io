@@ -24,10 +24,7 @@ set.seed(10201991)
 # TODO: 
 
 - job description [here](https://careers.pinterest.com/careers/details/1807876)
-- Pinterest [user demographic](https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
-- Google or look up 'growth levers'
-- [growth lever](https://sujanpatel.com/marketing/growth-levers/) case studies
 - [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf)
 
 # Onsite Prep
@@ -40,13 +37,27 @@ Growth initiatives:
 - [selecting A/B testing metrics](https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb): Point is that late funnel metrics might require a larger sample size because of the smaller effect size
 
 
+From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68ae2-b0f2-47d5-a14e-757e66a6f421.pdf):
+
+- Important metrics: growth, retention, frequency and duration of engagement or use. 
+- Ad spend to acquire new users and retain current users
+- Audience approximately 43% of US internet users, 80% of women age 18-64 with children [user demographic](https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform)
+- May be saturated with that demographic and need to grow to other demographics like men and international users
+
+[Funnel Examples](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
+
+- sessions > sessions with product page view > sessions with Add-To-Cart > sessions with transaction
+- 
+
 7 Growth Strategies from [here](https://sujanpatel.com/marketing/growth-levers/)
 
 1. Pinterest: Exclusivity. Pinterest began as an invite-only platform. 
 2. PayPal: Buy users. PayPal offered monetary rewards to new users. An alternative is cash back, since that first requires a purchase. This can be less than a customer's LTV tokeep resaonable revenue.
 3. Popcorn Metrics: Deep Onboarding. Working personally with new users, providing videos and tutorials. 
 4. SpringShield: viral referral loop. Like Robinhood, can have a waitlist for a new feature and make your position in line contingent on referrals -- this induces a competition that favors users who successfully refer more users. 
-5. GrooveHQ: Segment marketing emails based on user behavior. 
+5. GrooveHQ: Segment marketing emails based on user behavior. Targeted differet users with statistics (time on page, and logins per day) resonent of the users who churned within a 30 day window. Also measured response rate and retention rate among those who responded to the email. 
+6. Milkshake: Leverage happy customers for referrals. Using NPS (Net Promoter Score) responses (positive ones, of course) as testimonials. Asking for shares inside Mailshake. Engaging referrers by asking at sign-up if a customer was there via a referral and who gave it, and thanking them via social media and email. Increasing customer/product investment by asking our most active customers for product feedback. Conducting and featuring case studies from our most successful customers.
+7. PicMonkey: Freemium. 
 
 ### Metrics
 
