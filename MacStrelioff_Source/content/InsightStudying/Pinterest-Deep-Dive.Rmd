@@ -25,6 +25,7 @@ set.seed(10201991)
 
 - Be able to list growth strategies
 - Be able to outline and work through experimentation problems
+- be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing)
 
 - job description [here](https://careers.pinterest.com/careers/details/1807876)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
@@ -49,7 +50,23 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 - Important metrics: growth, retention, frequency and duration of engagement or use. 
 - Ad spend to acquire new users and retain current users
 - Audience approximately 43% of US internet users, 80% of women age 18-64 with children [user demographic](https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform)
-- May be saturated with that demographic and need to grow to other demographics like men and international users
+- Maybe saturated with that demographic and need to grow to other demographics like men and international users
+- Pinterest requires good data, targeting areas with high smartphone penetration. Has partnerships with some data providers so that Pinterest doesn't count toward user's data quotas. 
+- Not anticipating that majority of users will become DAUs
+- Risks:
+- competitors mimic product, users use competitiors more
+- User expreience degrades because of poor company decisions
+- failure to deliver relevant content
+- third parties pull content
+- software issues
+- bandwidth issues, slow and frustrating experience
+- privacy and security concerns
+- spam, harassment, cyberbullying, ... 
+- taking actions to maintain engaging and relevant content which lead to lower ad revenue
+- continuously monitor ads, too many ads or irrelevant ads could hurt user growth, retention, or engagement
+- future data privacy laws
+- 
+
 
 [Funnel Examples](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
 
@@ -81,7 +98,8 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 - New mobile ad manager that increases mobile signup activation rates
 - Made easier to add tags for ad attribution, 2x more tags added YTD in 2019 than in all of 2018
 - 30% YoY DAU growth to 300m
-- 
+
+
 
 
 ### Metrics
