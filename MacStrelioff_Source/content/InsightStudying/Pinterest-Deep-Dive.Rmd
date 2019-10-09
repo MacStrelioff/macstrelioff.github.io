@@ -27,6 +27,7 @@ set.seed(10201991)
 - Pinterest [user demographic](https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
 - Google or look up 'growth levers'
+- [growth lever](https://sujanpatel.com/marketing/growth-levers/) case studies
 - [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf)
 - 
 
@@ -37,6 +38,8 @@ Growth initiatives:
 - Grow userbase to males? 
 - Grow other demographics?
 - Look deep into product experimentation beyond just A/B designs
+- [selecting A/B testing metrics](https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb): Point is that late funnel metrics might require a larger sample size because of the smaller effect size
+
 
 ### Metrics
 
