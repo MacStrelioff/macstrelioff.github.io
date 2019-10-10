@@ -42,12 +42,44 @@ Overheard, from Chris and Aman talking;
 - [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf)
 - [product analyst interview questions](https://www.glassdoor.com/Interview/Pinterest-Product-Analyst-Interview-Questions-EI_IE503467.0,9_KO10,25.htm)
 
-# Ideas: 
+# Onsite Prep
 
+## Past Experience
+
+Insight Project: 
+
+- ...
+
+PredictIt: 
+
+- ...
+
+
+
+## Product idea
+
+- AR for haircuts
+- AR for shopping (pinterest, Ikea, Amazon, Target, ...)
+- VR for tutorials (Ikea, DIY, ...)
 - AR to show a product in the person's house (built on the [lens/picture-based search feature](https://newsroom.pinterest.com/en/post/upgrading-lens-for-more-online-to-offline-inspiration))
 - Registery or 'wishlist' pinboards for weddings, baby showers, holidays, birthdays, ... 
 
-# Onsite Prep
+## Product + Experimentation
+
+## Technical (SQL+Python data munging)
+
+## Statistics (circle problem, GLMs, details of hierarchical models)
+
+
+[Growth Ream Organization and Metrics](https://medium.com/pinterest-engineering/bottoms-up-how-the-pinterest-growth-team-decentralizes-team-structure-d9f890fa8869)
+
+- Focus: Acquisition, activation, retention
+- Duties: Ideas for improvements, build and launch experiments, analyze results
+- Experiments to impact growth funnel
+- Hundreds of experiments per quarter
+- Idea generation is the responsibility of the whole team, not just one person
+- Must convey a large enough opportunity -- explain why an idea is important and impactful enough to work on
+- 
 
 
 23 [metrics that matter most to advertisers](https://blog.hootsuite.com/pinterest-statistics-for-business/)
@@ -73,7 +105,6 @@ Overheard, from Chris and Aman talking;
 - Pinterest users spend 29% more shen shopping
 - \$4.3 gross return for every \$1 spend on ads
 - 10x life in awareness and 1.22x life in sales, 1.13 lift in sales for landing pages that match the aesthetic of the pin, and pins without faces are repined 23x as often as pins with faces
-- 
 
 
 

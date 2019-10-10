@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Thu, 10 Oct 2019 11:46:17 +0000</pubDate>
+      <pubDate>Thu, 10 Oct 2019 12:53:42 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -65,15 +65,47 @@ Overheard, from Chris and Aman talking;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.glassdoor.com/Interview/Pinterest-Product-Analyst-Interview-Questions-EI_IE503467.0,9_KO10,25.htm&#34;&gt;product analyst interview questions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ideas&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Ideas:&lt;/h1&gt;
+&lt;div id=&#34;onsite-prep&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Onsite Prep&lt;/h1&gt;
+&lt;div id=&#34;past-experience&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Past Experience&lt;/h2&gt;
+&lt;p&gt;Insight Project:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PredictIt:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;product-idea&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Product idea&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AR for haircuts&lt;/li&gt;
+&lt;li&gt;AR for shopping (pinterest, Ikea, Amazon, Target, …)&lt;/li&gt;
+&lt;li&gt;VR for tutorials (Ikea, DIY, …)&lt;/li&gt;
 &lt;li&gt;AR to show a product in the person’s house (built on the &lt;a href=&#34;https://newsroom.pinterest.com/en/post/upgrading-lens-for-more-online-to-offline-inspiration&#34;&gt;lens/picture-based search feature&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Registery or ‘wishlist’ pinboards for weddings, baby showers, holidays, birthdays, …&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;onsite-prep&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Onsite Prep&lt;/h1&gt;
+&lt;div id=&#34;product-experimentation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Product + Experimentation&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;technical-sqlpython-data-munging&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Technical (SQL+Python data munging)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;statistics-circle-problem-glms-details-of-hierarchical-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Statistics (circle problem, GLMs, details of hierarchical models)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/bottoms-up-how-the-pinterest-growth-team-decentralizes-team-structure-d9f890fa8869&#34;&gt;Growth Ream Organization and Metrics&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Focus: Acquisition, activation, retention&lt;/li&gt;
+&lt;li&gt;Duties: Ideas for improvements, build and launch experiments, analyze results&lt;/li&gt;
+&lt;li&gt;Experiments to impact growth funnel&lt;/li&gt;
+&lt;li&gt;Hundreds of experiments per quarter&lt;/li&gt;
+&lt;li&gt;Idea generation is the responsibility of the whole team, not just one person&lt;/li&gt;
+&lt;li&gt;Must convey a large enough opportunity – explain why an idea is important and impactful enough to work on&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;23 &lt;a href=&#34;https://blog.hootsuite.com/pinterest-statistics-for-business/&#34;&gt;metrics that matter most to advertisers&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;250m people use Pinterest each month (monthly unique users)&lt;/li&gt;
@@ -97,7 +129,6 @@ Overheard, from Chris and Aman talking;
 &lt;li&gt;Pinterest users spend 29% more shen shopping&lt;/li&gt;
 &lt;li&gt;$4.3 gross return for every $1 spend on ads&lt;/li&gt;
 &lt;li&gt;10x life in awareness and 1.22x life in sales, 1.13 lift in sales for landing pages that match the aesthetic of the pin, and pins without faces are repined 23x as often as pins with faces&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Growth initiatives:&lt;/p&gt;
 &lt;ul&gt;
@@ -180,6 +211,7 @@ Overheard, from Chris and Aman talking;
 &lt;li&gt;ARPU: Average revenue per user = revenue in a grography / ((MAU0 + MAU1) / 2)&lt;/li&gt;
 &lt;li&gt;Where MAU0 is for the same 30 day period as the revenue and MAU1 is for the prior period&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;phone-screen&#34; class=&#34;section level1&#34;&gt;
