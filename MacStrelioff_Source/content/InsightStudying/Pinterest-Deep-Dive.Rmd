@@ -54,7 +54,9 @@ PredictIt:
 
 - ...
 
+## Qs
 
+- Meetings? Sounds like a very collaborative environment which I like. 
 
 ## Product idea
 
@@ -79,6 +81,12 @@ PredictIt:
 - Hundreds of experiments per quarter
 - Idea generation is the responsibility of the whole team, not just one person
 - Must convey a large enough opportunity -- explain why an idea is important and impactful enough to work on
+- Analysis also falls on each member, including tracking aggregate metrics on the experimentation platform and also digging in deeper
+- Having everyone involved in analysis enables thought about the type of data and logs needed
+- Make the right decisions quickly: Including everyone in ideation helps to generate more ideas and filter ideas more efficiently. *Important to estimate impact of ideas* so they can be prioritized effectively - involving everyone in this also produces more accurate estimates and better prioritization. In weekly pitch meetings, ideas are shared and evaluated on merits and potential opportunity.
+- Adjust to current problems: Since everyeone on the team can ideate, deploy, and analyze experiments, the team meetings can efficiently prioritize which of those tasks the team should focus on for the week. 
+- Professional development: Each person develops skills for the whole product pipeline from ideation to launch. 
+- "It's exciting to see everyone adopt a curious mindset and consider new opportunities"
 - 
 
 
