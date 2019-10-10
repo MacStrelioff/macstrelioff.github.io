@@ -23,6 +23,14 @@ set.seed(10201991)
 
 # TODO: 
 
+<!--
+Overheard, from Chris and Aman talking;
+# if you can find the f(x) and f(y)
+# say that's a circle, calculate area of a circle...
+# Chris 'either max or min', 'absolute max(abs())'
+# 'calculate the area of this and area of ...?'
+-->
+
 - Be able to list growth strategies
 - Be able to outline and work through experimentation problems
 - be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance, pin 
@@ -30,6 +38,7 @@ set.seed(10201991)
 - job description [here](https://careers.pinterest.com/careers/details/1807876)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
 - [Letter to shareholders](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf)
+- [product analyst interview questions](https://www.glassdoor.com/Interview/Pinterest-Product-Analyst-Interview-Questions-EI_IE503467.0,9_KO10,25.htm)
 
 # Ideas: 
 
