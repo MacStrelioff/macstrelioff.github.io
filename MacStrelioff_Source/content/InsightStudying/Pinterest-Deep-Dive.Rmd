@@ -35,6 +35,7 @@ Overheard, from Chris and Aman talking;
 - Be able to outline and work through experimentation problems
 - be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance, pin 
 - be able to talk about past projects and their use cases or value
+- be able to do basic analyses in pandas
 
 - job description [here](https://careers.pinterest.com/careers/details/1807876)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
@@ -83,6 +84,8 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 - SEO efforts could underperform, search engines could demote pinterest content
 - 3rd party authenticators (facebook, google, ...) withdraw login support
 - Competition from Amazon, Facebook (and Instagram), Google, Snap, and Twitter
+- risks inherent in international business -- political, regulatory instability, ...
+- inability to manage a rapidly growing headcount
 
 
 [Funnel Examples](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
