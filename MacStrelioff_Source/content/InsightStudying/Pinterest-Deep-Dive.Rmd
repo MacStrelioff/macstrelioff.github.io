@@ -25,7 +25,7 @@ set.seed(10201991)
 
 - Be able to list growth strategies
 - Be able to outline and work through experimentation problems
-- be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing)
+- be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance, pin 
 
 - job description [here](https://careers.pinterest.com/careers/details/1807876)
 - Articles from [Pintrest labs](https://labs.pinterest.com/projects/data-science/)
@@ -65,6 +65,12 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 - taking actions to maintain engaging and relevant content which lead to lower ad revenue
 - continuously monitor ads, too many ads or irrelevant ads could hurt user growth, retention, or engagement
 - future data privacy laws
+- new products or product enhancements could be ill received by pinners
+- Behavior required by a new product may not be easily learnable, which could hurt engagement, retention, and growth
+- Pinterest brand could be harmed. Currently Pinterest is an empowering environment, which helps engagement,retention,growth.
+- Poor perception of the advertisers chould also hurt Pinterest if it reduces eng,ret,gro
+- Scrutiny of "screen time", privacy, or any decisions of Pinterest 
+- SEO efforts could underperform, search engines could demote pinterest content
 - 
 
 
