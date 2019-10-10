@@ -81,7 +81,8 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 - Poor perception of the advertisers chould also hurt Pinterest if it reduces eng,ret,gro
 - Scrutiny of "screen time", privacy, or any decisions of Pinterest 
 - SEO efforts could underperform, search engines could demote pinterest content
-- 
+- 3rd party authenticators (facebook, google, ...) withdraw login support
+- Competition from Amazon, Facebook (and Instagram), Google, Snap, and Twitter
 
 
 [Funnel Examples](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
