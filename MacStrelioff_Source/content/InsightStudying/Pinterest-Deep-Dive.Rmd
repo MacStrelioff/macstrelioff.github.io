@@ -176,6 +176,7 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 - risks inherent in international business -- political, regulatory instability, ...
 - inability to manage a rapidly growing headcount
 - Dependance on AWS for compute, storage, data transfer
+- Inability to retain and recruit talented employees
 
 [Funnel Examples](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
 
