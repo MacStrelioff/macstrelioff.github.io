@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Fri, 11 Oct 2019 10:17:49 +0000</pubDate>
+      <pubDate>Fri, 11 Oct 2019 13:14:27 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -120,6 +120,11 @@ Overheard, from Chris and Aman talking;
 &lt;/div&gt;
 &lt;div id=&#34;other&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Other&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb&#34;&gt;A/B testing for managers&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose a metric reflective of a microconversion close to the intervention – more power and a higher likelihood that the change is due to the treatment&lt;/li&gt;
+&lt;li&gt;Choose ‘counterbalance’ or guard rail metrics – time on subsequent page, … .&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/concepts/metric_types/&#34;&gt;common metric types&lt;/a&gt;, mentioned in &lt;a href=&#34;https://medium.com/pinterest-engineering/upgrading-pinterest-operational-metrics-8718d058079a&#34;&gt;this pinterest article&lt;/a&gt; - counter: monotonically increases - guage: single value that increases or decreases - histogram: set of counts of values in buckets&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/bottoms-up-how-the-pinterest-growth-team-decentralizes-team-structure-d9f890fa8869&#34;&gt;Growth Ream Organization and Metrics&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;

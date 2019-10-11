@@ -92,6 +92,11 @@ PredictIt:
 
 ## Other
 
+[A/B testing for managers](https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb)
+
+- Choose a metric reflective of a microconversion close to the intervention -- more power and a higher likelihood that the change is due to the treatment
+- Choose 'counterbalance' or guard rail metrics -- time on subsequent page, ... .
+
 [common metric types](https://prometheus.io/docs/concepts/metric_types/), mentioned in [this pinterest article](https://medium.com/pinterest-engineering/upgrading-pinterest-operational-metrics-8718d058079a)
 - counter: monotonically increases
 - guage: single value that increases or decreases
@@ -581,8 +586,6 @@ Result:
 Value:
 
 - Implications for user intent modeling
-
-
 
 
 ### Explain some research at Pintrest
