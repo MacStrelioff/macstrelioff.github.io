@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Thu, 10 Oct 2019 13:16:29 +0000</pubDate>
+      <pubDate>Thu, 10 Oct 2019 16:49:08 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -102,6 +102,10 @@ Overheard, from Chris and Aman talking;
 &lt;/div&gt;
 &lt;div id=&#34;statistics-circle-problem-glms-details-of-hierarchical-models&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Statistics (circle problem, GLMs, details of hierarchical models)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Other&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/concepts/metric_types/&#34;&gt;common metric types&lt;/a&gt;, mentioned in &lt;a href=&#34;https://medium.com/pinterest-engineering/upgrading-pinterest-operational-metrics-8718d058079a&#34;&gt;this pinterest article&lt;/a&gt; - counter: monotonically increases - guage: single value that increases or decreases - histogram: set of counts of values in buckets&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/bottoms-up-how-the-pinterest-growth-team-decentralizes-team-structure-d9f890fa8869&#34;&gt;Growth Ream Organization and Metrics&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Focus: Acquisition, activation, retention&lt;/li&gt;

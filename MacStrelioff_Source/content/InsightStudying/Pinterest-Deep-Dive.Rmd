@@ -72,6 +72,12 @@ PredictIt:
 
 ## Statistics (circle problem, GLMs, details of hierarchical models)
 
+## Other
+
+[common metric types](https://prometheus.io/docs/concepts/metric_types/), mentioned in [this pinterest article](https://medium.com/pinterest-engineering/upgrading-pinterest-operational-metrics-8718d058079a)
+- counter: monotonically increases
+- guage: single value that increases or decreases
+- histogram: set of counts of values in buckets
 
 [Growth Ream Organization and Metrics](https://medium.com/pinterest-engineering/bottoms-up-how-the-pinterest-growth-team-decentralizes-team-structure-d9f890fa8869)
 
