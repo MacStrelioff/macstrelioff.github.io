@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Thu, 10 Oct 2019 16:49:08 +0000</pubDate>
+      <pubDate>Thu, 10 Oct 2019 17:22:14 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -58,8 +58,11 @@ Overheard, from Chris and Aman talking;
 &lt;li&gt;Be able to outline and work through experimentation problems&lt;/li&gt;
 &lt;li&gt;be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance, pin&lt;/li&gt;
 &lt;li&gt;be able to talk about past projects and their use cases or value&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;be able to do basic analyses in pandas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;job description &lt;a href=&#34;https://careers.pinterest.com/careers/details/1807876&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;be able to do basic analyses in pandas&lt;/li&gt;
+&lt;li&gt;be able to talk about differences in efficiency between different estimators&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;be able to talk about ATE vs ATT, and other causal inference methods..&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;job description for DA from recruiter &lt;a href=&#34;https://careers.pinterest.com/careers/details/1897260&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;job description for DS &lt;a href=&#34;https://careers.pinterest.com/careers/details/1807876&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Articles from &lt;a href=&#34;https://labs.pinterest.com/projects/data-science/&#34;&gt;Pintrest labs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.glassdoor.com/Interview/Pinterest-Product-Analyst-Interview-Questions-EI_IE503467.0,9_KO10,25.htm&#34;&gt;product analyst interview questions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -69,6 +72,13 @@ Overheard, from Chris and Aman talking;
 &lt;h1&gt;Onsite Prep&lt;/h1&gt;
 &lt;div id=&#34;past-experience&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Past Experience&lt;/h2&gt;
+&lt;p&gt;Overview;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;research on decision making, RL models to simulate people’s learning behavior,&lt;/li&gt;
+&lt;li&gt;through consulting work and Insight, I’m transitioning into industry..&lt;/li&gt;
+&lt;li&gt;I really like using statistics to durive actionable insights and drive decisions.&lt;/li&gt;
+&lt;li&gt;best exemplified in PredictIt project.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Insight Project:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;…&lt;/li&gt;
