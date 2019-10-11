@@ -24,6 +24,12 @@ set.seed(10201991)
 # TODO: 
 
 <!--
+- experimentation A-Z
+- "tell me about yourself"
+- data munging / tweet analysis
+-->
+
+<!--
 Overheard, from Chris and Aman talking;
 # if you can find the f(x) and f(y)
 # say that's a circle, calculate area of a circle...
@@ -105,7 +111,6 @@ PredictIt:
 - Adjust to current problems: Since everyeone on the team can ideate, deploy, and analyze experiments, the team meetings can efficiently prioritize which of those tasks the team should focus on for the week. 
 - Professional development: Each person develops skills for the whole product pipeline from ideation to launch. 
 - "It's exciting to see everyone adopt a curious mindset and consider new opportunities"
-- 
 
 
 23 [metrics that matter most to advertisers](https://blog.hootsuite.com/pinterest-statistics-for-business/)
@@ -131,8 +136,6 @@ PredictIt:
 - Pinterest users spend 29% more shen shopping
 - \$4.3 gross return for every \$1 spend on ads
 - 10x life in awareness and 1.22x life in sales, 1.13 lift in sales for landing pages that match the aesthetic of the pin, and pins without faces are repined 23x as often as pins with faces
-
-
 
 
 Growth initiatives: 
@@ -172,7 +175,7 @@ From [Risks](https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68a
 - Competition from Amazon, Facebook (and Instagram), Google, Snap, and Twitter
 - risks inherent in international business -- political, regulatory instability, ...
 - inability to manage a rapidly growing headcount
-
+- Dependance on AWS for compute, storage, data transfer
 
 [Funnel Examples](https://www.crazyegg.com/blog/ecommerce-conversion-funnel/)
 

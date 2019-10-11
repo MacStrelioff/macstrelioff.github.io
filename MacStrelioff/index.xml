@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Thu, 10 Oct 2019 17:22:14 +0000</pubDate>
+      <pubDate>Fri, 11 Oct 2019 09:40:56 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -46,6 +46,11 @@
 
 &lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;!--
+- experimentation A-Z
+- &#34;tell me about yourself&#34;
+- data munging / tweet analysis
+--&gt;
 &lt;!--
 Overheard, from Chris and Aman talking;
 # if you can find the f(x) and f(y)
@@ -130,7 +135,6 @@ Overheard, from Chris and Aman talking;
 &lt;li&gt;Adjust to current problems: Since everyeone on the team can ideate, deploy, and analyze experiments, the team meetings can efficiently prioritize which of those tasks the team should focus on for the week.&lt;/li&gt;
 &lt;li&gt;Professional development: Each person develops skills for the whole product pipeline from ideation to launch.&lt;/li&gt;
 &lt;li&gt;“It’s exciting to see everyone adopt a curious mindset and consider new opportunities”&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;23 &lt;a href=&#34;https://blog.hootsuite.com/pinterest-statistics-for-business/&#34;&gt;metrics that matter most to advertisers&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -193,6 +197,7 @@ Overheard, from Chris and Aman talking;
 &lt;li&gt;Competition from Amazon, Facebook (and Instagram), Google, Snap, and Twitter&lt;/li&gt;
 &lt;li&gt;risks inherent in international business – political, regulatory instability, …&lt;/li&gt;
 &lt;li&gt;inability to manage a rapidly growing headcount&lt;/li&gt;
+&lt;li&gt;Dependance on AWS for compute, storage, data transfer&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.crazyegg.com/blog/ecommerce-conversion-funnel/&#34;&gt;Funnel Examples&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
