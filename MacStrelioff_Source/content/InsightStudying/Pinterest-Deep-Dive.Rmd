@@ -39,11 +39,11 @@ Overheard, from Chris and Aman talking;
 
 - Be able to list growth strategies
 - Be able to outline and work through experimentation problems
-- be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance, pin 
-- be able to talk about past projects and their use cases or value
-- be able to do basic analyses in pandas
-- be able to talk about differences in efficiency between different estimators
-- be able to talk about ATE vs ATT, and other causal inference methods..
+- Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance
+- Be able to talk about past projects and their use cases or value
+- Be able to do basic analyses in pandas
+- Be able to talk about differences in efficiency between different estimators
+- Be able to talk about ATE vs ATT, and other causal inference methods..
 
 - job description for DA from recruiter [here](https://careers.pinterest.com/careers/details/1897260)
 - job description for DS [here](https://careers.pinterest.com/careers/details/1807876)
