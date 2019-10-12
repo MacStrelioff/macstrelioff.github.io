@@ -37,13 +37,14 @@ Overheard, from Chris and Aman talking;
 # 'calculate the area of this and area of ...?'
 -->
 
-- Be able to list growth strategies
-- Be able to outline and work through experimentation problems
-- Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance
-- Be able to talk about past projects and their use cases or value
-- Be able to do basic analyses in pandas
 - Be able to talk about differences in efficiency between different estimators
 - Be able to talk about ATE vs ATT, and other causal inference methods..
+- Be able to talk about past projects and their use cases or value
+- Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance
+- Be able to do basic analyses in pandas
+- Be able to outline and work through experimentation problems
+- Be able to list growth strategies
+
 
 - job description for DA from recruiter [here](https://careers.pinterest.com/careers/details/1897260)
 - job description for DS [here](https://careers.pinterest.com/careers/details/1807876)
