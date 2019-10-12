@@ -37,9 +37,9 @@ Overheard, from Chris and Aman talking;
 # 'calculate the area of this and area of ...?'
 -->
 
-- Be able to talk about differences in efficiency between different estimators
-- Be able to talk about ATE vs ATT, and other causal inference methods..
 - Be able to talk about past projects and their use cases or value
+- Be able to talk about differences in efficiency between different estimators; see [efficiency](https://en.wikipedia.org/wiki/Efficiency_(statistics)), and [robust statistics](https://en.wikipedia.org/wiki/Robust_statistics)
+- Be able to talk about ATE vs ATT, and other causal inference methods.
 - Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance
 - Be able to do basic analyses in pandas
 - Be able to outline and work through experimentation problems
@@ -96,7 +96,7 @@ Experimentation outline
 - assignment: 1) Y's independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0
 - n/T: novelty effects, power
 - test: lower variance models (include precision variables) or designs (ABA)
-- recommendation: 
+- recommendation: Can try to relate to a revenue or LTV model to quantify the value of the difference we found.
 
 ## Technical (SQL+Python data munging)
 

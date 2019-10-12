@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Sat, 12 Oct 2019 11:51:04 +0000</pubDate>
+      <pubDate>Sat, 12 Oct 2019 13:43:10 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -59,9 +59,9 @@ Overheard, from Chris and Aman talking;
 # &#39;calculate the area of this and area of ...?&#39;
 --&gt;
 &lt;ul&gt;
-&lt;li&gt;Be able to talk about differences in efficiency between different estimators&lt;/li&gt;
-&lt;li&gt;Be able to talk about ATE vs ATT, and other causal inference methods..&lt;/li&gt;
 &lt;li&gt;Be able to talk about past projects and their use cases or value&lt;/li&gt;
+&lt;li&gt;Be able to talk about differences in efficiency between different estimators; see &lt;a href=&#34;https://en.wikipedia.org/wiki/Efficiency_(statistics)&#34;&gt;efficiency&lt;/a&gt;, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Robust_statistics&#34;&gt;robust statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Be able to talk about ATE vs ATT, and other causal inference methods.&lt;/li&gt;
 &lt;li&gt;Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance&lt;/li&gt;
 &lt;li&gt;Be able to do basic analyses in pandas&lt;/li&gt;
 &lt;li&gt;Be able to outline and work through experimentation problems&lt;/li&gt;
@@ -120,7 +120,7 @@ Overheard, from Chris and Aman talking;
 &lt;li&gt;assignment: 1) Y’s independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0&lt;/li&gt;
 &lt;li&gt;n/T: novelty effects, power&lt;/li&gt;
 &lt;li&gt;test: lower variance models (include precision variables) or designs (ABA)&lt;/li&gt;
-&lt;li&gt;recommendation:&lt;/li&gt;
+&lt;li&gt;recommendation: Can try to relate to a revenue or LTV model to quantify the value of the difference we found.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;technical-sqlpython-data-munging&#34; class=&#34;section level2&#34;&gt;
