@@ -86,6 +86,17 @@ PredictIt:
 
 ## Product + Experimentation
 
+Experimentation outline 
+
+- question
+- context: user flow
+- conditions
+- metrics and variables
+- assignment: 1) Y's independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0
+- n/T: novelty effects, power
+- test: lower variance models (include precision variables) or designs (ABA)
+- recommendation: 
+
 ## Technical (SQL+Python data munging)
 
 ## Statistics (circle problem, GLMs, details of hierarchical models)
