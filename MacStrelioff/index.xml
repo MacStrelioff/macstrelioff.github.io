@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Sun, 13 Oct 2019 12:56:01 +0000</pubDate>
+      <pubDate>Sun, 13 Oct 2019 13:05:17 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -140,8 +140,8 @@ Overheard, from Chris and Aman talking;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/pinvestigator-a-tool-for-exploring-experiment-related-changes-a58f143f83c&#34;&gt;Pinvestigator&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Important metric caregories: active pinners, board creation rate, interest follow rate, Pin closeup rate&lt;/li&gt;
-&lt;li&gt;metric: new signups, propensity to repin by app (iPhone)&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;metric: new signups, propensity to repin by app (iPhone); percentage of new Pinners who’ve repinned something during their first time using the product&lt;/li&gt;
+&lt;li&gt;Pinvestigator is an internal tool that helps identify which experiment is responsible for a change in a metric during a particular timeframe&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb&#34;&gt;A/B testing for managers&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;

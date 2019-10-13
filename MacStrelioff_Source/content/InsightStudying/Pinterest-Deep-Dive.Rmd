@@ -113,8 +113,8 @@ Experimentation outline
 [Pinvestigator](https://medium.com/pinterest-engineering/pinvestigator-a-tool-for-exploring-experiment-related-changes-a58f143f83c)
 
 - Important metric caregories: active pinners, board creation rate, interest follow rate, Pin closeup rate
-- metric: new signups, propensity to repin by app (iPhone)
-- 
+- metric: new signups, propensity to repin by app (iPhone); percentage of new Pinners who’ve repinned something during their first time using the product
+- Pinvestigator is an internal tool that helps identify which experiment is responsible for a change in a metric during a particular timeframe
 
 [A/B testing for managers](https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb)
 
