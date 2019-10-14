@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Sun, 13 Oct 2019 13:05:17 +0000</pubDate>
+      <pubDate>Sun, 13 Oct 2019 17:58:32 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -59,7 +59,7 @@ Overheard, from Chris and Aman talking;
 # &#39;calculate the area of this and area of ...?&#39;
 --&gt;
 &lt;ul&gt;
-&lt;li&gt;Be able to talk about past projects and their use cases or value&lt;/li&gt;
+&lt;li&gt;Be able to talk about past projects and their use cases or value – Use STAR to connect with interviewers over each experience.&lt;/li&gt;
 &lt;li&gt;Be able to talk about differences in efficiency between different estimators; see &lt;a href=&#34;https://en.wikipedia.org/wiki/Efficiency_(statistics)&#34;&gt;efficiency&lt;/a&gt;, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Robust_statistics&#34;&gt;robust statistics&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Be able to talk about ATE vs ATT, and other causal inference methods.&lt;/li&gt;
 &lt;li&gt;Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance&lt;/li&gt;
@@ -114,9 +114,9 @@ Overheard, from Chris and Aman talking;
 &lt;p&gt;Experimentation outline&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;question&lt;/li&gt;
-&lt;li&gt;context: user flow&lt;/li&gt;
-&lt;li&gt;conditions&lt;/li&gt;
+&lt;li&gt;context: population, user flow&lt;/li&gt;
 &lt;li&gt;metrics and variables&lt;/li&gt;
+&lt;li&gt;conditions&lt;/li&gt;
 &lt;li&gt;assignment: 1) Y’s independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0&lt;/li&gt;
 &lt;li&gt;n/T: novelty effects, power&lt;/li&gt;
 &lt;li&gt;test: lower variance models (include precision variables) or designs (ABA)&lt;/li&gt;
@@ -131,6 +131,12 @@ Overheard, from Chris and Aman talking;
 &lt;/div&gt;
 &lt;div id=&#34;other&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Other&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/monitoring-a-b-experiments-in-real-time-5cd3ee611c1&#34;&gt;Pinterest monitoring A/B tests in real time&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Metrics: repinners, pin ctr, pin creators, pin searchers, user searches, board searches, user follows board follows&lt;/li&gt;
+&lt;li&gt;Possible issues: 1) experiment never triggers, 2) experiment fails to trigger for some group, 3) experiment labels everyone as control even if treatment was triggered.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/demystifying-seo-with-experiments-a183b325cf4c&#34;&gt;Pinterest A/B SEO Tests&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Assign pages to different SEO conditions&lt;/li&gt;

@@ -37,7 +37,7 @@ Overheard, from Chris and Aman talking;
 # 'calculate the area of this and area of ...?'
 -->
 
-- Be able to talk about past projects and their use cases or value
+- Be able to talk about past projects and their use cases or value -- Use STAR to connect with interviewers over each experience.
 - Be able to talk about differences in efficiency between different estimators; see [efficiency](https://en.wikipedia.org/wiki/Efficiency_(statistics)), and [robust statistics](https://en.wikipedia.org/wiki/Robust_statistics)
 - Be able to talk about ATE vs ATT, and other causal inference methods.
 - Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance
@@ -90,9 +90,9 @@ PredictIt:
 Experimentation outline 
 
 - question
-- context: user flow
-- conditions
+- context: population, user flow
 - metrics and variables
+- conditions
 - assignment: 1) Y's independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0
 - n/T: novelty effects, power
 - test: lower variance models (include precision variables) or designs (ABA)
@@ -103,6 +103,12 @@ Experimentation outline
 ## Statistics (circle problem, GLMs, details of hierarchical models)
 
 ## Other
+
+[Pinterest monitoring A/B tests in real time](https://medium.com/pinterest-engineering/monitoring-a-b-experiments-in-real-time-5cd3ee611c1)
+
+- Metrics: repinners, pin ctr, pin creators, pin searchers, user searches, board searches, user follows board follows
+- Possible issues: 1) experiment never triggers, 2) experiment fails to trigger for some group, 3) experiment labels everyone as control even if treatment was triggered. 
+- 
 
 [Pinterest A/B SEO Tests](https://medium.com/pinterest-engineering/demystifying-seo-with-experiments-a183b325cf4c)
 

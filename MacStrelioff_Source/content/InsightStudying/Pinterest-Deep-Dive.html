@@ -1,7 +1,7 @@
 ---
 title: "Pinterest"
 author: "Mac Strelioff"
-date: "2019-10-13 13:05:17"
+date: "2019-10-13 17:58:32"
 menu:
   InsightStudying:
     parent: Foundations
@@ -27,7 +27,7 @@ Overheard, from Chris and Aman talking;
 # 'calculate the area of this and area of ...?'
 -->
 <ul>
-<li>Be able to talk about past projects and their use cases or value</li>
+<li>Be able to talk about past projects and their use cases or value – Use STAR to connect with interviewers over each experience.</li>
 <li>Be able to talk about differences in efficiency between different estimators; see <a href="https://en.wikipedia.org/wiki/Efficiency_(statistics)">efficiency</a>, and <a href="https://en.wikipedia.org/wiki/Robust_statistics">robust statistics</a></li>
 <li>Be able to talk about ATE vs ATT, and other causal inference methods.</li>
 <li>Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance</li>
@@ -82,9 +82,9 @@ Overheard, from Chris and Aman talking;
 <p>Experimentation outline</p>
 <ul>
 <li>question</li>
-<li>context: user flow</li>
-<li>conditions</li>
+<li>context: population, user flow</li>
 <li>metrics and variables</li>
+<li>conditions</li>
 <li>assignment: 1) Y’s independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0</li>
 <li>n/T: novelty effects, power</li>
 <li>test: lower variance models (include precision variables) or designs (ABA)</li>
@@ -99,6 +99,12 @@ Overheard, from Chris and Aman talking;
 </div>
 <div id="other" class="section level2">
 <h2>Other</h2>
+<p><a href="https://medium.com/pinterest-engineering/monitoring-a-b-experiments-in-real-time-5cd3ee611c1">Pinterest monitoring A/B tests in real time</a></p>
+<ul>
+<li>Metrics: repinners, pin ctr, pin creators, pin searchers, user searches, board searches, user follows board follows</li>
+<li>Possible issues: 1) experiment never triggers, 2) experiment fails to trigger for some group, 3) experiment labels everyone as control even if treatment was triggered.</li>
+<li></li>
+</ul>
 <p><a href="https://medium.com/pinterest-engineering/demystifying-seo-with-experiments-a183b325cf4c">Pinterest A/B SEO Tests</a></p>
 <ul>
 <li>Assign pages to different SEO conditions</li>
