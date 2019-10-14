@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Sun, 13 Oct 2019 18:46:40 +0000</pubDate>
+      <pubDate>Sun, 13 Oct 2019 20:57:35 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -104,6 +104,9 @@ Overheard, from Chris and Aman talking;
 &lt;div id=&#34;product-idea&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Product idea&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;Registery and ‘wishlist’ boards for weddings, birthdays, holidays, can invite friends and link to product checkouts&lt;/li&gt;
+&lt;li&gt;Stacking cards for Instacart&lt;/li&gt;
+&lt;li&gt;‘Surprise Me’ feature for Netflix&lt;/li&gt;
 &lt;li&gt;AR for haircuts&lt;/li&gt;
 &lt;li&gt;AR for shopping (pinterest, Ikea, Amazon, Target, …)&lt;/li&gt;
 &lt;li&gt;VR for tutorials (Ikea, DIY, …)&lt;/li&gt;
@@ -133,6 +136,11 @@ Overheard, from Chris and Aman talking;
 &lt;/div&gt;
 &lt;div id=&#34;other&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Other&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/exploring-effective-user-signals-585507d8e926&#34;&gt;Pinterest on user signals and activations&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Asking google signups to provide their gender for&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/trapped-in-the-present-how-engagement-bias-in-short-run-experiments-can-blind-you-to-long-run-58b55ad3bda0&#34;&gt;Pinterest on engagement bias&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Method: run experiment, ship but have a holdout of 5% who do not get new feature.&lt;/li&gt;

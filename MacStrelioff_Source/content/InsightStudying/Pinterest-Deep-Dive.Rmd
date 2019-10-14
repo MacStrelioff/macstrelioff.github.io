@@ -80,6 +80,9 @@ PredictIt:
 
 ## Product idea
 
+- Registery and 'wishlist' boards for weddings, birthdays, holidays, can invite friends and link to product checkouts
+- Stacking cards for Instacart
+- 'Surprise Me' feature for Netflix
 - AR for haircuts
 - AR for shopping (pinterest, Ikea, Amazon, Target, ...)
 - VR for tutorials (Ikea, DIY, ...)
@@ -104,6 +107,11 @@ Experimentation outline
 ## Statistics (circle problem, GLMs, details of hierarchical models)
 
 ## Other
+
+[Pinterest on user signals and activations](https://medium.com/pinterest-engineering/exploring-effective-user-signals-585507d8e926)
+
+- Asking google signups to provide their gender for 
+- 
 
 [Pinterest on engagement bias](https://medium.com/pinterest-engineering/trapped-in-the-present-how-engagement-bias-in-short-run-experiments-can-blind-you-to-long-run-58b55ad3bda0)
 
