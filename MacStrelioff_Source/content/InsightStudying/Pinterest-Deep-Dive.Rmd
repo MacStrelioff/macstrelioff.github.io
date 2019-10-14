@@ -53,6 +53,28 @@ Overheard, from Chris and Aman talking;
 
 # Onsite Prep
 
+## Schedule 
+
+[Varun Bansal](https://www.linkedin.com/in/varun-b-06976a34/)
+
+- Product manager, BA in math from Harvard, consulting work
+
+[Kellie Ottoboni](https://www.linkedin.com/in/kellieottoboni/)
+
+- PhD stats from Berkeley
+- Social Good
+
+[Ahsan Ashraf](https://www.linkedin.com/in/aashraf04/)
+
+- PhD physics
+- Insight fellow
+
+[Yifei Bao](https://www.linkedin.com/in/yifei-bao/)
+
+- Multiple leadership positions on consumer/growth teams at Goldman Sachs and Uber, now Pinterest
+- PhD in Computer Science
+
+
 ## Past Experience
 
 Overview; 
@@ -111,7 +133,6 @@ Experimentation outline
 [Pinterest on pin cohesion](https://medium.com/pinterest-engineering/building-pin-cohesion-229c19fc617e)
 
 - Multiple ML models convert images to text and compare similarity, using many signals including signals from text on boards and images and text in the URL associated with a link.
-
 
 [Pinterest on metric improvements from redoing the mobile web experience](https://medium.com/pinterest-engineering/a-one-year-pwa-retrospective-f4a2f4129e05)
 
