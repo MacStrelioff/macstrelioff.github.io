@@ -71,8 +71,19 @@ Overheard, from Chris and Aman talking;
 
 [Yifei Bao](https://www.linkedin.com/in/yifei-bao/)
 
-- Multiple leadership positions on consumer/growth teams at Goldman Sachs and Uber, now Pinterest
 - PhD in Computer Science
+- Multiple leadership positions on consumer/growth teams at Goldman Sachs and Uber, now Pinterest
+
+[Holly Capell](https://www.linkedin.com/in/hollycapell/)
+
+- MS in data sci from UCFS
+- Experience with big data tools, AWS, spark, ...
+- Experience with python and bash
+
+[Pamela Clevenger](https://www.linkedin.com/in/pamelaclevenger/)
+
+- PhD in experimental psych
+- Insight fellow: Consulting project for a microloan company
 
 
 ## Past Experience
