@@ -187,6 +187,42 @@ Probability functions have to satisfy a few conditions:
 2. 
 3. 
 
+## Transformations of Random Variables
+
+Given $x\sim F_X(x)$ and $y=g(x)$ 
+
+$$
+\begin{aligned}
+F_Y(y) = \begin{cases}
+F_X(g^{-1}(y)), & \text{ if g is increasing wrt x}\\
+1-F_X(g^{-1}(y)), & \text{ if g is decreasing wrt x}
+\end{cases}
+\end{aligned}
+$$
+
+By the chain rule, the pdf is;
+
+$$
+\begin{aligned}
+f_Y(y)=\frac{d}{dy}F_y(y) = f_X(g^{-1}(y))\left| \frac{d}{dy} g^{-1}(y) \right|
+\end{aligned}
+$$
+
+A special case of this is the probability integral transformation; 
+
+$$
+\begin{aligned}
+x&\sim F_X(x) \\
+Y&=F_X(x) \\
+P(Y\leq y) &= P(F_X(X)\leq y) \\
+&= P(F^{-1}_X(F_X^{-1}(X))\leq F_X^{-1}(y)) \\
+&= P(X \leq F_X^{-1}(y)) \\
+&= F_X(F_X^{-1}(y)) \\
+&= y
+\end{aligned}
+$$
+
+
 <!--
 Transformations of variables!
 -->

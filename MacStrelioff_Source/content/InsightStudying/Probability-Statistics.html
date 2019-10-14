@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-09-21 11:02:16"
+date: "2019-10-14 11:36:24"
 math: true
 output:
   blogdown::html_page:
@@ -20,6 +20,7 @@ linktitle: Probability and Statistics
 <li><a href="#probability-foundations">Probability Foundations</a><ul>
 <li><a href="#probability-rules">Probability Rules</a></li>
 <li><a href="#probability-functions">Probability Functions</a></li>
+<li><a href="#transformations-of-random-variables">Transformations of Random Variables</a></li>
 <li><a href="#expectation">Expectation</a></li>
 <li><a href="#variance">Variance</a></li>
 <li><a href="#information-theory">Information Theory</a></li>
@@ -201,6 +202,36 @@ p( x - \epsilon&lt; x &lt; x+\epsilon) &amp;= F(x+\epsilon) - F(x-\epsilon) \\
 <li></li>
 <li></li>
 </ol>
+</div>
+<div id="transformations-of-random-variables" class="section level2">
+<h2>Transformations of Random Variables</h2>
+<p>Given <span class="math inline">\(x\sim F_X(x)\)</span> and <span class="math inline">\(y=g(x)\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+F_Y(y) = \begin{cases}
+F_X(g^{-1}(y)), &amp; \text{ if g is increasing wrt x}\\
+1-F_X(g^{-1}(y)), &amp; \text{ if g is decreasing wrt x}
+\end{cases}
+\end{aligned}
+\]</span></p>
+<p>By the chain rule, the pdf is;</p>
+<p><span class="math display">\[
+\begin{aligned}
+f_Y(y)=\frac{d}{dy}F_y(y) = f_X(g^{-1}(y))\left| \frac{d}{dy} g^{-1}(y) \right|
+\end{aligned}
+\]</span></p>
+<p>A special case of this is the probability integral transformation;</p>
+<p><span class="math display">\[
+\begin{aligned}
+x&amp;\sim F_X(x) \\
+Y&amp;=F_X(x) \\
+P(Y\leq y) &amp;= P(F_X(X)\leq y) \\
+&amp;= P(F^{-1}_X(F_X^{-1}(X))\leq F_X^{-1}(y)) \\
+&amp;= P(X \leq F_X^{-1}(y)) \\
+&amp;= F_X(F_X^{-1}(y)) \\
+&amp;= y
+\end{aligned}
+\]</span></p>
 <!--
 Transformations of variables!
 -->
