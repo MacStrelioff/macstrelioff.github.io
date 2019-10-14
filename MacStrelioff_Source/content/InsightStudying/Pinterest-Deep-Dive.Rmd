@@ -108,16 +108,24 @@ Experimentation outline
 
 ## Other
 
+[Pinterest on metric improvements from redoing the mobile web experience](https://medium.com/pinterest-engineering/a-one-year-pwa-retrospective-f4a2f4129e05)
+
+- Now for the part you’ve all been waiting for: the numbers. Weekly active users on mobile web have increased 103 percent year-over-year overall, with a 156 percent increase in Brazil and 312 percent increase in India. On the engagement side, session length increased by 296 percent, the number of Pins seen increased by 401 percent and people were 295 percent more likely to save a Pin to a board. Those are amazing in and of themselves, but the growth front is where things really shined. Logins increased by 370 percent and new signups increased by 843 percent year-over-year. Since we shipped the new experience, mobile web has become the top platform for new signups. And for fun, in less than 6 months since fully shipping, we already have 800 thousand weekly users using our PWA like a native app (from their homescreen).
+
 [Pinterest on user signals and activations](https://medium.com/pinterest-engineering/exploring-effective-user-signals-585507d8e926)
 
-- Asking google signups to provide their gender for 
-- 
+- Asking google signups to provide their gender for better content increased activations substantially
+- Initial try lead to a dropoff when the screen was shown. 
+- Next try showed the screen later along with a message indicating that the information was sued to show more valuable content and had a large boost in activations without the loss in signups
+- Comparison to facebook signups (for whome Pinterest has gender information from FB API) revealed an additional benefit of the extra gender page in the signup process. 
+- Asking for information to improve the value of content can improve activations if asked at the right time, in a way that isn't disruptive to the user's experience
 
 [Pinterest on engagement bias](https://medium.com/pinterest-engineering/trapped-in-the-present-how-engagement-bias-in-short-run-experiments-can-blind-you-to-long-run-58b55ad3bda0)
 
 - Method: run experiment, ship but have a holdout of 5% who do not get new feature. 
 - Engagement bias would happen if highly engaged users were overrepresented in the original study and had lift, but after a month no lift was seen relative to the holdout set.
 - Is this generally related to a compliance issue? -- some of the people asssigned to both conditions were not observed immediately, and the missingness was related to the outcome of interest through user's engagement levels.
+- Example case study of pinner attribution on pin closeups
 
 [Pinterest monitoring A/B tests in real time](https://medium.com/pinterest-engineering/monitoring-a-b-experiments-in-real-time-5cd3ee611c1)
 
