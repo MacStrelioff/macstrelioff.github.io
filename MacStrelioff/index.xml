@@ -38,7 +38,7 @@
     <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Sun, 13 Oct 2019 17:58:32 +0000</pubDate>
+      <pubDate>Sun, 13 Oct 2019 18:46:40 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
       <description>
@@ -79,10 +79,12 @@ Overheard, from Chris and Aman talking;
 &lt;h2&gt;Past Experience&lt;/h2&gt;
 &lt;p&gt;Overview;&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Interested in decision making and choices, so I studied psychology. I also liked operationalized or concrete ideas, so I took an emphasis in mathematics (only one of two people in my graduating year to do this), and a minor in economics that focused on things like game theory and decision making.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In graduate school I picked up another interest in good experimentation and modeling practices – some professors in my department were actively working on a replicability chrisis in the field. One practice that bothered me is that researchers would conduct an experiment where they give a person repeated chocies between two things, and average data across the experiment – this is assuming that the person follows the same strategy throughout the task, which probably isn’t true – I though people would gather informaiton and trying different approaches before settling on one strategy. So I developed a model to infer what strategy was most likely on each trial, and overall found that people do change strategies throughout an experiment, and if you don’t account for this then you get false estimates of the parameters of the strategies, and could even make inaccurate claims about the prevalence of a particular strategy.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;research on decision making, RL models to simulate people’s learning behavior,&lt;/li&gt;
 &lt;li&gt;through consulting work and Insight, I’m transitioning into industry..&lt;/li&gt;
 &lt;li&gt;I really like using statistics to durive actionable insights and drive decisions.&lt;/li&gt;
-&lt;li&gt;best exemplified in PredictIt project.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;best exemplified in PredictIt project.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Insight Project:&lt;/p&gt;
 &lt;ul&gt;
@@ -131,6 +133,12 @@ Overheard, from Chris and Aman talking;
 &lt;/div&gt;
 &lt;div id=&#34;other&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Other&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/trapped-in-the-present-how-engagement-bias-in-short-run-experiments-can-blind-you-to-long-run-58b55ad3bda0&#34;&gt;Pinterest on engagement bias&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Method: run experiment, ship but have a holdout of 5% who do not get new feature.&lt;/li&gt;
+&lt;li&gt;Engagement bias would happen if highly engaged users were overrepresented in the original study and had lift, but after a month no lift was seen relative to the holdout set.&lt;/li&gt;
+&lt;li&gt;Is this generally related to a compliance issue? – some of the people asssigned to both conditions were not observed immediately, and the missingness was related to the outcome of interest through user’s engagement levels.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/monitoring-a-b-experiments-in-real-time-5cd3ee611c1&#34;&gt;Pinterest monitoring A/B tests in real time&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Metrics: repinners, pin ctr, pin creators, pin searchers, user searches, board searches, user follows board follows&lt;/li&gt;
