@@ -53,8 +53,16 @@ Overheard, from Chris and Aman talking;
 
 # Onsite Prep
 
+Ideas: 
+
+- 'wishlist' or registry for Pinterest
+- instacard card stacks
+- netflix 'surprise me' option to combat decision fatigue
+
 questions: 
 
+- Goal: leave a lingering positive impression. 
+- Questions about positive aspects of working there. 
 - recent project that excited them the most
 - questions abot the job to get signal about how I'd fit in.
 - my opportuinity to interview them babout working there. 
@@ -70,7 +78,6 @@ for product
 - metrics and countermetrics -- how would behavior react to this change and how can we measure it
 - root cause analysis
 - 5 'whys' 
-- 
 
 ## Schedule 
 
