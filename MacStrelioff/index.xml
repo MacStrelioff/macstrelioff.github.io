@@ -36,6 +36,787 @@
     </item>
     
     <item>
+      <title>Pinterest</title>
+      <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
+      <pubDate>Mon, 14 Oct 2019 17:56:32 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
+      <description>
+
+
+&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;TODO:&lt;/h1&gt;
+&lt;!--
+- experimentation A-Z
+- &#34;tell me about yourself&#34;
+- data munging / tweet analysis
+--&gt;
+&lt;!--
+Overheard, from Chris and Aman talking;
+# if you can find the f(x) and f(y)
+# say that&#39;s a circle, calculate area of a circle...
+# Chris &#39;either max or min&#39;, &#39;absolute max(abs())&#39;
+# &#39;calculate the area of this and area of ...?&#39;
+--&gt;
+&lt;ul&gt;
+&lt;li&gt;Be able to talk about past projects and their use cases or value – Use STAR to connect with interviewers over each experience.&lt;/li&gt;
+&lt;li&gt;Be able to talk about differences in efficiency between different estimators; see &lt;a href=&#34;https://en.wikipedia.org/wiki/Efficiency_(statistics)&#34;&gt;efficiency&lt;/a&gt;, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Robust_statistics&#34;&gt;robust statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Be able to talk about ATE vs ATT, and other causal inference methods.&lt;/li&gt;
+&lt;li&gt;Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance&lt;/li&gt;
+&lt;li&gt;Be able to do basic analyses in pandas&lt;/li&gt;
+&lt;li&gt;Be able to outline and work through experimentation problems&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Be able to list growth strategies&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;job description for DA from recruiter &lt;a href=&#34;https://careers.pinterest.com/careers/details/1897260&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;job description for DS &lt;a href=&#34;https://careers.pinterest.com/careers/details/1807876&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Articles from &lt;a href=&#34;https://labs.pinterest.com/projects/data-science/&#34;&gt;Pintrest labs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.glassdoor.com/Interview/Pinterest-Product-Analyst-Interview-Questions-EI_IE503467.0,9_KO10,25.htm&#34;&gt;product analyst interview questions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;onsite-prep&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Onsite Prep&lt;/h1&gt;
+&lt;p&gt;questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;recent project that excited them the most&lt;/li&gt;
+&lt;li&gt;questions abot the job to get signal about how I’d fit in.&lt;/li&gt;
+&lt;li&gt;my opportuinity to interview them babout working there.&lt;/li&gt;
+&lt;li&gt;ask about daily work&lt;/li&gt;
+&lt;li&gt;focus more on experience of working there, and the positive aspects of it&lt;/li&gt;
+&lt;li&gt;only product if it’s in the context of what the role could be&lt;/li&gt;
+&lt;li&gt;how are DS involved in strategic priorities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;for product&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;empathy for the user experience&lt;/li&gt;
+&lt;li&gt;define problem very clearly&lt;/li&gt;
+&lt;li&gt;metrics and countermetrics – how would behavior react to this change and how can we measure it&lt;/li&gt;
+&lt;li&gt;root cause analysis&lt;/li&gt;
+&lt;li&gt;5 ‘whys’&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;schedule&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Schedule&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/varun-b-06976a34/&#34;&gt;Varun Bansal&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Product manager, BA in math from Harvard, consulting work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/kellieottoboni/&#34;&gt;Kellie Ottoboni&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD stats from Berkeley&lt;/li&gt;
+&lt;li&gt;Social Good&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/aashraf04/&#34;&gt;Ahsan Ashraf&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD physics&lt;/li&gt;
+&lt;li&gt;Insight fellow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/yifei-bao/&#34;&gt;Yifei Bao&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD in Computer Science&lt;/li&gt;
+&lt;li&gt;Multiple leadership positions on consumer/growth teams at Goldman Sachs and Uber, now Pinterest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/hollycapell/&#34;&gt;Holly Capell&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS in data sci from UCFS&lt;/li&gt;
+&lt;li&gt;Experience with big data tools, AWS, spark, …&lt;/li&gt;
+&lt;li&gt;Experience with python and bash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/pamelaclevenger/&#34;&gt;Pamela Clevenger&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD in experimental psych&lt;/li&gt;
+&lt;li&gt;Insight fellow: Consulting project for a microloan company&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;past-experience&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Past Experience&lt;/h2&gt;
+&lt;p&gt;Overview;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interested in decision making and choices, so I studied psychology. I also liked operationalized or concrete ideas, so I took an emphasis in mathematics (only one of two people in my graduating year to do this), and a minor in economics that focused on things like game theory and decision making.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In graduate school I picked up another interest in good experimentation and modeling practices – some professors in my department were actively working on a replicability chrisis in the field. One practice that bothered me is that researchers would conduct an experiment where they give a person repeated chocies between two things, and average data across the experiment – this is assuming that the person follows the same strategy throughout the task, which probably isn’t true – I though people would gather informaiton and trying different approaches before settling on one strategy. So I developed a model to infer what strategy was most likely on each trial, and overall found that people do change strategies throughout an experiment, and if you don’t account for this then you get false estimates of the parameters of the strategies, and could even make inaccurate claims about the prevalence of a particular strategy.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;research on decision making, RL models to simulate people’s learning behavior,&lt;/li&gt;
+&lt;li&gt;through consulting work and Insight, I’m transitioning into industry..&lt;/li&gt;
+&lt;li&gt;I really like using statistics to durive actionable insights and drive decisions.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;best exemplified in PredictIt project.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Insight Project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PredictIt:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;qs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Qs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Meetings? Sounds like a very collaborative environment which I like.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;product-idea&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Product idea&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Registery and ‘wishlist’ boards for weddings, birthdays, holidays, can invite friends and link to product checkouts&lt;/li&gt;
+&lt;li&gt;Stacking cards for Instacart&lt;/li&gt;
+&lt;li&gt;‘Surprise Me’ feature for Netflix&lt;/li&gt;
+&lt;li&gt;AR for haircuts&lt;/li&gt;
+&lt;li&gt;AR for shopping (pinterest, Ikea, Amazon, Target, …)&lt;/li&gt;
+&lt;li&gt;VR for tutorials (Ikea, DIY, …)&lt;/li&gt;
+&lt;li&gt;AR to show a product in the person’s house (built on the &lt;a href=&#34;https://newsroom.pinterest.com/en/post/upgrading-lens-for-more-online-to-offline-inspiration&#34;&gt;lens/picture-based search feature&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Registery or ‘wishlist’ pinboards for weddings, baby showers, holidays, birthdays, …&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;product-experimentation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Product + Experimentation&lt;/h2&gt;
+&lt;p&gt;Experimentation outline&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;question&lt;/li&gt;
+&lt;li&gt;context: population, user flow&lt;/li&gt;
+&lt;li&gt;metrics and variables&lt;/li&gt;
+&lt;li&gt;conditions&lt;/li&gt;
+&lt;li&gt;assignment: 1) Y’s independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0&lt;/li&gt;
+&lt;li&gt;n/T: novelty effects, power&lt;/li&gt;
+&lt;li&gt;test: lower variance models (include precision variables) or designs (ABA)&lt;/li&gt;
+&lt;li&gt;recommendation: Can try to relate to a revenue or LTV model to quantify the value of the difference we found.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;technical-sqlpython-data-munging&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Technical (SQL+Python data munging)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;statistics-circle-problem-glms-details-of-hierarchical-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Statistics (circle problem, GLMs, details of hierarchical models)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;other&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Other&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/building-pin-cohesion-229c19fc617e&#34;&gt;Pinterest on pin cohesion&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple ML models convert images to text and compare similarity, using many signals including signals from text on boards and images and text in the URL associated with a link.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/a-one-year-pwa-retrospective-f4a2f4129e05&#34;&gt;Pinterest on metric improvements from redoing the mobile web experience&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now for the part you’ve all been waiting for: the numbers. Weekly active users on mobile web have increased 103 percent year-over-year overall, with a 156 percent increase in Brazil and 312 percent increase in India. On the engagement side, session length increased by 296 percent, the number of Pins seen increased by 401 percent and people were 295 percent more likely to save a Pin to a board. Those are amazing in and of themselves, but the growth front is where things really shined. Logins increased by 370 percent and new signups increased by 843 percent year-over-year. Since we shipped the new experience, mobile web has become the top platform for new signups. And for fun, in less than 6 months since fully shipping, we already have 800 thousand weekly users using our PWA like a native app (from their homescreen).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/exploring-effective-user-signals-585507d8e926&#34;&gt;Pinterest on user signals and activations&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Asking google signups to provide their gender for better content increased activations substantially&lt;/li&gt;
+&lt;li&gt;Initial try lead to a dropoff when the screen was shown.&lt;/li&gt;
+&lt;li&gt;Next try showed the screen later along with a message indicating that the information was sued to show more valuable content and had a large boost in activations without the loss in signups&lt;/li&gt;
+&lt;li&gt;Comparison to facebook signups (for whome Pinterest has gender information from FB API) revealed an additional benefit of the extra gender page in the signup process.&lt;/li&gt;
+&lt;li&gt;Asking for information to improve the value of content can improve activations if asked at the right time, in a way that isn’t disruptive to the user’s experience&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/trapped-in-the-present-how-engagement-bias-in-short-run-experiments-can-blind-you-to-long-run-58b55ad3bda0&#34;&gt;Pinterest on engagement bias&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Method: run experiment, ship but have a holdout of 5% who do not get new feature.&lt;/li&gt;
+&lt;li&gt;Engagement bias would happen if highly engaged users were overrepresented in the original study and had lift, but after a month no lift was seen relative to the holdout set.&lt;/li&gt;
+&lt;li&gt;Is this generally related to a compliance issue? – some of the people asssigned to both conditions were not observed immediately, and the missingness was related to the outcome of interest through user’s engagement levels.&lt;/li&gt;
+&lt;li&gt;Example case study of pinner attribution on pin closeups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/monitoring-a-b-experiments-in-real-time-5cd3ee611c1&#34;&gt;Pinterest monitoring A/B tests in real time&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Metrics: repinners, pin ctr, pin creators, pin searchers, user searches, board searches, user follows board follows&lt;/li&gt;
+&lt;li&gt;Possible issues: 1) experiment never triggers, 2) experiment fails to trigger for some group, 3) experiment labels everyone as control even if treatment was triggered.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/demystifying-seo-with-experiments-a183b325cf4c&#34;&gt;Pinterest A/B SEO Tests&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assign pages to different SEO conditions&lt;/li&gt;
+&lt;li&gt;Use diff in diff to detect an effect of an SEO choice&lt;/li&gt;
+&lt;li&gt;Some experiments on content can negatively influence SEO unexpectedly (always monitor a metric related to SEO as a guard rail metric)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/pinvestigator-a-tool-for-exploring-experiment-related-changes-a58f143f83c&#34;&gt;Pinvestigator&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Important metric caregories: active pinners, board creation rate, interest follow rate, Pin closeup rate&lt;/li&gt;
+&lt;li&gt;metric: new signups, propensity to repin by app (iPhone); percentage of new Pinners who’ve repinned something during their first time using the product&lt;/li&gt;
+&lt;li&gt;Pinvestigator is an internal tool that helps identify which experiment is responsible for a change in a metric during a particular timeframe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb&#34;&gt;A/B testing for managers&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose a metric reflective of a microconversion close to the intervention – more power and a higher likelihood that the change is due to the treatment&lt;/li&gt;
+&lt;li&gt;Choose ‘counterbalance’ or guard rail metrics – time on subsequent page, … .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/concepts/metric_types/&#34;&gt;common metric types&lt;/a&gt;, mentioned in &lt;a href=&#34;https://medium.com/pinterest-engineering/upgrading-pinterest-operational-metrics-8718d058079a&#34;&gt;this pinterest article&lt;/a&gt; - counter: monotonically increases - guage: single value that increases or decreases - histogram: set of counts of values in buckets&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/bottoms-up-how-the-pinterest-growth-team-decentralizes-team-structure-d9f890fa8869&#34;&gt;Growth Ream Organization and Metrics&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Focus: Acquisition, activation, retention&lt;/li&gt;
+&lt;li&gt;Duties: Ideas for improvements, build and launch experiments, analyze results&lt;/li&gt;
+&lt;li&gt;Experiments to impact growth funnel&lt;/li&gt;
+&lt;li&gt;Hundreds of experiments per quarter&lt;/li&gt;
+&lt;li&gt;Idea generation is the responsibility of the whole team, not just one person&lt;/li&gt;
+&lt;li&gt;Must convey a large enough opportunity – explain why an idea is important and impactful enough to work on&lt;/li&gt;
+&lt;li&gt;Analysis also falls on each member, including tracking aggregate metrics on the experimentation platform and also digging in deeper&lt;/li&gt;
+&lt;li&gt;Having everyone involved in analysis enables thought about the type of data and logs needed&lt;/li&gt;
+&lt;li&gt;Make the right decisions quickly: Including everyone in ideation helps to generate more ideas and filter ideas more efficiently. &lt;em&gt;Important to estimate impact of ideas&lt;/em&gt; so they can be prioritized effectively - involving everyone in this also produces more accurate estimates and better prioritization. In weekly pitch meetings, ideas are shared and evaluated on merits and potential opportunity.&lt;/li&gt;
+&lt;li&gt;Adjust to current problems: Since everyeone on the team can ideate, deploy, and analyze experiments, the team meetings can efficiently prioritize which of those tasks the team should focus on for the week.&lt;/li&gt;
+&lt;li&gt;Professional development: Each person develops skills for the whole product pipeline from ideation to launch.&lt;/li&gt;
+&lt;li&gt;“It’s exciting to see everyone adopt a curious mindset and consider new opportunities”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;23 &lt;a href=&#34;https://blog.hootsuite.com/pinterest-statistics-for-business/&#34;&gt;metrics that matter most to advertisers&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;250m people use Pinterest each month (monthly unique users)&lt;/li&gt;
+&lt;li&gt;83% of women age 25-54 reached by Pinterest, though only 41% use Pinterest directly –the additional half of reach may come through Pinterest based images dominate Google image search&lt;/li&gt;
+&lt;li&gt;50% of signups in 2018 were men&lt;/li&gt;
+&lt;li&gt;80% of signups from outside US&lt;/li&gt;
+&lt;li&gt;34% of americans between 18-49 use pinterest, 26% of 50-64 year olds, and 16% of those over 65&lt;/li&gt;
+&lt;li&gt;75% increase in pins in 2 years, 100b -&amp;gt; 175b pins pinned&lt;/li&gt;
+&lt;li&gt;80% on mobile&lt;/li&gt;
+&lt;li&gt;85% of women pinners use pinterest to plan life moments: home decor, vacation, meals&lt;/li&gt;
+&lt;li&gt;Pinners indicate interest twice as early as users on other platforms, e.g. in holidays or break vacation ideas&lt;/li&gt;
+&lt;li&gt;98% of users act on the ideas from Pinterest, compared to 71% average across social media platforms&lt;/li&gt;
+&lt;li&gt;visual search more than doubled in a year, 60% of melennials report they would use visual search&lt;/li&gt;
+&lt;li&gt;59% of melennials discovered products on Pinterest (same as Instagram despite the large difference in monthly users)&lt;/li&gt;
+&lt;li&gt;90% of weekly users use Pinterest to make purchase decisions&lt;/li&gt;
+&lt;li&gt;55% of pinners looking for products&lt;/li&gt;
+&lt;li&gt;97% of searches unbranded – Pinners have an intention but not yet a direction&lt;/li&gt;
+&lt;li&gt;51% of women have been exposed to new brands on pinterest&lt;/li&gt;
+&lt;li&gt;78% of users say ad content is useful&lt;/li&gt;
+&lt;li&gt;33% more traffic driven from pinterest than facebook&lt;/li&gt;
+&lt;li&gt;Pinterest users spend 29% more shen shopping&lt;/li&gt;
+&lt;li&gt;$4.3 gross return for every $1 spend on ads&lt;/li&gt;
+&lt;li&gt;10x life in awareness and 1.22x life in sales, 1.13 lift in sales for landing pages that match the aesthetic of the pin, and pins without faces are repined 23x as often as pins with faces&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Growth initiatives:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grow userbase to males?&lt;/li&gt;
+&lt;li&gt;Grow other demographics?&lt;/li&gt;
+&lt;li&gt;Look deep into product experimentation beyond just A/B designs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb&#34;&gt;selecting A/B testing metrics&lt;/a&gt;: Point is that late funnel metrics might require a larger sample size because of the smaller effect size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From &lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68ae2-b0f2-47d5-a14e-757e66a6f421.pdf&#34;&gt;Risks&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Important metrics: growth, retention, frequency and duration of engagement or use.&lt;/li&gt;
+&lt;li&gt;Ad spend to acquire new users and retain current users&lt;/li&gt;
+&lt;li&gt;Audience approximately 43% of US internet users, 80% of women age 18-64 with children &lt;a href=&#34;https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform&#34;&gt;user demographic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Maybe saturated with that demographic and need to grow to other demographics like men and international users&lt;/li&gt;
+&lt;li&gt;Pinterest requires good data, targeting areas with high smartphone penetration. Has partnerships with some data providers so that Pinterest doesn’t count toward user’s data quotas.&lt;/li&gt;
+&lt;li&gt;Not anticipating that majority of users will become DAUs&lt;/li&gt;
+&lt;li&gt;Risks:&lt;/li&gt;
+&lt;li&gt;competitors mimic product, users use competitiors more&lt;/li&gt;
+&lt;li&gt;User expreience degrades because of poor company decisions&lt;/li&gt;
+&lt;li&gt;failure to deliver relevant content&lt;/li&gt;
+&lt;li&gt;third parties pull content&lt;/li&gt;
+&lt;li&gt;software issues&lt;/li&gt;
+&lt;li&gt;bandwidth issues, slow and frustrating experience&lt;/li&gt;
+&lt;li&gt;privacy and security concerns&lt;/li&gt;
+&lt;li&gt;spam, harassment, cyberbullying, …&lt;/li&gt;
+&lt;li&gt;taking actions to maintain engaging and relevant content which lead to lower ad revenue&lt;/li&gt;
+&lt;li&gt;continuously monitor ads, too many ads or irrelevant ads could hurt user growth, retention, or engagement&lt;/li&gt;
+&lt;li&gt;future data privacy laws&lt;/li&gt;
+&lt;li&gt;new products or product enhancements could be ill received by pinners&lt;/li&gt;
+&lt;li&gt;Behavior required by a new product may not be easily learnable, which could hurt engagement, retention, and growth&lt;/li&gt;
+&lt;li&gt;Pinterest brand could be harmed. Currently Pinterest is an empowering environment, which helps engagement,retention,growth.&lt;/li&gt;
+&lt;li&gt;Poor perception of the advertisers chould also hurt Pinterest if it reduces eng,ret,gro&lt;/li&gt;
+&lt;li&gt;Scrutiny of “screen time”, privacy, or any decisions of Pinterest&lt;/li&gt;
+&lt;li&gt;SEO efforts could underperform, search engines could demote pinterest content&lt;/li&gt;
+&lt;li&gt;3rd party authenticators (facebook, google, …) withdraw login support&lt;/li&gt;
+&lt;li&gt;Competition from Amazon, Facebook (and Instagram), Google, Snap, and Twitter&lt;/li&gt;
+&lt;li&gt;risks inherent in international business – political, regulatory instability, …&lt;/li&gt;
+&lt;li&gt;inability to manage a rapidly growing headcount&lt;/li&gt;
+&lt;li&gt;Dependance on AWS for compute, storage, data transfer&lt;/li&gt;
+&lt;li&gt;Inability to retain and recruit talented employees&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.crazyegg.com/blog/ecommerce-conversion-funnel/&#34;&gt;Funnel Examples&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Awareness: Keep the product at top of mind&lt;/li&gt;
+&lt;li&gt;Interest:&lt;/li&gt;
+&lt;li&gt;Desire: emphasize benefits to the user and a call to action. E.g. “sign up for (product) and enjoy (benefits)”&lt;/li&gt;
+&lt;li&gt;Action:&lt;/li&gt;
+&lt;li&gt;Example: sessions &amp;gt; sessions with product page view &amp;gt; sessions with Add-To-Cart &amp;gt; sessions with transaction&lt;/li&gt;
+&lt;li&gt;User flow to see if users behave differently from the first touch&lt;/li&gt;
+&lt;li&gt;Important metrics: traffic &amp;gt; conversion rate, bounce rate &amp;gt; sales, cart abandonment &amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;7 Growth Strategies from &lt;a href=&#34;https://sujanpatel.com/marketing/growth-levers/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Pinterest: Exclusivity. Pinterest began as an invite-only platform.&lt;/li&gt;
+&lt;li&gt;PayPal: Buy users. PayPal offered monetary rewards to new users. An alternative is cash back, since that first requires a purchase. This can be less than a customer’s LTV tokeep resaonable revenue.&lt;/li&gt;
+&lt;li&gt;Popcorn Metrics: Deep Onboarding. Working personally with new users, providing videos and tutorials.&lt;/li&gt;
+&lt;li&gt;SpringShield: viral referral loop. Like Robinhood, can have a waitlist for a new feature and make your position in line contingent on referrals – this induces a competition that favors users who successfully refer more users.&lt;/li&gt;
+&lt;li&gt;GrooveHQ: Segment marketing emails based on user behavior. Targeted differet users with statistics (time on page, and logins per day) resonent of the users who churned within a 30 day window. Also measured response rate and retention rate among those who responded to the email.&lt;/li&gt;
+&lt;li&gt;Milkshake: Leverage happy customers for referrals. Using NPS (Net Promoter Score) responses (positive ones, of course) as testimonials. Asking for shares inside Mailshake. Engaging referrers by asking at sign-up if a customer was there via a referral and who gave it, and thanking them via social media and email. Increasing customer/product investment by asking our most active customers for product feedback. Conducting and featuring case studies from our most successful customers.&lt;/li&gt;
+&lt;li&gt;PicMonkey: Freemium.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduced personalized search in home and sidebar.&lt;/li&gt;
+&lt;li&gt;More video content: user repin rate for videos is 1.4x that of static images. Video views greater in Q2 than all of 2018. Searches for specific terms (paint on canvas) also increased by &amp;gt;300% after video pins on those topics. Big gains in searches in food, style, beauty, and skill learning.&lt;/li&gt;
+&lt;li&gt;Videos also improve clickthrough rate and can have a lower cost per click for advertisers (ads pay for impressions and ranking, so a higher CTR may imply a lower CPC).&lt;/li&gt;
+&lt;li&gt;Focusing on growing products from retailers, saw increase of 50% from methods for acquiring pin inventory, which improves relevance and engagement, measured in weekly shopper impressions and clicks.&lt;/li&gt;
+&lt;li&gt;New &lt;a href=&#34;https://newsroom.pinterest.com/en/post/summer-shopping&#34;&gt;shopping features&lt;/a&gt;. Retailers saw &lt;a href=&#34;https://business.pinterest.com/en/blog/research-retail-brands-can-see-2x-higher-returns-on-pinterest-than-other-digital-channels&#34;&gt;2x higher return&lt;/a&gt; on ad spend with Pinterest vs social media, and 1.3x higher return than on paid search.&lt;/li&gt;
+&lt;li&gt;New mobile ad manager that increases mobile signup activation rates&lt;/li&gt;
+&lt;li&gt;Made easier to add tags for ad attribution, 2x more tags added YTD in 2019 than in all of 2018&lt;/li&gt;
+&lt;li&gt;30% YoY DAU growth to 300m&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Metrics&lt;/h3&gt;
+&lt;p&gt;MAUs and ARPU depend on the methodology used to track user data, and changes in this methodology can influence Pinterest’s revenue projections.&lt;/p&gt;
+&lt;p&gt;Retention:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MAU: Monthly active users, a logged-in Pinterest user who visits our website or opens our mobile application at least once during the 30-day period ending on the date of measurement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Revenue:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ARPU: Average revenue per user = revenue in a grography / ((MAU0 + MAU1) / 2)&lt;/li&gt;
+&lt;li&gt;Where MAU0 is for the same 30 day period as the revenue and MAU1 is for the prior period&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;phone-screen&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Phone Screen&lt;/h1&gt;
+&lt;pre class=&#34;eval&#34;&gt;&lt;code&gt;This is just a simple shared plaintext pad, with no execution capabilities.
+
+When you know what language you&amp;#39;d like to use for your interview,
+simply choose it from the dropdown in the top bar.
+
+You can also change the default language your pads are created with
+in your account settings: https://coderpad.io/settings
+
+Enjoy your interview!
+
+
+
+Your previous Python 3 content is preserved below:
+
+# def say_hello():
+#     print(&amp;#39;Hello, World&amp;#39;)
+
+# for i in range(5):
+#     say_hello()
+
+
+# 
+# Your previous MySQL content is preserved below:
+# 
+# /*
+# Write a query to calculate the Average revenue generated per user for US users in first 10 slots for each advertiser on a given date
+# 
+# pick any date
+# 
+# 
+# 
+# ad_events                             user_dimension
+# +---------------+---------+           +---------------+----+
+# | user_id       | int     |           | user_id  | int     |
+# | advertiser_id | int     |           | country  | varchar |
+# | slot_id       | int     |           | age      | int     | 
+# | revenue       | int     |           | gender   | varchar | 
+# | dt            | date    |           | spam     | int     | 
+# +---------------+---------+           +---------------+----+
+# 
+# 
+# ad_events                             user_dimension
+# ad_id | uaser_id                         
+# 1
+# 1
+# .
+# .
+# .
+# 
+# 
+# 
+# Want: 
+# +-----+
+# ad_id   | avg rev per user for firt 10 slots
+# ad1        .89      
+# ad2        .90
+# +---+
+# 
+# */                      
+# 
+# 
+# select SUM(a.revenue)/COUNT(distinct a.user_id) as avg_rev_user_advertiser, a.advertiser_id
+# from user_dimension u
+# join ad_events a
+# on a.user_id = u.user_id
+# where a.slot_id &amp;lt;=10 and u.country = &amp;quot;US&amp;quot;
+# group by user_id
+# 
+# 
+# 
+# /*
+# Write a query to calculate the number of repeated ads for each user on a given day
+# 
+# user_insertion                        ad_insertion
+# +---------------+---------+           +---------------+--------------+
+# | user_id       | int     |           | insertion_id     | int       |
+# | insertion_id  | int     |           | promoted_pin_id  | int       |
+# | dt            | date    |           | action_type      | varchar   | 
+# +---------------+---------+           | action_timestamp | timestamp |    
+#                                       | dt               | date      | 
+#                                       +---------------+--------------+  
+# 
+# user_insertion sample rows:
+# 
+# user_id  insertion_id         dt
+# 1        hofh38u9uvhcc   2018-09-29
+# 2        abcddh99840cc   2018-09-29
+# 3        ueiruoeir0419   2018-09-29
+# 
+# 
+# ad_insertion sample rows:
+# 
+# insertion_id    promoted_pin_id   action_type   action_timestamp   dt   
+# hofh38u9uvhcc   1234              impression    1530793815         2018-10-01
+# abcddh99840cc   1234              click         1530793815         2018-10-01
+# ueiruoeir0419   1234              save          1530793815         2018-10-01
+# 
+# 
+# uid pid count
+# 1   1    1
+# 1   1    4
+# 
+# 
+# want: 
+# Userid, Number_of_repeated_ads (number of ad pins that were repeated)
+# 1        5
+# 2        9
+# 3        0
+# 
+# 
+# */
+# 
+# select sub.user_id, count(*)
+# from
+# (
+# select u.user_id as user_id, a.promoted_pin_id as pin_id, count(*) as repetitions
+# from user_insertion u 
+# join ad_insertion a
+# on u.insertion_id = a.insertion_id
+# group by u.user_id,a.promoted_pin_id
+# having count(*) &amp;gt;= 2
+# ) as sub
+# group by sub.user_id
+# 
+# # within users, count unique, repeated pin ids
+# 
+# 
+# 
+
+import numpy as np
+import pandas as pd
+import random
+
+
+user_ids = list(np.random.choice(range(1000000,1001000), 1000))
+impressions = list((np.random.pareto(a = 3, size = 1000)*1000))
+impressions = [int(i) for i in impressions]
+clicks = list((np.random.pareto(a = 3, size = 1000)*100))
+clicks = [int(i) for i in clicks]
+data = pd.DataFrame(np.column_stack([user_ids, impressions, clicks]), columns = [&amp;#39;user_id&amp;#39;,&amp;#39;impressions&amp;#39;,&amp;#39;clicks&amp;#39;])
+data.head()
+
+
+# code generates dataset
+# 
+
+# Does this dataset make sense? - What will you check ?
+# 1) user 2 more clicks than impressions
+
+# How will you clean it up ?
+
+tmp=data[&amp;#39;impressions&amp;#39;]&amp;lt;data[&amp;#39;clicks&amp;#39;]
+tmp.all()
+
+# data = data[data[&amp;#39;impressions&amp;#39;]&amp;gt;=data[&amp;#39;clicks&amp;#39;]]
+
+
+###
+
+
+We currently have a button on each Pin on the Pinterest app. It has a click rate of 0.04 (number of clicks / number of pins seen). The only outcomes possible are click or not click.
+
+Q: What is the probability of observing exactly 5 clicks out of 100 pins seen?
+
+100 choose 5 * .04^5 * (1-.04)^(100-5)
+
+
+Q: What is the probability of observing at least 5 clicks out of 100 pins seen?
+
+1 - sum from i = 0 to 5 (100 choose i * .04^i * (1-.04)^(100-i))
+
+
+Q: Given that we observe 5 clicks out of 100 pins seen in the treatment group of an experiment, construct a hypothesis test to test whether the button click rate is significantly different than 0.04.
+
+
+p_0 = 0.04
+p = 5/100
+n = ? 
+
+z = (p - p_0) / (p_0 * (1-p_0) / sqrt(n) ) 
+z = (.05 - .040) / (.04 * (1-.04) / sqrt(n) ) 
+
+
+Q. Can you describe what alpha of 0.05 means here (i.e., type 1 error rate)? To a data scientist (technical audience)? To a person with no statistical background (non-technical audience)?
+
+
+Q. Can you describe the outcome of this hypothesis test to a data scientist (i.e., to a technical audience)? To a person with no statistical background (i.e., to a non-technical audience)?
+
+p&amp;gt;.05
+
+Experimentation
+
+We have been getting feedback from users in focus groups that they’d like to see fresher search results, meaning more up-to-date pins. So we’d like to see how freshness would affect user experience. 
+
+Q: How would you approach this problem?
+
+freshness [?] -&amp;gt; user satisfaction?
+
+1) define freshness
+
+2) metrics to reflect a better user experience
+
+Acquisition
+- 
+
+Activation
+- time on home page
+- boards created
+- pins per board
+- pins pinned per user
+
+Retention
+- repeat logins / week
+
+Referral
+- 
+
+Revenue
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pinterest - Python, data munging, pandas - SQL care about efficency (e.g. reduce data before joining) - probability questions; - - Clickthrough rate of x, what’s p(5 out of n click through) - - fundamental probability - business case; open case study.. - behavioral&lt;/p&gt;
+&lt;div id=&#34;behavioral&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Behavioral&lt;/h2&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Background&lt;/h3&gt;
+&lt;p&gt;Example Answer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I recently graduated from UC Irvine where I studied cognitive science and statistics.&lt;/li&gt;
+&lt;li&gt;My research focused on decision making, which means I programed experiments that would show people two or three alternatives and vary the attributes of the alternatives to reveal how people are making decisions.&lt;/li&gt;
+&lt;li&gt;So for example someone might see three different pins – These pins have attributes like different properties of the image, maybe different text captions.&lt;/li&gt;
+&lt;li&gt;Search for recepies, then I might immediately see 3 pins with food images that have different attributes (carbs, brightness of the image, text, …).&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Very relevant, which is one of the reasons I’m excited to be interviewing with Pinterest.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;That overlap between the tasks I created, and the user experience on the pinterest platform is one of the big reasons why I’d be excited to work at Pinterest.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Another reason is the proximity of user data to user purchasing decisions (high user intent).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;UCI&lt;/li&gt;
+&lt;li&gt;Cognitive science and statistics&lt;/li&gt;
+&lt;li&gt;My research focused on decision making –&lt;/li&gt;
+&lt;li&gt;&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;How environmental cues impact impulsivity or preferences for immediate rewards&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Decoy effects – so how the attributes of an undesirable option can influence preference between two desirable options.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Inferring which decision making strategy a person is currently following&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;For all of these studies, I was writing programs that would show participants multiple options (e.g. pins) and modify the context (adding other cues) or the attributes of the options to see how those modifications influenced the probability of a person picking one of the options.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Very relevant to the kind of environments users experience on Pinterest, which is one of the reasons I’m excited to be interviewing with Pinterest.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;One of the phenomena that I studied was the decoy effect – For example at Pinterest, if a user sees a set of three pins (A,B,C), they pick A 70% of the time and B 30% of the time, but when we just show pins A and B, they pick B 55% of the time and A 45% of the time.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;haas-freelance-work&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;HaaS freelance work&lt;/h3&gt;
+&lt;p&gt;Situation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Haas stands for housing as a service, it’s a membership-based coliving startup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Task:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Want to increase memberships through facebook and google ads.&lt;/li&gt;
+&lt;li&gt;I’m leveraging a little SEO experience to help with designing ads;&lt;/li&gt;
+&lt;li&gt;Brighter photos, photos with faces, and color schemes that contrast FB’s color scheme of white and blue,&lt;/li&gt;
+&lt;li&gt;thse features are associated with higher CTR for YouTube thumbnails.&lt;/li&gt;
+&lt;li&gt;Becoming familiar with Google Analytics and Facebook Ad Analytics to run A/B tests with these ads&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Action:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;See which drive more interest in CTR, and more conversions in applications for membership, and which attract the demographics that my client wants to attract.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;insight-project&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Insight Project&lt;/h3&gt;
+&lt;p&gt;Situation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2 week consulting project&lt;/li&gt;
+&lt;li&gt;Startup focused on digital workspaces (e.g. google docs)&lt;/li&gt;
+&lt;li&gt;Wanted to understand user base.&lt;/li&gt;
+&lt;li&gt;Wanted to be able to predict who would convert from a free trial to a paying customer.&lt;/li&gt;
+&lt;li&gt;(skip) Wanted to attribute conversion to product features with conversion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Task:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data:&lt;/li&gt;
+&lt;li&gt;Company demographic information, company size and revenue.&lt;/li&gt;
+&lt;li&gt;Used this to communicate conversion rates by demographic to heads of different teams using tables and figures.&lt;/li&gt;
+&lt;li&gt;Account activity data which was a sum of actions taken within an account each day.&lt;/li&gt;
+&lt;li&gt;I transformed this into cumulative sum instead of daily sum to increase interpretability and modeling ease.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(skip) Action: (skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. (skip) - Cast as classification problem, used SMOTE to address class imbalance, (skip) - used 5-fold CV to evaluate models on AUC, (skip) - ended with a RF algorithm for these predictions.&lt;/p&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Delivered presentation and slide deck with tables and figures to a group of team leaders.&lt;/li&gt;
+&lt;li&gt;Delivered a Python script to implement the model, and a slide deck describing the modeling procedure and performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;predictit-project&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;PredictIt project&lt;/h3&gt;
+&lt;p&gt;Situation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prediction markets aggregate information and incentivize rational behavior, so one would expect the prices to be accurate.&lt;/li&gt;
+&lt;li&gt;At an individual level, lots of fallacies have been established in lab settings.&lt;/li&gt;
+&lt;li&gt;I wanted to know if any fallacies would manifest in market prices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Results:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Conjunction fallacy: “Trump” traded higher hand “Republican” for extended period of time.&lt;/li&gt;
+&lt;li&gt;Disjunction fallacy: Most market prices add up to something greater than $1, but because of fees it’s often not profitable to take advantage of this.&lt;/li&gt;
+&lt;li&gt;CPT subjective probability function: Overpricing of low probability events and Underpricing of high probability events&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;– notably this was highest as expiration approached, a context that is more similar to lab studies that don’t have delayed rewards.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Now we’re working on automating trades based on these and other indights.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;quantopian&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Quantopian:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;recreated XIV, fund that trades VIX futures weighted so that the effective days to expiration is approximately 30.&lt;/li&gt;
+&lt;li&gt;mean revision&lt;/li&gt;
+&lt;li&gt;moving average crossover&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;child-bandit-modeling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Child bandit modeling&lt;/h3&gt;
+&lt;p&gt;Situation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wanted to know what strategies they followed, and if their strategy changed over time.&lt;/li&gt;
+&lt;li&gt;Kids repeatedly chose between two gambling machines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Action:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I developed a model that inferred the probability of following each strategy on each trial&lt;/li&gt;
+&lt;li&gt;Used Bayes’ Rule to smooth out these inferences / accumulate information over trials&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kids do seem to switch strategies, probably don’t act optimally, and have different strategies depending on age (switchy vs sticky)&lt;/li&gt;
+&lt;li&gt;Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Value:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implications for user intent modeling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explain-some-research-at-pintrest&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Explain some research at Pintrest&lt;/h3&gt;
+&lt;p&gt;See:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf&#34;&gt;Predicting Intent Using Activity Logs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pinterest:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Content sharing platform, and image based search engine&lt;/li&gt;
+&lt;li&gt;Prior research found user types; 1) casual browsers, 2) responding to a specific goals&lt;/li&gt;
+&lt;li&gt;Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.&lt;/li&gt;
+&lt;li&gt;On Pintrest users view pins (content) to boards (collections).&lt;/li&gt;
+&lt;li&gt;Pins have 33 categories (DIY, food and drink, …)&lt;/li&gt;
+&lt;li&gt;Users can look at closeups of Pins, which provides additional information&lt;/li&gt;
+&lt;li&gt;Users can click through to visit a site affiliated with a pin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Problem and volue of a solution:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users can use a product with different intents, and the material that a user finds valuable may depend on their intent.&lt;/li&gt;
+&lt;li&gt;Being able to infer a user’s intent from their behavior during a session would enable a personalized experience aligned with a user’s goals.&lt;/li&gt;
+&lt;li&gt;Example: Someone looking for dinner recepies might want something they can quickly make with common ingredients, while someone looking for potluck ideas might want more unique dishes, and someone who is just browsing food might prefer a variety of exotic food images.&lt;/li&gt;
+&lt;li&gt;User intent can vary with each session, so quickly identifying intent within a session can help with changing the interface and content shown to the user in real time based on their inferred intent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Current paper:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goals: Understand how intent informs behavior, and whether intent can be inferred from behavior.&lt;/li&gt;
+&lt;li&gt;Two dimensions of intent:&lt;/li&gt;
+&lt;li&gt;Goal specificity: whether the intent is stimulus specific (glutin free chocolate chip recepies) or vague (just browsing to pass time).&lt;/li&gt;
+&lt;li&gt;and temporal range: Time horizon for goal completion (tonight, next week, next month, …).&lt;/li&gt;
+&lt;li&gt;In psych, motivation is defined as a directing and activating or invigorating force. The directional component maps onto what Pintrest is calling goal specificity, and the invigorating component might map onto the inverse of what Pintrest refers to as temporal range.&lt;/li&gt;
+&lt;li&gt;In psych, there’s a notion of goal-directed and habitual behavior. The former is driven by a specific desired outcome (similar to goal specificity here) while the later is a less mindful response to stimuli (eg boredom triggers a passive arousal seeking).&lt;/li&gt;
+&lt;li&gt;In social psych, attitudes have been thought about along a gradient of specificity – so maybe things like time-related words in a query can be used to identify goal-directed users.&lt;/li&gt;
+&lt;li&gt;Shopping websites can be used for a specific purchase (goal-directed) or in an experiential way (habitual).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sample: 5369 females mean age 33.5, 564 males mean age 38.6, all from US and on Pintrest during July 2016&lt;/li&gt;
+&lt;li&gt;Survey asking;&lt;/li&gt;
+&lt;li&gt;7 point likert scale: “Are you visiting Pintrest with a goal in mind?”&lt;/li&gt;
+&lt;li&gt;“When are you planning to act on what you’re looking for today”&lt;/li&gt;
+&lt;li&gt;Question about Pintrest specific motivations (eg finding DIY ideas)&lt;/li&gt;
+&lt;li&gt;“What are you looking for on Pintrest today?” Response options were based on Pintrest categories&lt;/li&gt;
+&lt;li&gt;Focused on data in the session immediately following the survey&lt;/li&gt;
+&lt;li&gt;primarily analyzed first 10 minutes because this window had peak performance, around 27% of sessions had fewer than 10 minutes&lt;/li&gt;
+&lt;li&gt;Over 850,000 behavioral events (views, closeups, searches) across 5933 users within 10 minutes.&lt;/li&gt;
+&lt;li&gt;Also analyzed behavior from when the user first created account until a week after survey completion&lt;/li&gt;
+&lt;li&gt;used Holm-corrected p-values, a method that is more powerful than a the conservative Bonferroni correction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mitigating limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;coverage bias: mitigated by uniformly sampling from users for inclusion&lt;/li&gt;
+&lt;li&gt;participation bias: compared activity of users who completed the survey (addigned survey, took survey) to those who saw the survey popup but did not complete the survey (assigned survey, did not take survey).&lt;/li&gt;
+&lt;li&gt;Survey takers had been using Pintrest longer, and had more saved pins. Inferred from this that engaged users were&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Findings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goal-specific users are: more focused, search more (1.1 vs 0.4 searches), spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days, less likely to attribute their visit to boredom (2% vs 25% for habitual), more likely to attribute visit to making something (26% vs 5% for habitual)&lt;/li&gt;
+&lt;li&gt;users with short term goals: specific categories of content, likely to reference saved content, less likely to save new content, goal-specific users more likely to act in short term, habitual users more unsure of taking actions&lt;/li&gt;
+&lt;li&gt;Demographic differences: females more likely to be goal-specific (49% vs 40%), males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save&lt;/li&gt;
+&lt;li&gt;Model can predict goal specificity and temporal range.&lt;/li&gt;
+&lt;li&gt;Current session data is most informative, historical activity data also helpful&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf&#34;&gt;Understanding behaviors that lead to purchasing&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;metrics-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Metrics&lt;/h1&gt;
+&lt;div id=&#34;acquisition&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Acquisition&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Week / Week new users&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;activation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Activation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pin likes&lt;/li&gt;
+&lt;li&gt;Pin shares&lt;/li&gt;
+&lt;li&gt;Pin comments&lt;/li&gt;
+&lt;li&gt;Pins created&lt;/li&gt;
+&lt;li&gt;Boards creates&lt;/li&gt;
+&lt;li&gt;Pins on board&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;retention&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Retention&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Returning users&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referral&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Referral&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Referral links?&lt;/li&gt;
+&lt;li&gt;New users by source&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;revenue&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Revenue&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ads clicked&lt;/li&gt;
+&lt;li&gt;Ads clicked by user segment&lt;/li&gt;
+&lt;li&gt;Ads clicked by location&lt;/li&gt;
+&lt;li&gt;Ad conversions (clicks and a microconversion on the next page)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
       <pubDate>Mon, 14 Oct 2019 11:36:24 +0000</pubDate>
@@ -933,768 +1714,6 @@ models for when the errors aren&#39;t assumed to be normally distributed
 &lt;/div&gt;
 &lt;div id=&#34;regression-discontinuity-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Regression Discontinuity&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Pinterest</title>
-      <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
-      <pubDate>Mon, 14 Oct 2019 10:35:37 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/pinterest-deep-dive/</guid>
-      <description>
-
-
-&lt;div id=&#34;todo&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;TODO:&lt;/h1&gt;
-&lt;!--
-- experimentation A-Z
-- &#34;tell me about yourself&#34;
-- data munging / tweet analysis
---&gt;
-&lt;!--
-Overheard, from Chris and Aman talking;
-# if you can find the f(x) and f(y)
-# say that&#39;s a circle, calculate area of a circle...
-# Chris &#39;either max or min&#39;, &#39;absolute max(abs())&#39;
-# &#39;calculate the area of this and area of ...?&#39;
---&gt;
-&lt;ul&gt;
-&lt;li&gt;Be able to talk about past projects and their use cases or value – Use STAR to connect with interviewers over each experience.&lt;/li&gt;
-&lt;li&gt;Be able to talk about differences in efficiency between different estimators; see &lt;a href=&#34;https://en.wikipedia.org/wiki/Efficiency_(statistics)&#34;&gt;efficiency&lt;/a&gt;, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Robust_statistics&#34;&gt;robust statistics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Be able to talk about ATE vs ATT, and other causal inference methods.&lt;/li&gt;
-&lt;li&gt;Be able to list key metrics for growth, retention, engagement (mentioned throughout quarterly filing), pin relevance&lt;/li&gt;
-&lt;li&gt;Be able to do basic analyses in pandas&lt;/li&gt;
-&lt;li&gt;Be able to outline and work through experimentation problems&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Be able to list growth strategies&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;job description for DA from recruiter &lt;a href=&#34;https://careers.pinterest.com/careers/details/1897260&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;job description for DS &lt;a href=&#34;https://careers.pinterest.com/careers/details/1807876&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Articles from &lt;a href=&#34;https://labs.pinterest.com/projects/data-science/&#34;&gt;Pintrest labs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.glassdoor.com/Interview/Pinterest-Product-Analyst-Interview-Questions-EI_IE503467.0,9_KO10,25.htm&#34;&gt;product analyst interview questions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;onsite-prep&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Onsite Prep&lt;/h1&gt;
-&lt;div id=&#34;schedule&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Schedule&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/varun-b-06976a34/&#34;&gt;Varun Bansal&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Product manager, BA in math from Harvard, consulting work&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/kellieottoboni/&#34;&gt;Kellie Ottoboni&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PhD stats from Berkeley&lt;/li&gt;
-&lt;li&gt;Social Good&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/aashraf04/&#34;&gt;Ahsan Ashraf&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PhD physics&lt;/li&gt;
-&lt;li&gt;Insight fellow&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/yifei-bao/&#34;&gt;Yifei Bao&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PhD in Computer Science&lt;/li&gt;
-&lt;li&gt;Multiple leadership positions on consumer/growth teams at Goldman Sachs and Uber, now Pinterest&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/hollycapell/&#34;&gt;Holly Capell&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MS in data sci from UCFS&lt;/li&gt;
-&lt;li&gt;Experience with big data tools, AWS, spark, …&lt;/li&gt;
-&lt;li&gt;Experience with python and bash&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/pamelaclevenger/&#34;&gt;Pamela Clevenger&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;PhD in experimental psych&lt;/li&gt;
-&lt;li&gt;Insight fellow: Consulting project for a microloan company&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;past-experience&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Past Experience&lt;/h2&gt;
-&lt;p&gt;Overview;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Interested in decision making and choices, so I studied psychology. I also liked operationalized or concrete ideas, so I took an emphasis in mathematics (only one of two people in my graduating year to do this), and a minor in economics that focused on things like game theory and decision making.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;In graduate school I picked up another interest in good experimentation and modeling practices – some professors in my department were actively working on a replicability chrisis in the field. One practice that bothered me is that researchers would conduct an experiment where they give a person repeated chocies between two things, and average data across the experiment – this is assuming that the person follows the same strategy throughout the task, which probably isn’t true – I though people would gather informaiton and trying different approaches before settling on one strategy. So I developed a model to infer what strategy was most likely on each trial, and overall found that people do change strategies throughout an experiment, and if you don’t account for this then you get false estimates of the parameters of the strategies, and could even make inaccurate claims about the prevalence of a particular strategy.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;research on decision making, RL models to simulate people’s learning behavior,&lt;/li&gt;
-&lt;li&gt;through consulting work and Insight, I’m transitioning into industry..&lt;/li&gt;
-&lt;li&gt;I really like using statistics to durive actionable insights and drive decisions.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;best exemplified in PredictIt project.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Insight Project:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;PredictIt:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;qs&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Qs&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Meetings? Sounds like a very collaborative environment which I like.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;product-idea&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Product idea&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Registery and ‘wishlist’ boards for weddings, birthdays, holidays, can invite friends and link to product checkouts&lt;/li&gt;
-&lt;li&gt;Stacking cards for Instacart&lt;/li&gt;
-&lt;li&gt;‘Surprise Me’ feature for Netflix&lt;/li&gt;
-&lt;li&gt;AR for haircuts&lt;/li&gt;
-&lt;li&gt;AR for shopping (pinterest, Ikea, Amazon, Target, …)&lt;/li&gt;
-&lt;li&gt;VR for tutorials (Ikea, DIY, …)&lt;/li&gt;
-&lt;li&gt;AR to show a product in the person’s house (built on the &lt;a href=&#34;https://newsroom.pinterest.com/en/post/upgrading-lens-for-more-online-to-offline-inspiration&#34;&gt;lens/picture-based search feature&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Registery or ‘wishlist’ pinboards for weddings, baby showers, holidays, birthdays, …&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;product-experimentation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Product + Experimentation&lt;/h2&gt;
-&lt;p&gt;Experimentation outline&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;question&lt;/li&gt;
-&lt;li&gt;context: population, user flow&lt;/li&gt;
-&lt;li&gt;metrics and variables&lt;/li&gt;
-&lt;li&gt;conditions&lt;/li&gt;
-&lt;li&gt;assignment: 1) Y’s independent of Z given X, 2) no interference Y_i independent of W_j, 3) Z_i either 1 or 0&lt;/li&gt;
-&lt;li&gt;n/T: novelty effects, power&lt;/li&gt;
-&lt;li&gt;test: lower variance models (include precision variables) or designs (ABA)&lt;/li&gt;
-&lt;li&gt;recommendation: Can try to relate to a revenue or LTV model to quantify the value of the difference we found.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;technical-sqlpython-data-munging&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Technical (SQL+Python data munging)&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;statistics-circle-problem-glms-details-of-hierarchical-models&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Statistics (circle problem, GLMs, details of hierarchical models)&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Other&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/building-pin-cohesion-229c19fc617e&#34;&gt;Pinterest on pin cohesion&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Multiple ML models convert images to text and compare similarity, using many signals including signals from text on boards and images and text in the URL associated with a link.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/a-one-year-pwa-retrospective-f4a2f4129e05&#34;&gt;Pinterest on metric improvements from redoing the mobile web experience&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Now for the part you’ve all been waiting for: the numbers. Weekly active users on mobile web have increased 103 percent year-over-year overall, with a 156 percent increase in Brazil and 312 percent increase in India. On the engagement side, session length increased by 296 percent, the number of Pins seen increased by 401 percent and people were 295 percent more likely to save a Pin to a board. Those are amazing in and of themselves, but the growth front is where things really shined. Logins increased by 370 percent and new signups increased by 843 percent year-over-year. Since we shipped the new experience, mobile web has become the top platform for new signups. And for fun, in less than 6 months since fully shipping, we already have 800 thousand weekly users using our PWA like a native app (from their homescreen).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/exploring-effective-user-signals-585507d8e926&#34;&gt;Pinterest on user signals and activations&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Asking google signups to provide their gender for better content increased activations substantially&lt;/li&gt;
-&lt;li&gt;Initial try lead to a dropoff when the screen was shown.&lt;/li&gt;
-&lt;li&gt;Next try showed the screen later along with a message indicating that the information was sued to show more valuable content and had a large boost in activations without the loss in signups&lt;/li&gt;
-&lt;li&gt;Comparison to facebook signups (for whome Pinterest has gender information from FB API) revealed an additional benefit of the extra gender page in the signup process.&lt;/li&gt;
-&lt;li&gt;Asking for information to improve the value of content can improve activations if asked at the right time, in a way that isn’t disruptive to the user’s experience&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/trapped-in-the-present-how-engagement-bias-in-short-run-experiments-can-blind-you-to-long-run-58b55ad3bda0&#34;&gt;Pinterest on engagement bias&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Method: run experiment, ship but have a holdout of 5% who do not get new feature.&lt;/li&gt;
-&lt;li&gt;Engagement bias would happen if highly engaged users were overrepresented in the original study and had lift, but after a month no lift was seen relative to the holdout set.&lt;/li&gt;
-&lt;li&gt;Is this generally related to a compliance issue? – some of the people asssigned to both conditions were not observed immediately, and the missingness was related to the outcome of interest through user’s engagement levels.&lt;/li&gt;
-&lt;li&gt;Example case study of pinner attribution on pin closeups&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/monitoring-a-b-experiments-in-real-time-5cd3ee611c1&#34;&gt;Pinterest monitoring A/B tests in real time&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Metrics: repinners, pin ctr, pin creators, pin searchers, user searches, board searches, user follows board follows&lt;/li&gt;
-&lt;li&gt;Possible issues: 1) experiment never triggers, 2) experiment fails to trigger for some group, 3) experiment labels everyone as control even if treatment was triggered.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/demystifying-seo-with-experiments-a183b325cf4c&#34;&gt;Pinterest A/B SEO Tests&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Assign pages to different SEO conditions&lt;/li&gt;
-&lt;li&gt;Use diff in diff to detect an effect of an SEO choice&lt;/li&gt;
-&lt;li&gt;Some experiments on content can negatively influence SEO unexpectedly (always monitor a metric related to SEO as a guard rail metric)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/pinvestigator-a-tool-for-exploring-experiment-related-changes-a58f143f83c&#34;&gt;Pinvestigator&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Important metric caregories: active pinners, board creation rate, interest follow rate, Pin closeup rate&lt;/li&gt;
-&lt;li&gt;metric: new signups, propensity to repin by app (iPhone); percentage of new Pinners who’ve repinned something during their first time using the product&lt;/li&gt;
-&lt;li&gt;Pinvestigator is an internal tool that helps identify which experiment is responsible for a change in a metric during a particular timeframe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb&#34;&gt;A/B testing for managers&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Choose a metric reflective of a microconversion close to the intervention – more power and a higher likelihood that the change is due to the treatment&lt;/li&gt;
-&lt;li&gt;Choose ‘counterbalance’ or guard rail metrics – time on subsequent page, … .&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/concepts/metric_types/&#34;&gt;common metric types&lt;/a&gt;, mentioned in &lt;a href=&#34;https://medium.com/pinterest-engineering/upgrading-pinterest-operational-metrics-8718d058079a&#34;&gt;this pinterest article&lt;/a&gt; - counter: monotonically increases - guage: single value that increases or decreases - histogram: set of counts of values in buckets&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/pinterest-engineering/bottoms-up-how-the-pinterest-growth-team-decentralizes-team-structure-d9f890fa8869&#34;&gt;Growth Ream Organization and Metrics&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Focus: Acquisition, activation, retention&lt;/li&gt;
-&lt;li&gt;Duties: Ideas for improvements, build and launch experiments, analyze results&lt;/li&gt;
-&lt;li&gt;Experiments to impact growth funnel&lt;/li&gt;
-&lt;li&gt;Hundreds of experiments per quarter&lt;/li&gt;
-&lt;li&gt;Idea generation is the responsibility of the whole team, not just one person&lt;/li&gt;
-&lt;li&gt;Must convey a large enough opportunity – explain why an idea is important and impactful enough to work on&lt;/li&gt;
-&lt;li&gt;Analysis also falls on each member, including tracking aggregate metrics on the experimentation platform and also digging in deeper&lt;/li&gt;
-&lt;li&gt;Having everyone involved in analysis enables thought about the type of data and logs needed&lt;/li&gt;
-&lt;li&gt;Make the right decisions quickly: Including everyone in ideation helps to generate more ideas and filter ideas more efficiently. &lt;em&gt;Important to estimate impact of ideas&lt;/em&gt; so they can be prioritized effectively - involving everyone in this also produces more accurate estimates and better prioritization. In weekly pitch meetings, ideas are shared and evaluated on merits and potential opportunity.&lt;/li&gt;
-&lt;li&gt;Adjust to current problems: Since everyeone on the team can ideate, deploy, and analyze experiments, the team meetings can efficiently prioritize which of those tasks the team should focus on for the week.&lt;/li&gt;
-&lt;li&gt;Professional development: Each person develops skills for the whole product pipeline from ideation to launch.&lt;/li&gt;
-&lt;li&gt;“It’s exciting to see everyone adopt a curious mindset and consider new opportunities”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;23 &lt;a href=&#34;https://blog.hootsuite.com/pinterest-statistics-for-business/&#34;&gt;metrics that matter most to advertisers&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;250m people use Pinterest each month (monthly unique users)&lt;/li&gt;
-&lt;li&gt;83% of women age 25-54 reached by Pinterest, though only 41% use Pinterest directly –the additional half of reach may come through Pinterest based images dominate Google image search&lt;/li&gt;
-&lt;li&gt;50% of signups in 2018 were men&lt;/li&gt;
-&lt;li&gt;80% of signups from outside US&lt;/li&gt;
-&lt;li&gt;34% of americans between 18-49 use pinterest, 26% of 50-64 year olds, and 16% of those over 65&lt;/li&gt;
-&lt;li&gt;75% increase in pins in 2 years, 100b -&amp;gt; 175b pins pinned&lt;/li&gt;
-&lt;li&gt;80% on mobile&lt;/li&gt;
-&lt;li&gt;85% of women pinners use pinterest to plan life moments: home decor, vacation, meals&lt;/li&gt;
-&lt;li&gt;Pinners indicate interest twice as early as users on other platforms, e.g. in holidays or break vacation ideas&lt;/li&gt;
-&lt;li&gt;98% of users act on the ideas from Pinterest, compared to 71% average across social media platforms&lt;/li&gt;
-&lt;li&gt;visual search more than doubled in a year, 60% of melennials report they would use visual search&lt;/li&gt;
-&lt;li&gt;59% of melennials discovered products on Pinterest (same as Instagram despite the large difference in monthly users)&lt;/li&gt;
-&lt;li&gt;90% of weekly users use Pinterest to make purchase decisions&lt;/li&gt;
-&lt;li&gt;55% of pinners looking for products&lt;/li&gt;
-&lt;li&gt;97% of searches unbranded – Pinners have an intention but not yet a direction&lt;/li&gt;
-&lt;li&gt;51% of women have been exposed to new brands on pinterest&lt;/li&gt;
-&lt;li&gt;78% of users say ad content is useful&lt;/li&gt;
-&lt;li&gt;33% more traffic driven from pinterest than facebook&lt;/li&gt;
-&lt;li&gt;Pinterest users spend 29% more shen shopping&lt;/li&gt;
-&lt;li&gt;$4.3 gross return for every $1 spend on ads&lt;/li&gt;
-&lt;li&gt;10x life in awareness and 1.22x life in sales, 1.13 lift in sales for landing pages that match the aesthetic of the pin, and pins without faces are repined 23x as often as pins with faces&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Growth initiatives:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Grow userbase to males?&lt;/li&gt;
-&lt;li&gt;Grow other demographics?&lt;/li&gt;
-&lt;li&gt;Look deep into product experimentation beyond just A/B designs&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/a-guide-for-selecting-an-appropriate-metric-for-your-a-b-test-9068cccb7fb&#34;&gt;selecting A/B testing metrics&lt;/a&gt;: Point is that late funnel metrics might require a larger sample size because of the smaller effect size&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;From &lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/93a68ae2-b0f2-47d5-a14e-757e66a6f421.pdf&#34;&gt;Risks&lt;/a&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Important metrics: growth, retention, frequency and duration of engagement or use.&lt;/li&gt;
-&lt;li&gt;Ad spend to acquire new users and retain current users&lt;/li&gt;
-&lt;li&gt;Audience approximately 43% of US internet users, 80% of women age 18-64 with children &lt;a href=&#34;https://www.comscore.com/Insights/Blog/What-Potential-Does-Pinterest-Have-as-an-Advertising-Platform&#34;&gt;user demographic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Maybe saturated with that demographic and need to grow to other demographics like men and international users&lt;/li&gt;
-&lt;li&gt;Pinterest requires good data, targeting areas with high smartphone penetration. Has partnerships with some data providers so that Pinterest doesn’t count toward user’s data quotas.&lt;/li&gt;
-&lt;li&gt;Not anticipating that majority of users will become DAUs&lt;/li&gt;
-&lt;li&gt;Risks:&lt;/li&gt;
-&lt;li&gt;competitors mimic product, users use competitiors more&lt;/li&gt;
-&lt;li&gt;User expreience degrades because of poor company decisions&lt;/li&gt;
-&lt;li&gt;failure to deliver relevant content&lt;/li&gt;
-&lt;li&gt;third parties pull content&lt;/li&gt;
-&lt;li&gt;software issues&lt;/li&gt;
-&lt;li&gt;bandwidth issues, slow and frustrating experience&lt;/li&gt;
-&lt;li&gt;privacy and security concerns&lt;/li&gt;
-&lt;li&gt;spam, harassment, cyberbullying, …&lt;/li&gt;
-&lt;li&gt;taking actions to maintain engaging and relevant content which lead to lower ad revenue&lt;/li&gt;
-&lt;li&gt;continuously monitor ads, too many ads or irrelevant ads could hurt user growth, retention, or engagement&lt;/li&gt;
-&lt;li&gt;future data privacy laws&lt;/li&gt;
-&lt;li&gt;new products or product enhancements could be ill received by pinners&lt;/li&gt;
-&lt;li&gt;Behavior required by a new product may not be easily learnable, which could hurt engagement, retention, and growth&lt;/li&gt;
-&lt;li&gt;Pinterest brand could be harmed. Currently Pinterest is an empowering environment, which helps engagement,retention,growth.&lt;/li&gt;
-&lt;li&gt;Poor perception of the advertisers chould also hurt Pinterest if it reduces eng,ret,gro&lt;/li&gt;
-&lt;li&gt;Scrutiny of “screen time”, privacy, or any decisions of Pinterest&lt;/li&gt;
-&lt;li&gt;SEO efforts could underperform, search engines could demote pinterest content&lt;/li&gt;
-&lt;li&gt;3rd party authenticators (facebook, google, …) withdraw login support&lt;/li&gt;
-&lt;li&gt;Competition from Amazon, Facebook (and Instagram), Google, Snap, and Twitter&lt;/li&gt;
-&lt;li&gt;risks inherent in international business – political, regulatory instability, …&lt;/li&gt;
-&lt;li&gt;inability to manage a rapidly growing headcount&lt;/li&gt;
-&lt;li&gt;Dependance on AWS for compute, storage, data transfer&lt;/li&gt;
-&lt;li&gt;Inability to retain and recruit talented employees&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.crazyegg.com/blog/ecommerce-conversion-funnel/&#34;&gt;Funnel Examples&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Awareness: Keep the product at top of mind&lt;/li&gt;
-&lt;li&gt;Interest:&lt;/li&gt;
-&lt;li&gt;Desire: emphasize benefits to the user and a call to action. E.g. “sign up for (product) and enjoy (benefits)”&lt;/li&gt;
-&lt;li&gt;Action:&lt;/li&gt;
-&lt;li&gt;Example: sessions &amp;gt; sessions with product page view &amp;gt; sessions with Add-To-Cart &amp;gt; sessions with transaction&lt;/li&gt;
-&lt;li&gt;User flow to see if users behave differently from the first touch&lt;/li&gt;
-&lt;li&gt;Important metrics: traffic &amp;gt; conversion rate, bounce rate &amp;gt; sales, cart abandonment &amp;gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;7 Growth Strategies from &lt;a href=&#34;https://sujanpatel.com/marketing/growth-levers/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Pinterest: Exclusivity. Pinterest began as an invite-only platform.&lt;/li&gt;
-&lt;li&gt;PayPal: Buy users. PayPal offered monetary rewards to new users. An alternative is cash back, since that first requires a purchase. This can be less than a customer’s LTV tokeep resaonable revenue.&lt;/li&gt;
-&lt;li&gt;Popcorn Metrics: Deep Onboarding. Working personally with new users, providing videos and tutorials.&lt;/li&gt;
-&lt;li&gt;SpringShield: viral referral loop. Like Robinhood, can have a waitlist for a new feature and make your position in line contingent on referrals – this induces a competition that favors users who successfully refer more users.&lt;/li&gt;
-&lt;li&gt;GrooveHQ: Segment marketing emails based on user behavior. Targeted differet users with statistics (time on page, and logins per day) resonent of the users who churned within a 30 day window. Also measured response rate and retention rate among those who responded to the email.&lt;/li&gt;
-&lt;li&gt;Milkshake: Leverage happy customers for referrals. Using NPS (Net Promoter Score) responses (positive ones, of course) as testimonials. Asking for shares inside Mailshake. Engaging referrers by asking at sign-up if a customer was there via a referral and who gave it, and thanking them via social media and email. Increasing customer/product investment by asking our most active customers for product feedback. Conducting and featuring case studies from our most successful customers.&lt;/li&gt;
-&lt;li&gt;PicMonkey: Freemium.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href=&#34;https://s23.q4cdn.com/958601754/files/doc_financials/2019/q2/shareholder-letter-Q219-v10.pdf&#34;&gt;Letter to shareholders&lt;/a&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Introduced personalized search in home and sidebar.&lt;/li&gt;
-&lt;li&gt;More video content: user repin rate for videos is 1.4x that of static images. Video views greater in Q2 than all of 2018. Searches for specific terms (paint on canvas) also increased by &amp;gt;300% after video pins on those topics. Big gains in searches in food, style, beauty, and skill learning.&lt;/li&gt;
-&lt;li&gt;Videos also improve clickthrough rate and can have a lower cost per click for advertisers (ads pay for impressions and ranking, so a higher CTR may imply a lower CPC).&lt;/li&gt;
-&lt;li&gt;Focusing on growing products from retailers, saw increase of 50% from methods for acquiring pin inventory, which improves relevance and engagement, measured in weekly shopper impressions and clicks.&lt;/li&gt;
-&lt;li&gt;New &lt;a href=&#34;https://newsroom.pinterest.com/en/post/summer-shopping&#34;&gt;shopping features&lt;/a&gt;. Retailers saw &lt;a href=&#34;https://business.pinterest.com/en/blog/research-retail-brands-can-see-2x-higher-returns-on-pinterest-than-other-digital-channels&#34;&gt;2x higher return&lt;/a&gt; on ad spend with Pinterest vs social media, and 1.3x higher return than on paid search.&lt;/li&gt;
-&lt;li&gt;New mobile ad manager that increases mobile signup activation rates&lt;/li&gt;
-&lt;li&gt;Made easier to add tags for ad attribution, 2x more tags added YTD in 2019 than in all of 2018&lt;/li&gt;
-&lt;li&gt;30% YoY DAU growth to 300m&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;metrics&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Metrics&lt;/h3&gt;
-&lt;p&gt;MAUs and ARPU depend on the methodology used to track user data, and changes in this methodology can influence Pinterest’s revenue projections.&lt;/p&gt;
-&lt;p&gt;Retention:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MAU: Monthly active users, a logged-in Pinterest user who visits our website or opens our mobile application at least once during the 30-day period ending on the date of measurement.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Revenue:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ARPU: Average revenue per user = revenue in a grography / ((MAU0 + MAU1) / 2)&lt;/li&gt;
-&lt;li&gt;Where MAU0 is for the same 30 day period as the revenue and MAU1 is for the prior period&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;phone-screen&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Phone Screen&lt;/h1&gt;
-&lt;pre class=&#34;eval&#34;&gt;&lt;code&gt;This is just a simple shared plaintext pad, with no execution capabilities.
-
-When you know what language you&amp;#39;d like to use for your interview,
-simply choose it from the dropdown in the top bar.
-
-You can also change the default language your pads are created with
-in your account settings: https://coderpad.io/settings
-
-Enjoy your interview!
-
-
-
-Your previous Python 3 content is preserved below:
-
-# def say_hello():
-#     print(&amp;#39;Hello, World&amp;#39;)
-
-# for i in range(5):
-#     say_hello()
-
-
-# 
-# Your previous MySQL content is preserved below:
-# 
-# /*
-# Write a query to calculate the Average revenue generated per user for US users in first 10 slots for each advertiser on a given date
-# 
-# pick any date
-# 
-# 
-# 
-# ad_events                             user_dimension
-# +---------------+---------+           +---------------+----+
-# | user_id       | int     |           | user_id  | int     |
-# | advertiser_id | int     |           | country  | varchar |
-# | slot_id       | int     |           | age      | int     | 
-# | revenue       | int     |           | gender   | varchar | 
-# | dt            | date    |           | spam     | int     | 
-# +---------------+---------+           +---------------+----+
-# 
-# 
-# ad_events                             user_dimension
-# ad_id | uaser_id                         
-# 1
-# 1
-# .
-# .
-# .
-# 
-# 
-# 
-# Want: 
-# +-----+
-# ad_id   | avg rev per user for firt 10 slots
-# ad1        .89      
-# ad2        .90
-# +---+
-# 
-# */                      
-# 
-# 
-# select SUM(a.revenue)/COUNT(distinct a.user_id) as avg_rev_user_advertiser, a.advertiser_id
-# from user_dimension u
-# join ad_events a
-# on a.user_id = u.user_id
-# where a.slot_id &amp;lt;=10 and u.country = &amp;quot;US&amp;quot;
-# group by user_id
-# 
-# 
-# 
-# /*
-# Write a query to calculate the number of repeated ads for each user on a given day
-# 
-# user_insertion                        ad_insertion
-# +---------------+---------+           +---------------+--------------+
-# | user_id       | int     |           | insertion_id     | int       |
-# | insertion_id  | int     |           | promoted_pin_id  | int       |
-# | dt            | date    |           | action_type      | varchar   | 
-# +---------------+---------+           | action_timestamp | timestamp |    
-#                                       | dt               | date      | 
-#                                       +---------------+--------------+  
-# 
-# user_insertion sample rows:
-# 
-# user_id  insertion_id         dt
-# 1        hofh38u9uvhcc   2018-09-29
-# 2        abcddh99840cc   2018-09-29
-# 3        ueiruoeir0419   2018-09-29
-# 
-# 
-# ad_insertion sample rows:
-# 
-# insertion_id    promoted_pin_id   action_type   action_timestamp   dt   
-# hofh38u9uvhcc   1234              impression    1530793815         2018-10-01
-# abcddh99840cc   1234              click         1530793815         2018-10-01
-# ueiruoeir0419   1234              save          1530793815         2018-10-01
-# 
-# 
-# uid pid count
-# 1   1    1
-# 1   1    4
-# 
-# 
-# want: 
-# Userid, Number_of_repeated_ads (number of ad pins that were repeated)
-# 1        5
-# 2        9
-# 3        0
-# 
-# 
-# */
-# 
-# select sub.user_id, count(*)
-# from
-# (
-# select u.user_id as user_id, a.promoted_pin_id as pin_id, count(*) as repetitions
-# from user_insertion u 
-# join ad_insertion a
-# on u.insertion_id = a.insertion_id
-# group by u.user_id,a.promoted_pin_id
-# having count(*) &amp;gt;= 2
-# ) as sub
-# group by sub.user_id
-# 
-# # within users, count unique, repeated pin ids
-# 
-# 
-# 
-
-import numpy as np
-import pandas as pd
-import random
-
-
-user_ids = list(np.random.choice(range(1000000,1001000), 1000))
-impressions = list((np.random.pareto(a = 3, size = 1000)*1000))
-impressions = [int(i) for i in impressions]
-clicks = list((np.random.pareto(a = 3, size = 1000)*100))
-clicks = [int(i) for i in clicks]
-data = pd.DataFrame(np.column_stack([user_ids, impressions, clicks]), columns = [&amp;#39;user_id&amp;#39;,&amp;#39;impressions&amp;#39;,&amp;#39;clicks&amp;#39;])
-data.head()
-
-
-# code generates dataset
-# 
-
-# Does this dataset make sense? - What will you check ?
-# 1) user 2 more clicks than impressions
-
-# How will you clean it up ?
-
-tmp=data[&amp;#39;impressions&amp;#39;]&amp;lt;data[&amp;#39;clicks&amp;#39;]
-tmp.all()
-
-# data = data[data[&amp;#39;impressions&amp;#39;]&amp;gt;=data[&amp;#39;clicks&amp;#39;]]
-
-
-###
-
-
-We currently have a button on each Pin on the Pinterest app. It has a click rate of 0.04 (number of clicks / number of pins seen). The only outcomes possible are click or not click.
-
-Q: What is the probability of observing exactly 5 clicks out of 100 pins seen?
-
-100 choose 5 * .04^5 * (1-.04)^(100-5)
-
-
-Q: What is the probability of observing at least 5 clicks out of 100 pins seen?
-
-1 - sum from i = 0 to 5 (100 choose i * .04^i * (1-.04)^(100-i))
-
-
-Q: Given that we observe 5 clicks out of 100 pins seen in the treatment group of an experiment, construct a hypothesis test to test whether the button click rate is significantly different than 0.04.
-
-
-p_0 = 0.04
-p = 5/100
-n = ? 
-
-z = (p - p_0) / (p_0 * (1-p_0) / sqrt(n) ) 
-z = (.05 - .040) / (.04 * (1-.04) / sqrt(n) ) 
-
-
-Q. Can you describe what alpha of 0.05 means here (i.e., type 1 error rate)? To a data scientist (technical audience)? To a person with no statistical background (non-technical audience)?
-
-
-Q. Can you describe the outcome of this hypothesis test to a data scientist (i.e., to a technical audience)? To a person with no statistical background (i.e., to a non-technical audience)?
-
-p&amp;gt;.05
-
-Experimentation
-
-We have been getting feedback from users in focus groups that they’d like to see fresher search results, meaning more up-to-date pins. So we’d like to see how freshness would affect user experience. 
-
-Q: How would you approach this problem?
-
-freshness [?] -&amp;gt; user satisfaction?
-
-1) define freshness
-
-2) metrics to reflect a better user experience
-
-Acquisition
-- 
-
-Activation
-- time on home page
-- boards created
-- pins per board
-- pins pinned per user
-
-Retention
-- repeat logins / week
-
-Referral
-- 
-
-Revenue
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Pinterest - Python, data munging, pandas - SQL care about efficency (e.g. reduce data before joining) - probability questions; - - Clickthrough rate of x, what’s p(5 out of n click through) - - fundamental probability - business case; open case study.. - behavioral&lt;/p&gt;
-&lt;div id=&#34;behavioral&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Behavioral&lt;/h2&gt;
-&lt;div id=&#34;background&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Background&lt;/h3&gt;
-&lt;p&gt;Example Answer:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I recently graduated from UC Irvine where I studied cognitive science and statistics.&lt;/li&gt;
-&lt;li&gt;My research focused on decision making, which means I programed experiments that would show people two or three alternatives and vary the attributes of the alternatives to reveal how people are making decisions.&lt;/li&gt;
-&lt;li&gt;So for example someone might see three different pins – These pins have attributes like different properties of the image, maybe different text captions.&lt;/li&gt;
-&lt;li&gt;Search for recepies, then I might immediately see 3 pins with food images that have different attributes (carbs, brightness of the image, text, …).&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Very relevant, which is one of the reasons I’m excited to be interviewing with Pinterest.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;That overlap between the tasks I created, and the user experience on the pinterest platform is one of the big reasons why I’d be excited to work at Pinterest.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Another reason is the proximity of user data to user purchasing decisions (high user intent).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;UCI&lt;/li&gt;
-&lt;li&gt;Cognitive science and statistics&lt;/li&gt;
-&lt;li&gt;My research focused on decision making –&lt;/li&gt;
-&lt;li&gt;&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;How environmental cues impact impulsivity or preferences for immediate rewards&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Decoy effects – so how the attributes of an undesirable option can influence preference between two desirable options.&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Inferring which decision making strategy a person is currently following&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;For all of these studies, I was writing programs that would show participants multiple options (e.g. pins) and modify the context (adding other cues) or the attributes of the options to see how those modifications influenced the probability of a person picking one of the options.&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Very relevant to the kind of environments users experience on Pinterest, which is one of the reasons I’m excited to be interviewing with Pinterest.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;One of the phenomena that I studied was the decoy effect – For example at Pinterest, if a user sees a set of three pins (A,B,C), they pick A 70% of the time and B 30% of the time, but when we just show pins A and B, they pick B 55% of the time and A 45% of the time.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;haas-freelance-work&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;HaaS freelance work&lt;/h3&gt;
-&lt;p&gt;Situation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Haas stands for housing as a service, it’s a membership-based coliving startup.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Task:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Want to increase memberships through facebook and google ads.&lt;/li&gt;
-&lt;li&gt;I’m leveraging a little SEO experience to help with designing ads;&lt;/li&gt;
-&lt;li&gt;Brighter photos, photos with faces, and color schemes that contrast FB’s color scheme of white and blue,&lt;/li&gt;
-&lt;li&gt;thse features are associated with higher CTR for YouTube thumbnails.&lt;/li&gt;
-&lt;li&gt;Becoming familiar with Google Analytics and Facebook Ad Analytics to run A/B tests with these ads&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Action:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;See which drive more interest in CTR, and more conversions in applications for membership, and which attract the demographics that my client wants to attract.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;insight-project&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Insight Project&lt;/h3&gt;
-&lt;p&gt;Situation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;2 week consulting project&lt;/li&gt;
-&lt;li&gt;Startup focused on digital workspaces (e.g. google docs)&lt;/li&gt;
-&lt;li&gt;Wanted to understand user base.&lt;/li&gt;
-&lt;li&gt;Wanted to be able to predict who would convert from a free trial to a paying customer.&lt;/li&gt;
-&lt;li&gt;(skip) Wanted to attribute conversion to product features with conversion.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Task:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Data:&lt;/li&gt;
-&lt;li&gt;Company demographic information, company size and revenue.&lt;/li&gt;
-&lt;li&gt;Used this to communicate conversion rates by demographic to heads of different teams using tables and figures.&lt;/li&gt;
-&lt;li&gt;Account activity data which was a sum of actions taken within an account each day.&lt;/li&gt;
-&lt;li&gt;I transformed this into cumulative sum instead of daily sum to increase interpretability and modeling ease.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(skip) Action: (skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. (skip) - Cast as classification problem, used SMOTE to address class imbalance, (skip) - used 5-fold CV to evaluate models on AUC, (skip) - ended with a RF algorithm for these predictions.&lt;/p&gt;
-&lt;p&gt;Result:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Delivered presentation and slide deck with tables and figures to a group of team leaders.&lt;/li&gt;
-&lt;li&gt;Delivered a Python script to implement the model, and a slide deck describing the modeling procedure and performance.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;predictit-project&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;PredictIt project&lt;/h3&gt;
-&lt;p&gt;Situation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Prediction markets aggregate information and incentivize rational behavior, so one would expect the prices to be accurate.&lt;/li&gt;
-&lt;li&gt;At an individual level, lots of fallacies have been established in lab settings.&lt;/li&gt;
-&lt;li&gt;I wanted to know if any fallacies would manifest in market prices.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Results:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Conjunction fallacy: “Trump” traded higher hand “Republican” for extended period of time.&lt;/li&gt;
-&lt;li&gt;Disjunction fallacy: Most market prices add up to something greater than $1, but because of fees it’s often not profitable to take advantage of this.&lt;/li&gt;
-&lt;li&gt;CPT subjective probability function: Overpricing of low probability events and Underpricing of high probability events&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;– notably this was highest as expiration approached, a context that is more similar to lab studies that don’t have delayed rewards.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Now we’re working on automating trades based on these and other indights.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;quantopian&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Quantopian:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;recreated XIV, fund that trades VIX futures weighted so that the effective days to expiration is approximately 30.&lt;/li&gt;
-&lt;li&gt;mean revision&lt;/li&gt;
-&lt;li&gt;moving average crossover&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;child-bandit-modeling&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Child bandit modeling&lt;/h3&gt;
-&lt;p&gt;Situation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wanted to know what strategies they followed, and if their strategy changed over time.&lt;/li&gt;
-&lt;li&gt;Kids repeatedly chose between two gambling machines&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Action:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I developed a model that inferred the probability of following each strategy on each trial&lt;/li&gt;
-&lt;li&gt;Used Bayes’ Rule to smooth out these inferences / accumulate information over trials&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Result:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Kids do seem to switch strategies, probably don’t act optimally, and have different strategies depending on age (switchy vs sticky)&lt;/li&gt;
-&lt;li&gt;Result: A lot of experiments focus on which strategy best fits all data across trials – the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Value:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implications for user intent modeling&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;explain-some-research-at-pintrest&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Explain some research at Pintrest&lt;/h3&gt;
-&lt;p&gt;See:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/pinning-www17.pdf&#34;&gt;Predicting Intent Using Activity Logs&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Pinterest:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Content sharing platform, and image based search engine&lt;/li&gt;
-&lt;li&gt;Prior research found user types; 1) casual browsers, 2) responding to a specific goals&lt;/li&gt;
-&lt;li&gt;Prior research found different temporal horizons, e.g. using Pintrest to plan dinner versus using Pintrest to plan vacations.&lt;/li&gt;
-&lt;li&gt;On Pintrest users view pins (content) to boards (collections).&lt;/li&gt;
-&lt;li&gt;Pins have 33 categories (DIY, food and drink, …)&lt;/li&gt;
-&lt;li&gt;Users can look at closeups of Pins, which provides additional information&lt;/li&gt;
-&lt;li&gt;Users can click through to visit a site affiliated with a pin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Problem and volue of a solution:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Users can use a product with different intents, and the material that a user finds valuable may depend on their intent.&lt;/li&gt;
-&lt;li&gt;Being able to infer a user’s intent from their behavior during a session would enable a personalized experience aligned with a user’s goals.&lt;/li&gt;
-&lt;li&gt;Example: Someone looking for dinner recepies might want something they can quickly make with common ingredients, while someone looking for potluck ideas might want more unique dishes, and someone who is just browsing food might prefer a variety of exotic food images.&lt;/li&gt;
-&lt;li&gt;User intent can vary with each session, so quickly identifying intent within a session can help with changing the interface and content shown to the user in real time based on their inferred intent&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Current paper:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goals: Understand how intent informs behavior, and whether intent can be inferred from behavior.&lt;/li&gt;
-&lt;li&gt;Two dimensions of intent:&lt;/li&gt;
-&lt;li&gt;Goal specificity: whether the intent is stimulus specific (glutin free chocolate chip recepies) or vague (just browsing to pass time).&lt;/li&gt;
-&lt;li&gt;and temporal range: Time horizon for goal completion (tonight, next week, next month, …).&lt;/li&gt;
-&lt;li&gt;In psych, motivation is defined as a directing and activating or invigorating force. The directional component maps onto what Pintrest is calling goal specificity, and the invigorating component might map onto the inverse of what Pintrest refers to as temporal range.&lt;/li&gt;
-&lt;li&gt;In psych, there’s a notion of goal-directed and habitual behavior. The former is driven by a specific desired outcome (similar to goal specificity here) while the later is a less mindful response to stimuli (eg boredom triggers a passive arousal seeking).&lt;/li&gt;
-&lt;li&gt;In social psych, attitudes have been thought about along a gradient of specificity – so maybe things like time-related words in a query can be used to identify goal-directed users.&lt;/li&gt;
-&lt;li&gt;Shopping websites can be used for a specific purchase (goal-directed) or in an experiential way (habitual).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Methods:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sample: 5369 females mean age 33.5, 564 males mean age 38.6, all from US and on Pintrest during July 2016&lt;/li&gt;
-&lt;li&gt;Survey asking;&lt;/li&gt;
-&lt;li&gt;7 point likert scale: “Are you visiting Pintrest with a goal in mind?”&lt;/li&gt;
-&lt;li&gt;“When are you planning to act on what you’re looking for today”&lt;/li&gt;
-&lt;li&gt;Question about Pintrest specific motivations (eg finding DIY ideas)&lt;/li&gt;
-&lt;li&gt;“What are you looking for on Pintrest today?” Response options were based on Pintrest categories&lt;/li&gt;
-&lt;li&gt;Focused on data in the session immediately following the survey&lt;/li&gt;
-&lt;li&gt;primarily analyzed first 10 minutes because this window had peak performance, around 27% of sessions had fewer than 10 minutes&lt;/li&gt;
-&lt;li&gt;Over 850,000 behavioral events (views, closeups, searches) across 5933 users within 10 minutes.&lt;/li&gt;
-&lt;li&gt;Also analyzed behavior from when the user first created account until a week after survey completion&lt;/li&gt;
-&lt;li&gt;used Holm-corrected p-values, a method that is more powerful than a the conservative Bonferroni correction.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Mitigating limitations:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;coverage bias: mitigated by uniformly sampling from users for inclusion&lt;/li&gt;
-&lt;li&gt;participation bias: compared activity of users who completed the survey (addigned survey, took survey) to those who saw the survey popup but did not complete the survey (assigned survey, did not take survey).&lt;/li&gt;
-&lt;li&gt;Survey takers had been using Pintrest longer, and had more saved pins. Inferred from this that engaged users were&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Findings:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal-specific users are: more focused, search more (1.1 vs 0.4 searches), spend more time browsing specific categories of content in detail, more likely to reference saved content, less likely to return in next 7 days, less likely to attribute their visit to boredom (2% vs 25% for habitual), more likely to attribute visit to making something (26% vs 5% for habitual)&lt;/li&gt;
-&lt;li&gt;users with short term goals: specific categories of content, likely to reference saved content, less likely to save new content, goal-specific users more likely to act in short term, habitual users more unsure of taking actions&lt;/li&gt;
-&lt;li&gt;Demographic differences: females more likely to be goal-specific (49% vs 40%), males unsure of taking action, older users more short-term goals, younger users more unsure of taking action, food, drink, DIY searches more likely to be goal-specific and act in short term, travel, entertainment more likely to be habitual and likely to act in long term, intent moderates the type of recepies users save&lt;/li&gt;
-&lt;li&gt;Model can predict goal specificity and temporal range.&lt;/li&gt;
-&lt;li&gt;Current session data is most informative, historical activity data also helpful&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;https://labs.pinterest.com/user/themes/pin_labs/assets/paper/understanding-purchasing-at-pinterests.pdf&#34;&gt;Understanding behaviors that lead to purchasing&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metrics-1&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Metrics&lt;/h1&gt;
-&lt;div id=&#34;acquisition&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Acquisition&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Week / Week new users&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;activation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Activation&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Pin likes&lt;/li&gt;
-&lt;li&gt;Pin shares&lt;/li&gt;
-&lt;li&gt;Pin comments&lt;/li&gt;
-&lt;li&gt;Pins created&lt;/li&gt;
-&lt;li&gt;Boards creates&lt;/li&gt;
-&lt;li&gt;Pins on board&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;retention&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Retention&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Returning users&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;referral&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Referral&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Referral links?&lt;/li&gt;
-&lt;li&gt;New users by source&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;revenue&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Revenue&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Ads clicked&lt;/li&gt;
-&lt;li&gt;Ads clicked by user segment&lt;/li&gt;
-&lt;li&gt;Ads clicked by location&lt;/li&gt;
-&lt;li&gt;Ad conversions (clicks and a microconversion on the next page)&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

@@ -53,6 +53,25 @@ Overheard, from Chris and Aman talking;
 
 # Onsite Prep
 
+questions: 
+
+- recent project that excited them the most
+- questions abot the job to get signal about how I'd fit in.
+- my opportuinity to interview them babout working there. 
+- ask about daily work
+- focus more on experience of working there, and the positive aspects of it
+- only product if it's in the context of what the role could be
+- how are DS involved in strategic priorities
+
+for product
+
+- empathy for the user experience
+- define problem very clearly
+- metrics and countermetrics -- how would behavior react to this change and how can we measure it
+- root cause analysis
+- 5 'whys' 
+- 
+
 ## Schedule 
 
 [Varun Bansal](https://www.linkedin.com/in/varun-b-06976a34/)
