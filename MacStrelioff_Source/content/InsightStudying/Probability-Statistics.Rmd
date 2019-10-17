@@ -465,7 +465,8 @@ In most lab studies this setup simplifies because $Z_i=W_i$ since there is no po
 To simplify notation, I'll assume exclusion past here and refer to observed outcomes as $Y_i(W_i)$.
 
 - Stable units: 
-
+- units experience one version of the treatment
+- one unit's assignment doesn't influence another unit's outcome
 
 - Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds. 
 
@@ -478,6 +479,8 @@ If unconfoundedness isn't satisfied, i.e. the distributions of xi differ between
 ## Common Methods
 
 Some summarized in this [Medium Post](https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268)
+
+
 
 ### Diff in Diff
 
