@@ -36,6 +36,891 @@
     </item>
     
     <item>
+      <title>Probability and Statistics</title>
+      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
+      <pubDate>Wed, 16 Oct 2019 18:28:29 +0000</pubDate>
+      
+      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-foundations&#34;&gt;Probability Foundations&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#probability-functions&#34;&gt;Probability Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#transformations-of-random-variables&#34;&gt;Transformations of Random Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#expectation&#34;&gt;Expectation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#variance&#34;&gt;Variance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#information-theory&#34;&gt;Information Theory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-inference&#34;&gt;Causal Inference&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#assumptions-and-key-terms&#34;&gt;Assumptions and key terms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#common-methods&#34;&gt;Common Methods&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#diff-in-diff&#34;&gt;Diff in Diff&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-impact&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#synthetic-controls&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#iv-analysis&#34;&gt;IV Analysis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#regression-discontinuity&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#first-differences&#34;&gt;First differences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#random-effects&#34;&gt;Random Effects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#propensity-score-matching&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#microsoft-dowhy&#34;&gt;Microsoft DoWhy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#concerns&#34;&gt;Concerns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#treatment-units&#34;&gt;Treatment Units&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#generative-model-and-adjustment-variables&#34;&gt;Generative Model and Adjustment Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#common-designs&#34;&gt;Common Designs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#integrety-checks&#34;&gt;Integrety Checks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#maximum-likelihood-versus-bayes-estimators&#34;&gt;Maximum Likelihood versus Bayes’ Estimators&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#common-tests&#34;&gt;Common Tests&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#t-test&#34;&gt;t-test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#anova&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linear-model&#34;&gt;Linear Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#z-test-for-proportions&#34;&gt;Z test for proportions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#chi-square&#34;&gt;Chi-Square&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logistic-regression&#34;&gt;Logistic Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#likelihood-ratio-and-bayes-factors&#34;&gt;Likelihood Ratio and Bayes Factors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#always-valid-p-values-ck-optimizely-white-paper&#34;&gt;always valid p-values (ck optimizely white paper)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#different-estimands-for-ci&#34;&gt;Different Estimands For CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#more-on-variance&#34;&gt;more on variance&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#emperical-variance-estimation&#34;&gt;Emperical Variance Estimation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mixed-effects-models&#34;&gt;Mixed Effects Models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#effiencicy-or-variance-reduction&#34;&gt;Effiencicy or Variance Reduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#glms-1&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-inference-methods&#34;&gt;Causal Inference Methods&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#difference-in-differences&#34;&gt;Difference in Differences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-impact-1&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#synthetic-controls-1&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#propensity-score-matching-1&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression-1&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#instrumental-variables&#34;&gt;Instrumental variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#regression-discontinuity-1&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!--
+Fermi problems (order of magnitude)
+--&gt;
+&lt;!--
+- Make YouTube videos on each!
+--&gt;
+&lt;!--
+# What is a probability, and how does that relate to statistics? 
+
+- Probabilities are commonly thought of in three ways; 
+
+1. Purely mathematical
+2. Magnitudes of belief
+3. Relative frequencies of infinate events
+
+I use probability theory to quantify beliefs and make decisions. 
+
+Logic, about truths of the universe. 
+By there is uncertainty in what we know, and uncertainty in our measurements and observations. Statistics as a field is concerned with specifying our knowledge of the laws of the universe and the uncertainty around them. They do this by applying probability theory. 
+
+Probability theory generalizes logic to situations where we aren&#39;t certain. And logic emerges from probability theory when we know things with certainty. 
+
+Hypothesis testing
+
+Statisticians use probability theory to decide on what is and isn&#39;t true
+--&gt;
+&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Probability Foundations&lt;/h1&gt;
+&lt;!--
+Events, event spaces, 
+combinatorics (permutations and combinations)
+--&gt;
+&lt;p&gt;A random variable random variable is a variable with an unknown value, but known possible values. An event is an observed value of a random variable. An event space contains all possible values of the random variable. Probabilities are values assigned to the events in an event space (i.e. the possible values of a random variable) and represent how likely each event is relative to other events in the event space.&lt;/p&gt;
+&lt;p&gt;Here &lt;span class=&#34;math inline&#34;&gt;\(p(e)\)&lt;/span&gt; will be used to represent the probability of an event. Some special probabilities include the probability of any event in the event space, which is 1. And the probability of any event other than &lt;span class=&#34;math inline&#34;&gt;\(p(e)\)&lt;/span&gt;, known as the compliment of &lt;span class=&#34;math inline&#34;&gt;\(p(e)\)&lt;/span&gt;, denoted with &lt;span class=&#34;math inline&#34;&gt;\(p(\neg e)\)&lt;/span&gt;, is found by;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+p(\neg e) = 1 - p(e)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Rules&lt;/h2&gt;
+&lt;p&gt;A joint event refers to two or more events occurring together. They are colloquially talked about as one event ‘and’ another event occurring together. More formally, joint events are called intersections (represented with the &lt;span class=&#34;math inline&#34;&gt;\(\cap\)&lt;/span&gt; symbol) between events. For events &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, the probability of their joint event will be represented with &lt;span class=&#34;math inline&#34;&gt;\(p(e_1 \cap e_2)\)&lt;/span&gt;. The probability of an intersection of events is the same regardless of which event is considered first;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+p(e_1 \cap e_2) = p(e_2 \cap e_1)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For two events, &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, their intersection is found by; &lt;span class=&#34;math display&#34;&gt;\[
+p(e_1 \&amp;amp; e_2) = p(e_1\cap e_2) = p(e_1|e_2)p(e_2)
+\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(p(e_1|e_2)\)&lt;/span&gt; is a conditional probability, discussed in the next section.&lt;/p&gt;
+&lt;p&gt;Conditional events refer to one event, &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt;, after another event, &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, is known. &lt;span class=&#34;math inline&#34;&gt;\(p(e_1|e_2)\)&lt;/span&gt; represents the probability of &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; given, or after knowing, &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;. These can be defined by rearranging the multiplication rule as follows; &lt;span class=&#34;math display&#34;&gt;\[
+p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \Rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Noting that, by the reflexively of joint events and the definition of the multiplication rule, &lt;span class=&#34;math inline&#34;&gt;\(p(e_1 \cap e_2) = p(e_2 \cap e_1)= p(e_2 | e_1) p(e_1)\)&lt;/span&gt;, and so the above equation becomes; &lt;span class=&#34;math display&#34;&gt;\[
+p(e_1|e_2)=\frac{p(e_2 | e_1) p(e_1)}{p(e_2)}
+\]&lt;/span&gt; This equation is known as Bayes’ Theorem or Bayes’ Rule.&lt;/p&gt;
+&lt;p&gt;A union (represented with the &lt;span class=&#34;math inline&#34;&gt;\(\cup\)&lt;/span&gt; symbol) of events refers to at least one of multiple events occurring. For events, &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, their union would include the probability that &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; occurs, the probability that or &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; occurs, and the probability that both &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; occur. Colloquially this is talked about the probability of &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; ‘or’ &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;. Formally this is expressed and computed as; &lt;span class=&#34;math display&#34;&gt;\[
+p(e_1\text{ or } e_2) = p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(p(e_1 \cap e_2)\)&lt;/span&gt; is a joint probability.&lt;/p&gt;
+&lt;p&gt;Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent, this would mean that; &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p(e_1|e_2) &amp;amp;= p(e_1) \\
+p(e_2|e_1) &amp;amp;= p(e_2)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent, then their joint probability simplifies as so; &lt;span class=&#34;math display&#34;&gt;\[
+p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = p(e_1)p(e_2)
+\]&lt;/span&gt; Where the last equality is only true if &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent (i.e. &lt;span class=&#34;math inline&#34;&gt;\(p(e_1|e_2)=p(e_1)\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;Then the probability of their union simplifies to; &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p(e_1 \cup e_2) &amp;amp;= p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) \\
+&amp;amp;= p(e_1) + p(e_2) - p(e_1)p(e_2)
+\end{aligned}
+\]&lt;/span&gt; Where again, the last part of this equality is only true if &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent.&lt;/p&gt;
+&lt;p&gt;Events &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are said to be mutually exclusive if the occurrence of either event precludes the occurrence of the other event. Formally mutual exclusivity means that; &lt;span class=&#34;math display&#34;&gt;\[
+p(e_1 | e_2) = 0 \text{ and } p(e_2 | e_1) = 0
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If two events are mutually exclusive, then the probability of their joint event is; &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p(e_1 \cap e_2) &amp;amp;= p(e_1|e_2)p(e_2) \\
+&amp;amp;= 0*p(e_2) \\
+&amp;amp;= 0
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And the probability of their union simplifies to; &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p(e_1 \cup e_2) &amp;amp;= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
+&amp;amp;= p(e_1) + p(e_2) - 0 \\
+&amp;amp;=p(e_1) + p(e_2)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;!--
+## Practice Problems and Walkthroughs
+
+- link to my YouTube videos on these things
+
+Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
+--&gt;
+&lt;/div&gt;
+&lt;div id=&#34;probability-functions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Probability Functions&lt;/h2&gt;
+&lt;!--
+Many machine learning algorithms are different ways of estimating f(x)
+--&gt;
+&lt;p&gt;Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is used represent a probability function, and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; to represent a cumulative probability function. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is commonly called a probability mass function (pmf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is discrete, and a probability density function (pdf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is continuous. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; are related through integration:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f(x) &amp;amp;= \frac{d}{dx}F(x) \\
+F(x) &amp;amp;= \int_{-\infty}^{\infty} f(x) d_{x}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For discrete variables, the probability function represents the probability that &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes a specific value &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(f(x) = p(X=x)\)&lt;/span&gt;. For continuous variables, the probability that the variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes any particular value is technically &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(p(X=x)=0\)&lt;/span&gt;. However, &lt;span class=&#34;math inline&#34;&gt;\(p(x)\)&lt;/span&gt; is still related to probability functions &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; through areas. For an arbitrarily small &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt; the probability that &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes a value between &lt;span class=&#34;math inline&#34;&gt;\(x-\epsilon\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(x+\epsilon\)&lt;/span&gt; is the area of the distribution over that range;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+p( x - \epsilon&amp;lt; x &amp;lt; x+\epsilon) &amp;amp;= F(x+\epsilon) - F(x-\epsilon) \\
+&amp;amp;= \int_{-\infty}^{(x-+\epsilon)}f(x)d_{x} - \int_{-\infty}^{(x-\epsilon)}f(x)d_{x}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Probability functions have to satisfy a few conditions:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;transformations-of-random-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Transformations of Random Variables&lt;/h2&gt;
+&lt;p&gt;Given &lt;span class=&#34;math inline&#34;&gt;\(x\sim F_X(x)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y=g(x)\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+F_Y(y) = \begin{cases}
+F_X(g^{-1}(y)), &amp;amp; \text{ if g is increasing wrt x}\\
+1-F_X(g^{-1}(y)), &amp;amp; \text{ if g is decreasing wrt x}
+\end{cases}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;By the chain rule, the pdf is;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f_Y(y)=\frac{d}{dy}F_y(y) = f_X(g^{-1}(y))\left| \frac{d}{dy} g^{-1}(y) \right|
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A special case of this is the probability integral transformation;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+x&amp;amp;\sim F_X(x) \\
+Y&amp;amp;=F_X(x) \\
+P(Y\leq y) &amp;amp;= P(F_X(X)\leq y) \\
+&amp;amp;= P(F^{-1}_X(F_X^{-1}(X))\leq F_X^{-1}(y)) \\
+&amp;amp;= P(X \leq F_X^{-1}(y)) \\
+&amp;amp;= F_X(F_X^{-1}(y)) \\
+&amp;amp;= y
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Which shows the relationship between a uniform random variable and the CDF of any other random variable.&lt;/p&gt;
+&lt;!--
+Link to YouTube video on the circle problem
+- circle problem
+--&gt;
+&lt;!--
+### Probability Distributions
+Make YouTube videos on each. 
+- 1) Walk through properties from Wikipedia!
+- 2) Walk through some simulations in Python!
+--&gt;
+&lt;!--
+## Central limit theorem
+
+Sum of any random variable converges to normal distribution. 
+- show for binomial case, to justify Z test
+--&gt;
+&lt;/div&gt;
+&lt;div id=&#34;expectation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Expectation&lt;/h2&gt;
+&lt;!--
+expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
+--&gt;
+&lt;p&gt;For any functions of a random variable, &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt;, the expectation of that function is;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For discrete random variables, &lt;span class=&#34;math inline&#34;&gt;\(E(x)=\sum_xxp(x)\)&lt;/span&gt;. For continuous random variables, &lt;span class=&#34;math inline&#34;&gt;\(f(x)dx\)&lt;/span&gt; is conceptually &lt;span class=&#34;math inline&#34;&gt;\(p(x)\)&lt;/span&gt; since it is the area under an infinately small segment of the probability function if &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; represents the height and &lt;span class=&#34;math inline&#34;&gt;\(dx\)&lt;/span&gt; represents an infinately small width.&lt;/p&gt;
+&lt;p&gt;Expectation is a linear operator, so for constants &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; and random variables &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(E(ax+by+c) = aE(x)+bE(y)+c\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Expectation for joint random variables&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)d_{s}d_{t}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Marginalizing a distribution from a joint probability function (&lt;span class=&#34;math inline&#34;&gt;\(f(x,y)\)&lt;/span&gt;) or a conditional probability function (&lt;span class=&#34;math inline&#34;&gt;\(f(x|y)\)&lt;/span&gt;): &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+f_x(x)&amp;amp;=\int_yf_{x,y}(x,y)d_{y}\\
+&amp;amp;=\int_y f_{x|y}(x|y)f_y(y)d_{y}\\
+&amp;amp;=E_y(f(x|y))
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_total_expectation&#34;&gt;Law of total expectation, and rough proof&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E_{x}(x)&amp;amp;=E_{y}(E_{x|y}(x|y))\\
+&amp;amp;=\int_y\int_{x}xf_{x|y}(x|y)d_{x}f(y)d_{y} \\
+&amp;amp;=\int_{x}x\int_{y}f_{x|y}(x|y)f(y)d_{y}d_{x} \\
+&amp;amp;=\int_{x}xf(x)d_{x}\\
+&amp;amp;=E_{x}(x)
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The last steps reflect that the internal integral is just marginalizing across y; &lt;span class=&#34;math inline&#34;&gt;\(f_x(x)=\int_y f_{x|y}(x|y)f_y(y)d_{y}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variance&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Variance&lt;/h2&gt;
+&lt;p&gt;Covariance and variance&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Cov(X,Y)&amp;amp;=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
+Var(X)&amp;amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2) \\
+&amp;amp;= E(X^2)-E(X)^2
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff&#34;&gt;Bias-Variance tradeoff&lt;/a&gt; decomposes the theoretical variance obtained when estimating a function &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt; with a model &lt;span class=&#34;math inline&#34;&gt;\(\hat{g}(x)\)&lt;/span&gt; into three components that can be used to motivated changes to the model. Specifically, the Bias-Variance tradeoff is a decomposition of the expected prediction error; &lt;span class=&#34;math inline&#34;&gt;\(g(x)-\hat{g}(x)\)&lt;/span&gt;. To see it’s relation to variance, first rearrange the variance equation above:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Var(X)= E(X^2)-E(X)^2 \\
+\Rightarrow E(X^2) = Var(X)+E(X)^2 \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Then define the random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to be the errors of the model;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+E((g(x)-\hat{g}(x))^2) &amp;amp;= Var((g(x)-\hat{g}(x))^2)+E((g(x)-\hat{g}(x)))^2 \\
+&amp;amp;= (g(x)-E(\hat{g}(x)))^2 + E((E(\hat{g}(x))-\hat{g}(x))^2) + Var(g(x))\\
+&amp;amp;= Bias(\hat{g}(x))^2 + Var(\hat{g}(x)) + Var(g(x))
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here bias represents the squared error between the true function &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt; and the expected model &lt;span class=&#34;math inline&#34;&gt;\(E(\hat{g}(x))\)&lt;/span&gt;. Variance represents the squared error between the expected model and the obtained model. And &lt;span class=&#34;math inline&#34;&gt;\(Var(g(x))\)&lt;/span&gt; represents the true noise or irreducible error in the process &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Variance of linear combinations of random variables:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Variance is also crucial for designing experiments, for example if &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; have different signs and &lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; represents the first measurement, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; represents a future measurement, &lt;span class=&#34;math inline&#34;&gt;\(a=-1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(b=1\)&lt;/span&gt; to reflect a difference comparing the second and first measurements (&lt;span class=&#34;math inline&#34;&gt;\(Y-X\)&lt;/span&gt;), and since the measurements come from the same person here, it is reasonable to assume they are correlated (&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;). In this case, &lt;span class=&#34;math inline&#34;&gt;\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)&lt;/span&gt;, which is not larger than the variance that would be obtained if the measurements were from independent samples.&lt;/p&gt;
+&lt;!--
+Confidence intervals, prediction intervals
+--&gt;
+&lt;!--
+Variance of a function:
+$$
+\begin{aligned}
+Var(g(x)) &amp;= E((g(x)-E(g(x)))^2)\\
+&amp;\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
+\end{aligned}
+$$
+--&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_total_variance&#34;&gt;Law of total variance&lt;/a&gt;: The variance of a variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; can be decomposed into the variation in the variable that remains when &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; is known or irreducible error (&lt;span class=&#34;math inline&#34;&gt;\(E(Var(X|Y))\)&lt;/span&gt;), and the variation that carries through from the uncertainty in the model estimation &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(Var(E(X|Y)\)&lt;/span&gt;). &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Var(X)&amp;amp;=E(Var(X|Y))+Var(E(X|Y))
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This arises in hierarchical models and prediction intervals.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+x               &amp;amp;\sim N(\mu,\sigma)\\
+E(x)            &amp;amp;=\mu\\
+Var(x)          &amp;amp;=\sigma^2\\
+\hat{\mu}_n     &amp;amp;\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)\\
+E(\hat{\mu}_n)  &amp;amp;=\mu\\
+Var(\hat{\mu}_n)&amp;amp;=\frac{\sigma^2}{n}\\
+E(x_{n+1})      &amp;amp;= E(E(x_{n+1}|\hat{\mu}_n))= E(\hat{\mu}_n)=\mu \\
+Var(x_{n+1})    &amp;amp;=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
+                &amp;amp;=\sigma^2+\frac{\sigma^2}{n}\\
+(100-\alpha)PI: &amp;amp; E(x_{n+1}|\hat{\mu}_n) \pm T_\alpha \sqrt{Var(x_{n+1})}\\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;!--
+Expectation and variance are the foundation for decision making
+- value function v(x) that assigns values to the outcomes x
+- If you know the distribution and value function, then you can directly compare choices based on their expected value
+--&gt;
+&lt;!--
+## Models as conditional expectations
+
+Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it&#39;s priors
+--&gt;
+&lt;/div&gt;
+&lt;div id=&#34;information-theory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Information Theory&lt;/h2&gt;
+&lt;p&gt;Information or Surprise is a measure of how unexpected an event was: &lt;span class=&#34;math display&#34;&gt;\[
+I(x)=-log(f(x))=log\left(\frac{1}{f(x)} \right)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Entropy is the expected surprise – higher entropy relates to more uncertainty: &lt;span class=&#34;math display&#34;&gt;\[
+H(X)=E(I(x)) = E(-log(f(x)))  = \int_X f(x)I(x)dx = -\int_X f(x)log(f(x))d_x
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;K-L Divergance, or relative entropy, is the expected distance between distributions with respect to one of the distributions: &lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+D_{KL}(f_{x}(x);f_{y}(x)) &amp;amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)d_x\\
+&amp;amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x))d_x \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Divergance is an important concept in machine learning, because it can be a loss function when we are estimating a distribution &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; with a model &lt;span class=&#34;math inline&#34;&gt;\(\hat{f}(x)\)&lt;/span&gt;. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data that maximizes the divergance between the posterior and prior, i.e. the most informative data.&lt;/p&gt;
+&lt;p&gt;Mutual Information is the divergance from the joint distribution &lt;span class=&#34;math inline&#34;&gt;\(f_{x,y}(x,y)\)&lt;/span&gt; to the joint when independence is assumed &lt;span class=&#34;math inline&#34;&gt;\(f_x(x)f_y(y)\)&lt;/span&gt; – i.e. a measure of non-independence; &lt;span class=&#34;math display&#34;&gt;\[
+I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;causal-inference&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Causal Inference&lt;/h1&gt;
+&lt;p&gt;The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.&lt;/p&gt;
+&lt;p&gt;From this perspective, there is a treatment assignment &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; and an outcome of interest that depends on the treatment &lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;. Ideally, we would be able to compute the expected treatment effeoct for any individual &lt;span class=&#34;math inline&#34;&gt;\(E(Y(T=1)-Y(T=0))\)&lt;/span&gt;, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.&lt;/p&gt;
+&lt;p&gt;Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;CI video&lt;/a&gt; at 10:00.&lt;/p&gt;
+&lt;div id=&#34;assumptions-and-key-terms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assumptions and key terms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp T_i | X_i\)&lt;/span&gt; Unconfoundedness: conditional on observations (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;), treatment (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;) are independent.&lt;/li&gt;
+&lt;li&gt;Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;common-methods&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Common Methods&lt;/h2&gt;
+&lt;p&gt;Some summarized in this &lt;a href=&#34;https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268&#34;&gt;Medium Post&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;diff-in-diff&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Diff in Diff&lt;/h3&gt;
+&lt;p&gt;Contexts and example ..&lt;/p&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires observed data on a control group pre and post treatment&lt;/li&gt;
+&lt;li&gt;Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.&lt;/li&gt;
+&lt;li&gt;Assumes the temporal dimension isn’t informative.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+I_{T}&amp;amp;:\text{Indicator for treatment group} \\
+I_{Post}&amp;amp;:\text{Indicator for post treatment} \\
+Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;causal-impact&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Causal Impact&lt;/h3&gt;
+&lt;p&gt;Causal impact was developed by Google, docs &lt;a href=&#34;https://google.github.io/CausalImpact/CausalImpact.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Want to estimate the counterfactual for an observed timeseries, pre and post treatment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires other time series related to the target time series&lt;/li&gt;
+&lt;li&gt;Assumes the other time series are not influenced by the treatment, generally good candidates include; google trends time series, the weather, other countries or markets where no action was taken, unemployment indecies, stock prices, … .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In pre period, train any kind of model to estimate the target time series as a function of the other time series. The model used in the Causal Impact package is a Bayesian structural time series model.&lt;/li&gt;
+&lt;li&gt;Google’s Causal Impact method uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;this video&lt;/a&gt;. The method estimates a counterfactual using other related time series that were not influenced by the treatment.&lt;/li&gt;
+&lt;li&gt;BSTS uses spike and slab prior for feature selection.&lt;/li&gt;
+&lt;li&gt;In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).&lt;/li&gt;
+&lt;li&gt;Independent Python implementation &lt;a href=&#34;https://github.com/tcassou/causal_impact&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provides pointwise estimates of the causal effect over time, as well as a cumulative estimate (summing up the pointwise estimates)&lt;/li&gt;
+&lt;li&gt;Bayesian approach, provides credible intervals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;synthetic-controls&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Synthetic Controls&lt;/h3&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires multiple related time series&lt;/li&gt;
+&lt;li&gt;Assumes a linear combination of the related time sereis is a good proxy for the counterfactual&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Regress target time series on related time series&lt;/li&gt;
+&lt;li&gt;Use estimates from this model as the counterfactual&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When to use vs causal impact:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The other time series are more conceptually identical - e.g. observed outcomes in untreated market segments subject to the same plausiable confounds – e.g. different nearby counties in a state.&lt;/li&gt;
+&lt;li&gt;Causal impact might be better if the time series are thought to be components of the target – stock price, unemployment, page impressions, google trends, … .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;iv-analysis&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;IV Analysis&lt;/h3&gt;
+&lt;p&gt;More from &lt;a href=&#34;https://www.youtube.com/watch?v=NLgB2WGGKUw&#34;&gt;Ben Lambert&lt;/a&gt;, good explanation &lt;a href=&#34;https://www.youtube.com/watch?v=OWHCbEP56ms&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=cX5q_dKt6iU&#34;&gt;part II&lt;/a&gt;. Case study using quarter and years of education as &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; in place of education as the instrument [here](&lt;a href=&#34;https://www.youtube.com/watch?v=pI9YGSJ2qPk&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=pI9YGSJ2qPk&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=WjcoHAJ4_Mc&#34;&gt;relation to 2SLS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mostly from Gelman chapter “Causal inference with more complicated observational designs” chapter from Gina.&lt;/p&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goal is to find the causal effect of &lt;span class=&#34;math inline&#34;&gt;\(x\rightarrow y\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Issue: &lt;span class=&#34;math inline&#34;&gt;\(Cov(x,\epsilon)\neq 0\)&lt;/span&gt;, a feature is correlated to unobserved confounds, so &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}_{OLS}\)&lt;/span&gt; is unbiased and inconsistent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assumptions and Requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An instrument &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is measured so it can be included in the model.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(z,x)\neq 0\)&lt;/span&gt;, the instrumental variable is related to &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(z,\epsilon)=0\)&lt;/span&gt;, the instrument is not correlated with unobserved confounds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model, 2 stage least squares:&lt;/p&gt;
+&lt;p&gt;Done to address bias in &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}_{OLS}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\hat{x}&amp;amp;=\gamma z + u \\
+\hat{y}&amp;amp;=\beta_{IV} \hat{x} + \epsilon \\
+\beta_{IV} &amp;amp;= (Z^TX)^{-1}Z^TY = \frac{Cov(Z,Y)}{Cov(Z,X)}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Limitation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\beta_{IV}\)&lt;/span&gt; can still be biased, but is at least consistent (&lt;span class=&#34;math inline&#34;&gt;\(\beta_{IV}\overset{p}{\rightarrow} \beta\)&lt;/span&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, but the effect of actually being treated &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; may not be known or estimated.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Regression Discontinuity&lt;/h3&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;p&gt;Some systematic mechanism forces a discontinuity in what would be expected to be a regression line.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;E.g. 1: Yelp rounds star ratings so that businesses close in underlying rating (4.49 and 4.5 stars) are assigned to different conditions (4 and 4.5 starts).&lt;/li&gt;
+&lt;li&gt;E.g. 2: Schools might filter on exam scores, so that students who are very similar in underlying ability or test score (1 point below the threshold vs at the threshold) might be assigned to different universities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fixed-effects-regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fixed Effects Regression&lt;/h3&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unobserved heterogineity &lt;span class=&#34;math inline&#34;&gt;\(\alpha_i\)&lt;/span&gt; that is related to features, &lt;span class=&#34;math inline&#34;&gt;\(Cov(\alpha_i,x_{i,t})\neq 0\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Issue: &lt;span class=&#34;math inline&#34;&gt;\(Cov(\alpha_i,x_{i,t})\neq 0\)&lt;/span&gt;, this implies that &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; isn’t consistent for &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;, i.e. the sampling distribution of &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; doesn’t converge to &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assumptions and Requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(x_{i,t},u_[i,t])=0\)&lt;/span&gt;, i.e. weak exogeniety&lt;/li&gt;
+&lt;li&gt;No perfect correlation between &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;These assumptions imply the fixed effects estimates (&lt;span class=&#34;math inline&#34;&gt;\(\beta_{FE}\)&lt;/span&gt;) are consistent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Model, from &lt;a href=&#34;https://www.youtube.com/watch?v=sFvV9b1cGFc&#34;&gt;here&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;The procedure is to average over time to get &lt;span class=&#34;math inline&#34;&gt;\(\bar{y}_i\)&lt;/span&gt;, and subtract this off, taking advantage of &lt;span class=&#34;math inline&#34;&gt;\(\alpha_i=\bar{\alpha}_i\)&lt;/span&gt; where the later is averaged across time.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+\alpha_i &amp;amp;: \text{unobserved hetergenity} \\
+Cov(\alpha_i,x_{i,t}) &amp;amp;\neq 0 \\
+u_{i,t} &amp;amp;: \text{error} \\
+y_{i,t}&amp;amp;=\beta x_{i,t} + \alpha_i + u_{i,t}\\
+\bar{y}_{t}&amp;amp;=\beta \bar{x}_{i} + \bar{\alpha}_i + \bar{u}_{i} \\
+y_{i,t}-\bar{y}_{t}&amp;amp;=\beta_{FE} (x_{i,t}-\bar{x}_{i}) + (\alpha_i - \bar{\alpha}_i)+ u_{i,t} - \bar{u}_{i} \\
+&amp;amp;= \beta_{FE} (x_{i,t}-\bar{x}_{i}) + u_{i,t} - \bar{u}_{i} \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;removes anything that is constant over time, meaning effects of any time-constant variables can’t be estimated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;first-differences&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;First differences&lt;/h3&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;similar to fixed effects, but less asymptotically efficient if there are serially uncorrelated errors &lt;a href=&#34;https://www.youtube.com/watch?v=G7WqK2o474Y&#34;&gt;see this vid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;random-effects&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Random Effects&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=bQampZBzU9Q&#34;&gt;description in this video&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
+&lt;p&gt;Model:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;propensity-score-matching&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Propensity Score Matching&lt;/h3&gt;
+&lt;p&gt;Context:&lt;/p&gt;
+&lt;p&gt;Treatment assignment is non-random and might be related to the relationship between treatment and outcome. So you match people on their propensity to be assigned to treatment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;microsoft-dowhy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Microsoft DoWhy&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;see &lt;a href=&#34;https://github.com/microsoft/dowhy&#34;&gt;docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Experiment Design&lt;/h1&gt;
+&lt;div id=&#34;foundations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Foundations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hypotheses&lt;/li&gt;
+&lt;li&gt;Treatment and control conditions&lt;/li&gt;
+&lt;li&gt;assumptions (including CI assumptions, SUTVA, …?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;concerns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Concerns&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;network effects: front-end, it could be from different interactions, back-end it could be from changes in algorithm behavior for units in C based on different behavior from units in T – e.g. if a new recommender for units in T influences them to watch more of x, then x may also get recommended more to those in C.&lt;/li&gt;
+&lt;li&gt;learning effects (change aversion, novelty seeking)&lt;/li&gt;
+&lt;li&gt;early adopters&lt;/li&gt;
+&lt;li&gt;Non-compliance: Those assicned to treatment may not actually experience the treatment.&lt;/li&gt;
+&lt;li&gt;Crossover: Those assigned to control might gain access to the treatment.&lt;/li&gt;
+&lt;li&gt;Treatment inhomogenaity: Some user segments might respond differently than others.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;treatment-units&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Treatment Units&lt;/h2&gt;
+&lt;p&gt;What is the unit at which we assign treatments?&lt;/p&gt;
+&lt;p&gt;Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.&lt;/p&gt;
+&lt;p&gt;Proxies for individuals include;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User ID or account – most clearly tied to a user, but&lt;/li&gt;
+&lt;li&gt;cookies – device and browser specific, so these could differ across a user’s browsers or devices.&lt;/li&gt;
+&lt;li&gt;IP address (device request return address) – device specific, so a user’s experience might differ across devices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a solution to SUTVA violations, but decreases sample size and power dramatically&lt;/li&gt;
+&lt;li&gt;cluster-based, stratified, serial, balanced, …&lt;/li&gt;
+&lt;li&gt;propensity scores and matching&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;generative-model-and-adjustment-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Generative Model and Adjustment Variables&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Specify the hypothesized generative process&lt;/li&gt;
+&lt;li&gt;Confounds&lt;/li&gt;
+&lt;li&gt;Precision&lt;/li&gt;
+&lt;li&gt;Neusance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;common-designs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Common Designs&lt;/h2&gt;
+&lt;p&gt;A/B testing&lt;/p&gt;
+&lt;p&gt;A/A testing to estimate variation&lt;/p&gt;
+&lt;p&gt;Variance reduction designs (paired designs, matching, …)&lt;/p&gt;
+&lt;p&gt;Bandits for limited data or maximizing an objective&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;maps samples (xi,yi) into treatment or control conditions.&lt;/li&gt;
+&lt;li&gt;randomized control trials ideal, not always possible&lt;/li&gt;
+&lt;li&gt;other options, …?&lt;/li&gt;
+&lt;li&gt;test assignment validity, could use propensity scores or maybe chi square.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Duration&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;learning effects: initial exploration or novelty seeking&lt;/li&gt;
+&lt;li&gt;learning effects: initial change aversion&lt;/li&gt;
+&lt;li&gt;power analysis for sample size&lt;/li&gt;
+&lt;li&gt;time to run to mitigate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!---
+# Experiment Design
+
+## Objective, demand, and value
+
+Objective is based on a metric (increase clickthrough or revenue per user). 
+
+Demand -- if adding a new user feature, how can demand for the feature be assessed? 
+
+value = benefit - cost. 
+
+Expected value helps with decisions about the size and duration of an experiment
+
+## Constructs, metrics, and scoping
+
+Once an objective is clear, the details of what can be measured need to be flushed out. 
+
+Metrics (fill in from udamy course section on metrics)
+
+Netflix metrics -- streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
+
+### User flow and target metrics
+
+Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states. 
+
+- number of clicks
+- time on page
+- ... 
+
+### Invariants
+
+Metrics that shouldn&#39;t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change. 
+
+### Confounding variables
+
+Mitigated by randomization. 
+
+### Precision variables
+
+Can also highlight features that one would want to match treatment and control on.
+
+Examples: 
+
+- number of posts
+- number of followers
+- visibility / impressions
+
+## Metric Validation
+
+User expreience research, retrospective analyses of past data or log files, ... . 
+
+## Conditions
+
+Define the experimental manipulations. 
+
+## Treatment Units
+
+What is the unit at which we assign treatments? 
+
+Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals. 
+
+Proxies for individuals include;
+
+- User ID or account -- most clearly tied to a user, but 
+- cookies -- device and browser specific, so these could differ across a user&#39;s browsers or devices.
+- IP address (device request return address) -- device specific, so a user&#39;s experience might differ across devices.
+
+In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).
+
+## Assignment Mechanism 
+
+The assignment mechanism samples members from a population and assignes them to conditions. 
+
+How are units assigned to treatments?
+
+Randomized control trials are the ideal, but many issues arise in online experimentation settings. 
+
+(look up desirable properties form causal inference notes)
+
+### Population 
+
+What group is being sampled from?
+
+### Cohorts
+
+Random sample, cluster-based, stratified, serial, balanced, ... 
+
+### Synthetic Control Groups
+
+Propensity matching
+
+### Limitations
+
+- Non-compliance: Those assicned to treatment may not actually experience the treatment. 
+- Crossover: Those assigned to control might gain access to the treatment. 
+- Treatment inhomogenaity: Some user segments might respond differently than others.
+
+# Implementation
+
+Batched, or real-time
+
+## Size
+
+power, sample size
+
+## Duration
+
+- learning effects: initial exploration or novelty seeking
+- learning effects: initial change aversion
+
+Solution: Consider running experiment past any initial observed effect.
+
+### Temporal variation
+
+### Optional stopping
+
+Why it&#39;s an issue for frequentists
+
+Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting
+
+Bayesian justifications
+
+p-values versus likelihood ratios
+
+## Estimands
+
+- Average treatment effect
+- Treatment on treated
+
+## Effiencicy or Variance Reduction
+
+- look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser. 
+
+e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = \beta_0 + \beta_1 Y_{t-1}$
+
+- get table for different tests of means from soc sci 10 notes.
+
+## Checking assignment integrety
+
+- Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets. 
+
+---&gt;
+&lt;/div&gt;
+&lt;div id=&#34;integrety-checks&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Integrety Checks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;check that those assigned to treatment received it&lt;/li&gt;
+&lt;li&gt;check that stratifications were implemented correctly&lt;/li&gt;
+&lt;li&gt;Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;maximum-likelihood-versus-bayes-estimators&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Maximum Likelihood versus Bayes’ Estimators&lt;/h2&gt;
+&lt;p&gt;likelihood is one term in Bayes’ Theorem&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;GLMs&lt;/h1&gt;
+&lt;p&gt;Again about the variance – this time it takes a form other than normal.&lt;/p&gt;
+&lt;p&gt;likelihood, score, fisher information, robust veriance, …?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;common-tests&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Common Tests&lt;/h1&gt;
+&lt;div id=&#34;t-test&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;t-test&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;different variance formulations.&lt;/li&gt;
+&lt;li&gt;one-sample&lt;/li&gt;
+&lt;li&gt;two independent sampels&lt;/li&gt;
+&lt;li&gt;two dependent samples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;anova&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;ANOVA&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linear-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linear Model&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;z-test-for-proportions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Z test for proportions&lt;/h2&gt;
+&lt;p&gt;Binary data&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;chi-square&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Chi-Square&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;logistic-regression&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Logistic Regression&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;likelihood-ratio-and-bayes-factors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Likelihood Ratio and Bayes Factors&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;always-valid-p-values-ck-optimizely-white-paper&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;always valid p-values (ck optimizely white paper)&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;different-estimands-for-ci&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Different Estimands For CI&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Average treatment effect&lt;/li&gt;
+&lt;li&gt;Treatment on treated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;more-on-variance&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;more on variance&lt;/h1&gt;
+&lt;div id=&#34;emperical-variance-estimation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Emperical Variance Estimation&lt;/h2&gt;
+&lt;p&gt;bootstrapping&lt;/p&gt;
+&lt;p&gt;A/A testing&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mixed-effects-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mixed Effects Models&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Maime’s consulting project? Other use cases?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;effiencicy-or-variance-reduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Effiencicy or Variance Reduction&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;get table for different tests of means from soc sci 10 notes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glms-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;GLMs&lt;/h2&gt;
+&lt;!--
+models for when the errors aren&#39;t assumed to be normally distributed
+---&gt;
+&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
+&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
+&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
+&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
+&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
+&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
+&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;causal-inference-methods&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Causal Inference Methods&lt;/h1&gt;
+&lt;p&gt;Good medium blog post &lt;a href=&#34;https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For each mention the assumptions and the model.&lt;/p&gt;
+&lt;div id=&#34;difference-in-differences&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Difference in Differences&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;causal-impact-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Causal Impact&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;synthetic-controls-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Synthetic Controls&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;propensity-score-matching-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Propensity Score Matching&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fixed-effects-regression-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Fixed Effects Regression&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instrumental-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Instrumental variables&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;regression-discontinuity-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Regression Discontinuity&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Pinterest</title>
       <link>/MacStrelioff/insightstudying/pinterest-deep-dive/</link>
       <pubDate>Mon, 14 Oct 2019 18:49:46 +0000</pubDate>
@@ -818,909 +1703,6 @@ Revenue
 &lt;li&gt;Ads clicked by location&lt;/li&gt;
 &lt;li&gt;Ad conversions (clicks and a microconversion on the next page)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Probability and Statistics</title>
-      <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Mon, 14 Oct 2019 11:36:24 +0000</pubDate>
-      
-      <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-foundations&#34;&gt;Probability Foundations&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-rules&#34;&gt;Probability Rules&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#probability-functions&#34;&gt;Probability Functions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#transformations-of-random-variables&#34;&gt;Transformations of Random Variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#expectation&#34;&gt;Expectation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#variance&#34;&gt;Variance&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#information-theory&#34;&gt;Information Theory&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#causal-inference&#34;&gt;Causal Inference&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#assumptions-and-key-terms&#34;&gt;Assumptions and key terms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#common-methods&#34;&gt;Common Methods&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#diff-in-diff&#34;&gt;Diff in Diff&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#causal-impact&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#synthetic-controls&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#iv-analysis&#34;&gt;IV Analysis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#regression-discontinuity&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#first-differences&#34;&gt;First differences&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#random-effects&#34;&gt;Random Effects&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#propensity-score-matching&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#microsoft-dowhy&#34;&gt;Microsoft DoWhy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#concerns&#34;&gt;Concerns&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#treatment-units&#34;&gt;Treatment Units&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#generative-model-and-adjustment-variables&#34;&gt;Generative Model and Adjustment Variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#common-designs&#34;&gt;Common Designs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#assignment-mechanism&#34;&gt;Assignment Mechanism&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#duration&#34;&gt;Duration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#integrety-checks&#34;&gt;Integrety Checks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#maximum-likelihood-versus-bayes-estimators&#34;&gt;Maximum Likelihood versus Bayes’ Estimators&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#glms&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#common-tests&#34;&gt;Common Tests&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#t-test&#34;&gt;t-test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#anova&#34;&gt;ANOVA&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-model&#34;&gt;Linear Model&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#z-test-for-proportions&#34;&gt;Z test for proportions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#chi-square&#34;&gt;Chi-Square&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#logistic-regression&#34;&gt;Logistic Regression&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#likelihood-ratio-and-bayes-factors&#34;&gt;Likelihood Ratio and Bayes Factors&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#always-valid-p-values-ck-optimizely-white-paper&#34;&gt;always valid p-values (ck optimizely white paper)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#different-estimands-for-ci&#34;&gt;Different Estimands For CI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#more-on-variance&#34;&gt;more on variance&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#emperical-variance-estimation&#34;&gt;Emperical Variance Estimation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#mixed-effects-models&#34;&gt;Mixed Effects Models&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#effiencicy-or-variance-reduction&#34;&gt;Effiencicy or Variance Reduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#glms-1&#34;&gt;GLMs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#causal-inference-methods&#34;&gt;Causal Inference Methods&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#difference-in-differences&#34;&gt;Difference in Differences&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#causal-impact-1&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#synthetic-controls-1&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#propensity-score-matching-1&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#fixed-effects-regression-1&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#instrumental-variables&#34;&gt;Instrumental variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#regression-discontinuity-1&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;!--
-Fermi problems (order of magnitude)
---&gt;
-&lt;!--
-- Make YouTube videos on each!
---&gt;
-&lt;!--
-# What is a probability, and how does that relate to statistics? 
-
-- Probabilities are commonly thought of in three ways; 
-
-1. Purely mathematical
-2. Magnitudes of belief
-3. Relative frequencies of infinate events
-
-I use probability theory to quantify beliefs and make decisions. 
-
-Logic, about truths of the universe. 
-By there is uncertainty in what we know, and uncertainty in our measurements and observations. Statistics as a field is concerned with specifying our knowledge of the laws of the universe and the uncertainty around them. They do this by applying probability theory. 
-
-Probability theory generalizes logic to situations where we aren&#39;t certain. And logic emerges from probability theory when we know things with certainty. 
-
-Hypothesis testing
-
-Statisticians use probability theory to decide on what is and isn&#39;t true
---&gt;
-&lt;div id=&#34;probability-foundations&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Probability Foundations&lt;/h1&gt;
-&lt;!--
-Events, event spaces, 
-combinatorics (permutations and combinations)
---&gt;
-&lt;p&gt;A random variable random variable is a variable with an unknown value, but known possible values. An event is an observed value of a random variable. An event space contains all possible values of the random variable. Probabilities are values assigned to the events in an event space (i.e. the possible values of a random variable) and represent how likely each event is relative to other events in the event space.&lt;/p&gt;
-&lt;p&gt;Here &lt;span class=&#34;math inline&#34;&gt;\(p(e)\)&lt;/span&gt; will be used to represent the probability of an event. Some special probabilities include the probability of any event in the event space, which is 1. And the probability of any event other than &lt;span class=&#34;math inline&#34;&gt;\(p(e)\)&lt;/span&gt;, known as the compliment of &lt;span class=&#34;math inline&#34;&gt;\(p(e)\)&lt;/span&gt;, denoted with &lt;span class=&#34;math inline&#34;&gt;\(p(\neg e)\)&lt;/span&gt;, is found by;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-p(\neg e) = 1 - p(e)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;div id=&#34;probability-rules&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Rules&lt;/h2&gt;
-&lt;p&gt;A joint event refers to two or more events occurring together. They are colloquially talked about as one event ‘and’ another event occurring together. More formally, joint events are called intersections (represented with the &lt;span class=&#34;math inline&#34;&gt;\(\cap\)&lt;/span&gt; symbol) between events. For events &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, the probability of their joint event will be represented with &lt;span class=&#34;math inline&#34;&gt;\(p(e_1 \cap e_2)\)&lt;/span&gt;. The probability of an intersection of events is the same regardless of which event is considered first;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-p(e_1 \cap e_2) = p(e_2 \cap e_1)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;For two events, &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, their intersection is found by; &lt;span class=&#34;math display&#34;&gt;\[
-p(e_1 \&amp;amp; e_2) = p(e_1\cap e_2) = p(e_1|e_2)p(e_2)
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(p(e_1|e_2)\)&lt;/span&gt; is a conditional probability, discussed in the next section.&lt;/p&gt;
-&lt;p&gt;Conditional events refer to one event, &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt;, after another event, &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, is known. &lt;span class=&#34;math inline&#34;&gt;\(p(e_1|e_2)\)&lt;/span&gt; represents the probability of &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; given, or after knowing, &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;. These can be defined by rearranging the multiplication rule as follows; &lt;span class=&#34;math display&#34;&gt;\[
-p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \Rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Noting that, by the reflexively of joint events and the definition of the multiplication rule, &lt;span class=&#34;math inline&#34;&gt;\(p(e_1 \cap e_2) = p(e_2 \cap e_1)= p(e_2 | e_1) p(e_1)\)&lt;/span&gt;, and so the above equation becomes; &lt;span class=&#34;math display&#34;&gt;\[
-p(e_1|e_2)=\frac{p(e_2 | e_1) p(e_1)}{p(e_2)}
-\]&lt;/span&gt; This equation is known as Bayes’ Theorem or Bayes’ Rule.&lt;/p&gt;
-&lt;p&gt;A union (represented with the &lt;span class=&#34;math inline&#34;&gt;\(\cup\)&lt;/span&gt; symbol) of events refers to at least one of multiple events occurring. For events, &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;, their union would include the probability that &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; occurs, the probability that or &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; occurs, and the probability that both &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; occur. Colloquially this is talked about the probability of &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; ‘or’ &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt;. Formally this is expressed and computed as; &lt;span class=&#34;math display&#34;&gt;\[
-p(e_1\text{ or } e_2) = p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Where &lt;span class=&#34;math inline&#34;&gt;\(p(e_1 \cap e_2)\)&lt;/span&gt; is a joint probability.&lt;/p&gt;
-&lt;p&gt;Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent, this would mean that; &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-p(e_1|e_2) &amp;amp;= p(e_1) \\
-p(e_2|e_1) &amp;amp;= p(e_2)
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;If &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent, then their joint probability simplifies as so; &lt;span class=&#34;math display&#34;&gt;\[
-p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = p(e_1)p(e_2)
-\]&lt;/span&gt; Where the last equality is only true if &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent (i.e. &lt;span class=&#34;math inline&#34;&gt;\(p(e_1|e_2)=p(e_1)\)&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;Then the probability of their union simplifies to; &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-p(e_1 \cup e_2) &amp;amp;= p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) \\
-&amp;amp;= p(e_1) + p(e_2) - p(e_1)p(e_2)
-\end{aligned}
-\]&lt;/span&gt; Where again, the last part of this equality is only true if &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are independent.&lt;/p&gt;
-&lt;p&gt;Events &lt;span class=&#34;math inline&#34;&gt;\(e_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(e_2\)&lt;/span&gt; are said to be mutually exclusive if the occurrence of either event precludes the occurrence of the other event. Formally mutual exclusivity means that; &lt;span class=&#34;math display&#34;&gt;\[
-p(e_1 | e_2) = 0 \text{ and } p(e_2 | e_1) = 0
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;If two events are mutually exclusive, then the probability of their joint event is; &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-p(e_1 \cap e_2) &amp;amp;= p(e_1|e_2)p(e_2) \\
-&amp;amp;= 0*p(e_2) \\
-&amp;amp;= 0
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;And the probability of their union simplifies to; &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-p(e_1 \cup e_2) &amp;amp;= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
-&amp;amp;= p(e_1) + p(e_2) - 0 \\
-&amp;amp;=p(e_1) + p(e_2)
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;!--
-## Practice Problems and Walkthroughs
-
-- link to my YouTube videos on these things
-
-Practice problems on the amoeba [here](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out) and  [here](https://www.quora.com/An-amoeba-has-a-75-chance-of-splitting-in-two-and-25-chance-of-dying-Is-there-an-intuitive-reason-why-the-probability-of-extinction-is-not-1).
---&gt;
-&lt;/div&gt;
-&lt;div id=&#34;probability-functions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Probability Functions&lt;/h2&gt;
-&lt;!--
-Many machine learning algorithms are different ways of estimating f(x)
---&gt;
-&lt;p&gt;Here I’ll describe the properties and use cases for probability functions and cumulative probability functions. Conventionally, use &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is used represent a probability function, and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; to represent a cumulative probability function. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; is commonly called a probability mass function (pmf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is discrete, and a probability density function (pdf) if &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is continuous. &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(F(x)\)&lt;/span&gt; are related through integration:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-f(x) &amp;amp;= \frac{d}{dx}F(x) \\
-F(x) &amp;amp;= \int_{-\infty}^{\infty} f(x) d_{x}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;For discrete variables, the probability function represents the probability that &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes a specific value &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(f(x) = p(X=x)\)&lt;/span&gt;. For continuous variables, the probability that the variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes any particular value is technically &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(p(X=x)=0\)&lt;/span&gt;. However, &lt;span class=&#34;math inline&#34;&gt;\(p(x)\)&lt;/span&gt; is still related to probability functions &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; through areas. For an arbitrarily small &lt;span class=&#34;math inline&#34;&gt;\(\epsilon\)&lt;/span&gt; the probability that &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; takes a value between &lt;span class=&#34;math inline&#34;&gt;\(x-\epsilon\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(x+\epsilon\)&lt;/span&gt; is the area of the distribution over that range;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-p( x - \epsilon&amp;lt; x &amp;lt; x+\epsilon) &amp;amp;= F(x+\epsilon) - F(x-\epsilon) \\
-&amp;amp;= \int_{-\infty}^{(x-+\epsilon)}f(x)d_{x} - \int_{-\infty}^{(x-\epsilon)}f(x)d_{x}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Probability functions have to satisfy a few conditions:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;transformations-of-random-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Transformations of Random Variables&lt;/h2&gt;
-&lt;p&gt;Given &lt;span class=&#34;math inline&#34;&gt;\(x\sim F_X(x)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y=g(x)\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-F_Y(y) = \begin{cases}
-F_X(g^{-1}(y)), &amp;amp; \text{ if g is increasing wrt x}\\
-1-F_X(g^{-1}(y)), &amp;amp; \text{ if g is decreasing wrt x}
-\end{cases}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;By the chain rule, the pdf is;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-f_Y(y)=\frac{d}{dy}F_y(y) = f_X(g^{-1}(y))\left| \frac{d}{dy} g^{-1}(y) \right|
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;A special case of this is the probability integral transformation;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-x&amp;amp;\sim F_X(x) \\
-Y&amp;amp;=F_X(x) \\
-P(Y\leq y) &amp;amp;= P(F_X(X)\leq y) \\
-&amp;amp;= P(F^{-1}_X(F_X^{-1}(X))\leq F_X^{-1}(y)) \\
-&amp;amp;= P(X \leq F_X^{-1}(y)) \\
-&amp;amp;= F_X(F_X^{-1}(y)) \\
-&amp;amp;= y
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;!--
-Transformations of variables!
---&gt;
-&lt;!--
-CDF transformation to convert from uniform into any random variable with a CDF
---&gt;
-&lt;!--
-Link to YouTube video on the circle problem
-- circle problem
---&gt;
-&lt;!--
-### Probability Distributions
-Make YouTube videos on each. 
-- 1) Walk through properties from Wikipedia!
-- 2) Walk through some simulations in Python!
---&gt;
-&lt;!--
-## Central limit theorem
-
-Sum of any random variable converges to normal distribution. 
-- show for binomial case, to justify Z test
---&gt;
-&lt;/div&gt;
-&lt;div id=&#34;expectation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Expectation&lt;/h2&gt;
-&lt;!--
-expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
---&gt;
-&lt;p&gt;For any functions of a randome variable, &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt;, the expectation of that function is;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;For discrete random variables, &lt;span class=&#34;math inline&#34;&gt;\(E(x)=\sum_xxp(x)\)&lt;/span&gt;. For continuous random variables, &lt;span class=&#34;math inline&#34;&gt;\(f(x)dx\)&lt;/span&gt; is conceptually &lt;span class=&#34;math inline&#34;&gt;\(p(x)\)&lt;/span&gt; since it is the area under an infinately small segment of the probability function if &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; represents the height and &lt;span class=&#34;math inline&#34;&gt;\(dx\)&lt;/span&gt; represents an infinately small width.&lt;/p&gt;
-&lt;p&gt;Expectation is a linear operator, so for constants &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(c\)&lt;/span&gt; and random variables &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;; &lt;span class=&#34;math inline&#34;&gt;\(E(ax+by+c) = aE(x)+bE(y)+c\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Expectation for joint random variables&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)d_{s}d_{t}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Marginalizing a distribution from a joint probability function (&lt;span class=&#34;math inline&#34;&gt;\(f(x,y)\)&lt;/span&gt;) or a conditional probability function (&lt;span class=&#34;math inline&#34;&gt;\(f(x|y)\)&lt;/span&gt;): &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-f_x(x)&amp;amp;=\int_yf_{x,y}(x,y)d_{y}\\
-&amp;amp;=\int_y f_{x|y}(x|y)f_y(y)d_{y}\\
-&amp;amp;=E_y(f(x|y))
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_total_expectation&#34;&gt;Law of total expectation, and rough proof&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E_{x}(x)&amp;amp;=E_{y}(E_{x|y}(x|y))\\
-&amp;amp;=\int_y\int_{x}xf_{x|y}(x|y)d_{x}f(y)d_{y} \\
-&amp;amp;=\int_{x}x\int_{y}f_{x|y}(x|y)f(y)d_{y}d_{x} \\
-&amp;amp;=\int_{x}xf(x)d_{x}\\
-&amp;amp;=E_{x}(x)
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The last steps reflect that the internal integral is just marginalizing across y; &lt;span class=&#34;math inline&#34;&gt;\(f_x(x)=\int_y f_{x|y}(x|y)f_y(y)d_{y}\)&lt;/span&gt;.&lt;/p&gt;
-&lt;!--
-Linear regression as a conditional expectation
-Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
-
-Conditional expectation 
-$$
-E(g(x)|Z)=\int_{-\infty}^{\infty}p(x|Z)g(x)dx
-$$
-
-in linear regression, the expectation of Y is the linear combination of X and B, since those are deterministic, and the only non-deterministic part, epsilon, has expectation 0. 
-
-- So the property that expectation propogates through sums leads to this result..
----&gt;
-&lt;/div&gt;
-&lt;div id=&#34;variance&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Variance&lt;/h2&gt;
-&lt;p&gt;Covariance and variance&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-Cov(X,Y)&amp;amp;=E_{x,y}((X-E_{x}(X))(Y-E_{y}(Y)))\\
-Var(X)&amp;amp;=Cov(X,X)=E_{x}((X-E_{x}(X))^2) \\
-&amp;amp;= E(X^2)-E(X)^2
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff&#34;&gt;Bias-Variance tradeoff&lt;/a&gt; decomposes the theoretical variance obtained when estimating a function &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt; with a model &lt;span class=&#34;math inline&#34;&gt;\(\hat{g}(x)\)&lt;/span&gt; into three components that can be used to motivated changes to the model. Specifically, the Bias-Variance tradeoff is a decomposition of the expected prediction error; &lt;span class=&#34;math inline&#34;&gt;\(g(x)-\hat{g}(x)\)&lt;/span&gt;. To see it’s relation to variance, first rearrange the variance equation above:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-Var(X)= E(X^2)-E(X)^2 \\
-\Rightarrow E(X^2) = Var(X)+E(X)^2 \\
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Then define the random variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; to be the errors of the model;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-E((g(x)-\hat{g}(x))^2) &amp;amp;= Var((g(x)-\hat{g}(x))^2)+E((g(x)-\hat{g}(x)))^2 \\
-&amp;amp;= (g(x)-E(\hat{g}(x)))^2 + E((E(\hat{g}(x))-\hat{g}(x))^2) + Var(g(x))\\
-&amp;amp;= Bias(\hat{g}(x))^2 + Var(\hat{g}(x)) + Var(g(x))
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Here bias represents the squared error between the true function &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt; and the expected model &lt;span class=&#34;math inline&#34;&gt;\(E(\hat{g}(x))\)&lt;/span&gt;. Variance represents the squared error between the expected model and the obtained model. And &lt;span class=&#34;math inline&#34;&gt;\(Var(g(x))\)&lt;/span&gt; represents the true noise or irreducible error in the process &lt;span class=&#34;math inline&#34;&gt;\(g(x)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Variance of linear combinations of random variables:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-Var(aX+bY+c)=a^2Var(X)+b^2Var(Y)+2abCov(X,Y)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Variance is also crucial for designing experiments, for example if &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; have different signs and &lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;, then the variance between is reduced because the covariance is subtracted off. This is a justification for within-participant designs, where &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; represents the first measurement, &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; represents a future measurement, &lt;span class=&#34;math inline&#34;&gt;\(a=-1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(b=1\)&lt;/span&gt; to reflect a difference comparing the second and first measurements (&lt;span class=&#34;math inline&#34;&gt;\(Y-X\)&lt;/span&gt;), and since the measurements come from the same person here, it is reasonable to assume they are correlated (&lt;span class=&#34;math inline&#34;&gt;\(Cov(X,Y)&amp;gt;0\)&lt;/span&gt;). In this case, &lt;span class=&#34;math inline&#34;&gt;\(Var(X,Y)=Var(X)+Var(Y)-Cov(X,Y)\)&lt;/span&gt;, which is not larger than the variance that would be obtained if the measurements were from independent samples.&lt;/p&gt;
-&lt;!--
-Confidence intervals, prediction intervals
---&gt;
-&lt;!--
-Variance of a function:
-$$
-\begin{aligned}
-Var(g(x)) &amp;= E((g(x)-E(g(x)))^2)\\
-&amp;\approx \left(\frac{d}{dx}g(E(x))\right)^2var(x) 
-\end{aligned}
-$$
---&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Law_of_total_variance&#34;&gt;Law of total variance&lt;/a&gt;: The variance of a variable &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; can be decomposed into the variation in the variable that remains when &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; is known or irreducible error (&lt;span class=&#34;math inline&#34;&gt;\(E(Var(X|Y))\)&lt;/span&gt;), and the variation that carries through from the uncertainty in the model estimation &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; (&lt;span class=&#34;math inline&#34;&gt;\(Var(E(X|Y)\)&lt;/span&gt;). &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-Var(X)&amp;amp;=E(Var(X|Y))+Var(E(X|Y))
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This arises in hierarchical models and prediction intervals.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-x               &amp;amp;\sim N(\mu,\sigma)\\
-E(x)            &amp;amp;=\mu\\
-Var(x)          &amp;amp;=\sigma^2\\
-\hat{\mu}_n     &amp;amp;\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)\\
-E(\hat{\mu}_n)  &amp;amp;=\mu\\
-Var(\hat{\mu}_n)&amp;amp;=\frac{\sigma^2}{n}\\
-E(x_{n+1})      &amp;amp;= E(E(x_{n+1}|\hat{\mu}_n))= E(\hat{\mu}_n)=\mu \\
-Var(x_{n+1})    &amp;amp;=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
-                &amp;amp;=\sigma^2+\frac{\sigma^2}{n}\\
-(100-\alpha)PI: &amp;amp; E(x_{n+1}|\hat{\mu}_n) \pm T_\alpha \sqrt{Var(x_{n+1})}\\
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;!--
-Expectation and variance are the foundation for decision making
-- value function v(x) that assigns values to the outcomes x
-- If you know the distribution and value function, then you can directly compare choices based on their expected value
---&gt;
-&lt;!--
-## Models as conditional expectations
-
-Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it&#39;s priors
---&gt;
-&lt;/div&gt;
-&lt;div id=&#34;information-theory&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Information Theory&lt;/h2&gt;
-&lt;p&gt;Information or Surprise is a measure of how unexpected an event was: &lt;span class=&#34;math display&#34;&gt;\[
-I(x)=-log(f(x))=log\left(\frac{1}{f(x)} \right)
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Entropy is the expected surprise – higher entropy relates to more uncertainty: &lt;span class=&#34;math display&#34;&gt;\[
-H(X)=E(I(x)) = E(-log(f(x)))  = \int_X f(x)I(x)dx = -\int_X f(x)log(f(x))d_x
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;K-L Divergance, or relative entropy, is the expected distance between distributions with respect to one of the distributions: &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-D_{KL}(f_{x}(x);f_{y}(x)) &amp;amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)d_x\\
-&amp;amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x))d_x \\
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Divergance is an important concept in machine learning, because it can be a loss function when we are estimating a distribution &lt;span class=&#34;math inline&#34;&gt;\(f(x)\)&lt;/span&gt; with a model &lt;span class=&#34;math inline&#34;&gt;\(\hat{f}(x)\)&lt;/span&gt;. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data that maximizes the divergance between the posterior and prior, i.e. the most informative data.&lt;/p&gt;
-&lt;p&gt;Mutual Information is the divergance from the joint distribution &lt;span class=&#34;math inline&#34;&gt;\(f_{x,y}(x,y)\)&lt;/span&gt; to the joint when independence is assumed &lt;span class=&#34;math inline&#34;&gt;\(f_x(x)f_y(y)\)&lt;/span&gt; – i.e. a measure of non-independence; &lt;span class=&#34;math display&#34;&gt;\[
-I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;causal-inference&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Causal Inference&lt;/h1&gt;
-&lt;p&gt;The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.&lt;/p&gt;
-&lt;p&gt;From this perspective, there is a treatment assignment &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; and an outcome of interest that depends on the treatment &lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;. Ideally, we would be able to compute the expected treatment effeoct for any individual &lt;span class=&#34;math inline&#34;&gt;\(E(Y(T=1)-Y(T=0))\)&lt;/span&gt;, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.&lt;/p&gt;
-&lt;p&gt;Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;CI video&lt;/a&gt; at 10:00.&lt;/p&gt;
-&lt;div id=&#34;assumptions-and-key-terms&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Assumptions and key terms&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp T_i | X_i\)&lt;/span&gt; Unconfoundedness: conditional on observations (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;), treatment (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;) are independent.&lt;/li&gt;
-&lt;li&gt;Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;common-methods&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Common Methods&lt;/h2&gt;
-&lt;p&gt;Some summarized in this &lt;a href=&#34;https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268&#34;&gt;Medium Post&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;diff-in-diff&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Diff in Diff&lt;/h3&gt;
-&lt;p&gt;Contexts and example ..&lt;/p&gt;
-&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Requires observed data on a control group pre and post treatment&lt;/li&gt;
-&lt;li&gt;Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.&lt;/li&gt;
-&lt;li&gt;Assumes the temporal dimension isn’t informative.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Model:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-I_{T}&amp;amp;:\text{Indicator for treatment group} \\
-I_{Post}&amp;amp;:\text{Indicator for post treatment} \\
-Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;causal-impact&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Causal Impact&lt;/h3&gt;
-&lt;p&gt;Causal impact was developed by Google, docs &lt;a href=&#34;https://google.github.io/CausalImpact/CausalImpact.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Want to estimate the counterfactual for an observed timeseries, pre and post treatment.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Requires other time series related to the target time series&lt;/li&gt;
-&lt;li&gt;Assumes the other time series are not influenced by the treatment, generally good candidates include; google trends time series, the weather, other countries or markets where no action was taken, unemployment indecies, stock prices, … .&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Model:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In pre period, train any kind of model to estimate the target time series as a function of the other time series. The model used in the Causal Impact package is a Bayesian structural time series model.&lt;/li&gt;
-&lt;li&gt;Google’s Causal Impact method uses Bayesian structural time series to construct a counterfactual group – an estimate of what the time series would have looked like if the treatment had not been assigned. The method is described in &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;this video&lt;/a&gt;. The method estimates a counterfactual using other related time series that were not influenced by the treatment.&lt;/li&gt;
-&lt;li&gt;BSTS uses spike and slab prior for feature selection.&lt;/li&gt;
-&lt;li&gt;In post period, use the model to estimate a counterfactual time series (i.e. synthetic control).&lt;/li&gt;
-&lt;li&gt;Independent Python implementation &lt;a href=&#34;https://github.com/tcassou/causal_impact&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Benefits:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Provides pointwise estimates of the causal effect over time, as well as a cumulative estimate (summing up the pointwise estimates)&lt;/li&gt;
-&lt;li&gt;Bayesian approach, provides credible intervals&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;synthetic-controls&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Synthetic Controls&lt;/h3&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Requires multiple related time series&lt;/li&gt;
-&lt;li&gt;Assumes a linear combination of the related time sereis is a good proxy for the counterfactual&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Model:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Regress target time series on related time series&lt;/li&gt;
-&lt;li&gt;Use estimates from this model as the counterfactual&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When to use vs causal impact:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The other time series are more conceptually identical - e.g. observed outcomes in untreated market segments subject to the same plausiable confounds – e.g. different nearby counties in a state.&lt;/li&gt;
-&lt;li&gt;Causal impact might be better if the time series are thought to be components of the target – stock price, unemployment, page impressions, google trends, … .&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;iv-analysis&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;IV Analysis&lt;/h3&gt;
-&lt;p&gt;More from &lt;a href=&#34;https://www.youtube.com/watch?v=NLgB2WGGKUw&#34;&gt;Ben Lambert&lt;/a&gt;, good explanation &lt;a href=&#34;https://www.youtube.com/watch?v=OWHCbEP56ms&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=cX5q_dKt6iU&#34;&gt;part II&lt;/a&gt;. Case study using quarter and years of education as &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt; in place of education as the instrument [here](&lt;a href=&#34;https://www.youtube.com/watch?v=pI9YGSJ2qPk&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=pI9YGSJ2qPk&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=WjcoHAJ4_Mc&#34;&gt;relation to 2SLS&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Mostly from Gelman chapter “Causal inference with more complicated observational designs” chapter from Gina.&lt;/p&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Goal is to find the causal effect of &lt;span class=&#34;math inline&#34;&gt;\(x\rightarrow y\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Issue: &lt;span class=&#34;math inline&#34;&gt;\(Cov(x,\epsilon)\neq 0\)&lt;/span&gt;, a feature is correlated to unobserved confounds, so &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}_{OLS}\)&lt;/span&gt; is unbiased and inconsistent.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Assumptions and Requirements:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;An instrument &lt;span class=&#34;math inline&#34;&gt;\(z\)&lt;/span&gt; is measured so it can be included in the model.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(z,x)\neq 0\)&lt;/span&gt;, the instrumental variable is related to &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(z,\epsilon)=0\)&lt;/span&gt;, the instrument is not correlated with unobserved confounds.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Model, 2 stage least squares:&lt;/p&gt;
-&lt;p&gt;Done to address bias in &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}_{OLS}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\hat{x}&amp;amp;=\gamma z + u \\
-\hat{y}&amp;amp;=\beta_{IV} \hat{x} + \epsilon \\
-\beta_{IV} &amp;amp;= (Z^TX)^{-1}Z^TY = \frac{Cov(Z,Y)}{Cov(Z,X)}
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Limitation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\beta_{IV}\)&lt;/span&gt; can still be biased, but is at least consistent (&lt;span class=&#34;math inline&#34;&gt;\(\beta_{IV}\overset{p}{\rightarrow} \beta\)&lt;/span&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This relates to the intent to treat (ITT) estimate, where the effect of assignment to the treatment group is consided &lt;span class=&#34;math inline&#34;&gt;\(Z\)&lt;/span&gt;, but the effect of actually being treated &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; may not be known or estimated.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;regression-discontinuity&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Regression Discontinuity&lt;/h3&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;p&gt;Some systematic mechanism forces a discontinuity in what would be expected to be a regression line.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;E.g. 1: Yelp rounds star ratings so that businesses close in underlying rating (4.49 and 4.5 stars) are assigned to different conditions (4 and 4.5 starts).&lt;/li&gt;
-&lt;li&gt;E.g. 2: Schools might filter on exam scores, so that students who are very similar in underlying ability or test score (1 point below the threshold vs at the threshold) might be assigned to different universities.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;fixed-effects-regression&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Fixed Effects Regression&lt;/h3&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Unobserved heterogineity &lt;span class=&#34;math inline&#34;&gt;\(\alpha_i\)&lt;/span&gt; that is related to features, &lt;span class=&#34;math inline&#34;&gt;\(Cov(\alpha_i,x_{i,t})\neq 0\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Issue: &lt;span class=&#34;math inline&#34;&gt;\(Cov(\alpha_i,x_{i,t})\neq 0\)&lt;/span&gt;, this implies that &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; isn’t consistent for &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;, i.e. the sampling distribution of &lt;span class=&#34;math inline&#34;&gt;\(\hat{\beta}\)&lt;/span&gt; doesn’t converge to &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Assumptions and Requirements:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Cov(x_{i,t},u_[i,t])=0\)&lt;/span&gt;, i.e. weak exogeniety&lt;/li&gt;
-&lt;li&gt;No perfect correlation between &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;These assumptions imply the fixed effects estimates (&lt;span class=&#34;math inline&#34;&gt;\(\beta_{FE}\)&lt;/span&gt;) are consistent.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Model, from &lt;a href=&#34;https://www.youtube.com/watch?v=sFvV9b1cGFc&#34;&gt;here&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;The procedure is to average over time to get &lt;span class=&#34;math inline&#34;&gt;\(\bar{y}_i\)&lt;/span&gt;, and subtract this off, taking advantage of &lt;span class=&#34;math inline&#34;&gt;\(\alpha_i=\bar{\alpha}_i\)&lt;/span&gt; where the later is averaged across time.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-\alpha_i &amp;amp;: \text{unobserved hetergenity} \\
-Cov(\alpha_i,x_{i,t}) &amp;amp;\neq 0 \\
-u_{i,t} &amp;amp;: \text{error} \\
-y_{i,t}&amp;amp;=\beta x_{i,t} + \alpha_i + u_{i,t}\\
-\bar{y}_{t}&amp;amp;=\beta \bar{x}_{i} + \bar{\alpha}_i + \bar{u}_{i} \\
-y_{i,t}-\bar{y}_{t}&amp;amp;=\beta_{FE} (x_{i,t}-\bar{x}_{i}) + (\alpha_i - \bar{\alpha}_i)+ u_{i,t} - \bar{u}_{i} \\
-&amp;amp;= \beta_{FE} (x_{i,t}-\bar{x}_{i}) + u_{i,t} - \bar{u}_{i} \\
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Limitations:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;removes anything that is constant over time, meaning effects of any time-constant variables can’t be estimated&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;first-differences&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;First differences&lt;/h3&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;similar to fixed effects, but less asymptotically efficient if there are serially uncorrelated errors &lt;a href=&#34;https://www.youtube.com/watch?v=G7WqK2o474Y&#34;&gt;see this vid&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;random-effects&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Random Effects&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=bQampZBzU9Q&#34;&gt;description in this video&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;p&gt;Assumptions and requirements:&lt;/p&gt;
-&lt;p&gt;Model:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;propensity-score-matching&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Propensity Score Matching&lt;/h3&gt;
-&lt;p&gt;Context:&lt;/p&gt;
-&lt;p&gt;Treatment assignment is non-random and might be related to the relationship between treatment and outcome. So you match people on their propensity to be assigned to treatment.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;microsoft-dowhy&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Microsoft DoWhy&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;see &lt;a href=&#34;https://github.com/microsoft/dowhy&#34;&gt;docs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Experiment Design&lt;/h1&gt;
-&lt;div id=&#34;foundations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Foundations&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Hypotheses&lt;/li&gt;
-&lt;li&gt;Treatment and control conditions&lt;/li&gt;
-&lt;li&gt;assumptions (including CI assumptions, SUTVA, …?)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;concerns&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Concerns&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;network effects: front-end, it could be from different interactions, back-end it could be from changes in algorithm behavior for units in C based on different behavior from units in T – e.g. if a new recommender for units in T influences them to watch more of x, then x may also get recommended more to those in C.&lt;/li&gt;
-&lt;li&gt;learning effects (change aversion, novelty seeking)&lt;/li&gt;
-&lt;li&gt;early adopters&lt;/li&gt;
-&lt;li&gt;Non-compliance: Those assicned to treatment may not actually experience the treatment.&lt;/li&gt;
-&lt;li&gt;Crossover: Those assigned to control might gain access to the treatment.&lt;/li&gt;
-&lt;li&gt;Treatment inhomogenaity: Some user segments might respond differently than others.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;treatment-units&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Treatment Units&lt;/h2&gt;
-&lt;p&gt;What is the unit at which we assign treatments?&lt;/p&gt;
-&lt;p&gt;Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals.&lt;/p&gt;
-&lt;p&gt;Proxies for individuals include;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;User ID or account – most clearly tied to a user, but&lt;/li&gt;
-&lt;li&gt;cookies – device and browser specific, so these could differ across a user’s browsers or devices.&lt;/li&gt;
-&lt;li&gt;IP address (device request return address) – device specific, so a user’s experience might differ across devices.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a solution to SUTVA violations, but decreases sample size and power dramatically&lt;/li&gt;
-&lt;li&gt;cluster-based, stratified, serial, balanced, …&lt;/li&gt;
-&lt;li&gt;propensity scores and matching&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;generative-model-and-adjustment-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Generative Model and Adjustment Variables&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Specify the hypothesized generative process&lt;/li&gt;
-&lt;li&gt;Confounds&lt;/li&gt;
-&lt;li&gt;Precision&lt;/li&gt;
-&lt;li&gt;Neusance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;common-designs&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Common Designs&lt;/h2&gt;
-&lt;p&gt;A/B testing&lt;/p&gt;
-&lt;p&gt;A/A testing to estimate variation&lt;/p&gt;
-&lt;p&gt;Variance reduction designs (paired designs, matching, …)&lt;/p&gt;
-&lt;p&gt;Bandits for limited data or maximizing an objective&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;assignment-mechanism&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Assignment Mechanism&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;maps samples (xi,yi) into treatment or control conditions.&lt;/li&gt;
-&lt;li&gt;randomized control trials ideal, not always possible&lt;/li&gt;
-&lt;li&gt;other options, …?&lt;/li&gt;
-&lt;li&gt;test assignment validity, could use propensity scores or maybe chi square.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;duration&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Duration&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;learning effects: initial exploration or novelty seeking&lt;/li&gt;
-&lt;li&gt;learning effects: initial change aversion&lt;/li&gt;
-&lt;li&gt;power analysis for sample size&lt;/li&gt;
-&lt;li&gt;time to run to mitigate&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!---
-# Experiment Design
-
-## Objective, demand, and value
-
-Objective is based on a metric (increase clickthrough or revenue per user). 
-
-Demand -- if adding a new user feature, how can demand for the feature be assessed? 
-
-value = benefit - cost. 
-
-Expected value helps with decisions about the size and duration of an experiment
-
-## Constructs, metrics, and scoping
-
-Once an objective is clear, the details of what can be measured need to be flushed out. 
-
-Metrics (fill in from udamy course section on metrics)
-
-Netflix metrics -- streaming hours, retention (users staying on platform), viewing for a title (e.g. effected by artwork -- but may be at the detrement of general viewing?) 
-
-### User flow and target metrics
-
-Think of the sequence of actions a user might take on the site. Experiments can target transtition probabilities between any user/platform states. 
-
-- number of clicks
-- time on page
-- ... 
-
-### Invariants
-
-Metrics that shouldn&#39;t change or differ across groups. For example, demographic variables should be the same across groups if the randomization or balancing worked properly. Also, many application performance metrics and business metrics should be unchanged, or monitored just in case they change. 
-
-### Confounding variables
-
-Mitigated by randomization. 
-
-### Precision variables
-
-Can also highlight features that one would want to match treatment and control on.
-
-Examples: 
-
-- number of posts
-- number of followers
-- visibility / impressions
-
-## Metric Validation
-
-User expreience research, retrospective analyses of past data or log files, ... . 
-
-## Conditions
-
-Define the experimental manipulations. 
-
-## Treatment Units
-
-What is the unit at which we assign treatments? 
-
-Ideally independent individuals, but online it is hard to know who is visiting a webpage, or crucial to keep experiences comparable across devices. Also, in networks, individuals are not independent and it is important to keep user experience consistent across connected individuals. 
-
-Proxies for individuals include;
-
-- User ID or account -- most clearly tied to a user, but 
-- cookies -- device and browser specific, so these could differ across a user&#39;s browsers or devices.
-- IP address (device request return address) -- device specific, so a user&#39;s experience might differ across devices.
-
-In networks, loosely connected clusters of individuals can be used as experimental units (see unofficial google data science blog post on this).
-
-## Assignment Mechanism 
-
-The assignment mechanism samples members from a population and assignes them to conditions. 
-
-How are units assigned to treatments?
-
-Randomized control trials are the ideal, but many issues arise in online experimentation settings. 
-
-(look up desirable properties form causal inference notes)
-
-### Population 
-
-What group is being sampled from?
-
-### Cohorts
-
-Random sample, cluster-based, stratified, serial, balanced, ... 
-
-### Synthetic Control Groups
-
-Propensity matching
-
-### Limitations
-
-- Non-compliance: Those assicned to treatment may not actually experience the treatment. 
-- Crossover: Those assigned to control might gain access to the treatment. 
-- Treatment inhomogenaity: Some user segments might respond differently than others.
-
-# Implementation
-
-Batched, or real-time
-
-## Size
-
-power, sample size
-
-## Duration
-
-- learning effects: initial exploration or novelty seeking
-- learning effects: initial change aversion
-
-Solution: Consider running experiment past any initial observed effect.
-
-### Temporal variation
-
-### Optional stopping
-
-Why it&#39;s an issue for frequentists
-
-Optamizely using a threshold on FDR from likelihood ratio tests in frequentist setting
-
-Bayesian justifications
-
-p-values versus likelihood ratios
-
-## Estimands
-
-- Average treatment effect
-- Treatment on treated
-
-## Effiencicy or Variance Reduction
-
-- look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser. 
-
-e.g. with a two sample t-test, $Y_t - Y_{t-1} = \beta_0$, versus a model $Y_t = \beta_0 + \beta_1 Y_{t-1}$
-
-- get table for different tests of means from soc sci 10 notes.
-
-## Checking assignment integrety
-
-- Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets. 
-
----&gt;
-&lt;/div&gt;
-&lt;div id=&#34;integrety-checks&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Integrety Checks&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;check that those assigned to treatment received it&lt;/li&gt;
-&lt;li&gt;check that stratifications were implemented correctly&lt;/li&gt;
-&lt;li&gt;Check demographics across buckets, if randomization worked then demographics should be approximately equally represented in the buckets.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;maximum-likelihood-versus-bayes-estimators&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Maximum Likelihood versus Bayes’ Estimators&lt;/h2&gt;
-&lt;p&gt;likelihood is one term in Bayes’ Theorem&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;GLMs&lt;/h1&gt;
-&lt;p&gt;Again about the variance – this time it takes a form other than normal.&lt;/p&gt;
-&lt;p&gt;likelihood, score, fisher information, robust veriance, …?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;common-tests&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Common Tests&lt;/h1&gt;
-&lt;div id=&#34;t-test&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;t-test&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;different variance formulations.&lt;/li&gt;
-&lt;li&gt;one-sample&lt;/li&gt;
-&lt;li&gt;two independent sampels&lt;/li&gt;
-&lt;li&gt;two dependent samples&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;anova&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;ANOVA&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;linear-model&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Linear Model&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;z-test-for-proportions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Z test for proportions&lt;/h2&gt;
-&lt;p&gt;Binary data&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;chi-square&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Chi-Square&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;logistic-regression&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Logistic Regression&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;likelihood-ratio-and-bayes-factors&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Likelihood Ratio and Bayes Factors&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;always-valid-p-values-ck-optimizely-white-paper&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;always valid p-values (ck optimizely white paper)&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;different-estimands-for-ci&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Different Estimands For CI&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Average treatment effect&lt;/li&gt;
-&lt;li&gt;Treatment on treated&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;more-on-variance&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;more on variance&lt;/h1&gt;
-&lt;div id=&#34;emperical-variance-estimation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Emperical Variance Estimation&lt;/h2&gt;
-&lt;p&gt;bootstrapping&lt;/p&gt;
-&lt;p&gt;A/A testing&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;mixed-effects-models&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Mixed Effects Models&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Maime’s consulting project? Other use cases?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;effiencicy-or-variance-reduction&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Effiencicy or Variance Reduction&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;look up variance reduction in A/B tests, a common method might be to incorporate precision variables like demographic data or user data such as device or browser.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;e.g. with a two sample t-test, &lt;span class=&#34;math inline&#34;&gt;\(Y_t - Y_{t-1} = \beta_0\)&lt;/span&gt;, versus a model &lt;span class=&#34;math inline&#34;&gt;\(Y_t = \beta_0 + \beta_1 Y_{t-1}\)&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;get table for different tests of means from soc sci 10 notes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;glms-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;GLMs&lt;/h2&gt;
-&lt;!--
-models for when the errors aren&#39;t assumed to be normally distributed
----&gt;
-&lt;p&gt;Stats: descriptive, R-squared, chi-squared;&lt;/p&gt;
-&lt;p&gt;Probability: distributions, CLT, sampling distributions, p-value,&lt;/p&gt;
-&lt;p&gt;Stats: k-s, Q-Q plot, hypothesis testing, experimentation;&lt;/p&gt;
-&lt;p&gt;Probability: Bayes, bootstrap&lt;/p&gt;
-&lt;p&gt;Probability: maximum likelihood estimation; time series analysis (ARIMA models), granger causality&lt;/p&gt;
-&lt;p&gt;Dynamic experimentation (multi-armed bandits)&lt;/p&gt;
-&lt;p&gt;Unit testing; EDA visualization (seaborn, Plotly, Bokeh)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;causal-inference-methods&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Causal Inference Methods&lt;/h1&gt;
-&lt;p&gt;Good medium blog post &lt;a href=&#34;https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;For each mention the assumptions and the model.&lt;/p&gt;
-&lt;div id=&#34;difference-in-differences&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Difference in Differences&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;causal-impact-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Causal Impact&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;synthetic-controls-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Synthetic Controls&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;propensity-score-matching-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Propensity Score Matching&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;fixed-effects-regression-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Fixed Effects Regression&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;instrumental-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Instrumental variables&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;regression-discontinuity-1&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Regression Discontinuity&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

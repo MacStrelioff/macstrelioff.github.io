@@ -139,9 +139,9 @@
   <meta property="og:description" content="Probability Foundations Probability Rules Probability Functions Transformations of Random Variables Expectation Variance Information Theory  Causal Inference Assumptions and key terms Common Methods Diff in Diff Causal Impact Synthetic Controls IV Analysis Regression Discontinuity Fixed Effects Regression First differences Random Effects Propensity Score Matching Microsoft DoWhy   Experiment Design Foundations Concerns Treatment Units Generative Model and Adjustment Variables Common Designs Assignment Mechanism Duration Integrety Checks Maximum Likelihood versus Bayes’ Estimators  GLMs Common Tests t-test ANOVA Linear Model Z test for proportions Chi-Square Logistic Regression Likelihood Ratio and Bayes Factors always valid p-values (ck optimizely white paper)  Different Estimands For CI more on variance Emperical Variance Estimation Mixed Effects Models Effiencicy or Variance Reduction GLMs  Causal Inference Methods Difference in Differences Causal Impact Synthetic Controls Propensity Score Matching Fixed Effects Regression Instrumental variables Regression Discontinuity    Probability Foundations A random variable random variable is a variable with an unknown value, but known possible values."><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-10-14T11:36:24&#43;00:00">
+  <meta property="article:published_time" content="2019-10-16T18:28:29&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-10-14T11:36:24&#43;00:00">
+  <meta property="article:modified_time" content="2019-10-16T18:28:29&#43;00:00">
   
 
   
@@ -354,8 +354,8 @@
 
 
 
-<meta content="2019-10-14 11:36:24 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-10-14 11:36:24 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-10-16 18:28:29 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-10-16 18:28:29 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -368,7 +368,7 @@
     
       
     
-    <time>Oct 14, 2019</time>
+    <time>Oct 16, 2019</time>
   </span>
   
 
@@ -675,12 +675,7 @@ P(Y\leq y) &amp;= P(F_X(X)\leq y) \\
 &amp;= y
 \end{aligned}
 \]</span></p>
-<!--
-Transformations of variables!
--->
-<!--
-CDF transformation to convert from uniform into any random variable with a CDF
--->
+<p>Which shows the relationship between a uniform random variable and the CDF of any other random variable.</p>
 <!--
 Link to YouTube video on the circle problem
 - circle problem
@@ -703,7 +698,7 @@ Sum of any random variable converges to normal distribution.
 <!--
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
 -->
-<p>For any functions of a randome variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
+<p>For any functions of a random variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
 <p><span class="math display">\[
 E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
 \]</span></p>
@@ -731,19 +726,6 @@ E_{x}(x)&amp;=E_{y}(E_{x|y}(x|y))\\
 \end{aligned}
 \]</span></p>
 <p>The last steps reflect that the internal integral is just marginalizing across y; <span class="math inline">\(f_x(x)=\int_y f_{x|y}(x|y)f_y(y)d_{y}\)</span>.</p>
-<!--
-Linear regression as a conditional expectation
-Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
-
-Conditional expectation 
-$$
-E(g(x)|Z)=\int_{-\infty}^{\infty}p(x|Z)g(x)dx
-$$
-
-in linear regression, the expectation of Y is the linear combination of X and B, since those are deterministic, and the only non-deterministic part, epsilon, has expectation 0. 
-
-- So the property that expectation propogates through sums leads to this result..
---->
 </div>
 <div id="variance" class="section level2">
 <h2>Variance</h2>
@@ -1486,15 +1468,8 @@ models for when the errors aren't assumed to be normally distributed
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/MacStrelioff/insightstudying/pinterest-deep-dive/" rel="next">Pinterest</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/MacStrelioff/insightstudying/business-sense/" rel="prev">Product Sense</a>
+    <a href="/MacStrelioff/insightstudying/pinterest-deep-dive/" rel="prev">Pinterest</a>
   </div>
   
 </div>

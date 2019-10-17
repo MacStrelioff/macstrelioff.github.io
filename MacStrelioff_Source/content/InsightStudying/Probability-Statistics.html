@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-10-14 11:36:24"
+date: "2019-10-16 18:28:29"
 math: true
 output:
   blogdown::html_page:
@@ -232,12 +232,7 @@ P(Y\leq y) &amp;= P(F_X(X)\leq y) \\
 &amp;= y
 \end{aligned}
 \]</span></p>
-<!--
-Transformations of variables!
--->
-<!--
-CDF transformation to convert from uniform into any random variable with a CDF
--->
+<p>Which shows the relationship between a uniform random variable and the CDF of any other random variable.</p>
 <!--
 Link to YouTube video on the circle problem
 - circle problem
@@ -260,7 +255,7 @@ Sum of any random variable converges to normal distribution.
 <!--
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
 -->
-<p>For any functions of a randome variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
+<p>For any functions of a random variable, <span class="math inline">\(g(x)\)</span>, the expectation of that function is;</p>
 <p><span class="math display">\[
 E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
 \]</span></p>
@@ -288,19 +283,6 @@ E_{x}(x)&amp;=E_{y}(E_{x|y}(x|y))\\
 \end{aligned}
 \]</span></p>
 <p>The last steps reflect that the internal integral is just marginalizing across y; <span class="math inline">\(f_x(x)=\int_y f_{x|y}(x|y)f_y(y)d_{y}\)</span>.</p>
-<!--
-Linear regression as a conditional expectation
-Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
-
-Conditional expectation 
-$$
-E(g(x)|Z)=\int_{-\infty}^{\infty}p(x|Z)g(x)dx
-$$
-
-in linear regression, the expectation of Y is the linear combination of X and B, since those are deterministic, and the only non-deterministic part, epsilon, has expectation 0. 
-
-- So the property that expectation propogates through sums leads to this result..
---->
 </div>
 <div id="variance" class="section level2">
 <h2>Variance</h2>

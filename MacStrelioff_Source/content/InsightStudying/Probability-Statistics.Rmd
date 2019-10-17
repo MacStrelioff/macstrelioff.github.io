@@ -222,14 +222,7 @@ P(Y\leq y) &= P(F_X(X)\leq y) \\
 \end{aligned}
 $$
 
-
-<!--
-Transformations of variables!
--->
-
-<!--
-CDF transformation to convert from uniform into any random variable with a CDF
--->
+Which shows the relationship between a uniform random variable and the CDF of any other random variable. 
 
 <!--
 Link to YouTube video on the circle problem
@@ -256,7 +249,7 @@ Sum of any random variable converges to normal distribution.
 expectation, variance, conditional or iterated expectations, law of total variance, variance of multiple variables
 -->
 
-For any functions of a randome variable, $g(x)$, the expectation of that function is; 
+For any functions of a random variable, $g(x)$, the expectation of that function is; 
 
 $$
 E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
@@ -294,21 +287,6 @@ E_{x}(x)&=E_{y}(E_{x|y}(x|y))\\
 $$
 
 The last steps reflect that the internal integral is just marginalizing across y; $f_x(x)=\int_y f_{x|y}(x|y)f_y(y)d_{y}$.
-
-<!--
-Linear regression as a conditional expectation
-Could show a simple figure with Y~1 and Y~X as example of expectation versus conditional expectation
-
-Conditional expectation 
-$$
-E(g(x)|Z)=\int_{-\infty}^{\infty}p(x|Z)g(x)dx
-$$
-
-in linear regression, the expectation of Y is the linear combination of X and B, since those are deterministic, and the only non-deterministic part, epsilon, has expectation 0. 
-
-- So the property that expectation propogates through sums leads to this result..
---->
-
 
 ## Variance
 
