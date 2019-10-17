@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Wed, 16 Oct 2019 18:28:29 +0000</pubDate>
+      <pubDate>Thu, 17 Oct 2019 12:47:05 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -54,6 +54,7 @@
 &lt;li&gt;&lt;a href=&#34;#information-theory&#34;&gt;Information Theory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-inference&#34;&gt;Causal Inference&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#framework&#34;&gt;Framework&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#assumptions-and-key-terms&#34;&gt;Assumptions and key terms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#common-methods&#34;&gt;Common Methods&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#diff-in-diff&#34;&gt;Diff in Diff&lt;/a&gt;&lt;/li&gt;
@@ -67,6 +68,11 @@
 &lt;li&gt;&lt;a href=&#34;#propensity-score-matching&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#microsoft-dowhy&#34;&gt;Microsoft DoWhy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#efficient-inference&#34;&gt;Efficient Inference&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#efficient-sampling&#34;&gt;Efficient Sampling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#efficient-designs&#34;&gt;Efficient Designs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#efficient-models&#34;&gt;Efficient Models&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#experiment-design&#34;&gt;Experiment Design&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#foundations&#34;&gt;Foundations&lt;/a&gt;&lt;/li&gt;
@@ -411,10 +417,36 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 &lt;p&gt;The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.&lt;/p&gt;
 &lt;p&gt;From this perspective, there is a treatment assignment &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt; and an outcome of interest that depends on the treatment &lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;. Ideally, we would be able to compute the expected treatment effeoct for any individual &lt;span class=&#34;math inline&#34;&gt;\(E(Y(T=1)-Y(T=0))\)&lt;/span&gt;, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.&lt;/p&gt;
 &lt;p&gt;Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes &lt;a href=&#34;https://www.youtube.com/watch?v=GTgZfCltMm8&#34;&gt;CI video&lt;/a&gt; at 10:00.&lt;/p&gt;
+&lt;div id=&#34;framework&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Framework&lt;/h2&gt;
+&lt;p&gt;The general setting I’ll refer to a causal graph where individuals &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; are assigned to a particular condition indicated with &lt;span class=&#34;math inline&#34;&gt;\(Z_i\)&lt;/span&gt;, they experience a condition indicated by &lt;span class=&#34;math inline&#34;&gt;\(W_i\)&lt;/span&gt;, and an observed outcome for a level of the assigned and experienced condition &lt;span class=&#34;math inline&#34;&gt;\(Y_i(Z_i,W_i)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
+Z_i &amp;amp;= \begin{cases}
+1, &amp;amp; \text{Assigned to treatment} \\
+0 &amp;amp; \text{Assigned to control}
+\end{cases} \\
+W_i &amp;amp;= \begin{cases}
+1, &amp;amp; \text{Experienced treatment} \\
+0 &amp;amp; \text{Experienced control}
+\end{cases} \\
+Y_i(Z_i,W_i) &amp;amp;= \begin{cases}
+Y_i(0,0), &amp;amp; \text{Outcome when assigned C and experienced C}\\
+Y_i(0,1), &amp;amp; \text{Outcome when assigned C and experienced T} \\
+Y_i(1,0), &amp;amp; \text{Outcome when assigned T and experienced C} \\
+Y_i(1,1)  &amp;amp; \text{Outcome when assigned T and experienced T} 
+\end{cases} \\
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The causal craph is;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;assumptions-and-key-terms&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Assumptions and key terms&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp T_i | X_i\)&lt;/span&gt; Unconfoundedness: conditional on observations (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;), treatment (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;) are independent.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp T_i | X_i\)&lt;/span&gt; Unconfoundedness: conditional on observed covariates (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;), treatment (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;) are independent.&lt;/li&gt;
 &lt;li&gt;Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -579,6 +611,38 @@ y_{i,t}-\bar{y}_{t}&amp;amp;=\beta_{FE} (x_{i,t}-\bar{x}_{i}) + (\alpha_i - \bar
 &lt;li&gt;see &lt;a href=&#34;https://github.com/microsoft/dowhy&#34;&gt;docs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;efficient-inference&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Efficient Inference&lt;/h1&gt;
+&lt;p&gt;More efficient studies require fewer resources (time, data) to reach a conclusion.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Methods to reduce variance,&lt;/li&gt;
+&lt;li&gt;Assessing the variance of estimators&lt;/li&gt;
+&lt;li&gt;Efficient models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;efficient-sampling&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Efficient Sampling&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Assigning at a point proximal to the experimental manipulation (see blogs in pinterest deep dive)&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;efficient-designs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Efficient Designs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Independent samples&lt;/li&gt;
+&lt;li&gt;matching&lt;/li&gt;
+&lt;li&gt;repeated measures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;efficient-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Efficient Models&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Precision variables&lt;/li&gt;
+&lt;li&gt;Estimands&lt;/li&gt;
+&lt;li&gt;Wald test vs LRT vs Bayes vs Score test&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;experiment-design&#34; class=&#34;section level1&#34;&gt;

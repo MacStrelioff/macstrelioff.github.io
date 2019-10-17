@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-10-16 18:28:29"
+date: "2019-10-17 12:47:05"
 math: true
 output:
   blogdown::html_page:
@@ -26,6 +26,7 @@ linktitle: Probability and Statistics
 <li><a href="#information-theory">Information Theory</a></li>
 </ul></li>
 <li><a href="#causal-inference">Causal Inference</a><ul>
+<li><a href="#framework">Framework</a></li>
 <li><a href="#assumptions-and-key-terms">Assumptions and key terms</a></li>
 <li><a href="#common-methods">Common Methods</a><ul>
 <li><a href="#diff-in-diff">Diff in Diff</a></li>
@@ -39,6 +40,11 @@ linktitle: Probability and Statistics
 <li><a href="#propensity-score-matching">Propensity Score Matching</a></li>
 <li><a href="#microsoft-dowhy">Microsoft DoWhy</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#efficient-inference">Efficient Inference</a><ul>
+<li><a href="#efficient-sampling">Efficient Sampling</a></li>
+<li><a href="#efficient-designs">Efficient Designs</a></li>
+<li><a href="#efficient-models">Efficient Models</a></li>
 </ul></li>
 <li><a href="#experiment-design">Experiment Design</a><ul>
 <li><a href="#foundations">Foundations</a></li>
@@ -383,10 +389,36 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <p>The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.</p>
 <p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y(T=1)-Y(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
 <p>Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">CI video</a> at 10:00.</p>
+<div id="framework" class="section level2">
+<h2>Framework</h2>
+<p>The general setting I’ll refer to a causal graph where individuals <span class="math inline">\(i\)</span> are assigned to a particular condition indicated with <span class="math inline">\(Z_i\)</span>, they experience a condition indicated by <span class="math inline">\(W_i\)</span>, and an observed outcome for a level of the assigned and experienced condition <span class="math inline">\(Y_i(Z_i,W_i)\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+Z_i &amp;= \begin{cases}
+1, &amp; \text{Assigned to treatment} \\
+0 &amp; \text{Assigned to control}
+\end{cases} \\
+W_i &amp;= \begin{cases}
+1, &amp; \text{Experienced treatment} \\
+0 &amp; \text{Experienced control}
+\end{cases} \\
+Y_i(Z_i,W_i) &amp;= \begin{cases}
+Y_i(0,0), &amp; \text{Outcome when assigned C and experienced C}\\
+Y_i(0,1), &amp; \text{Outcome when assigned C and experienced T} \\
+Y_i(1,0), &amp; \text{Outcome when assigned T and experienced C} \\
+Y_i(1,1)  &amp; \text{Outcome when assigned T and experienced T} 
+\end{cases} \\
+\end{aligned}
+\]</span></p>
+<p>The causal craph is;</p>
+<p><span class="math display">\[
+Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
+\]</span></p>
+</div>
 <div id="assumptions-and-key-terms" class="section level2">
 <h2>Assumptions and key terms</h2>
 <ul>
-<li><span class="math inline">\(Y_i(0),Y_i(1) \perp T_i | X_i\)</span> Unconfoundedness: conditional on observations (<span class="math inline">\(X\)</span>), treatment (<span class="math inline">\(T\)</span>) and potential outcomes (<span class="math inline">\(Y(T)\)</span>) are independent.</li>
+<li><span class="math inline">\(Y_i(0),Y_i(1) \perp T_i | X_i\)</span> Unconfoundedness: conditional on observed covariates (<span class="math inline">\(X\)</span>), treatment (<span class="math inline">\(T\)</span>) and potential outcomes (<span class="math inline">\(Y(T)\)</span>) are independent.</li>
 <li>Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.</li>
 </ul>
 </div>
@@ -551,6 +583,38 @@ y_{i,t}-\bar{y}_{t}&amp;=\beta_{FE} (x_{i,t}-\bar{x}_{i}) + (\alpha_i - \bar{\al
 <li>see <a href="https://github.com/microsoft/dowhy">docs</a></li>
 </ul>
 </div>
+</div>
+</div>
+<div id="efficient-inference" class="section level1">
+<h1>Efficient Inference</h1>
+<p>More efficient studies require fewer resources (time, data) to reach a conclusion.</p>
+<ul>
+<li>Methods to reduce variance,</li>
+<li>Assessing the variance of estimators</li>
+<li>Efficient models</li>
+</ul>
+<div id="efficient-sampling" class="section level2">
+<h2>Efficient Sampling</h2>
+<ul>
+<li>Assigning at a point proximal to the experimental manipulation (see blogs in pinterest deep dive)</li>
+<li>…</li>
+</ul>
+</div>
+<div id="efficient-designs" class="section level2">
+<h2>Efficient Designs</h2>
+<ul>
+<li>Independent samples</li>
+<li>matching</li>
+<li>repeated measures</li>
+</ul>
+</div>
+<div id="efficient-models" class="section level2">
+<h2>Efficient Models</h2>
+<ul>
+<li>Precision variables</li>
+<li>Estimands</li>
+<li>Wald test vs LRT vs Bayes vs Score test</li>
+</ul>
 </div>
 </div>
 <div id="experiment-design" class="section level1">

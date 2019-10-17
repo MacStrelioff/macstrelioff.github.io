@@ -414,9 +414,38 @@ From this perspective, there is a treatment assignment $T$ and an outcome of int
 
 Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes [CI video](https://www.youtube.com/watch?v=GTgZfCltMm8) at 10:00. 
 
+## Framework 
+
+The general setting I'll refer to a causal graph where individuals $i$ are assigned to a particular condition indicated with $Z_i$, they experience a condition indicated by $W_i$, and an observed outcome for a level of the assigned and experienced condition $Y_i(Z_i,W_i)$. 
+
+$$
+\begin{aligned}
+Z_i &= \begin{cases}
+1, & \text{Assigned to treatment} \\
+0 & \text{Assigned to control}
+\end{cases} \\
+W_i &= \begin{cases}
+1, & \text{Experienced treatment} \\
+0 & \text{Experienced control}
+\end{cases} \\
+Y_i(Z_i,W_i) &= \begin{cases}
+Y_i(0,0), & \text{Outcome when assigned C and experienced C}\\
+Y_i(0,1), & \text{Outcome when assigned C and experienced T} \\
+Y_i(1,0), & \text{Outcome when assigned T and experienced C} \\
+Y_i(1,1)  & \text{Outcome when assigned T and experienced T} 
+\end{cases} \\
+\end{aligned}
+$$
+
+The causal craph is; 
+
+$$
+Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
+$$
+
 ## Assumptions and key terms
 
-- $Y_i(0),Y_i(1) \perp T_i | X_i$ Unconfoundedness: conditional on observations ($X$), treatment ($T$) and potential outcomes ($Y(T)$) are independent. 
+- $Y_i(0),Y_i(1) \perp T_i | X_i$ Unconfoundedness: conditional on observed covariates ($X$), treatment ($T$) and potential outcomes ($Y(T)$) are independent. 
 - Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds. 
 
 ## Common Methods
@@ -426,8 +455,6 @@ Some summarized in this [Medium Post](https://towardsdatascience.com/causal-infe
 ### Diff in Diff
 
 Contexts and example ..
-
-
 
 Assumptions and requirements: 
 
@@ -595,6 +622,45 @@ Treatment assignment is non-random and might be related to the relationship betw
 ### Microsoft DoWhy 
 
 - see [docs](https://github.com/microsoft/dowhy)
+
+
+# Efficient Inference
+
+More efficient studies require fewer resources (time, data) to reach a conclusion. 
+
+- Methods to reduce variance, 
+- Assessing the variance of estimators
+- Efficient models
+
+## Efficient Sampling
+
+- Assigning at a point proximal to the experimental manipulation (see blogs in pinterest deep dive)
+- ...
+
+## Efficient Designs
+
+- Independent samples
+- matching
+- repeated measures
+
+## Efficient Models
+
+- Precision variables
+- Estimands
+- Wald test vs LRT vs Bayes vs Score test
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Experiment Design
 
