@@ -341,7 +341,7 @@ plt.plot(tmpx,tmpy,color=[.7,0,0,1],linewidth=3,label='Exponential Density');
 plt.legend();
 ```
 
-Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviaion and mean of the observed intervals.
+Based on the relative heights of the kernel density and the exponential density, there seem to be more short intervals, fewer moderate length intervals, and more long intervals relative to the exponential distribution. The mean and standard deviation of an exponential distribution should be the same value. Below I check the standard deviation and mean of the observed intervals.
 
 ```{python}
 # check standard deviation
@@ -432,7 +432,7 @@ p(c|s,\alpha,\beta) &= \int_\theta p(c|\theta)p(\theta|s,\alpha,\beta)d\theta \\
 \end{aligned} 
 $$
 
-Since a Poisson Process assumes that no more than one event can occur in an interval, intervals can be treated as discrete Bernoulli trials in which an event either occurs or does not occur. In this discrete settng, the distribution of the count of intervals with an event $k$ for a given number of intervals without the event $r$ and a probability of the event in each interval $p$ will follow a negative binomial distribution; 
+Since a Poisson Process assumes that no more than one event can occur in an interval, intervals can be treated as discrete Bernoulli trials in which an event either occurs or does not occur. In this discrete setting, the distribution of the count of intervals with an event $k$ for a given number of intervals without the event $r$ and a probability of the event in each interval $p$ will follow a negative binomial distribution; 
 
 $$
 \begin{aligned}

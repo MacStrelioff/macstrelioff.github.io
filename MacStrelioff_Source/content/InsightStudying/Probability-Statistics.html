@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-10-17 12:47:05"
+date: "2019-10-17 14:40:12"
 math: true
 output:
   blogdown::html_page:
@@ -24,10 +24,11 @@ linktitle: Probability and Statistics
 <li><a href="#expectation">Expectation</a></li>
 <li><a href="#variance">Variance</a></li>
 <li><a href="#information-theory">Information Theory</a></li>
+<li><a href="#causal-graphs">Causal Graphs</a></li>
 </ul></li>
 <li><a href="#causal-inference">Causal Inference</a><ul>
 <li><a href="#framework">Framework</a></li>
-<li><a href="#assumptions-and-key-terms">Assumptions and key terms</a></li>
+<li><a href="#key-assumptions">Key Assumptions</a></li>
 <li><a href="#common-methods">Common Methods</a><ul>
 <li><a href="#diff-in-diff">Diff in Diff</a></li>
 <li><a href="#causal-impact">Causal Impact</a></li>
@@ -383,6 +384,12 @@ D_{KL}(f_{x}(x);f_{y}(x)) &amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}
 I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
 \]</span></p>
 </div>
+<div id="causal-graphs" class="section level2">
+<h2>Causal Graphs</h2>
+<ul>
+<li>Add some info from Judeal Pearl papers relevant to experimentation and inference?</li>
+</ul>
+</div>
 </div>
 <div id="causal-inference" class="section level1">
 <h1>Causal Inference</h1>
@@ -392,6 +399,11 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <div id="framework" class="section level2">
 <h2>Framework</h2>
 <p>The general setting I’ll refer to a causal graph where individuals <span class="math inline">\(i\)</span> are assigned to a particular condition indicated with <span class="math inline">\(Z_i\)</span>, they experience a condition indicated by <span class="math inline">\(W_i\)</span>, and an observed outcome for a level of the assigned and experienced condition <span class="math inline">\(Y_i(Z_i,W_i)\)</span>.</p>
+<p>The causal craph is;</p>
+<p><span class="math display">\[
+Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
+\]</span></p>
+<p>Where the assignment and experience of a treatment or control condition are represented with;</p>
 <p><span class="math display">\[
 \begin{aligned}
 Z_i &amp;= \begin{cases}
@@ -401,26 +413,34 @@ Z_i &amp;= \begin{cases}
 W_i &amp;= \begin{cases}
 1, &amp; \text{Experienced treatment} \\
 0 &amp; \text{Experienced control}
-\end{cases} \\
+\end{cases}
+\end{aligned}
+\]</span></p>
+<p>And there are potential outcomes <span class="math inline">\(Y\)</span> under any combination of assigned and experienced conditions;</p>
+<p><span class="math display">\[
+\begin{aligned}
 Y_i(Z_i,W_i) &amp;= \begin{cases}
 Y_i(0,0), &amp; \text{Outcome when assigned C and experienced C}\\
 Y_i(0,1), &amp; \text{Outcome when assigned C and experienced T} \\
 Y_i(1,0), &amp; \text{Outcome when assigned T and experienced C} \\
 Y_i(1,1)  &amp; \text{Outcome when assigned T and experienced T} 
-\end{cases} \\
+\end{cases}
 \end{aligned}
 \]</span></p>
-<p>The causal craph is;</p>
-<p><span class="math display">\[
-Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
-\]</span></p>
+<p>In most lab studies this setup simplifies because <span class="math inline">\(Z_i=W_i\)</span> since there is no possibility that a lab participant does not experience the condition they are assigned to. However, in online experimentation users can often opt out of a treatment condition, and users assigned to a control condition could end up getting access to features of the treatment condition. Methods to address these complications are discussed below.</p>
 </div>
-<div id="assumptions-and-key-terms" class="section level2">
-<h2>Assumptions and key terms</h2>
+<div id="key-assumptions" class="section level2">
+<h2>Key Assumptions</h2>
 <ul>
-<li><span class="math inline">\(Y_i(0),Y_i(1) \perp T_i | X_i\)</span> Unconfoundedness: conditional on observed covariates (<span class="math inline">\(X\)</span>), treatment (<span class="math inline">\(T\)</span>) and potential outcomes (<span class="math inline">\(Y(T)\)</span>) are independent.</li>
-<li>Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.</li>
+<li>Exclusion: <span class="math inline">\(Y(0,W_i)=Y(1,W_i)=Y(W_i)\)</span>, or probabilistically <span class="math inline">\(p(Y_i(Z_i,W_i)|Z_i,W_i)=p(Y_i(Z_i,W_i)|W_i)\)</span>. The treatment assignment <span class="math inline">\(Z_i\)</span> influences the outcome only through the experiences condition <span class="math inline">\(W_i\)</span>, i.e. conditional on an experienced condition, the observed outcome <span class="math inline">\(Y_i\)</span> is independent of the assigned condition.</li>
 </ul>
+<p>To simplify notation, I’ll assume exclusion past here and refer to observed outcomes as <span class="math inline">\(Y_i(W_i)\)</span>.</p>
+<ul>
+<li><p>Stable units:</p></li>
+<li><p>Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.</p></li>
+<li><p>Unconfoundedness: <span class="math inline">\(Y_i(0),Y_i(1) \perp Z_i | X_i\)</span>. Conditional on observed covariates (<span class="math inline">\(X_i\)</span>), assignments (<span class="math inline">\(Z_i\)</span>) and potential outcomes (<span class="math inline">\(Y(W_i)\)</span>) are independent.</p></li>
+</ul>
+<p>If unconfoundedness isn’t satisfied, i.e. the distributions of xi differ between levels of wi, then</p>
 </div>
 <div id="common-methods" class="section level2">
 <h2>Common Methods</h2>

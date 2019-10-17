@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Thu, 17 Oct 2019 12:47:05 +0000</pubDate>
+      <pubDate>Thu, 17 Oct 2019 14:40:12 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -52,10 +52,11 @@
 &lt;li&gt;&lt;a href=&#34;#expectation&#34;&gt;Expectation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#variance&#34;&gt;Variance&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#information-theory&#34;&gt;Information Theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-graphs&#34;&gt;Causal Graphs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-inference&#34;&gt;Causal Inference&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#framework&#34;&gt;Framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#assumptions-and-key-terms&#34;&gt;Assumptions and key terms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#key-assumptions&#34;&gt;Key Assumptions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#common-methods&#34;&gt;Common Methods&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#diff-in-diff&#34;&gt;Diff in Diff&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-impact&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
@@ -411,6 +412,12 @@ D_{KL}(f_{x}(x);f_{y}(x)) &amp;amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f
 I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;causal-graphs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Causal Graphs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Add some info from Judeal Pearl papers relevant to experimentation and inference?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;causal-inference&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Causal Inference&lt;/h1&gt;
@@ -420,6 +427,11 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 &lt;div id=&#34;framework&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Framework&lt;/h2&gt;
 &lt;p&gt;The general setting I’ll refer to a causal graph where individuals &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; are assigned to a particular condition indicated with &lt;span class=&#34;math inline&#34;&gt;\(Z_i\)&lt;/span&gt;, they experience a condition indicated by &lt;span class=&#34;math inline&#34;&gt;\(W_i\)&lt;/span&gt;, and an observed outcome for a level of the assigned and experienced condition &lt;span class=&#34;math inline&#34;&gt;\(Y_i(Z_i,W_i)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The causal craph is;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Where the assignment and experience of a treatment or control condition are represented with;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
 Z_i &amp;amp;= \begin{cases}
@@ -429,26 +441,34 @@ Z_i &amp;amp;= \begin{cases}
 W_i &amp;amp;= \begin{cases}
 1, &amp;amp; \text{Experienced treatment} \\
 0 &amp;amp; \text{Experienced control}
-\end{cases} \\
+\end{cases}
+\end{aligned}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And there are potential outcomes &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; under any combination of assigned and experienced conditions;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
+\begin{aligned}
 Y_i(Z_i,W_i) &amp;amp;= \begin{cases}
 Y_i(0,0), &amp;amp; \text{Outcome when assigned C and experienced C}\\
 Y_i(0,1), &amp;amp; \text{Outcome when assigned C and experienced T} \\
 Y_i(1,0), &amp;amp; \text{Outcome when assigned T and experienced C} \\
 Y_i(1,1)  &amp;amp; \text{Outcome when assigned T and experienced T} 
-\end{cases} \\
+\end{cases}
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The causal craph is;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
-\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In most lab studies this setup simplifies because &lt;span class=&#34;math inline&#34;&gt;\(Z_i=W_i\)&lt;/span&gt; since there is no possibility that a lab participant does not experience the condition they are assigned to. However, in online experimentation users can often opt out of a treatment condition, and users assigned to a control condition could end up getting access to features of the treatment condition. Methods to address these complications are discussed below.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;assumptions-and-key-terms&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Assumptions and key terms&lt;/h2&gt;
+&lt;div id=&#34;key-assumptions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Key Assumptions&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp T_i | X_i\)&lt;/span&gt; Unconfoundedness: conditional on observed covariates (&lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt;), treatment (&lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(T)\)&lt;/span&gt;) are independent.&lt;/li&gt;
-&lt;li&gt;Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.&lt;/li&gt;
+&lt;li&gt;Exclusion: &lt;span class=&#34;math inline&#34;&gt;\(Y(0,W_i)=Y(1,W_i)=Y(W_i)\)&lt;/span&gt;, or probabilistically &lt;span class=&#34;math inline&#34;&gt;\(p(Y_i(Z_i,W_i)|Z_i,W_i)=p(Y_i(Z_i,W_i)|W_i)\)&lt;/span&gt;. The treatment assignment &lt;span class=&#34;math inline&#34;&gt;\(Z_i\)&lt;/span&gt; influences the outcome only through the experiences condition &lt;span class=&#34;math inline&#34;&gt;\(W_i\)&lt;/span&gt;, i.e. conditional on an experienced condition, the observed outcome &lt;span class=&#34;math inline&#34;&gt;\(Y_i\)&lt;/span&gt; is independent of the assigned condition.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;To simplify notation, I’ll assume exclusion past here and refer to observed outcomes as &lt;span class=&#34;math inline&#34;&gt;\(Y_i(W_i)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Stable units:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Unconfoundedness: &lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp Z_i | X_i\)&lt;/span&gt;. Conditional on observed covariates (&lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt;), assignments (&lt;span class=&#34;math inline&#34;&gt;\(Z_i\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(W_i)\)&lt;/span&gt;) are independent.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If unconfoundedness isn’t satisfied, i.e. the distributions of xi differ between levels of wi, then&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;common-methods&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Common Methods&lt;/h2&gt;

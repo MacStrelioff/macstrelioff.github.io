@@ -406,6 +406,10 @@ $$
 I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
 $$
 
+## Causal Graphs
+
+- Add some info from Judeal Pearl papers relevant to experimentation and inference?
+
 # Causal Inference
 
 The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred. 
@@ -418,6 +422,14 @@ Most methods like t-tests and ANOVAs compare the observed outcomes in the treatm
 
 The general setting I'll refer to a causal graph where individuals $i$ are assigned to a particular condition indicated with $Z_i$, they experience a condition indicated by $W_i$, and an observed outcome for a level of the assigned and experienced condition $Y_i(Z_i,W_i)$. 
 
+The causal craph is; 
+
+$$
+Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
+$$
+
+Where the assignment and experience of a treatment or control condition are represented with;
+
 $$
 \begin{aligned}
 Z_i &= \begin{cases}
@@ -427,26 +439,41 @@ Z_i &= \begin{cases}
 W_i &= \begin{cases}
 1, & \text{Experienced treatment} \\
 0 & \text{Experienced control}
-\end{cases} \\
+\end{cases}
+\end{aligned}
+$$
+
+And there are potential outcomes $Y$ under any combination of assigned and experienced conditions;
+
+$$
+\begin{aligned}
 Y_i(Z_i,W_i) &= \begin{cases}
 Y_i(0,0), & \text{Outcome when assigned C and experienced C}\\
 Y_i(0,1), & \text{Outcome when assigned C and experienced T} \\
 Y_i(1,0), & \text{Outcome when assigned T and experienced C} \\
 Y_i(1,1)  & \text{Outcome when assigned T and experienced T} 
-\end{cases} \\
+\end{cases}
 \end{aligned}
 $$
 
-The causal craph is; 
+In most lab studies this setup simplifies because $Z_i=W_i$ since there is no possibility that a lab participant does not experience the condition they are assigned to. However, in online experimentation users can often opt out of a treatment condition, and users assigned to a control condition could end up getting access to features of the treatment condition. Methods to address these complications are discussed below. 
 
-$$
-Z_i \rightarrow W_i \rightarrow Y_i(Z_i,W_i)
-$$
+## Key Assumptions
 
-## Assumptions and key terms
+- Exclusion: $Y(0,W_i)=Y(1,W_i)=Y(W_i)$, or probabilistically $p(Y_i(Z_i,W_i)|Z_i,W_i)=p(Y_i(Z_i,W_i)|W_i)$. The treatment assignment $Z_i$ influences the outcome only through the experiences condition $W_i$, i.e. conditional on an experienced condition, the observed outcome $Y_i$ is independent of the assigned condition. 
 
-- $Y_i(0),Y_i(1) \perp T_i | X_i$ Unconfoundedness: conditional on observed covariates ($X$), treatment ($T$) and potential outcomes ($Y(T)$) are independent. 
+To simplify notation, I'll assume exclusion past here and refer to observed outcomes as $Y_i(W_i)$.
+
+- Stable units: 
+
+
 - Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds. 
+
+
+- Unconfoundedness: $Y_i(0),Y_i(1) \perp Z_i | X_i$. Conditional on observed covariates ($X_i$), assignments ($Z_i$) and potential outcomes ($Y(W_i)$) are independent. 
+
+If unconfoundedness isn't satisfied, i.e. the distributions of xi differ between levels of wi, then 
+
 
 ## Common Methods
 
