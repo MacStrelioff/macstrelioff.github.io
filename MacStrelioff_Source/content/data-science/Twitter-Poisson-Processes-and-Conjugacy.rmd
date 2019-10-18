@@ -32,7 +32,8 @@ library(reticulate)
 ```{r,include=FALSE}
 knitr::opts_chunk$set(comment = ">>>")
 #py_discover_config() # to see versions of Python
-use_python("/anaconda3/bin/python")
+#use_python("/anaconda3/bin/python")
+use_python("/Users/mac/anaconda3/bin/python")
 # py_config() # check paths
 # test imports
 #import("numpy",as="np")
@@ -532,11 +533,11 @@ lambda_upper = [gamma.ppf(.975,a=alpha,scale=1/beta) for alpha,beta in zip(alpha
 lambda_lower = [gamma.ppf(.025,a=alpha,scale=1/beta) for alpha,beta in zip(alphas,betas)]
 # plot over time
 plt.figure(figsize=(10,4))
-sns.distplot(times[1:], hist = False, kde = False, rug = True,
-             color = 'darkblue', 
-             rug_kws={'color': 'black'});
 plt.plot(times[1:],lambda_map,color=[0,0,1],label='MAP');
 plt.fill_between(times[1:], lambda_lower, lambda_upper,color=[0,0,1,.1],label='95% CI')
+#sns.distplot(times[1:], hist = False, kde = False, rug = True,
+#             color = 'darkblue', 
+#             rug_kws={'color': 'black'});
 plt.ylabel('Posterior on Lambda (tweets/day)')
 plt.xlabel('Time')
 plt.title('Summary of the posterior over $\lambda$ across time')
