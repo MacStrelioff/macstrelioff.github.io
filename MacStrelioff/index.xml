@@ -38,7 +38,7 @@
     <item>
       <title>Twitter, Poisson Processes, and Conjugacy</title>
       <link>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</link>
-      <pubDate>Thu, 17 Oct 2019 17:36:25 +0000</pubDate>
+      <pubDate>Thu, 17 Oct 2019 18:21:38 +0000</pubDate>
       
       <guid>/MacStrelioff/data-science/twitter-poisson-processes-and-conjugacy/</guid>
       <description>
@@ -142,10 +142,7 @@ timeline[0] # most recent tweet status object&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;working-with-twitter-status-objects&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Working with Twitter Status objects&lt;/h3&gt;
-&lt;p&gt;I cover three ways to work with Status objects.
-1. display the Status as a tweet!
-2. Convert the Status to a dictionary and access values from keys
-3. Access values directly as attributes of the Status&lt;/p&gt;
+&lt;p&gt;I cover three ways to work with Status objects. 1. display the Status as a tweet! 2. Convert the Status to a dictionary and access values from keys 3. Access values directly as attributes of the Status&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;embed-a-status&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Embed a Status&lt;/h3&gt;
@@ -162,7 +159,7 @@ class disp_tweet(object):
     def _repr_html_(self):
         return self.text&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;python&#34;&gt;&lt;code&gt;disp_tweet(user_name=&amp;#39;macstrelioff&amp;#39;,tweet_id=&amp;#39;981338927419109376&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a1d1b97b8&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; &amp;lt;__main__.disp_tweet object at 0x1a26d06710&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If run from a Jupyter notebook, this should embed a tweet as below;&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
 &lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
@@ -503,6 +500,9 @@ lambda_lower = [gamma.ppf(.025,a=alpha,scale=1/beta) for alpha,beta in zip(alpha
 plt.figure(figsize=(10,4))
 plt.plot(times[1:],lambda_map,color=[0,0,1],label=&amp;#39;MAP&amp;#39;);
 plt.fill_between(times[1:], lambda_lower, lambda_upper,color=[0,0,1,.1],label=&amp;#39;95% CI&amp;#39;)
+#sns.distplot(times[1:], hist = False, kde = False, rug = True,
+#             color = &amp;#39;darkblue&amp;#39;, 
+#             rug_kws={&amp;#39;color&amp;#39;: &amp;#39;black&amp;#39;});
 plt.ylabel(&amp;#39;Posterior on Lambda (tweets/day)&amp;#39;)
 plt.xlabel(&amp;#39;Time&amp;#39;)
 plt.title(&amp;#39;Summary of the posterior over $\lambda$ across time&amp;#39;)

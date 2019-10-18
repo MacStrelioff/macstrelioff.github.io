@@ -535,6 +535,9 @@ lambda_lower = [gamma.ppf(.025,a=alpha,scale=1/beta) for alpha,beta in zip(alpha
 plt.figure(figsize=(10,4))
 plt.plot(times[1:],lambda_map,color=[0,0,1],label='MAP');
 plt.fill_between(times[1:], lambda_lower, lambda_upper,color=[0,0,1,.1],label='95% CI')
+#sns.distplot(times[1:], hist = False, kde = False, rug = True,
+#             color = 'darkblue', 
+#             rug_kws={'color': 'black'});
 plt.ylabel('Posterior on Lambda (tweets/day)')
 plt.xlabel('Time')
 plt.title('Summary of the posterior over $\lambda$ across time')
