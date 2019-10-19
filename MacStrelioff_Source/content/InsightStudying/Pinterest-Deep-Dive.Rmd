@@ -73,13 +73,45 @@ Their questions from the demo:
 
 Their responses to 'cool current projects?'
 
+- Grace: We want to provide a safe environment for Pinners. How to identify and remove unsafe content like self-harm and porn? How do we give fresh content a fair chance to get distributed?
+- Sarthak: Building off of what Grace said, we take very seriously our company mission to remove unsafe content, even if it leads to a drop in engagement.
+- Aiden: A/B experiments to see if new ideas make experience better. How can we make experiments scale out to allow faster innovation? What is the experiment quality? What are different ways of presenting results to users? We work with different product teams, allowing everyone else to innovate faster.
+- Shay: My pod partners with two groups: emerging and core products. We have to create a robust shopping experience.
+- And: We manage ads. What’s the impact of ads on long term customer value? How do build causal models, run experiments. Building “counterfactuals” (?).
 - Sarthak: Ads are a part of the user experience, and deeply integrated, but should not distract.
 - Romit: Leads growth effort. User acquisition, SEO strategy, more mechanisms for people to discover Pinterest. Works to improve their search engine.
-
 
 Rafael tips: 
 
 Hey man! Wooo! Congrats that’s great news!  I have no idea what that will be like, but if I had to guess it’s more of an overall fit interview. The big bosses have to green light your hire and they want to evaluate if you’re the right person for the job. So again if I had to guess, I’d expect product/problem solving questions that are very close to what you’d be working on, plus a good amount of time for you to ask questions (a “sell” interview). So make sure you study the platform in relation to growth analytics, and that you have a lot of questions about the role, how the team works, their experimentation platform, what’s the vision for their growth, etc. a good one to ask here is “what tips would you give a new hire so they can be successful at pinterest since day 1?” - shows you’re excited to start and have a growth mindset. 
+
+Maime tips: 
+
+Hey congrats !!
+Umm of course deep dive and also come up with some really good questions for them
+Most likely this will be non technical
+And more about culture fit and who you are
+This is where you can get a lot of context about your team, the company
+Questions about growth, the company’s mission, values, their vision
+What were some of the struggles in the past, what were some of the biggest changes made in last X years
+What do you envision the company / team to look like in 2 years
+
+
+## Example questions: 
+
+- What tips would you give a new hire so they can be successful at pinterest since day 1
+- 
+
+## Studying for growth analytics questions
+
+- see other blogpost notes, focus on growth
+
+## Behavioral prep
+
+- see explanaitons of work from other prep docs
+- see behavioral interview doc
+
+##
 
 
 # Onsite Prep
