@@ -65,8 +65,21 @@ Overheard, from Chris and Aman talking;
 - Engineering manager -> head of ads product analytics -> head of growth analytics
 - Previously, a conslutant at Deloitte and business intelligence analyst at Google
 
+Their questions from the demo: 
+
+- Romit - How much data are we talking about?
+- Sarthak - If you had more time, what would your next steps be?
+- Romit - Did you get anything from doing customer segmentation? What about the engagement core vs more marginal groups?
+
+Their responses to 'cool current projects?'
+
+- Sarthak: Ads are a part of the user experience, and deeply integrated, but should not distract.
+- Romit: Leads growth effort. User acquisition, SEO strategy, more mechanisms for people to discover Pinterest. Works to improve their search engine.
 
 
+Rafael tips: 
+
+Hey man! Wooo! Congrats that’s great news!  I have no idea what that will be like, but if I had to guess it’s more of an overall fit interview. The big bosses have to green light your hire and they want to evaluate if you’re the right person for the job. So again if I had to guess, I’d expect product/problem solving questions that are very close to what you’d be working on, plus a good amount of time for you to ask questions (a “sell” interview). So make sure you study the platform in relation to growth analytics, and that you have a lot of questions about the role, how the team works, their experimentation platform, what’s the vision for their growth, etc. a good one to ask here is “what tips would you give a new hire so they can be successful at pinterest since day 1?” - shows you’re excited to start and have a growth mindset. 
 
 
 # Onsite Prep
