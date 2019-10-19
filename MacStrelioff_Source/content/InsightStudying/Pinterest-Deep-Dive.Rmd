@@ -103,6 +103,11 @@ What do you envision the company / team to look like in 2 years
 - What were some of the struggles in the past, what were some of the biggest changes made in last X years
 - What do you envision the company / team to look like in 2 years
 
+
+- Ownership in the products or work? 
+- See impact of work on team? 
+
+
 ## Studying for growth analytics questions
 
 - see other blogpost notes, focus on growth
