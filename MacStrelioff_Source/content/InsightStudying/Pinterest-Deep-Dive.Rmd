@@ -38,6 +38,43 @@ set.seed(10201991)
 - Could you give me an example of some recent projects that people in this position have worked on? 
 - How does this position relate to data science roles? 
 
+- Pinterest onsite.. expedite process?
+
+
+Marketing science
+
+- 7 teams to better serve ads clients to help them get best ROI on ads, and measure effectiveness of ads
+- Share this data with the advertisers to give them new strategy ideas
+- Teams intersect product and data science, and others on research. 
+- Research team does a lot of experimentation, causal inferece, hypothesis testing, ... 
+- Research focused on understanding user behvior, understanding why people click ads or spend time on different pages. Typically from research or economist background. 
+- Have aobut 5 researchers, looking to add three more before the end of the year (1 offer out now). 
+- Might add a few more next year. 
+- Team centralized in Menlo park. 
+- This is the SBG team. 
+- Tools are Python, R, SQL, SPSS. Mostly R and Python. 
+
+How is researcher different from DS? 
+- Researcher focused more on research, hypothesis development and designing and executing measurements, and publishing results. 
+- DS teams more focused on developing stats ML methodology and productionizing them as products. More model building.
+- Researcher more client facing with advertisers. Work with internal ad agencies they hire who then interface with esxternal clients. 
+
+- sample not representative of population
+- eg impace of nationwide ad campaign
+- only have data for UK
+- only from london
+
+Interview process
+
+- 45min video conference with a manager
+- onsite with meeting with 4-5 members on the team
+- quick exploratory conversation with member of the org
+- offer
+
+- Ideally video this week, onsite nextweek, and final call next week.
+
+
+
 # Square job
 
 [Job ad](https://www.linkedin.com/jobs/view/1502289246/)
