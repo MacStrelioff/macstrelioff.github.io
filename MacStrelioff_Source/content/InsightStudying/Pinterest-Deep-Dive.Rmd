@@ -26,14 +26,14 @@ set.seed(10201991)
 
 - Recently graduated with PhD in cognitive science and a MS in statistics. 
 - Experience in human behavior -- studied classical conditioning phenomena which is the psychological underpinnings of ad effectiveness
-- 
 
+- I like the idea of working with small businesses. 
 
 - Q: What would the day to day work look like for this position? 
-- 
-
-
-
+- What sort of data would I have access to? 
+- Conversions on the small business webpages? 
+- Could you give me an example of some recent projects that people in this position have worked on? 
+- How does this position relate to data science roles? 
 
 
 
