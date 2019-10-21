@@ -21,6 +21,23 @@ set.seed(10201991)
 ```
 
 
+
+# FB Marketing science talking points
+
+- Recently graduated with PhD in cognitive science and a MS in statistics. 
+- Experience in human behavior -- studied classical conditioning phenomena which is the psychological underpinnings of ad effectiveness
+- 
+
+
+- Q: What would the day to day work look like for this position? 
+- 
+
+
+
+
+
+
+
 # TODO: 
 
 <!--
