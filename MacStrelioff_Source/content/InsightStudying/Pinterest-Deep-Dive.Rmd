@@ -28,18 +28,15 @@ set.seed(10201991)
 
 [Similar ds job ad](https://www.facebook.com/careers/jobs/2265158820402695/)
 
-- Recently graduated with PhD in cognitive science and a MS in statistics. 
+- Recently graduated with PhD in cognitive science. 
 - Research topic focused on decision making and reinforcement learning -- including studying the psychological mechanisms behind effective advertising. I also earned a MS in statistics, and recently finished the Insight Data Science Fellows program, and am looking for positions as a data scientist in the Bay Area. 
 
 - I like the idea of working with small businesses. 
 
 - Q: What would the day to day work look like for this position? 
-- What sort of data would I have access to? 
-- Conversions on the small business webpages? 
+- What sort of data would I have access to? .. Data from a partner company such as conversions on the small business webpages? 
 - Could you give me an example of some recent projects that people in this position have worked on? 
 - How does this position relate to data science roles? 
-
-
 
 # Square job
 
@@ -64,6 +61,7 @@ Overheard, from Chris and Aman talking;
 # 'calculate the area of this and area of ...?'
 -->
 
+- Phrase all projects in a way that conveys the value I bring to Pinterest
 - Be able to talk about past projects and their use cases or value -- Use STAR to connect with interviewers over each experience.
 - Be able to talk about differences in efficiency between different estimators; see [efficiency](https://en.wikipedia.org/wiki/Efficiency_(statistics)), and [robust statistics](https://en.wikipedia.org/wiki/Robust_statistics)
 - Be able to talk about ATE vs ATT, and other causal inference methods.
@@ -134,7 +132,7 @@ What do you envision the company / team to look like in 2 years
 
 - Relationship with advisor: Learned a lot about the leadership styles there I thrive: Ownership, understanding impact (not MediaX), respect and treated like equals (Michael)
 
-- Tell me about X project (see notes in other prep docs)
+- Tell me about X project (see notes in other prep docs, and notes from pinterest demo above)
 
 ## Example questions to ask: 
 
@@ -153,6 +151,99 @@ What do you envision the company / team to look like in 2 years
 - how many layers does the company have? 
 
 See [this list](https://www.glassdoor.com/blog/the-45-questions-you-should-ask-in-every-job-interview/)
+
+## Tall me about X project...
+
+### HaaS freelance work
+
+Situation: 
+
+- Haas stands for housing as a service, it's a membership-based coliving startup.
+
+Task: 
+
+- Want to increase memberships through facebook and google ads. 
+- I'm leveraging a little SEO experience to help with designing ads; 
+-     Brighter photos, photos with faces, and color schemes that contrast FB's color scheme of white and blue, 
+-     thse features are associated with higher CTR for YouTube thumbnails. 
+- Becoming familiar with Google Analytics and Facebook Ad Analytics to run A/B tests with these ads
+
+Action: 
+
+- See which drive more interest in CTR, and more conversions in applications for membership, and which attract the demographics that my client wants to attract.
+
+### Insight Project
+
+Situation: 
+
+- 2 week consulting project
+- Startup focused on digital workspaces (e.g. google docs)
+- Wanted to understand user base.
+- Wanted to be able to predict who would convert from a free trial to a paying customer.
+- (skip) Wanted to attribute conversion to product features with conversion.
+
+Task:
+
+- Data: 
+- Company demographic information, company size and revenue. 
+-     Used this to communicate conversion rates by demographic to heads of different teams using tables and figures.
+- Account activity data which was a sum of actions taken within an account each day. 
+-     I transformed this into cumulative sum instead of daily sum to increase interpretability and modeling ease. 
+
+(skip) Action: 
+(skip) - Used cross sections of cumulative account activity data after 7 days since the account was created. 
+(skip) - Cast as classification problem, used SMOTE to address class imbalance,
+(skip) - used 5-fold CV to evaluate models on AUC, 
+(skip) - ended with a RF algorithm for these predictions. 
+
+Result: 
+
+- Delivered presentation and slide deck with tables and figures to a group of team leaders. 
+- Delivered a Python script to implement the model, and a slide deck describing the modeling procedure and performance. 
+
+### PredictIt project
+
+Situation:
+
+- Prediction markets aggregate information and incentivize rational behavior, so one would expect the prices to be accurate. 
+- At an individual level, lots of fallacies have been established in lab settings.
+- I wanted to know if any fallacies would manifest in market prices. 
+
+Results:
+
+- Conjunction fallacy: "Trump" traded higher hand "Republican" for extended period of time.
+- Disjunction fallacy: Most market prices add up to something greater than $1, but because of fees it's often not profitable to take advantage of this. 
+- CPT subjective probability function: Overpricing of low probability events and Underpricing of high probability events
+- -- notably this was highest as expiration approached, a context that is more similar to lab studies that don't have delayed rewards. 
+
+- Now we're working on automating trades based on these and other indights. 
+
+### Child bandit modeling
+
+Situation:
+
+- Wanted to know what strategies they followed, and if their strategy changed over time.
+- Kids repeatedly chose between two gambling machines
+
+Action:
+
+- I developed a model that inferred the probability of following each strategy on each trial
+- Used Bayes' Rule to smooth out these inferences / accumulate information over trials 
+
+Result:
+
+- Kids do seem to switch strategies, probably don't act optimally, and have different strategies depending on age (switchy vs sticky)
+- Result: A lot of experiments focus on which strategy best fits all data across trials -- the approach that I took allows for changes in strategies, and the exciting result was an ability to track latent decision making strategies over time. 
+
+Value:
+
+- Implications for user intent modeling
+
+### Quantopian: 
+
+- recreated XIV, fund that trades VIX futures weighted so that the effective days to expiration is approximately 30.
+- mean revision
+- moving average crossover
 
 ## Howard call 
 
