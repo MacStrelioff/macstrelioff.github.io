@@ -24,8 +24,12 @@ set.seed(10201991)
 
 # FB Marketing science talking points
 
+[job ad](https://www.facebook.com/careers/jobs/655936761589571/)
+
+[Similar ds job ad](https://www.facebook.com/careers/jobs/2265158820402695/)
+
 - Recently graduated with PhD in cognitive science and a MS in statistics. 
-- Experience in human behavior -- studied classical conditioning phenomena which is the psychological underpinnings of ad effectiveness
+- Research topic focused on decision making and reinforcement learning -- including studying the psychological mechanisms behind effective advertising. I also earned a MS in statistics, and recently finished the Insight Data Science Fellows program, and am looking for positions as a data scientist in the Bay Area. 
 
 - I like the idea of working with small businesses. 
 
@@ -36,6 +40,12 @@ set.seed(10201991)
 - How does this position relate to data science roles? 
 
 
+
+# Square job
+
+[Job ad](https://www.linkedin.com/jobs/view/1502289246/)
+
+- focused on surfacing the right ad to the right people at the right time
 
 
 # TODO: 
@@ -113,13 +123,29 @@ Questions about growth, the company’s mission, values, their vision
 What were some of the struggles in the past, what were some of the biggest changes made in last X years
 What do you envision the company / team to look like in 2 years
 
+## Example questions to be ready to answer: 
 
-## Example questions: 
+- what did you think of the people that you met? Liked them overall, felt like everyone was professional and I had a particularly good time pitching a registry board with Pam.
+- what do you think of our product? It has a lot of use cases -- browsing and discovery through search, planning and slef-expression through boards. So I like that broad aspect of it, and am also interested in the uniquely high intent of the Pinterest userbase. 
+- how could your skills help our company? In graduate school I programmed tasks that showed people options they could pick (think two different pins) and as people chose, the program would change attributes or introduce different options (decoy effect example). Overall I think the paradigms I employed in lab studies are very similar to the Pinterest platform, and the behaviors I studied in participants are similar to the user flows for pinterest users. So I this these unique experiences, paired with my training in statistics, would be a huge asset to Pinterest. - be able to say my skills are really valuable.. 
+- Why Pinterest? The similarity to the kinds of data and questions I was working on in graduate school. 
+- what are you doing now? - 'I'm searching for a position and looking to move forward into an organization' 
+- unlikely they'll challenge me technically. Might say 'do you see anything that could be improved?' - I'm sure once I get into it my skills and knowledge would be good for the company. 
+
+- Relationship with advisor: Learned a lot about the leadership styles there I thrive: Ownership, understanding impact (not MediaX), respect and treated like equals (Michael)
+
+- Tell me about X project (see notes in other prep docs)
+
+## Example questions to ask: 
 
 - What tips would you give a new hire so they can be successful at pinterest since day 1
 - What were some of the struggles in the past, what were some of the biggest changes made in last X years
 - What do you envision the company / team to look like in 2 years
-
+- Where do you see this department/org/company/team going in the next 5 years?
+- What can you tell me about the culture of the organization? 
+- Company's growth strategy?
+- Ask about their department and their vision for the future, their direction. 
+- challenges and opportunities for organization
 
 - Ownership in the products or work? 
 - See impact of work on team? 
@@ -153,6 +179,8 @@ anticipate q's:
 - what do you think of our product? 
 - how could your skills help our company? - be able to say my skills are really valuable.. 
 - unlikely they'll challenge me technically. Might say 'do you see anything that could be improved?' - I'm sure once I get into it my skills and knowledge would be good for the company. 
+- what are you doing now? - 'I'm searching for a position and looking to move forward into an organization' 
+
 
 Speak clearly, calmly, slowly. 
 
@@ -171,8 +199,6 @@ Meet and welcome, might receive an offer in the meeting.
 
 - I'm selling until I get the offer, then they're selling. 
 - should be able to tell quick if they're buying or selling.
-
-- what are you doing now? - 'I'm searching for a position and looking to move forward into an organization' 
 
 - How would you make Pinterest accessible to the blind? 
 - How accessible is pinterest
@@ -196,17 +222,6 @@ Salary negotiation?
 ## Studying for growth analytics questions
 
 - see other blogpost notes, focus on growth
-
-## Behavioral prep
-
-- see explanaitons of work from other prep docs
-- see behavioral interview doc
-
-- Relationship with advisor
-- Leadership style I like: Ownership, understanding impact (not MediaX), respect and treated like equals (Michael)
-
-##
-
 
 # Onsite Prep
 
