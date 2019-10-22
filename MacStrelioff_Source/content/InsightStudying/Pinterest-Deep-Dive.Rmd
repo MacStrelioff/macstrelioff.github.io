@@ -92,6 +92,10 @@ About Me:
 - Those projects embody the content areas I'm interested in -- analyzing the choices people make, or their behavior in an app. 
 - Another project that I really drove is a better example of leadership and working in teams. 
 - PredictIt project. 
+- There are these marketplaces called prediction markets, where people can buy or sell contracts with real money. The contracts pay \$1 if an underlying event occurs, for example one contract might be "Joe Biden will win the 2020 presidential election". The underlying theory is that the price should reflect the probability of the event occurring -- so if that contract was at \$0.7, then Biden should have a 70% chance of winning. 
+- One key question is whether the prices are well calibrated -- that is, do 70\% of the markets prices at \$0.7 actually resolve to 'True'? 
+- To exaimine this, I reached out to a large online prediction market and gained access to order level data. 
+- 
 
 # TODO: 
 
