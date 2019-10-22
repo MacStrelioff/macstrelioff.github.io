@@ -73,14 +73,25 @@ Interview process
 
 - Ideally video this week, onsite nextweek, and final call next week.
 
-
-
 # Square job
+
+Topics: professional background, interest in square, current role.
 
 [Job ad](https://www.linkedin.com/jobs/view/1502289246/)
 
 - focused on surfacing the right ad to the right people at the right time
 
+- Background in 
+
+
+About Me: 
+
+- PhD in cognitive science, main research focused on 
+- decision making -- where I'd program tasks that showed people different options and ask them to indicate preferences, then change the attributes and see how that influenced preferences. 
+- Reinforcement learning -- so I programed simple games, formalized theories of cognition as different reinforcement learning algorithms that played the games, then had people play the games and determined which algorithm they behaved most similarily to. 
+- Those projects embody the content areas I'm interested in -- analyzing the choices people make, or their behavior in an app. 
+- Another project that I really drove is a better example of leadership and working in teams. 
+- PredictIt project. 
 
 # TODO: 
 
