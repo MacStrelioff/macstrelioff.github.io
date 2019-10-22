@@ -81,21 +81,54 @@ Topics: professional background, interest in square, current role.
 
 - focused on surfacing the right ad to the right people at the right time
 
-- Background in 
-
-
 About Me: 
 
 - PhD in cognitive science, main research focused on 
 - decision making -- where I'd program tasks that showed people different options and ask them to indicate preferences, then change the attributes and see how that influenced preferences. 
 - Reinforcement learning -- so I programed simple games, formalized theories of cognition as different reinforcement learning algorithms that played the games, then had people play the games and determined which algorithm they behaved most similarily to. 
-- Those projects embody the content areas I'm interested in -- analyzing the choices people make, or their behavior in an app. 
+- Those projects embody the content areas I'm interested in -- analyzing the choices people make, or their behavior in an app, and how those choices are influenced by contexts and reward systems. 
+
 - Another project that I really drove is a better example of leadership and working in teams. 
 - PredictIt project. 
 - There are these marketplaces called prediction markets, where people can buy or sell contracts with real money. The contracts pay \$1 if an underlying event occurs, for example one contract might be "Joe Biden will win the 2020 presidential election". The underlying theory is that the price should reflect the probability of the event occurring -- so if that contract was at \$0.7, then Biden should have a 70% chance of winning. 
 - One key question is whether the prices are well calibrated -- that is, do 70\% of the markets prices at \$0.7 actually resolve to 'True'? 
 - To exaimine this, I reached out to a large online prediction market and gained access to order level data. 
-- 
+
+- Growth role: 
+- Most similar to analyzing choices that people make and how 
+- 8 data scientists
+- wide mix of industry experience, phd, eng, open source programming
+- Lookking to grow by 1-2 more in the next two quarters
+- Square has 30 products. 
+- mission is to provide sellers with most remarkable experience in showing the best content and products to them. 
+- advertising services to sellers/marketers
+- looking for someone who understands impact in terms fo dollars
+- ML systems for personalization
+- opportunities to work with text/image data
+- Will have opportunities to talk to more DS
+- this role is more in the ML and modeling area. 
+- working on production code in python
+- occasionally contributing to other code bases
+- do have more traditional product analytics roles that are more data heavy to push decision making -- though on a lot of DS teams this is often mixed with DS as well as analyists. 
+- Growth team primarily DS
+- If I want to be data heavy, 
+- Exposure to actual modeling and writing production workflows using Python to use ML and stats modeling experience
+- DS more meaty in terms of technical work
+- PA more data, analytical, pushing insights for actionable decisions
+
+DS role next step: 
+
+- 45 minute technical python interview
+- work through everyday problem with another DS to get to a workable solution
+- loops, list comprehension
+- communication
+
+Sr. Product analyst: 
+
+- More around SQL, data analysis, operational thinking
+- 45 min SQL screen hands on working through SQL problem, then a HM screen, then onsite for data analysis
+
+Will send info to the other Sr. analyst role. 
 
 # TODO: 
 
