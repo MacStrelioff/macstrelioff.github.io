@@ -1,0 +1,136 @@
+---
+title: "Pinterest"
+author: "Mac Strelioff"
+date: "`r Sys.time()`"
+menu:
+  InsightStudying:
+    parent: Foundations
+    weight: 99
+math: yes
+linktitle: Pinterest
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+
+
+
+
+# FB Marketing Science Phone Screen Prep
+
+## Other Prep
+
+Questions: 
+
+- Do we have access to any purchasing data? 
+- Do we have data post-ad-click? -- Yes from Facebook Pixels. 
+
+
+
+
+
+## Maime tips:
+
+- If it's a seperate org interview is prob still similar.
+- Maime didn't have a great experience with SMG group (small medium business)
+- Maime's cohort they didn't get back to someone until towards the end of the year. They were on a hiring freeze.
+- Maime was for incoming PhD grad role. 
+- Maime tech screen; 
+- half coding, half analytics, half SQL
+- don't code for python algos, coding was only SQL
+- In general, product/open ended, and statsy questions. Like 3 open ended and a stats session.
+- very very deep dive. 
+- Should be ready for an analytics problem with fb marketplace. 
+- They expect you to know facebook because it's so widely known
+- Get a lot of context, deep dive products, pages, news feed, events. Know them well. 
+- Know how they generate revenue, what metrics they care about. 
+- Should be able to rattle off like 10 metrics for whatever question.
+- Especially the case for well known companies. 
+- Should already know metrics, not need to brainstorm them on the spot.
+- Complicated queries -- Lots of logical stuff, tricky questions. 
+- Be comfortable with medium level on Leetcode and hacker rank.
+
+In general, interviewing well -- know how to ask for help for SQL and clarificaion. Verbalize what you're stuck on and need help on. 
+
+Draw intermediate tables. If I could get here -- I'd .. . But I'm stuck on this step 1 part. 
+
+FB really good at accomidating schedule. Maime got onsite quickly. 
+Should see it through, I might love the team or like working there. Could get a good compensation package. 
+Recruiters will ask where you're interviewing, you can tell them. 
+
+Hesitate when they ask about how much the offer is... . 
+
+
+
+
+# FB Marketing science Recruiter call
+
+[job ad](https://www.facebook.com/careers/jobs/655936761589571/)
+
+[Similar ds job ad](https://www.facebook.com/careers/jobs/2265158820402695/)
+
+- Recently graduated with PhD in cognitive science. 
+- Research topic focused on decision making and reinforcement learning -- including studying the psychological mechanisms behind effective advertising. I also earned a MS in statistics, and recently finished the Insight Data Science Fellows program, and am looking for positions as a data scientist in the Bay Area. 
+
+- I like the idea of working with small businesses. 
+
+- Q: What would the day to day work look like for this position? 
+- What sort of data would I have access to? .. Data from a partner company such as conversions on the small business webpages? 
+- Could you give me an example of some recent projects that people in this position have worked on? 
+- How does this position relate to data science roles? 
+
+- Pinterest onsite.. expedite process?
+
+Marketing science
+
+- 7 teams to better serve ads clients to help them get best ROI on ads, and measure effectiveness of ads
+- Share this data with the advertisers to give them new strategy ideas
+- Teams intersect product and data science, and others on research. 
+- Research team does a lot of experimentation, causal inferece, hypothesis testing, ... 
+- Research focused on understanding user behvior, understanding why people click ads or spend time on different pages. Typically from research or economist background. 
+- Have aobut 5 researchers, looking to add three more before the end of the year (1 offer out now). 
+- Might add a few more next year. 
+- Team centralized in Menlo park. 
+- This is the SBG team. 
+- Tools are Python, R, SQL, SPSS. Mostly R and Python. 
+
+How is researcher different from DS? 
+- Researcher focused more on research, hypothesis development and designing and executing measurements, and publishing results. 
+- DS teams more focused on developing stats ML methodology and productionizing them as products. More model building.
+- Researcher more client facing with advertisers. Work with internal ad agencies they hire who then interface with esxternal clients. 
+
+- sample not representative of population
+- eg impace of nationwide ad campaign
+- only have data for UK
+- only from london
+
+Interview process
+
+- 45min video conference with a manager
+- onsite with meeting with 4-5 members on the team
+- quick exploratory conversation with member of the org
+- offer
+
+- Ideally video this week, onsite nextweek, and final call next week.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
