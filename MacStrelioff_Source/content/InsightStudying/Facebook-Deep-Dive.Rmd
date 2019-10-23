@@ -39,7 +39,13 @@ Questions:
 
 ### Behavioral
 
-1. Partner and influence cross functionally
+1. Research areas
+
+- Decision making
+- Reinforcement learning
+
+
+2. Partner and influence cross functionally
 
 PredictIt: 
 
@@ -56,6 +62,23 @@ HaaS:
 Consulting: 
 
 - 
+
+### Marketing
+
+Metrics: 
+
+- Impressions
+- Link Clicks
+- Pageviews
+- Deeper funnel conversions recorded via fb pixles
+- Cost per click
+- Post engagements on business page
+- Session duration
+- Pages/session
+- conversion funnel
+
+- per week
+- per month
 
 
 ## Maime tips:
