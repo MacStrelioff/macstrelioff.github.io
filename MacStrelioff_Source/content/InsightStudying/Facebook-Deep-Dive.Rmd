@@ -21,7 +21,9 @@ set.seed(10201991)
 ```
 
 
+<!---
 
+--->
 
 
 # FB Marketing Science Phone Screen Prep
@@ -32,10 +34,28 @@ Questions:
 
 - Do we have access to any purchasing data? 
 - Do we have data post-ad-click? -- Yes from Facebook Pixels. 
+- Work culture? 
+- Talk a little about who my colleagues would be? Backgrounds, experience, ... ?
 
+### Behavioral
 
+1. Partner and influence cross functionally
 
+PredictIt: 
 
+- I was interested in whether there were opportunities for arbitrage in these markets. 
+- I established a data sharing partnership with a large online prediction market. 
+- I involved faculty sponsors -- First Bill, then Michael. 
+- I involved my friend Ryan to write web scrapers that texted us whenever an opportunity arised.
+- Overall this project is a strong demonstration of by ability to forge professional cross functional relationships.
+
+HaaS: 
+
+- 
+
+Consulting: 
+
+- 
 
 
 ## Maime tips:
