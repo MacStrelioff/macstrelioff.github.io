@@ -40,7 +40,6 @@ set.seed(10201991)
 
 - Pinterest onsite.. expedite process?
 
-
 Marketing science
 
 - 7 teams to better serve ads clients to help them get best ROI on ads, and measure effectiveness of ads
@@ -77,7 +76,34 @@ Interview process
 
 Maime:
 
-- 
+- If it's a seperate org interview is prob still similar.
+- Maime didn't have a great experience with SMG group (small medium business)
+- Maime's cohort they didn't get back to someone until towards the end of the year. They were on a hiring freeze.
+- Maime was for incoming PhD grad role. 
+- Maime tech screen; 
+- half coding, half analytics, half SQL
+- don't code for python algos, coding was only SQL
+- In general, product/open ended, and statsy questions. Like 3 open ended and a stats session.
+- very very deep dive. 
+- Should be ready for an analytics problem with fb marketplace. 
+- They expect you to know facebook because it's so widely known
+- Get a lot of context, deep dive products, pages, news feed, events. Know them well. 
+- Know how they generate revenue, what metrics they care about. 
+- Should be able to rattle off like 10 metrics for whatever question.
+- Especially the case for well known companies. 
+- Should already know metrics, not need to brainstorm them on the spot.
+- Complicated queries -- Lots of logical stuff, tricky questions. 
+- Be comfortable with medium level on Leetcode and hacker rank.
+
+In general, interviewing well -- know how to ask for help for SQL and clarificaion. Verbalize what you're stuck on and need help on. 
+
+Draw intermediate tables. If I could get here -- I'd .. . But I'm stuck on this step 1 part. 
+
+FB really good at accomidating schedule. Maime got onsite quickly. 
+Should see it through, I might love the team or like working there. Could get a good compensation package. 
+Recruiters will ask where you're interviewing, you can tell them. 
+
+Hesitate when they ask about how much the offer is... . 
 
 # Square job
 
