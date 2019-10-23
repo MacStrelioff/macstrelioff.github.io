@@ -144,7 +144,6 @@ Moody's / Margaux call:
 -->
 
 <!--
-
 Pintrest
 - Python, data munging, pandas
 - SQL care about efficency (e.g. reduce data before joining)
@@ -152,7 +151,6 @@ Pintrest
 - - CTR of x, what's p(5 out of n click through)
 - - fundamental probability
 - business case; open case study..
-
 -->
 
 
@@ -160,6 +158,8 @@ Pintrest
 Bandit + CI
 
 propensity score is the probability of being assigned to treatment or control based on covariates, and IV analysis with ITT and ATT can rescale an oberved treatment effect to account for the proportion of people treated.. Can these methods be used to obtain better estimates of an effect in a bandit context? A bandit changes the probability of assignment (so can the policy be used like a propensity score?)
+
+- would fast convergance of Thompson Sampling obliterate good results in the face of novelty effects? 
 -->
 
 <!--
