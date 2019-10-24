@@ -52,6 +52,22 @@ Researcher;
 - 2-3 'giant' projects, and a few other underlying projects
 
 
+working with internal team
+- developing new recommendation
+- email campaign to local restaurants for recommendations of group strategy
+- recommendation package;
+- right optimization
+- right targeting strategy
+- optimization FB uses auction mechanism
+- could optimize for impressions, clicks, or conversions
+- sales team thinking link click objective is best for the restaurant advertisers
+- wait for a month to see impact on advertisers
+- then check how advertiser spending changes
+- did pre-post analyses
+- sees before emails / after emails
+- advertisers who saw emails increased spending relative to those that didn't see emails.
+
+
 ## Other Prep
 
 Questions: 
@@ -60,6 +76,27 @@ Questions:
 - Do we have data post-ad-click? -- Yes from Facebook Pixels. 
 - Work culture? 
 - Talk a little about who my colleagues would be? Backgrounds, experience, ... ?
+
+- meeting structures? 
+
+- deliverable is publication -- we need to publish work papers, and the quality of them is what is judged
+- have access to everyone's profiles and what they produce
+- makes it good to form collaborations
+- also a review board
+
+- 2 meetings
+- working on project 
+- focus area meetings, different people from different organizations
+- no formality about the meetings
+
+Onboarding process 
+
+- people they need to meet and trainings they need to keep up on. 
+- onboarding buddy, many questions
+- takes around 3 months to feel comfortable
+- happens through reading mainly.
+
+Based on feedback, 
 
 ### Behavioral
 
