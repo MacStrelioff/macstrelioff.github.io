@@ -39,11 +39,21 @@ Questions:
 
 ### Behavioral
 
+Why this role? 
+
+- Similar to consulting work that I enjoy. 
+- Use analytics to drive decisions
+
+Why FB? 
+
+- Huge company. 
+- Probably learning opportunities
+- What I've heard of the culture -- Informal hierarchy, potential for ownership.
+
 1. Research areas
 
 - Decision making
 - Reinforcement learning
-
 
 2. Partner and influence cross functionally
 
@@ -54,6 +64,21 @@ PredictIt:
 - I involved faculty sponsors -- First Bill, then Michael. 
 - I involved my friend Ryan to write web scrapers that texted us whenever an opportunity arised.
 - Overall this project is a strong demonstration of by ability to forge professional cross functional relationships.
+
+Consulting: 
+
+UCI Ed department. 
+
+- Dave came to us with a dataset from two courses taught different ways. 
+
+Insight: 
+
+- I worked with a small startup to model conversion from a free trial to a paied customer. 
+- 
+
+
+
+
 
 ### Marketing
 
