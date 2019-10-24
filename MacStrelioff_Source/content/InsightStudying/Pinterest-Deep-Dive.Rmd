@@ -21,147 +21,6 @@ set.seed(10201991)
 ```
 
 
-
-# FB Marketing science talking points
-
-[job ad](https://www.facebook.com/careers/jobs/655936761589571/)
-
-[Similar ds job ad](https://www.facebook.com/careers/jobs/2265158820402695/)
-
-- Recently graduated with PhD in cognitive science. 
-- Research topic focused on decision making and reinforcement learning -- including studying the psychological mechanisms behind effective advertising. I also earned a MS in statistics, and recently finished the Insight Data Science Fellows program, and am looking for positions as a data scientist in the Bay Area. 
-
-- I like the idea of working with small businesses. 
-
-- Q: What would the day to day work look like for this position? 
-- What sort of data would I have access to? .. Data from a partner company such as conversions on the small business webpages? 
-- Could you give me an example of some recent projects that people in this position have worked on? 
-- How does this position relate to data science roles? 
-
-- Pinterest onsite.. expedite process?
-
-Marketing science
-
-- 7 teams to better serve ads clients to help them get best ROI on ads, and measure effectiveness of ads
-- Share this data with the advertisers to give them new strategy ideas
-- Teams intersect product and data science, and others on research. 
-- Research team does a lot of experimentation, causal inferece, hypothesis testing, ... 
-- Research focused on understanding user behvior, understanding why people click ads or spend time on different pages. Typically from research or economist background. 
-- Have aobut 5 researchers, looking to add three more before the end of the year (1 offer out now). 
-- Might add a few more next year. 
-- Team centralized in Menlo park. 
-- This is the SBG team. 
-- Tools are Python, R, SQL, SPSS. Mostly R and Python. 
-
-How is researcher different from DS? 
-- Researcher focused more on research, hypothesis development and designing and executing measurements, and publishing results. 
-- DS teams more focused on developing stats ML methodology and productionizing them as products. More model building.
-- Researcher more client facing with advertisers. Work with internal ad agencies they hire who then interface with esxternal clients. 
-
-- sample not representative of population
-- eg impace of nationwide ad campaign
-- only have data for UK
-- only from london
-
-Interview process
-
-- 45min video conference with a manager
-- onsite with meeting with 4-5 members on the team
-- quick exploratory conversation with member of the org
-- offer
-
-- Ideally video this week, onsite nextweek, and final call next week.
-
-## FB Marketing Science Phone Screen
-
-Maime:
-
-- If it's a seperate org interview is prob still similar.
-- Maime didn't have a great experience with SMG group (small medium business)
-- Maime's cohort they didn't get back to someone until towards the end of the year. They were on a hiring freeze.
-- Maime was for incoming PhD grad role. 
-- Maime tech screen; 
-- half coding, half analytics, half SQL
-- don't code for python algos, coding was only SQL
-- In general, product/open ended, and statsy questions. Like 3 open ended and a stats session.
-- very very deep dive. 
-- Should be ready for an analytics problem with fb marketplace. 
-- They expect you to know facebook because it's so widely known
-- Get a lot of context, deep dive products, pages, news feed, events. Know them well. 
-- Know how they generate revenue, what metrics they care about. 
-- Should be able to rattle off like 10 metrics for whatever question.
-- Especially the case for well known companies. 
-- Should already know metrics, not need to brainstorm them on the spot.
-- Complicated queries -- Lots of logical stuff, tricky questions. 
-- Be comfortable with medium level on Leetcode and hacker rank.
-
-In general, interviewing well -- know how to ask for help for SQL and clarificaion. Verbalize what you're stuck on and need help on. 
-
-Draw intermediate tables. If I could get here -- I'd .. . But I'm stuck on this step 1 part. 
-
-FB really good at accomidating schedule. Maime got onsite quickly. 
-Should see it through, I might love the team or like working there. Could get a good compensation package. 
-Recruiters will ask where you're interviewing, you can tell them. 
-
-Hesitate when they ask about how much the offer is... . 
-
-# Square job
-
-Topics: professional background, interest in square, current role.
-
-[Job ad](https://www.linkedin.com/jobs/view/1502289246/)
-
-- focused on surfacing the right ad to the right people at the right time
-
-About Me: 
-
-- PhD in cognitive science, main research focused on 
-- decision making -- where I'd program tasks that showed people different options and ask them to indicate preferences, then change the attributes and see how that influenced preferences. 
-- Reinforcement learning -- so I programed simple games, formalized theories of cognition as different reinforcement learning algorithms that played the games, then had people play the games and determined which algorithm they behaved most similarily to. 
-- Those projects embody the content areas I'm interested in -- analyzing the choices people make, or their behavior in an app, and how those choices are influenced by contexts and reward systems. 
-
-- Another project that I really drove is a better example of leadership and working in teams. 
-- PredictIt project. 
-- There are these marketplaces called prediction markets, where people can buy or sell contracts with real money. The contracts pay \$1 if an underlying event occurs, for example one contract might be "Joe Biden will win the 2020 presidential election". The underlying theory is that the price should reflect the probability of the event occurring -- so if that contract was at \$0.7, then Biden should have a 70% chance of winning. 
-- One key question is whether the prices are well calibrated -- that is, do 70\% of the markets prices at \$0.7 actually resolve to 'True'? 
-- To exaimine this, I reached out to a large online prediction market and gained access to order level data. 
-
-- Growth role: 
-- Most similar to analyzing choices that people make and how 
-- 8 data scientists
-- wide mix of industry experience, phd, eng, open source programming
-- Lookking to grow by 1-2 more in the next two quarters
-- Square has 30 products. 
-- mission is to provide sellers with most remarkable experience in showing the best content and products to them. 
-- advertising services to sellers/marketers
-- looking for someone who understands impact in terms fo dollars
-- ML systems for personalization
-- opportunities to work with text/image data
-- Will have opportunities to talk to more DS
-- this role is more in the ML and modeling area. 
-- working on production code in python
-- occasionally contributing to other code bases
-- do have more traditional product analytics roles that are more data heavy to push decision making -- though on a lot of DS teams this is often mixed with DS as well as analyists. 
-- Growth team primarily DS
-- If I want to be data heavy, 
-- Exposure to actual modeling and writing production workflows using Python to use ML and stats modeling experience
-- DS more meaty in terms of technical work
-- PA more data, analytical, pushing insights for actionable decisions
-
-DS role next step: 
-
-- 45 minute technical python interview
-- work through everyday problem with another DS to get to a workable solution
-- loops, list comprehension
-- communication
-
-Sr. Product analyst: 
-
-- More around SQL, data analysis, operational thinking
-- 45 min SQL screen hands on working through SQL problem, then a HM screen, then onsite for data analysis
-
-Will send info to the other Sr. analyst role. 
-
 # TODO: 
 
 <!--
@@ -195,6 +54,19 @@ Overheard, from Chris and Aman talking;
 
 
 # Onsite 2 Prep (1 hr meeting)
+
+Prep for: 
+
+- SS: Org alignment and values, agility (ability to get job done without resources)
+- RJ: Team values add, behavioral (motivation, growth mindset), one problem-solving question
+
+Pinterest Values: 
+
+- Put pinners first
+- Care with candor
+- Be an owner
+- Win or learn
+- Act with integrity
 
 [Sarthak Shah](https://www.linkedin.com/in/sarthak-shah-72541610/)
 
