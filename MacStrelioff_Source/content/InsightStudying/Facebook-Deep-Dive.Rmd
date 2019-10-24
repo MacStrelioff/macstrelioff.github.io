@@ -55,14 +55,6 @@ PredictIt:
 - I involved my friend Ryan to write web scrapers that texted us whenever an opportunity arised.
 - Overall this project is a strong demonstration of by ability to forge professional cross functional relationships.
 
-HaaS: 
-
-- 
-
-Consulting: 
-
-- 
-
 ### Marketing
 
 Metrics: 
