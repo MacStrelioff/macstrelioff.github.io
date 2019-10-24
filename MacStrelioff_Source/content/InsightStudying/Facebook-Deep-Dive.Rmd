@@ -28,6 +28,30 @@ set.seed(10201991)
 
 # FB Marketing Science Phone Screen Prep
 
+## about role: 
+
+- product, marketing, sales departments
+- create best practices for advertisers
+- eg local restaurant wants to create ad on fb
+- What should ad look like, where should the ad be placed, what optimization strategies should be done? 
+- Not client facing. 
+- Rather, collect research to generate insights for them. 
+
+Researcher; 
+
+- understand stakeholder needs
+- turn bus questions into data qs
+- develop right methodology
+- work with internal partners, 
+- analyze results
+- communicate results through presentations, ... 
+- 
+
+- Who are consumers of our research? 
+- projects 2-3 mo. 
+- 2-3 'giant' projects, and a few other underlying projects
+
+
 ## Other Prep
 
 Questions: 
@@ -74,7 +98,10 @@ UCI Ed department.
 Insight: 
 
 - I worked with a small startup to model conversion from a free trial to a paied customer. 
-- 
+
+TAing: 
+
+- I taught statistics for a few years. 
 
 
 
