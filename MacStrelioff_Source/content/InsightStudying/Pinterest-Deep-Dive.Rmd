@@ -132,7 +132,7 @@ What do you envision the company / team to look like in 2 years
 - What can you tell me about the culture of the organization? 
 - Company's growth strategy?
 - Ask about their department and their vision for the future, their direction. 
-- challenges and opportunities for organization
+- Challenges and opportunities for organization
 
 - Ownership in the products or work? 
 - See impact of work on team? 
@@ -141,7 +141,7 @@ What do you envision the company / team to look like in 2 years
 
 See [this list](https://www.glassdoor.com/blog/the-45-questions-you-should-ask-in-every-job-interview/)
 
-## Tall me about X project...
+## Tell me about X project...
 
 ### HaaS freelance work
 
