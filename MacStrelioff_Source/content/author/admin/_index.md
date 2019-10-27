@@ -163,6 +163,11 @@ propensity score is the probability of being assigned to treatment or control ba
 -->
 
 <!--
+Example of a changepoint model in PyMC; 
+https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb
+-->
+
+<!--
 TODO:
 
 - Instacart Prep
