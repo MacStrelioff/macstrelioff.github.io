@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-10-17 17:35:02"
+date: "2019-10-27 09:59:41"
 math: true
 output:
   blogdown::html_page:
@@ -131,59 +131,45 @@ p(\neg e) = 1 - p(e)
 <p><span class="math display">\[
 p(e_1 \cap e_2) = p(e_2 \cap e_1)
 \]</span></p>
-<p>For two events, <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span>, their intersection is found by;
-<span class="math display">\[
+<p>For two events, <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span>, their intersection is found by; <span class="math display">\[
 p(e_1 \&amp; e_2) = p(e_1\cap e_2) = p(e_1|e_2)p(e_2)
-\]</span>
-where <span class="math inline">\(p(e_1|e_2)\)</span> is a conditional probability, discussed in the next section.</p>
-<p>Conditional events refer to one event, <span class="math inline">\(e_1\)</span>, after another event, <span class="math inline">\(e_2\)</span>, is known. <span class="math inline">\(p(e_1|e_2)\)</span> represents the probability of <span class="math inline">\(e_1\)</span> given, or after knowing, <span class="math inline">\(e_2\)</span>. These can be defined by rearranging the multiplication rule as follows;
-<span class="math display">\[
+\]</span> where <span class="math inline">\(p(e_1|e_2)\)</span> is a conditional probability, discussed in the next section.</p>
+<p>Conditional events refer to one event, <span class="math inline">\(e_1\)</span>, after another event, <span class="math inline">\(e_2\)</span>, is known. <span class="math inline">\(p(e_1|e_2)\)</span> represents the probability of <span class="math inline">\(e_1\)</span> given, or after knowing, <span class="math inline">\(e_2\)</span>. These can be defined by rearranging the multiplication rule as follows; <span class="math display">\[
 p(e_1|e_2)p(e_2)=p(e_1\cap e_2) \Rightarrow p(e_1|e_2)= \frac{p(e_1\cap e_2)}{p(e_2)}
 \]</span></p>
-<p>Noting that, by the reflexively of joint events and the definition of the multiplication rule, <span class="math inline">\(p(e_1 \cap e_2) = p(e_2 \cap e_1)= p(e_2 | e_1) p(e_1)\)</span>, and so the above equation becomes;
-<span class="math display">\[
+<p>Noting that, by the reflexively of joint events and the definition of the multiplication rule, <span class="math inline">\(p(e_1 \cap e_2) = p(e_2 \cap e_1)= p(e_2 | e_1) p(e_1)\)</span>, and so the above equation becomes; <span class="math display">\[
 p(e_1|e_2)=\frac{p(e_2 | e_1) p(e_1)}{p(e_2)}
-\]</span>
-This equation is known as Bayes’ Theorem or Bayes’ Rule.</p>
-<p>A union (represented with the <span class="math inline">\(\cup\)</span> symbol) of events refers to at least one of multiple events occurring. For events, <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span>, their union would include the probability that <span class="math inline">\(e_1\)</span> occurs, the probability that or <span class="math inline">\(e_2\)</span> occurs, and the probability that both <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> occur. Colloquially this is talked about the probability of <span class="math inline">\(e_1\)</span> ‘or’ <span class="math inline">\(e_2\)</span>. Formally this is expressed and computed as;
-<span class="math display">\[
+\]</span> This equation is known as Bayes’ Theorem or Bayes’ Rule.</p>
+<p>A union (represented with the <span class="math inline">\(\cup\)</span> symbol) of events refers to at least one of multiple events occurring. For events, <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span>, their union would include the probability that <span class="math inline">\(e_1\)</span> occurs, the probability that or <span class="math inline">\(e_2\)</span> occurs, and the probability that both <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> occur. Colloquially this is talked about the probability of <span class="math inline">\(e_1\)</span> ‘or’ <span class="math inline">\(e_2\)</span>. Formally this is expressed and computed as; <span class="math display">\[
 p(e_1\text{ or } e_2) = p(e_1 \cup e_2) = p(e_1) + p(e_2) - p(e_1 \cap e_2)
 \]</span></p>
 <p>Where <span class="math inline">\(p(e_1 \cap e_2)\)</span> is a joint probability.</p>
-<p>Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent, this would mean that;
-<span class="math display">\[
+<p>Independence is a common assumption in many statistical techniques. Statisticians assume independence primarily because it simplifies the computation of certain probabilities. Events are said to be independent if knowing one event does not change the probability of the other event. Formally, if events <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent, this would mean that; <span class="math display">\[
 \begin{aligned}
 p(e_1|e_2) &amp;= p(e_1) \\
 p(e_2|e_1) &amp;= p(e_2)
 \end{aligned}
 \]</span></p>
-<p>If <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent, then their joint probability simplifies as so;
-<span class="math display">\[
+<p>If <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent, then their joint probability simplifies as so; <span class="math display">\[
 p(e_1 \cap e_2) = p(e_1|e_2)p(e_2) = p(e_1)p(e_2)
-\]</span>
-Where the last equality is only true if <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent (i.e. <span class="math inline">\(p(e_1|e_2)=p(e_1)\)</span>).</p>
-<p>Then the probability of their union simplifies to;
-<span class="math display">\[
+\]</span> Where the last equality is only true if <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent (i.e. <span class="math inline">\(p(e_1|e_2)=p(e_1)\)</span>).</p>
+<p>Then the probability of their union simplifies to; <span class="math display">\[
 \begin{aligned}
 p(e_1 \cup e_2) &amp;= p(e_1) + p(e_2) - p(e_1|e_2)p(e_2) \\
 &amp;= p(e_1) + p(e_2) - p(e_1)p(e_2)
 \end{aligned}
-\]</span>
-Where again, the last part of this equality is only true if <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent.</p>
-<p>Events <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are said to be mutually exclusive if the occurrence of either event precludes the occurrence of the other event. Formally mutual exclusivity means that;
-<span class="math display">\[
+\]</span> Where again, the last part of this equality is only true if <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are independent.</p>
+<p>Events <span class="math inline">\(e_1\)</span> and <span class="math inline">\(e_2\)</span> are said to be mutually exclusive if the occurrence of either event precludes the occurrence of the other event. Formally mutual exclusivity means that; <span class="math display">\[
 p(e_1 | e_2) = 0 \text{ and } p(e_2 | e_1) = 0
 \]</span></p>
-<p>If two events are mutually exclusive, then the probability of their joint event is;
-<span class="math display">\[
+<p>If two events are mutually exclusive, then the probability of their joint event is; <span class="math display">\[
 \begin{aligned}
 p(e_1 \cap e_2) &amp;= p(e_1|e_2)p(e_2) \\
 &amp;= 0*p(e_2) \\
 &amp;= 0
 \end{aligned}
 \]</span></p>
-<p>And the probability of their union simplifies to;
-<span class="math display">\[
+<p>And the probability of their union simplifies to; <span class="math display">\[
 \begin{aligned}
 p(e_1 \cup e_2) &amp;= p(e_1) + p(e_2) - p(e_1 \cap e_2) \\
 &amp;= p(e_1) + p(e_2) - 0 \\
@@ -259,14 +245,7 @@ Link to YouTube video on the circle problem
 - circle problem
 -->
 <!--
-### Probability Distributions
-Make YouTube videos on each. 
-- 1) Walk through properties from Wikipedia!
-- 2) Walk through some simulations in Python!
--->
-<!--
 ## Central limit theorem
-
 Sum of any random variable converges to normal distribution. 
 - show for binomial case, to justify Z test
 -->
@@ -282,12 +261,11 @@ E_{x}(g(x))=\int_{-\infty}^{\infty}g(x)f(x)d_{x}
 \]</span></p>
 <p>For discrete random variables, <span class="math inline">\(E(x)=\sum_xxp(x)\)</span>. For continuous random variables, <span class="math inline">\(f(x)dx\)</span> is conceptually <span class="math inline">\(p(x)\)</span> since it is the area under an infinately small segment of the probability function if <span class="math inline">\(f(x)\)</span> represents the height and <span class="math inline">\(dx\)</span> represents an infinately small width.</p>
 <p>Expectation is a linear operator, so for constants <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> and random variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>; <span class="math inline">\(E(ax+by+c) = aE(x)+bE(y)+c\)</span>.</p>
-<p>Expectation for joint random variables</p>
+<p>Expectation for joint random variables <!-- double check this... --></p>
 <p><span class="math display">\[
 E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)d_{s}d_{t}
 \]</span></p>
-<p>Marginalizing a distribution from a joint probability function (<span class="math inline">\(f(x,y)\)</span>) or a conditional probability function (<span class="math inline">\(f(x|y)\)</span>):
-<span class="math display">\[
+<p>Marginalizing a distribution from a joint probability function (<span class="math inline">\(f(x,y)\)</span>) or a conditional probability function (<span class="math inline">\(f(x|y)\)</span>): <span class="math display">\[
 \begin{aligned}
 f_x(x)&amp;=\int_yf_{x,y}(x,y)d_{y}\\
 &amp;=\int_y f_{x|y}(x|y)f_y(y)d_{y}\\
@@ -349,8 +327,7 @@ Var(g(x)) &= E((g(x)-E(g(x)))^2)\\
 \end{aligned}
 $$
 -->
-<p><a href="https://en.wikipedia.org/wiki/Law_of_total_variance">Law of total variance</a>: The variance of a variable <span class="math inline">\(X\)</span> can be decomposed into the variation in the variable that remains when <span class="math inline">\(Y\)</span> is known or irreducible error (<span class="math inline">\(E(Var(X|Y))\)</span>), and the variation that carries through from the uncertainty in the model estimation <span class="math inline">\(Y\)</span> (<span class="math inline">\(Var(E(X|Y)\)</span>).
-<span class="math display">\[
+<p><a href="https://en.wikipedia.org/wiki/Law_of_total_variance">Law of total variance</a>: The variance of a variable <span class="math inline">\(X\)</span> can be decomposed into the variation in the variable that remains when <span class="math inline">\(Y\)</span> is known or irreducible error (<span class="math inline">\(E(Var(X|Y))\)</span>), and the variation that carries through from the uncertainty in the model estimation <span class="math inline">\(Y\)</span> (<span class="math inline">\(Var(E(X|Y)\)</span>). <span class="math display">\[
 \begin{aligned}
 Var(X)&amp;=E(Var(X|Y))+Var(E(X|Y))
 \end{aligned}
@@ -371,11 +348,6 @@ Var(x_{n+1})    &amp;=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
 \end{aligned}
 \]</span></p>
 <!--
-Expectation and variance are the foundation for decision making
-- value function v(x) that assigns values to the outcomes x
-- If you know the distribution and value function, then you can directly compare choices based on their expected value
--->
-<!--
 ## Models as conditional expectations
 
 Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it's priors
@@ -383,24 +355,20 @@ Models output an expectation that depends on the model, its structure, its featu
 </div>
 <div id="information-theory" class="section level2">
 <h2>Information Theory</h2>
-<p>Information or Surprise is a measure of how unexpected an event was:
-<span class="math display">\[
+<p>Information or Surprise is a measure of how unexpected an event was: <span class="math display">\[
 I(x)=-log(f(x))=log\left(\frac{1}{f(x)} \right)
 \]</span></p>
-<p>Entropy is the expected surprise – higher entropy relates to more uncertainty:
-<span class="math display">\[
+<p>Entropy is the expected surprise – higher entropy relates to more uncertainty: <span class="math display">\[
 H(X)=E(I(x)) = E(-log(f(x)))  = \int_X f(x)I(x)dx = -\int_X f(x)log(f(x))d_x
 \]</span></p>
-<p>K-L Divergance, or relative entropy, is the expected distance between distributions with respect to one of the distributions:
-<span class="math display">\[
+<p>K-L Divergance, or relative entropy, is the expected distance between distributions with respect to one of the distributions: <span class="math display">\[
 \begin{aligned}
 D_{KL}(f_{x}(x);f_{y}(x)) &amp;= \int_{X} f_{x}(x)log\left(\frac{f_{y}(x)}{f_{x}(x)} \right)d_x\\
 &amp;= \int_X f_{x}(x)(log(f_{y}(x))-log(f_{x}(x))d_x \\
 \end{aligned}
 \]</span></p>
 <p>Divergance is an important concept in machine learning, because it can be a loss function when we are estimating a distribution <span class="math inline">\(f(x)\)</span> with a model <span class="math inline">\(\hat{f}(x)\)</span>. From a Bayesian perspective, Divergance between a prior and posterior measures the information gained by observing the data. Bayesian experimental design focuses on collecting data that maximizes the divergance between the posterior and prior, i.e. the most informative data.</p>
-<p>Mutual Information is the divergance from the joint distribution <span class="math inline">\(f_{x,y}(x,y)\)</span> to the joint when independence is assumed <span class="math inline">\(f_x(x)f_y(y)\)</span> – i.e. a measure of non-independence;
-<span class="math display">\[
+<p>Mutual Information is the divergance from the joint distribution <span class="math inline">\(f_{x,y}(x,y)\)</span> to the joint when independence is assumed <span class="math inline">\(f_x(x)f_y(y)\)</span> – i.e. a measure of non-independence; <span class="math display">\[
 I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_yd_x
 \]</span></p>
 </div>
@@ -408,14 +376,17 @@ I(x;y)=\int_{y} \int_{x} f_{x,y}(x,y)log\left(\frac{f(x,y)}{f(x)f(y)}  \right)d_
 <h2>Causal Graphs</h2>
 <ul>
 <li>Add some info from Judeal Pearl papers relevant to experimentation and inference?</li>
+<li>Just expressions of dependenc between random variables</li>
 </ul>
 </div>
 </div>
 <div id="causal-inference" class="section level1">
 <h1>Causal Inference</h1>
 <p>The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred.</p>
-<p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y(T=1)-Y(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
-<p>Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">CI video</a> at 10:00.</p>
+<p>From this perspective, there is a treatment assignment <span class="math inline">\(T\)</span> and an outcome of interest that depends on the treatment <span class="math inline">\(Y(T)\)</span>. Ideally, we would be able to compute the expected treatment effeoct for any individual <span class="math inline">\(E(Y_i(T=1)-Y_i(T=0))\)</span>, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions – e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements.</p>
+<p>Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. These methods are based on correlations but can be interpreted causally if additional assumptions are made. <!--
+Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes [CI video](https://www.youtube.com/watch?v=GTgZfCltMm8) at 10:00. 
+--></p>
 <div id="framework" class="section level2">
 <h2>Framework</h2>
 <p>The general setting I’ll refer to a causal graph where individuals <span class="math inline">\(i\)</span> are assigned to a particular condition indicated with <span class="math inline">\(Z_i\)</span>, they experience a condition indicated by <span class="math inline">\(W_i\)</span>, and an observed outcome for a level of the assigned and experienced condition <span class="math inline">\(Y_i(Z_i,W_i)\)</span>.</p>
@@ -452,17 +423,22 @@ Y_i(1,1)  &amp; \text{Outcome when assigned T and experienced T}
 <div id="key-assumptions" class="section level2">
 <h2>Key Assumptions</h2>
 <ul>
-<li>Exclusion: <span class="math inline">\(Y(0,W_i)=Y(1,W_i)=Y(W_i)\)</span>, or probabilistically <span class="math inline">\(p(Y_i(Z_i,W_i)|Z_i,W_i)=p(Y_i(Z_i,W_i)|W_i)\)</span>. The treatment assignment <span class="math inline">\(Z_i\)</span> influences the outcome only through the experiences condition <span class="math inline">\(W_i\)</span>, i.e. conditional on an experienced condition, the observed outcome <span class="math inline">\(Y_i\)</span> is independent of the assigned condition.</li>
+<li>Exclusion: <span class="math inline">\(Y(0,W_i)=Y(1,W_i)=Y(W_i)\)</span>, or probabilistically <span class="math inline">\(p(Y_i(Z_i,W_i)|Z_i,W_i)=p(Y_i(Z_i,W_i)|W_i)\)</span>. The treatment assignment <span class="math inline">\(Z_i\)</span> influences the outcome only through the experienced condition <span class="math inline">\(W_i\)</span>, i.e. conditional on the experienced condition, the observed outcome <span class="math inline">\(Y_i\)</span> is independent of the assigned condition.</li>
 </ul>
-<p>To simplify notation, I’ll assume exclusion past here and refer to observed outcomes as <span class="math inline">\(Y_i(W_i)\)</span>.</p>
+<p>To simplify notation, I’ll assume exclusion and refer to observed outcomes as <span class="math inline">\(Y_i(W_i)\)</span>.</p>
 <ul>
 <li>Stable units:</li>
 <li>units experience one version of the treatment</li>
 <li><p>one unit’s assignment doesn’t influence another unit’s outcome</p></li>
-<li><p>Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.</p></li>
+<li>Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds.</li>
+<li><p>Back door exclusion, or no endogeniety, i.e. no direct <span class="math inline">\(Z\rightarrow Y\)</span> link.</p></li>
 <li><p>Unconfoundedness: <span class="math inline">\(Y_i(0),Y_i(1) \perp Z_i | X_i\)</span>. Conditional on observed covariates (<span class="math inline">\(X_i\)</span>), assignments (<span class="math inline">\(Z_i\)</span>) and potential outcomes (<span class="math inline">\(Y(W_i)\)</span>) are independent.</p></li>
 </ul>
-<p>If unconfoundedness isn’t satisfied, i.e. the distributions of xi differ between levels of wi, then</p>
+<p>If unconfoundedness isn’t satisfied, i.e. the distributions of <span class="math inline">\(X_i\)</span> differs between levels of <span class="math inline">\(W_i\)</span>, then the Overlap assumption can be made to allow for the use of propensity scores.</p>
+<ul>
+<li>Overlap: <span class="math inline">\(0&lt; p(W_i|X_i) &lt; 1\)</span>, <span class="math inline">\(\forall X_i\)</span>: For all levels of the covariates <span class="math inline">\(X_i\)</span>, the probability of experiencing treatment is nonzero, and the probability of experiencing control is nonzero.</li>
+</ul>
+<p>This assumption allows the use of propensity scores <span class="math inline">\(\hat{p}(W_i|X_i)\)</span>, which are estimates of <span class="math inline">\(p(W_i|X_i)\)</span> that are used to match participants with similar propensity, or to reweight observed outcomes to account for propensity.</p>
 </div>
 <div id="common-methods" class="section level2">
 <h2>Common Methods</h2>

@@ -52,8 +52,6 @@ F1   &= 2\frac{prec*rec}{prec+rec}
 \end{aligned}
 $$
 
-
-
 R squared, RMSE
 
 Likelihood

@@ -27,10 +27,11 @@
   
     
   
-  <meta name="description" content="Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?">
+  <meta name="description" content="FB Marketing Science Phone Screen Prep about role:  product, marketing, sales departments create best practices for advertisers eg local restaurant wants to create ad on fb What should ad look like, where should the ad be placed, what optimization strategies should be done? Not client facing. Rather, collect research to generate insights for them.  Researcher;
+ understand stakeholder needs turn bus questions into data qs develop right methodology work with internal partners, analyze results communicate results through presentations, …  Who are consumers of our research?">
 
   
-  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/machine-learning/">
+  <link rel="alternate" hreflang="en-us" href="/MacStrelioff/insightstudying/facebook-deep-dive/">
 
   
 
@@ -119,7 +120,7 @@
   <link rel="icon" type="image/png" href="/MacStrelioff/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/MacStrelioff/img/icon-192.png">
 
-  <link rel="canonical" href="/MacStrelioff/insightstudying/machine-learning/">
+  <link rel="canonical" href="/MacStrelioff/insightstudying/facebook-deep-dive/">
 
   
   
@@ -134,21 +135,22 @@
   <meta property="twitter:creator" content="@macstrelioff">
   
   <meta property="og:site_name" content="Mac Strelioff">
-  <meta property="og:url" content="/MacStrelioff/insightstudying/machine-learning/">
-  <meta property="og:title" content="Machine Learning | Mac Strelioff">
-  <meta property="og:description" content="Considerations Bias-variance trade-off Overfitting and Underfitting Cost Functions and Metrics Feature Engineering Seperability Assumptions about form of relationship   Unsupervised Clustering k-means Agglomerative Devisive  Matrix Decomposition PCA Principle Components Analysis SVD Singular Value Decomposition  Text-based LDA Latent Direchilote Analysis LSA Latent Semantic Analysis   Supervised Regression Linear Support Vector Machine (SVM)  Classification Naive Bayes Discriminant Analysis KNN Logistic Regression   Ensemble Methods Trees and Forests Regression Classification   Open ended Template Raw data structure?"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
+  <meta property="og:url" content="/MacStrelioff/insightstudying/facebook-deep-dive/">
+  <meta property="og:title" content="Facebook | Mac Strelioff">
+  <meta property="og:description" content="FB Marketing Science Phone Screen Prep about role:  product, marketing, sales departments create best practices for advertisers eg local restaurant wants to create ad on fb What should ad look like, where should the ad be placed, what optimization strategies should be done? Not client facing. Rather, collect research to generate insights for them.  Researcher;
+ understand stakeholder needs turn bus questions into data qs develop right methodology work with internal partners, analyze results communicate results through presentations, …  Who are consumers of our research?"><meta property="og:image" content="/MacStrelioff/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-10-27T09:44:40&#43;00:00">
+  <meta property="article:published_time" content="2019-10-27T09:45:35&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-10-27T09:44:40&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2019-10-27T09:45:35&#43;00:00">
   
 
   
 
-  <title>Machine Learning | Mac Strelioff</title>
+  
+
+  <title>Facebook | Mac Strelioff</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -345,7 +347,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Machine Learning</h1>
+  <h1 itemprop="name">Facebook</h1>
 
   
 
@@ -354,8 +356,8 @@
 
 
 
-<meta content="2019-10-27 09:44:40 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-10-27 09:44:40 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-10-27 09:45:35 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-10-27 09:45:35 &#43;0000 UTC" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -379,7 +381,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/MacStrelioff/insightstudying/machine-learning/#disqus_thread"></a>
+  <a href="/MacStrelioff/insightstudying/facebook-deep-dive/#disqus_thread"></a>
   
 
   
@@ -458,333 +460,196 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<div id="TOC">
-<ul>
-<li><a href="#considerations">Considerations</a><ul>
-<li><a href="#bias-variance-trade-off">Bias-variance trade-off</a></li>
-<li><a href="#overfitting-and-underfitting">Overfitting and Underfitting</a></li>
-<li><a href="#cost-functions-and-metrics">Cost Functions and Metrics</a></li>
-<li><a href="#feature-engineering">Feature Engineering</a><ul>
-<li><a href="#seperability">Seperability</a></li>
-<li><a href="#assumptions-about-form-of-relationship">Assumptions about form of relationship</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#unsupervised">Unsupervised</a><ul>
-<li><a href="#clustering">Clustering</a><ul>
-<li><a href="#k-means">k-means</a></li>
-<li><a href="#agglomerative">Agglomerative</a></li>
-<li><a href="#devisive">Devisive</a></li>
-</ul></li>
-<li><a href="#matrix-decomposition">Matrix Decomposition</a><ul>
-<li><a href="#pca-principle-components-analysis">PCA Principle Components Analysis</a></li>
-<li><a href="#svd-singular-value-decomposition">SVD Singular Value Decomposition</a></li>
-</ul></li>
-<li><a href="#text-based">Text-based</a><ul>
-<li><a href="#lda-latent-direchilote-analysis">LDA Latent Direchilote Analysis</a></li>
-<li><a href="#lsa-latent-semantic-analysis">LSA Latent Semantic Analysis</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#supervised">Supervised</a><ul>
-<li><a href="#regression">Regression</a><ul>
-<li><a href="#linear">Linear</a></li>
-<li><a href="#support-vector-machine-svm">Support Vector Machine (SVM)</a></li>
-</ul></li>
-<li><a href="#classification">Classification</a><ul>
-<li><a href="#naive-bayes">Naive Bayes</a></li>
-<li><a href="#discriminant-analysis">Discriminant Analysis</a></li>
-<li><a href="#knn">KNN</a></li>
-<li><a href="#logistic-regression">Logistic Regression</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#ensemble-methods">Ensemble Methods</a><ul>
-<li><a href="#trees-and-forests">Trees and Forests</a><ul>
-<li><a href="#regression-1">Regression</a></li>
-<li><a href="#classification-1">Classification</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#open-ended-template">Open ended Template</a><ul>
-<li><a href="#raw-data-structure">Raw data structure?</a></li>
-<li><a href="#define-target-variable">Define target variable</a></li>
-<li><a href="#preprocession">Preprocession,</a></li>
-<li><a href="#feature-engineering-1">Feature engineering</a></li>
-<li><a href="#performance-metrics-and-how-they-apply">Performance metrics and how they apply</a></li>
-<li><a href="#cautions">Cautions:</a></li>
-<li><a href="#imagine-rolling-the-model-out">Imagine rolling the model out</a></li>
-<li><a href="#model-explainability">Model explainability</a><ul>
-<li><a href="#shapely-additive">Shapely additive</a></li>
-<li><a href="#locally-linear">Locally linear</a></li>
-<li><a href="#limitations">Limitations</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
 
-<div id="considerations" class="section level1">
-<h1>Considerations</h1>
-<div id="bias-variance-trade-off" class="section level2">
-<h2>Bias-variance trade-off</h2>
-</div>
-<div id="overfitting-and-underfitting" class="section level2">
-<h2>Overfitting and Underfitting</h2>
-<p>Cross Validation; Classification</p>
-<p>Assess by comparing a performance metric on training and testing data.</p>
-</div>
-<div id="cost-functions-and-metrics" class="section level2">
-<h2>Cost Functions and Metrics</h2>
-<p>Modeling: Validation metrics,</p>
-<p>metrics (precision, recall, F1)</p>
-<p><a href="https://en.wikipedia.org/wiki/Precision_and_recall">metrics</a></p>
-<p>Comparison of prec, rec, F1, <a href="https://stackoverflow.com/questions/44172162/f1-score-vs-roc-auc">here</a></p>
-<p><span class="math display">\[
-\begin{aligned}
-acc  &amp;= \frac{tp+tn}{tp+tn+fp+fn} \\
-prec &amp;= \frac{tp}{tp+fp}\\
-rec  &amp;= \frac{tp}{tp+fn}\\
-F1   &amp;= 2\frac{prec*rec}{prec+rec}
-\end{aligned}
-\]</span></p>
-<p>R squared, RMSE</p>
-<p>Likelihood</p>
-<p>regularisation (ridge, lasso),</p>
-</div>
-<div id="feature-engineering" class="section level2">
-<h2>Feature Engineering</h2>
-<div id="seperability" class="section level3">
-<h3>Seperability</h3>
-</div>
-<div id="assumptions-about-form-of-relationship" class="section level3">
-<h3>Assumptions about form of relationship</h3>
-<p>Process: feature selection, data cleaning / imputation with common pitfalls, model training, bias-variance trade-off</p>
-</div>
-</div>
-</div>
-<div id="unsupervised" class="section level1">
-<h1>Unsupervised</h1>
-<div id="clustering" class="section level2">
-<h2>Clustering</h2>
-<div id="k-means" class="section level3">
-<h3>k-means</h3>
-</div>
-<div id="agglomerative" class="section level3">
-<h3>Agglomerative</h3>
-</div>
-<div id="devisive" class="section level3">
-<h3>Devisive</h3>
-</div>
-</div>
-<div id="matrix-decomposition" class="section level2">
-<h2>Matrix Decomposition</h2>
-<div id="pca-principle-components-analysis" class="section level3">
-<h3>PCA Principle Components Analysis</h3>
-</div>
-<div id="svd-singular-value-decomposition" class="section level3">
-<h3>SVD Singular Value Decomposition</h3>
-</div>
-</div>
-<div id="text-based" class="section level2">
-<h2>Text-based</h2>
-<div id="lda-latent-direchilote-analysis" class="section level3">
-<h3>LDA Latent Direchilote Analysis</h3>
-</div>
-<div id="lsa-latent-semantic-analysis" class="section level3">
-<h3>LSA Latent Semantic Analysis</h3>
-</div>
-</div>
-</div>
-<div id="supervised" class="section level1">
-<h1>Supervised</h1>
-<div id="regression" class="section level2">
-<h2>Regression</h2>
-<div id="linear" class="section level3">
-<h3>Linear</h3>
-</div>
-<div id="support-vector-machine-svm" class="section level3">
-<h3>Support Vector Machine (SVM)</h3>
-</div>
-</div>
-<div id="classification" class="section level2">
-<h2>Classification</h2>
-<div id="naive-bayes" class="section level3">
-<h3>Naive Bayes</h3>
-</div>
-<div id="discriminant-analysis" class="section level3">
-<h3>Discriminant Analysis</h3>
-<div id="lda" class="section level4">
-<h4>LDA</h4>
-<p>When to use:</p>
+<!---
+
+--->
+<div id="fb-marketing-science-phone-screen-prep" class="section level1">
+<h1>FB Marketing Science Phone Screen Prep</h1>
+<div id="about-role" class="section level2">
+<h2>about role:</h2>
 <ul>
+<li>product, marketing, sales departments</li>
+<li>create best practices for advertisers</li>
+<li>eg local restaurant wants to create ad on fb</li>
+<li>What should ad look like, where should the ad be placed, what optimization strategies should be done?</li>
+<li>Not client facing.</li>
+<li>Rather, collect research to generate insights for them.</li>
+</ul>
+<p>Researcher;</p>
+<ul>
+<li>understand stakeholder needs</li>
+<li>turn bus questions into data qs</li>
+<li>develop right methodology</li>
+<li>work with internal partners,</li>
+<li>analyze results</li>
+<li>communicate results through presentations, …</li>
 <li></li>
+<li>Who are consumers of our research?</li>
+<li>projects 2-3 mo.</li>
+<li>2-3 ‘giant’ projects, and a few other underlying projects</li>
 </ul>
-<p>Pros:</p>
+<p>working with internal team - developing new recommendation - email campaign to local restaurants for recommendations of group strategy - recommendation package; - right optimization - right targeting strategy - optimization FB uses auction mechanism - could optimize for impressions, clicks, or conversions - sales team thinking link click objective is best for the restaurant advertisers - wait for a month to see impact on advertisers - then check how advertiser spending changes - did pre-post analyses - sees before emails / after emails - advertisers who saw emails increased spending relative to those that didn’t see emails.</p>
+</div>
+<div id="other-prep" class="section level2">
+<h2>Other Prep</h2>
+<p>Questions:</p>
 <ul>
-<li></li>
+<li>Do we have access to any purchasing data?</li>
+<li>Do we have data post-ad-click? – Yes from Facebook Pixels.</li>
+<li>Work culture?</li>
+<li><p>Talk a little about who my colleagues would be? Backgrounds, experience, … ?</p></li>
+<li><p>meeting structures?</p></li>
+<li>deliverable is publication – we need to publish work papers, and the quality of them is what is judged</li>
+<li>have access to everyone’s profiles and what they produce</li>
+<li>makes it good to form collaborations</li>
+<li><p>also a review board</p></li>
+<li>2 meetings</li>
+<li>working on project</li>
+<li>focus area meetings, different people from different organizations</li>
+<li><p>no formality about the meetings</p></li>
 </ul>
-<p>Cons:</p>
+<p>Onboarding process</p>
 <ul>
-<li></li>
+<li>people they need to meet and trainings they need to keep up on.</li>
+<li>onboarding buddy, many questions</li>
+<li>takes around 3 months to feel comfortable</li>
+<li>happens through reading mainly.</li>
 </ul>
-</div>
-<div id="qda" class="section level4">
-<h4>QDA</h4>
-<p>When to use:</p>
+<p>Based on feedback,</p>
+<div id="behavioral" class="section level3">
+<h3>Behavioral</h3>
+<p>Why this role?</p>
 <ul>
-<li></li>
+<li>Similar to consulting work that I enjoy.</li>
+<li>Use analytics to drive decisions</li>
 </ul>
-<p>Pros:</p>
+<p>Why FB?</p>
 <ul>
-<li></li>
+<li>Huge company.</li>
+<li>Probably learning opportunities</li>
+<li>What I’ve heard of the culture – Informal hierarchy, potential for ownership.</li>
 </ul>
-<p>Cons:</p>
+<ol style="list-style-type: decimal">
+<li>Research areas</li>
+</ol>
 <ul>
-<li></li>
+<li>Decision making</li>
+<li>Reinforcement learning</li>
 </ul>
-</div>
-</div>
-<div id="knn" class="section level3">
-<h3>KNN</h3>
-<p>When to use:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Partner and influence cross functionally</li>
+</ol>
+<p>PredictIt:</p>
 <ul>
-<li></li>
+<li>I was interested in whether there were opportunities for arbitrage in these markets.</li>
+<li>I established a data sharing partnership with a large online prediction market.</li>
+<li>I involved faculty sponsors – First Bill, then Michael.</li>
+<li>I involved my friend Ryan to write web scrapers that texted us whenever an opportunity arised.</li>
+<li>Overall this project is a strong demonstration of by ability to forge professional cross functional relationships.</li>
 </ul>
-<p>Pros:</p>
+<p>Consulting:</p>
+<p>UCI Ed department.</p>
 <ul>
-<li></li>
+<li>Dave came to us with a dataset from two courses taught different ways.</li>
 </ul>
-<p>Cons:</p>
+<p>Insight:</p>
 <ul>
-<li></li>
+<li>I worked with a small startup to model conversion from a free trial to a paied customer.</li>
 </ul>
-</div>
-<div id="logistic-regression" class="section level3">
-<h3>Logistic Regression</h3>
-<p>When to use:</p>
+<p>TAing:</p>
 <ul>
-<li></li>
+<li>I taught statistics for a few years.</li>
 </ul>
-<p>Pros:</p>
+</div>
+<div id="marketing" class="section level3">
+<h3>Marketing</h3>
+<p>Metrics:</p>
 <ul>
-<li></li>
+<li>Impressions</li>
+<li>Link Clicks</li>
+<li>Pageviews</li>
+<li>Deeper funnel conversions recorded via fb pixles</li>
+<li>Cost per click</li>
+<li>Post engagements on business page</li>
+<li>Session duration</li>
+<li>Pages/session</li>
+<li><p>conversion funnel</p></li>
+<li>per week</li>
+<li><p>per month</p></li>
 </ul>
-<p>Cons:</p>
+</div>
+</div>
+<div id="maime-tips" class="section level2">
+<h2>Maime tips:</h2>
 <ul>
-<li></li>
+<li>If it’s a seperate org interview is prob still similar.</li>
+<li>Maime didn’t have a great experience with SMG group (small medium business)</li>
+<li>Maime’s cohort they didn’t get back to someone until towards the end of the year. They were on a hiring freeze.</li>
+<li>Maime was for incoming PhD grad role.</li>
+<li>Maime tech screen;</li>
+<li>half coding, half analytics, half SQL</li>
+<li>don’t code for python algos, coding was only SQL</li>
+<li>In general, product/open ended, and statsy questions. Like 3 open ended and a stats session.</li>
+<li>very very deep dive.</li>
+<li>Should be ready for an analytics problem with fb marketplace.</li>
+<li>They expect you to know facebook because it’s so widely known</li>
+<li>Get a lot of context, deep dive products, pages, news feed, events. Know them well.</li>
+<li>Know how they generate revenue, what metrics they care about.</li>
+<li>Should be able to rattle off like 10 metrics for whatever question.</li>
+<li>Especially the case for well known companies.</li>
+<li>Should already know metrics, not need to brainstorm them on the spot.</li>
+<li>Complicated queries – Lots of logical stuff, tricky questions.</li>
+<li>Be comfortable with medium level on Leetcode and hacker rank.</li>
 </ul>
+<p>In general, interviewing well – know how to ask for help for SQL and clarificaion. Verbalize what you’re stuck on and need help on.</p>
+<p>Draw intermediate tables. If I could get here – I’d .. . But I’m stuck on this step 1 part.</p>
+<p>FB really good at accomidating schedule. Maime got onsite quickly. Should see it through, I might love the team or like working there. Could get a good compensation package. Recruiters will ask where you’re interviewing, you can tell them.</p>
+<p>Hesitate when they ask about how much the offer is… .</p>
 </div>
 </div>
-</div>
-<div id="ensemble-methods" class="section level1">
-<h1>Ensemble Methods</h1>
-<p>boosting, bagging</p>
-<p>XGBoost, NLP (bag of words, vector-space models, sentiment analysis), Rec systems, Collab filtering, Optimization, XGBoost</p>
-<div id="trees-and-forests" class="section level2">
-<h2>Trees and Forests</h2>
-<p>Gini Impurity: <span class="math display">\[
-\begin{aligned}
-m:&amp;\text{ Region} \\
-k:&amp; \text{ Class} \\
-G =&amp; \Sigma_k \hat{p}_{m,k}(1-\hat{p}_{m,k})
-\\=&amp; 1 - \Sigma_k \hat{p}_{m,k}^2
-\end{aligned}
-\]</span></p>
-<p>Decrease in Impurity <span class="math display">\[
-\begin{aligned}
-t:&amp;\text{ Node} \\
-N_t:&amp;\text{ Samples at node }t \\
-s_t:&amp;\text{ Split }t \text{ into } t_L,t_R\\
-\Delta i(s_t,t)=&amp; i(t) - \frac{N_L}{N_t} i(t_L) - \frac{N_R}{N_t} i(t_R)
-\end{aligned}
-\]</span></p>
-<p>Mean Decrease in Impurity: <span class="math display">\[
-\begin{aligned}
-T:&amp; \text{Trees} \\
-N_T:&amp; \text{Number of trees} \\
-t:&amp;\text{ Nodes} \\
-s_t:&amp;\text{ Split }t \text{ into } t_L,t_R\\
-v(s_t):&amp;\text{Variable split on at } s_t \\
-p(t):&amp; \text{Proportion of total samples at node } t \\
-Imp(X_m)=&amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta i(s_t,t)
-\end{aligned}
-\]</span></p>
-<p><a href="https://towardsdatascience.com/explaining-feature-importance-by-example-of-a-random-forest-d9166011959e">Good blog on analysis of feature importance</a></p>
-<p>Also see <a href="https://github.com/slundberg/shap">SHAP</a> for interpreting predictions from tree models!</p>
-<p>Benefits of trees over OLS</p>
-<p><a href="https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables" class="uri">https://www.quora.com/How-does-a-random-forest-fix-regression-problems-non-normality-heteroscedasticity-multicollinearity-outliers-missing-values-and-categorical-variables</a></p>
-<div id="regression-1" class="section level3">
-<h3>Regression</h3>
-</div>
-<div id="classification-1" class="section level3">
-<h3>Classification</h3>
-<p>Deep learning, Rec systems, Content and collaborative filtering, Optimization, Probabalistic programming</p>
-<div id="assessment" class="section level4">
-<h4>Assessment</h4>
-<p>Confusion matrix, F1, precision-recall curve</p>
-<p>ROC, AUC</p>
-</div>
-</div>
-</div>
-</div>
-<div id="open-ended-template" class="section level1">
-<h1>Open ended Template</h1>
-<div id="raw-data-structure" class="section level2">
-<h2>Raw data structure?</h2>
+<div id="fb-marketing-science-recruiter-call" class="section level1">
+<h1>FB Marketing science Recruiter call</h1>
+<p><a href="https://www.facebook.com/careers/jobs/655936761589571/">job ad</a></p>
+<p><a href="https://www.facebook.com/careers/jobs/2265158820402695/">Similar ds job ad</a></p>
 <ul>
-<li>Table of information about consumer</li>
-<li>Table of transaction history</li>
+<li>Recently graduated with PhD in cognitive science.</li>
+<li><p>Research topic focused on decision making and reinforcement learning – including studying the psychological mechanisms behind effective advertising. I also earned a MS in statistics, and recently finished the Insight Data Science Fellows program, and am looking for positions as a data scientist in the Bay Area.</p></li>
+<li><p>I like the idea of working with small businesses.</p></li>
+<li>Q: What would the day to day work look like for this position?</li>
+<li>What sort of data would I have access to? .. Data from a partner company such as conversions on the small business webpages?</li>
+<li>Could you give me an example of some recent projects that people in this position have worked on?</li>
+<li><p>How does this position relate to data science roles?</p></li>
+<li><p>Pinterest onsite.. expedite process?</p></li>
 </ul>
-</div>
-<div id="define-target-variable" class="section level2">
-<h2>Define target variable</h2>
-<p>e.g. Fraud would be if a consumer calls and labels a transaction as fraud.</p>
-</div>
-<div id="preprocession" class="section level2">
-<h2>Preprocession,</h2>
+<p>Marketing science</p>
 <ul>
-<li>EDA - distributions, correlations</li>
+<li>7 teams to better serve ads clients to help them get best ROI on ads, and measure effectiveness of ads</li>
+<li>Share this data with the advertisers to give them new strategy ideas</li>
+<li>Teams intersect product and data science, and others on research.</li>
+<li>Research team does a lot of experimentation, causal inferece, hypothesis testing, …</li>
+<li>Research focused on understanding user behvior, understanding why people click ads or spend time on different pages. Typically from research or economist background.</li>
+<li>Have aobut 5 researchers, looking to add three more before the end of the year (1 offer out now).</li>
+<li>Might add a few more next year.</li>
+<li>Team centralized in Menlo park.</li>
+<li>This is the SBG team.</li>
+<li>Tools are Python, R, SQL, SPSS. Mostly R and Python.</li>
 </ul>
-</div>
-<div id="feature-engineering-1" class="section level2">
-<h2>Feature engineering</h2>
-</div>
-<div id="performance-metrics-and-how-they-apply" class="section level2">
-<h2>Performance metrics and how they apply</h2>
+<p>How is researcher different from DS? - Researcher focused more on research, hypothesis development and designing and executing measurements, and publishing results. - DS teams more focused on developing stats ML methodology and productionizing them as products. More model building. - Researcher more client facing with advertisers. Work with internal ad agencies they hire who then interface with esxternal clients.</p>
 <ul>
-<li>Precision</li>
-<li>Recall</li>
-<li>…</li>
+<li>sample not representative of population</li>
+<li>eg impace of nationwide ad campaign</li>
+<li>only have data for UK</li>
+<li>only from london</li>
 </ul>
-</div>
-<div id="cautions" class="section level2">
-<h2>Cautions:</h2>
+<p>Interview process</p>
 <ul>
-<li>Don’t mention models you aren’t familiar with</li>
+<li>45min video conference with a manager</li>
+<li>onsite with meeting with 4-5 members on the team</li>
+<li>quick exploratory conversation with member of the org</li>
+<li><p>offer</p></li>
+<li><p>Ideally video this week, onsite nextweek, and final call next week.</p></li>
 </ul>
-</div>
-<div id="imagine-rolling-the-model-out" class="section level2">
-<h2>Imagine rolling the model out</h2>
-<ul>
-<li>What issues might arise?</li>
-<li>What actions do you take in production?</li>
-</ul>
-</div>
-<div id="model-explainability" class="section level2">
-<h2>Model explainability</h2>
-<div id="shapely-additive" class="section level3">
-<h3>Shapely additive</h3>
-</div>
-<div id="locally-linear" class="section level3">
-<h3>Locally linear</h3>
-<ul>
-<li>eg <a href="https://www.oreilly.com/learning/introduction-to-local-interpretable-model-agnostic-explanations-lime">here</a></li>
-</ul>
-</div>
-<div id="limitations" class="section level3">
-<h3>Limitations</h3>
-<p>Limitations described a little in the FLowcast paper <a href="https://flowcast.ai/Flowcast_whitepaper_-_Explainability.pdf">here</a></p>
-<ul>
-<li>biased for collinear features?</li>
-</ul>
-</div>
-</div>
 </div>
 
     </div>
@@ -923,14 +788,14 @@ Imp(X_m)=&amp;\frac{1}{N_T} \Sigma_{T}\Sigma_{t\in T:v(s_t)\in X_m} p(t) \Delta 
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/MacStrelioff/insightstudying/pinterest-deep-dive/" rel="next">Pinterest</a>
+    <a href="/MacStrelioff/insightstudying/probability-statistics/" rel="next">Probability and Statistics</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/MacStrelioff/insightstudying/business-sense/" rel="prev">Product Sense</a>
+    <a href="/MacStrelioff/insightstudying/square-deep-dive/" rel="prev">Square</a>
   </div>
   
 </div>

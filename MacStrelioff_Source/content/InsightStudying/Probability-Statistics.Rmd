@@ -230,15 +230,7 @@ Link to YouTube video on the circle problem
 -->
 
 <!--
-### Probability Distributions
-Make YouTube videos on each. 
-- 1) Walk through properties from Wikipedia!
-- 2) Walk through some simulations in Python!
--->
-
-<!--
 ## Central limit theorem
-
 Sum of any random variable converges to normal distribution. 
 - show for binomial case, to justify Z test
 -->
@@ -259,7 +251,7 @@ For discrete random variables, $E(x)=\sum_xxp(x)$. For continuous random variabl
 
 Expectation is a linear operator, so for constants $a$, $b$, and $c$ and random variables $x$ and $y$; $E(ax+by+c) = aE(x)+bE(y)+c$.
 
-Expectation for joint random variables
+Expectation for joint random variables <!-- double check this... -->
 
 $$
 E_{x,y}(g(x,y))=\int_{s=x}\int_{t=y}g(s,t)f(s,t)d_{s}d_{t}
@@ -368,12 +360,6 @@ Var(x_{n+1})    &=E(Var(x_{n+1})) + Var(E(x_{n+1}|\mu_{n})\\
 $$
 
 <!--
-Expectation and variance are the foundation for decision making
-- value function v(x) that assigns values to the outcomes x
-- If you know the distribution and value function, then you can directly compare choices based on their expected value
--->
-
-<!--
 ## Models as conditional expectations
 
 Models output an expectation that depends on the model, its structure, its features, and in Bayesian settings it's priors
@@ -409,14 +395,18 @@ $$
 ## Causal Graphs
 
 - Add some info from Judeal Pearl papers relevant to experimentation and inference?
+- Just expressions of dependenc between random variables
 
 # Causal Inference
 
 The ultimate goal of most statistical work is to discover the causes of some outcome so that the outcome can be controlled. Hence, it is important to understand when causality can be inferred. 
 
-From this perspective, there is a treatment assignment $T$ and an outcome of interest that depends on the treatment $Y(T)$. Ideally, we would be able to compute the expected treatment effeoct for any individual $E(Y(T=1)-Y(T=0))$, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions -- e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements. 
+From this perspective, there is a treatment assignment $T$ and an outcome of interest that depends on the treatment $Y(T)$. Ideally, we would be able to compute the expected treatment effeoct for any individual $E(Y_i(T=1)-Y_i(T=0))$, but it is impossible to assign an individual to both variants of the treatment under the exact same conditions -- e.g. one must be done at a later time than the other. Causal inference approaches specify the assumptions, models, and designs neeed to make causal statements. 
 
-Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes [CI video](https://www.youtube.com/watch?v=GTgZfCltMm8) at 10:00. 
+Most methods like t-tests and ANOVAs compare the observed outcomes in the treatment group to the observed outcomes in the control group. These methods are based on correlations but can be interpreted causally if additional assumptions are made.
+<!--
+Causal inference methods can give a more powerful comparison between observed outcomes and counterfactual outcomes [CI video](https://www.youtube.com/watch?v=GTgZfCltMm8) at 10:00. 
+-->
 
 ## Framework 
 
@@ -460,20 +450,24 @@ In most lab studies this setup simplifies because $Z_i=W_i$ since there is no po
 
 ## Key Assumptions
 
-- Exclusion: $Y(0,W_i)=Y(1,W_i)=Y(W_i)$, or probabilistically $p(Y_i(Z_i,W_i)|Z_i,W_i)=p(Y_i(Z_i,W_i)|W_i)$. The treatment assignment $Z_i$ influences the outcome only through the experiences condition $W_i$, i.e. conditional on an experienced condition, the observed outcome $Y_i$ is independent of the assigned condition. 
+- Exclusion: $Y(0,W_i)=Y(1,W_i)=Y(W_i)$, or probabilistically $p(Y_i(Z_i,W_i)|Z_i,W_i)=p(Y_i(Z_i,W_i)|W_i)$. The treatment assignment $Z_i$ influences the outcome only through the experienced condition $W_i$, i.e. conditional on the experienced condition, the observed outcome $Y_i$ is independent of the assigned condition. 
 
-To simplify notation, I'll assume exclusion past here and refer to observed outcomes as $Y_i(W_i)$.
+To simplify notation, I'll assume exclusion and refer to observed outcomes as $Y_i(W_i)$.
 
 - Stable units: 
 - units experience one version of the treatment
 - one unit's assignment doesn't influence another unit's outcome
 
 - Endogeneity refers to a relationship between covariates and the error terms, e.g. through unobserved confounds. 
-
+- Back door exclusion, or no endogeniety, i.e. no direct $Z\rightarrow Y$ link. 
 
 - Unconfoundedness: $Y_i(0),Y_i(1) \perp Z_i | X_i$. Conditional on observed covariates ($X_i$), assignments ($Z_i$) and potential outcomes ($Y(W_i)$) are independent. 
 
-If unconfoundedness isn't satisfied, i.e. the distributions of xi differ between levels of wi, then 
+If unconfoundedness isn't satisfied, i.e. the distributions of $X_i$ differs between levels of $W_i$, then the Overlap assumption can be made to allow for the use of propensity scores. 
+
+- Overlap: $0< p(W_i|X_i) < 1$,  $\forall X_i$: For all levels of the covariates $X_i$, the probability of experiencing treatment is nonzero, and the probability of experiencing control is nonzero. 
+
+This assumption allows the use of propensity scores $\hat{p}(W_i|X_i)$, which are estimates of $p(W_i|X_i)$ that are used to match participants with similar propensity, or to reweight observed outcomes to account for propensity. 
 
 
 ## Common Methods
