@@ -463,43 +463,49 @@ To simplify notation, I'll assume exclusion and refer to observed outcomes as $Y
 
 - Unconfoundedness: $Y_i(0),Y_i(1) \perp Z_i | X_i$. Conditional on observed covariates ($X_i$), assignments ($Z_i$) and potential outcomes ($Y(W_i)$) are independent. 
 
-If unconfoundedness isn't satisfied, i.e. the distributions of $X_i$ differs between levels of $W_i$, then the Overlap assumption can be made to allow for the use of propensity scores. 
+If unconfoundedness isn't satisfied, i.e. the distributions of $X_i$ differs between levels of $W_i$, then the overlap assumption can be made to allow for the use of propensity scores. 
 
 - Overlap: $0< p(W_i|X_i) < 1$,  $\forall X_i$: For all levels of the covariates $X_i$, the probability of experiencing treatment is nonzero, and the probability of experiencing control is nonzero. 
 
-This assumption allows the use of propensity scores $\hat{p}(W_i|X_i)$, which are estimates of $p(W_i|X_i)$ that are used to match participants with similar propensity, or to reweight observed outcomes to account for propensity. 
-
+This assumption allows the use of propensity scores $\hat{p}(W_i|X_i)$, which are estimates of $p(W_i|X_i)$ that are used to match units with similar propensity, or to reweight observed outcomes to account for propensity. 
 
 ## Common Methods
 
 Some summarized in this [Medium Post](https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268)
 
-
-
 ### Diff in Diff
 
-Contexts and example ..
+Contexts:
+
+- A treatment group and a comperable control group can be observed before and after the treatment is applied.
 
 Assumptions and requirements: 
 
 - Requires observed data on a control group pre and post treatment
-- Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.
-- Assumes the temporal dimension isn't informative. 
+- Parallel trends: Assumes the trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred. This way the mean difference can be accounted for without accounting for triend other than through the control group.
 
 Model:
 
 $$
 \begin{aligned}
-I_{T}&:\text{Indicator for treatment group} \\
-I_{Post}&:\text{Indicator for post treatment} \\
+I_{T}&= \begin{cases}
+0, & \text{Experienced Control} \\
+1, & \text{Experienced Treatment} 
+\end{cases}\\
+I_{Post}&= \begin{cases}
+0, &\text{Before Time of Treatment}\\
+1, &\text{After Time of Treatment}
+\end{cases}\\
 Y &= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 \end{aligned}
 $$
 
+Here $\beta_3$ captures the treatment effect, $\beta_0$ captures the mean of the control group before the treatment was applied, $\beta_1$ captures the difference between the mean of the treatment group and the mean of the control group before treatment was applied, $\beta_2$ captures the difference in the control group mean after the treatment was applied due to confounds that are assumed to influence the control and treatment groups equivalently. 
 
-### Causal Impact
+### Synthetic Control and Causal Impact
 
-Causal impact was developed by Google, docs [here](https://google.github.io/CausalImpact/CausalImpact.html).
+Synthetic control approaches build a model of the counterfactual. 
+Causal impact is a specific method for building a synthetic control, and was developed by Google -- docs [here](https://google.github.io/CausalImpact/CausalImpact.html).
 
 Context: 
 

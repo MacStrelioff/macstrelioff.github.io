@@ -38,7 +38,7 @@
     <item>
       <title>Probability and Statistics</title>
       <link>/MacStrelioff/insightstudying/probability-statistics/</link>
-      <pubDate>Sun, 27 Oct 2019 09:59:41 +0000</pubDate>
+      <pubDate>Sun, 27 Oct 2019 10:38:57 +0000</pubDate>
       
       <guid>/MacStrelioff/insightstudying/probability-statistics/</guid>
       <description>
@@ -59,7 +59,7 @@
 &lt;li&gt;&lt;a href=&#34;#key-assumptions&#34;&gt;Key Assumptions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#common-methods&#34;&gt;Common Methods&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#diff-in-diff&#34;&gt;Diff in Diff&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#causal-impact&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#synthetic-control-and-causal-impact&#34;&gt;Synthetic Control and Causal Impact&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#synthetic-controls&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#iv-analysis&#34;&gt;IV Analysis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#regression-discontinuity&#34;&gt;Regression Discontinuity&lt;/a&gt;&lt;/li&gt;
@@ -106,7 +106,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#causal-inference-methods&#34;&gt;Causal Inference Methods&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#difference-in-differences&#34;&gt;Difference in Differences&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#causal-impact-1&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#causal-impact&#34;&gt;Causal Impact&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#synthetic-controls-1&#34;&gt;Synthetic Controls&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#propensity-score-matching-1&#34;&gt;Propensity Score Matching&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#fixed-effects-regression-1&#34;&gt;Fixed Effects Regression&lt;/a&gt;&lt;/li&gt;
@@ -462,36 +462,45 @@ Y_i(1,1)  &amp;amp; \text{Outcome when assigned T and experienced T}
 &lt;li&gt;&lt;p&gt;Back door exclusion, or no endogeniety, i.e. no direct &lt;span class=&#34;math inline&#34;&gt;\(Z\rightarrow Y\)&lt;/span&gt; link.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Unconfoundedness: &lt;span class=&#34;math inline&#34;&gt;\(Y_i(0),Y_i(1) \perp Z_i | X_i\)&lt;/span&gt;. Conditional on observed covariates (&lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt;), assignments (&lt;span class=&#34;math inline&#34;&gt;\(Z_i\)&lt;/span&gt;) and potential outcomes (&lt;span class=&#34;math inline&#34;&gt;\(Y(W_i)\)&lt;/span&gt;) are independent.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If unconfoundedness isn’t satisfied, i.e. the distributions of &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; differs between levels of &lt;span class=&#34;math inline&#34;&gt;\(W_i\)&lt;/span&gt;, then the Overlap assumption can be made to allow for the use of propensity scores.&lt;/p&gt;
+&lt;p&gt;If unconfoundedness isn’t satisfied, i.e. the distributions of &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; differs between levels of &lt;span class=&#34;math inline&#34;&gt;\(W_i\)&lt;/span&gt;, then the overlap assumption can be made to allow for the use of propensity scores.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Overlap: &lt;span class=&#34;math inline&#34;&gt;\(0&amp;lt; p(W_i|X_i) &amp;lt; 1\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\forall X_i\)&lt;/span&gt;: For all levels of the covariates &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt;, the probability of experiencing treatment is nonzero, and the probability of experiencing control is nonzero.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This assumption allows the use of propensity scores &lt;span class=&#34;math inline&#34;&gt;\(\hat{p}(W_i|X_i)\)&lt;/span&gt;, which are estimates of &lt;span class=&#34;math inline&#34;&gt;\(p(W_i|X_i)\)&lt;/span&gt; that are used to match participants with similar propensity, or to reweight observed outcomes to account for propensity.&lt;/p&gt;
+&lt;p&gt;This assumption allows the use of propensity scores &lt;span class=&#34;math inline&#34;&gt;\(\hat{p}(W_i|X_i)\)&lt;/span&gt;, which are estimates of &lt;span class=&#34;math inline&#34;&gt;\(p(W_i|X_i)\)&lt;/span&gt; that are used to match units with similar propensity, or to reweight observed outcomes to account for propensity.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;common-methods&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Common Methods&lt;/h2&gt;
 &lt;p&gt;Some summarized in this &lt;a href=&#34;https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268&#34;&gt;Medium Post&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;diff-in-diff&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Diff in Diff&lt;/h3&gt;
-&lt;p&gt;Contexts and example ..&lt;/p&gt;
+&lt;p&gt;Contexts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A treatment group and a comperable control group can be observed before and after the treatment is applied.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Assumptions and requirements:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Requires observed data on a control group pre and post treatment&lt;/li&gt;
-&lt;li&gt;Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.&lt;/li&gt;
-&lt;li&gt;Assumes the temporal dimension isn’t informative.&lt;/li&gt;
+&lt;li&gt;Parallel trends: Assumes the trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred. This way the mean difference can be accounted for without accounting for triend other than through the control group.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Model:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
-I_{T}&amp;amp;:\text{Indicator for treatment group} \\
-I_{Post}&amp;amp;:\text{Indicator for post treatment} \\
+I_{T}&amp;amp;= \begin{cases}
+0, &amp;amp; \text{Experienced Control} \\
+1, &amp;amp; \text{Experienced Treatment} 
+\end{cases}\\
+I_{Post}&amp;amp;= \begin{cases}
+0, &amp;amp;\text{Before Time of Treatment}\\
+1, &amp;amp;\text{After Time of Treatment}
+\end{cases}\\
 Y &amp;amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 \end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here &lt;span class=&#34;math inline&#34;&gt;\(\beta_3\)&lt;/span&gt; captures the treatment effect, &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; captures the mean of the control group before the treatment was applied, &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; captures the difference between the mean of the treatment group and the mean of the control group before treatment was applied, &lt;span class=&#34;math inline&#34;&gt;\(\beta_2\)&lt;/span&gt; captures the difference in the control group mean after the treatment was applied due to confounds that are assumed to influence the control and treatment groups equivalently.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;causal-impact&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Causal Impact&lt;/h3&gt;
-&lt;p&gt;Causal impact was developed by Google, docs &lt;a href=&#34;https://google.github.io/CausalImpact/CausalImpact.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;synthetic-control-and-causal-impact&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Synthetic Control and Causal Impact&lt;/h3&gt;
+&lt;p&gt;Synthetic control approaches build a model of the counterfactual. Causal impact is a specific method for building a synthetic control, and was developed by Google – docs &lt;a href=&#34;https://google.github.io/CausalImpact/CausalImpact.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Context:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Want to estimate the counterfactual for an observed timeseries, pre and post treatment.&lt;/li&gt;
@@ -980,7 +989,7 @@ models for when the errors aren&#39;t assumed to be normally distributed
 &lt;div id=&#34;difference-in-differences&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Difference in Differences&lt;/h2&gt;
 &lt;/div&gt;
-&lt;div id=&#34;causal-impact-1&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;causal-impact&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Causal Impact&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div id=&#34;synthetic-controls-1&#34; class=&#34;section level2&#34;&gt;

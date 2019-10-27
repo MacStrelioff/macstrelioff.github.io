@@ -1,7 +1,7 @@
 ---
 title: "Probability and Statistics"
 author: "Mac Strelioff"
-date: "2019-10-27 09:59:41"
+date: "2019-10-27 10:38:57"
 math: true
 output:
   blogdown::html_page:
@@ -31,7 +31,7 @@ linktitle: Probability and Statistics
 <li><a href="#key-assumptions">Key Assumptions</a></li>
 <li><a href="#common-methods">Common Methods</a><ul>
 <li><a href="#diff-in-diff">Diff in Diff</a></li>
-<li><a href="#causal-impact">Causal Impact</a></li>
+<li><a href="#synthetic-control-and-causal-impact">Synthetic Control and Causal Impact</a></li>
 <li><a href="#synthetic-controls">Synthetic Controls</a></li>
 <li><a href="#iv-analysis">IV Analysis</a></li>
 <li><a href="#regression-discontinuity">Regression Discontinuity</a></li>
@@ -78,7 +78,7 @@ linktitle: Probability and Statistics
 </ul></li>
 <li><a href="#causal-inference-methods">Causal Inference Methods</a><ul>
 <li><a href="#difference-in-differences">Difference in Differences</a></li>
-<li><a href="#causal-impact-1">Causal Impact</a></li>
+<li><a href="#causal-impact">Causal Impact</a></li>
 <li><a href="#synthetic-controls-1">Synthetic Controls</a></li>
 <li><a href="#propensity-score-matching-1">Propensity Score Matching</a></li>
 <li><a href="#fixed-effects-regression-1">Fixed Effects Regression</a></li>
@@ -434,36 +434,45 @@ Y_i(1,1)  &amp; \text{Outcome when assigned T and experienced T}
 <li><p>Back door exclusion, or no endogeniety, i.e. no direct <span class="math inline">\(Z\rightarrow Y\)</span> link.</p></li>
 <li><p>Unconfoundedness: <span class="math inline">\(Y_i(0),Y_i(1) \perp Z_i | X_i\)</span>. Conditional on observed covariates (<span class="math inline">\(X_i\)</span>), assignments (<span class="math inline">\(Z_i\)</span>) and potential outcomes (<span class="math inline">\(Y(W_i)\)</span>) are independent.</p></li>
 </ul>
-<p>If unconfoundedness isn’t satisfied, i.e. the distributions of <span class="math inline">\(X_i\)</span> differs between levels of <span class="math inline">\(W_i\)</span>, then the Overlap assumption can be made to allow for the use of propensity scores.</p>
+<p>If unconfoundedness isn’t satisfied, i.e. the distributions of <span class="math inline">\(X_i\)</span> differs between levels of <span class="math inline">\(W_i\)</span>, then the overlap assumption can be made to allow for the use of propensity scores.</p>
 <ul>
 <li>Overlap: <span class="math inline">\(0&lt; p(W_i|X_i) &lt; 1\)</span>, <span class="math inline">\(\forall X_i\)</span>: For all levels of the covariates <span class="math inline">\(X_i\)</span>, the probability of experiencing treatment is nonzero, and the probability of experiencing control is nonzero.</li>
 </ul>
-<p>This assumption allows the use of propensity scores <span class="math inline">\(\hat{p}(W_i|X_i)\)</span>, which are estimates of <span class="math inline">\(p(W_i|X_i)\)</span> that are used to match participants with similar propensity, or to reweight observed outcomes to account for propensity.</p>
+<p>This assumption allows the use of propensity scores <span class="math inline">\(\hat{p}(W_i|X_i)\)</span>, which are estimates of <span class="math inline">\(p(W_i|X_i)\)</span> that are used to match units with similar propensity, or to reweight observed outcomes to account for propensity.</p>
 </div>
 <div id="common-methods" class="section level2">
 <h2>Common Methods</h2>
 <p>Some summarized in this <a href="https://towardsdatascience.com/causal-inference-using-difference-in-differences-causal-impact-and-synthetic-control-f8639c408268">Medium Post</a></p>
 <div id="diff-in-diff" class="section level3">
 <h3>Diff in Diff</h3>
-<p>Contexts and example ..</p>
+<p>Contexts:</p>
+<ul>
+<li>A treatment group and a comperable control group can be observed before and after the treatment is applied.</li>
+</ul>
 <p>Assumptions and requirements:</p>
 <ul>
 <li>Requires observed data on a control group pre and post treatment</li>
-<li>Assumes the trend (mean?) in the control group is an appropriate proxy for the trend (mean?) in the treatment group, had the treatment not occurred.</li>
-<li>Assumes the temporal dimension isn’t informative.</li>
+<li>Parallel trends: Assumes the trend in the control group is an appropriate proxy for the trend in the treatment group, had the treatment not occurred. This way the mean difference can be accounted for without accounting for triend other than through the control group.</li>
 </ul>
 <p>Model:</p>
 <p><span class="math display">\[
 \begin{aligned}
-I_{T}&amp;:\text{Indicator for treatment group} \\
-I_{Post}&amp;:\text{Indicator for post treatment} \\
+I_{T}&amp;= \begin{cases}
+0, &amp; \text{Experienced Control} \\
+1, &amp; \text{Experienced Treatment} 
+\end{cases}\\
+I_{Post}&amp;= \begin{cases}
+0, &amp;\text{Before Time of Treatment}\\
+1, &amp;\text{After Time of Treatment}
+\end{cases}\\
 Y &amp;= \beta_0 + \beta_1 I_{T} + \beta_2 I_{Post} + \beta_3 I_{T} I_{Post}
 \end{aligned}
 \]</span></p>
+<p>Here <span class="math inline">\(\beta_3\)</span> captures the treatment effect, <span class="math inline">\(\beta_0\)</span> captures the mean of the control group before the treatment was applied, <span class="math inline">\(\beta_1\)</span> captures the difference between the mean of the treatment group and the mean of the control group before treatment was applied, <span class="math inline">\(\beta_2\)</span> captures the difference in the control group mean after the treatment was applied due to confounds that are assumed to influence the control and treatment groups equivalently.</p>
 </div>
-<div id="causal-impact" class="section level3">
-<h3>Causal Impact</h3>
-<p>Causal impact was developed by Google, docs <a href="https://google.github.io/CausalImpact/CausalImpact.html">here</a>.</p>
+<div id="synthetic-control-and-causal-impact" class="section level3">
+<h3>Synthetic Control and Causal Impact</h3>
+<p>Synthetic control approaches build a model of the counterfactual. Causal impact is a specific method for building a synthetic control, and was developed by Google – docs <a href="https://google.github.io/CausalImpact/CausalImpact.html">here</a>.</p>
 <p>Context:</p>
 <ul>
 <li>Want to estimate the counterfactual for an observed timeseries, pre and post treatment.</li>
@@ -952,7 +961,7 @@ models for when the errors aren't assumed to be normally distributed
 <div id="difference-in-differences" class="section level2">
 <h2>Difference in Differences</h2>
 </div>
-<div id="causal-impact-1" class="section level2">
+<div id="causal-impact" class="section level2">
 <h2>Causal Impact</h2>
 </div>
 <div id="synthetic-controls-1" class="section level2">
