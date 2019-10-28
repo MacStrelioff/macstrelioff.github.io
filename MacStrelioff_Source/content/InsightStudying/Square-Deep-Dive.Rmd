@@ -79,11 +79,10 @@ Questions:
 
 - What are some open challenges that the team is working on, and what approaches are they thinking of? 
 
-
 - Tech stack? 
 
-
 - What methods do you or people on your team frequently use? 
+
 - We mostly rely on tree-based methods over last few years (XGBoost, GBM, RF)
 - Implimented deployed model -- GBM
 - On stats side, use propensity score matching, CI analysis, lots of AB testing. 
@@ -108,9 +107,7 @@ Questions:
 - Predicts LTV, profit, about seller to help understand the value of the seller. 
 - Predictive models, then CI begins when you have a seller using the product, then start using abother product, and want to measure how much incremental LTV the additional product added. This requires statistical techniques. 
 
-
 - What kind of data do you have on the sellers? 
-
 
 - What are some things to learn in order to be successful on day 1? 
 - Having working knowledge of how to build tree based models
@@ -124,9 +121,6 @@ Questions:
 - Can join Square point of sale. 
 - Can use square cash but won't be seller side
 - Can sign up for Square dashboard
-- 
-
-
 
 # Recruiter Phone Call
 
