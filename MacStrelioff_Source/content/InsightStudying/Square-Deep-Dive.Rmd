@@ -29,10 +29,32 @@ set.seed(10201991)
 
 # HM Phone Call
 
+Team goal: Surface right content to right person at right time. 
+
 About Me: 
 
+- Wanted to learn more about the role and talk a little about my experience to make sure I'm a good fit.
 - Talk about things reelvant to the possible ML work on the growth team
 - review her linkedin page to find overlap in projects
+
+- mission is to provide sellers with most remarkable experience in showing the best content and products to them. 
+- advertising services to sellers/marketers
+- looking for someone who understands impact in terms of dollars
+
+My experience: 
+
+- Model-based, Model-free RL models
+- Inferring decision making strategies -- so inferring which of a predefined type a person was. 
+- Insight project, random forest model to predict which users would convert from a free trial to paid subscribers.
+
+Production code: 
+
+- Tweet frequencies using poisson process and conjugacy -- negative binomial.  
+
+Questions: 
+
+- What are some open challenges that the team is working on, and what approaches are they thinking of? 
+- What methods do you or people on your team frequently use? 
 
 
 # Recruiter Phone Call
@@ -60,11 +82,11 @@ About Me:
 - Most similar to analyzing choices that people make and how 
 - 8 data scientists
 - wide mix of industry experience, phd, eng, open source programming
-- Lookking to grow by 1-2 more in the next two quarters
+- Looking to grow by 1-2 more in the next two quarters
 - Square has 30 products. 
 - mission is to provide sellers with most remarkable experience in showing the best content and products to them. 
 - advertising services to sellers/marketers
-- looking for someone who understands impact in terms fo dollars
+- looking for someone who understands impact in terms of dollars
 - ML systems for personalization
 - opportunities to work with text/image data
 - Will have opportunities to talk to more DS
