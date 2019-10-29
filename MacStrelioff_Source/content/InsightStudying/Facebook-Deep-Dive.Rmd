@@ -40,6 +40,35 @@ Interview process:
 - Ideally video this week, onsite nextweek, and final call next week.
 
 
+Prep for onsite interview. 
+
+- will have followup pdf of prep material
+- Will meet with 4 people about 45min each
+- may have a lunch as well. 
+- each person has different focus area
+- lunch with Elif
+- Meet with Martin, Freeda, Steve, and one other (friyu?)
+- Steve on ads research team as quant manager. 
+- 2 technical
+- 2 behaviora;
+- Helen is director of org, caould possibly meet with her onsite as well. 
+
+- Behavioral: 'tell me about a time when ...' influence and work with others, technical concepts to non technical audiences, ability to prioritize and problem solve. 
+- Projects you've succeeded on. Likely ask probing questions. How you build relationships, how you present data to drive a solution
+- Technical; 
+- quantitative abilities, stats concepts, experimental design, p-value, correlation vs causation
+- bias variance, coding/scriptiing in R/pythin
+- analytical and problem solving in experimental/research design
+- incrementality and causal inference
+- e.g. 'design experiment needing to understand effectiveness of an image
+- thinking through incrementality, CI
+- focus on impact
+- what makes me irreplacable in this role and how I'd apply my abilities in this role. 
+- 'why I'm interested in FB and this role' 
+
+
+
+
 
 
 
