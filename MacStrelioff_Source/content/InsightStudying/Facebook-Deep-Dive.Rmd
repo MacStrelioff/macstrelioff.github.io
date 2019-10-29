@@ -22,6 +22,35 @@ set.seed(10201991)
 
 
 
+
+
+# Onsite Prep
+
+## Marketing metrics
+
+Marketing specific: 
+
+- Incrementality (lift that wouldn't have happened but for the ad) 
+- CPA (cost per acquisition) 
+- ROAS (return on ad spend) 
+- ROI (return on investment) 
+
+General: 
+
+- Impressions
+- Link Clicks
+- Pageviews
+- Deeper funnel conversions recorded via fb pixles
+- Cost per click
+- Post engagements on business page
+- Session duration
+- Pages/session
+- conversion funnel
+
+- per week
+- per month
+
+
 # FB Marketing Science Second Recruiter Call
 
 Recruiter: Amber
