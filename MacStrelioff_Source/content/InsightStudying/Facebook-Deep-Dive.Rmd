@@ -21,9 +21,27 @@ set.seed(10201991)
 ```
 
 
-<!---
 
---->
+# FB Marketing Science Second Recruiter Call
+
+Recruiter: Amber
+
+Availability for onsite: 
+
+- Anytime. 
+
+Interview process:
+
+- (done) 45min video conference with a manager
+- onsite with meeting with 4-5 members on the team
+- quick exploratory conversation with member of the org
+- offer
+
+- Ideally video this week, onsite nextweek, and final call next week.
+
+
+
+
 
 
 # FB Marketing Science Phone Screen Prep
@@ -45,7 +63,6 @@ Researcher;
 - work with internal partners, 
 - analyze results
 - communicate results through presentations, ... 
-- 
 
 - Who are consumers of our research? 
 - projects 2-3 mo. 
@@ -192,8 +209,6 @@ Should see it through, I might love the team or like working there. Could get a 
 Recruiters will ask where you're interviewing, you can tell them. 
 
 Hesitate when they ask about how much the offer is... . 
-
-
 
 
 # FB Marketing science Recruiter call
