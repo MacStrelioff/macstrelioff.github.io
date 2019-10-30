@@ -186,7 +186,19 @@ Onboarding process
 - takes around 3 months to feel comfortable
 - happens through reading mainly.
 
-Based on feedback, 
+Glassdoor questions: 
+
+- Please tell us about the advantages and disadvantages of our multi-touch attribution solution?
+- Please tell us about your most recent experience in the workplace?
+- What challenges do Facebook face in regards to measurement? 
+
+- If you are going to work for Facebook tomorrow, what project do you want to work on?
+- Why do you want to work on this project?
+- Why do you think the project will be important to Facebook? 
+
+- What if you promised work to a client for a deadline, but the data wasn't accurate. Would you send it anyway, or improve it then send it?
+- Why Facebook?
+
 
 ### Behavioral - Experiences
 
@@ -202,7 +214,8 @@ Also;
 - Predictit Project -- Trading was a hobby with a friend
 - Realized our strategies were related to psychological phenomena
 - Reached out to PredictIt to get data for research
-- Resulted in two posters, a trading algorithm, and 
+- Resulted in two posters, a trading algorithm, and more things in the pipeline (Tweet trading algo)
+
 
 
 ### Behavioral
