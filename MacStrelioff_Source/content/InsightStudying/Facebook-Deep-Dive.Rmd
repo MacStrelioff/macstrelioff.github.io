@@ -34,11 +34,25 @@ Marketing specific:
 - CPA (cost per acquisition) 
 - ROAS (return on ad spend) 
 - ROI (return on investment) 
+- PPC (pay per click)
 
-Retargeting: Ads to a user who previously visited but did not convert
+One ROI formula: 
 
-- Pixel-based retargeting: 
-- List-based retargeting: 
+$$
+\begin{aligned}
+n_{leads} &: \text{Number of leads} \\
+p_c &: \text{Lead to customer conversion rate} \\
+\bar{s} &:\text{Average sales price per customer} \\ 
+ROI &:\frac{n_{leads} p_c \bar{s} - cost}{cost}
+\end{aligned}
+$$
+
+- ROI can be extended to include additional traffic, likes on social media, stronger brand (more trust, familarity, ...)
+
+[Retargeting](https://blog.hubspot.com/marketing/retargeting-campaigns-beginner-guide): Ads to a user who previously visited but did not convert
+
+- Pixel-based retargeting: A Pixel refers to JavaScript code placed on a visitors browser (to "cookie" the browser). The cookie notifies retargeting platforms to serve specific ads. The advantage of pixel-based retargeting is that it is timely (they can be retargeted pretty immediately after leaving your site), specific to a particular page on your site, and behavior-based. Downsides to this method are that there is a lower volume of people in the campaign at any given moment in time since it's all based on how often people are coming to your website, viewing certain pages, and leaving. It also can be complicated or time-intensive to implement the JavaScript on many website pages. 
+- List-based retargeting: Upload a list of emails or other identifying information to an ad server (e.g. facebook), then target ads to only those people. 
 
 
 General: 
