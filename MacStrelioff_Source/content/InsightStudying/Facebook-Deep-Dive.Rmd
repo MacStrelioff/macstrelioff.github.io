@@ -35,6 +35,12 @@ Marketing specific:
 - ROAS (return on ad spend) 
 - ROI (return on investment) 
 
+Retargeting: Ads to a user who previously visited but did not convert
+
+- Pixel-based retargeting: 
+- List-based retargeting: 
+
+
 General: 
 
 - Impressions
