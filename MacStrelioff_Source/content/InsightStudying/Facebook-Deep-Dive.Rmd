@@ -331,8 +331,14 @@ Campaign strategies from [here](https://www.facebook.com/facebookbusiness/videos
 - Augmented reality ads (e.g. showing makeup on your face)
 
 
-Article on incrementality [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.8562-6/40885602_325378801543933_2786346366694064128_n.pdf/fbiq_implementing_incrementality_inline.pdf?_nc_cat=105&_nc_oc=AQkk5JjEDqEvHR8zjYomZRFBWVzVMiJ-0rmN0lg7XXVD6y8i02qe7NFuyU-GeDs4CfI5WSITVZWmDoS-8FRx6OY0&_nc_ht=scontent-sjc3-1.xx&oh=ae344a3e087c4b7322ded9a001f4949d&oe=5E5E8B86):
+Article on incrementality framework outline [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.8562-6/40885602_325378801543933_2786346366694064128_n.pdf/fbiq_implementing_incrementality_inline.pdf?_nc_cat=105&_nc_oc=AQkk5JjEDqEvHR8zjYomZRFBWVzVMiJ-0rmN0lg7XXVD6y8i02qe7NFuyU-GeDs4CfI5WSITVZWmDoS-8FRx6OY0&_nc_ht=scontent-sjc3-1.xx&oh=ae344a3e087c4b7322ded9a001f4949d&oe=5E5E8B86):
 
+1. Business question
+2. Method
+3. Hypothesis that isloares single variable
+4. Precision
+5. Stability of treatment assignment
+6. 
 
 
 Article on common problems [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.8562-6/55966733_554973988328944_5356351545606668288_n.pdf/incrementality_measurement_inline.pdf?_nc_cat=100&_nc_oc=AQla0M5gBHc5T49iCiX_UR_RCpWJQm4X5d9fanAHF22vlBpD87lQnZAKmqOm1PoU7_bhZzcF6rhyoqeD9m6lEAQ6&_nc_ht=scontent-sjc3-1.xx&oh=3ddc9c305b5e21813e2a3f1142f04e9d&oe=5E1F884D):
