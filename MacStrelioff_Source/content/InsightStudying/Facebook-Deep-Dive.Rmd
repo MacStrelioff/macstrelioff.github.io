@@ -359,27 +359,40 @@ Article on common problems [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.856
 - Solution: Winsorizing, or Wilcox rank test
 - Also, imputation with median or mean
 
-3. Variables not isolated (multicolinearity)
+3. Counfounds; independent variables not isolated
 
 - Bids, budgets, creatives, ... should all be controlled across conditions
 - Violation of stable units (a T influences a C)
 - Can ignore if the exposure might be small?
 - Can attempt to model out the exposure
+- Random events in only one condition, e.g. a geo split then a natural disaster happening in one of the arms
 - Can change the interpretation of the test to reflect the exposure
 
-4. Noncompliance (C exposed to T)
+4. Crossover (C exposed to T)
 
+- Are cookies being used?
 - Can happen from Unstable identification (e.g. cookies)
 - Network effects: people in one condition talk to those in another condition
 - Someone else access the account, e.g. in a household another member may order for the house from a partner's amazon account
-- 
+- Usually dampen an estimation of an effect, so if an effect is significant it is usually trustworthy
 
-5. Engagement or novelty effects
+5. Engagement or novelty effects, or second-order effects
 
-- Are cookies being 
+- Ads can influence lifetime value beyond the target variable in the study
+- Ads can influence conversions on other products
+- Ads can influence conversions in a partisular, non-target channel (e.g. in store)
+- Ads can convert potential future customers, just sooner -- i.e. not generate demand, but rather shift it forward in time.
+- Experimentors should monitor downstream outcomes as well
+- Careful choice of the outcome variable and experiment duration are valuable here
 
 6. Unmeasured important variables
 
+- E.g. retail cash transactions 
+- Multiple unmatchable user IDs or emails
+- Users can use different devices and browsers
+- Survey responses might be low
+- If these issues are scarce (e.g. few cash transactions) and balanced (e.g. roughly equal proportion of cash users in T and C) then they can be ignored
+- 
 
 
 Metrics: 
