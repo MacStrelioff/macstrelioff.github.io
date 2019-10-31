@@ -49,6 +49,12 @@ $$
 
 - ROI can be extended to include additional traffic, likes on social media, stronger brand (more trust, familarity, ...)
 
+Return on an a brand campaign based on impressions or reach, cost of the campaign, and the proportion that changed their attitude ($p_{changed}$): 
+
+$$
+efficiency = \frac{Cost}{Reach*p_{changed}}
+$$
+
 [Retargeting](https://blog.hubspot.com/marketing/retargeting-campaigns-beginner-guide): Ads to a user who previously visited but did not convert
 
 - Pixel-based retargeting: A Pixel refers to JavaScript code placed on a visitors browser (to "cookie" the browser). The cookie notifies retargeting platforms to serve specific ads. The advantage of pixel-based retargeting is that it is timely (they can be retargeted pretty immediately after leaving your site), specific to a particular page on your site, and behavior-based. Downsides to this method are that there is a lower volume of people in the campaign at any given moment in time since it's all based on how often people are coming to your website, viewing certain pages, and leaving. It also can be complicated or time-intensive to implement the JavaScript on many website pages. 
@@ -229,6 +235,7 @@ Why FB?
 - Huge company. 
 - Probably learning opportunities
 - What I've heard of the culture -- Informal hierarchy, potential for ownership.
+- Awesome research in RL (solving 6-player poker), and excited about VR and AR directions. 
 
 1. Research areas
 
@@ -274,23 +281,46 @@ TAing:
 
 Campaign variables: 
 
-- frequency
+- frequency (.9, 1.7, 2.2 impressions / week)
 - reach
-- content
+- bidding strategy
+- ad placement (messenger, feed, ad column, instagram, ...)
+- content (proportion video vs display image)
 
 Some findings from [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/17636643_1414778175239319_70944239730556928_n.pdf?_nc_cat=107&_nc_oc=AQlLx8XaXaMhs3SHZkBNtTPhXR4PuwuVZvv6fFul1ne96lHNk0k4207_s52OMhSxWwx3WOFsGuM2ODg1Hw_0HSnG&_nc_ht=scontent-sjc3-1.xx&oh=bf63041dcee5ed850a7cfb2b1871f1ac&oe=5E510238):
 
 - Low/medium frequency maximized ad recall
 - Favorability increased by video impressions
 
-
 Campaign objectives: 
 
-- impressions and awareness
+- impressions and awareness, or reach (better for upper funnel goals)
 - consideration
 - conversions or sales
 - loyalty
 - timely -- content can be optimized against market trends (e.g. vacation destinations seasonally)
+
+More from [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/17636643_1414778175239319_70944239730556928_n.pdf?_nc_cat=107&_nc_oc=AQlLx8XaXaMhs3SHZkBNtTPhXR4PuwuVZvv6fFul1ne96lHNk0k4207_s52OMhSxWwx3WOFsGuM2ODg1Hw_0HSnG&_nc_ht=scontent-sjc3-1.xx&oh=bf63041dcee5ed850a7cfb2b1871f1ac&oe=5E510238);
+- Ad recall: Do you recall seeing an ad about ___ on ___ in the last 7 days?
+- Favorability: What is your opinion of ___ overall?
+- Mission perception: Facebook and Internet.org specific metric evaluating agreement with
+the company mission
+- Company perception: Facebook and Internet.org specific metric evaluating perception
+of the company
+- 50-75% video vd display ads was optimal for incremental lift (2% lift over the 25% group). 
+
+Outcomes of FB study: 
+
+- low frequency lift in ad recall of 1.7%, medium frequency higher incrementallity of 7.1%
+- Favorability - low frequency lift of 11%, no evidence of a difference vs medium or high freq
+- No lift in company perception
+
+Advice from FB study:
+
+- Hypothesize, test for actionable results, and act
+- Define right creative mix for brand
+- Learn from all results
+
 
 ML recommendation for a tuned ad camapign is 50 conversions
 
@@ -299,6 +329,25 @@ Campaign strategies from [here](https://www.facebook.com/facebookbusiness/videos
 - Polling ads in feed
 - Playable ads
 - Augmented reality ads (e.g. showing makeup on your face)
+
+
+Article on incrementality [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.8562-6/40885602_325378801543933_2786346366694064128_n.pdf/fbiq_implementing_incrementality_inline.pdf?_nc_cat=105&_nc_oc=AQkk5JjEDqEvHR8zjYomZRFBWVzVMiJ-0rmN0lg7XXVD6y8i02qe7NFuyU-GeDs4CfI5WSITVZWmDoS-8FRx6OY0&_nc_ht=scontent-sjc3-1.xx&oh=ae344a3e087c4b7322ded9a001f4949d&oe=5E5E8B86):
+
+
+
+Article on common problems [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.8562-6/55966733_554973988328944_5356351545606668288_n.pdf/incrementality_measurement_inline.pdf?_nc_cat=100&_nc_oc=AQla0M5gBHc5T49iCiX_UR_RCpWJQm4X5d9fanAHF22vlBpD87lQnZAKmqOm1PoU7_bhZzcF6rhyoqeD9m6lEAQ6&_nc_ht=scontent-sjc3-1.xx&oh=3ddc9c305b5e21813e2a3f1142f04e9d&oe=5E1F884D):
+
+1. Not enough power
+
+2. Outliers
+
+3. Variables not isolated (multicolinearity)
+
+4. Noncompliance
+
+5. Engagement or novelty effects
+
+6. Unmeasured important variables
 
 
 
