@@ -272,19 +272,35 @@ TAing:
 
 ### Marketing
 
+Campaign variables: 
+
+- frequency
+- reach
+- content
+
+Some findings from [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.2365-6/17636643_1414778175239319_70944239730556928_n.pdf?_nc_cat=107&_nc_oc=AQlLx8XaXaMhs3SHZkBNtTPhXR4PuwuVZvv6fFul1ne96lHNk0k4207_s52OMhSxWwx3WOFsGuM2ODg1Hw_0HSnG&_nc_ht=scontent-sjc3-1.xx&oh=bf63041dcee5ed850a7cfb2b1871f1ac&oe=5E510238):
+
+- Low/medium frequency maximized ad recall
+- Favorability increased by video impressions
+
+
 Campaign objectives: 
 
-- impressions
-- conversions
+- impressions and awareness
+- consideration
+- conversions or sales
+- loyalty
 - timely -- content can be optimized against market trends (e.g. vacation destinations seasonally)
 
 ML recommendation for a tuned ad camapign is 50 conversions
 
-[Campaign strategies](https://www.facebook.com/facebookbusiness/videos/2505731469510573/): 
+Campaign strategies from [here](https://www.facebook.com/facebookbusiness/videos/2505731469510573/): 
 
 - Polling ads in feed
 - Playable ads
 - Augmented reality ads (e.g. showing makeup on your face)
+
+
 
 Metrics: 
 
