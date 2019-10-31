@@ -345,7 +345,18 @@ Article on common problems [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.856
 
 1. Not enough power
 
+- Small effect size
+- Results are different from those used to estimate effect size
+- Limited sample size because of external factors
+- Defined audience is too small -- not enough people get to the assignment part of a userflow
+- Outcomes don't happen frequently
+- Purchase cycle duration long relative to the time the experiment runs -- future conversions aren't observed
+
 2. Outliers
+
+- Generative model? Are the outliers natural or are they errors?
+- Are they important for the decision being made -- Is the decision wrt the population or the norm? 
+- 
 
 3. Variables not isolated (multicolinearity)
 
