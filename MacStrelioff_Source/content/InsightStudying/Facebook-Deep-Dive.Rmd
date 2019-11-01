@@ -392,7 +392,6 @@ Article on common problems [here](https://scontent-sjc3-1.xx.fbcdn.net/v/t39.856
 - Users can use different devices and browsers
 - Survey responses might be low
 - If these issues are scarce (e.g. few cash transactions) and balanced (e.g. roughly equal proportion of cash users in T and C) then they can be ignored
-- 
 
 
 Metrics: 
@@ -406,6 +405,8 @@ Metrics:
 - Session duration
 - Pages/session
 - conversion funnel
+
+- Frequency; impressions per week per user
 
 - per week
 - per month
