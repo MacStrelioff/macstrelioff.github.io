@@ -30,10 +30,35 @@ set.seed(10201991)
 # Offer call
 
 
+Offer: 
 
 
 
 
+Considering: 
+
+- Offers
+- Teams
+- Learning opportunities
+- Location
+- Perks (to a much lesser extent)
+
+
+Salary negotiation? 
+
+
+- If they ask what it is I'm looking for, whoever talks first loses. Answer is 'what is the salary range that you've targeted for this position. What is the range for my colleagues.' 
+
+- 'I really appreciate this offer, is there any opportunity for ... (sign on bonus, ...)' -- in negotiating, ask questions, don't demand. Every offer is a good offer 
+- 'I really appreciate this offer, any chance I could get ... ?' -- Give them an opportunity to say no 
+
+- Not just about the salary number, also sign on bonus, a bonus plans, equity options
+- First see offer, might be great, and not need to squeeze out a tiny bit more -- they'll just decrease the increase for the next year.
+- See what the opportunities are for more. 
+- Say I need time to think about it. 
+- They assume I'm a talented guy on the market. They're surrounded by a bunch of companies that could use my skills as well. 
+- They might not want to offer more than what my peers are making
+- Being ernest and asking questions to leave a good taste in everyone's mouth. 
 
 
 
