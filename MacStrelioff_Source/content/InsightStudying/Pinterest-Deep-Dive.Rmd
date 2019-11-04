@@ -34,11 +34,22 @@ Offer:
 
 
 
+Questions:
+
+- Is the equity in the form of RSUs, or stock options?
+- If options, what is the strike price?
+- 
+
+
 
 Considering: 
 
 - Offers
+-- base vs equity
+-- Ranges online
+-- Friend's offers
 - Teams
+- Role
 - Learning opportunities
 - Location
 - Perks (to a much lesser extent)
