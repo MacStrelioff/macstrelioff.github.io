@@ -27,6 +27,8 @@ set.seed(10201991)
 
 Questions: 
 
+- Example project?
+- Successuful first 3 months, first 6 months?
 - 
 
 
