@@ -30,7 +30,78 @@ set.seed(10201991)
 # Offer call
 
 
-Offer: 
+Offer:
+
+Monetary compensation:
+
+- Base salary (lower for startups, higher for larger companies)
+
+- When will you be eligible for salary review? 
+- What have the increases in salary been historically for the position, and have they been based on cost of living or performance?
+
+- Equity (RSUs, stock options)
+- Strike Price?
+- Vesting schedule?
+
+- Signing bonus
+
+- Annual bonus
+- Guaranteed? 
+- If performance based, it is based on individual, team, or organizational performance?
+
+- Profit sharing or stock options
+
+- Retirement plan
+
+- Promotional plan
+
+- When will you be eligible for promotion? 
+
+- What has been the timeline for others holding this job in the past?
+
+- Relocation reimbursement
+
+- Does the organization offer any help in finding a place to live? 
+
+- Tuition assistance for continuing education
+- Formal training or learning opportunities?
+
+Benefits: 
+
+- Health insurance 
+- Adequate for your needs? 
+- Are dental and/or vision included?
+- How much money, if any, will you be expected to contribute towards your monthly health plan?
+
+- Disability insurance 
+
+- Life insurance
+
+- Leave policy 
+
+- Vacation days
+
+- Sick days 
+
+- Personal days 
+
+- What are their policies regarding unpaid leave?
+
+- Parental leave
+
+- Commuting benefits
+
+- Amenities offered on site 
+
+- Child care
+
+- Athletic facilities
+
+- Food/snacks
+
+- Per diem / flex spend
+
+- If the job requires long or unusual hours, do they have any kind of monetary allowance for meals or travel?
 
 
 
@@ -38,14 +109,21 @@ Questions:
 
 - Is the equity in the form of RSUs, or stock options?
 - If options, what is the strike price?
-- 
+- Procedure or structure for promotions and raises? 
 
 
+Response:
 
-Considering: 
+- Need time to think about this.
+- Talk to friends and family
 
-- Offers
--- base vs equity
+
+Considering:
+
+- Offers (vs facebook)
+-- base
+-- equity (value at the time of vesting or option exercise?)
+-- Tax implications? 
 -- Ranges online
 -- Friend's offers
 - Teams
@@ -55,7 +133,11 @@ Considering:
 - Perks (to a much lesser extent)
 
 
-Salary negotiation? 
+
+
+
+
+Salary negotiation?
 
 
 - If they ask what it is I'm looking for, whoever talks first loses. Answer is 'what is the salary range that you've targeted for this position. What is the range for my colleagues.' 
