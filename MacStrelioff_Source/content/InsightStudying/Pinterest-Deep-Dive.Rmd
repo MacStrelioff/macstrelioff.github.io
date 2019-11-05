@@ -25,21 +25,68 @@ set.seed(10201991)
 
 # Yifei call about the role
 
+user lifecycle, designing ap
+
+
 Questions: 
 
 - Example project?
+
+
 - Successuful first 3 months, first 6 months?
+- 1) people experience, working with PM and engineering manager
+- Figure out how you work with the people, hopwfully you can work together efficiently
+- how do you manage their expectations, how quickly do you deliver work of high quality
+- establish a cadence
+- 2) fundamental work, on marketing team figuring out the data, and what questions they can answer with this data. 
+- What more data we might need. Know the data long terms
+- 3) contribute to PA/DS community
+- all work together, sometimes have people embedded on different teams but all work together.
+- Identify strengths from different peers
+
+First job; 
+
+- people who will help you build your career
+- Pinterest excells here
+- PA/DS team, you matter
+- Sarthik head, worked with heads very frequently 
+- Sarthik very technical, was eng at MSFT
+- Sarthik very accessible
+- From PM, .. 
+- Will you be able to engage with peopel?
+- PA/DS smaller, easy to transfer projects
+- Higher impact of work; 
+- More feedback super important at beginning of career
+- Pinterest really good environment for feedback and people caring about your work
+- Growth potential matters too in terms of financial impact
+- 2/5/6 years can consider Pinterest better because of higher growth potential, but that also means higher risk
+
+people, growth potnetial, feedback and impact
+
+compensation wise, shouldn't worry too much, Pinterest very competitive. 
+Google, Uber, Lyft, compensation not that different. And doesn't matter too much at beginning of career. 
+can try to compare, but really growth potential is the important factor. 
+
+Yifei worked at uber, google, ... . Chose Pinterest for the people. Didn't give offer easily. 
+Pinterest really cares about people and their success. 
+
+Facebook stock price relatively stable, ... 
+But career growth is an important factor -- learning potential over next 5 years - 10 years
+
+
+Learning potential; 
+
+- financial report
 - 
 
 
 # Offer call
 
-
 Sorry for delay, knew they wanted me the whole time, needed approval. 
 
-Sarthik loved how I talked about my experienced, transfering into everything, was blown away
+Sarthik loved how I talked about my experienced, transfering into PhD and everything, was blown away
 
-Role would be 
+Role would be marketing + growth
 
 - Product analyst reporting into Yifei, wanted to talk more about day to day role
 - working on pinner engagement growth
@@ -65,7 +112,6 @@ Offer:
 
 - 3:30-4:00 today talk to Yifei
 - to clarify role.
-
 
 Monetary compensation:
 
@@ -121,15 +167,11 @@ Benefits:
 - Personal days 
 
 - What are their policies regarding unpaid leave?
-
 - Parental leave
-
 - Commuting benefits
 
 - Amenities offered on site 
-
 - Child care
-
 - Athletic facilities
 
 - Food/snacks
