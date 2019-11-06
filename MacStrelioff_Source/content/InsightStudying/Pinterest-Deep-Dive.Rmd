@@ -21,16 +21,26 @@ set.seed(10201991)
 ```
 
 
+# Negotiation tips from Lacy
+
+Companies more responsive to specifics; 
+
+- eg 'increase equity to X'
+- eg 'moving base salary would be preferred'
+- eg ask for a base of like 155, and specific equity
+- emphasize enthusasiasm
+- eagerness to start
+- looking for a few adjustmets to comp package, happy to sign right away
+- I make an ask, then they make a counteroffer. 
+
 
 # Yifei call about the role
 
 user lifecycle, designing ap
 
-
 Questions: 
 
 - Example project?
-
 
 - Successuful first 3 months, first 6 months?
 - 1) people experience, working with PM and engineering manager

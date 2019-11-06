@@ -26,7 +26,11 @@ set.seed(10201991)
 
 # Recruiter Feedback Phone Call
 
+Strong on technical ability, might be good for strictly DS role. 
 
+Feedback wouldn't impair me from applying for another DS role.
+
+Felt there were stronger candidates for influencing and consulting.
 
 
 # Onsite Prep
