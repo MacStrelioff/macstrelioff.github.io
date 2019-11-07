@@ -21,7 +21,25 @@ set.seed(10201991)
 ```
 
 
-# Negotiation tips from Lacy
+# Negotiation tips
+
+## Howard
+
+Salary negotiation? 
+
+- If they ask what it is I'm looking for, whoever talks first loses. Answer is 'what is the salary range that you've targeted for this position. What is the range for my colleagues.' 
+- Not just about the salary number, also sign on bonus, a bonus plans, equity options, 
+- First see offer, might be great, and not need to squeeze out a tiny bit more -- they'll just decrease the increase for the next year.
+- See what the opportunities are for more. 
+- Say I need time to think about it. 
+- They assume I'm a talented guy on the market. They're surrounded by a bunch of companies that could use my skills as well. 
+- use the word opportunity
+- in negotiating, ask questions, don't demand. Every offer is a good offer 'I really appreciate this offer, is there any opportunity for ... (sign on bonus, ...)'.
+- Give them an opportunity to say no; 'I really appreciate this offer, any chance I could get ... ?'
+- They might not want to offer more than what my peers are making
+- Being ernest and asking questions to leave a good taste in everyone's mouth. 
+
+## Lacy
 
 Companies more responsive to specifics; 
 
