@@ -1,5 +1,5 @@
 ---
-title: "YouTube Strategy"
+title: "Buying a Condo"
 author: "Mac Strelioff"
 date: "`r Sys.time()`"
 math: true
@@ -18,7 +18,12 @@ knitr::opts_chunk$set(echo = TRUE)
 - Proximity to Pinterest, 505 Brannan St, San Francisco, CA 94107
 - In unit washer and dryer
 - Wood floors
-- 
+
+
+# Pre-approval
+
+
+
 
 
 
