@@ -1,0 +1,30 @@
+---
+title: "Bandit Algos for Estimation, Hypothesis Testing, and Decision Making"
+author: "Mac Strelioff"
+date: "3/20/2019"
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# libraries
+library(entropy)
+
+# set seed for reproducability
+set.seed(10201991)
+```
+
+# Sources / Alternatives
+
+
+[https://superuser.com/questions/214759/connect-to-another-mac-via-terminal](https://superuser.com/questions/214759/connect-to-another-mac-via-terminal)
+
+Useful terminal commands: 
+
+```{bash}
+sudo shutdown # powers off
+```
+
+
+
