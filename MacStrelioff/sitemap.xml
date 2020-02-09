@@ -19,6 +19,16 @@
   </url>
   
   <url>
+    <loc>/MacStrelioff/data-science/</loc>
+    <lastmod>2020-01-26T09:56:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/data-science/probability-statistics/</loc>
+    <lastmod>2020-01-26T09:56:26+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/MacStrelioff/unlisted/home_buying/</loc>
     <lastmod>2019-11-28T13:27:18+00:00</lastmod>
   </url>
@@ -26,11 +36,6 @@
   <url>
     <loc>/MacStrelioff/unlisted/</loc>
     <lastmod>2019-11-28T13:27:18+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/MacStrelioff/data-science/</loc>
-    <lastmod>2019-10-17T18:21:38+00:00</lastmod>
   </url>
   
   <url>
@@ -289,6 +294,10 @@
   
   <url>
     <loc>/MacStrelioff/unlisted/banditalgos/</loc>
+  </url>
+  
+  <url>
+    <loc>/MacStrelioff/unlisted/runningremotejobs/</loc>
   </url>
   
   <url>
